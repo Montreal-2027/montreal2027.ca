@@ -25,9 +25,13 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 - **Search**: SearchAPI
 - **Email**: PHPMailer with SMTP
 
-## Getting Started with Docker
+## Getting Started
 
-### Prerequisites
+You can run this project either with Docker or in a native local environment (macOS/Linux with PHP, MariaDB, and Nginx installed locally).
+
+### Getting Started with Docker
+
+#### Prerequisites
 
 - Docker Desktop (or Docker Engine + Docker Compose) - see alternatives below
 - Git
@@ -138,6 +142,10 @@ While Docker Desktop is a convenient option, there are several open source alter
    
    **To customize**, create a `.env` file with any of these variables:
    ```bash
+   # Environment type (determines which commands to use)
+   APP_ENV_TYPE=docker  # or 'native' for local development
+   OS_TYPE=macos        # or 'linux' (used in native mode only)
+
    # Web server ports (default: 8080 -> 80)
    WEB_EXTERNAL_PORT=8080
    WEB_INTERNAL_PORT=80
@@ -163,6 +171,14 @@ While Docker Desktop is a convenient option, there are several open source alter
 
    # Hash Salt (change for production!)
    HASH_SALT=RandomHashSaltForDevelopmentPurposesOnly
+
+   # Production sync settings (for scripts/sync.sh)
+   SYNC_HOST=montreal2027.ca
+   SYNC_USER=www-data
+   SYNC_REMOTE_ROOT=/var/www/montreal2027.ca/
+   SYNC_SSH_KEY=~/.ssh/montreal2027
+   SYNC_SSH_PORT=345
+   SYNC_BACKUP_DIR=../backups
    ```
 
 3. **Build and start containers**
@@ -181,17 +197,37 @@ While Docker Desktop is a convenient option, there are several open source alter
    docker-compose exec web composer install
    ```
 
-5. **Import configuration**
+5. **Setup database**
+
+   **Option A: Sync from production** (recommended for team members)
    
-   If you have a database dump:
+   If you have access to the production server, use the sync script:
+   ```bash
+   # Configure sync settings in .env (see step 2)
+   # Ensure SYNC_SSH_KEY points to your SSH key with production access
+   
+   ./scripts/sync.sh
+   ```
+   
+   This will:
+   - Download files from production (web/assets/)
+   - Back up your local database (if it exists)
+   - Download and import the production database
+   - Clear all Drupal caches
+   
+   **Option B: Manual database import**
+   
+   If you have a database dump file:
    ```bash
    docker-compose exec -T web bash -c "$(drush sql:connect)" < your-database-dump.sql
    docker-compose exec web drush cr
    ```
 
-   Or install Drupal from scratch and import config:
+   **Option C: Fresh install**
+   
+   For a clean installation from configuration:
    ```bash
-   docker-compose exec web drush site:install --existing-config -y
+   docker-compose exec web drush site:install --existing-config
    docker-compose exec web drush cr
    ```
 
@@ -248,7 +284,32 @@ docker-compose up -d --build
    npm run watch
    ```
 
-2. **Configuration Management**
+2. **Syncing Production Data**
+   
+   To sync the latest files and database from production during development:
+   
+   ```bash
+   ./scripts/sync.sh
+   ```
+   
+   The script automatically detects your environment (Docker or native) based on the `APP_ENV_TYPE` setting in `.env` and uses the appropriate commands.
+   
+   **What it does:**
+   - Syncs production files (assets) to your local environment
+   - Creates a timestamped backup of your local database
+   - Downloads the production database
+   - Imports the production database locally
+   - Clears all caches
+   
+   **Configuration:** Set these variables in your `.env` file:
+   - `SYNC_HOST` - Production server hostname
+   - `SYNC_USER` - SSH username for production
+   - `SYNC_SSH_KEY` - Path to your SSH private key
+   - `SYNC_SSH_PORT` - SSH port (default: 345)
+   - `SYNC_REMOTE_ROOT` - Production site root path
+   - `SYNC_BACKUP_DIR` - Local directory for database backups (default: ../backups)
+
+3. **Configuration Management**
    
    Export configuration changes:
    ```bash
@@ -260,7 +321,7 @@ docker-compose up -d --build
    docker-compose exec web drush config:import
    ```
 
-3. **Database Backups**
+4. **Database Backups**
    ```bash
    docker-compose exec web drush sql:dump --gzip > backup-$(date +%Y%m%d-%H%M%S).sql.gz
    ```
@@ -286,6 +347,128 @@ docker-compose exec web drush config:import --partial --source=modules/custom/mo
 docker-compose exec web drush cr
 ```
 
+## Getting Started with Native/Local Development
+
+### Prerequisites
+
+- PHP 8.3+
+- MariaDB 11.4 or MySQL 8.0+
+- Composer
+- Drush (installed via Composer)
+- Node.js and npm (for theme compilation)
+- Web server (Nginx or Apache)
+- Git
+
+### Initial Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Montreal-2027/montreal2027.ca.git
+   cd montreal2027.ca
+   ```
+
+2. **Create .env file**
+   
+   Copy `.env.example` to `.env` and configure for native development:
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit `.env` and set:
+   ```bash
+   APP_ENV_TYPE=native
+   OS_TYPE=macos  # or 'linux'
+   
+   # Database settings (match your local database)
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_NAME=montreal2027
+   DB_USER=your_db_user
+   DB_PASSWORD=your_db_password
+   
+   # Sync settings (if you have production access)
+   SYNC_SSH_KEY=~/.ssh/montreal2027
+   # ... other sync settings
+   ```
+
+3. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+
+4. **Setup database**
+   
+   **Option A: Sync from production** (recommended for team members)
+   ```bash
+   # Ensure sync settings are configured in .env
+   ./scripts/sync.sh
+   ```
+   
+   **Option B: Fresh install**
+   ```bash
+   drush site:install --existing-config
+   drush cr
+   ```
+
+5. **Install theme dependencies and build CSS**
+   ```bash
+   cd web/themes/custom/montreal2027
+   npm install
+   npm run build:css
+   cd ../../..
+   ```
+
+6. **Configure your web server**
+   
+   Point your web server document root to the `web/` directory.
+   
+   Example Nginx configuration:
+   ```nginx
+   server {
+       listen 8080;
+       server_name localhost;
+       root /path/to/montreal2027.ca/web;
+       
+       index index.php;
+       
+       location / {
+           try_files $uri /index.php?$query_string;
+       }
+       
+       location ~ \.php$ {
+           fastcgi_pass unix:/var/run/php-fpm.sock;
+           fastcgi_index index.php;
+           fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+           include fastcgi_params;
+       }
+   }
+   ```
+
+7. **Access the site**
+   
+   Open your browser to your configured URL (e.g., `http://localhost:8080`)
+
+### Common Native Development Commands
+
+All commands run without the `docker-compose exec web` prefix:
+
+```bash
+# Drush commands
+drush cr                  # Clear cache
+drush config:export       # Export configuration
+drush config:import       # Import configuration
+drush uli                 # Generate login link
+drush sql:dump > backup.sql  # Database backup
+
+# Sync from production
+./scripts/sync.sh
+
+# Theme development
+cd web/themes/custom/montreal2027
+npm run watch:css  # Watch for changes
+npm run build:css  # One-time build
+```
+
 ## Project Structure
 
 ```
@@ -305,6 +488,39 @@ docker-compose exec web drush cr
 └── docker-compose.yml           # Docker service definitions
 ```
 
+## Scripts
+
+### sync.sh
+
+Location: `scripts/sync.sh`
+
+Synchronizes files and database from the production server to your local development environment.
+
+**Features:**
+- Auto-detects environment (Docker or native) based on `APP_ENV_TYPE` in `.env`
+- Downloads production assets (web/assets/)
+- Creates timestamped backups of local database before importing
+- Downloads and imports production database
+- Clears all Drupal caches automatically
+
+**Usage:**
+```bash
+./scripts/sync.sh
+```
+
+**Configuration:** Set these variables in `.env`:
+- `SYNC_HOST` - Production server hostname (default: montreal2027.ca)
+- `SYNC_USER` - SSH username (default: www-data)
+- `SYNC_REMOTE_ROOT` - Production site root path (default: /var/www/montreal2027.ca/)
+- `SYNC_SSH_KEY` - Path to SSH private key (default: ~/.ssh/montreal2027)
+- `SYNC_SSH_PORT` - SSH port (default: 345)
+- `SYNC_BACKUP_DIR` - Local backup directory (default: ../backups)
+
+**Requirements:**
+- SSH access to production server
+- SSH key configured for authentication
+- `rsync` installed locally
+
 ## Custom Modules
 
 ### montreal2027_tools
@@ -318,10 +534,10 @@ Provides utilities for convention management:
 
 1. Create a feature branch from `develop`. Naming convention is `feature/[short_token]`
 2. Make your changes
-3. Test thoroughly in the Docker environment
+3. Test thoroughly in your development environment (Docker or native)
 4. Commit with descriptive messages
-5. Push to your branch.  This will auto-deploy to https://dev.montreal2027.ca. Test throughly
-6. Create a pull request for your feature branch against `develop`.  Assign the PR to yourself. Add meaningful labels. Add the PR to the `Website` project, and link it to the issue under `Development`
+5. Push to your branch. This will auto-deploy to https://dev.montreal2027.ca. Test thoroughly
+6. Create a pull request for your feature branch against `develop`. Assign the PR to yourself. Add meaningful labels. Add the PR to the `Website` project, and link it to the issue under `Development`
 
 ## License
 
@@ -329,4 +545,4 @@ Copyright © 2025, CanSMOF. All rights reserved.
 
 ## Support
 
-For questions or issues, contact the Technology & Production Division via the staff directory on the website.
+For questions or issues, contact the Website Area Head, Technology & Production Division via the [staff directory](https://montreal2027.ca/staff) on the website.
