@@ -50,6 +50,7 @@
         "drupal/ept_tiles": "^1.4",
         "drupal/facets": "^3.0",
         "drupal/first_paragraph": "^2.0",
+        "drupal/focal_point": "^2.1",
         "drupal/gin": "^5.0",
         "drupal/image_effects": "^4.0",
         "drupal/image_field_caption": "^4.0@RC",
@@ -83,6 +84,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "8.3"
+        },
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,

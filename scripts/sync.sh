@@ -81,6 +81,9 @@ echo "Backing up local database..."
 mkdir -p "${BACKUP_DIR}"
 $DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
 
+echo "Exporting changes..."
+$DRUSH cex
+
 echo "Dropping local database..."
 $DRUSH sql:drop -y
 
@@ -90,6 +93,10 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
 else
     $($DRUSH sql:connect) < dump.sql
 fi
+
+echo "Importing any exported changes..."
+$DRUSH cim
+$DRUSH updb
 
 # Rebuild Drupal cache
 $DRUSH cr
