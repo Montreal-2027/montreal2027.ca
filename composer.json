@@ -175,9 +175,5 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
-    },
-    "require-dev": {
-        "drupal/coder": "^9.0",
-        "friendsofphp/php-cs-fixer": "^3.95"
     }
 }
