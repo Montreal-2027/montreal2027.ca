@@ -60,7 +60,7 @@ jobs:
             echo "Changing to deploy path"
             cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Installing composer dependencies"
-            composer install
+            composer install --no-dev
 
       - name: Install NPM Dependencies
         uses: appleboy/ssh-action@v1
