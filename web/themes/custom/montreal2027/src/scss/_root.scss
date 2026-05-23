@@ -81,6 +81,7 @@ h5,
 h6 {
   color: var(--color-black);
   @include noto-font($weight: 700, $style: 'serif');
+  margin: 0;
 }
 
 h1 {
