@@ -1,6 +1,6 @@
 uuid: 51df215c-06fc-4eaa-94fa-9f3e82fcc487
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:ebt_text:eb2c5c8b-7bf7-4ebc-a749-2c2403e4eeda'
@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_masthead
 theme: montreal2027
 region: header
-weight: -7
+weight: -15
 provider: null
 plugin: 'block_content:eb2c5c8b-7bf7-4ebc-a749-2c2403e4eeda'
 settings:

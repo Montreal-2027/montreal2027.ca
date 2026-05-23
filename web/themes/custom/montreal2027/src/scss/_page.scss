@@ -73,7 +73,12 @@
       padding: clamp(0.7rem, calc(0.64rem + 0.375vw), 1rem);
       margin: 0 auto 1.5rem auto;
       margin: 0 auto clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem) auto;
-      max-width: 95dvw;
+      max-width: 90dvw;
+
+      @media (min-width: 992px) {
+        width: 75dvw;
+        max-width: 1400px;
+      }
 
       & .node--type-article {
         & .field--name-field-image {
