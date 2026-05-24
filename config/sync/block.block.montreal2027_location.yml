@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_location
 theme: montreal2027
 region: header
-weight: -9
+weight: -14
 provider: null
 plugin: 'block_content:b0535ea2-7bcb-4e4f-b835-cb21cf45648b'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_externallinks
 theme: montreal2027
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: 'menu_block:external'
 settings:

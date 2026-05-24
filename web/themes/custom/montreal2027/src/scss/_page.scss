@@ -16,7 +16,7 @@
 
   & #header {
     height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
-    background: var(--color-blue-bell);
+    background: var(--site-header-color);
     width: 100%;
     padding-top: var(--drupal-displace-offset-top, 0px);
     position: sticky;
@@ -27,7 +27,6 @@
     align-content: center;
 
     @media (min-width: 992px) {
-      background: linear-gradient(90deg, oklch(from var(--color-blue) l c h / 0.19) 0%, var(--color-blue) 50%, var(--color-blue) 100%), var(--color-white);
       @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
       width: 100%;
       left: 0;
@@ -69,11 +68,16 @@
     & .container {
       @include frosted-glass($border-radius: 1rem);
       @include drop-shadow-slight();
-      padding: 1rem 1.25rem;
-      padding: clamp(0.75rem, calc(0.536rem + 0.595vw), 1.25rem) clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
+      padding: .7rem 1rem;
+      padding: clamp(0.7rem, calc(0.64rem + 0.375vw), 1rem);
       margin: 0 auto 1.5rem auto;
       margin: 0 auto clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem) auto;
-      max-width: calc(100% - 4rem);
+      max-width: 90dvw;
+
+      @media (min-width: 992px) {
+        width: 75dvw;
+        max-width: 1400px;
+      }
 
       & .node--type-article {
         & .field--name-field-image {
