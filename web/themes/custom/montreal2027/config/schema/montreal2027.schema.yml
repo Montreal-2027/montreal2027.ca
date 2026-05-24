@@ -1,0 +1,25 @@
+montreal2027.settings:
+  type: theme_settings
+  label: 'Montreal 2027 theme settings'
+  mapping:
+    slideshow_display:
+      type: integer
+      label: 'Show slideshow'
+    slide_count:
+      type: string
+      label: 'Number of slides'
+    'slide_title_*':
+      type: string
+      label: 'Slide Title'
+    'slide_image_*':
+      type: sequence
+      label: 'Slide Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    'slide_url_*':
+      type: string
+      label: 'Slide URL'
+    include_fontawesome:
+      type: integer
+      label: 'Include FontAwesome icons (CDN)'
