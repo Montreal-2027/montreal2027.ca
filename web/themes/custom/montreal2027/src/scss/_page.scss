@@ -27,8 +27,6 @@
     align-content: center;
 
     @media (min-width: 992px) {
-      // background: linear-gradient(90deg, oklch(from var(--color-blue) l c h / 0.19) 0%, var(--color-blue) 50%, var(--color-blue) 100%), var(--color-white);
-      // background: oklch(0.3941 0.111 278.5);
       @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
       width: 100%;
       left: 0;
