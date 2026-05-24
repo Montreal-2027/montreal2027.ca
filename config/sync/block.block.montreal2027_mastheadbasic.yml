@@ -1,0 +1,25 @@
+uuid: a5711556-cd73-4f13-890a-b0d94d442a7e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00039eee-95a0-4240-bbf8-5dc592f37fed'
+  module:
+    - block_content
+  theme:
+    - montreal2027
+id: montreal2027_mastheadbasic
+theme: montreal2027
+region: header
+weight: -17
+provider: null
+plugin: 'block_content:00039eee-95a0-4240-bbf8-5dc592f37fed'
+settings:
+  id: 'block_content:00039eee-95a0-4240-bbf8-5dc592f37fed'
+  label: 'Masthead - Basic'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
