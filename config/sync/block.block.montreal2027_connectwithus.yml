@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_connectwithus
 theme: montreal2027
 region: header
-weight: -7
+weight: -8
 provider: null
 plugin: 'menu_block:connect-with-us'
 settings:
