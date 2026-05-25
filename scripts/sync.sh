@@ -49,7 +49,7 @@ BACKUP_DIR="${SYNC_BACKUP_DIR:-../backups}"
 REMOTE_DIR="${REMOTE_ROOT}/web/assets/"
 
 # Determine drush command based on environment type
-APP_ENV_TYPE="${APP_ENV_TYPE:-native}"
+APP_ENV_TYPE="${APP_ENV_TYPE:-docker}"
 if [ "$APP_ENV_TYPE" = "docker" ]; then
     echo "Using Docker environment for local commands..."
     DRUSH="docker-compose exec -T web drush"
