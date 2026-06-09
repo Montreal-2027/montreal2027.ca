@@ -1,0 +1,56 @@
+/**
+ * @file
+ * Styles for the Montreal 2027 EN/FR language toggle block.
+ */
+
+.language-toggle {
+  display: inline-flex;
+  gap: 0;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.language-toggle__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.375em 0.75em;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.language-toggle__link:not(:first-child) {
+  border-left: 1px solid currentColor;
+}
+
+.language-toggle__link:hover,
+.language-toggle__link:focus-visible {
+  background-color: rgba(0, 0, 0, 0.07);
+  outline-offset: -2px;
+}
+
+.language-toggle__link.is-active {
+  background-color: currentColor;
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Invert text colour when background becomes the inherited foreground. */
+.language-toggle__link.is-active > * {
+  color: inherit;
+}
+
+/* High-contrast / forced-colours support. */
+@media (forced-colors: active) {
+  .language-toggle__link.is-active {
+    forced-color-adjust: none;
+    background-color: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
+  }
+}

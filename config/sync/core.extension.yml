@@ -8,6 +8,8 @@ module:
   block_content: 0
   block_field: 0
   breakpoint: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor5: 0
   ckeditor5_open_new_tab: 0
   ckeditor5_paste_filter: 0
@@ -17,6 +19,7 @@ module:
   config: 0
   config_ignore: 0
   contextual: 0
+  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -50,16 +53,20 @@ module:
   file_mdm_font: 0
   filter: 0
   first_paragraph: 0
+  focal_point: 0
   help: 0
   history: 0
   image: 0
   image_effects: 0
   image_field_caption: 0
   inline_form_errors: 0
+  lang_dropdown: 0
   language: 0
+  languageicons: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   mailsystem: 0
   media: 0
   media_gallery: 0
@@ -82,7 +89,6 @@ module:
   recreate_block_content: 0
   responsive_image: 0
   rest: 0
-  search: 0
   search_api: 0
   search_api_db: 0
   serialization: 0

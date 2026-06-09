@@ -123,3 +123,20 @@ function montreal2027_tools_mail(string $key, array &$message, array $params): v
   $message['headers']['From'] = $formatted_from;
   $message['headers']['Reply-to'] = $safe_email;
 }
+
+/**
+ * Implements hook_preprocess_block() for the language_toggle block plugin.
+ *
+ * Adds flag/display-name label data to drupalSettings so the JS behaviour can
+ * render accessible, localised button labels without hard-coding them in JS.
+ */
+function montreal2027_tools_preprocess_block(array &$variables): void {
+  if (($variables['plugin_id'] ?? '') !== 'montreal2027_language_toggle') {
+    return;
+  }
+
+  $variables['#attached']['drupalSettings']['languageToggle']['labels'] = [
+    'en' => ['flag' => '🇬🇧', 'name' => 'English'],
+    'fr' => ['flag' => '🇫🇷', 'name' => 'Français'],
+  ];
+}

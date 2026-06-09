@@ -1,0 +1,20 @@
+uuid: 37b93227-8c17-4497-9f11-06b0f9c672f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.hero_image
+id: media.hero_image.name
+field_name: name
+entity_type: media
+bundle: hero_image
+label: Name
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -7,7 +7,6 @@ dependencies:
   module:
     - filter
     - media
-    - search
     - system
     - workspaces_access
 _core:
@@ -18,7 +17,6 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
-  - 'search content'
   - 'use text format restricted_html'
   - 'view media'
   - workspace_live_view_content
