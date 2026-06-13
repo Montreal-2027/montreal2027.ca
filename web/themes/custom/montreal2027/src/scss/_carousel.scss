@@ -1,7 +1,152 @@
-// News carousel (Bootstrap 5 carousel on the home page)
+// News carousel (Bootstrap 5 carousel on the home page).
+//
+// The site loads bootstrap.bundle JS (clean_blog_theme/bootstrap-cdn) but NOT
+// Bootstrap CSS, so the carousel component styles are provided here, scoped
+// under .news-carousel to avoid leaking into the rest of the theme. Keeps the
+// payload tiny vs. pulling in all of Bootstrap CSS.
 .news-carousel {
+  position: relative;
   margin-bottom: 1.5rem;
 
+  // --- Slide mechanics (ported from Bootstrap 5 carousel) ---
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+  }
+
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+    transform: translateX(100%);
+  }
+
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+    transform: translateX(-100%);
+  }
+
+  // --- Prev / next controls ---
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      opacity: 0.9;
+      outline: none;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+  }
+
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+  // --- Indicators ---
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 15% 1rem;
+    list-style: none;
+
+    [data-bs-target] {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 3px;
+      padding: 0;
+      margin: 0 3px;
+      cursor: pointer;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      opacity: 0.5;
+      transition: opacity 0.6s ease;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  }
+
+  // --- Visually-hidden helper for control labels (in case core's isn't present) ---
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  // --- Theme styling ---
   &__image {
     img {
       display: block;
@@ -13,11 +158,12 @@
   }
 
   // Caption overlay with a gradient scrim so text stays legible on any image.
-  &__caption {
-    text-align: left;
+  &__caption.carousel-caption {
+    position: absolute;
     left: 5%;
     right: 5%;
     bottom: 1.5rem;
+    text-align: left;
     padding: 1rem 1.25rem;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
     border-radius: 0.25rem;
