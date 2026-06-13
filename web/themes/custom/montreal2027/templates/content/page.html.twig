@@ -123,12 +123,14 @@
             {% set has_content = item.entity.field_news_content is defined and not item.entity.field_news_content.isEmpty() %}
             {% if has_title or has_content %}
               <div class="carousel-caption news-carousel__caption">
-                {% if has_title %}
-                  <h2 class="news-carousel__title">{{ item.entity.field_title.value }}</h2>
-                {% endif %}
-                {% if has_content %}
-                  <div class="news-carousel__content">{{ item.entity.field_news_content.value|raw }}</div>
-                {% endif %}
+                <div class="news-carousel__panel">
+                  {% if has_title %}
+                    <h2 class="news-carousel__title">{{ item.entity.field_title.value }}</h2>
+                  {% endif %}
+                  {% if has_content %}
+                    <div class="news-carousel__content">{{ item.entity.field_news_content.value|raw }}</div>
+                  {% endif %}
+                </div>
               </div>
             {% endif %}
           </div>
