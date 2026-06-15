@@ -10,6 +10,8 @@ RUN apk update && apk add --no-cache \
     unzip \
     zip \
     composer \
+    nodejs \
+    npm \
     nginx \
     fcgi \
     bash \
