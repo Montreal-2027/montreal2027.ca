@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.16_9
     - field.field.media.image.field_media_image
-    - image.style.1080p
+    - image.style.16_9
     - media.type.image
   module:
     - layout_builder
@@ -26,7 +26,7 @@ content:
     label: visually_hidden
     settings:
       image_link: ''
-      image_style: 1080p
+      image_style: '16_9'
       image_loading:
         attribute: lazy
       svg_attributes:

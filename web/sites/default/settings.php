@@ -12,6 +12,8 @@ if (file_exists($env_file)) {
   $dotenv->load($env_file);
 }
 
+ini_set('memory_limit', '512M');
+
 // phpcs:ignoreFile
 
 /**

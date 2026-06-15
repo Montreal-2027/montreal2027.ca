@@ -1,4 +1,4 @@
-# Montreal 2027 WorldCon Website
+   # Montreal 2027 WorldCon Website
 
 Official website for the 85th World Science Fiction Convention (Worldcon), taking place in Montreal, Quebec, Canada in 2027.
 
@@ -28,6 +28,29 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 ## Getting Started
 
 You can run this project either with Docker or in a native local environment (macOS/Linux with PHP, MariaDB, and Nginx installed locally).
+
+### Quick Installation Script
+
+**Prerequisites:**
+- `curl` and `git` installed on your machine.
+- SSH access configured for the Git repository.
+- Docker and Docker Compose (if you plan to start the containers and sync the database automatically).
+
+The easiest way to get the project up and running is to use the automated install script. This script will clone the repository, prompt you to start the Docker containers, and synchronize the database and configuration from the production environment automatically.
+
+To use the script, run the following command in your terminal. By default, it will prompt you for the directory to clone into (defaulting to `montreal2027.ca`):
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh | sh
+```
+
+You can also pass the destination directory dynamically as an argument to bypass the prompt:
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh | sh -s my_custom_directory
+```
+
+*(Note: If you have your own fork or remote URL, make sure to change the URL accordingly.)*
 
 ### Getting Started with Docker
 

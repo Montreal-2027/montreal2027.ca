@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - media
+    - search
     - system
     - workspaces_access
 _core:
@@ -14,5 +15,6 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
+  - 'search content'
   - 'view media'
   - workspace_live_view_content

@@ -4,27 +4,23 @@ status: true
 dependencies:
   config:
     - field.field.media.hero_image.field_media_image
-    - image.style.1080p
+    - image.style.hero_image
     - media.type.hero_image
   module:
-    - svg_image
+    - image_field_caption
 id: media.hero_image.default
 targetEntityType: media
 bundle: hero_image
 mode: default
 content:
   field_media_image:
-    type: image
+    type: image_caption
     label: hidden
     settings:
       image_link: ''
-      image_style: 1080p
+      image_style: hero_image
       image_loading:
         attribute: eager
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

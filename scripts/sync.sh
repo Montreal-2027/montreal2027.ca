@@ -52,8 +52,24 @@ REMOTE_DIR="${REMOTE_ROOT}/web/assets/"
 APP_ENV_TYPE="${APP_ENV_TYPE:-docker}"
 if [ "$APP_ENV_TYPE" = "docker" ]; then
     echo "Using Docker environment for local commands..."
-    DRUSH="docker-compose exec -T web drush"
-    SQL_CONNECT="docker-compose exec -T web bash -c \"\$(drush sql:connect)\""
+
+    # Check if the web container is running
+    if ! docker-compose ps --services --filter "status=running" | grep -q "^web$"; then
+        echo "Docker container 'web' is not running."
+        read -p "Do you want to start the containers now? (y/N): " start_containers
+        if [[ "$start_containers" =~ ^[Yy]$ ]]; then
+            echo "Starting Docker containers..."
+            docker-compose up -d
+            echo "Waiting for containers to configure..."
+            sleep 5
+        else
+            echo "Cannot proceed without containers running. Exiting."
+            exit 1
+        fi
+    fi
+
+    DRUSH="docker-compose exec -T web ./vendor/bin/drush"
+    SQL_CONNECT="docker-compose exec -T web bash -c \"\$(./vendor/bin/drush sql:connect)\""
 else
     echo "Using native environment for local commands..."
     DRUSH="./vendor/bin/drush"
@@ -77,15 +93,22 @@ cd "${PROJECT_ROOT}"
 echo "Downloading remote database..."
 ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
 
-echo "Backing up local database..."
-mkdir -p "${BACKUP_DIR}"
-$DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
+# Check if local database is not empty
+TABLE_COUNT=$($DRUSH sql:query "SHOW TABLES;" 2>/dev/null | wc -l)
 
-echo "Exporting changes..."
-$DRUSH cex
+if [ "$TABLE_COUNT" -gt 0 ]; then
+    echo "Backing up local database..."
+    mkdir -p "${BACKUP_DIR}"
+    $DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
 
-echo "Dropping local database..."
-$DRUSH sql:drop -y
+    echo "Exporting changes..."
+    $DRUSH cex
+
+    echo "Dropping local database..."
+    $DRUSH sql:drop -y
+else
+    echo "Local database is empty. Skipping backup, config export, and drop."
+fi
 
 echo "Importing remote database into local database..."
 if [ "$APP_ENV_TYPE" = "docker" ]; then
@@ -103,7 +126,7 @@ $DRUSH cr
 
 # Clean up
 echo "Cleaning up temporary files..."
-rm dump.sql
+#rm dump.sql
 
 echo "Synchronization complete."
 
