@@ -96,7 +96,8 @@
 
   {# Carousel for home page #}
   {% set current_node = node ?? null %}
-  {% if current_node and current_node.hasField('field_carousel_items') and not current_node.field_carousel_items.isEmpty() %}
+  {% set has_carousel = current_node and current_node.hasField('field_carousel_items') and not current_node.field_carousel_items.isEmpty() %}
+  {% if has_carousel %}
     {% set items = current_node.field_carousel_items %}
     <div id="news-carousel" class="news-carousel carousel slide" data-bs-ride="carousel">
       {% if items|length > 1 %}
@@ -150,7 +151,13 @@
   {% endif %}
 
   {# Main page content #}
-  <main id="main" class="clearfix">
+  {%
+    set classes = [
+    'clearfix',
+    has_carousel ? 'has-carousel',
+    ]
+  %}
+  <main {{ attributes.setAttribute('id', 'main').addClass(classes) }} >
     <div class="page--text-area-top">
         <a href="#top-of-page"><em class="fa-solid fa-circle-chevron-up"></em></a>
     </div>
