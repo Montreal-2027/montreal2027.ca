@@ -1,9 +1,14 @@
 uuid: 9c8713fc-2877-4c6a-91fc-1cfb8540feaf
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - crop
+third_party_settings:
+  crop:
+    image_field: _none
 id: hero_image
-label: 'Hero Image'
+label: 'Hero Image 1080p'
 description: 'Hero image for the top of a page'
 source: image
 queue_thumbnail_downloads: false

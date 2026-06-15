@@ -1,0 +1,36 @@
+uuid: 72aa0178-6af1-40ee-9e2f-7a6cf5d72553
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.hero_image
+    - media.type.image
+    - media.type.remote_video
+    - media.type.user_picture
+    - media.type.video
+  module:
+    - media_gallery
+id: media_gallery.media_gallery.images
+field_name: images
+entity_type: media_gallery
+bundle: media_gallery
+label: 'Gallery images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      hero_image: hero_image
+      image: image
+      remote_video: remote_video
+      user_picture: user_picture
+      video: video
+field_type: entity_reference

@@ -7,15 +7,7 @@ dependencies:
     - filter.format.plain_text
     - media.type.hero_image
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      caption: caption
-      file: '0'
 id: media.hero_image.field_media_image
 field_name: field_media_image
 entity_type: media
@@ -23,7 +15,7 @@ bundle: hero_image
 label: Image
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -33,7 +25,7 @@ settings:
   file_extensions: 'png gif jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
-  min_resolution: ''
+  min_resolution: 1920x1080
   alt_field: true
   alt_field_required: true
   title_field: false

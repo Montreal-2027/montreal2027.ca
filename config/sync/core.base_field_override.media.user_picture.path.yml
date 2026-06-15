@@ -1,0 +1,20 @@
+uuid: fef02530-9ae0-4e18-b87c-9660b68795a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.user_picture
+  module:
+    - path
+id: media.user_picture.path
+field_name: path
+entity_type: media
+bundle: user_picture
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

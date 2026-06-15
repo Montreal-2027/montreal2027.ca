@@ -5,7 +5,7 @@ features:
   favicon: 0
 logo:
   use_default: 0
-  path: 'public://Montreal2027-Logo_CMYK_Date-Full.svg'
+  path: 'public://m2027-logo.svg'
 favicon:
   use_default: 1
 slideshow_display: 0

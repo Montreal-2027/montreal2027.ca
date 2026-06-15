@@ -1,0 +1,17 @@
+uuid: dd3f7033-35ab-4a72-a70d-32852cd6fb1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - media_gallery
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: media_gallery.media_gallery
+target_entity_type_id: media_gallery
+target_bundle: media_gallery
+default_langcode: site_default
+language_alterable: false

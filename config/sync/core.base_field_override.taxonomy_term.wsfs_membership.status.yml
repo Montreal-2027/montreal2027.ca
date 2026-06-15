@@ -1,0 +1,22 @@
+uuid: f3ac50e3-0835-4991-a4b6-146f4f155f27
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.wsfs_membership
+id: taxonomy_term.wsfs_membership.status
+field_name: status
+entity_type: taxonomy_term
+bundle: wsfs_membership
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -7,6 +7,7 @@ ENV WEB_INTERNAL_PORT=${WEB_INTERNAL_PORT}
 # Install Nginx and runtime deps for Drupal.
 RUN apk update && apk add --no-cache \
     git \
+    patch \
     unzip \
     zip \
     composer \
