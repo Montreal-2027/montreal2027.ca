@@ -32,7 +32,7 @@ You can run this project either with Docker or in a native local environment (ma
 ### Quick Installation Script
 
 **Prerequisites:**
-- `curl` and `git` installed on your machine.
+- `wget` and `git` installed on your machine.
 - SSH access configured for the Git repository.
 - Docker and Docker Compose (if you plan to start the containers and sync the database automatically).
 
@@ -41,16 +41,30 @@ The easiest way to get the project up and running is to use the automated instal
 To use the script, run the following command in your terminal. By default, it will prompt you for the directory to clone into (defaulting to `montreal2027.ca`):
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh --header="Authorization: token YOUR_GITHUB_TOKEN" | sh
 ```
+
+*(Alternatively, you can clone the repository manually and run `./scripts/install.sh` from within the cloned directory).*
 
 You can also pass the destination directory dynamically as an argument to bypass the prompt:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh | sh -s my_custom_directory
+wget -qO- https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh --header="Authorization: token YOUR_GITHUB_TOKEN" | sh -s my_custom_directory
 ```
 
-*(Note: If you have your own fork or remote URL, make sure to change the URL accordingly.)*
+*(Note: Because this is a private repository, you must replace `YOUR_GITHUB_TOKEN` with a valid GitHub Personal Access Token that has repository read permissions. For instructions, see [GitHub's guide on managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).)*
+
+**Using a Token from Composer auth.json**
+
+If you have already configured Composer globally with your GitHub PAT (e.g., via `composer config -g github-oauth.github.com <YOUR_GITHUB_TOKEN>`), your token is stored in `~/.composer/auth.json`. 
+
+You can extract it directly from that file to run the script without copy-pasting the token manually:
+
+```bash
+# Extract the token and run the install script
+GITHUB_TOKEN=$(grep -o '"github.com": *"[^"]*"' ~/.composer/auth.json | cut -d'"' -f4)
+wget -qO- https://raw.githubusercontent.com/Montreal-2027/montreal2027.ca/main/scripts/install.sh --header="Authorization: token $GITHUB_TOKEN" | sh
+```
 
 ### Getting Started with Docker
 
