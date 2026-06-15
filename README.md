@@ -29,22 +29,25 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 
 You can run this project either with Docker or in a native local environment (macOS/Linux with PHP, MariaDB, and Nginx installed locally).
 
-### Quick Setup Script
+### Quick Start Script
 
 **Prerequisites:**
 - `git` installed on your machine.
 - SSH access configured for the Git repository.
 - Docker and Docker Compose (if you plan to start the containers and sync the database automatically).
 
-The easiest way to get the project up and running is to clone the repository and run the setup script:
+The easiest way to get the project up and running is to clone the repository and run the setup script.
 
 ```bash
 git clone git@git.montreal2027.ca:Montreal-2027/montreal2027.ca.git [DESTINATION_DIR]
 cd {montreal2027.ca | DESTINATION_DIR}
+git checkout {BRANCH}
 ./scripts/install.sh
 ```
 
 The setup script will prompt you to automatically start the Docker containers and synchronize the database and configuration from the production environment.
+
+*(Note: If you run this script immediately after cloning, it will use the default Docker environment variables because an `.env` file does not yet exist. In most Docker development scenarios, these defaults are perfectly fine. If you need to customize your environment before starting, please see the **Environment configuration** section below on using `.env.example`.)*
 
 ### Getting Started with Docker
 
@@ -375,6 +378,8 @@ docker-compose exec web drush cr
 - Node.js and npm (for theme compilation)
 - Web server (Nginx or Apache)
 - Git
+
+*(Note on Drush: We recommend creating an alias for local Native development to automatically point to the current project's Drush executable: `alias drush='$(composer config vendor-dir)/bin/drush'`)*
 
 ### Initial Setup
 

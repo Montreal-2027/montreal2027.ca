@@ -16,6 +16,7 @@
 
 # Project root
 PROJECT_ROOT="${PWD}"
+INSTALL_FLAG=".install_completed"
 
 # Load environment variables from .env file
 if [ -f "${PROJECT_ROOT}/.env" ]; then
@@ -59,9 +60,7 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
         read -p "Do you want to start the containers now? (y/N): " start_containers
         if [[ "$start_containers" =~ ^[Yy]$ ]]; then
             echo "Starting Docker containers..."
-            docker-compose up -d
-            echo "Waiting for containers to configure..."
-            sleep 5
+            docker-compose up -d --wait
         else
             echo "Cannot proceed without containers running. Exiting."
             exit 1
@@ -70,18 +69,29 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
 
     DRUSH="docker-compose exec -T web ./vendor/bin/drush"
     SQL_CONNECT="docker-compose exec -T web bash -c \"\$(./vendor/bin/drush sql:connect)\""
+    COMPOSER="docker-compose exec -T web composer"
 else
     echo "Using native environment for local commands..."
     DRUSH="./vendor/bin/drush"
     SQL_CONNECT="\$(./vendor/bin/drush sql:connect)"
+    COMPOSER="composer"
 fi
 
+if [ ! -f "$INSTALL_FLAG" ]; then
+    echo "Initial setup detected. Running composer install..."
+    $COMPOSER install
+    
+    if [ "$APP_ENV_TYPE" = "docker" ]; then
+        echo "Creating drush symlink in container..."
+        docker-compose exec -T web ln -sf /var/www/html/vendor/bin/drush /usr/local/sbin/drush
+    fi
+fi
 
 # Sync files using rsync
 echo "Starting file synchronization of assets from ${SYNC_FROM}..."
 rsync -avz --delete -e "ssh -i ${SSH_KEY} -p ${SSH_PORT}"  --exclude 'php/*' --progress "${REMOTE_USER}@${SYNC_FROM}:${REMOTE_DIR}" "${LOCAL_SYNC_DIR}"
 
-read -p "Drop local database and import remote database? (y/N): " confirm
+read -p "Import remote database? (Any existing local database will be replaced) (y/N): " confirm
 if [[ "$confirm" =~ ^[Nn]$ ]]
 then
     echo "Database synchronization aborted."
@@ -93,10 +103,9 @@ cd "${PROJECT_ROOT}"
 echo "Downloading remote database..."
 ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
 
-# Check if local database is not empty
-TABLE_COUNT=$($DRUSH sql:query "SHOW TABLES;" 2>/dev/null | wc -l)
-
-if [ "$TABLE_COUNT" -gt 0 ]; then
+if [ ! -f "$INSTALL_FLAG" ]; then
+    echo "Initial installation detected. Skipping database backup, config export, and drop."
+else
     echo "Backing up local database..."
     mkdir -p "${BACKUP_DIR}"
     $DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
@@ -106,8 +115,6 @@ if [ "$TABLE_COUNT" -gt 0 ]; then
 
     echo "Dropping local database..."
     $DRUSH sql:drop -y
-else
-    echo "Local database is empty. Skipping backup, config export, and drop."
 fi
 
 echo "Importing remote database into local database..."
