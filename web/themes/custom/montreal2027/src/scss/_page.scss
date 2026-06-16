@@ -158,6 +158,14 @@
       }
     }
 
+    &.has-carousel {
+      margin: 0;
+
+      & .container {
+        border-radius: 0 0 1rem 1rem;
+      }
+    }
+  
     .page--text-area-top {
       position: fixed;
       bottom: 20px;

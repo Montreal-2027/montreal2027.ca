@@ -162,13 +162,12 @@
         <a href="#top-of-page"><em class="fa-solid fa-circle-chevron-up"></em></a>
     </div>
     <div class="container">
-      <div class="row">{% if page.sidebar_first %}
+      <div class="row">
+        {% if page.sidebar_first %}
           <div id="sidebar-first" class="sidebar {{ sidebarfirst }}" role="complementary">
             {{ page.sidebar_first }}
             {{ page.secondary_menu }}
-
-          </div>
-          <!-- /#sidebar-first -->
+          </div><!-- /#sidebar-first -->
         {% endif %}
 
         <div class="{{ conditionalStr }}" role="main">
@@ -177,14 +176,14 @@
           {% endif %}
 
           {{ page.content }}
-
         </div>{# /#post-content #}
 
         {% if page.sidebar_second %}
           <div id="sidebar-second" class="sidebar {{ sidebarsecond }}" role="complementary">
             {{ page.sidebar_second }}
-          </div> <!-- /#sidebar-first -->
-        {% endif %}</div>
+          </div> <!-- /#sidebar-second -->
+        {% endif %}
+      </div>
     </div>
   </main>
 
