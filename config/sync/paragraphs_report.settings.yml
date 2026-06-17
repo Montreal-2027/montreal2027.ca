@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: WDVVbTde1eXP94qMDbx4NqQy4uOAEHLdyGsAcQBcF4o
+content_types:
+  article: article
+  guest: guest
+  home_page: home_page
+  page: page
+hide_paras:
+  carousel_item: 0
+  ebt_tiles_item: 0
+  ept_basic_button: 0
+  ept_hero: 0
+  ept_text: 0
+  ept_tiles: 0
+  ept_tiles_item: 0
+  guest_block: 0
+  guests: 0
+  positions: 0
+  text_area: 0
+import_rows_per_batch: 10
+watch_content: false

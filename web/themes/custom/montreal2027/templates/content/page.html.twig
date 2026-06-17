@@ -113,10 +113,10 @@
         {% for item in items %}
           <div class="carousel-item {{ loop.first ? 'active' }}">
             {% if item.entity and item.entity.field_hero_image %}
-              {% set image_file = item.entity.field_hero_image.entity %}
-              {% if image_file %}
+              {% set image_target_id = item.entity.field_hero_image.entity.field_media_image.target_id %}
+              {% if image_target_id %}
                 <div class="news-carousel__image">
-                  {{ drupal_image(image_file.uri.value, 'nc_hero_image', {alt: item.entity.field_hero_image.alt, class: 'd-block w-100'}) }}
+                  {{ drupal_image(image_target_id, 'nc_hero_image', {alt: item.entity.field_hero_image.entity.field_media_image.alt, class: 'd-block w-100'}) }}
                 </div>
               {% endif %}
             {% endif %}
