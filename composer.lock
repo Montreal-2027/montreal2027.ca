@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56b9b20d89ae52d5414406b8569ee892",
+    "content-hash": "e208f2d86a4ba8ec7277414d209d7684",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3055,6 +3055,57 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ept_core",
                 "issues": "https://www.drupal.org/project/issues/ept_core"
+            }
+        },
+        {
+            "name": "drupal/ept_hero",
+            "version": "1.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ept_hero.git",
+                "reference": "1.4.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ept_hero-1.4.7.zip",
+                "reference": "1.4.7",
+                "shasum": "9443dbd6fcd88bb86ee2f2d552bffdeecf1841f9"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ept_basic_button": "^1.4",
+                "drupal/ept_core": "^1.4",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.7",
+                    "datestamp": "1749390506",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                }
+            ],
+            "description": "EPT Hero",
+            "homepage": "http://drupal.org/project/ept_hero",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ept_hero",
+                "issues": "https://www.drupal.org/project/issues/ept_hero"
             }
         },
         {
