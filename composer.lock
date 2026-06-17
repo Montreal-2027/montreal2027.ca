@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc2875a6ed8b79bb184dc680a6937ee2",
+    "content-hash": "fd4dc3e7c6374f9f2acbc9f27765d3bf",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2421,6 +2421,275 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/easy_breadcrumb",
                 "issues": "https://www.drupal.org/project/issues/easy_breadcrumb"
+            }
+        },
+        {
+            "name": "drupal/ebt_basic_button",
+            "version": "1.4.12",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_basic_button.git",
+                "reference": "1.4.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_basic_button-1.4.12.zip",
+                "reference": "1.4.12",
+                "shasum": "14b595ece9d2dea138d0ba9060b9db3ad611e56c"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ebt_core": "^1.4.8",
+                "drupal/paragraphs": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.12",
+                    "datestamp": "1753687697",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                },
+                {
+                    "name": "narine_tsaturyan",
+                    "homepage": "https://www.drupal.org/user/3723666"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Basic Button",
+            "homepage": "http://drupal.org/project/ebt_basic_button",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_basic_button",
+                "issues": "https://www.drupal.org/project/issues/ebt_basic_button"
+            }
+        },
+        {
+            "name": "drupal/ebt_core",
+            "version": "1.4.38",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_core.git",
+                "reference": "1.4.38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_core-1.4.38.zip",
+                "reference": "1.4.38",
+                "shasum": "974cefa63fc0b3da1ff14db9488adf490cbd1026"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/field_group": "^3.0 || ^4.0",
+                "drupal/media_library_form_element": "^2.0",
+                "levmyshkin/jquery-colorpicker": "^1.0",
+                "levmyshkin/jquery-mb-ytplayer": "^3.3.10",
+                "levmyshkin/parallaxjs": "^1.5",
+                "levmyshkin/vidbg": "^2.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.38",
+                    "datestamp": "1775502945",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                },
+                {
+                    "name": "narine_tsaturyan",
+                    "homepage": "https://www.drupal.org/user/3723666"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Core",
+            "homepage": "https://drupal.org/project/ebt_core",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_core",
+                "issues": "https://www.drupal.org/project/issues/ebt_core"
+            }
+        },
+        {
+            "name": "drupal/ebt_hero",
+            "version": "1.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_hero.git",
+                "reference": "1.4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_hero-1.4.4.zip",
+                "reference": "1.4.4",
+                "shasum": "d6f912e20ca5782c742ebd861d6fe59a7549db39"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ebt_basic_button": "^1.4",
+                "drupal/paragraphs": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.4",
+                    "datestamp": "1750324266",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                },
+                {
+                    "name": "narine_tsaturyan",
+                    "homepage": "https://www.drupal.org/user/3723666"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Hero",
+            "homepage": "http://drupal.org/project/ebt_hero",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_hero",
+                "issues": "https://www.drupal.org/project/issues/ebt_hero"
+            }
+        },
+        {
+            "name": "drupal/ebt_text",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_text.git",
+                "reference": "1.4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_text-1.4.3.zip",
+                "reference": "1.4.3",
+                "shasum": "34f1d08882fba600fd037e242d3d4d6c6d6e96cc"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ebt_core": "^1.4"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.3",
+                    "datestamp": "1721031961",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                },
+                {
+                    "name": "narine_tsaturyan",
+                    "homepage": "https://www.drupal.org/user/3723666"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Text",
+            "homepage": "http://drupal.org/project/ebt_text",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_text",
+                "issues": "https://www.drupal.org/project/issues/ebt_text"
+            }
+        },
+        {
+            "name": "drupal/ebt_tiles",
+            "version": "1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ebt_tiles.git",
+                "reference": "1.4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ebt_tiles-1.4.6.zip",
+                "reference": "1.4.6",
+                "shasum": "87fabad7de442f9c9513cebd9407b3bedd4c8ea4"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ebt_core": "^1.4",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.6",
+                    "datestamp": "1766350804",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                }
+            ],
+            "description": "Extra Block Types (EBT): Tiles",
+            "homepage": "http://drupal.org/project/ebt_tiles",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ebt_tiles",
+                "issues": "https://www.drupal.org/project/issues/ebt_tiles"
             }
         },
         {
@@ -5706,6 +5975,132 @@
                 }
             ],
             "time": "2025-05-20T12:55:37+00:00"
+        },
+        {
+            "name": "levmyshkin/jquery-colorpicker",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/jquery_colorpicker.git",
+                "reference": "45f9ac11079b73885186ce73b531f0bba1812c7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/jquery_colorpicker/zipball/45f9ac11079b73885186ce73b531f0bba1812c7f",
+                "reference": "45f9ac11079b73885186ce73b531f0bba1812c7f",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT or GPL-1.0)"
+            ],
+            "description": "The jQuery Colorpicker JS/CSS library. Fork from jaypan/jquery_colorpicker.",
+            "homepage": "https://www.eyecon.ro/colorpicker/",
+            "keywords": [
+                "EBT",
+                "colorpicker",
+                "drupal",
+                "jquery"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/jquery_colorpicker/tree/1.0.2"
+            },
+            "time": "2021-12-01T11:34:35+00:00"
+        },
+        {
+            "name": "levmyshkin/jquery-mb-ytplayer",
+            "version": "3.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/jquery.mb.YTPlayer.git",
+                "reference": "037f9d56dc2efb986e4ea89609d7edf2aa0ff438"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/jquery.mb.YTPlayer/zipball/037f9d56dc2efb986e4ea89609d7edf2aa0ff438",
+                "reference": "037f9d56dc2efb986e4ea89609d7edf2aa0ff438",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT)"
+            ],
+            "description": "jquery.mb.YTPlayer plugin as drupal-library. Fork from https://github.com/pupunzi/jquery.mb.YTPlayer.",
+            "homepage": "https://pupunzi.com/#mb.components/mb.YTPlayer/YTPlayer.html",
+            "keywords": [
+                "EBT",
+                "drupal",
+                "jquery.mb.YTPlayer"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/jquery.mb.YTPlayer/tree/3.3.10"
+            },
+            "time": "2021-12-24T14:45:07+00:00"
+        },
+        {
+            "name": "levmyshkin/parallaxjs",
+            "version": "v1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/parallax.js.git",
+                "reference": "bed64e1ad39cabe1130505010f5aaaeb50d4cf86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/parallax.js/zipball/bed64e1ad39cabe1130505010f5aaaeb50d4cf86",
+                "reference": "bed64e1ad39cabe1130505010f5aaaeb50d4cf86",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "(MIT)"
+            ],
+            "description": "Parallax.js pluging as drupal-library. Fork from pixelcog/parallax.js.",
+            "homepage": "https://pixelcog.github.io/parallax.js/",
+            "keywords": [
+                "EBT",
+                "drupal",
+                "parallax.js"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/parallax.js/tree/v1.5.1"
+            },
+            "time": "2021-12-12T14:41:01+00:00"
+        },
+        {
+            "name": "levmyshkin/vidbg",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/levmyshkin/vidbg.git",
+                "reference": "29ba2e3bc55f2b238e9a74b6997bbd67630c653e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/levmyshkin/vidbg/zipball/29ba2e3bc55f2b238e9a74b6997bbd67630c653e",
+                "reference": "29ba2e3bc55f2b238e9a74b6997bbd67630c653e",
+                "shasum": ""
+            },
+            "type": "drupal-library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "An HTML5 video player.",
+            "homepage": "https://drupalbook.org/",
+            "keywords": [
+                "HTML5",
+                "player",
+                "video",
+                "video background"
+            ],
+            "support": {
+                "source": "https://github.com/levmyshkin/vidbg/tree/2.1.0"
+            },
+            "time": "2024-05-03T09:32:29+00:00"
         },
         {
             "name": "lobsterr/drupal-superfish",
