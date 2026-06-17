@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e208f2d86a4ba8ec7277414d209d7684",
+    "content-hash": "b5fcfca09723c541c7182edd1a0ed1a0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3106,6 +3106,106 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ept_hero",
                 "issues": "https://www.drupal.org/project/issues/ept_hero"
+            }
+        },
+        {
+            "name": "drupal/ept_text",
+            "version": "1.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ept_text.git",
+                "reference": "1.4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ept_text-1.4.3.zip",
+                "reference": "1.4.3",
+                "shasum": "1578e309df78aa596d3654c3fa1344171cd39d4e"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ept_core": "^1.4",
+                "drupal/paragraphs": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.3",
+                    "datestamp": "1721384579",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                }
+            ],
+            "description": "Extra Paragraph Types (EPT): Text",
+            "homepage": "http://drupal.org/project/ept_text",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ept_text",
+                "issues": "https://www.drupal.org/project/issues/ept_text"
+            }
+        },
+        {
+            "name": "drupal/ept_tiles",
+            "version": "1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ept_tiles.git",
+                "reference": "1.4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ept_tiles-1.4.6.zip",
+                "reference": "1.4.6",
+                "shasum": "16be2be1e1f96063286f9f14cfdcbf758acd4a3e"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "drupal/ept_core": "^1.4",
+                "drupal/paragraphs": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.4.6",
+                    "datestamp": "1766401024",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "levmyshkin",
+                    "homepage": "https://www.drupal.org/user/1079574"
+                }
+            ],
+            "description": "Extra Paragraph Types (EPT): Tiles",
+            "homepage": "http://drupal.org/project/ept_tiles",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ept_tiles",
+                "issues": "https://www.drupal.org/project/issues/ept_tiles"
             }
         },
         {

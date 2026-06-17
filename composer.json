@@ -49,6 +49,8 @@
         "drupal/entity_workflow": "^2.0@beta",
         "drupal/ept_basic_button": "^1.4",
         "drupal/ept_hero": "^1.4",
+        "drupal/ept_text": "^1.4",
+        "drupal/ept_tiles": "^1.4",
         "drupal/facets": "^3.0",
         "drupal/field_group": "^4.0",
         "drupal/first_paragraph": "^2.0",
