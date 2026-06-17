@@ -10,6 +10,14 @@
             grid-template-rows: repeat(6, auto);
             grid-auto-flow: row;
         }
+
+        .wsfs-only {
+            background: #ccc;
+        }
+
+        div {
+            padding: .4rem;
+        }
     }
 
     &--header:not(.grid--cell-empty) {
