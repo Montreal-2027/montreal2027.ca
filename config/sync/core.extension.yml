@@ -17,7 +17,6 @@ module:
   config: 0
   config_ignore: 0
   contextual: 0
-  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
