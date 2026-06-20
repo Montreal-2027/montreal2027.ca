@@ -1,12 +1,7 @@
 uuid: ebb8b245-11bb-4535-bb73-c4eb999f279c
 langcode: en
 status: true
-dependencies:
-  module:
-    - crop
-third_party_settings:
-  crop:
-    image_field: _none
+dependencies: {  }
 id: nc_hero_image
 label: 'News Carousel Hero Image'
 description: 'Hero image for a news carousel item'

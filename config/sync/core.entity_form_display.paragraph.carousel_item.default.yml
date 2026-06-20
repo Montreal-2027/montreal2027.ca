@@ -6,10 +6,9 @@ dependencies:
     - field.field.paragraph.carousel_item.field_hero_image
     - field.field.paragraph.carousel_item.field_news_content
     - field.field.paragraph.carousel_item.field_title
-    - image.style.16_9_thumbnail
     - paragraphs.paragraphs_type.carousel_item
   module:
-    - focal_point
+    - media_library
     - text
 id: paragraph.carousel_item.default
 targetEntityType: paragraph
@@ -17,14 +16,11 @@ bundle: carousel_item
 mode: default
 content:
   field_hero_image:
-    type: image_focal_point
+    type: media_library_widget
     weight: 1
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: 16_9_thumbnail
-      preview_link: true
-      offsets: '50,50'
+      media_types: {  }
     third_party_settings: {  }
   field_news_content:
     type: text_textarea

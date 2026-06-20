@@ -26,22 +26,12 @@ module:
   draggableviews: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
-  ebt_basic_button: 0
-  ebt_core: 0
-  ebt_hero: 0
-  ebt_text: 0
-  ebt_tiles: 0
   editor: 0
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
   entity_workflow: 0
   entity_workflow_workspace: 0
-  ept_basic_button: 0
-  ept_core: 0
-  ept_hero: 0
-  ept_text: 0
-  ept_tiles: 0
   facets: 0
   facets_rest: 0
   field: 0
@@ -82,6 +72,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_report: 0
   path: 0
   path_alias: 0
   photoswipe: 0

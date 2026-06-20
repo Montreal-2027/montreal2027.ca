@@ -4,6 +4,10 @@
             border-radius: .4rem;
         }
 
+        .wsfs-only {
+            background-color: oklch(from var(--color-white) l c h / 0.55);
+        }
+
         &__title {
             h1 {
                 text-align: center;

@@ -3,15 +3,17 @@ langcode: en
 status: true
 dependencies:
   module:
-    - focal_point
+    - image_effects
 name: 16_9_thumbnail
 label: '1080p Thumbnail (160 x 90)'
 effects:
-  a07e3a91-c154-48f4-b954-2e9a8164ff49:
-    uuid: a07e3a91-c154-48f4-b954-2e9a8164ff49
-    id: focal_point_scale_and_crop
-    weight: 1
+  227e6097-8777-4489-866c-fe9850aee6f1:
+    uuid: 227e6097-8777-4489-866c-fe9850aee6f1
+    id: image_effects_scale_and_smart_crop
+    weight: 2
     data:
-      width: 160
-      height: 90
-      crop_type: focal_point
+      width: '160'
+      height: '90'
+      upscale: false
+      simulate: false
+      algorithm: entropy_slice

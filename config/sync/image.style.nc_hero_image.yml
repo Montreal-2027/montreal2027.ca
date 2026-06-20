@@ -3,21 +3,23 @@ langcode: en
 status: true
 dependencies:
   module:
-    - focal_point
+    - image_effects
 name: nc_hero_image
 label: 'News Carousel Hero Image'
 effects:
-  4ac6b528-e25d-44cb-a9dd-6a8d07a87c6a:
-    uuid: 4ac6b528-e25d-44cb-a9dd-6a8d07a87c6a
-    id: focal_point_scale_and_crop
-    weight: 1
-    data:
-      width: 1920
-      height: 500
-      crop_type: focal_point
   d7f743a9-b05c-46a3-aa91-96846f0e9e30:
     uuid: d7f743a9-b05c-46a3-aa91-96846f0e9e30
     id: image_convert_avif
-    weight: 2
+    weight: -8
     data:
       extension: webp
+  ff09bc13-2f60-4f6b-b7da-e5cd705214d6:
+    uuid: ff09bc13-2f60-4f6b-b7da-e5cd705214d6
+    id: image_effects_scale_and_smart_crop
+    weight: -9
+    data:
+      width: '1920'
+      height: '500'
+      upscale: true
+      simulate: false
+      algorithm: entropy_slice

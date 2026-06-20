@@ -7,8 +7,8 @@ dependencies:
     - image.style.nc_hero_image_thumbnail
     - media.type.nc_hero_image
   module:
-    - focal_point
     - path
+    - svg_image
 id: media.nc_hero_image.default
 targetEntityType: media
 bundle: nc_hero_image
@@ -21,14 +21,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_image:
-    type: image_focal_point
+    type: image_image
     weight: 0
     region: content
     settings:
       progress_indicator: bar
       preview_image_style: nc_hero_image_thumbnail
-      preview_link: true
-      offsets: '50,50'
     third_party_settings: {  }
   langcode:
     type: language_select

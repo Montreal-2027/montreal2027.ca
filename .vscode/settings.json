@@ -7,7 +7,6 @@
         "editor.formatOnSave": true
     },
     "chat.tools.terminal.autoApprove": {
-        
         "cd": true,
         "echo": true,
         "ls": true,
@@ -129,7 +128,11 @@
         "xargs": false,
         "eval": false,
         "Invoke-Expression": false,
-        "iex": false
+        "iex": false,
+        "/^drush watchdog:show --count=5 --severity=Error$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
     },
     "intelephense.files.exclude": [
         "**/example.settings.local.php",

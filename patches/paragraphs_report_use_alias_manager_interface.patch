@@ -1,0 +1,40 @@
+diff --git a/src/ParagraphsReport.php b/src/ParagraphsReport.php
+index f63b5d093e25e325a993df4f8ca420fe76663935..9d236884c57d88f298d841e75d3fbd389530afe9 100644
+--- a/src/ParagraphsReport.php
++++ b/src/ParagraphsReport.php
+@@ -17,7 +17,7 @@ use Drupal\Core\State\StateInterface;
+ use Drupal\Core\StringTranslation\StringTranslationTrait;
+ use Drupal\Core\Url;
+ use Drupal\paragraphs\Entity\Paragraph;
+-use Drupal\path_alias\AliasManager;
++use Drupal\path_alias\AliasManagerInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ use Symfony\Component\HttpFoundation\RequestStack;
+ use Symfony\Component\HttpFoundation\Response;
+@@ -70,7 +70,7 @@ class ParagraphsReport {
+   /**
+    * Alias manager.
+    *
+-   * @var \Drupal\path_alias\AliasManager
++   * @var \Drupal\path_alias\AliasManagerInterface
+    */
+   protected $aliasManager;
+ 
+@@ -156,7 +156,7 @@ class ParagraphsReport {
+    *   Entity type manager.
+    * @param \Drupal\Core\Path\CurrentPathStack $currentPath
+    *   Current path.
+-   * @param \Drupal\path_alias\AliasManager $aliasManager
++   * @param \Drupal\path_alias\AliasManagerInterface $aliasManager
+    *   Alias manager.
+    * @param \Drupal\Core\Pager\PagerManagerInterface $pagerManager
+    *   Pager manager.
+@@ -174,7 +174,7 @@ class ParagraphsReport {
+     EntityFieldManager $entityFieldManager,
+     EntityTypeManagerInterface $entityTypeManager,
+     CurrentPathStack $currentPath,
+-    AliasManager $aliasManager,
++    AliasManagerInterface $aliasManager,
+     PagerManagerInterface $pagerManager,
+     RequestStack $requestStack,
+     StateInterface $state,

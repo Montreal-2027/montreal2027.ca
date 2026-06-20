@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - focal_point
+    - image_effects
 name: 1080p
 label: '1080p (1920 x 1080)'
 effects:
@@ -13,11 +13,13 @@ effects:
     weight: -9
     data:
       extension: webp
-  ab1b04e1-64af-45a5-8092-d6b4dfafee20:
-    uuid: ab1b04e1-64af-45a5-8092-d6b4dfafee20
-    id: focal_point_scale_and_crop
+  9bebd7a0-92db-435f-9729-2b47e3b66a37:
+    uuid: 9bebd7a0-92db-435f-9729-2b47e3b66a37
+    id: image_effects_scale_and_smart_crop
     weight: -10
     data:
-      width: 1920
-      height: 1080
-      crop_type: focal_point
+      width: '1920'
+      height: '1080'
+      upscale: true
+      simulate: false
+      algorithm: entropy_slice
