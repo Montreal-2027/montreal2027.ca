@@ -1,0 +1,18 @@
+uuid: 669a9b4d-6fb6-4c0c-9435-95e0ac414d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.nc_hero_image
+id: media.nc_hero_image.name
+field_name: name
+entity_type: media
+bundle: nc_hero_image
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

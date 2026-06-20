@@ -1,5 +1,8 @@
 <?php
 
+/** @var string $app_root */
+/** @var string $site_path */
+
 use Symfony\Component\Dotenv\Dotenv;
 
 /** @disregard P1011 */
@@ -8,6 +11,8 @@ if (file_exists($env_file)) {
   $dotenv = new Dotenv();
   $dotenv->load($env_file);
 }
+
+ini_set('memory_limit', '512M');
 
 // phpcs:ignoreFile
 
@@ -72,10 +77,9 @@ $databases['default']['default'] = [
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 ];
 
-$settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.yml';
+
 $settings['hash_salt'] = $_ENV['HASH_SALT'];
-$settings['cache']['bins']['render'] = 'cache.backend.null';
-$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';

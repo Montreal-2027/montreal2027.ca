@@ -1,0 +1,18 @@
+uuid: 6c226ff6-670a-4198-997d-e9f8678ab4db
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.nc_hero_image
+id: media.nc_hero_image.created
+field_name: created
+entity_type: media
+bundle: nc_hero_image
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

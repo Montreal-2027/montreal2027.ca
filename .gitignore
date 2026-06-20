@@ -73,3 +73,4 @@ web/themes/custom/montreal2027/css/montreal2027.min.css
 .env
 .env.local
 *.sql
+/.install_completed
