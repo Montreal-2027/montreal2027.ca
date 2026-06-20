@@ -24,13 +24,27 @@
           link.classList.toggle('is-active', isActive);
           link.setAttribute('aria-current', isActive ? 'true' : 'false');
 
-          // Enrich the link label with canonical display name + flag if provided.
-          if (labels[langcode] && labels[langcode].flag) {
-            const flag = labels[langcode].flag;
+          // Enrich the link label with canonical display name + flag image.
+          if (labels[langcode]) {
             const name = labels[langcode].name || link.textContent.trim();
-            // Avoid appending the flag twice on repeated attaches.
-            if (!link.textContent.trim().endsWith(flag)) {
-              link.textContent = name + '\u00A0' + flag;
+            const flagUrl = labels[langcode].flagUrl || '';
+
+            link.textContent = '';
+
+            const textNode = document.createElement('span');
+            textNode.className = 'language-toggle__text';
+            textNode.textContent = name;
+            link.appendChild(textNode);
+
+            if (flagUrl) {
+              const flagImage = document.createElement('img');
+              flagImage.className = 'language-toggle__flag';
+              flagImage.src = flagUrl;
+              flagImage.alt = '';
+              flagImage.setAttribute('aria-hidden', 'true');
+              flagImage.decoding = 'async';
+              flagImage.loading = 'lazy';
+              link.appendChild(flagImage);
             }
           }
         });
