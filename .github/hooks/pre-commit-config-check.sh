@@ -28,8 +28,8 @@ NC='\033[0m' # No Color
 DRUSH=""
 
 # Check if Docker containers are running
-if docker-compose ps web 2>/dev/null | grep -q "Up"; then
-    DRUSH="docker-compose exec -T web drush"
+if docker compose ps web 2>/dev/null | grep -q "Up"; then
+    DRUSH="docker compose exec -T web drush"
     echo -e "${YELLOW}Using Docker environment${NC}"
 elif command -v drush &> /dev/null; then
     DRUSH="drush"
@@ -37,7 +37,7 @@ elif command -v drush &> /dev/null; then
 else
     echo -e "${RED}Error: Cannot find Drush${NC}"
     echo "Please ensure either:"
-    echo "  1. Docker containers are running (docker-compose up -d), or"
+    echo "  1. Docker containers are running (docker compose up -d), or"
     echo "  2. Drush is installed locally"
     exit 1
 fi
@@ -57,8 +57,8 @@ if $DRUSH config:status --state=Different 2>/dev/null | grep -q "Different"; the
     $DRUSH config:status --state=Different
     echo ""
     echo -e "${YELLOW}Please export configuration before committing:${NC}"
-    if [[ "$DRUSH" == *"docker-compose"* ]]; then
-        echo "  docker-compose exec web drush cex"
+    if [[ "$DRUSH" == *"docker compose" ]]; then
+        echo "  docker compose exec web drush cex"
     else
         echo "  drush cex"
     fi
