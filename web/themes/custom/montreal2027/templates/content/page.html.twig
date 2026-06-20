@@ -92,21 +92,82 @@
     {{ page.breadcrumb }}
   {% endif %}
 
-  <div id="top-of-page"></div>
+      <div id="top-of-page"></div>
+
+  {# Carousel for home page #}
+  {% set current_node = node ?? null %}
+  {% set has_carousel = current_node and current_node.hasField('field_carousel_items') and not current_node.field_carousel_items.isEmpty() %}
+  {% if has_carousel %}
+    {% set items = current_node.field_carousel_items %}
+    <div id="news-carousel" class="news-carousel carousel slide" data-bs-ride="carousel">
+      {% if items|length > 1 %}
+        <div class="carousel-indicators">
+          {% for item in items %}
+            <button type="button" data-bs-target="#news-carousel" data-bs-slide-to="{{ loop.index0 }}"
+              class="{{ loop.first ? 'active' }}" {{ loop.first ? 'aria-current="true"' }}
+              aria-label="{{ 'Slide @n'|t({'@n': loop.index}) }}"></button>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="carousel-inner">
+        {% for item in items %}
+          <div class="carousel-item {{ loop.first ? 'active' }}">
+            {% if item.entity and item.entity.field_hero_image %}
+              {% set image_target_id = item.entity.field_hero_image.entity.field_media_image.target_id %}
+              {% if image_target_id %}
+                <div class="news-carousel__image">
+                  {{ drupal_image(image_target_id, 'nc_hero_image', {alt: item.entity.field_hero_image.entity.field_media_image.alt, class: 'd-block w-100'}) }}
+                </div>
+              {% endif %}
+            {% endif %}
+            {% set has_title = item.entity.field_title is defined and not item.entity.field_title.isEmpty() %}
+            {% set has_content = item.entity.field_news_content is defined and not item.entity.field_news_content.isEmpty() %}
+            {% if has_title or has_content %}
+              <div class="carousel-caption news-carousel__caption">
+                <div class="news-carousel__panel">
+                  {% if has_title %}
+                    <h2 class="news-carousel__title">{{ item.entity.field_title.value }}</h2>
+                  {% endif %}
+                  {% if has_content %}
+                    <div class="news-carousel__content">{{ item.entity.field_news_content.value|raw }}</div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      {% if items|length > 1 %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#news-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">{{ 'Previous'|t }}</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#news-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">{{ 'Next'|t }}</span>
+        </button>
+      {% endif %}
+    </div>
+  {% endif %}
 
   {# Main page content #}
-  <main id="main" class="clearfix">
+  {%
+    set classes = [
+    'clearfix',
+    has_carousel ? 'has-carousel',
+    ]
+  %}
+  <main {{ attributes.setAttribute('id', 'main').addClass(classes) }} >
     <div class="page--text-area-top">
         <a href="#top-of-page"><em class="fa-solid fa-circle-chevron-up"></em></a>
     </div>
     <div class="container">
-      <div class="row">{% if page.sidebar_first %}
+      <div class="row">
+        {% if page.sidebar_first %}
           <div id="sidebar-first" class="sidebar {{ sidebarfirst }}" role="complementary">
             {{ page.sidebar_first }}
             {{ page.secondary_menu }}
-
-          </div>
-          <!-- /#sidebar-first -->
+          </div><!-- /#sidebar-first -->
         {% endif %}
 
         <div class="{{ conditionalStr }}" role="main">
@@ -115,14 +176,14 @@
           {% endif %}
 
           {{ page.content }}
-
         </div>{# /#post-content #}
 
         {% if page.sidebar_second %}
           <div id="sidebar-second" class="sidebar {{ sidebarsecond }}" role="complementary">
             {{ page.sidebar_second }}
-          </div> <!-- /#sidebar-first -->
-        {% endif %}</div>
+          </div> <!-- /#sidebar-second -->
+        {% endif %}
+      </div>
     </div>
   </main>
 

@@ -19,7 +19,7 @@ function montreal2027_entity_type_alter(array &$entity_types) {
  */
 function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id === 'search_block_form') {
-    $form['keys']['#attributes']['placeholder'] = t('I am looking for'); // Add placeholder
+    $form['keys']['#attributes']['placeholder'] = \Drupal::translation()->translate('I am looking for');
   }
 
   if ($form_id === 'views_exposed_form') {
@@ -314,7 +314,7 @@ function montreal2027_preprocess_guest_taxonomy_paragraph(array &$variables)
 
   // 1) Prefer the entity's own langcode (this is safe and explicit).
   try {
-    $entity_lang = method_exists($referenced, 'getLangcode') ? $referenced->getLangcode() : NULL;
+    $entity_lang = method_exists($referenced, 'getLangcode') ? $referenced->getLangcode() : null;
     if ($entity_lang) {
       $langcode = $entity_lang;
     }
@@ -440,6 +440,24 @@ function montreal2027_preprocess_guest_taxonomy_paragraph(array &$variables)
       $variables['guest_block_description'] = (string) $translated->get('description')->first()->value;
     } catch (\Throwable $e) {
       $variables['guest_block_description'] = '';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Hide the carousel field from the main content area since it's displayed
+ * separately in the page template.
+ */
+    function montreal2027_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  
+  // If this node has the carousel field and we're in full view mode
+  if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
+    // Hide the field from the content render array
+    if (isset($variables['content']['field_carousel_items'])) {
+      $variables['content']['field_carousel_items']['#access'] = FALSE;
     }
   }
 }

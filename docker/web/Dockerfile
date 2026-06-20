@@ -7,9 +7,12 @@ ENV WEB_INTERNAL_PORT=${WEB_INTERNAL_PORT}
 # Install Nginx and runtime deps for Drupal.
 RUN apk update && apk add --no-cache \
     git \
+    patch \
     unzip \
     zip \
     composer \
+    nodejs \
+    npm \
     nginx \
     fcgi \
     bash \
@@ -44,6 +47,8 @@ COPY docker/web/nginx.conf.template /etc/nginx/templates/default.conf.template
 COPY docker/web/php-fpm-socket.conf /usr/local/etc/php-fpm.d/zz-docker-socket.conf
 COPY docker/web/mariadb-client.cnf /etc/my.cnf.d
 COPY docker/web/entrypoint.sh /entrypoint.sh
+COPY docker/00-php.ini /usr/local/etc/php/conf.d
+
 RUN chmod +x /entrypoint.sh
 
 WORKDIR /var/www/html

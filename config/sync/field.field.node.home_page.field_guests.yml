@@ -27,24 +27,6 @@ settings:
       guest_block: guest_block
     negate: 0
     target_bundles_drag_drop:
-      ebt_tiles_item:
-        weight: 9
-        enabled: false
-      ept_basic_button:
-        weight: 10
-        enabled: false
-      ept_hero:
-        weight: 11
-        enabled: false
-      ept_text:
-        weight: 12
-        enabled: false
-      ept_tiles:
-        weight: 13
-        enabled: false
-      ept_tiles_item:
-        weight: 14
-        enabled: false
       guest_block:
         weight: 16
         enabled: true

@@ -4,10 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - block_content.type.ebt_basic_button
-    - block_content.type.ebt_hero
-    - block_content.type.ebt_text
-    - block_content.type.ebt_tiles
     - block_content.type.theme_image
     - filter.format.full_html
     - media.type.audio

@@ -1,0 +1,19 @@
+uuid: 0b019b90-8a8e-4135-b6c2-eb52c7f353a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: 16_9_thumbnail
+label: '1080p Thumbnail (160 x 90)'
+effects:
+  227e6097-8777-4489-866c-fe9850aee6f1:
+    uuid: 227e6097-8777-4489-866c-fe9850aee6f1
+    id: image_effects_scale_and_smart_crop
+    weight: 2
+    data:
+      width: '160'
+      height: '90'
+      upscale: false
+      simulate: false
+      algorithm: entropy_slice

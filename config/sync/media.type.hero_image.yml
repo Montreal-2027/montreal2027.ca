@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: hero_image
-label: 'Hero Image'
+label: 'Hero Image 1080p'
 description: 'Hero image for the top of a page'
 source: image
 queue_thumbnail_downloads: false

@@ -2,6 +2,25 @@
 
 ## Changelog
 ---
+
+## 1.0.6 (2026-06-19)
+
+- News carousel for landing page
+- Sync script enhancements
+- Install script for Docker
+- Staff Page style enhancements
+- Updated README.md
+- Use dotenv for configuration
+- Removed focal point crop
+  
+---
+
+## 1.0.5 (2026-05-23) HOTFIX
+
+ - New masthead block & reorganized block weights in header region
+ - Disabled outdated image blocks
+ - Theme styling updates
+
 ## 1.0.4 (2026-04-24)
 
 - Docker setup
