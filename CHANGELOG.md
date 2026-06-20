@@ -3,7 +3,7 @@
 ## Changelog
 ---
 
-## 1.0.5
+## 1.0.5 (2026-06-19)
 
 - News carousel for landing page
 - Sync script enhancements
