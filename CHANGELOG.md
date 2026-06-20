@@ -6,6 +6,12 @@
 ## 1.0.5
 
 - News carousel for landing page
+- Sync script enhancements
+- Install script for Docker
+- Staff Page style enhancements
+- Updated README.md
+- Use dotenv for configuration
+- Removed focal point crop
   
 ---
 
