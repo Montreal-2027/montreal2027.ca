@@ -10,7 +10,7 @@ logo:
   use_default: false
 slideshow_display: 0
 slide_count: ''
-include_fontawesome: 0
 slide_title_1: ''
 slide_image_1: {  }
 slide_url_1: ''
+include_fontawesome: 0
