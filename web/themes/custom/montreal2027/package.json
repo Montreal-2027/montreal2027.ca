@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Montreal2027 subtheme build scripts",
   "private": true,
+  "engines": {
+    "node": ">=18.19",
+    "npm": ">=10.2"
+  },
   "devDependencies": {
     "sass": "^1.73.1"
   },

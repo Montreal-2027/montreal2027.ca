@@ -5,9 +5,15 @@ global:
       https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css:
         type: external
       css/montreal2027.min.css: {}
-  # js:
-  #   js/mobile-menu.js: {}
+  js:
+    # NOTE: clean_blog_theme/bootstrap-cdn declares this file with `type: external`
+    # nested under `attributes:`, which renders an invalid `type="external"` HTML
+    # attribute and prevents the browser from executing the script (carousel, etc.
+    # never initialise). Load it correctly here — `type`/`minified` are file-level
+    # keys, not attributes — and drop the broken dependency below.
+    https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js:
+      type: external
+      minified: true
   dependencies:
     # - core/once
     - clean_blog_theme/global-css
-    - clean_blog_theme/bootstrap-cdn

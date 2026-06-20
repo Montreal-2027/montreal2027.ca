@@ -25,24 +25,6 @@ settings:
       positions: positions
     negate: 0
     target_bundles_drag_drop:
-      ebt_tiles_item:
-        weight: 11
-        enabled: false
-      ept_basic_button:
-        weight: 12
-        enabled: false
-      ept_hero:
-        weight: 13
-        enabled: false
-      ept_text:
-        weight: 14
-        enabled: false
-      ept_tiles:
-        weight: 15
-        enabled: false
-      ept_tiles_item:
-        weight: 16
-        enabled: false
       guest_block:
         weight: 17
         enabled: false
