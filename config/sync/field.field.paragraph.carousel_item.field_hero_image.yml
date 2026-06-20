@@ -1,0 +1,29 @@
+uuid: c55efb36-8b42-4664-a834-55e47ea30a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_image
+    - media.type.nc_hero_image
+    - paragraphs.paragraphs_type.carousel_item
+id: paragraph.carousel_item.field_hero_image
+field_name: field_hero_image
+entity_type: paragraph
+bundle: carousel_item
+label: 'Hero Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      nc_hero_image: nc_hero_image
+    sort:
+      field: changed
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

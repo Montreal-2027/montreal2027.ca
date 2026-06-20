@@ -1,0 +1,43 @@
+uuid: 72512415-fc4d-443c-a498-5a5b0419c0b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_item.field_hero_image
+    - field.field.paragraph.carousel_item.field_news_content
+    - field.field.paragraph.carousel_item.field_title
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - media_library
+    - text
+id: paragraph.carousel_item.default
+targetEntityType: paragraph
+bundle: carousel_item
+mode: default
+content:
+  field_hero_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_news_content:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

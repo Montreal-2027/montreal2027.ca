@@ -1,0 +1,25 @@
+uuid: 0ae12665-c1e6-42ca-bb68-80ab47a6360a
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: nc_hero_image_thumbnail
+label: 'News Carousel Hero Image Thumbnail'
+effects:
+  81dcb75a-a198-4099-a648-f2a6bd26d00d:
+    uuid: 81dcb75a-a198-4099-a648-f2a6bd26d00d
+    id: image_convert_avif
+    weight: -9
+    data:
+      extension: webp
+  62316349-70eb-4c06-b038-38cbdd81befd:
+    uuid: 62316349-70eb-4c06-b038-38cbdd81befd
+    id: image_effects_scale_and_smart_crop
+    weight: -10
+    data:
+      width: '192'
+      height: '50'
+      upscale: false
+      simulate: false
+      algorithm: entropy_slice

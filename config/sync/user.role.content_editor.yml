@@ -4,10 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - block_content.type.ebt_basic_button
-    - block_content.type.ebt_hero
-    - block_content.type.ebt_text
-    - block_content.type.ebt_tiles
     - block_content.type.theme_image
     - filter.format.full_html
     - node.type.article
@@ -57,10 +53,6 @@ permissions:
   - 'create terms in tags'
   - 'edit any article content'
   - 'edit any basic block content'
-  - 'edit any ebt_basic_button block content'
-  - 'edit any ebt_hero block content'
-  - 'edit any ebt_text block content'
-  - 'edit any ebt_tiles block content'
   - 'edit any guest content'
   - 'edit any home_page content'
   - 'edit any page content'

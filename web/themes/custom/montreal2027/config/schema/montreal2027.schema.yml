@@ -1,0 +1,133 @@
+montreal2027.settings:
+  type: theme_settings
+  label: 'Montreal 2027 theme settings'
+  mapping:
+    slideshow_display:
+      type: integer
+      label: 'Show slideshow'
+    slide_count:
+      type: string
+      label: 'Number of slides'
+    slide_title_1:
+      type: string
+      label: 'Slide 1 Title'
+    slide_image_1:
+      type: sequence
+      label: 'Slide 1 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_1:
+      type: string
+      label: 'Slide 1 URL'
+    slide_title_2:
+      type: string
+      label: 'Slide 2 Title'
+    slide_image_2:
+      type: sequence
+      label: 'Slide 2 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_2:
+      type: string
+      label: 'Slide 2 URL'
+    slide_title_3:
+      type: string
+      label: 'Slide 3 Title'
+    slide_image_3:
+      type: sequence
+      label: 'Slide 3 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_3:
+      type: string
+      label: 'Slide 3 URL'
+    slide_title_4:
+      type: string
+      label: 'Slide 4 Title'
+    slide_image_4:
+      type: sequence
+      label: 'Slide 4 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_4:
+      type: string
+      label: 'Slide 4 URL'
+    slide_title_5:
+      type: string
+      label: 'Slide 5 Title'
+    slide_image_5:
+      type: sequence
+      label: 'Slide 5 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_5:
+      type: string
+      label: 'Slide 5 URL'
+    slide_title_6:
+      type: string
+      label: 'Slide 6 Title'
+    slide_image_6:
+      type: sequence
+      label: 'Slide 6 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_6:
+      type: string
+      label: 'Slide 6 URL'
+    slide_title_7:
+      type: string
+      label: 'Slide 7 Title'
+    slide_image_7:
+      type: sequence
+      label: 'Slide 7 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_7:
+      type: string
+      label: 'Slide 7 URL'
+    slide_title_8:
+      type: string
+      label: 'Slide 8 Title'
+    slide_image_8:
+      type: sequence
+      label: 'Slide 8 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_8:
+      type: string
+      label: 'Slide 8 URL'
+    slide_title_9:
+      type: string
+      label: 'Slide 9 Title'
+    slide_image_9:
+      type: sequence
+      label: 'Slide 9 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_9:
+      type: string
+      label: 'Slide 9 URL'
+    slide_title_10:
+      type: string
+      label: 'Slide 10 Title'
+    slide_image_10:
+      type: sequence
+      label: 'Slide 10 Image'
+      sequence:
+        type: string
+        label: 'File ID'
+    slide_url_10:
+      type: string
+      label: 'Slide 10 URL'
+    include_fontawesome:
+      type: integer
+      label: 'Include FontAwesome icons (CDN)'
