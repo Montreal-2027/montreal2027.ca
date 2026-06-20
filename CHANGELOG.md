@@ -3,7 +3,7 @@
 ## Changelog
 ---
 
-## 1.0.7 (2026-06-)
+## 1.0.7 (2026-06-20)
 
  - Add Translator role
  - Enabled translation of staff page configuration
