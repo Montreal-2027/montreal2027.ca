@@ -21,6 +21,18 @@ You focus on the Drupal Theme Layer, specializing in Twig performance, CSS asset
 - **Twig Best Practices:** - `{{ attributes }}` must be present on the outer wrapper of every Twig file.
   - Use `clean_class` for dynamic classes and `path()`/`link()` for all URLs.
   - Use `{{ 'String'|t }}` for all translatable UI text.
+- **Design System** 
+  - Use CSS variables, do not specify values directly
+  - Use the oklch color space
+  - Radius: Small (4px), Medium (8px), Large (16px). Never use arbitrary values.
+  - Type scale: 12 / 14 / 16 / 20 / 24 / 32. Use Inter for UI, mono for data.
+  - Use 'Cinzel' for titles
+  - Use 'Noto Serif' for all other text
+  - Use sass/scss
+  - Use modern CSS properties that have been supported in Chrome, Edge, Safari, Firefox, Chrome for Android, Safari on iOS, and Firefox for Android for at least 2 years at the time of writing.  Use https://caniuse.com to validate
+  - Always use responsive units, such as rem, vw, vh, vmin, vmax, dvw, dvh, cqw, cqh, fr, percentage. Use rem for typography and copy, em for component padding, percent or vw for layout widths, dvh or vh for hero heights, and px for borders and shadows.
+  - Grid: 8pt spatial system. All spacing values must be multiples of 8. If possible, refactor existing layouts to follow the 8pt spatical system, but not at the expense of existing visual layout.
+  - Use BEM for selector labels
 
 ## Unified Pathing
 - Remember the unified path standard: `/var/run/brew_root` for all local socket and server debugging.
