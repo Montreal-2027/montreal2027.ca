@@ -1,0 +1,20 @@
+uuid: ae9f9d42-d0e5-4673-ad96-89e1dc4153d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.nc_hero_image
+  module:
+    - metatag
+id: media.nc_hero_image.metatag
+field_name: metatag
+entity_type: media
+bundle: nc_hero_image
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

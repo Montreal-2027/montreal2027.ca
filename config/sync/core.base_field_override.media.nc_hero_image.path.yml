@@ -1,0 +1,20 @@
+uuid: e54ba66d-42a0-4dd5-9e28-d622f0121df0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.nc_hero_image
+  module:
+    - path
+id: media.nc_hero_image.path
+field_name: path
+entity_type: media
+bundle: nc_hero_image
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -10,6 +10,7 @@
  *   - term: The taxonomy term entity.
  *   - children: Array of child position data.
  * - empty_position_link: Array with 'title' and 'uri' keys.
+ * - contact_link_text: Label for the contact modal trigger button.
  * - contact_modal_markup: Rendered markup for the contact modal.
  */
 #}
@@ -22,7 +23,7 @@
 			<div class="division--row">
 				<div class="division">{{ division.term.label }}</div>
 				{% if division.children %}
-					{{ _self.render_positions(division.children, empty_position_link) }}
+					{{ _self.render_positions(division.children, empty_position_link, contact_link_text) }}
 				{% endif %}
 			</div>
 		{% endfor %}
@@ -38,14 +39,14 @@
 {#
  # Macro to recursively render position rows
  #}
-{% macro render_positions(positions, empty_position_link) %}
+{% macro render_positions(positions, empty_position_link, contact_link_text) %}
 	{% for position in positions %}
 		<div class="staff-row indent-{{ position.indent }}">
 			<div>{{ position.term.label }}</div>
 			<div>{{ position.field_names|join(', ') }}</div>
 			<div>
 				{% if position.has_email_address %}
-					<button type="button" class="contact-link" value="{{ position.term.id }}">Contact</button>
+					<button type="button" class="contact-link" value="{{ position.term.id }}">{{ contact_link_text }}</button>
 				{% endif %}
 				{% if position.is_vacant_position and empty_position_link.title and empty_position_link.uri %}
 					<a href="{{ empty_position_link.uri }}" class="vacant">{{ empty_position_link.title }}</a>
@@ -53,7 +54,7 @@
 			</div>
 		</div>
 		{% if position.children %}
-			{{ _self.render_positions(position.children, empty_position_link) }}
+			{{ _self.render_positions(position.children, empty_position_link, contact_link_text) }}
 		{% endif %}
 	{% endfor %}
 {% endmacro %}

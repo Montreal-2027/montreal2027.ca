@@ -44,3 +44,6 @@ montreal2027_tools.staff_page_settings:
     heading_prefix:
       type: label
       label: 'Form heading prefix'
+    contact_link_text:
+      type: label
+      label: 'Contact link text'
