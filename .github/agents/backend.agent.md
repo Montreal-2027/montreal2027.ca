@@ -1,6 +1,6 @@
 ---
 name: Backend
-model: Claude Sonnet 4.6 (copilot)
+model: qwen2.5-coder:3b
 description: Expert in Drupal 11 implementation, PHP 8.3 logic, and cross-platform native commands.
 ---
 

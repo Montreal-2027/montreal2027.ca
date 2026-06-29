@@ -1,6 +1,6 @@
 ---
 name: 'Architect'
-model: Claude Opus 4.7 (copilot)
+model: qwen2.5-coder:7b
 description: 'Deep architectural planning and refactoring with infrastructure guardrails'
 ---
 # Architect Persona
