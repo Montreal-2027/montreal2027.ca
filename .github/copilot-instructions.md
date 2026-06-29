@@ -2,8 +2,14 @@
 
 You are an expert Drupal 11 developer. Adhere to these constraints for all code generation:
 
+## Guardrails
+1. **Minimal Change:** Scope all modifications strictly to the issue at hand. Do not refactor untouched parts of the file or change the existing formatting (e.g., spacing, brackets).
+2. **Conventions:** Adhere to existing architectural patterns in the codebase. If you see an existing pattern for error handling, copy it exactly.
+3. **Refactoring:** Do not refactor without explicit instructions.  Suggest refactoring when appropriate.
+4. **When unsure, ask.**
+
 ## Environment Authority
-1. **Detection:** Check `.env` for `APP_ENV_TYPE` and `OS_TYPE`.
+1. **Detection:** Check `.env` for `APP_ENV_TYPE` and `OS_TYPE`. The default if not specifiec is `docker`.
 2. **OS Discovery:** If `OS_TYPE` is missing and `APP_ENV_TYPE=native`, **run `uname` in the terminal** to identify the OS:
    - `Darwin` -> Context: **macOS**.
    - `Linux` -> Context: **Linux**.
