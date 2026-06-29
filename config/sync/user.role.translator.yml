@@ -1,0 +1,38 @@
+uuid: 332b4192-2a05-4632-8b15-64fa97a5cc50
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+    - node.type.article
+    - node.type.guest
+    - node.type.home_page
+    - node.type.page
+    - taxonomy.vocabulary.divisions
+    - taxonomy.vocabulary.guest_type
+    - taxonomy.vocabulary.membership
+  module:
+    - block_content
+    - config_translation
+    - content_translation
+    - menu_link_content
+id: translator
+label: Translator
+weight: 0
+is_admin: false
+permissions:
+  - 'create content translations'
+  - 'translate any entity'
+  - 'translate article node'
+  - 'translate block_content'
+  - 'translate configuration'
+  - 'translate divisions taxonomy_term'
+  - 'translate editable entities'
+  - 'translate guest node'
+  - 'translate guest_type taxonomy_term'
+  - 'translate home_page node'
+  - 'translate image media'
+  - 'translate membership taxonomy_term'
+  - 'translate menu_link_content'
+  - 'translate page node'
+  - 'update content translations'

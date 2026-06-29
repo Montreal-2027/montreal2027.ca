@@ -26,7 +26,7 @@ The pre-commit hook (`pre-commit-config-check.sh`):
 - Shows the correct `drush cex` command for your environment
 
 **Environment Detection:**
-1. Checks if Docker containers are running → uses `docker-compose exec web drush`
+1. Checks if Docker containers are running → uses `docker compose exec web drush`
 2. Falls back to local Drush if available → uses `drush`
 3. Provides clear error if neither is found
 
@@ -68,7 +68,7 @@ No setup needed - VS Code automatically reads `.github/hooks/*.json` files.
 ### "Cannot find Drush" error
 
 The hook auto-detects your environment. If you see this error:
-- **For Docker:** Ensure containers are running: `docker-compose up -d`
+- **For Docker:** Ensure containers are running: `docker compose up -d`
 - **For local:** Install Drush globally or ensure it's in your PATH
 
 ### Hook not running
@@ -89,7 +89,7 @@ chmod +x .github/hooks/pre-commit-config-check.sh
 
 ## Best Practices
 
-1. **Always export config after admin UI changes:** `docker-compose exec web drush cex` (Docker) or `drush cex` (local)
+1. **Always export config after admin UI changes:** `docker compose exec web drush cex` (Docker) or `drush cex` (local)
 2. **Commit config with related code:** Config and code changes should be in the same commit
 3. **Test config import:** Before pushing, verify `drush cim` works cleanly
 4. **Document breaking changes:** Update README if config requires manual steps

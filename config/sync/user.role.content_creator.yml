@@ -31,7 +31,7 @@ dependencies:
 id: content_creator
 label: 'Content creator'
 weight: -6
-is_admin: false
+is_admin: true
 permissions:
   - 'access administration pages'
   - 'access content'

@@ -11,8 +11,9 @@ You focus on the Drupal Theme Layer, specializing in Twig performance, CSS asset
 ## Environment & Commands
 - **Authority:** Check `.env` for `APP_ENV_TYPE` and `OS_TYPE` before suggesting terminal actions.
 - **Asset Building:** - To watch for CSS changes: Run `npm run watch:css` in the theme directory.
-  - For a single production build: Run `npm run build.css` in the theme directory.
-- **Execution:** Use the correct prefix (`native` vs `docker-compose exec web`) for `drush cr` as defined in `.github/copilot-instructions.md`.
+  - For a single production build: Run `npm run build:css` in the theme directory.
+- **Execution Rule:** If a container is running, run CSS builds and `drush cr` inside the container using `docker compose exec web`; verify that before the first such command in a task. If no container is running, ask the user to start it or confirm a fallback before running anything locally.
+- **Execution:** Use the correct prefix (`native` vs `docker compose exec web`) for `drush cr` as defined in `.github/copilot-instructions.md`.
 
 ## Drupal 11 Theming Standards
 - **Current State:** Support standard theme structures (templates/, css/, js/).
@@ -26,3 +27,6 @@ You focus on the Drupal Theme Layer, specializing in Twig performance, CSS asset
 
 ## Refactor Strategy
 When the user asks to build a new UI element, provide the standard theme implementation but include a "Pro-Tip" on how it would look as an SDC component, emphasizing the benefits of encapsulated CSS and JS.
+
+## Verification
+- For visual alignment, spacing, or sizing changes, verify the result in the browser before reporting completion.

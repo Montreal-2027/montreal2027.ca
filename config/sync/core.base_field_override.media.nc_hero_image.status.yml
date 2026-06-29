@@ -1,0 +1,22 @@
+uuid: af948a3d-3c12-4fa6-b300-a7b09c6afdc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.nc_hero_image
+id: media.nc_hero_image.status
+field_name: status
+entity_type: media
+bundle: nc_hero_image
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

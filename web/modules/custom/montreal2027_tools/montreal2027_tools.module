@@ -16,6 +16,7 @@ function montreal2027_tools_theme($existing, $type, $theme, $path)
           'page_body' => '',
           'divisions' => [],
           'empty_position_link' => ['title' => '', 'uri' => ''],
+          'contact_link_text' => '',
           'contact_modal_markup' => '',
         ],
       ],
