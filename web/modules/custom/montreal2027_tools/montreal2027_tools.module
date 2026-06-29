@@ -78,6 +78,7 @@ function montreal2027_tools_form_taxonomy_overview_terms_alter(array &$form, For
         }
         $parts = explode(':', $row_key);
         $tid = $parts[1];
+        /** @var \Drupal\taxonomy\Entity\TermInterface $term */
         $term = $term_storage->load($tid);
         $display_name = '';
         if ($term && !$term->get('field_name')->isEmpty()) {
@@ -126,24 +127,4 @@ function montreal2027_tools_mail(string $key, array &$message, array $params): v
     $message['from'] = $formatted_from;
     $message['headers']['From'] = $formatted_from;
     $message['headers']['Reply-to'] = $safe_email;
-}
-
-/**
- * Implements hook_preprocess_block() for the language_toggle block plugin.
- *
- * Adds flag/display-name label data to drupalSettings so the JS behaviour can
- * render accessible, localised button labels without hard-coding them in JS.
- */
-function montreal2027_tools_preprocess_block(array &$variables): void
-{
-    if (($variables['plugin_id'] ?? '') !== 'montreal2027_language_toggle') {
-        return;
-    }
-
-    $base_path = rtrim(base_path(), '/') . '/';
-
-    $variables['#attached']['drupalSettings']['languageToggle']['labels'] = [
-            'en' => ['flagUrl' => $base_path . 'assets/media-icons/en-flag.svg', 'name' => 'English'],
-            'fr' => ['flagUrl' => $base_path . 'assets/media-icons/fr-flag.svg', 'name' => 'Français'],
-    ];
 }

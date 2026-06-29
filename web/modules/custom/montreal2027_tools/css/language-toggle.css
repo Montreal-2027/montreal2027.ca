@@ -28,10 +28,9 @@
 }
 
 .language-toggle__flag {
-  width: 1.3em;
+  width: 1em;
   height: auto;
   display: inline-block;
-  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
 }
 
 .language-toggle__link:not(:first-child) {
@@ -128,7 +127,7 @@
   }
 
   .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
-    width: 1em;
+    width: 1.6em;
   }
 
   .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main {
@@ -174,5 +173,5 @@
     font-size: 0.95rem;
     padding: 0.4em 0.4em;
   }
-  }
 }
+
