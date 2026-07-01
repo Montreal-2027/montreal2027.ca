@@ -491,6 +491,60 @@ npm run watch:css  # Watch for changes
 npm run build:css  # One-time build
 ```
 
+## VS Code Development
+
+### Internal Browser (Obscura)
+
+This project uses [Obscura](https://github.com/h4ckf0r0day/obscura) as the browser tool for VS Code Copilot. Obscura is an open-source headless browser built in Rust — lightweight, fast, and cross-platform. It supports the Chrome DevTools Protocol (CDP) and works as a drop-in replacement for headless Chrome with Puppeteer and Playwright.
+
+**Platforms:** Linux (x86_64, ARM64, AUR), macOS (Apple Silicon, Intel), Windows
+
+**Install:**
+
+```bash
+# Linux x86_64
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-x86_64-linux.tar.gz
+tar xzf obscura-x86_64-linux.tar.gz
+
+# Linux ARM64
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-linux.tar.gz
+tar xzf obscura-aarch64-linux.tar.gz
+
+# Arch Linux (AUR)
+yay -S obscura-browser
+
+# macOS Apple Silicon
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-macos.tar.gz
+tar xzf obscura-aarch64-macos.tar.gz
+
+# macOS Intel
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-x86_64-macos.tar.gz
+tar xzf obscura-x86_64-macos.tar.gz
+
+# Windows — download the .zip from the releases page and extract manually
+# https://github.com/h4ckf0r0day/obscura/releases/latest
+```
+
+**VS Code Copilot MCP integration:**
+
+Obscura ships an MCP server that exposes browser automation tools to Copilot agents. The configuration is pre-configured in [`.vscode/mcp.json`](.vscode/mcp.json) — VS Code Copilot will auto-discover it automatically. No manual setup required.
+
+**VS Code launch configurations (`.vscode/launch.json`):**
+
+Three Obscura-related launch configurations are pre-configured:
+
+| Configuration | What it does |
+|---|---|
+| **Start Obscura MCP Server** | Launches `obscura mcp` (stdio) for Copilot agent integration |
+| **Start Obscura CDP Server** | Launches `obscura serve --port 9222` for Chrome DevTools Protocol |
+| **Attach Code to Running Obscura Engine** | Attaches VS Code to an already-running Obscura CDP server on port 9222 |
+
+A compound **"Obscura: Start & Attach"** is also available in the Run & Debug panel — it starts the CDP server and immediately attaches VS Code in one step.
+
+To use with Copilot, start the MCP server first via the **"Start Obscura MCP Server"** configuration in the Run & Debug panel (`Cmd+Shift+D`), then browser tools will be available to Copilot agents.
+
+For more details see the [Obscura GitHub repository](https://github.com/h4ckf0r0day/obscura) and [documentation](https://docs.obscura.sh/).
+
 ## Project Structure
 
 ```

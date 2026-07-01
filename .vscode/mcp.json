@@ -1,0 +1,9 @@
+{
+    "servers": {
+        "obscura": {
+            "type": "stdio",
+            "command": "obscura",
+            "args": ["mcp"]
+        }
+    }
+}

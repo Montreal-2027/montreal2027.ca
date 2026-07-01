@@ -89,6 +89,27 @@
             "name": "Attach Code to Running Obscura Engine",
             "port": 9222,
             "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Start Obscura CDP Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "obscura serve --port 9222"
+        },
+        {
+            "name": "Start Obscura MCP Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "obscura mcp"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Obscura: Start & Attach",
+            "configurations": [
+                "Start Obscura CDP Server",
+                "Attach Code to Running Obscura Engine"
+            ]
         }
     ]
 }
