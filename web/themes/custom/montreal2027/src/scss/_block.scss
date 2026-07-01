@@ -140,10 +140,10 @@
     & img {
       height: 4rem;
       width: auto;
-      margin: .5rem 0 0 0;
 
       @media (min-width: 992px) {
         height: 6rem;
+        margin: .5rem 0 0 0;
       }
     }
   }

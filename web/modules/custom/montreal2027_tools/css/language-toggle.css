@@ -1,7 +1,11 @@
 /**
  * @file
  * Styles for the Montreal 2027 EN/FR language toggle block.
+ *
+ * Mobile-first: base styles target < 992px; desktop overrides at 992px+.
  */
+
+/* ── Language toggle component (all viewports) ── */
 
 .language-toggle {
   display: inline-flex;
@@ -66,6 +70,39 @@
   }
 }
 
+/* ── Mobile-first: < 992px ── */
+
+/* Position language toggle fixed at top-right, near hamburger menu. */
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  z-index: 600; /* Above header (500), below mobile menu sidebar (650) */
+  padding: 0.25rem;
+  color: var(--color-white);
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle {
+  background: transparent;
+  box-shadow: none;
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__link {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
+  width: 1.3em;
+}
+
+/* Hide the language toggle from the mobile sidebar menu since it's now fixed. */
+.navbar-collapse #block-montreal2027-languagetoggleenfr {
+  display: none;
+}
+
+/* ── Desktop: >= 992px ── */
+
 @media (min-width: 992px) {
   .region.region-primary-menu {
     grid-template-columns: 1fr auto auto;
@@ -87,6 +124,22 @@
     grid-column: 2;
     grid-row: 1;
     justify-self: end;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__link {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
+    width: 1.6em;
   }
 
   .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 {
@@ -118,16 +171,6 @@
 
   .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle {
     align-items: center;
-  }
-
-  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__link {
-    padding: 0.2rem 0.45rem;
-    font-size: 0.9rem;
-    line-height: 1.1;
-  }
-
-  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
-    width: 1.6em;
   }
 
   .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main {
