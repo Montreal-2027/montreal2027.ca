@@ -6,7 +6,7 @@ features:
   favicon: false
   node_user_picture: false
 logo:
-  path: 'public://m2027-logo.svg'
+  path: 'public://Montreal2027-Logo_CMYK_Date-Full.svg'
   use_default: false
 slideshow_display: 0
 slide_count: ''
