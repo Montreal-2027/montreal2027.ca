@@ -1,0 +1,19 @@
+# Drupal configuration exports — hundreds of YAML files with no architectural value for LLM analysis
+config/sync/
+
+# Compiled CSS — generated from src/scss/, never edited directly
+web/themes/custom/montreal2027/css/
+
+# Drupal core and contributed code — not custom, not worth indexing
+web/core/
+web/modules/contrib/
+
+# Vendor dependencies
+vendor/
+
+# Graphify's own output
+graphify-out/
+
+# Database dumps
+*.sql
+*.sql.gz

@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required to push updates back to the branch
+      models: read   # Required for GitHub Models API access (used as LLM backend)
     
     steps:
       - name: Checkout Repository
@@ -40,6 +41,12 @@ jobs:
           sed -i "s/    \".php\": extract_php,/    \".php\": extract_php,\n    \".module\": extract_php,\n    \".theme\": extract_php,\n    \".install\": extract_php,/" "$GRAPHIFY_DIR/extract.py"
 
       - name: Regenerate Code Architecture Map
+        env:
+          # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
+          # No external API key required — just the models: read permission above.
+          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_BASE_URL: https://models.inference.ai.azure.com
+          OPENAI_MODEL: gpt-4o-mini
         run: graphify .
 
       - name: Safely Inject Copilot Instructions
