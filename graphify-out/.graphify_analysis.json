@@ -296,57 +296,72 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "15": [
+      "web_development_services_yml",
+      "web_readme",
+      "web_themes_custom_montreal2027_info_yml",
+      "web_themes_custom_montreal2027_readme"
+    ],
+    "16": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "16": [
+    "17": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "17": [
+    "18": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "18": [
+    "19": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "19": [
+    "20": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "20": [
+    "21": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "21": [
+    "22": [
       "agents_code_style"
     ],
-    "22": [
+    "23": [
       "agents_documentation"
     ],
-    "23": [
+    "24": [
       "agents_project_structure"
     ],
-    "24": [
+    "25": [
       "agents_quick_start"
     ],
-    "25": [
+    "26": [
       "docker-compose"
     ],
-    "26": [
+    "27": [
       "github_issue_template_new_content"
     ],
-    "27": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml"
-    ],
     "28": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_schema_yml"
+      "github_workflows_deploy"
     ],
     "29": [
-      "web_sites_default_settings"
+      "github_workflows_graphify"
     ],
     "30": [
+      "recipes_readme"
+    ],
+    "31": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml"
+    ],
+    "32": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_schema_yml"
+    ],
+    "33": [
+      "web_sites_default_settings"
+    ],
+    "34": [
       "web_themes_custom_montreal2027_config_schema_montreal2027"
     ]
   },
@@ -366,7 +381,7 @@
     "12": 0.8055555555555556,
     "13": 0.39285714285714285,
     "14": 0.4666666666666667,
-    "15": 1.0,
+    "15": 0.5,
     "16": 1.0,
     "17": 1.0,
     "18": 1.0,
@@ -381,7 +396,11 @@
     "27": 1.0,
     "28": 1.0,
     "29": 1.0,
-    "30": 1.0
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0
   },
   "gods": [
     {
@@ -470,30 +489,63 @@
       "why": "connects across different repos/directories; peripheral node `Montreal 2027 WorldCon Website` unexpectedly reaches hub `Web Service`"
     },
     {
-      "source": "Changelog",
-      "target": "Common Commands",
+      "source": "Architect Persona",
+      "target": "Copilot Instructions",
       "source_files": [
-        "CHANGELOG.md",
-        "AGENTS.md"
+        ".continue/prompts/architect.md",
+        ".github/copilot-instructions.md"
       ],
       "confidence": "EXTRACTED",
-      "relation": "cites",
+      "relation": "references",
       "why": "connects across different repos/directories"
     },
     {
-      "source": "Changelog",
-      "target": "Deployment",
+      "source": "Backend Role",
+      "target": "Copilot Instructions",
       "source_files": [
-        "CHANGELOG.md",
-        "AGENTS.md"
+        ".continue/prompts/backend.md",
+        ".github/copilot-instructions.md"
       ],
       "confidence": "EXTRACTED",
-      "relation": "cites",
+      "relation": "references",
       "why": "connects across different repos/directories"
     }
   ],
-  "tokens": {
-    "input": 25779,
-    "output": 10350
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `require` connect `require` to `composer.json`?",
+      "why": "High betweenness centrality (0.159) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
+      "why": "High betweenness centrality (0.072) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
+      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `description`, `type` to the rest of the system?",
+      "why": "149 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `require` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.03125 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `installer-paths` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `composer.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
+    }
+  ]
 }
