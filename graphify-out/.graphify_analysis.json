@@ -95,49 +95,6 @@
       "composer_patches_drupal_wse"
     ],
     "2": [
-      "blockbase",
-      "containerfactoryplugininterface",
-      "routematchinterface",
-      "termstorageinterface",
-      "url",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_containerinterface",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_languagemanagerinterface",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
-    ],
-    "3": [
-      "agents_common_commands",
-      "agents_common_pitfalls",
-      "agents_deployment",
-      "agents_development_conventions",
-      "agents_git_hooks",
-      "agents_key_files_for_ai_agents",
-      "agents_overview",
-      "agents_technology_stack",
-      "agents_testing_changes",
-      "changelog",
-      "clean_blog_theme",
-      "docker",
-      "drupal",
-      "drush",
-      "mariadb",
-      "montreal2027_tools",
-      "npm",
-      "scss"
-    ],
-    "4": [
       "composer",
       "composer_conflict",
       "composer_conflict_drupal_drupal",
@@ -156,7 +113,7 @@
       "composer_support_docs",
       "composer_type"
     ],
-    "5": [
+    "3": [
       "composer_allow_plugins_composer_installers",
       "composer_allow_plugins_cweagans_composer_patches",
       "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
@@ -174,7 +131,7 @@
       "composer_config_sort_packages",
       "composer_platform_php"
     ],
-    "6": [
+    "4": [
       "montreal2027_include_fontawesome",
       "montreal2027_settings",
       "montreal2027_slide_count",
@@ -192,7 +149,7 @@
       "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
-    "7": [
+    "5": [
       "configformbase",
       "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
       "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_php_formstateinterface",
@@ -209,7 +166,7 @@
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform"
     ],
-    "8": [
+    "6": [
       "web_themes_custom_montreal2027_package",
       "web_themes_custom_montreal2027_package_dependencies",
       "web_themes_custom_montreal2027_package_dependencies_parcel_watcher",
@@ -226,7 +183,23 @@
       "web_themes_custom_montreal2027_package_scripts_watch_css",
       "web_themes_custom_montreal2027_package_version"
     ],
-    "9": [
+    "7": [
+      "blockbase",
+      "containerfactoryplugininterface",
+      "routematchinterface",
+      "url",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_containerinterface",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_languagemanagerinterface",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
+    ],
+    "8": [
       "controllerbase",
       "jsonresponse",
       "loggerchannelfactoryinterface",
@@ -242,8 +215,7 @@
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
     ],
-    "10": [
-      "README",
+    "9": [
       "docker_backend_network",
       "docker_compose",
       "docker_db",
@@ -255,29 +227,7 @@
       "docker_php",
       "docker_web"
     ],
-    "11": [
-      "continue_prompts_architect",
-      "continue_prompts_backend",
-      "continue_prompts_frontend",
-      "continue_rules_project_rules",
-      "github_agents_architect",
-      "github_agents_backend",
-      "github_agents_frontend",
-      "github_copilot_instructions",
-      "github_hooks_readme"
-    ],
-    "12": [
-      "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_yml",
-      "web_modules_custom_montreal2027_tools_drush_services_yml",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_yml",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_info_yml",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_yml",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_yml",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_yml",
-      "web_modules_custom_montreal2027_tools_readme"
-    ],
-    "13": [
+    "10": [
       "drushcommands",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
@@ -287,7 +237,26 @@
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_php_entitytypemanagerinterface"
     ],
-    "14": [
+    "11": [
+      "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_yml",
+      "web_modules_custom_montreal2027_tools_drush_services_yml",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_yml",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_info_yml",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_yml",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_yml",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_yml"
+    ],
+    "12": [
+      "termstorageinterface",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
+    ],
+    "13": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_module_formstateinterface",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_overview_terms_alter",
@@ -295,93 +264,81 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
-    "15": [
-      "web_development_services_yml",
-      "web_readme",
-      "web_themes_custom_montreal2027_info_yml",
-      "web_themes_custom_montreal2027_readme"
-    ],
-    "16": [
+    "14": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "17": [
+    "15": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "18": [
+    "16": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "19": [
+    "17": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "20": [
+    "18": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "21": [
+    "19": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "22": [
-      "agents_code_style"
-    ],
-    "23": [
-      "agents_documentation"
-    ],
-    "24": [
-      "agents_project_structure"
-    ],
-    "25": [
-      "agents_quick_start"
-    ],
-    "26": [
+    "20": [
       "docker-compose"
     ],
-    "27": [
+    "21": [
       "github_issue_template_new_content"
     ],
-    "28": [
+    "22": [
       "github_workflows_deploy"
     ],
-    "29": [
+    "23": [
       "github_workflows_graphify"
     ],
-    "30": [
+    "24": [
       "recipes_readme"
     ],
-    "31": [
+    "25": [
+      "web_development_services_yml"
+    ],
+    "26": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml"
     ],
-    "32": [
+    "27": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_schema_yml"
     ],
-    "33": [
+    "28": [
       "web_sites_default_settings"
     ],
-    "34": [
+    "29": [
       "web_themes_custom_montreal2027_config_schema_montreal2027"
+    ],
+    "30": [
+      "web_themes_custom_montreal2027_info_yml"
     ]
   },
   "cohesion": {
     "0": 0.03125,
     "1": 0.07692307692307693,
-    "2": 0.1761904761904762,
-    "3": 0.16339869281045752,
-    "4": 0.11764705882352941,
-    "5": 0.125,
-    "6": 0.15833333333333333,
-    "7": 0.19047619047619047,
-    "8": 0.13333333333333333,
-    "9": 0.27472527472527475,
-    "10": 0.21818181818181817,
-    "11": 0.2777777777777778,
-    "12": 0.8055555555555556,
-    "13": 0.39285714285714285,
-    "14": 0.4666666666666667,
-    "15": 0.5,
+    "2": 0.11764705882352941,
+    "3": 0.125,
+    "4": 0.15833333333333333,
+    "5": 0.19047619047619047,
+    "6": 0.13333333333333333,
+    "7": 0.26373626373626374,
+    "8": 0.27472527472527475,
+    "9": 0.2222222222222222,
+    "10": 0.39285714285714285,
+    "11": 0.75,
+    "12": 0.5238095238095238,
+    "13": 0.4666666666666667,
+    "14": 1.0,
+    "15": 1.0,
     "16": 1.0,
     "17": 1.0,
     "18": 1.0,
@@ -396,11 +353,7 @@
     "27": 1.0,
     "28": 1.0,
     "29": 1.0,
-    "30": 1.0,
-    "31": 1.0,
-    "32": 1.0,
-    "33": 1.0,
-    "34": 1.0
+    "30": 1.0
   },
   "gods": [
     {
@@ -429,16 +382,6 @@
       "degree": 9
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_readme",
-      "label": "Montreal 2027 Tools",
-      "degree": 8
-    },
-    {
-      "id": "docker_web",
-      "label": "Web Service",
-      "degree": 7
-    },
-    {
       "id": "composer_extra",
       "label": "extra",
       "degree": 6
@@ -452,85 +395,51 @@
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
       "label": "StaffPageController",
       "degree": 6
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
+      "label": "StaffPageSettingsForm",
+      "degree": 6
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform",
+      "label": "StaffPageSettingsForm",
+      "degree": 6
     }
   ],
   "surprises": [
     {
-      "source": "Changelog",
-      "target": "Overview",
+      "source": "StaffPageController",
+      "target": "ControllerBase",
       "source_files": [
-        "CHANGELOG.md",
-        "AGENTS.md"
+        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+        ""
       ],
       "confidence": "EXTRACTED",
-      "relation": "cites",
-      "why": "connects across different repos/directories; peripheral node `Overview` unexpectedly reaches hub `Changelog`"
-    },
-    {
-      "source": "Montreal 2027 WorldCon Website",
-      "target": "Database Service",
-      "source_files": [
-        "README.md",
-        "docker-compose.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories; peripheral node `Montreal 2027 WorldCon Website` unexpectedly reaches hub `Database Service`"
-    },
-    {
-      "source": "Montreal 2027 WorldCon Website",
-      "target": "Web Service",
-      "source_files": [
-        "README.md",
-        "docker-compose.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories; peripheral node `Montreal 2027 WorldCon Website` unexpectedly reaches hub `Web Service`"
-    },
-    {
-      "source": "Architect Persona",
-      "target": "Copilot Instructions",
-      "source_files": [
-        ".continue/prompts/architect.md",
-        ".github/copilot-instructions.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Backend Role",
-      "target": "Copilot Instructions",
-      "source_files": [
-        ".continue/prompts/backend.md",
-        ".github/copilot-instructions.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
+      "relation": "inherits",
+      "note": "Bridges community 8 → community 12"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.159) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.171) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.072) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.080) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
-      "why": "High betweenness centrality (0.045) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.050) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `name`, `description`, `type` to the rest of the system?",
-      "why": "149 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "139 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
