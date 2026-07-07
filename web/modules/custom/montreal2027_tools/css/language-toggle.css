@@ -1,0 +1,220 @@
+/**
+ * @file
+ * Styles for the Montreal 2027 EN/FR language toggle block.
+ *
+ * Mobile-first: base styles target < 992px; desktop overrides at 992px+.
+ */
+
+/* ── Language toggle component (all viewports) ── */
+
+.language-toggle {
+  display: inline-flex;
+  gap: 0;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.language-toggle__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.65em 0.75em;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.language-toggle__text {
+  display: inline-block;
+}
+
+.language-toggle__flag {
+  width: 1em;
+  height: auto;
+  display: inline-block;
+}
+
+.language-toggle__link:not(:first-child) {
+  border-left: 1px solid currentColor;
+}
+
+.language-toggle__link:hover,
+.language-toggle__link:focus-visible {
+  background-color: rgba(0, 0, 0, 0.07);
+  outline-offset: -2px;
+}
+
+.language-toggle__link.is-active {
+  background-color: currentColor;
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Invert text colour when background becomes the inherited foreground. */
+.language-toggle__link.is-active > * {
+  color: inherit;
+}
+
+/* High-contrast / forced-colours support. */
+@media (forced-colors: active) {
+  .language-toggle__link.is-active {
+    forced-color-adjust: none;
+    background-color: Highlight;
+    color: HighlightText;
+    border-color: Highlight;
+  }
+}
+
+/* ── Mobile-first: < 992px ── */
+
+/* Position language toggle fixed at top-right, near hamburger menu. */
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr {
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  z-index: 600; /* Above header (500), below mobile menu sidebar (650) */
+  padding: 0.25rem;
+  color: var(--color-white);
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle {
+  background: transparent;
+  box-shadow: none;
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__link {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
+  width: 1.3em;
+}
+
+/* Hide the language toggle from the mobile sidebar menu since it's now fixed. */
+.navbar-collapse #block-montreal2027-languagetoggleenfr {
+  display: none;
+}
+
+/* ── Desktop: >= 992px ── */
+
+@media (min-width: 992px) {
+  .region.region-primary-menu {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__link {
+    padding: 0.2rem 0.45rem;
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle__flag {
+    width: 1.6em;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 {
+    display: flex;
+    align-items: center;
+    margin: 0 0.25rem 0 0;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    padding-left: 0.75rem;
+    position: relative;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 16px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.08), transparent 50%, rgba(255, 255, 255, 0.3));
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 ul,
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 .social-media-links--platforms {
+    margin: 0;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-languagetoggleenfr .language-toggle {
+    align-items: center;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main {
+    margin: 0;
+    line-height: 1;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li > a,
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li > span {
+    padding: 0.25rem 0.5rem;
+    line-height: 1.1;
+    font-size: 0.9rem;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li.menuparent > a,
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li.menuparent > span {
+    padding-right: 1rem;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li.menuparent > a .sf-sub-indicator,
+  .region.region-primary-menu > #block-montreal2027-mainnavigation-2 #superfish-main > li.menuparent > span .sf-sub-indicator {
+    top: 7px;
+    transform: none;
+    right: 0.1rem;
+    line-height: 1;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 .social-media-links--platforms.horizontal {
+    display: flex;
+    align-items: center;
+    gap: 0.03rem;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 .social-media-links--platforms.horizontal li {
+    padding: 0;
+  }
+
+  .region.region-primary-menu > #block-montreal2027-socialmedialinks-2 .social-media-links--platforms.horizontal a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 0.95rem;
+    padding: 0.4em 0.4em;
+  }
+}
+

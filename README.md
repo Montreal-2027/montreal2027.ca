@@ -49,7 +49,11 @@ The setup script will prompt you to automatically start the Docker containers an
 
 *(Note: If you run this script immediately after cloning, it will use the default Docker environment variables because an `.env` file does not yet exist. In most Docker development scenarios, these defaults are perfectly fine. If you need to customize your environment before starting, please see the **Environment configuration** section below on using `.env.example`.)*
 
-### Getting Started with Docker
+## A note about git commits
+
+After running `composer install`, git will be configured to use the scripts in the `.githooks/` directory.  Currently, there is a pre-commit hook that checks that the running Drupal config matches the config on disk.  If it does not, the commit is aborted.  In the rare case that you need to bypass this check, add the `--no-verify` option to your `git commit` command. If you are using VS Code, you can enable the `Allow No Verify Commit` option. To use the `No Verify` for a commit, click on the `...` next to either the repository or `Changes` right below `Repositories`. Expand the `Commit` menu, and select one of the `(No Verify)` options. There will be a pop-up warning that you are about to bypass the pre-commit hook and asks you to confirm the action.
+
+## Getting Started with Docker
 
 #### Prerequisites
 
@@ -490,6 +494,60 @@ cd web/themes/custom/montreal2027
 npm run watch:css  # Watch for changes
 npm run build:css  # One-time build
 ```
+
+## VS Code Development
+
+### Internal Browser (Obscura)
+
+This project uses [Obscura](https://github.com/h4ckf0r0day/obscura) as the browser tool for VS Code Copilot. Obscura is an open-source headless browser built in Rust — lightweight, fast, and cross-platform. It supports the Chrome DevTools Protocol (CDP) and works as a drop-in replacement for headless Chrome with Puppeteer and Playwright.
+
+**Platforms:** Linux (x86_64, ARM64, AUR), macOS (Apple Silicon, Intel), Windows
+
+**Install:**
+
+```bash
+# Linux x86_64
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-x86_64-linux.tar.gz
+tar xzf obscura-x86_64-linux.tar.gz
+
+# Linux ARM64
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-linux.tar.gz
+tar xzf obscura-aarch64-linux.tar.gz
+
+# Arch Linux (AUR)
+yay -S obscura-browser
+
+# macOS Apple Silicon
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-macos.tar.gz
+tar xzf obscura-aarch64-macos.tar.gz
+
+# macOS Intel
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-x86_64-macos.tar.gz
+tar xzf obscura-x86_64-macos.tar.gz
+
+# Windows — download the .zip from the releases page and extract manually
+# https://github.com/h4ckf0r0day/obscura/releases/latest
+```
+
+**VS Code Copilot MCP integration:**
+
+Obscura ships an MCP server that exposes browser automation tools to Copilot agents. The configuration is pre-configured in [`.vscode/mcp.json`](.vscode/mcp.json) — VS Code Copilot will auto-discover it automatically. No manual setup required.
+
+**VS Code launch configurations (`.vscode/launch.json`):**
+
+Three Obscura-related launch configurations are pre-configured:
+
+| Configuration | What it does |
+|---|---|
+| **Start Obscura MCP Server** | Launches `obscura mcp` (stdio) for Copilot agent integration |
+| **Start Obscura CDP Server** | Launches `obscura serve --port 9222` for Chrome DevTools Protocol |
+| **Attach Code to Running Obscura Engine** | Attaches VS Code to an already-running Obscura CDP server on port 9222 |
+
+A compound **"Obscura: Start & Attach"** is also available in the Run & Debug panel — it starts the CDP server and immediately attaches VS Code in one step.
+
+To use with Copilot, start the MCP server first via the **"Start Obscura MCP Server"** configuration in the Run & Debug panel (`Cmd+Shift+D`), then browser tools will be available to Copilot agents.
+
+For more details see the [Obscura GitHub repository](https://github.com/h4ckf0r0day/obscura) and [documentation](https://docs.obscura.sh/).
 
 ## Project Structure
 
