@@ -9,9 +9,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "readme",
       "community": 16,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme"
     },
     {
       "label": "Contributing",
@@ -19,9 +19,9 @@
       "source_file": "README.md",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "readme_contributing",
       "community": 16,
-      "norm_label": "contributing"
+      "norm_label": "contributing",
+      "id": "readme_contributing"
     },
     {
       "label": "Usage",
@@ -29,9 +29,9 @@
       "source_file": "README.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "readme_usage",
       "community": 16,
-      "norm_label": "usage"
+      "norm_label": "usage",
+      "id": "readme_usage"
     },
     {
       "label": "Changelog",
@@ -39,9 +39,9 @@
       "source_file": "README.md",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "readme_changelog",
       "community": 16,
-      "norm_label": "changelog"
+      "norm_label": "changelog",
+      "id": "readme_changelog"
     },
     {
       "label": "Security",
@@ -49,9 +49,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "readme_security",
       "community": 16,
-      "norm_label": "security"
+      "norm_label": "security",
+      "id": "readme_security"
     },
     {
       "label": "Need a helping hand?",
@@ -59,9 +59,9 @@
       "source_file": "README.md",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "readme_need_a_helping_hand",
       "community": 16,
-      "norm_label": "need a helping hand?"
+      "norm_label": "need a helping hand?",
+      "id": "readme_need_a_helping_hand"
     },
     {
       "label": "Legal matters",
@@ -69,9 +69,9 @@
       "source_file": "README.md",
       "source_location": "L55",
       "_origin": "ast",
-      "id": "readme_legal_matters",
       "community": 16,
-      "norm_label": "legal matters"
+      "norm_label": "legal matters",
+      "id": "readme_legal_matters"
     },
     {
       "label": "staff-contact-modal.js",
@@ -771,19 +771,6 @@
       "id": "sites_default_development_services"
     },
     {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "themes/custom/montreal2027/README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 22,
-      "norm_label": "readme.md",
-      "id": "themes_custom_montreal2027_readme"
-    },
-    {
       "label": "montreal2027.schema.yml",
       "file_type": "code",
       "source_file": "themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
@@ -830,9 +817,9 @@
       "source_file": "README.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_changelog",
-      "confidence_score": 1.0
+      "target": "readme_changelog"
     },
     {
       "relation": "contains",
@@ -840,9 +827,9 @@
       "source_file": "README.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_contributing",
-      "confidence_score": 1.0
+      "target": "readme_contributing"
     },
     {
       "relation": "contains",
@@ -850,9 +837,9 @@
       "source_file": "README.md",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_legal_matters",
-      "confidence_score": 1.0
+      "target": "readme_legal_matters"
     },
     {
       "relation": "contains",
@@ -860,9 +847,9 @@
       "source_file": "README.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_need_a_helping_hand",
-      "confidence_score": 1.0
+      "target": "readme_need_a_helping_hand"
     },
     {
       "relation": "contains",
@@ -870,9 +857,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_security",
-      "confidence_score": 1.0
+      "target": "readme_security"
     },
     {
       "relation": "contains",
@@ -880,9 +867,9 @@
       "source_file": "README.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_usage",
-      "confidence_score": 1.0
+      "target": "readme_usage"
     },
     {
       "relation": "contains",
@@ -1645,5 +1632,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4aaefd6ade59f431ff0bcd021cfff104d5cab2e6"
+  "built_at_commit": "a01198dafa29d487df886e678dc42d93808e0c7d"
 }
