@@ -1,0 +1,221 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "CHANGELOG.md",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog",
+      "community": 0,
+      "norm_label": "changelog.md"
+    },
+    {
+      "label": "Montreal 2027 WorldCon Website",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "changelog_montreal_2027_worldcon_website",
+      "community": 0,
+      "norm_label": "montreal 2027 worldcon website"
+    },
+    {
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "changelog_changelog",
+      "community": 0,
+      "norm_label": "changelog"
+    },
+    {
+      "label": "1.0.7 (2026-06-20)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "changelog_1_0_7_2026_06_20",
+      "community": 0,
+      "norm_label": "1.0.7 (2026-06-20)"
+    },
+    {
+      "label": "1.0.6 (2026-06-19)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "changelog_1_0_6_2026_06_19",
+      "community": 0,
+      "norm_label": "1.0.6 (2026-06-19)"
+    },
+    {
+      "label": "1.0.5 (2026-05-23) HOTFIX",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "changelog_1_0_5_2026_05_23_hotfix",
+      "community": 0,
+      "norm_label": "1.0.5 (2026-05-23) hotfix"
+    },
+    {
+      "label": "1.0.4 (2026-04-24)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "changelog_1_0_4_2026_04_24",
+      "community": 0,
+      "norm_label": "1.0.4 (2026-04-24)"
+    },
+    {
+      "label": "1.0.3 (2026-04-22)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "changelog_1_0_3_2026_04_22",
+      "community": 0,
+      "norm_label": "1.0.3 (2026-04-22)"
+    },
+    {
+      "label": "1.0.2 (2026-03-12)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "changelog_1_0_2_2026_03_12",
+      "community": 0,
+      "norm_label": "1.0.2 (2026-03-12)"
+    },
+    {
+      "label": "1.0.1 (2026-03-11)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "changelog_1_0_1_2026_03_11",
+      "community": 0,
+      "norm_label": "1.0.1 (2026-03-11)"
+    },
+    {
+      "label": "1.0.0 (2026-01-21)",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "changelog_1_0_0_2026_01_21",
+      "community": 0,
+      "norm_label": "1.0.0 (2026-01-21)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "changelog",
+      "target": "changelog_montreal_2027_worldcon_website",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_0_2026_01_21",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_1_2026_03_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_2_2026_03_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_3_2026_04_22",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_4_2026_04_24",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_5_2026_05_23_hotfix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_6_2026_06_19",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_1_0_7_2026_06_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "changelog_montreal_2027_worldcon_website",
+      "target": "changelog_changelog",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "53deedd452f91242b1a5031d3220b383ff428319"
+}
