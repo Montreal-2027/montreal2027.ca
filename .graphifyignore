@@ -1,0 +1,31 @@
+# Drupal configuration exports — hundreds of YAML files with no architectural value for LLM analysis
+config/sync/
+
+# Compiled CSS and SCSS source — graphify has no CSS/SCSS AST extractor, so these contribute nothing
+web/themes/custom/montreal2027/css/
+web/themes/custom/montreal2027/src/scss/
+
+# Drupal core and contributed code — not custom, not worth indexing
+web/core/
+web/modules/contrib/
+
+# Vendor dependencies
+vendor/
+
+# Graphify's own output
+graphify-out/
+
+# Database dumps
+*.sql
+*.sql.gz
+
+# AI-facing and human-facing docs — these cause node ID collisions with actual source files
+# (e.g. AGENTS.md mentions "composer" which shadows the composer.json node)
+AGENTS.md
+CHANGELOG.md
+README.md
+
+# AI instruction and agent configuration files — not code architecture
+.github/copilot-instructions.md
+.github/agents/
+.continue/

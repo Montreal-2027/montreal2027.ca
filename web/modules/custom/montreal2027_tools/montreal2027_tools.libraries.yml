@@ -9,3 +9,15 @@ staff_contact_modal:
     - core/drupal
     - core/drupalSettings
     - core/once
+
+language_toggle:
+  version: 1.x
+  js:
+    js/language-toggle.js: {}
+  css:
+    component:
+      css/language-toggle.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

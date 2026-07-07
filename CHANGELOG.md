@@ -3,6 +3,15 @@
 ## Changelog
 ---
 
+## 1.0.7 (2026-06-20)
+
+ - Add Translator role
+ - Enabled translation of staff page configuration
+ - Added text for contact link on the staff page to the staff page configuration
+ - Added language switcher
+
+---
+
 ## 1.0.6 (2026-06-19)
 
 - News carousel for landing page
@@ -20,6 +29,8 @@
  - New masthead block & reorganized block weights in header region
  - Disabled outdated image blocks
  - Theme styling updates
+
+---
 
 ## 1.0.4 (2026-04-24)
 

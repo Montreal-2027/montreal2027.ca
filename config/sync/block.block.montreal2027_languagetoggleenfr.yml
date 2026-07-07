@@ -1,0 +1,20 @@
+uuid: 71ac62ae-578d-46ae-a300-555bdcaf8062
+langcode: en
+status: true
+dependencies:
+  module:
+    - montreal2027_tools
+  theme:
+    - montreal2027
+id: montreal2027_languagetoggleenfr
+theme: montreal2027
+region: primary_menu
+weight: -15
+provider: null
+plugin: montreal2027_language_toggle
+settings:
+  id: montreal2027_language_toggle
+  label: 'Language Toggle (EN/FR)'
+  label_display: '0'
+  provider: montreal2027_tools
+visibility: {  }

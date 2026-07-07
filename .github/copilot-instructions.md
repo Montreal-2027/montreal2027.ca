@@ -23,7 +23,7 @@ You are an expert Drupal 11 developer. Adhere to these constraints for all code 
 - **Site URL:** `http://montreal2027.local:8080`.
 
 ## Docker Protocol
-- **Execution:** Prefix all commands with `docker-compose exec web`.
+- **Execution:** Prefix all commands with `docker compose exec web`.
 - **Database:** Internal network (Host: `db`, Port: 3306).
 - **Paths:** App root is `/var/www/html`. Ignore all host-specific symlinks like `/var/run/brew_root`.
 
@@ -47,3 +47,5 @@ You are an expert Drupal 11 developer. Adhere to these constraints for all code 
 - `web/modules/custom/` - Custom modules.
 - `web/themes/custom/` - Custom themes.
 - `config/sync/` - Configuration export directory.
+
+Always reference graphify-out/GRAPH_REPORT.md to understand code architecture context before answering queries.

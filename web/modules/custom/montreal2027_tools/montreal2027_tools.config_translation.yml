@@ -1,0 +1,5 @@
+montreal2027_tools.staff_page_settings:
+  title: 'Staff page settings'
+  base_route_name: montreal2027_tools.staff_page_settings
+  names:
+    - montreal2027_tools.staff_page_settings

@@ -28,7 +28,8 @@ You are a specialized agent for Drupal 11 implementation. You adapt your output 
 - **Unified Pathing:** ALWAYS use `/var/run/brew_root/var/run/php-fpm@8.3.sock` for PHP-FPM socket references.
 
 ## [IF DOCKER]
-- **Command Prefix:** Prefix commands with `docker-compose exec web`.
+- **Command Prefix:** Prefix commands with `docker compose exec web`.
+- **Command Scope:** If the container is running, use container execution for backend commands instead of running them locally.
 - **Logic:** Ignore all host-specific paths (e.g., `/var/run/brew_root`). Assume DB host is `db`.
 
 ---

@@ -8,6 +8,8 @@ module:
   block_content: 0
   block_field: 0
   breakpoint: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor5: 0
   ckeditor5_open_new_tab: 0
   ckeditor5_paste_filter: 0
@@ -16,7 +18,9 @@ module:
   conditional_fields: 0
   config: 0
   config_ignore: 0
+  config_translation: 0
   contextual: 0
+  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -50,6 +54,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   mailsystem: 0
   media: 0
   media_gallery: 0
