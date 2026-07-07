@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Graphify
-        run: pip install graphify-oss # Adjust package name if using custom setup
+        run: pip install graphifyy
 
       - name: Patch Graphify for Drupal and SCSS extensions
         run: |
