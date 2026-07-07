@@ -18,3 +18,14 @@ graphify-out/
 # Database dumps
 *.sql
 *.sql.gz
+
+# AI-facing and human-facing docs — these cause node ID collisions with actual source files
+# (e.g. AGENTS.md mentions "composer" which shadows the composer.json node)
+AGENTS.md
+CHANGELOG.md
+README.md
+
+# AI instruction and agent configuration files — not code architecture
+.github/copilot-instructions.md
+.github/agents/
+.continue/
