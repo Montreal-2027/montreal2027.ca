@@ -8,6 +8,7 @@
  - Add Translator role
  - Enabled translation of staff page configuration
  - Added text for contact link on the staff page to the staff page configuration
+ - Added language switcher
 
 ---
 
