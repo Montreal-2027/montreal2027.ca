@@ -27,14 +27,15 @@ jobs:
           python-version: '3.11'
 
       - name: Install Graphify
-        run: pip install graphifyy
+        run: pip install "graphifyy[openai]"
 
       - name: Patch Graphify for Drupal and SCSS extensions
         run: |
           GRAPHIFY_DIR=$(python -c "import graphify, os; print(os.path.dirname(graphify.__file__))")
 
-          # detect.py: add extensions to CODE_EXTENSIONS so graphify finds and classifies these files
-          sed -i "s/CODE_EXTENSIONS = {/CODE_EXTENSIONS = {'.module', '.theme', '.install', '.scss', /" "$GRAPHIFY_DIR/detect.py"
+          # detect.py: add Drupal extensions to CODE_EXTENSIONS so graphify finds and classifies these files
+          # (.scss omitted — graphify has no SCSS AST extractor, so it would contribute nothing to the graph)
+          sed -i "s/CODE_EXTENSIONS = {/CODE_EXTENSIONS = {'.module', '.theme', '.install', /" "$GRAPHIFY_DIR/detect.py"
 
           # extract.py: add .module/.theme/.install to _DISPATCH so they are parsed with the PHP AST extractor
           # (.scss has no AST extractor in graphify, so detect.py classification alone is sufficient)

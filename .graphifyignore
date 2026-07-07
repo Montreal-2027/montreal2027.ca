@@ -1,8 +1,9 @@
 # Drupal configuration exports — hundreds of YAML files with no architectural value for LLM analysis
 config/sync/
 
-# Compiled CSS — generated from src/scss/, never edited directly
+# Compiled CSS and SCSS source — graphify has no CSS/SCSS AST extractor, so these contribute nothing
 web/themes/custom/montreal2027/css/
+web/themes/custom/montreal2027/src/scss/
 
 # Drupal core and contributed code — not custom, not worth indexing
 web/core/
