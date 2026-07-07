@@ -1,12 +1,18 @@
-# Graph Report - /Volumes/MacDaddyPro/Projects/Sites/montreal2027.ca/web  (2026-07-01)
+# Graph Report - web  (2026-07-07)
 
 ## Corpus Check
-- Corpus is ~5,626 words - fits in a single context window. You may not need a graph.
+- 11 files · ~5,626 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 73 nodes · 73 edges · 23 communities (21 shown, 2 thin omitted)
+- 78 nodes · 79 edges · 22 communities (20 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `4aaefd6a`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Themes Custom Montreal2027|Themes Custom Montreal2027]]
@@ -15,6 +21,7 @@
 - [[_COMMUNITY_Drushcommands Entitytypemanagerinterface Modules|Drushcommands Entitytypemanagerinterface Modules]]
 - [[_COMMUNITY_Modules Custom Montreal2027|Modules Custom Montreal2027]]
 - [[_COMMUNITY_Modules Custom Montreal2027|Modules Custom Montreal2027]]
+- [[_COMMUNITY_Readme|Readme]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `ContactImportCommands` - 6 edges
@@ -24,9 +31,9 @@
 5. `StaffContactController` - 5 edges
 6. `engines` - 3 edges
 7. `scripts` - 3 edges
-8. `private` - 1 edges
-9. `node` - 1 edges
-10. `npm` - 1 edges
+8. `Contributing` - 1 edges
+9. `Usage` - 1 edges
+10. `Changelog` - 1 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `StaffPageController` --inherits--> `ControllerBase`  [EXTRACTED]
@@ -37,7 +44,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (23 total, 2 thin omitted)
+## Communities (22 total, 2 thin omitted)
 
 ### Community 0 - "Themes Custom Montreal2027"
 Cohesion: 0.13
@@ -55,8 +62,12 @@ Nodes (3): ConfigFormBase, FormStateInterface, StaffPageSettingsForm
 Cohesion: 0.39
 Nodes (3): DrushCommands, EntityTypeManagerInterface, ContactImportCommands
 
+### Community 16 - "Readme"
+Cohesion: 0.29
+Nodes (6): Changelog, Contributing, Legal matters, Need a helping hand?, Security, Usage
+
 ## Knowledge Gaps
-- **10 isolated node(s):** `name`, `version`, `description`, `private`, `node` (+5 more)
+- **16 isolated node(s):** `Contributing`, `Usage`, `Changelog`, `Security`, `Need a helping hand?` (+11 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -64,8 +75,8 @@ Nodes (3): DrushCommands, EntityTypeManagerInterface, ContactImportCommands
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `StaffPageController` connect `Modules Custom Montreal2027` to `Containerinterface Controllerbase Jsonresponse`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
-- **What connects `name`, `version`, `description` to the rest of the system?**
-  _10 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **What connects `Contributing`, `Usage`, `Changelog` to the rest of the system?**
+  _16 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Themes Custom Montreal2027` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
