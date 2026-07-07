@@ -111,6 +111,14 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+        "post-install-cmd": [
+            "git config core.hooksPath .githooks || true"
+        ],
+        "post-update-cmd": [
+            "git config core.hooksPath .githooks || true"
+        ]
+    },
     "extra": {
         "patches": {
             "drupal/social_media_links": {
@@ -189,3 +197,4 @@
         }
     }
 }
+

@@ -49,7 +49,11 @@ The setup script will prompt you to automatically start the Docker containers an
 
 *(Note: If you run this script immediately after cloning, it will use the default Docker environment variables because an `.env` file does not yet exist. In most Docker development scenarios, these defaults are perfectly fine. If you need to customize your environment before starting, please see the **Environment configuration** section below on using `.env.example`.)*
 
-### Getting Started with Docker
+## A note about git commits
+
+After running `composer install`, git will be configured to use the scripts in the `.githooks/` directory.  Currently, there is a pre-commit hook that checks that the running Drupal config matches the config on disk.  If it does not, the commit is aborted.  In the rare case that you need to bypass this check, add the `--no-verify` option to your `git commit` command. If you are using VS Code, you can enable the `Allow No Verify Commit` option. To use the `No Verify` for a commit, click on the `...` next to either the repository or `Changes` right below `Repositories`. Expand the `Commit` menu, and select one of the `(No Verify)` options. There will be a pop-up warning that you are about to bypass the pre-commit hook and asks you to confirm the action.
+
+## Getting Started with Docker
 
 #### Prerequisites
 
