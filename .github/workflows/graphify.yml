@@ -15,14 +15,14 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           # CRITICAL ADDITION: Persists the GitHub token credentials so the 
           # git-auto-commit-action step below can successfully push the map files back.
           persist-credentials: true 
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -48,7 +48,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_BASE_URL: https://models.inference.ai.azure.com
           OPENAI_MODEL: gpt-4o-mini
-        run: graphify .
+        # Use `graphify extract` (headless CI mode) so --token-budget is available.
+        # --token-budget 6000 keeps each chunk under the 8k token limit of gpt-4o-mini on GitHub Models.
+        run: graphify extract . --token-budget 6000
 
       - name: Safely Inject Copilot Instructions
         run: |
@@ -73,7 +75,7 @@ jobs:
           fi
 
       - name: Commit and Push Updated Files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore(ai): auto-update graphify map and copilot context [skip ci]"
           file_pattern: 'graphify-out/* .github/copilot-instructions.md'
