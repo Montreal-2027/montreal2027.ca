@@ -1,10 +1,8 @@
-   # Montreal 2027 WorldCon Website
-
-Official website for the 85th World Science Fiction Convention (Worldcon), taking place in Montreal, Quebec, Canada in 2027.
+# Montreal 2027 WorldCon Website
 
 ## About
 
-This Drupal 11 website serves as the central hub for Montreal 2027 WorldCon, providing:
+This website serves as the central hub for the official website for the 85th World Science Fiction Convention (Worldcon), taking place in Montreal, Quebec, Canada in 2027., providing:
 
 - Event information and schedules
 - Guest of Honor biographies and photos
@@ -29,27 +27,28 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 
 You can run this project either with Docker or in a native local environment (macOS/Linux with PHP, MariaDB, and Nginx installed locally).
 
-### Quick Start Script
+### Quick Start
 
 **Prerequisites:**
 - `git` installed on your machine.
 - SSH access configured for the Git repository.
 - Docker and Docker Compose (if you plan to start the containers and sync the database automatically).
+- Your ssh key added to the production server.
 
-The easiest way to get the project up and running is to clone the repository and run the setup script.
+The easiest way to get the project up and running using docker is to clone the repository and run the setup script.
 
 ```bash
 git clone git@git.montreal2027.ca:Montreal-2027/montreal2027.ca.git [DESTINATION_DIR]
-cd {montreal2027.ca | DESTINATION_DIR}
-git checkout {BRANCH}
+cd montreal2027.ca | DESTINATION_DIR
+git checkout [BRANCH]
 ./scripts/install.sh
 ```
 
-The setup script will prompt you to automatically start the Docker containers and synchronize the database and configuration from the production environment.
+The setup script will prompt you to automatically start the Docker containers and synchronize the database and assets from the production environment.
 
 *(Note: If you run this script immediately after cloning, it will use the default Docker environment variables because an `.env` file does not yet exist. In most Docker development scenarios, these defaults are perfectly fine. If you need to customize your environment before starting, please see the **Environment configuration** section below on using `.env.example`.)*
 
-### Getting Started with Docker
+### Manual Docker setup
 
 #### Prerequisites
 
@@ -145,8 +144,8 @@ While Docker Desktop is a convenient option, there are several open source alter
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Montreal-2027/montreal2027.ca.git
-   cd montreal2027.ca
+   git clone https://github.com/Montreal-2027/montreal2027.ca.git [DESTINATION_DIR]
+   cd montreal2027.ca | DESTINATION_DIR
    ```
 
 2. **Environment configuration (optional)**
@@ -155,7 +154,7 @@ While Docker Desktop is a convenient option, there are several open source alter
    
    **Default values:**
    - Web accessible at: `http://localhost:8080`
-   - Database: `drupal` / `drupal` / `drupal`
+   - Database name/user/password: `drupal` / `drupal` / `drupal`
    - Container names: `montreal2027-web`, `montreal2027-db`
    - PHP version: 8.3
    - MariaDB version: 11.4
@@ -259,8 +258,8 @@ While Docker Desktop is a convenient option, there are several open source alter
 
 ```bash
 # View logs
-docker-compose logs -f web
-docker-compose logs -f db
+docker logs -f montreal2027-web
+docker logs -f montreal2027-db
 
 # Stop containers
 docker-compose stop
@@ -278,16 +277,16 @@ docker-compose down
 docker-compose down -v
 
 # Access web container shell
-docker-compose exec web sh
-
-# Access database (password: drupal)
-docker-compose exec db mysql -u drupal -p drupal
+docker exec -it montreal2027-web sh
 
 # Run Drush commands
-docker-compose exec web drush [command]
+docker exec -it montreal2027-web drush [command]
+
+# Access database
+docker exec -it montreal2027-web drush sqlc
 
 # Clear cache
-docker-compose exec web drush cr
+docker exec -it montreal2027-web drush cr
 
 # Rebuild containers after Dockerfile changes
 docker-compose up -d --build
@@ -297,11 +296,11 @@ docker-compose up -d --build
 
 1. **CSS Development**
    
-   The theme uses Sass. For local development outside Docker:
+   The theme uses Sass. For local and Docker development:
    ```bash
    cd web/themes/custom/montreal2027
    npm install
-   npm run watch
+   npm run watch:css
    ```
 
 2. **Syncing Production Data**
@@ -333,38 +332,38 @@ docker-compose up -d --build
    
    Export configuration changes:
    ```bash
-   docker-compose exec web drush config:export
+   [docker exec -it montreal2027-web ]drush config:export
    ```
 
    Import configuration:
    ```bash
-   docker-compose exec web drush config:import
+   [docker exec -it montreal2027-web ]drush config:import
    ```
 
 4. **Database Backups**
    ```bash
-   docker-compose exec web drush sql:dump --gzip > backup-$(date +%Y%m%d-%H%M%S).sql.gz
+   [docker exec -it montreal2027-web ]drush sql:dump --gzip > backup-$(date +%Y-%m-%d_%H:%M:%S).sql.gz
    ```
 
-### Troubleshooting
+### Docker Troubleshooting
 
 **Port conflicts**: If port 8080 is already in use, change `WEB_EXTERNAL_PORT` in `.env`
 
 **Permission issues**: The web container runs as the `nginx` user. If you encounter permission issues:
 ```bash
-docker-compose exec web chown -R nginx:nginx /var/www/html/web/sites/default/files
+docker exec -it montreal2027-web chown -R nginx:nginx /var/www/html/web/sites/default/files
 ```
 
 **Database connection errors**: Ensure the `DB_HOST` in `.env` is set to `db` (the service name)
 
 **Configuration not found**: Import the module configurations:
 ```bash
-docker-compose exec web drush config:import --partial --source=modules/custom/montreal2027_tools/config/install
+docker exec -it montreal2027-web drush config:import --partial --source=modules/custom/montreal2027_tools/config/install
 ```
 
 **Clear all caches**:
 ```bash
-docker-compose exec web drush cr
+docker exec -it montreal2027-web drush cr
 ```
 
 ## Getting Started with Native/Local Development

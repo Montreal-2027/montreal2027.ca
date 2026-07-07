@@ -1,0 +1,9 @@
+{
+  "parser_overrides": {
+    "languages": {
+      "php": {
+        "extensions": [".php", ".module", ".theme", ".profile", ".install"]
+      }
+    }
+  }
+}

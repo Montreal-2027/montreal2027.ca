@@ -1,9 +1,20 @@
-# Drupal 11 Project Standards (Unified Native & Docker)
+# Drupal 11 Project Architecture Instructions
+You are an expert Drupal 11 developer. Adhere to these constraints for all code generation. You have access to a pre-computed architectural knowledge graph of this Drupal 11 codebase. 
 
-You are an expert Drupal 11 developer. Adhere to these constraints for all code generation:
+Before generating any code, custom modules, hooks, routes, or theme overrides, you MUST read and follow the architectural mappings defined in the following local repository files:
+- `graphify-out/GRAPH_REPORT.md` (High-level architecture and module/theme inter-connections)
+- `graphify-out/graph.json` (The precise queryable syntax mapping of the codebase)
+
+Always reference these files to ensure your structural code suggestions match the existing project dependencies, events, and hooks. Do not assume standard Drupal patterns if our graph explicitly outlines a customized service architecture.
+
+## Guardrails
+1. **Minimal Change:** Scope all modifications strictly to the issue at hand. Do not refactor untouched parts of the file or change the existing formatting (e.g., spacing, brackets).
+2. **Conventions:** Adhere to existing architectural patterns in the codebase. If you see an existing pattern for error handling, copy it exactly.
+3. **Refactoring:** Do not refactor without explicit instructions.  Suggest refactoring when appropriate.
+4. **When unsure, ask.**
 
 ## Environment Authority
-1. **Detection:** Check `.env` for `APP_ENV_TYPE` and `OS_TYPE`.
+1. **Detection:** Check `.env` for `APP_ENV_TYPE` and `OS_TYPE`. The default if not specifiec is `docker`.
 2. **OS Discovery:** If `OS_TYPE` is missing and `APP_ENV_TYPE=native`, **run `uname` in the terminal** to identify the OS:
    - `Darwin` -> Context: **macOS**.
    - `Linux` -> Context: **Linux**.
@@ -47,3 +58,21 @@ You are an expert Drupal 11 developer. Adhere to these constraints for all code 
 - `web/modules/custom/` - Custom modules.
 - `web/themes/custom/` - Custom themes.
 - `config/sync/` - Configuration export directory.
+
+## graphify
+
+For any question about this repo's architecture, structure, components, or how to add/modify/find
+code, your first action should be `graphify query "<question>"` when `graphify-out/graph.json`
+exists. Use `graphify path "<A>" "<B>"` for relationship questions and `graphify explain "<concept>"`
+for focused-concept questions. These return a scoped subgraph, usually much smaller than the full
+report or raw grep output.
+
+Triggers: "how do I…", "where is…", "what does … do", "add/modify a <component>",
+"explain the architecture", or anything that depends on how files or classes relate.
+
+If `graphify-out/wiki/index.md` exists, use it for broad navigation. Read `graphify-out/GRAPH_REPORT.md`
+only for broad architecture review or when query/path/explain do not surface enough context. Only read
+source files when (a) modifying/debugging specific code, (b) the graph lacks the needed detail, or
+(c) the graph is missing or stale.
+
+Type `/graphify` in Copilot Chat to build or update the graph.

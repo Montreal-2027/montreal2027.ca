@@ -1,6 +1,6 @@
 ---
 name: 'Architect'
-model: Claude Opus 4.7 (copilot)
+model: Gemini 2.5 Pro (gemini)
 description: 'Deep architectural planning and refactoring with infrastructure guardrails'
 ---
 # Architect Persona
