@@ -2970,9 +2970,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
       "community": 10,
-      "norm_label": "staffpagecontroller.php"
+      "norm_label": "staffpagecontroller.php",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller"
     },
     {
       "label": "StaffPageController",
@@ -2980,9 +2981,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
       "community": 10,
-      "norm_label": "staffpagecontroller"
+      "norm_label": "staffpagecontroller",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller"
     },
     {
       "label": ".build()",
@@ -2990,9 +2992,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
       "community": 10,
-      "norm_label": ".build()"
+      "norm_label": ".build()",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build"
     },
     {
       "label": ".buildChildData()",
@@ -3000,9 +3003,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L107",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
       "community": 10,
-      "norm_label": ".buildchilddata()"
+      "norm_label": ".buildchilddata()",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
     },
     {
       "label": ".getTermStorage()",
@@ -3010,9 +3014,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L159",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
       "community": 10,
-      "norm_label": ".gettermstorage()"
+      "norm_label": ".gettermstorage()",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     },
     {
       "label": ".getTranslatedTerm()",
@@ -3020,9 +3025,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L169",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
       "community": 10,
-      "norm_label": ".gettranslatedterm()"
+      "norm_label": ".gettranslatedterm()",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     },
     {
       "label": "TermInterface",
@@ -3030,9 +3036,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "terminterface",
       "community": 10,
-      "norm_label": "terminterface"
+      "norm_label": "terminterface",
+      "community_name": "StaffPageController",
+      "id": "terminterface"
     },
     {
       "label": ".buildContactModalMarkup()",
@@ -3040,9 +3047,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L182",
       "_origin": "ast",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
       "community": 10,
-      "norm_label": ".buildcontactmodalmarkup()"
+      "norm_label": ".buildcontactmodalmarkup()",
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
     }
   ],
   "links": [
@@ -4703,9 +4711,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "target": "controllerbase",
-      "confidence_score": 1.0
+      "target": "controllerbase"
     },
     {
       "relation": "inherits",
@@ -4713,9 +4721,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "controllerbase",
-      "confidence_score": 1.0
+      "target": "controllerbase"
     },
     {
       "relation": "references",
@@ -4812,9 +4820,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "target": "termstorageinterface",
-      "confidence_score": 1.0
+      "target": "termstorageinterface"
     },
     {
       "relation": "references",
@@ -4823,9 +4831,9 @@
       "source_location": "L159",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "target": "termstorageinterface",
-      "confidence_score": 1.0
+      "target": "termstorageinterface"
     },
     {
       "relation": "imports",
@@ -5298,9 +5306,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "target": "url",
-      "confidence_score": 1.0
+      "target": "url"
     },
     {
       "relation": "references",
@@ -5954,9 +5962,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "target": "terminterface",
-      "confidence_score": 1.0
+      "target": "terminterface"
     },
     {
       "relation": "contains",
@@ -5964,9 +5972,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller"
     },
     {
       "relation": "method",
@@ -5974,9 +5982,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build"
     },
     {
       "relation": "method",
@@ -5984,9 +5992,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
     },
     {
       "relation": "method",
@@ -5994,9 +6002,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
     },
     {
       "relation": "method",
@@ -6004,9 +6012,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     },
     {
       "relation": "method",
@@ -6014,9 +6022,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     },
     {
       "relation": "calls",
@@ -6025,9 +6033,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
     },
     {
       "relation": "calls",
@@ -6036,9 +6044,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
     },
     {
       "relation": "calls",
@@ -6047,9 +6055,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     },
     {
       "relation": "calls",
@@ -6058,9 +6066,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     },
     {
       "relation": "calls",
@@ -6069,9 +6077,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     },
     {
       "relation": "calls",
@@ -6080,9 +6088,9 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "confidence_score": 1.0
+      "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     },
     {
       "relation": "references",
@@ -6091,9 +6099,9 @@
       "source_location": "L169",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "target": "terminterface",
-      "confidence_score": 1.0
+      "target": "terminterface"
     }
   ],
   "hyperedges": [
@@ -6145,5 +6153,5 @@
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml"
     }
   ],
-  "built_at_commit": "42693c88d69d82ead29d8fb9a5276c2a5b6814c1"
+  "built_at_commit": "9904103fd9247ce6a0081d109339e256d3b6bb6f"
 }
