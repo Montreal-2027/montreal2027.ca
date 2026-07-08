@@ -2983,8 +2983,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "staffpagecontroller.php",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller"
     },
     {
       "label": "StaffPageController",
@@ -2994,8 +2994,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "staffpagecontroller",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller"
     },
     {
       "label": ".build()",
@@ -3005,8 +3005,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".build()",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build"
     },
     {
       "label": ".buildChildData()",
@@ -3016,8 +3016,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".buildchilddata()",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
     },
     {
       "label": ".getTermStorage()",
@@ -3027,8 +3027,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".gettermstorage()",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     },
     {
       "label": ".getTranslatedTerm()",
@@ -3038,8 +3038,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".gettranslatedterm()",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     },
     {
       "label": ".buildContactModalMarkup()",
@@ -3049,8 +3049,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".buildcontactmodalmarkup()",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "community_name": "StaffPageController"
+      "community_name": "StaffPageController",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
     }
   ],
   "links": [
@@ -6153,5 +6153,5 @@
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml"
     }
   ],
-  "built_at_commit": "5d6332ab7d8b759ce91d24957347789447448b97"
+  "built_at_commit": "aa32912f3806271c2e385417b282781f8e365ad5"
 }
