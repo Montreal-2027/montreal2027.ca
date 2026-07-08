@@ -1754,7 +1754,7 @@
       "_origin": "ast",
       "community": 9,
       "norm_label": "controllerbase",
-      "community_name": "StaffContactController.php",
+      "community_name": "StaffPageController",
       "id": "controllerbase"
     },
     {
@@ -2227,7 +2227,7 @@
       "_origin": "ast",
       "community": 31,
       "norm_label": "formstateinterface",
-      "community_name": "montreal2027.theme",
+      "community_name": "FormStateInterface",
       "id": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     },
     {
@@ -2937,9 +2937,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027",
       "community": 2,
-      "norm_label": "montreal2027.theme"
+      "norm_label": "montreal2027.theme",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027"
     },
     {
       "label": "montreal2027_entity_type_alter()",
@@ -2947,9 +2948,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
       "community": 2,
-      "norm_label": "montreal2027_entity_type_alter()"
+      "norm_label": "montreal2027_entity_type_alter()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
     },
     {
       "label": "montreal2027_form_alter()",
@@ -2957,9 +2959,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
       "community": 2,
-      "norm_label": "montreal2027_form_alter()"
+      "norm_label": "montreal2027_form_alter()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
     },
     {
       "label": "FormStateInterface",
@@ -2967,9 +2970,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "formstateinterface",
       "community": 2,
-      "norm_label": "formstateinterface"
+      "norm_label": "formstateinterface",
+      "community_name": "montreal2027.theme",
+      "id": "formstateinterface"
     },
     {
       "label": "montreal2027_preprocess_block__system_branding_block()",
@@ -2977,9 +2981,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L39",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_block__system_branding_block()"
+      "norm_label": "montreal2027_preprocess_block__system_branding_block()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
     },
     {
       "label": "get_image_info()",
@@ -2987,9 +2992,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L71",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info",
       "community": 2,
-      "norm_label": "get_image_info()"
+      "norm_label": "get_image_info()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info"
     },
     {
       "label": "montreal2027_preprocess_node__guest__teaser()",
@@ -2997,9 +3003,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L228",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_node__guest__teaser()"
+      "norm_label": "montreal2027_preprocess_node__guest__teaser()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
     },
     {
       "label": "montreal2027_preprocess_block__montreal2027_content()",
@@ -3007,9 +3014,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L246",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_block__montreal2027_content()"
+      "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
     },
     {
       "label": "montreal2027_preprocess_page()",
@@ -3017,9 +3025,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L261",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_page()"
+      "norm_label": "montreal2027_preprocess_page()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page"
     },
     {
       "label": "montreal2027_entity_in_content_language()",
@@ -3027,9 +3036,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L286",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
       "community": 2,
-      "norm_label": "montreal2027_entity_in_content_language()"
+      "norm_label": "montreal2027_entity_in_content_language()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guest_block()",
@@ -3037,9 +3047,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L313",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_paragraph__guest_block()"
+      "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guests()",
@@ -3047,9 +3058,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L323",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_paragraph__guests()"
+      "norm_label": "montreal2027_preprocess_paragraph__guests()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
     },
     {
       "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
@@ -3057,9 +3069,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L333",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()"
+      "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     },
     {
       "label": "montreal2027_preprocess_node()",
@@ -3067,9 +3080,10 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L501",
       "_origin": "ast",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
       "community": 2,
-      "norm_label": "montreal2027_preprocess_node()"
+      "norm_label": "montreal2027_preprocess_node()",
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
     }
   ],
   "links": [
@@ -5974,9 +5988,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "formstateinterface",
-      "confidence_score": 1.0
+      "target": "formstateinterface"
     },
     {
       "relation": "contains",
@@ -5984,9 +5998,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
     },
     {
       "relation": "contains",
@@ -5994,9 +6008,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L286",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
     },
     {
       "relation": "contains",
@@ -6004,9 +6018,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
     },
     {
       "relation": "contains",
@@ -6014,9 +6028,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
     },
     {
       "relation": "contains",
@@ -6024,9 +6038,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L246",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
     },
     {
       "relation": "contains",
@@ -6034,9 +6048,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
     },
     {
       "relation": "contains",
@@ -6044,9 +6058,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L333",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     },
     {
       "relation": "contains",
@@ -6054,9 +6068,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L501",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
     },
     {
       "relation": "contains",
@@ -6064,9 +6078,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L228",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
     },
     {
       "relation": "contains",
@@ -6074,9 +6088,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L261",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page"
     },
     {
       "relation": "contains",
@@ -6084,9 +6098,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L313",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
     },
     {
       "relation": "contains",
@@ -6094,9 +6108,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
     },
     {
       "relation": "references",
@@ -6105,9 +6119,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
-      "target": "formstateinterface",
-      "confidence_score": 1.0
+      "target": "formstateinterface"
     },
     {
       "relation": "calls",
@@ -6116,9 +6130,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
-      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
     },
     {
       "relation": "calls",
@@ -6127,9 +6141,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
     },
     {
       "relation": "calls",
@@ -6138,9 +6152,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
     },
     {
       "relation": "calls",
@@ -6149,9 +6163,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L315",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     },
     {
       "relation": "calls",
@@ -6160,9 +6174,9 @@
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L325",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
-      "confidence_score": 1.0
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     }
   ],
   "hyperedges": [
@@ -6214,5 +6228,5 @@
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml"
     }
   ],
-  "built_at_commit": "b28405a289ffe0ab6245ee6e83106d05a81deba8"
+  "built_at_commit": "7df1828b42046b5b69cc1e1866216a1d2412c911"
 }

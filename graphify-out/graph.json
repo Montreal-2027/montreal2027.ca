@@ -2939,8 +2939,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027"
     },
     {
       "label": "montreal2027_entity_type_alter()",
@@ -2950,8 +2950,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_entity_type_alter()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
     },
     {
       "label": "montreal2027_form_alter()",
@@ -2961,8 +2961,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_form_alter()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
     },
     {
       "label": "FormStateInterface",
@@ -2972,8 +2972,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "formstateinterface",
-      "id": "formstateinterface",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "formstateinterface"
     },
     {
       "label": "montreal2027_preprocess_block__system_branding_block()",
@@ -2983,8 +2983,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_block__system_branding_block()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
     },
     {
       "label": "get_image_info()",
@@ -2994,8 +2994,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "get_image_info()",
-      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info"
     },
     {
       "label": "montreal2027_preprocess_node__guest__teaser()",
@@ -3005,8 +3005,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_node__guest__teaser()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
     },
     {
       "label": "montreal2027_preprocess_block__montreal2027_content()",
@@ -3016,8 +3016,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
     },
     {
       "label": "montreal2027_preprocess_page()",
@@ -3027,8 +3027,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_page()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page"
     },
     {
       "label": "montreal2027_entity_in_content_language()",
@@ -3038,8 +3038,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_entity_in_content_language()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guest_block()",
@@ -3049,8 +3049,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guests()",
@@ -3060,8 +3060,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_paragraph__guests()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
     },
     {
       "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
@@ -3071,8 +3071,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     },
     {
       "label": "montreal2027_preprocess_node()",
@@ -3082,8 +3082,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "montreal2027_preprocess_node()",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
-      "community_name": "montreal2027.theme"
+      "community_name": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
     }
   ],
   "links": [
@@ -6228,5 +6228,5 @@
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml"
     }
   ],
-  "built_at_commit": "b28405a289ffe0ab6245ee6e83106d05a81deba8"
+  "built_at_commit": "7df1828b42046b5b69cc1e1866216a1d2412c911"
 }
