@@ -1,15 +1,15 @@
-# Graph Report - .  (2026-07-07)
+# Graph Report - .  (2026-07-08)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 259 nodes · 294 edges · 31 communities (15 shown, 16 thin omitted)
+- 261 nodes · 298 edges · 31 communities (16 shown, 15 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a225e9d7`
+- Built from commit: `9904103f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,9 +24,9 @@
 - LanguageToggleBlock
 - StaffContactController.php
 - Web Service
+- StaffPageController
 - ContactImportCommands
 - drush.services.yml
-- StaffPageController
 - montreal2027_tools.module
 - entrypoint.sh
 - pre-commit
@@ -49,15 +49,15 @@
 3. `installer-paths` - 11 edges
 4. `LanguageToggleBlock` - 10 edges
 5. `StaffContactController` - 9 edges
-6. `extra` - 6 edges
-7. `ContactImportCommands` - 6 edges
-8. `StaffPageController` - 6 edges
+6. `StaffPageController` - 7 edges
+7. `extra` - 6 edges
+8. `ContactImportCommands` - 6 edges
 9. `StaffPageSettingsForm` - 6 edges
 10. `StaffPageSettingsForm` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `StaffPageController` --inherits--> `ControllerBase`  [EXTRACTED]
-  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 8 → community 12_
+  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 8 → community 10_
 
 ## Import Cycles
 - None detected.
@@ -68,7 +68,7 @@
 - **Docker Services** — docker_web, docker_db [EXTRACTED 0.75]
 - **Montreal 2027 Settings Group** — montreal2027_slideshow_display, montreal2027_slide_count, montreal2027_include_fontawesome [EXTRACTED 0.75]
 
-## Communities (31 total, 16 thin omitted)
+## Communities (31 total, 15 thin omitted)
 
 ### Community 0 - "require"
 Cohesion: 0.03
@@ -110,7 +110,11 @@ Nodes (10): ControllerBase, JsonResponse, LoggerChannelFactoryInterface, MailMan
 Cohesion: 0.22
 Nodes (10): Backend Network, Docker Compose, Database Service, Database Volume, Frontend Network, Healthcheck Command, MariaDB, Nginx (+2 more)
 
-### Community 10 - "ContactImportCommands"
+### Community 10 - "StaffPageController"
+Cohesion: 0.44
+Nodes (3): TermInterface, TermStorageInterface, StaffPageController
+
+### Community 11 - "ContactImportCommands"
 Cohesion: 0.39
 Nodes (3): DrushCommands, ContactImportCommands, EntityTypeManagerInterface
 
@@ -121,17 +125,17 @@ Nodes (3): FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_a
 ## Knowledge Gaps
 - **139 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+134 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `require` to `composer.json`?**
-  _High betweenness centrality (0.171) - this node is a cross-community bridge._
+  _High betweenness centrality (0.168) - this node is a cross-community bridge._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
 - **Why does `config` connect `allow-plugins` to `composer.json`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `type` to the rest of the system?**
   _139 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `require` be split into smaller, more focused modules?**

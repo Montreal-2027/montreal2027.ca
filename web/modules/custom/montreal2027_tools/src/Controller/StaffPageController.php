@@ -6,6 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
 use Drupal\Component\Utility\Html;
+use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy\TermStorageInterface;
 
 /**
@@ -52,6 +53,7 @@ class StaffPageController extends ControllerBase
             if (!$term) {
                 continue;
             }
+            $term = $this->getTranslatedTerm($term);
             $is_vacant_position = false;
             if ($term->hasField('field_vacant_position') && !$term->get('field_vacant_position')->isEmpty()) {
                 $is_vacant_position = (bool) $term->get('field_vacant_position')->value;
@@ -93,7 +95,7 @@ class StaffPageController extends ControllerBase
             ],
           ],
           '#cache' => [
-            'contexts' => ['languages:language_interface'],
+            'contexts' => ['languages:language_content', 'languages:language_interface'],
             'tags' => ['taxonomy_term_list', 'taxonomy_vocabulary:divisions', 'config:montreal2027_tools.staff_page_settings'],
           ],
         ];
@@ -112,6 +114,7 @@ class StaffPageController extends ControllerBase
             if (!$term) {
                 continue;
             }
+            $term = $this->getTranslatedTerm($term);
             $field_names = [];
             if ($term->hasField('field_name') && !$term->get('field_name')->isEmpty()) {
                 foreach ($term->get('field_name') as $field_item) {
@@ -158,6 +161,19 @@ class StaffPageController extends ControllerBase
         /** @var \Drupal\taxonomy\TermStorageInterface $term_storage */
         $term_storage = $this->entityTypeManager()->getStorage('taxonomy_term');
         return $term_storage;
+    }
+
+    /**
+     * Returns the term in the current content language when available.
+     */
+    private function getTranslatedTerm(TermInterface $term): TermInterface
+    {
+        $langcode = $this->languageManager()->getCurrentLanguage()->getId();
+        if ($term->hasTranslation($langcode)) {
+            return $term->getTranslation($langcode);
+        }
+
+        return $term;
     }
 
     /**

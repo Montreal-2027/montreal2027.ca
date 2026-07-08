@@ -228,6 +228,17 @@
       "docker_web"
     ],
     "10": [
+      "terminterface",
+      "termstorageinterface",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
+    ],
+    "11": [
       "drushcommands",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
@@ -237,7 +248,7 @@
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
       "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_php_entitytypemanagerinterface"
     ],
-    "11": [
+    "12": [
       "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings_yml",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_yml",
       "web_modules_custom_montreal2027_tools_drush_services_yml",
@@ -246,15 +257,6 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_yml",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_yml",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_yml"
-    ],
-    "12": [
-      "termstorageinterface",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
     ],
     "13": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
@@ -333,9 +335,9 @@
     "7": 0.26373626373626374,
     "8": 0.27472527472527475,
     "9": 0.2222222222222222,
-    "10": 0.39285714285714285,
-    "11": 0.75,
-    "12": 0.5238095238095238,
+    "10": 0.4444444444444444,
+    "11": 0.39285714285714285,
+    "12": 0.75,
     "13": 0.4666666666666667,
     "14": 1.0,
     "15": 1.0,
@@ -382,6 +384,11 @@
       "degree": 9
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "label": "StaffPageController",
+      "degree": 7
+    },
+    {
       "id": "composer_extra",
       "label": "extra",
       "degree": 6
@@ -389,11 +396,6 @@
     {
       "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
       "label": "ContactImportCommands",
-      "degree": 6
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "label": "StaffPageController",
       "degree": 6
     },
     {
@@ -417,24 +419,24 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "inherits",
-      "note": "Bridges community 8 → community 12"
+      "note": "Bridges community 8 → community 10"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.171) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.168) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.080) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.078) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
-      "why": "High betweenness centrality (0.050) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.049) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
