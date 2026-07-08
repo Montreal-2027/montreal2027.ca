@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - media.type.nc_hero_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: media.nc_hero_image
 target_entity_type_id: media
 target_bundle: nc_hero_image

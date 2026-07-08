@@ -89,7 +89,7 @@
       "source_file": "composer.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "composer.json",
       "community_name": "composer.json",
       "id": "composer"
@@ -100,7 +100,7 @@
       "source_file": "composer.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "name",
       "community_name": "composer.json",
       "id": "composer_name"
@@ -111,7 +111,7 @@
       "source_file": "composer.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "description",
       "community_name": "composer.json",
       "id": "composer_description"
@@ -122,7 +122,7 @@
       "source_file": "composer.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "type",
       "community_name": "composer.json",
       "id": "composer_type"
@@ -133,7 +133,7 @@
       "source_file": "composer.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "license",
       "community_name": "composer.json",
       "id": "composer_license"
@@ -144,7 +144,7 @@
       "source_file": "composer.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "homepage",
       "community_name": "composer.json",
       "id": "composer_homepage"
@@ -155,7 +155,7 @@
       "source_file": "composer.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "support",
       "community_name": "composer.json",
       "id": "composer_support"
@@ -166,7 +166,7 @@
       "source_file": "composer.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "docs",
       "community_name": "composer.json",
       "id": "composer_support_docs"
@@ -177,7 +177,7 @@
       "source_file": "composer.json",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "chat",
       "community_name": "composer.json",
       "id": "composer_support_chat"
@@ -188,7 +188,7 @@
       "source_file": "composer.json",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "repositories",
       "community_name": "composer.json",
       "id": "composer_repositories"
@@ -903,7 +903,7 @@
       "source_file": "composer.json",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "conflict",
       "community_name": "composer.json",
       "id": "composer_conflict"
@@ -914,7 +914,7 @@
       "source_file": "composer.json",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "drupal/drupal",
       "community_name": "composer.json",
       "id": "composer_conflict_drupal_drupal"
@@ -925,7 +925,7 @@
       "source_file": "composer.json",
       "source_location": "L93",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "minimum-stability",
       "community_name": "composer.json",
       "id": "composer_minimum_stability"
@@ -936,7 +936,7 @@
       "source_file": "composer.json",
       "source_location": "L94",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "prefer-stable",
       "community_name": "composer.json",
       "id": "composer_prefer_stable"
@@ -947,7 +947,7 @@
       "source_file": "composer.json",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "config",
       "community_name": "allow-plugins",
       "id": "composer_config"
@@ -958,7 +958,7 @@
       "source_file": "composer.json",
       "source_location": "L96",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "platform",
       "community_name": "allow-plugins",
       "id": "composer_config_platform"
@@ -969,7 +969,7 @@
       "source_file": "composer.json",
       "source_location": "L97",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "php",
       "community_name": "allow-plugins",
       "id": "composer_platform_php"
@@ -980,7 +980,7 @@
       "source_file": "composer.json",
       "source_location": "L99",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "allow-plugins",
       "community_name": "allow-plugins",
       "id": "composer_config_allow_plugins"
@@ -991,7 +991,7 @@
       "source_file": "composer.json",
       "source_location": "L100",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "composer/installers",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_composer_installers"
@@ -1002,7 +1002,7 @@
       "source_file": "composer.json",
       "source_location": "L101",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "cweagans/composer-patches",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_cweagans_composer_patches"
@@ -1013,7 +1013,7 @@
       "source_file": "composer.json",
       "source_location": "L102",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "dealerdirect/phpcodesniffer-composer-installer",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer"
@@ -1024,7 +1024,7 @@
       "source_file": "composer.json",
       "source_location": "L103",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "drupal/core-composer-scaffold",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_drupal_core_composer_scaffold"
@@ -1035,7 +1035,7 @@
       "source_file": "composer.json",
       "source_location": "L104",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "drupal/core-project-message",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_drupal_core_project_message"
@@ -1046,7 +1046,7 @@
       "source_file": "composer.json",
       "source_location": "L105",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "drupal/core-recipe-unpack",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_drupal_core_recipe_unpack"
@@ -1057,7 +1057,7 @@
       "source_file": "composer.json",
       "source_location": "L106",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "oomphinc/composer-installers-extender",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_oomphinc_composer_installers_extender"
@@ -1068,7 +1068,7 @@
       "source_file": "composer.json",
       "source_location": "L107",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "php-http/discovery",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_php_http_discovery"
@@ -1079,7 +1079,7 @@
       "source_file": "composer.json",
       "source_location": "L108",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "php-tuf/composer-integration",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_php_tuf_composer_integration"
@@ -1090,7 +1090,7 @@
       "source_file": "composer.json",
       "source_location": "L109",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "phpstan/extension-installer",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_phpstan_extension_installer"
@@ -1101,7 +1101,7 @@
       "source_file": "composer.json",
       "source_location": "L110",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "wikimedia/composer-merge-plugin",
       "community_name": "allow-plugins",
       "id": "composer_allow_plugins_wikimedia_composer_merge_plugin"
@@ -1112,7 +1112,7 @@
       "source_file": "composer.json",
       "source_location": "L112",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "sort-packages",
       "community_name": "allow-plugins",
       "id": "composer_config_sort_packages"
@@ -1123,7 +1123,7 @@
       "source_file": "composer.json",
       "source_location": "L114",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "scripts",
       "community_name": "composer.json",
       "id": "composer_scripts"
@@ -1134,7 +1134,7 @@
       "source_file": "composer.json",
       "source_location": "L115",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "post-install-cmd",
       "community_name": "composer.json",
       "id": "composer_scripts_post_install_cmd"
@@ -1145,7 +1145,7 @@
       "source_file": "composer.json",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "post-update-cmd",
       "community_name": "composer.json",
       "id": "composer_scripts_post_update_cmd"
@@ -1752,9 +1752,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "norm_label": "controllerbase",
-      "community_name": "StaffContactController.php",
+      "community_name": "StaffPageController",
       "id": "controllerbase"
     },
     {
@@ -1884,7 +1884,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": "termstorageinterface",
       "community_name": "StaffPageController",
       "id": "termstorageinterface"
@@ -2220,136 +2220,15 @@
       "id": "web_sites_default_settings"
     },
     {
-      "label": "montreal2027.theme",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027.theme",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027"
-    },
-    {
-      "label": "montreal2027_entity_type_alter()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L11",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_entity_type_alter()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
-    },
-    {
-      "label": "montreal2027_form_alter()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_form_alter()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
-    },
-    {
       "label": "FormStateInterface",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 4,
+      "community": 31,
       "norm_label": "formstateinterface",
-      "community_name": "montreal2027.theme",
+      "community_name": "FormStateInterface",
       "id": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
-    },
-    {
-      "label": "montreal2027_preprocess_block__system_branding_block()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L39",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_block__system_branding_block()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
-    },
-    {
-      "label": "get_image_info()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L71",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "get_image_info()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info"
-    },
-    {
-      "label": "montreal2027_preprocess_node__guest__teaser()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L228",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_node__guest__teaser()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
-    },
-    {
-      "label": "montreal2027_preprocess_block__montreal2027_content()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L246",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
-    },
-    {
-      "label": "montreal2027_preprocess_paragraph__guest_block()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L265",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
-    },
-    {
-      "label": "montreal2027_preprocess_paragraph__guests()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L275",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_paragraph__guests()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
-    },
-    {
-      "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L285",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
-    },
-    {
-      "label": "montreal2027_preprocess_node()",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L453",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "montreal2027_preprocess_node()",
-      "community_name": "montreal2027.theme",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
     },
     {
       "label": "package.json",
@@ -2553,7 +2432,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "web service",
       "community_name": "Web Service",
       "id": "docker_web"
@@ -2567,7 +2446,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "database service",
       "community_name": "Web Service",
       "id": "docker_db"
@@ -2581,7 +2460,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "database volume",
       "community_name": "Web Service",
       "id": "docker_db_data"
@@ -2595,7 +2474,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "frontend network",
       "community_name": "Web Service",
       "id": "docker_frontend_network"
@@ -2609,7 +2488,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "backend network",
       "community_name": "Web Service",
       "id": "docker_backend_network"
@@ -2623,7 +2502,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "healthcheck command",
       "community_name": "Web Service",
       "id": "docker_healthcheck"
@@ -2637,7 +2516,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "mariadb",
       "community_name": "Web Service",
       "id": "docker_mariadb"
@@ -2651,7 +2530,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "php",
       "community_name": "Web Service",
       "id": "docker_php"
@@ -2665,7 +2544,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "nginx",
       "community_name": "Web Service",
       "id": "docker_nginx"
@@ -2679,7 +2558,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 9,
+      "community": 10,
       "norm_label": "docker compose",
       "community_name": "Web Service",
       "id": "docker_compose"
@@ -2847,7 +2726,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "montreal 2027 settings",
       "community_name": "montreal2027.theme",
       "id": "montreal2027_settings"
@@ -2861,7 +2740,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "show slideshow",
       "community_name": "montreal2027.theme",
       "id": "montreal2027_slideshow_display"
@@ -2875,7 +2754,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "number of slides",
       "community_name": "montreal2027.theme",
       "id": "montreal2027_slide_count"
@@ -2889,7 +2768,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 2,
       "norm_label": "include fontawesome icons (cdn)",
       "community_name": "montreal2027.theme",
       "id": "montreal2027_include_fontawesome"
@@ -2970,7 +2849,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": "terminterface",
       "community_name": "StaffPageController",
       "id": "terminterface"
@@ -2981,7 +2860,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": "staffpagecontroller.php",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller"
@@ -2992,7 +2871,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": "staffpagecontroller",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller"
@@ -3003,7 +2882,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": ".build()",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build"
@@ -3014,7 +2893,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L108",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": ".buildchilddata()",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
@@ -3025,7 +2904,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L160",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": ".gettermstorage()",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
@@ -3036,7 +2915,7 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L170",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": ".gettranslatedterm()",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
@@ -3047,10 +2926,164 @@
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
       "source_location": "L183",
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "norm_label": ".buildcontactmodalmarkup()",
       "community_name": "StaffPageController",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
+    },
+    {
+      "label": "montreal2027.theme",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027.theme",
+      "id": "web_themes_custom_montreal2027_montreal2027",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_entity_type_alter()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_entity_type_alter()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_form_alter()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_form_alter()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "FormStateInterface",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "formstateinterface",
+      "id": "formstateinterface",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_block__system_branding_block()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_block__system_branding_block()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "get_image_info()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L71",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "get_image_info()",
+      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_node__guest__teaser()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L228",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_node__guest__teaser()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_block__montreal2027_content()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L246",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_page()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L261",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_page()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_entity_in_content_language()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L286",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_entity_in_content_language()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_paragraph__guest_block()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L313",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_paragraph__guests()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L323",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_paragraph__guests()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L333",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
+      "community_name": "montreal2027.theme"
+    },
+    {
+      "label": "montreal2027_preprocess_node()",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L501",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "montreal2027_preprocess_node()",
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
+      "community_name": "montreal2027.theme"
     }
   ],
   "links": [
@@ -5311,171 +5344,6 @@
       "target": "url"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/themes/custom/montreal2027/montreal2027.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "montreal2027_settings"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L246",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L285",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L453",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L228",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L265",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L275",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027",
-      "target": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
-      "target": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L235",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
-      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L267",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L277",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
-      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "web/themes/custom/montreal2027/package.json",
@@ -5956,6 +5824,16 @@
       "target": "montreal2027_slideshow_display"
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/themes/custom/montreal2027/montreal2027.libraries.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "montreal2027_settings"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -6102,6 +5980,203 @@
       "confidence_score": 1.0,
       "source": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
       "target": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "formstateinterface"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L286",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L246",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L333",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L501",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L228",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L261",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L313",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L323",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
+      "target": "formstateinterface"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L235",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
+      "target": "web_themes_custom_montreal2027_montreal2027_get_image_info"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L252",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L315",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
+      "source_location": "L325",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
+      "target": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
     }
   ],
   "hyperedges": [
@@ -6153,5 +6228,5 @@
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml"
     }
   ],
-  "built_at_commit": "aa32912f3806271c2e385417b282781f8e365ad5"
+  "built_at_commit": "b28405a289ffe0ab6245ee6e83106d05a81deba8"
 }

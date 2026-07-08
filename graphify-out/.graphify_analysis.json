@@ -95,6 +95,26 @@
       "composer_patches_drupal_wse"
     ],
     "2": [
+      "formstateinterface",
+      "montreal2027_include_fontawesome",
+      "montreal2027_settings",
+      "montreal2027_slide_count",
+      "montreal2027_slideshow_display",
+      "web_themes_custom_montreal2027_montreal2027",
+      "web_themes_custom_montreal2027_montreal2027_get_image_info",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
+      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
+    ],
+    "3": [
       "composer",
       "composer_conflict",
       "composer_conflict_drupal_drupal",
@@ -113,7 +133,7 @@
       "composer_support_docs",
       "composer_type"
     ],
-    "3": [
+    "4": [
       "composer_allow_plugins_composer_installers",
       "composer_allow_plugins_cweagans_composer_patches",
       "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
@@ -130,24 +150,6 @@
       "composer_config_platform",
       "composer_config_sort_packages",
       "composer_platform_php"
-    ],
-    "4": [
-      "montreal2027_include_fontawesome",
-      "montreal2027_settings",
-      "montreal2027_slide_count",
-      "montreal2027_slideshow_display",
-      "web_themes_custom_montreal2027_montreal2027",
-      "web_themes_custom_montreal2027_montreal2027_get_image_info",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
-      "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
-      "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
     "5": [
       "configformbase",
@@ -200,7 +202,6 @@
       "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
     ],
     "8": [
-      "controllerbase",
       "jsonresponse",
       "loggerchannelfactoryinterface",
       "mailmanagerinterface",
@@ -216,6 +217,18 @@
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
     ],
     "9": [
+      "controllerbase",
+      "terminterface",
+      "termstorageinterface",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
+    ],
+    "10": [
       "docker_backend_network",
       "docker_compose",
       "docker_db",
@@ -226,17 +239,6 @@
       "docker_nginx",
       "docker_php",
       "docker_web"
-    ],
-    "10": [
-      "terminterface",
-      "termstorageinterface",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     ],
     "11": [
       "drushcommands",
@@ -322,20 +324,23 @@
     ],
     "30": [
       "web_themes_custom_montreal2027_info_yml"
+    ],
+    "31": [
+      "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ]
   },
   "cohesion": {
     "0": 0.03125,
     "1": 0.07692307692307693,
-    "2": 0.11764705882352941,
-    "3": 0.125,
-    "4": 0.15833333333333333,
+    "2": 0.1503267973856209,
+    "3": 0.11764705882352941,
+    "4": 0.125,
     "5": 0.19047619047619047,
     "6": 0.13333333333333333,
     "7": 0.26373626373626374,
-    "8": 0.27472527472527475,
-    "9": 0.2222222222222222,
-    "10": 0.4444444444444444,
+    "8": 0.2948717948717949,
+    "9": 0.4,
+    "10": 0.2222222222222222,
     "11": 0.39285714285714285,
     "12": 0.75,
     "13": 0.4666666666666667,
@@ -355,7 +360,8 @@
     "27": 1.0,
     "28": 1.0,
     "29": 1.0,
-    "30": 1.0
+    "30": 1.0,
+    "31": 1.0
   },
   "gods": [
     {
@@ -411,32 +417,32 @@
   ],
   "surprises": [
     {
-      "source": "StaffPageController",
+      "source": "StaffContactController",
       "target": "ControllerBase",
       "source_files": [
-        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+        "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
         ""
       ],
       "confidence": "EXTRACTED",
       "relation": "inherits",
-      "note": "Bridges community 8 → community 10"
+      "note": "Bridges community 8 → community 9"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.168) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.165) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.078) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.077) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
-      "why": "High betweenness centrality (0.049) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.048) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
