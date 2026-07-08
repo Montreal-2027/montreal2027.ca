@@ -3,6 +3,7 @@
 namespace Drupal\montreal2027_tools\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
 use Drupal\Component\Utility\Html;
@@ -168,7 +169,7 @@ class StaffPageController extends ControllerBase
      */
     private function getTranslatedTerm(TermInterface $term): TermInterface
     {
-        $langcode = $this->languageManager()->getCurrentLanguage()->getId();
+        $langcode = $this->languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
         if ($term->hasTranslation($langcode)) {
             return $term->getTranslation($langcode);
         }
