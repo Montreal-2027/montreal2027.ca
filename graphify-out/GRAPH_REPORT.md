@@ -4,27 +4,27 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 261 nodes · 298 edges · 31 communities (16 shown, 15 thin omitted)
+- 264 nodes · 302 edges · 32 communities (16 shown, 16 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b3bf0f43`
+- Built from commit: `b28405a2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - require
 - installer-paths
+- montreal2027.theme
 - composer.json
 - allow-plugins
-- montreal2027.theme
 - StaffPageSettingsForm
 - package.json
 - LanguageToggleBlock
 - StaffContactController.php
-- Web Service
 - StaffPageController
+- Web Service
 - ContactImportCommands
 - drush.services.yml
 - montreal2027_tools.module
@@ -42,6 +42,7 @@
 - montreal2027_tools.staff_page_settings
 - Montreal 2027 theme settings
 - Montreal2027 Theme Info
+- FormStateInterface
 
 ## God Nodes (most connected - your core abstractions)
 1. `require` - 64 edges
@@ -56,8 +57,8 @@
 10. `StaffPageSettingsForm` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `StaffPageController` --inherits--> `ControllerBase`  [EXTRACTED]
-  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 8 → community 10_
+- `StaffContactController` --inherits--> `ControllerBase`  [EXTRACTED]
+  web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php →   _Bridges community 8 → community 9_
 
 ## Import Cycles
 - None detected.
@@ -68,7 +69,7 @@
 - **Docker Services** — docker_web, docker_db [EXTRACTED 0.75]
 - **Montreal 2027 Settings Group** — montreal2027_slideshow_display, montreal2027_slide_count, montreal2027_include_fontawesome [EXTRACTED 0.75]
 
-## Communities (31 total, 15 thin omitted)
+## Communities (32 total, 16 thin omitted)
 
 ### Community 0 - "require"
 Cohesion: 0.03
@@ -78,17 +79,17 @@ Nodes (64): require, composer/installers, cweagans/composer-patches, drupal/admi
 Cohesion: 0.08
 Nodes (26): include-keys, post-create-project-cmd-message, Refactor to AliasManagerInterface, locations, Add Bluesky, Reset workflow state to draft when cloning workspace, extra, drupal-core-project-message (+18 more)
 
-### Community 2 - "composer.json"
+### Community 2 - "montreal2027.theme"
+Cohesion: 0.15
+Nodes (14): FormStateInterface, Include FontAwesome icons (CDN), Montreal 2027 settings, Number of slides, Show slideshow, get_image_info(), montreal2027_entity_in_content_language(), montreal2027_form_alter() (+6 more)
+
+### Community 3 - "composer.json"
 Cohesion: 0.12
 Nodes (16): conflict, drupal/drupal, description, homepage, license, minimum-stability, name, prefer-stable (+8 more)
 
-### Community 3 - "allow-plugins"
+### Community 4 - "allow-plugins"
 Cohesion: 0.12
 Nodes (16): composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender, php-http/discovery (+8 more)
-
-### Community 4 - "montreal2027.theme"
-Cohesion: 0.16
-Nodes (11): Include FontAwesome icons (CDN), Montreal 2027 settings, Number of slides, Show slideshow, get_image_info(), montreal2027_form_alter(), montreal2027_preprocess_guest_taxonomy_paragraph(), montreal2027_preprocess_node__guest__teaser() (+3 more)
 
 ### Community 5 - "StaffPageSettingsForm"
 Cohesion: 0.19
@@ -103,16 +104,16 @@ Cohesion: 0.26
 Nodes (8): BlockBase, ContainerFactoryPluginInterface, RouteMatchInterface, Url, LanguageToggleBlock, ContainerInterface, LanguageManagerInterface, static
 
 ### Community 8 - "StaffContactController.php"
-Cohesion: 0.27
-Nodes (10): ControllerBase, JsonResponse, LoggerChannelFactoryInterface, MailManagerInterface, Request, ContainerInterface, EntityTypeManagerInterface, LanguageManagerInterface (+2 more)
+Cohesion: 0.29
+Nodes (9): JsonResponse, LoggerChannelFactoryInterface, MailManagerInterface, Request, ContainerInterface, EntityTypeManagerInterface, LanguageManagerInterface, static (+1 more)
 
-### Community 9 - "Web Service"
+### Community 9 - "StaffPageController"
+Cohesion: 0.40
+Nodes (4): ControllerBase, TermInterface, TermStorageInterface, StaffPageController
+
+### Community 10 - "Web Service"
 Cohesion: 0.22
 Nodes (10): Backend Network, Docker Compose, Database Service, Database Volume, Frontend Network, Healthcheck Command, MariaDB, Nginx (+2 more)
-
-### Community 10 - "StaffPageController"
-Cohesion: 0.44
-Nodes (3): TermInterface, TermStorageInterface, StaffPageController
 
 ### Community 11 - "ContactImportCommands"
 Cohesion: 0.39
@@ -125,17 +126,17 @@ Nodes (3): FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_a
 ## Knowledge Gaps
 - **139 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+134 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `require` to `composer.json`?**
-  _High betweenness centrality (0.168) - this node is a cross-community bridge._
+  _High betweenness centrality (0.165) - this node is a cross-community bridge._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Why does `config` connect `allow-plugins` to `composer.json`?**
-  _High betweenness centrality (0.049) - this node is a cross-community bridge._
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `type` to the rest of the system?**
   _139 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `require` be split into smaller, more focused modules?**
