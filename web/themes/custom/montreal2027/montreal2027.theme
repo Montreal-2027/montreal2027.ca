@@ -249,8 +249,56 @@ function montreal2027_preprocess_block__montreal2027_content(&$variables) {
 
   // Check if a node was found and pass it to the template.
   if ($node instanceof \Drupal\node\NodeInterface) {
-    $variables['current_node'] = $node;
+    $variables['current_node'] = montreal2027_entity_in_content_language($node);
   }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Provides translated node and carousel item entities for Twig.
+ */
+function montreal2027_preprocess_page(array &$variables): void {
+  $route_node = \Drupal::routeMatch()->getParameter('node');
+  if (!$route_node instanceof \Drupal\node\NodeInterface) {
+    return;
+  }
+
+  $node = montreal2027_entity_in_content_language($route_node);
+  $variables['current_node'] = $node;
+
+  $carousel_items = [];
+  if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
+    foreach ($node->get('field_carousel_items') as $item) {
+      if (empty($item->entity)) {
+        continue;
+      }
+      $carousel_items[] = montreal2027_entity_in_content_language($item->entity);
+    }
+  }
+
+  $variables['carousel_items'] = $carousel_items;
+}
+
+/**
+ * Returns an entity translated to current content language when available.
+ */
+function montreal2027_entity_in_content_language($entity) {
+  if (!is_object($entity) || !method_exists($entity, 'hasTranslation')) {
+    return $entity;
+  }
+
+  $langcode = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+  if ($langcode && $entity->hasTranslation($langcode)) {
+    try {
+      return $entity->getTranslation($langcode);
+    }
+    catch (\Throwable $e) {
+      return $entity;
+    }
+  }
+
+  return $entity;
 }
 
 /**

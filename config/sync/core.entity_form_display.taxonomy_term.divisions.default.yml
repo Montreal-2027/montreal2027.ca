@@ -74,4 +74,9 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+  translation:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
