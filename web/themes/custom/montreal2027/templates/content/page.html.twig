@@ -95,10 +95,10 @@
       <div id="top-of-page"></div>
 
   {# Carousel for home page #}
-  {% set current_node = node ?? null %}
-  {% set has_carousel = current_node and current_node.hasField('field_carousel_items') and not current_node.field_carousel_items.isEmpty() %}
+  {% set current_node = current_node ?? (node ?? null) %}
+  {% set items = carousel_items ?? [] %}
+  {% set has_carousel = items|length > 0 %}
   {% if has_carousel %}
-    {% set items = current_node.field_carousel_items %}
     <div id="news-carousel" class="news-carousel carousel slide" data-bs-ride="carousel">
       {% if items|length > 1 %}
         <div class="carousel-indicators">
@@ -112,24 +112,24 @@
       <div class="carousel-inner">
         {% for item in items %}
           <div class="carousel-item {{ loop.first ? 'active' }}">
-            {% if item.entity and item.entity.field_hero_image %}
-              {% set image_target_id = item.entity.field_hero_image.entity.field_media_image.target_id %}
+            {% if item and item.field_hero_image is defined and not item.field_hero_image.isEmpty() and item.field_hero_image.entity and item.field_hero_image.entity.field_media_image is defined and not item.field_hero_image.entity.field_media_image.isEmpty() %}
+              {% set image_target_id = item.field_hero_image.entity.field_media_image.target_id %}
               {% if image_target_id %}
                 <div class="news-carousel__image">
-                  {{ drupal_image(image_target_id, 'nc_hero_image', {alt: item.entity.field_hero_image.entity.field_media_image.alt, class: 'd-block w-100'}) }}
+                  {{ drupal_image(image_target_id, 'nc_hero_image', {alt: item.field_hero_image.entity.field_media_image.alt, class: 'd-block w-100'}) }}
                 </div>
               {% endif %}
             {% endif %}
-            {% set has_title = item.entity.field_title is defined and not item.entity.field_title.isEmpty() %}
-            {% set has_content = item.entity.field_news_content is defined and not item.entity.field_news_content.isEmpty() %}
+            {% set has_title = item.field_title is defined and not item.field_title.isEmpty() %}
+            {% set has_content = item.field_news_content is defined and not item.field_news_content.isEmpty() %}
             {% if has_title or has_content %}
               <div class="carousel-caption news-carousel__caption">
                 <div class="news-carousel__panel">
                   {% if has_title %}
-                    <h2 class="news-carousel__title">{{ item.entity.field_title.value }}</h2>
+                    <h2 class="news-carousel__title">{{ item.field_title.value }}</h2>
                   {% endif %}
                   {% if has_content %}
-                    <div class="news-carousel__content">{{ item.entity.field_news_content.value|raw }}</div>
+                    <div class="news-carousel__content">{{ item.field_news_content.value|raw }}</div>
                   {% endif %}
                 </div>
               </div>

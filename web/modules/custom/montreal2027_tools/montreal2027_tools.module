@@ -78,6 +78,7 @@ function montreal2027_tools_form_taxonomy_overview_terms_alter(array &$form, For
         }
         $parts = explode(':', $row_key);
         $tid = $parts[1];
+        /** @var \Drupal\taxonomy\Entity\TermInterface $term */
         $term = $term_storage->load($tid);
         $display_name = '';
         if ($term && !$term->get('field_name')->isEmpty()) {
