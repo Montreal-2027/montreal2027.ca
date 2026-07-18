@@ -76,3 +76,5 @@ source files when (a) modifying/debugging specific code, (b) the graph lacks the
 (c) the graph is missing or stale.
 
 Type `/graphify` in Copilot Chat to build or update the graph.
+# Graphify Context
+Always reference graphify-out/GRAPH_REPORT.md to understand code architecture context before answering queries.
