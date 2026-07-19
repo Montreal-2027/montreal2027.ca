@@ -253,11 +253,10 @@
     ],
     "10": [
       "docker-compose",
-      "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "web_modules_custom_montreal2027_tools_config_install",
       "web_modules_custom_montreal2027_tools_drush_services",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
     ],
@@ -279,48 +278,50 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "13": [
-      "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
+      "web_themes_custom_montreal2027_config_schema",
       "web_themes_custom_montreal2027_montreal2027_info",
       "web_themes_custom_montreal2027_montreal2027_libraries"
     ],
     "14": [
-      ".github_workflows_deploy",
-      ".github_workflows_graphify"
-    ],
-    "15": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "16": [
+    "15": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "17": [
+    "16": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "18": [
+    "17": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "19": [
+    "18": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "20": [
+    "19": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
+    "20": [
+      "web_modules_custom_montreal2027_tools_config_schema"
+    ],
     "21": [
-      ".github_ISSUE_TEMPLATE_new-content"
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
     ],
     "22": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries"
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff"
     ],
     "23": [
-      "web_sites_default_development_services"
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff_contact_submit"
     ],
     "24": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff_page_settings"
+    ],
+    "25": [
       "web_sites_default_settings"
     ]
   },
@@ -349,7 +350,8 @@
     "21": 1.0,
     "22": 1.0,
     "23": 1.0,
-    "24": 1.0
+    "24": 1.0,
+    "25": 1.0
   },
   "gods": [
     {
@@ -388,11 +390,6 @@
       "degree": 7
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "label": "Montreal 2027 Tools Module Info",
-      "degree": 7
-    },
-    {
       "id": "composer_extra",
       "label": "extra",
       "degree": 6
@@ -401,20 +398,14 @@
       "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
       "label": "ContactImportCommands",
       "degree": 6
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
+      "label": "StaffPageSettingsForm",
+      "degree": 6
     }
   ],
   "surprises": [
-    {
-      "source": "Docker Compose Configuration",
-      "target": "Montreal 2027 Tools Module Info",
-      "source_files": [
-        "docker-compose.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories; peripheral node `Docker Compose Configuration` unexpectedly reaches hub `Montreal 2027 Tools Module Info`"
-    },
     {
       "source": "Docker Compose Configuration",
       "target": "Drush Services Configuration",
@@ -428,40 +419,51 @@
     },
     {
       "source": "Drush Services Configuration",
-      "target": "Montreal 2027 Tools Module Info",
+      "target": "Montreal 2027 Tools Info",
       "source_files": [
         "web/modules/custom/montreal2027_tools/drush.services.yml",
         "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "peripheral node `Drush Services Configuration` unexpectedly reaches hub `Montreal 2027 Tools Module Info`"
+      "why": "cross-file semantic connection"
     },
     {
-      "source": "Montreal 2027 Tools Module Info",
-      "target": "Montreal 2027 Tools Staff Contact Settings",
+      "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Libraries",
       "source_files": [
         "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Routing",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "Montreal 2027 Tools Routing",
+      "target": "Montreal 2027 Tools Configuration Install",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
         "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "peripheral node `Montreal 2027 Tools Staff Contact Settings` unexpectedly reaches hub `Montreal 2027 Tools Module Info`"
-    },
-    {
-      "source": "Montreal 2027 Tools Module Info",
-      "target": "Montreal 2027 Tools Schema",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
-        "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `Montreal 2027 Tools Schema` unexpectedly reaches hub `Montreal 2027 Tools Module Info`"
+      "why": "cross-file semantic connection"
     }
   ],
   "tokens": {
-    "input": 4379,
-    "output": 1028
+    "input": 6853,
+    "output": 2147
   }
 }
