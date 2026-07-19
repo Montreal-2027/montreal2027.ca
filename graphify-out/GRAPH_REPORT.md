@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 268 nodes · 309 edges · 21 communities (16 shown, 5 thin omitted)
+- 274 nodes · 309 edges · 27 communities (16 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
-- Token cost: 1,037 input · 216 output
+- Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ae325fdc`
+- Built from commit: `c9f27416`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,6 +32,12 @@
 - Pre-commit Hook Script
 - Install Script
 - Sync Script
+- New Content
+- Montréal 2027 build and deploy
+- Auto-Update Graphify Map
+- Recipes README
+- montreal2027_tools.libraries.yml
+- development.services.yml
 
 ## God Nodes (most connected - your core abstractions)
 1. `require` - 64 edges
@@ -61,10 +67,12 @@
 - None detected.
 
 ## Hyperedges (group relationships)
+- **GitHub Workflows** — github_workflow_deploy, github_workflow_graphify [EXTRACTED 0.75]
+- **Drupal Core Dependencies** — web_modules_custom_montreal2027_tools_montreal2027_tools_libraries, web_sites_default_development_services [EXTRACTED 0.75]
 - **Montreal 2027 Tools Module Components** — web_modules_custom_montreal2027_tools_drush_services, web_modules_custom_montreal2027_tools_montreal2027_tools_info, web_modules_custom_montreal2027_tools_montreal2027_tools_routing, web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu, web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation, web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings, web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema [EXTRACTED 0.75]
 - **Montreal 2027 Theme Components** — web_themes_custom_montreal2027_montreal2027_info, web_themes_custom_montreal2027_montreal2027_libraries, web_themes_custom_montreal2027_config_schema_montreal2027_schema [EXTRACTED 0.75]
 
-## Communities (21 total, 5 thin omitted)
+## Communities (27 total, 11 thin omitted)
 
 ### Community 0 - "Drupal Module Management"
 Cohesion: 0.03
@@ -119,21 +127,21 @@ Cohesion: 0.67
 Nodes (3): Montreal 2027 Theme Schema, Montreal 2027 Theme Info, Montreal 2027 Theme Libraries
 
 ## Knowledge Gaps
-- **136 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+131 more)
+- **138 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+133 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `Drupal Module Management` to `Composer Package Metadata`?**
-  _High betweenness centrality (0.208) - this node is a cross-community bridge._
+  _High betweenness centrality (0.199) - this node is a cross-community bridge._
 - **Why does `extra` connect `Project Setup and Configuration` to `Installation Paths and Recipes`, `Composer Package Metadata`?**
-  _High betweenness centrality (0.166) - this node is a cross-community bridge._
+  _High betweenness centrality (0.159) - this node is a cross-community bridge._
 - **Why does `installer-paths` connect `Installation Paths and Recipes` to `Project Setup and Configuration`?**
-  _High betweenness centrality (0.081) - this node is a cross-community bridge._
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `type` to the rest of the system?**
-  _136 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _138 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Drupal Module Management` be split into smaller, more focused modules?**
   _Cohesion score 0.03125 - nodes in this community are weakly interconnected._
 - **Should `Project Setup and Configuration` be split into smaller, more focused modules?**

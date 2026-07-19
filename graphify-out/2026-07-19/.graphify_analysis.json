@@ -308,6 +308,24 @@
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
     "20": [
+      "github_issue_template_new-content"
+    ],
+    "21": [
+      "github_workflow_deploy"
+    ],
+    "22": [
+      "github_workflow_graphify"
+    ],
+    "23": [
+      "recipes_readme"
+    ],
+    "24": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries"
+    ],
+    "25": [
+      "web_sites_default_development_services"
+    ],
+    "26": [
       "web_sites_default_settings"
     ]
   },
@@ -332,7 +350,13 @@
     "17": 1.0,
     "18": 1.0,
     "19": 1.0,
-    "20": 1.0
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0
   },
   "gods": [
     {
@@ -444,7 +468,7 @@
     }
   ],
   "tokens": {
-    "input": 6746,
-    "output": 1980
+    "input": 3559,
+    "output": 959
   }
 }
