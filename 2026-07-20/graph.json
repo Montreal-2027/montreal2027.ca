@@ -4,23 +4,58 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "montreal2027_tools",
-        "label": "Montreal 2027 Tools Module Components",
+        "id": "docker_compose_services",
+        "label": "Docker Compose Services",
         "nodes": [
+          "docker-compose",
           "web_modules_custom_montreal2027_tools_drush_services",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-          "web_modules_custom_montreal2027_tools_config_install"
+          "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
+          "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+          "web_themes_custom_montreal2027_montreal2027_info",
+          "web_themes_custom_montreal2027_montreal2027_libraries",
+          "web_themes_custom_montreal2027_config_schema_montreal2027_schema"
         ],
-        "relation": "implement",
+        "relation": "participate_in",
         "confidence": "EXTRACTED",
         "confidence_score": 0.75,
-        "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
+        "source_file": "docker-compose.yml"
       }
     ]
   },
   "nodes": [
+    {
+      "label": "post-merge",
+      "file_type": "code",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "githooks_post_merge",
+      "community": 14,
+      "norm_label": "post-merge"
+    },
+    {
+      "label": "post-merge script",
+      "file_type": "code",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "githooks_post_merge__entry",
+      "community": 14,
+      "norm_label": "post-merge script"
+    },
     {
       "label": "pre-commit",
       "file_type": "code",
@@ -1560,7 +1595,7 @@
       },
       "_origin": "ast",
       "id": "docker_web_entrypoint",
-      "community": 14,
+      "community": 13,
       "norm_label": "entrypoint.sh"
     },
     {
@@ -1574,7 +1609,7 @@
       },
       "_origin": "ast",
       "id": "docker_web_entrypoint_sh__entry",
-      "community": 14,
+      "community": 13,
       "norm_label": "entrypoint.sh script"
     },
     {
@@ -1606,6 +1641,34 @@
       "norm_label": "install.sh script"
     },
     {
+      "label": "setup-graphify.sh",
+      "file_type": "code",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_setup_graphify",
+      "community": 17,
+      "norm_label": "setup-graphify.sh"
+    },
+    {
+      "label": "setup-graphify.sh script",
+      "file_type": "code",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_setup_graphify_sh__entry",
+      "community": 17,
+      "norm_label": "setup-graphify.sh script"
+    },
+    {
       "label": "sync.sh",
       "file_type": "code",
       "source_file": "scripts/sync.sh",
@@ -1616,7 +1679,7 @@
       },
       "_origin": "ast",
       "id": "scripts_sync",
-      "community": 17,
+      "community": 18,
       "norm_label": "sync.sh"
     },
     {
@@ -1630,7 +1693,7 @@
       },
       "_origin": "ast",
       "id": "scripts_sync_sh__entry",
-      "community": 17,
+      "community": 18,
       "norm_label": "sync.sh script"
     },
     {
@@ -1640,7 +1703,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_js_language_toggle",
-      "community": 18,
+      "community": 19,
       "norm_label": "language-toggle.js"
     },
     {
@@ -1650,7 +1713,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_js_language_toggle_attach",
-      "community": 18,
+      "community": 19,
       "norm_label": "attach()"
     },
     {
@@ -1660,7 +1723,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
-      "community": 19,
+      "community": 20,
       "norm_label": "staff-contact-modal.js"
     },
     {
@@ -1670,7 +1733,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach",
-      "community": 19,
+      "community": 20,
       "norm_label": "attach()"
     },
     {
@@ -1860,7 +1923,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "community": 9,
+      "community": 10,
       "norm_label": "staffpagecontroller.php"
     },
     {
@@ -1870,7 +1933,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "community": 9,
+      "community": 10,
       "norm_label": "staffpagecontroller"
     },
     {
@@ -1880,7 +1943,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "community": 9,
+      "community": 10,
       "norm_label": ".build()"
     },
     {
@@ -1890,7 +1953,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "community": 9,
+      "community": 10,
       "norm_label": ".buildchilddata()"
     },
     {
@@ -1900,7 +1963,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "community": 9,
+      "community": 10,
       "norm_label": ".gettermstorage()"
     },
     {
@@ -1910,7 +1973,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "community": 9,
+      "community": 10,
       "norm_label": ".gettranslatedterm()"
     },
     {
@@ -1920,7 +1983,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "community": 9,
+      "community": 10,
       "norm_label": ".buildcontactmodalmarkup()"
     },
     {
@@ -2140,7 +2203,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "web_sites_default_settings",
-      "community": 25,
+      "community": 21,
       "norm_label": "settings.php"
     },
     {
@@ -2560,7 +2623,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "drupal_taxonomy_terminterface",
-      "community": 9,
+      "community": 10,
       "norm_label": "drupal\\taxonomy\\terminterface"
     },
     {
@@ -2570,7 +2633,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "drupal_taxonomy_termstorageinterface",
-      "community": 9,
+      "community": 10,
       "norm_label": "drupal\\taxonomy\\termstorageinterface"
     },
     {
@@ -2633,7 +2696,7 @@
       "author": null,
       "contributor": null,
       "id": "docker-compose",
-      "community": 10,
+      "community": 9,
       "norm_label": "docker compose configuration"
     },
     {
@@ -2646,7 +2709,7 @@
       "author": null,
       "contributor": null,
       "id": "web_modules_custom_montreal2027_tools_drush_services",
-      "community": 10,
+      "community": 9,
       "norm_label": "drush services configuration"
     },
     {
@@ -2659,7 +2722,7 @@
       "author": null,
       "contributor": null,
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "community": 10,
+      "community": 9,
       "norm_label": "montreal 2027 tools info"
     },
     {
@@ -2672,7 +2735,7 @@
       "author": null,
       "contributor": null,
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "community": 10,
+      "community": 9,
       "norm_label": "montreal 2027 tools routing"
     },
     {
@@ -2685,24 +2748,11 @@
       "author": null,
       "contributor": null,
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "community": 10,
+      "community": 9,
       "norm_label": "montreal 2027 tools menu links"
     },
     {
-      "label": "Montreal 2027 Tools Configuration Schema",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_config_schema",
-      "community": 20,
-      "norm_label": "montreal 2027 tools configuration schema"
-    },
-    {
-      "label": "Montreal 2027 Tools Configuration Install",
+      "label": "Staff Contact Settings Configuration",
       "file_type": "code",
       "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
       "source_location": null,
@@ -2710,10 +2760,22 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "verification": "unverified",
-      "id": "web_modules_custom_montreal2027_tools_config_install",
-      "community": 10,
-      "norm_label": "montreal 2027 tools configuration install"
+      "id": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
+      "community": 9,
+      "norm_label": "staff contact settings configuration"
+    },
+    {
+      "label": "Montreal 2027 Tools Schema",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "community": 9,
+      "norm_label": "montreal 2027 tools schema"
     },
     {
       "label": "Montreal 2027 Tools Libraries",
@@ -2726,7 +2788,7 @@
       "contributor": null,
       "verification": "unverified",
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "community": 10,
+      "community": 9,
       "norm_label": "montreal 2027 tools libraries"
     },
     {
@@ -2739,7 +2801,7 @@
       "author": null,
       "contributor": null,
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
-      "community": 21,
+      "community": 9,
       "norm_label": "montreal 2027 tools config translation"
     },
     {
@@ -2752,7 +2814,7 @@
       "author": null,
       "contributor": null,
       "id": "web_themes_custom_montreal2027_montreal2027_info",
-      "community": 13,
+      "community": 9,
       "norm_label": "montreal 2027 theme info"
     },
     {
@@ -2765,11 +2827,11 @@
       "author": null,
       "contributor": null,
       "id": "web_themes_custom_montreal2027_montreal2027_libraries",
-      "community": 13,
+      "community": 9,
       "norm_label": "montreal 2027 theme libraries"
     },
     {
-      "label": "Montreal 2027 Theme Configuration Schema",
+      "label": "Montreal 2027 Theme Schema",
       "file_type": "code",
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
       "source_location": null,
@@ -2777,51 +2839,23 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "web_themes_custom_montreal2027_config_schema",
-      "community": 13,
-      "norm_label": "montreal 2027 theme configuration schema"
-    },
-    {
-      "label": "Staff Page Route",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff",
-      "community": 22,
-      "norm_label": "staff page route"
-    },
-    {
-      "label": "Staff Contact Submit Route",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff_contact_submit",
-      "community": 23,
-      "norm_label": "staff contact submit route"
-    },
-    {
-      "label": "Staff Page Settings Route",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_staff_page_settings",
-      "community": 24,
-      "norm_label": "staff page settings route"
+      "id": "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
+      "community": 9,
+      "norm_label": "montreal 2027 theme schema"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "githooks_post_merge",
+      "target": "githooks_post_merge__entry",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -4548,6 +4582,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "scripts_setup_graphify",
+      "target": "scripts_setup_graphify_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "scripts/sync.sh",
       "source_location": "L1",
       "weight": 1.0,
@@ -6222,95 +6267,132 @@
       "source_location": null,
       "weight": 1.0,
       "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
       "target": "web_modules_custom_montreal2027_tools_drush_services"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml",
+      "source_file": "docker-compose.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_drush_services",
+      "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
       "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+      "source_file": "docker-compose.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "source": "docker-compose",
       "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+      "source_file": "docker-compose.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "target": "web_modules_custom_montreal2027_tools_config_install"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+      "source": "docker-compose",
       "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
+      "source_file": "docker-compose.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_info",
-      "target": "web_themes_custom_montreal2027_config_schema"
+      "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
+      "source_file": "docker-compose.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_info",
+      "source": "docker-compose",
+      "target": "web_themes_custom_montreal2027_config_schema_montreal2027_schema"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
+      "target": "web_themes_custom_montreal2027_montreal2027_info"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
       "target": "web_themes_custom_montreal2027_montreal2027_libraries"
     }
   ],
   "hyperedges": [
     {
-      "id": "montreal2027_tools",
-      "label": "Montreal 2027 Tools Module Components",
+      "id": "docker_compose_services",
+      "label": "Docker Compose Services",
       "nodes": [
+        "docker-compose",
         "web_modules_custom_montreal2027_tools_drush_services",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-        "web_modules_custom_montreal2027_tools_config_install"
+        "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
+        "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+        "web_themes_custom_montreal2027_montreal2027_info",
+        "web_themes_custom_montreal2027_montreal2027_libraries",
+        "web_themes_custom_montreal2027_config_schema_montreal2027_schema"
       ],
-      "relation": "implement",
+      "relation": "participate_in",
       "confidence": "EXTRACTED",
       "confidence_score": 0.75,
-      "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
+      "source_file": "docker-compose.yml"
     }
   ],
-  "built_at_commit": "a81fe924778aaa4480ede4676ef65c423f788458"
+  "built_at_commit": "65e1f0083922c72347d31a665a0862efb218ea86"
 }
