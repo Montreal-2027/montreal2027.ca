@@ -44,7 +44,7 @@ git checkout [BRANCH]
 ./scripts/install.sh
 ```
 
-The setup script will prompt you to automatically start the Docker containers and synchronize the database and assets from the production environment.
+The setup script will prompt you to automatically start the Docker containers and synchronize the database and configuration from the production environment after configuring the graphify git worktree.
 
 *(Note: If you run this script immediately after cloning, it will use the default Docker environment variables because an `.env` file does not yet exist. In most Docker development scenarios, these defaults are perfectly fine. If you need to customize your environment before starting, please see the **Environment configuration** section below on using `.env.example`.)*
 
