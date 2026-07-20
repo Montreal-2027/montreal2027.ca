@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# --- GRAPHIFY-CONTEXT-START ---
+if [ -d "$(git rev-parse --show-toplevel)/graphify-out" ]; then
+    printf "Syncing AI Architecture Map...\n"
+    git -C "$(git rev-parse --show-toplevel)/graphify-out" pull origin graph-data --quiet 2>/dev/null
+fi
+# --- GRAPHIFY-CONTEXT-END ---
