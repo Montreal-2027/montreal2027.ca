@@ -68,4 +68,7 @@ if [ "$current_hooks_path" != ".githooks" ]; then
     git config core.hooksPath .githooks
 fi
 
+# Enable the merge driver for merge.ours
+git config merge.ours.driver true
+
 printf "✔ Environment is synchronized via %s.\n" "$SCRIPT_NAME"
