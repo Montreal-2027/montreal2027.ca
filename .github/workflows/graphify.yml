@@ -19,7 +19,8 @@ jobs:
         with:
           # CRITICAL ADDITION: Persists the GitHub token credentials so the 
           # git-auto-commit-action step below can successfully push the map files back.
-          persist-credentials: true 
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -82,8 +83,19 @@ jobs:
             echo "Created a brand new copilot-instructions.md"
           fi
 
-      - name: Commit and Push Updated Files
+# PART A: Commit only the instruction file to your feature/develop branch
+      - name: Commit AI Instructions
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore(ai): auto-update graphify map and copilot context [skip ci]"
-          file_pattern: 'graphify-out/* .github/copilot-instructions.md'
+          commit_message: "chore(ai): update copilot context [skip ci]"
+          file_pattern: '.github/copilot-instructions.md'
+
+      # PART B: Push the heavy graph data to the separate 'graph-data' branch
+      - name: Push Graph to Shadow Branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: graph-data
+          FOLDER: graphify-out
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "chore: graph update for ${{ github.sha }} [skip ci]"

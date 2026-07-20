@@ -1,9 +1,11 @@
 favicon:
-  use_default: true
+  mimetype: image/png
+  path: assets/favicon-96x96.png
+  use_default: false
 features:
   comment_user_picture: false
   comment_user_verification: false
-  favicon: false
+  favicon: true
   node_user_picture: false
 logo:
   path: 'public://Montreal2027-Logo_CMYK_Date-Full.svg'

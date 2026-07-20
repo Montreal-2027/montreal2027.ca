@@ -53,6 +53,8 @@ RUN chmod +x /entrypoint.sh
 
 WORKDIR /var/www/html
 
+RUN git config --global --add safe.directory '*'
+
 EXPOSE ${WEB_INTERNAL_PORT}
 
 ENTRYPOINT ["/entrypoint.sh"]
