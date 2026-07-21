@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 278 nodes · 321 edges · 27 communities (16 shown, 11 thin omitted)
+- 277 nodes · 322 edges · 27 communities (16 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7aa4515f`
+- Built from commit: `2db08b88`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -27,7 +27,6 @@
 - Montreal 2027 Tools Info
 - Contact Import Commands
 - Montreal 2027 Tools Module
-- Development Services YAML
 - entrypoint.sh
 - post-merge
 - pre-commit
@@ -54,20 +53,21 @@
 ## Surprising Connections (you probably didn't know these)
 - `Docker Compose Configuration` --references--> `Drush Services Configuration`  [EXTRACTED]
   docker-compose.yml → web/modules/custom/montreal2027_tools/drush.services.yml
-- `Deploy Workflow` --references--> `Development Services YAML`  [EXTRACTED]
-  .github/workflows/deploy.yml → web/sites/default/development.services.yml
 - `Drush Services Configuration` --references--> `Montreal 2027 Tools Info`  [EXTRACTED]
   web/modules/custom/montreal2027_tools/drush.services.yml → web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml
 - `Montreal 2027 Tools Info` --references--> `Montreal 2027 Tools Config Translation`  [EXTRACTED]
   web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml → web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml
 - `Montreal 2027 Tools Libraries` --references--> `Montreal 2027 Tools Config Translation`  [EXTRACTED]
   web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml → web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml
+- `Montreal 2027 Tools Schema` --references--> `Montreal 2027 Tools Info`  [EXTRACTED]
+  web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml → web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
 - **Deploy Workflow Steps** — .github_workflows_deploy_yml [EXTRACTED 0.75]
+- **Graphify Workflow Steps** — .github_workflows_graphify_yml [EXTRACTED 0.75]
 - **Montreal 2027 Tools Module Components** — web_modules_custom_montreal2027_tools_drush_services, web_modules_custom_montreal2027_tools_montreal2027_tools_info, web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu, web_modules_custom_montreal2027_tools_montreal2027_tools_routing, web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings, web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema, web_modules_custom_montreal2027_tools_montreal2027_tools_libraries, web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation [EXTRACTED 0.75]
 
 ## Communities (27 total, 11 thin omitted)
@@ -120,12 +120,8 @@ Nodes (9): Docker Compose Configuration, Staff Contact Settings Configuration, M
 Cohesion: 0.47
 Nodes (3): FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027_tools_form_taxonomy_term_form_alter()
 
-### Community 13 - "Development Services YAML"
-Cohesion: 0.67
-Nodes (4): New Content Issue Template, Deploy Workflow, Graphify Workflow, Development Services YAML
-
 ## Knowledge Gaps
-- **136 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+131 more)
+- **134 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+129 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -133,13 +129,13 @@ Nodes (4): New Content Issue Template, Deploy Workflow, Graphify Workflow, Devel
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `Drupal Admin Tools` to `Composer Configuration`?**
-  _High betweenness centrality (0.193) - this node is a cross-community bridge._
+  _High betweenness centrality (0.194) - this node is a cross-community bridge._
 - **Why does `extra` connect `Project Setup Configuration` to `Installation Paths`, `Composer Configuration`?**
-  _High betweenness centrality (0.154) - this node is a cross-community bridge._
+  _High betweenness centrality (0.155) - this node is a cross-community bridge._
 - **Why does `installer-paths` connect `Installation Paths` to `Project Setup Configuration`?**
-  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+  _High betweenness centrality (0.076) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `type` to the rest of the system?**
-  _136 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _134 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Drupal Admin Tools` be split into smaller, more focused modules?**
   _Cohesion score 0.03125 - nodes in this community are weakly interconnected._
 - **Should `Project Setup Configuration` be split into smaller, more focused modules?**

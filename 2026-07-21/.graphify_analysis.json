@@ -280,7 +280,6 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "13": [
-      ".github_issue_template_new_content_md",
       ".github_workflows_deploy_yml",
       ".github_workflows_graphify_yml",
       "web_sites_default_development_services_yml"
@@ -347,7 +346,7 @@
     "10": 0.4444444444444444,
     "11": 0.42857142857142855,
     "12": 0.4666666666666667,
-    "13": 0.6666666666666666,
+    "13": 1.3333333333333333,
     "14": 1.0,
     "15": 1.0,
     "16": 1.0,
@@ -427,17 +426,6 @@
       "why": "connects across different repos/directories"
     },
     {
-      "source": "Deploy Workflow",
-      "target": "Development Services YAML",
-      "source_files": [
-        ".github/workflows/deploy.yml",
-        "web/sites/default/development.services.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
       "source": "Drush Services Configuration",
       "target": "Montreal 2027 Tools Info",
       "source_files": [
@@ -469,10 +457,21 @@
       "confidence": "EXTRACTED",
       "relation": "references",
       "why": "peripheral node `Montreal 2027 Tools Config Translation` unexpectedly reaches hub `Montreal 2027 Tools Libraries`"
+    },
+    {
+      "source": "Montreal 2027 Tools Schema",
+      "target": "Montreal 2027 Tools Info",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "cross-file semantic connection"
     }
   ],
   "tokens": {
     "input": 3478,
-    "output": 607
+    "output": 653
   }
 }

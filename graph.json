@@ -15,6 +15,17 @@
         "source_file": ".github/workflows/deploy.yml"
       },
       {
+        "id": "graphify_workflow",
+        "label": "Graphify Workflow Steps",
+        "nodes": [
+          ".github_workflows_graphify_yml"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.75,
+        "source_file": ".github/workflows/graphify.yml"
+      },
+      {
         "id": "montreal2027_tools",
         "label": "Montreal 2027 Tools Module Components",
         "nodes": [
@@ -3138,7 +3149,7 @@
       "community_name": "Recipes README"
     },
     {
-      "label": "Development Services YAML",
+      "label": "development.services.yml",
       "file_type": "code",
       "source_file": "web/sites/default/development.services.yml",
       "source_location": null,
@@ -3147,12 +3158,12 @@
       "author": null,
       "contributor": null,
       "community": 13,
-      "norm_label": "development services yaml",
+      "norm_label": "development.services.yml",
       "id": "web_sites_default_development_services_yml",
-      "community_name": "Development Services YAML"
+      "community_name": "graphify.yml"
     },
     {
-      "label": "Deploy Workflow",
+      "label": "deploy.yml",
       "file_type": "code",
       "source_file": ".github/workflows/deploy.yml",
       "source_location": null,
@@ -3161,12 +3172,12 @@
       "author": null,
       "contributor": null,
       "community": 13,
-      "norm_label": "deploy workflow",
+      "norm_label": "deploy.yml",
       "id": ".github_workflows_deploy_yml",
-      "community_name": "Development Services YAML"
+      "community_name": "graphify.yml"
     },
     {
-      "label": "Graphify Workflow",
+      "label": "graphify.yml",
       "file_type": "code",
       "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
@@ -3175,23 +3186,9 @@
       "author": null,
       "contributor": null,
       "community": 13,
-      "norm_label": "graphify workflow",
+      "norm_label": "graphify.yml",
       "id": ".github_workflows_graphify_yml",
-      "community_name": "Development Services YAML"
-    },
-    {
-      "label": "New Content Issue Template",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/new-content.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "new content issue template",
-      "id": ".github_issue_template_new_content_md",
-      "community_name": "Development Services YAML"
+      "community_name": "graphify.yml"
     }
   ],
   "links": [
@@ -6773,6 +6770,16 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "recipes/README.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "recipes_readme",
+      "target": "recipes_readme"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": ".github/workflows/deploy.yml",
       "source_location": null,
       "weight": 1.0,
@@ -6807,7 +6814,7 @@
       "source_location": null,
       "weight": 1.0,
       "source": ".github_workflows_graphify_yml",
-      "target": ".github_issue_template_new_content_md"
+      "target": ".github_workflows_graphify_yml"
     }
   ],
   "hyperedges": [
@@ -6821,6 +6828,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 0.75,
       "source_file": ".github/workflows/deploy.yml"
+    },
+    {
+      "id": "graphify_workflow",
+      "label": "Graphify Workflow Steps",
+      "nodes": [
+        ".github_workflows_graphify_yml"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.75,
+      "source_file": ".github/workflows/graphify.yml"
     },
     {
       "id": "montreal2027_tools",
@@ -6841,5 +6859,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "7aa4515f5a887fbece874f951252df5cfd153ba9"
+  "built_at_commit": "2db08b8866d9f7cb069aaecaac2e53777609db58"
 }
