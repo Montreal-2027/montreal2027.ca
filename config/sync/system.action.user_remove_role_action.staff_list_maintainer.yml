@@ -1,0 +1,14 @@
+uuid: 63d3deec-af73-460c-a6ed-7df9cdbc51ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.staff_list_maintainer
+  module:
+    - user
+id: user_remove_role_action.staff_list_maintainer
+label: 'Remove the Staff List Maintainer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: staff_list_maintainer

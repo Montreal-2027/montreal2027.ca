@@ -1,0 +1,14 @@
+uuid: 74c412ac-2ce0-4756-a641-e4759014e103
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.staff_list_maintainer
+  module:
+    - user
+id: user_add_role_action.staff_list_maintainer
+label: 'Add the Staff List Maintainer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: staff_list_maintainer

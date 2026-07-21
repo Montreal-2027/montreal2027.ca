@@ -18,7 +18,7 @@ dependencies:
     - menu_link_content
 id: translator
 label: Translator
-weight: 0
+weight: -1
 is_admin: false
 permissions:
   - 'create content translations'
