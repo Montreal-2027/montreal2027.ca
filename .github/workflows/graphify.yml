@@ -1,5 +1,8 @@
 name: Auto-Update Graphify Map
 on:
+  pull_request:
+    types: [closed]
+    branches: ['develop']
   push:
     branches:
       - 'develop'
