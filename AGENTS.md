@@ -1274,3 +1274,7 @@ See [README.md](README.md) for complete list of common pitfalls and solutions.
 - **Config:** [config/sync/](config/sync/) (all site configuration)
 - **Git Hooks:** [.githooks/pre-commit](.githooks/pre-commit), [.githooks/post-merge](.githooks/post-merge)
 - **Graphify:** [scripts/setup-graphify.sh](scripts/setup-graphify.sh), [graphify-out/](graphify-out/)
+
+# Graphify Context
+Always reference graphify-out/GRAPH_REPORT.md to understand code architecture context before answering queries.
+
