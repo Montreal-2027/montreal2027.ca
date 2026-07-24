@@ -1,0 +1,42 @@
+uuid: bb2dab7e-75d8-4ef1-a35f-25619255a95d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - taxonomy.vocabulary.divisions
+  module:
+    - filter
+    - help
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces
+    - workspaces_access
+id: staff_list_maintainer
+label: 'Staff List Maintainer'
+weight: -6
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access help pages'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer taxonomy'
+  - 'create terms in divisions'
+  - 'delete term revisions in divisions'
+  - 'delete terms in divisions'
+  - 'edit terms in divisions'
+  - 'revert term revisions in divisions'
+  - 'use text format full_html'
+  - 'use workspace transition back_to_draft'
+  - 'use workspace transition reviewed'
+  - 'use workspace transition submit_for_review'
+  - 'view any workspace'
+  - 'view term revisions in divisions'
+  - 'view the administration theme'
+  - 'view vocabulary labels'
+  - workspace_live_add_content
+  - workspace_live_edit_content
+  - workspace_live_remove_content
+  - workspace_live_view_content
