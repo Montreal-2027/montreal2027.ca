@@ -107,6 +107,7 @@
       "drupal_core_mail_mailmanagerinterface",
       "drupal_core_plugin_containerfactoryplugininterface",
       "drupal_core_routing_routematchinterface",
+      "drupal_core_url",
       "symfony_component_dependencyinjection_containerinterface",
       "symfony_component_httpfoundation_jsonresponse",
       "symfony_component_httpfoundation_request",
@@ -240,7 +241,19 @@
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
     "9": [
-      "drupal_core_url",
+      "docker-compose",
+      "web_modules_custom_montreal2027_tools_config_install",
+      "web_modules_custom_montreal2027_tools_drush_services",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+      "web_themes_custom_montreal2027_config_schema",
+      "web_themes_custom_montreal2027_montreal2027_info",
+      "web_themes_custom_montreal2027_montreal2027_libraries"
+    ],
+    "10": [
       "drupal_taxonomy_terminterface",
       "drupal_taxonomy_termstorageinterface",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
@@ -250,17 +263,6 @@
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
-    ],
-    "10": [
-      "docker-compose",
-      "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "web_modules_custom_montreal2027_tools_drush_services",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
     ],
     "11": [
       "drush_commands_drushcommands",
@@ -280,9 +282,10 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "13": [
-      ".github_workflows_deploy_yml",
-      ".github_workflows_graphify_yml",
-      "web_sites_default_development_services_yml"
+      "github_issue_template_new-content",
+      "github_workflows_graphify",
+      "recipes_readme",
+      "web_sites_default_development_services"
     ],
     "14": [
       "docker_web_entrypoint",
@@ -317,36 +320,27 @@
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
     "22": [
-      "recipes_readme"
+      "web_modules_custom_montreal2027_tools_config_schema"
     ],
     "23": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_schema"
-    ],
-    "24": [
       "web_sites_default_settings"
-    ],
-    "25": [
-      "web_themes_custom_montreal2027_montreal2027_info"
-    ],
-    "26": [
-      "web_themes_custom_montreal2027_montreal2027_libraries"
     ]
   },
   "cohesion": {
     "0": 0.03125,
     "1": 0.06666666666666667,
-    "2": 0.14461538461538462,
+    "2": 0.1396011396011396,
     "3": 0.09523809523809523,
     "4": 0.11764705882352941,
     "5": 0.11764705882352941,
     "6": 0.125,
     "7": 0.21978021978021978,
     "8": 0.2087912087912088,
-    "9": 0.37777777777777777,
+    "9": 0.18181818181818182,
     "10": 0.4444444444444444,
     "11": 0.42857142857142855,
     "12": 0.4666666666666667,
-    "13": 1.3333333333333333,
+    "13": 0.5,
     "14": 1.0,
     "15": 1.0,
     "16": 1.0,
@@ -356,10 +350,7 @@
     "20": 1.0,
     "21": 1.0,
     "22": 1.0,
-    "23": 1.0,
-    "24": 1.0,
-    "25": 1.0,
-    "26": 1.0
+    "23": 1.0
   },
   "gods": [
     {
@@ -398,6 +389,11 @@
       "degree": 7
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "label": "Montreal 2027 Tools Info",
+      "degree": 7
+    },
+    {
       "id": "composer_extra",
       "label": "extra",
       "degree": 6
@@ -405,11 +401,6 @@
     {
       "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
       "label": "ContactImportCommands",
-      "degree": 6
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
-      "label": "StaffPageSettingsForm",
       "degree": 6
     }
   ],
@@ -438,6 +429,17 @@
     },
     {
       "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Configuration Install",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Montreal 2027 Tools Configuration Install` unexpectedly reaches hub `Montreal 2027 Tools Info`"
+    },
+    {
+      "source": "Montreal 2027 Tools Info",
       "target": "Montreal 2027 Tools Config Translation",
       "source_files": [
         "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
@@ -448,26 +450,15 @@
       "why": "peripheral node `Montreal 2027 Tools Config Translation` unexpectedly reaches hub `Montreal 2027 Tools Info`"
     },
     {
-      "source": "Montreal 2027 Tools Libraries",
-      "target": "Montreal 2027 Tools Config Translation",
+      "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Libraries",
       "source_files": [
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml"
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "peripheral node `Montreal 2027 Tools Config Translation` unexpectedly reaches hub `Montreal 2027 Tools Libraries`"
-    },
-    {
-      "source": "Montreal 2027 Tools Schema",
-      "target": "Montreal 2027 Tools Info",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "cross-file semantic connection"
+      "why": "peripheral node `Montreal 2027 Tools Libraries` unexpectedly reaches hub `Montreal 2027 Tools Info`"
     }
   ],
   "questions": [
@@ -478,18 +469,18 @@
     },
     {
       "type": "bridge_node",
-      "question": "Why does `extra` connect `Project Setup Configuration` to `Installation Paths`, `Composer Configuration`?",
+      "question": "Why does `extra` connect `Project Setup Utilities` to `Installation Paths`, `Composer Configuration`?",
       "why": "High betweenness centrality (0.155) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `installer-paths` connect `Installation Paths` to `Project Setup Configuration`?",
+      "question": "Why does `installer-paths` connect `Installation Paths` to `Project Setup Utilities`?",
       "why": "High betweenness centrality (0.076) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `name`, `description`, `type` to the rest of the system?",
-      "why": "134 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "140 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
@@ -498,13 +489,13 @@
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Project Setup Configuration` be split into smaller, more focused modules?",
+      "question": "Should `Project Setup Utilities` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `LanguageToggleBlock` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.14461538461538462 - nodes in this community are weakly interconnected."
+      "question": "Should `Drupal Core Components` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1396011396011396 - nodes in this community are weakly interconnected."
     }
   ]
 }
