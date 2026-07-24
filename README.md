@@ -52,6 +52,34 @@ The setup script will prompt you to automatically start the Docker containers an
 
 After running `composer install`, git will be configured to use the scripts in the `.githooks/` directory.  Currently, there is a pre-commit hook that checks that the running Drupal config matches the config on disk.  If it does not, the commit is aborted.  In the rare case that you need to bypass this check, add the `--no-verify` option to your `git commit` command. If you are using VS Code, you can enable the `Allow No Verify Commit` option. To use the `No Verify` for a commit, click on the `...` next to either the repository or `Changes` right below `Repositories`. Expand the `Commit` menu, and select one of the `(No Verify)` options. There will be a pop-up warning that you are about to bypass the pre-commit hook and asks you to confirm the action.
 
+## Git Hooks
+
+Git hooks are configured automatically via Composer scripts and manual setup. The hooks are stored in the `.githooks/` directory and are configured using `git config core.hooksPath .githooks`.
+
+### Configuration
+- Automatically configured via Composer post-install and post-update scripts
+- Manual setup: `git config core.hooksPath .githooks`
+
+### Pre-Commit Validation
+Automatic check to ensure Drupal config is exported before commits:
+- **Script:** [.githooks/pre-commit](.githooks/pre-commit)
+- **Functionality:** Checks that Drupal configuration is in sync before allowing commits
+- **Environment Detection:** Automatically detects Docker or local Drush environments
+- **Bypass (emergency only):** `git commit --no-verify`
+
+The hook blocks commits if config changes haven't been exported via `drush cex`.
+
+### Post-Merge Hook
+Automatic synchronization of AI architecture map:
+- **Script:** [.githooks/post-merge](.githooks/post-merge)
+- **Functionality:** Syncs the graphify worktree after git merge operations
+- **Graphify Integration:** Automatically pulls updates from the `graph-data` branch
+
+### Merge Driver Configuration
+- The `merge.ours` driver is enabled via `git config merge.ours.driver true`
+- This driver can be used in `.gitattributes` to always prefer local changes during merges
+- Manual setup: `git config merge.ours.driver true`
+
 ## Getting Started with Docker
 
 #### Prerequisites
@@ -599,6 +627,17 @@ Synchronizes files and database from the production server to your local develop
 - SSH access to production server
 - SSH key configured for authentication
 - `rsync` installed locally
+
+## Common Pitfalls and Solutions
+
+- **Don't edit compiled CSS:** Always edit `src/scss/*.scss`, not `css/*.css`
+- **Config sync required:** After entity/field changes, run `drush cex` before committing (pre-commit hook enforces this)
+- **File permissions:** If permission errors occur, run `chmod -R u+w web/sites/default`
+- **Environment detection:** Pre-commit hook auto-detects Docker vs local - ensure containers are running if using Docker
+- **Git hooks not working:** If githooks aren't functioning, run `git config core.hooksPath .githooks` manually
+- **Graphify worktree issues:** If graphify isn't updating, ensure the worktree is properly set up via `scripts/setup-graphify.sh`
+- **Port conflicts (Docker):** Default is `8080:80` - change `WEB_EXTERNAL_PORT` in `.env` if needed
+- **Node modules in deployment:** Deployment workflow removes `node_modules` after CSS build to reduce footprint
 
 ## Custom Modules
 
