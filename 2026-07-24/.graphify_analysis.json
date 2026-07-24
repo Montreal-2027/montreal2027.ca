@@ -285,7 +285,7 @@
       "github_issue_template_new-content",
       "github_workflows_graphify",
       "recipes_readme",
-      "web_sites_default_development_services_yml"
+      "web_sites_default_development_services"
     ],
     "14": [
       "docker_web_entrypoint",
@@ -340,7 +340,7 @@
     "10": 0.4444444444444444,
     "11": 0.42857142857142855,
     "12": 0.4666666666666667,
-    "13": 0.6666666666666666,
+    "13": 0.5,
     "14": 1.0,
     "15": 1.0,
     "16": 1.0,
@@ -463,6 +463,6 @@
   ],
   "tokens": {
     "input": 2427,
-    "output": 461
+    "output": 402
   }
 }

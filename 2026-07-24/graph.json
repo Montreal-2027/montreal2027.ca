@@ -3152,7 +3152,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "web_sites_default_development_services_yml",
+      "id": "web_sites_default_development_services",
       "community": 13,
       "norm_label": "development services configuration"
     }
@@ -6699,18 +6699,8 @@
       "source_file": "web/sites/default/development.services",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_sites_default_development_services_yml",
+      "source": "web_sites_default_development_services",
       "target": "github_workflows_graphify"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "recipes/README",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "recipes_readme",
-      "target": "web_sites_default_development_services_yml"
     }
   ],
   "hyperedges": [
@@ -6732,5 +6722,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "c807ee475c6a532072b7a2e5740a25fd9f40bbc8"
+  "built_at_commit": "9844f4b200a5ce441bd72fc3991cba7aff4bca18"
 }
