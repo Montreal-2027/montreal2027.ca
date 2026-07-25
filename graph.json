@@ -5,24 +5,68 @@
     "hyperedges": [
       {
         "id": "montreal2027_tools",
-        "label": "Montreal 2027 Tools Module Components",
+        "label": "Montreal 2027 Tools Module",
         "nodes": [
-          "web_modules_custom_montreal2027_tools_drush_services",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-          "web_modules_custom_montreal2027_tools_config_install"
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+          "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+          "montreal2027_tools_contact_settings",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+          "web_modules_custom_montreal2027_tools_drush_services"
         ],
-        "relation": "participate_in",
+        "relation": "implement",
         "confidence": "EXTRACTED",
         "confidence_score": 0.75,
-        "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
+        "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
+      },
+      {
+        "id": "montreal2027_theme",
+        "label": "Montreal 2027 Theme",
+        "nodes": [
+          "montreal2027_theme_info",
+          "montreal2027_theme_libraries",
+          "montreal2027_theme_schema"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.75,
+        "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml"
       }
     ]
   },
   "nodes": [
+    {
+      "label": "post-merge",
+      "file_type": "code",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "post-merge",
+      "id": "githooks_post_merge",
+      "community_name": "Post-Merge Script"
+    },
+    {
+      "label": "post-merge script",
+      "file_type": "code",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "post-merge script",
+      "id": "githooks_post_merge__entry",
+      "community_name": "Post-Merge Script"
+    },
     {
       "label": "pre-commit",
       "file_type": "code",
@@ -33,10 +77,10 @@
         "kind": "file"
       },
       "_origin": "ast",
-      "community": 16,
+      "community": 15,
       "norm_label": "pre-commit",
-      "community_name": "pre-commit",
-      "id": "githooks_pre_commit"
+      "id": "githooks_pre_commit",
+      "community_name": "Pre-Commit Script"
     },
     {
       "label": "pre-commit script",
@@ -48,10 +92,10 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "community": 16,
+      "community": 15,
       "norm_label": "pre-commit script",
-      "community_name": "pre-commit",
-      "id": "githooks_pre_commit__entry"
+      "id": "githooks_pre_commit__entry",
+      "community_name": "Pre-Commit Script"
     },
     {
       "label": "composer.json",
@@ -61,8 +105,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "composer.json",
-      "community_name": "Composer Configuration",
-      "id": "composer"
+      "id": "composer",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "name",
@@ -72,8 +116,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "name",
-      "community_name": "Composer Configuration",
-      "id": "composer_name"
+      "id": "composer_name",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "description",
@@ -83,8 +127,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "description",
-      "community_name": "Composer Configuration",
-      "id": "composer_description"
+      "id": "composer_description",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "type",
@@ -94,8 +138,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "type",
-      "community_name": "Composer Configuration",
-      "id": "composer_type"
+      "id": "composer_type",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "license",
@@ -105,8 +149,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "license",
-      "community_name": "Composer Configuration",
-      "id": "composer_license"
+      "id": "composer_license",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "homepage",
@@ -116,8 +160,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "homepage",
-      "community_name": "Composer Configuration",
-      "id": "composer_homepage"
+      "id": "composer_homepage",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "support",
@@ -127,8 +171,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "support",
-      "community_name": "Composer Configuration",
-      "id": "composer_support"
+      "id": "composer_support",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "docs",
@@ -138,8 +182,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "docs",
-      "community_name": "Composer Configuration",
-      "id": "composer_support_docs"
+      "id": "composer_support_docs",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "chat",
@@ -149,8 +193,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "chat",
-      "community_name": "Composer Configuration",
-      "id": "composer_support_chat"
+      "id": "composer_support_chat",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "repositories",
@@ -160,8 +204,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "repositories",
-      "community_name": "Composer Configuration",
-      "id": "composer_repositories"
+      "id": "composer_repositories",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "require",
@@ -171,8 +215,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "require",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require"
+      "id": "composer_require",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "composer/installers",
@@ -182,8 +226,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "composer/installers",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_composer_installers"
+      "id": "composer_require_composer_installers",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "cweagans/composer-patches",
@@ -193,8 +237,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "cweagans/composer-patches",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_cweagans_composer_patches"
+      "id": "composer_require_cweagans_composer_patches",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/admin_theme",
@@ -204,8 +248,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/admin_theme",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_admin_theme"
+      "id": "composer_require_drupal_admin_theme",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/admin_toolbar",
@@ -215,8 +259,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/admin_toolbar",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_admin_toolbar"
+      "id": "composer_require_drupal_admin_toolbar",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/block_field",
@@ -226,8 +270,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/block_field",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_block_field"
+      "id": "composer_require_drupal_block_field",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/chosen",
@@ -237,8 +281,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/chosen",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_chosen"
+      "id": "composer_require_drupal_chosen",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ckeditor5_open_new_tab",
@@ -248,8 +292,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ckeditor5_open_new_tab",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ckeditor5_open_new_tab"
+      "id": "composer_require_drupal_ckeditor5_open_new_tab",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ckeditor5_paste_filter",
@@ -259,8 +303,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ckeditor5_paste_filter",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ckeditor5_paste_filter"
+      "id": "composer_require_drupal_ckeditor5_paste_filter",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ckeditor_media_resize",
@@ -270,8 +314,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ckeditor_media_resize",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ckeditor_media_resize"
+      "id": "composer_require_drupal_ckeditor_media_resize",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/conditional_fields",
@@ -281,8 +325,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/conditional_fields",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_conditional_fields"
+      "id": "composer_require_drupal_conditional_fields",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/config_ignore",
@@ -292,8 +336,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/config_ignore",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_config_ignore"
+      "id": "composer_require_drupal_config_ignore",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/core-composer-scaffold",
@@ -303,8 +347,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/core-composer-scaffold",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_core_composer_scaffold"
+      "id": "composer_require_drupal_core_composer_scaffold",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/core-dev",
@@ -314,8 +358,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/core-dev",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_core_dev"
+      "id": "composer_require_drupal_core_dev",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/core-project-message",
@@ -325,8 +369,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/core-project-message",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_core_project_message"
+      "id": "composer_require_drupal_core_project_message",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/core-recipe-unpack",
@@ -336,8 +380,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/core-recipe-unpack",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_core_recipe_unpack"
+      "id": "composer_require_drupal_core_recipe_unpack",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/core-recommended",
@@ -347,8 +391,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/core-recommended",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_core_recommended"
+      "id": "composer_require_drupal_core_recommended",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/crop",
@@ -358,8 +402,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/crop",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_crop"
+      "id": "composer_require_drupal_crop",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/draggableviews",
@@ -369,8 +413,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/draggableviews",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_draggableviews"
+      "id": "composer_require_drupal_draggableviews",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/easy_breadcrumb",
@@ -380,8 +424,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/easy_breadcrumb",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_easy_breadcrumb"
+      "id": "composer_require_drupal_easy_breadcrumb",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ebt_basic_button",
@@ -391,8 +435,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ebt_basic_button",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ebt_basic_button"
+      "id": "composer_require_drupal_ebt_basic_button",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ebt_core",
@@ -402,8 +446,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ebt_core",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ebt_core"
+      "id": "composer_require_drupal_ebt_core",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ebt_hero",
@@ -413,8 +457,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ebt_hero",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ebt_hero"
+      "id": "composer_require_drupal_ebt_hero",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ebt_text",
@@ -424,8 +468,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ebt_text",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ebt_text"
+      "id": "composer_require_drupal_ebt_text",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ebt_tiles",
@@ -435,8 +479,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ebt_tiles",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ebt_tiles"
+      "id": "composer_require_drupal_ebt_tiles",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/entity_embed",
@@ -446,8 +490,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/entity_embed",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_entity_embed"
+      "id": "composer_require_drupal_entity_embed",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/entity_workflow",
@@ -457,8 +501,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/entity_workflow",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_entity_workflow"
+      "id": "composer_require_drupal_entity_workflow",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ept_basic_button",
@@ -468,8 +512,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ept_basic_button",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ept_basic_button"
+      "id": "composer_require_drupal_ept_basic_button",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ept_hero",
@@ -479,8 +523,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ept_hero",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ept_hero"
+      "id": "composer_require_drupal_ept_hero",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ept_text",
@@ -490,8 +534,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ept_text",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ept_text"
+      "id": "composer_require_drupal_ept_text",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/ept_tiles",
@@ -501,8 +545,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/ept_tiles",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_ept_tiles"
+      "id": "composer_require_drupal_ept_tiles",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/facets",
@@ -512,8 +556,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/facets",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_facets"
+      "id": "composer_require_drupal_facets",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/field_group",
@@ -523,8 +567,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/field_group",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_field_group"
+      "id": "composer_require_drupal_field_group",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/first_paragraph",
@@ -534,8 +578,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/first_paragraph",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_first_paragraph"
+      "id": "composer_require_drupal_first_paragraph",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/focal_point",
@@ -545,8 +589,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/focal_point",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_focal_point"
+      "id": "composer_require_drupal_focal_point",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/gin",
@@ -556,8 +600,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/gin",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_gin"
+      "id": "composer_require_drupal_gin",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/image_effects",
@@ -567,8 +611,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/image_effects",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_image_effects"
+      "id": "composer_require_drupal_image_effects",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/image_field_caption",
@@ -578,8 +622,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/image_field_caption",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_image_field_caption"
+      "id": "composer_require_drupal_image_field_caption",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/lang_dropdown",
@@ -589,8 +633,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/lang_dropdown",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_lang_dropdown"
+      "id": "composer_require_drupal_lang_dropdown",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/languageicons",
@@ -600,8 +644,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/languageicons",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_languageicons"
+      "id": "composer_require_drupal_languageicons",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/mailsystem",
@@ -611,8 +655,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/mailsystem",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_mailsystem"
+      "id": "composer_require_drupal_mailsystem",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/media_gallery",
@@ -622,8 +666,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/media_gallery",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_media_gallery"
+      "id": "composer_require_drupal_media_gallery",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/media_library_form_element",
@@ -633,8 +677,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/media_library_form_element",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_media_library_form_element"
+      "id": "composer_require_drupal_media_library_form_element",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/menu_block",
@@ -644,8 +688,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/menu_block",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_menu_block"
+      "id": "composer_require_drupal_menu_block",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/menu_item_extras",
@@ -655,8 +699,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/menu_item_extras",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_menu_item_extras"
+      "id": "composer_require_drupal_menu_item_extras",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/metatag",
@@ -666,8 +710,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/metatag",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_metatag"
+      "id": "composer_require_drupal_metatag",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/paragraphs_report",
@@ -677,8 +721,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/paragraphs_report",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_paragraphs_report"
+      "id": "composer_require_drupal_paragraphs_report",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/pathauto",
@@ -688,8 +732,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/pathauto",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_pathauto"
+      "id": "composer_require_drupal_pathauto",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/phpmailer_smtp",
@@ -699,8 +743,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/phpmailer_smtp",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_phpmailer_smtp"
+      "id": "composer_require_drupal_phpmailer_smtp",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/recreate_block_content",
@@ -710,8 +754,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/recreate_block_content",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_recreate_block_content"
+      "id": "composer_require_drupal_recreate_block_content",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/search_api",
@@ -721,8 +765,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/search_api",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_search_api"
+      "id": "composer_require_drupal_search_api",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/social_media_links",
@@ -732,8 +776,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/social_media_links",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_social_media_links"
+      "id": "composer_require_drupal_social_media_links",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/structure_sync",
@@ -743,8 +787,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/structure_sync",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_structure_sync"
+      "id": "composer_require_drupal_structure_sync",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/superfish",
@@ -754,8 +798,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/superfish",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_superfish"
+      "id": "composer_require_drupal_superfish",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/svg_image",
@@ -765,8 +809,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/svg_image",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_svg_image"
+      "id": "composer_require_drupal_svg_image",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/svg_image_field",
@@ -776,8 +820,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/svg_image_field",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_svg_image_field"
+      "id": "composer_require_drupal_svg_image_field",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/twig_tweak",
@@ -787,8 +831,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/twig_tweak",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_twig_tweak"
+      "id": "composer_require_drupal_twig_tweak",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/workspaces_access",
@@ -798,8 +842,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/workspaces_access",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_workspaces_access"
+      "id": "composer_require_drupal_workspaces_access",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drupal/wse",
@@ -809,8 +853,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drupal/wse",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drupal_wse"
+      "id": "composer_require_drupal_wse",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "drush/drush",
@@ -820,8 +864,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "drush/drush",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_drush_drush"
+      "id": "composer_require_drush_drush",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "omscllc/clean_blog_theme",
@@ -831,8 +875,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "omscllc/clean_blog_theme",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_omscllc_clean_blog_theme"
+      "id": "composer_require_omscllc_clean_blog_theme",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "oomphinc/composer-installers-extender",
@@ -842,8 +886,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "oomphinc/composer-installers-extender",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_oomphinc_composer_installers_extender"
+      "id": "composer_require_oomphinc_composer_installers_extender",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "symfony/dotenv",
@@ -853,8 +897,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "symfony/dotenv",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_symfony_dotenv"
+      "id": "composer_require_symfony_dotenv",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "wikimedia/composer-merge-plugin",
@@ -864,8 +908,8 @@
       "_origin": "ast",
       "community": 0,
       "norm_label": "wikimedia/composer-merge-plugin",
-      "community_name": "Drupal Admin Tools",
-      "id": "composer_require_wikimedia_composer_merge_plugin"
+      "id": "composer_require_wikimedia_composer_merge_plugin",
+      "community_name": "Drupal Admin Tools"
     },
     {
       "label": "conflict",
@@ -875,8 +919,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "conflict",
-      "community_name": "Composer Configuration",
-      "id": "composer_conflict"
+      "id": "composer_conflict",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "drupal/drupal",
@@ -886,8 +930,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "drupal/drupal",
-      "community_name": "Composer Configuration",
-      "id": "composer_conflict_drupal_drupal"
+      "id": "composer_conflict_drupal_drupal",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "minimum-stability",
@@ -897,8 +941,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "minimum-stability",
-      "community_name": "Composer Configuration",
-      "id": "composer_minimum_stability"
+      "id": "composer_minimum_stability",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "prefer-stable",
@@ -908,8 +952,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "prefer-stable",
-      "community_name": "Composer Configuration",
-      "id": "composer_prefer_stable"
+      "id": "composer_prefer_stable",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "config",
@@ -919,8 +963,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "config",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_config"
+      "id": "composer_config",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "platform",
@@ -930,8 +974,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "platform",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_config_platform"
+      "id": "composer_config_platform",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "php",
@@ -941,8 +985,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "php",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_platform_php"
+      "id": "composer_platform_php",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "allow-plugins",
@@ -952,8 +996,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "allow-plugins",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_config_allow_plugins"
+      "id": "composer_config_allow_plugins",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "composer/installers",
@@ -963,8 +1007,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "composer/installers",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_composer_installers"
+      "id": "composer_allow_plugins_composer_installers",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "cweagans/composer-patches",
@@ -974,8 +1018,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "cweagans/composer-patches",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_cweagans_composer_patches"
+      "id": "composer_allow_plugins_cweagans_composer_patches",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "dealerdirect/phpcodesniffer-composer-installer",
@@ -985,8 +1029,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "dealerdirect/phpcodesniffer-composer-installer",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer"
+      "id": "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "drupal/core-composer-scaffold",
@@ -996,8 +1040,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "drupal/core-composer-scaffold",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_drupal_core_composer_scaffold"
+      "id": "composer_allow_plugins_drupal_core_composer_scaffold",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "drupal/core-project-message",
@@ -1007,8 +1051,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "drupal/core-project-message",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_drupal_core_project_message"
+      "id": "composer_allow_plugins_drupal_core_project_message",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "drupal/core-recipe-unpack",
@@ -1018,8 +1062,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "drupal/core-recipe-unpack",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_drupal_core_recipe_unpack"
+      "id": "composer_allow_plugins_drupal_core_recipe_unpack",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "oomphinc/composer-installers-extender",
@@ -1029,8 +1073,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "oomphinc/composer-installers-extender",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_oomphinc_composer_installers_extender"
+      "id": "composer_allow_plugins_oomphinc_composer_installers_extender",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "php-http/discovery",
@@ -1040,8 +1084,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "php-http/discovery",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_php_http_discovery"
+      "id": "composer_allow_plugins_php_http_discovery",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "php-tuf/composer-integration",
@@ -1051,8 +1095,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "php-tuf/composer-integration",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_php_tuf_composer_integration"
+      "id": "composer_allow_plugins_php_tuf_composer_integration",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "phpstan/extension-installer",
@@ -1062,8 +1106,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "phpstan/extension-installer",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_phpstan_extension_installer"
+      "id": "composer_allow_plugins_phpstan_extension_installer",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "wikimedia/composer-merge-plugin",
@@ -1073,8 +1117,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "wikimedia/composer-merge-plugin",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_allow_plugins_wikimedia_composer_merge_plugin"
+      "id": "composer_allow_plugins_wikimedia_composer_merge_plugin",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "sort-packages",
@@ -1084,8 +1128,8 @@
       "_origin": "ast",
       "community": 6,
       "norm_label": "sort-packages",
-      "community_name": "Composer Plugin Management",
-      "id": "composer_config_sort_packages"
+      "id": "composer_config_sort_packages",
+      "community_name": "Composer Plugin Management"
     },
     {
       "label": "scripts",
@@ -1095,8 +1139,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "scripts",
-      "community_name": "Composer Configuration",
-      "id": "composer_scripts"
+      "id": "composer_scripts",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "post-install-cmd",
@@ -1106,8 +1150,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "post-install-cmd",
-      "community_name": "Composer Configuration",
-      "id": "composer_scripts_post_install_cmd"
+      "id": "composer_scripts_post_install_cmd",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "git config core.hooksPath .githooks || true",
@@ -1117,8 +1161,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "git config core.hookspath .githooks || true",
-      "community_name": "Composer Configuration",
-      "id": "ref_git_config_core_hookspath_githooks_true"
+      "id": "ref_git_config_core_hookspath_githooks_true",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "post-update-cmd",
@@ -1128,8 +1172,8 @@
       "_origin": "ast",
       "community": 4,
       "norm_label": "post-update-cmd",
-      "community_name": "Composer Configuration",
-      "id": "composer_scripts_post_update_cmd"
+      "id": "composer_scripts_post_update_cmd",
+      "community_name": "Composer Configuration"
     },
     {
       "label": "extra",
@@ -1139,8 +1183,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "extra",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_extra"
+      "id": "composer_extra",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "patches",
@@ -1150,8 +1194,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "patches",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_extra_patches"
+      "id": "composer_extra_patches",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/social_media_links",
@@ -1161,8 +1205,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "drupal/social_media_links",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_patches_drupal_social_media_links"
+      "id": "composer_patches_drupal_social_media_links",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Add Bluesky",
@@ -1172,8 +1216,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "add bluesky",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_social_media_links_add_bluesky"
+      "id": "composer_drupal_social_media_links_add_bluesky",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/wse",
@@ -1183,8 +1227,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "drupal/wse",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_patches_drupal_wse"
+      "id": "composer_patches_drupal_wse",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Reset workflow state to draft when cloning workspace",
@@ -1194,8 +1238,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "reset workflow state to draft when cloning workspace",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace"
+      "id": "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/paragraphs_report",
@@ -1205,8 +1249,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "drupal/paragraphs_report",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_patches_drupal_paragraphs_report"
+      "id": "composer_patches_drupal_paragraphs_report",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Refactor to AliasManagerInterface",
@@ -1216,8 +1260,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "refactor to aliasmanagerinterface",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface"
+      "id": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal-scaffold",
@@ -1227,8 +1271,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "drupal-scaffold",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_extra_drupal_scaffold"
+      "id": "composer_extra_drupal_scaffold",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "locations",
@@ -1238,8 +1282,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "locations",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_scaffold_locations"
+      "id": "composer_drupal_scaffold_locations",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "web-root",
@@ -1249,8 +1293,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "web-root",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_locations_web_root"
+      "id": "composer_locations_web_root",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "installer-types",
@@ -1260,8 +1304,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "installer-types",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_extra_installer_types"
+      "id": "composer_extra_installer_types",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "npm-asset",
@@ -1271,8 +1315,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "npm-asset",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_npm_asset"
+      "id": "ref_npm_asset",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "bower-asset",
@@ -1282,8 +1326,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "bower-asset",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_bower_asset"
+      "id": "ref_bower_asset",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "installer-paths",
@@ -1293,8 +1337,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "installer-paths",
-      "community_name": "Installation Paths",
-      "id": "composer_extra_installer_paths"
+      "id": "composer_extra_installer_paths",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/core",
@@ -1304,8 +1348,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/core",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_core"
+      "id": "composer_installer_paths_web_core",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-core",
@@ -1315,8 +1359,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-core",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_core"
+      "id": "ref_type_drupal_core",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/libraries/{$name}",
@@ -1326,8 +1370,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/libraries/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_libraries_name"
+      "id": "composer_installer_paths_web_libraries_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-library",
@@ -1337,8 +1381,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-library",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_library"
+      "id": "ref_type_drupal_library",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:npm-asset",
@@ -1348,8 +1392,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:npm-asset",
-      "community_name": "Installation Paths",
-      "id": "ref_type_npm_asset"
+      "id": "ref_type_npm_asset",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:bower-asset",
@@ -1359,8 +1403,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:bower-asset",
-      "community_name": "Installation Paths",
-      "id": "ref_type_bower_asset"
+      "id": "ref_type_bower_asset",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/modules/contrib/{$name}",
@@ -1370,8 +1414,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/modules/contrib/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_modules_contrib_name"
+      "id": "composer_installer_paths_web_modules_contrib_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-module",
@@ -1381,8 +1425,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-module",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_module"
+      "id": "ref_type_drupal_module",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/profiles/contrib/{$name}",
@@ -1392,8 +1436,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/profiles/contrib/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_profiles_contrib_name"
+      "id": "composer_installer_paths_web_profiles_contrib_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-profile",
@@ -1403,8 +1447,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-profile",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_profile"
+      "id": "ref_type_drupal_profile",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/themes/contrib/{$name}",
@@ -1414,8 +1458,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/themes/contrib/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_themes_contrib_name"
+      "id": "composer_installer_paths_web_themes_contrib_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-theme",
@@ -1425,8 +1469,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-theme",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_theme"
+      "id": "ref_type_drupal_theme",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "drush/Commands/contrib/{$name}",
@@ -1436,8 +1480,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "drush/commands/contrib/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_drush_commands_contrib_name"
+      "id": "composer_installer_paths_drush_commands_contrib_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-drush",
@@ -1447,8 +1491,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-drush",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_drush"
+      "id": "ref_type_drupal_drush",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/modules/custom/{$name}",
@@ -1458,8 +1502,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/modules/custom/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_modules_custom_name"
+      "id": "composer_installer_paths_web_modules_custom_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-custom-module",
@@ -1469,8 +1513,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-custom-module",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_custom_module"
+      "id": "ref_type_drupal_custom_module",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/profiles/custom/{$name}",
@@ -1480,8 +1524,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/profiles/custom/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_profiles_custom_name"
+      "id": "composer_installer_paths_web_profiles_custom_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "web/themes/custom/{$name}",
@@ -1491,8 +1535,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "web/themes/custom/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_web_themes_custom_name"
+      "id": "composer_installer_paths_web_themes_custom_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-custom-theme",
@@ -1502,8 +1546,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-custom-theme",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_custom_theme"
+      "id": "ref_type_drupal_custom_theme",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "recipes/{$name}",
@@ -1513,8 +1557,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "recipes/{$name}",
-      "community_name": "Installation Paths",
-      "id": "composer_installer_paths_recipes_name"
+      "id": "composer_installer_paths_recipes_name",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "type:drupal-recipe",
@@ -1524,8 +1568,8 @@
       "_origin": "ast",
       "community": 3,
       "norm_label": "type:drupal-recipe",
-      "community_name": "Installation Paths",
-      "id": "ref_type_drupal_recipe"
+      "id": "ref_type_drupal_recipe",
+      "community_name": "Web Asset Management"
     },
     {
       "label": "drupal-core-project-message",
@@ -1535,8 +1579,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "drupal-core-project-message",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_extra_drupal_core_project_message"
+      "id": "composer_extra_drupal_core_project_message",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "include-keys",
@@ -1546,8 +1590,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "include-keys",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_core_project_message_include_keys"
+      "id": "composer_drupal_core_project_message_include_keys",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "homepage",
@@ -1557,8 +1601,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "homepage",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_homepage"
+      "id": "ref_homepage",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "support",
@@ -1568,8 +1612,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "support",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_support"
+      "id": "ref_support",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "post-create-project-cmd-message",
@@ -1579,8 +1623,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "post-create-project-cmd-message",
-      "community_name": "Project Setup Utilities",
-      "id": "composer_drupal_core_project_message_post_create_project_cmd_message"
+      "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>                                                         </>",
@@ -1590,8 +1634,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "<bg=blue;fg=white>                                                         </>",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_bg_blue_fg_white"
+      "id": "ref_bg_blue_fg_white",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
@@ -1601,8 +1645,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "<bg=blue;fg=white>  congratulations, you\u2019ve installed the drupal codebase  </>",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase"
+      "id": "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
@@ -1612,8 +1656,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template"
+      "id": "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=yellow;fg=black>Next steps</>:",
@@ -1623,8 +1667,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "<bg=yellow;fg=black>next steps</>:",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_bg_yellow_fg_black_next_steps"
+      "id": "ref_bg_yellow_fg_black_next_steps",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Install the site: https://www.drupal.org/docs/installing-drupal",
@@ -1634,8 +1678,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "  * install the site: https://www.drupal.org/docs/installing-drupal",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_install_the_site_https_www_drupal_org_docs_installing_drupal"
+      "id": "ref_install_the_site_https_www_drupal_org_docs_installing_drupal",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
@@ -1645,8 +1689,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "  * read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html"
+      "id": "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Get support: https://www.drupal.org/support",
@@ -1656,8 +1700,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "  * get support: https://www.drupal.org/support",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_get_support_https_www_drupal_org_support"
+      "id": "ref_get_support_https_www_drupal_org_support",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Get involved with the Drupal community:",
@@ -1667,8 +1711,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "  * get involved with the drupal community:",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_get_involved_with_the_drupal_community"
+      "id": "ref_get_involved_with_the_drupal_community",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "      https://www.drupal.org/getting-involved",
@@ -1678,8 +1722,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "      https://www.drupal.org/getting-involved",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_https_www_drupal_org_getting_involved"
+      "id": "ref_https_www_drupal_org_getting_involved",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Remove the plugin that prints this message:",
@@ -1689,8 +1733,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "  * remove the plugin that prints this message:",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_remove_the_plugin_that_prints_this_message"
+      "id": "ref_remove_the_plugin_that_prints_this_message",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "      composer remove drupal/core-project-message",
@@ -1700,8 +1744,8 @@
       "_origin": "ast",
       "community": 1,
       "norm_label": "      composer remove drupal/core-project-message",
-      "community_name": "Project Setup Utilities",
-      "id": "ref_composer_remove_drupal_core_project_message"
+      "id": "ref_composer_remove_drupal_core_project_message",
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "entrypoint.sh",
@@ -1713,10 +1757,10 @@
         "kind": "file"
       },
       "_origin": "ast",
-      "community": 14,
+      "community": 13,
       "norm_label": "entrypoint.sh",
-      "community_name": "entrypoint.sh",
-      "id": "docker_web_entrypoint"
+      "id": "docker_web_entrypoint",
+      "community_name": "Entrypoint Script"
     },
     {
       "label": "entrypoint.sh script",
@@ -1728,10 +1772,100 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "community": 14,
+      "community": 13,
       "norm_label": "entrypoint.sh script",
-      "community_name": "entrypoint.sh",
-      "id": "docker_web_entrypoint_sh__entry"
+      "id": "docker_web_entrypoint_sh__entry",
+      "community_name": "Entrypoint Script"
+    },
+    {
+      "label": "install.sh",
+      "file_type": "code",
+      "source_file": "scripts/install.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "install.sh",
+      "id": "scripts_install",
+      "community_name": "Install Script"
+    },
+    {
+      "label": "install.sh script",
+      "file_type": "code",
+      "source_file": "scripts/install.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "install.sh script",
+      "id": "scripts_install_sh__entry",
+      "community_name": "Install Script"
+    },
+    {
+      "label": "setup-graphify.sh",
+      "file_type": "code",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "setup-graphify.sh",
+      "id": "scripts_setup_graphify",
+      "community_name": "Graphify Setup Script"
+    },
+    {
+      "label": "setup-graphify.sh script",
+      "file_type": "code",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "setup-graphify.sh script",
+      "id": "scripts_setup_graphify_sh__entry",
+      "community_name": "Graphify Setup Script"
+    },
+    {
+      "label": "sync.sh",
+      "file_type": "code",
+      "source_file": "scripts/sync.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "sync.sh",
+      "id": "scripts_sync",
+      "community_name": "Sync Script"
+    },
+    {
+      "label": "sync.sh script",
+      "file_type": "code",
+      "source_file": "scripts/sync.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "community": 18,
+      "norm_label": "sync.sh script",
+      "id": "scripts_sync_sh__entry",
+      "community_name": "Sync Script"
     },
     {
       "label": "language-toggle.js",
@@ -1739,10 +1873,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/js/language-toggle.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 20,
+      "community": 19,
       "norm_label": "language-toggle.js",
-      "community_name": "language-toggle.js",
-      "id": "web_modules_custom_montreal2027_tools_js_language_toggle"
+      "id": "web_modules_custom_montreal2027_tools_js_language_toggle",
+      "community_name": "Language Toggle Functionality"
     },
     {
       "label": "attach()",
@@ -1750,10 +1884,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/js/language-toggle.js",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 20,
+      "community": 19,
       "norm_label": "attach()",
-      "community_name": "language-toggle.js",
-      "id": "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
+      "id": "web_modules_custom_montreal2027_tools_js_language_toggle_attach",
+      "community_name": "Language Toggle Functionality"
     },
     {
       "label": "staff-contact-modal.js",
@@ -1761,10 +1895,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/js/staff-contact-modal.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 21,
+      "community": 20,
       "norm_label": "staff-contact-modal.js",
-      "community_name": "staff-contact-modal.js",
-      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal"
+      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
+      "community_name": "Staff Contact Modal Functionality"
     },
     {
       "label": "attach()",
@@ -1772,10 +1906,10 @@
       "source_file": "web/modules/custom/montreal2027_tools/js/staff-contact-modal.js",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 21,
+      "community": 20,
       "norm_label": "attach()",
-      "community_name": "staff-contact-modal.js",
-      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
+      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach",
+      "community_name": "Staff Contact Modal Functionality"
     },
     {
       "label": "montreal2027_tools.module",
@@ -1785,8 +1919,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "montreal2027_tools.module",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "montreal2027_tools_theme()",
@@ -1796,8 +1930,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "montreal2027_tools_theme()",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "montreal2027_tools_form_taxonomy_term_form_alter()",
@@ -1807,8 +1941,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "montreal2027_tools_form_taxonomy_term_form_alter()",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_term_form_alter"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_term_form_alter",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "FormStateInterface",
@@ -1818,8 +1952,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "formstateinterface",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_module_formstateinterface"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_module_formstateinterface",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "montreal2027_tools_form_taxonomy_overview_terms_alter()",
@@ -1829,8 +1963,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "montreal2027_tools_form_taxonomy_overview_terms_alter()",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_overview_terms_alter"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_overview_terms_alter",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "montreal2027_tools_mail()",
@@ -1840,8 +1974,8 @@
       "_origin": "ast",
       "community": 12,
       "norm_label": "montreal2027_tools_mail()",
-      "community_name": "Montreal 2027 Tools Module",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
+      "community_name": "Montreal 2027 Tools Module"
     },
     {
       "label": "ContactImportCommands.php",
@@ -1851,8 +1985,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": "contactimportcommands.php",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": "ContactImportCommands",
@@ -1862,8 +1996,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": "contactimportcommands",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": ".__construct()",
@@ -1873,8 +2007,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": ".__construct()",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": ".importContacts()",
@@ -1884,8 +2018,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": ".importcontacts()",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": ".resolvePath()",
@@ -1895,8 +2029,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": ".resolvepath()",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": ".combineHeaderAndRow()",
@@ -1906,8 +2040,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": ".combineheaderandrow()",
-      "community_name": "Contact Import Commands",
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow"
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": "StaffContactController.php",
@@ -1917,8 +2051,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "staffcontactcontroller.php",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "StaffContactController",
@@ -1928,8 +2062,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "staffcontactcontroller",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".__construct()",
@@ -1939,8 +2073,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".__construct()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".create()",
@@ -1950,8 +2084,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".create()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "static",
@@ -1961,8 +2095,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "static",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".submit()",
@@ -1972,8 +2106,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".submit()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "StaffPageController.php",
@@ -1983,8 +2117,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "staffpagecontroller.php",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "community_name": "Staff Page Management"
     },
     {
       "label": "StaffPageController",
@@ -1994,8 +2128,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "staffpagecontroller",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".build()",
@@ -2005,8 +2139,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".build()",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".buildChildData()",
@@ -2016,8 +2150,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".buildchilddata()",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".getTermStorage()",
@@ -2027,8 +2161,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".gettermstorage()",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".getTranslatedTerm()",
@@ -2038,8 +2172,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".gettranslatedterm()",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".buildContactModalMarkup()",
@@ -2049,8 +2183,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": ".buildcontactmodalmarkup()",
-      "community_name": "Staff Page Management",
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup"
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "community_name": "Staff Page Management"
     },
     {
       "label": "StaffContactSettingsForm.php",
@@ -2060,8 +2194,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "staffcontactsettingsform.php",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm",
@@ -2071,8 +2205,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "staffpagesettingsform",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getFormId()",
@@ -2082,8 +2216,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".getformid()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_getformid"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_getformid",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getEditableConfigNames()",
@@ -2093,8 +2227,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".geteditableconfignames()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_geteditableconfignames"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_geteditableconfignames",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".buildForm()",
@@ -2104,8 +2238,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".buildform()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_buildform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_buildform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".submitForm()",
@@ -2115,8 +2249,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".submitform()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_submitform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_submitform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm.php",
@@ -2126,8 +2260,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "staffpagesettingsform.php",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm",
@@ -2137,8 +2271,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "staffpagesettingsform",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getFormId()",
@@ -2148,8 +2282,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".getformid()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getEditableConfigNames()",
@@ -2159,8 +2293,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".geteditableconfignames()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_geteditableconfignames"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_geteditableconfignames",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".buildForm()",
@@ -2170,8 +2304,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".buildform()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_buildform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_buildform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".submitForm()",
@@ -2181,8 +2315,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": ".submitform()",
-      "community_name": "Drupal Form Management",
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform"
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "LanguageToggleBlock.php",
@@ -2192,8 +2326,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "languagetoggleblock.php",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "LanguageToggleBlock",
@@ -2203,8 +2337,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "languagetoggleblock",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".__construct()",
@@ -2214,8 +2348,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".__construct()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".create()",
@@ -2225,8 +2359,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".create()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "static",
@@ -2236,8 +2370,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "static",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".build()",
@@ -2247,8 +2381,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".build()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".buildLinkData()",
@@ -2258,8 +2392,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".buildlinkdata()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": ".buildLinkElement()",
@@ -2269,8 +2403,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": ".buildlinkelement()",
-      "community_name": "Drupal Core Components",
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement"
+      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Url",
@@ -2280,8 +2414,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "url",
-      "community_name": "Drupal Core Components",
-      "id": "url"
+      "id": "url",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "settings.php",
@@ -2289,10 +2423,10 @@
       "source_file": "web/sites/default/settings.php",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 23,
+      "community": 24,
       "norm_label": "settings.php",
-      "community_name": "settings.php",
-      "id": "web_sites_default_settings"
+      "id": "web_sites_default_settings",
+      "community_name": "Settings Configuration"
     },
     {
       "label": "montreal2027.theme",
@@ -2302,8 +2436,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027.theme",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027"
+      "id": "web_themes_custom_montreal2027_montreal2027",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_entity_type_alter()",
@@ -2313,8 +2447,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_entity_type_alter()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_form_alter()",
@@ -2324,8 +2458,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_form_alter()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_form_alter",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "FormStateInterface",
@@ -2335,8 +2469,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "formstateinterface",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
+      "id": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_block__system_branding_block()",
@@ -2346,8 +2480,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_block__system_branding_block()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "get_image_info()",
@@ -2357,8 +2491,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "get_image_info()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info"
+      "id": "web_themes_custom_montreal2027_montreal2027_get_image_info",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_node__guest__teaser()",
@@ -2368,8 +2502,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_node__guest__teaser()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_block__montreal2027_content()",
@@ -2379,8 +2513,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_page()",
@@ -2390,8 +2524,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_page()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_entity_in_content_language()",
@@ -2401,8 +2535,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_entity_in_content_language()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guest_block()",
@@ -2412,8 +2546,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_paragraph__guests()",
@@ -2423,8 +2557,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_paragraph__guests()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
@@ -2434,8 +2568,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "montreal2027_preprocess_node()",
@@ -2445,8 +2579,8 @@
       "_origin": "ast",
       "community": 8,
       "norm_label": "montreal2027_preprocess_node()",
-      "community_name": "Montreal 2027 Theme Customization",
-      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node"
+      "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
+      "community_name": "Montreal 2027 Theme Customization"
     },
     {
       "label": "package.json",
@@ -2456,8 +2590,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "package.json",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package"
+      "id": "web_themes_custom_montreal2027_package",
+      "community_name": "Node Package Management"
     },
     {
       "label": "name",
@@ -2467,8 +2601,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "name",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_name"
+      "id": "web_themes_custom_montreal2027_package_name",
+      "community_name": "Node Package Management"
     },
     {
       "label": "version",
@@ -2478,8 +2612,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "version",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_version"
+      "id": "web_themes_custom_montreal2027_package_version",
+      "community_name": "Node Package Management"
     },
     {
       "label": "description",
@@ -2489,8 +2623,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "description",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_description"
+      "id": "web_themes_custom_montreal2027_package_description",
+      "community_name": "Node Package Management"
     },
     {
       "label": "private",
@@ -2500,8 +2634,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "private",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_private"
+      "id": "web_themes_custom_montreal2027_package_private",
+      "community_name": "Node Package Management"
     },
     {
       "label": "engines",
@@ -2511,8 +2645,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "engines",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_engines"
+      "id": "web_themes_custom_montreal2027_package_engines",
+      "community_name": "Node Package Management"
     },
     {
       "label": "node",
@@ -2522,8 +2656,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "node",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_engines_node"
+      "id": "web_themes_custom_montreal2027_package_engines_node",
+      "community_name": "Node Package Management"
     },
     {
       "label": "npm",
@@ -2533,8 +2667,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "npm",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_engines_npm"
+      "id": "web_themes_custom_montreal2027_package_engines_npm",
+      "community_name": "Node Package Management"
     },
     {
       "label": "devDependencies",
@@ -2544,8 +2678,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "devdependencies",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_devdependencies"
+      "id": "web_themes_custom_montreal2027_package_devdependencies",
+      "community_name": "Node Package Management"
     },
     {
       "label": "sass",
@@ -2555,8 +2689,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "sass",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_devdependencies_sass"
+      "id": "web_themes_custom_montreal2027_package_devdependencies_sass",
+      "community_name": "Node Package Management"
     },
     {
       "label": "sass",
@@ -2566,8 +2700,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "sass",
-      "community_name": "Node Package Management",
-      "id": "sass"
+      "id": "sass",
+      "community_name": "Node Package Management"
     },
     {
       "label": "scripts",
@@ -2577,8 +2711,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "scripts",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_scripts"
+      "id": "web_themes_custom_montreal2027_package_scripts",
+      "community_name": "Node Package Management"
     },
     {
       "label": "build:css",
@@ -2588,8 +2722,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "build:css",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_scripts_build_css"
+      "id": "web_themes_custom_montreal2027_package_scripts_build_css",
+      "community_name": "Node Package Management"
     },
     {
       "label": "watch:css",
@@ -2599,8 +2733,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "watch:css",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_scripts_watch_css"
+      "id": "web_themes_custom_montreal2027_package_scripts_watch_css",
+      "community_name": "Node Package Management"
     },
     {
       "label": "dependencies",
@@ -2610,8 +2744,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "dependencies",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_dependencies"
+      "id": "web_themes_custom_montreal2027_package_dependencies",
+      "community_name": "Node Package Management"
     },
     {
       "label": "@parcel/watcher",
@@ -2621,8 +2755,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "@parcel/watcher",
-      "community_name": "Node Package Management",
-      "id": "web_themes_custom_montreal2027_package_dependencies_parcel_watcher"
+      "id": "web_themes_custom_montreal2027_package_dependencies_parcel_watcher",
+      "community_name": "Node Package Management"
     },
     {
       "label": "@parcel/watcher",
@@ -2632,8 +2766,8 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "@parcel/watcher",
-      "community_name": "Node Package Management",
-      "id": "parcel_watcher"
+      "id": "parcel_watcher",
+      "community_name": "Node Package Management"
     },
     {
       "label": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
@@ -2643,8 +2777,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\entity\\entitytypemanagerinterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_entity_entitytypemanagerinterface"
+      "id": "drupal_core_entity_entitytypemanagerinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drush\\Commands\\DrushCommands",
@@ -2654,8 +2788,8 @@
       "_origin": "ast",
       "community": 11,
       "norm_label": "drush\\commands\\drushcommands",
-      "community_name": "Contact Import Commands",
-      "id": "drush_commands_drushcommands"
+      "id": "drush_commands_drushcommands",
+      "community_name": "Contact Import Commands"
     },
     {
       "label": "Drupal\\Core\\Controller\\ControllerBase",
@@ -2665,8 +2799,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\controller\\controllerbase",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_controller_controllerbase"
+      "id": "drupal_core_controller_controllerbase",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Language\\LanguageManagerInterface",
@@ -2676,8 +2810,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\language\\languagemanagerinterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_language_languagemanagerinterface"
+      "id": "drupal_core_language_languagemanagerinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
@@ -2687,8 +2821,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\logger\\loggerchannelfactoryinterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_logger_loggerchannelfactoryinterface"
+      "id": "drupal_core_logger_loggerchannelfactoryinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Mail\\MailManagerInterface",
@@ -2698,8 +2832,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\mail\\mailmanagerinterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_mail_mailmanagerinterface"
+      "id": "drupal_core_mail_mailmanagerinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
@@ -2709,8 +2843,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "symfony\\component\\dependencyinjection\\containerinterface",
-      "community_name": "Drupal Core Components",
-      "id": "symfony_component_dependencyinjection_containerinterface"
+      "id": "symfony_component_dependencyinjection_containerinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Symfony\\Component\\HttpFoundation\\JsonResponse",
@@ -2720,8 +2854,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "symfony\\component\\httpfoundation\\jsonresponse",
-      "community_name": "Drupal Core Components",
-      "id": "symfony_component_httpfoundation_jsonresponse"
+      "id": "symfony_component_httpfoundation_jsonresponse",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Symfony\\Component\\HttpFoundation\\Request",
@@ -2731,8 +2865,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "symfony\\component\\httpfoundation\\request",
-      "community_name": "Drupal Core Components",
-      "id": "symfony_component_httpfoundation_request"
+      "id": "symfony_component_httpfoundation_request",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Url",
@@ -2740,10 +2874,10 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 2,
+      "community": 10,
       "norm_label": "drupal\\core\\url",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_url"
+      "id": "drupal_core_url",
+      "community_name": "Staff Page Management"
     },
     {
       "label": "Drupal\\taxonomy\\TermInterface",
@@ -2753,8 +2887,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "drupal\\taxonomy\\terminterface",
-      "community_name": "Staff Page Management",
-      "id": "drupal_taxonomy_terminterface"
+      "id": "drupal_taxonomy_terminterface",
+      "community_name": "Staff Page Management"
     },
     {
       "label": "Drupal\\taxonomy\\TermStorageInterface",
@@ -2764,8 +2898,8 @@
       "_origin": "ast",
       "community": 10,
       "norm_label": "drupal\\taxonomy\\termstorageinterface",
-      "community_name": "Staff Page Management",
-      "id": "drupal_taxonomy_termstorageinterface"
+      "id": "drupal_taxonomy_termstorageinterface",
+      "community_name": "Staff Page Management"
     },
     {
       "label": "Drupal\\Core\\Form\\ConfigFormBase",
@@ -2775,8 +2909,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "drupal\\core\\form\\configformbase",
-      "community_name": "Drupal Form Management",
-      "id": "drupal_core_form_configformbase"
+      "id": "drupal_core_form_configformbase",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "Drupal\\Core\\Form\\FormStateInterface",
@@ -2786,8 +2920,8 @@
       "_origin": "ast",
       "community": 7,
       "norm_label": "drupal\\core\\form\\formstateinterface",
-      "community_name": "Drupal Form Management",
-      "id": "drupal_core_form_formstateinterface"
+      "id": "drupal_core_form_formstateinterface",
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "Drupal\\Core\\Block\\BlockBase",
@@ -2797,8 +2931,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\block\\blockbase",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_block_blockbase"
+      "id": "drupal_core_block_blockbase",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Plugin\\ContainerFactoryPluginInterface",
@@ -2808,8 +2942,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\plugin\\containerfactoryplugininterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_plugin_containerfactoryplugininterface"
+      "id": "drupal_core_plugin_containerfactoryplugininterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Drupal\\Core\\Routing\\RouteMatchInterface",
@@ -2819,8 +2953,8 @@
       "_origin": "ast",
       "community": 2,
       "norm_label": "drupal\\core\\routing\\routematchinterface",
-      "community_name": "Drupal Core Components",
-      "id": "drupal_core_routing_routematchinterface"
+      "id": "drupal_core_routing_routematchinterface",
+      "community_name": "Drupal Core Components"
     },
     {
       "label": "Docker Compose Configuration",
@@ -2833,8 +2967,50 @@
       "contributor": null,
       "community": 9,
       "norm_label": "docker compose configuration",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "docker-compose"
+      "id": "docker-compose",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "New Content Issue Template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/new-content.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 21,
+      "norm_label": "new content issue template",
+      "id": "github_issue_template_new-content",
+      "community_name": "Content Issue Template"
+    },
+    {
+      "label": "Graphify Workflow",
+      "file_type": "code",
+      "source_file": ".github/workflows/graphify.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 22,
+      "norm_label": "graphify workflow",
+      "id": "github_workflows_graphify",
+      "community_name": "Graphify Workflow Management"
+    },
+    {
+      "label": "Recipes README",
+      "file_type": "document",
+      "source_file": "recipes/README.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 23,
+      "norm_label": "recipes readme",
+      "id": "recipes_readme",
+      "community_name": "Recipe Documentation"
     },
     {
       "label": "Drush Services Configuration",
@@ -2847,8 +3023,22 @@
       "contributor": null,
       "community": 9,
       "norm_label": "drush services configuration",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_drush_services"
+      "id": "web_modules_custom_montreal2027_tools_drush_services",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Config Translation for Montreal 2027 Tools",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "config translation for montreal 2027 tools",
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Info",
@@ -2861,65 +3051,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "montreal 2027 tools info",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
-    },
-    {
-      "label": "Montreal 2027 Tools Routing",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 9,
-      "norm_label": "montreal 2027 tools routing",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "label": "Montreal 2027 Tools Menu Links",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 9,
-      "norm_label": "montreal 2027 tools menu links",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
-    },
-    {
-      "label": "Montreal 2027 Tools Configuration Schema",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 22,
-      "norm_label": "montreal 2027 tools configuration schema",
-      "community_name": "Montreal 2027 Tools Configuration Schema",
-      "id": "web_modules_custom_montreal2027_tools_config_schema"
-    },
-    {
-      "label": "Montreal 2027 Tools Configuration Install",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "verification": "unverified",
-      "community": 9,
-      "norm_label": "montreal 2027 tools configuration install",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_config_install"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Libraries",
@@ -2933,22 +3066,78 @@
       "verification": "unverified",
       "community": 9,
       "norm_label": "montreal 2027 tools libraries",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries"
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
-      "label": "Montreal 2027 Tools Config Translation",
+      "label": "Montreal 2027 Tools Menu Links",
       "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
       "community": 9,
-      "norm_label": "montreal 2027 tools config translation",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+      "norm_label": "montreal 2027 tools menu links",
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Montreal 2027 Tools Routing",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "montreal 2027 tools routing",
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Montreal 2027 Tools Contact Settings",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "montreal 2027 tools contact settings",
+      "id": "montreal2027_tools_contact_settings",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Montreal 2027 Tools Schema",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "montreal 2027 tools schema",
+      "id": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Development Services Configuration",
+      "file_type": "code",
+      "source_file": "web/sites/default/development.services.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "development services configuration",
+      "id": "web_sites_default_development_services",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Theme Info",
@@ -2961,8 +3150,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "montreal 2027 theme info",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_themes_custom_montreal2027_montreal2027_info"
+      "id": "montreal2027_theme_info",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Theme Libraries",
@@ -2975,11 +3164,11 @@
       "contributor": null,
       "community": 9,
       "norm_label": "montreal 2027 theme libraries",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_themes_custom_montreal2027_montreal2027_libraries"
+      "id": "montreal2027_theme_libraries",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
-      "label": "Montreal 2027 Theme Configuration Schema",
+      "label": "Montreal 2027 Theme Schema",
       "file_type": "code",
       "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
       "source_location": null,
@@ -2988,188 +3177,23 @@
       "author": null,
       "contributor": null,
       "community": 9,
-      "norm_label": "montreal 2027 theme configuration schema",
-      "community_name": "Montreal 2027 Tools Configuration",
-      "id": "web_themes_custom_montreal2027_config_schema"
-    },
-    {
-      "label": "post-merge",
-      "file_type": "code",
-      "source_file": ".githooks/post-merge",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "community": 15,
-      "norm_label": "post-merge",
-      "id": "githooks_post_merge",
-      "community_name": "post-merge"
-    },
-    {
-      "label": "post-merge script",
-      "file_type": "code",
-      "source_file": ".githooks/post-merge",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "community": 15,
-      "norm_label": "post-merge script",
-      "id": "githooks_post_merge__entry",
-      "community_name": "post-merge"
-    },
-    {
-      "label": "install.sh",
-      "file_type": "code",
-      "source_file": "scripts/install.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "install.sh",
-      "id": "scripts_install",
-      "community_name": "install.sh"
-    },
-    {
-      "label": "install.sh script",
-      "file_type": "code",
-      "source_file": "scripts/install.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "install.sh script",
-      "id": "scripts_install_sh__entry",
-      "community_name": "install.sh"
-    },
-    {
-      "label": "setup-graphify.sh",
-      "file_type": "code",
-      "source_file": "scripts/setup-graphify.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "setup-graphify.sh",
-      "id": "scripts_setup_graphify",
-      "community_name": "setup-graphify.sh"
-    },
-    {
-      "label": "setup-graphify.sh script",
-      "file_type": "code",
-      "source_file": "scripts/setup-graphify.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "setup-graphify.sh script",
-      "id": "scripts_setup_graphify_sh__entry",
-      "community_name": "setup-graphify.sh"
-    },
-    {
-      "label": "sync.sh",
-      "file_type": "code",
-      "source_file": "scripts/sync.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "sync.sh",
-      "id": "scripts_sync",
-      "community_name": "sync.sh"
-    },
-    {
-      "label": "sync.sh script",
-      "file_type": "code",
-      "source_file": "scripts/sync.sh",
-      "source_location": "L1",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "_origin": "ast",
-      "community": 19,
-      "norm_label": "sync.sh script",
-      "id": "scripts_sync_sh__entry",
-      "community_name": "sync.sh"
-    },
-    {
-      "label": "New Content Issue Template",
-      "file_type": "document",
-      "source_file": ".github/ISSUE_TEMPLATE/new-content",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "new content issue template",
-      "id": "github_issue_template_new-content",
-      "community_name": "Graphify Workflow"
-    },
-    {
-      "label": "Graphify Workflow",
-      "file_type": "code",
-      "source_file": ".github/workflows/graphify",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "graphify workflow",
-      "id": "github_workflows_graphify",
-      "community_name": "Graphify Workflow"
-    },
-    {
-      "label": "Recipes README",
-      "file_type": "document",
-      "source_file": "recipes/README",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "recipes readme",
-      "id": "recipes_readme",
-      "community_name": "Graphify Workflow"
-    },
-    {
-      "label": "Development Services Configuration",
-      "file_type": "code",
-      "source_file": "web/sites/default/development.services",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 13,
-      "norm_label": "development services configuration",
-      "id": "web_sites_default_development_services",
-      "community_name": "Graphify Workflow"
+      "norm_label": "montreal 2027 theme schema",
+      "id": "montreal2027_theme_schema",
+      "community_name": "Montreal 2027 Tools Configuration"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".githooks/post-merge",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "githooks_post_merge",
+      "target": "githooks_post_merge__entry"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -4885,6 +4909,39 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/install.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_install",
+      "target": "scripts_install_sh__entry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/setup-graphify.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_setup_graphify",
+      "target": "scripts_setup_graphify_sh__entry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/sync.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_sync",
+      "target": "scripts_sync_sh__entry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "web/modules/custom/montreal2027_tools/js/language-toggle.js",
       "source_location": "L13",
       "weight": 1.0,
@@ -6548,7 +6605,37 @@
       "source_location": null,
       "weight": 1.0,
       "source": "docker-compose",
-      "target": "web_modules_custom_montreal2027_tools_drush_services"
+      "target": "montreal2027_theme_info"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
+      "target": "montreal2027_theme_libraries"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker-compose",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries"
     },
     {
       "relation": "references",
@@ -6564,21 +6651,31 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "target": "web_modules_custom_montreal2027_tools_config_install"
+      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+      "source": "montreal2027_tools_contact_settings",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
     },
     {
       "relation": "references",
@@ -6614,125 +6711,65 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "target": "web_themes_custom_montreal2027_montreal2027_info"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_info",
-      "target": "web_themes_custom_montreal2027_config_schema"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_themes_custom_montreal2027_montreal2027_info",
-      "target": "web_themes_custom_montreal2027_montreal2027_libraries"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".githooks/post-merge",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "githooks_post_merge",
-      "target": "githooks_post_merge__entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/install.sh",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_install",
-      "target": "scripts_install_sh__entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/setup-graphify.sh",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_setup_graphify",
-      "target": "scripts_setup_graphify_sh__entry"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/sync.sh",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_sync",
-      "target": "scripts_sync_sh__entry"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/graphify.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "github_workflows_graphify",
-      "target": "github_issue_template_new-content"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/graphify.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "github_workflows_graphify",
-      "target": "web_sites_default_development_services"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "web/sites/default/development.services.yml",
       "source_location": null,
       "weight": 1.0,
       "source": "web_sites_default_development_services",
-      "target": "recipes_readme"
+      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "montreal2027_theme_info",
+      "target": "montreal2027_theme_libraries"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "montreal2027_theme_info",
+      "target": "montreal2027_theme_schema"
     }
   ],
   "hyperedges": [
     {
       "id": "montreal2027_tools",
-      "label": "Montreal 2027 Tools Module Components",
+      "label": "Montreal 2027 Tools Module",
       "nodes": [
-        "web_modules_custom_montreal2027_tools_drush_services",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-        "web_modules_custom_montreal2027_tools_config_install"
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+        "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+        "montreal2027_tools_contact_settings",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
+        "web_modules_custom_montreal2027_tools_drush_services"
       ],
-      "relation": "participate_in",
+      "relation": "implement",
       "confidence": "EXTRACTED",
       "confidence_score": 0.75,
-      "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
+    },
+    {
+      "id": "montreal2027_theme",
+      "label": "Montreal 2027 Theme",
+      "nodes": [
+        "montreal2027_theme_info",
+        "montreal2027_theme_libraries",
+        "montreal2027_theme_schema"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.75,
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml"
     }
   ],
-  "built_at_commit": "6839fd227b6fcdd443a2617d0789e47373fb1b0c"
+  "built_at_commit": "e61ec149a75cb194b2775ba9892b003e472db1e3"
 }
