@@ -3165,7 +3165,7 @@
       "contributor": null,
       "community": 13,
       "norm_label": "development services configuration",
-      "id": "web_sites_default_development.services",
+      "id": "web_sites_default_development_services",
       "community_name": "Graphify Workflow"
     }
   ],
@@ -6698,20 +6698,10 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/graphify",
+      "source_file": "recipes/README",
       "source_location": null,
       "weight": 1.0,
-      "source": "github_workflows_graphify",
-      "target": "recipes_readme"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/sites/default/development.services",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_sites_default_development.services",
+      "source": "recipes_readme",
       "target": "github_workflows_graphify"
     },
     {
@@ -6721,8 +6711,8 @@
       "source_file": "web/sites/default/development.services",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_sites_default_development.services",
-      "target": "recipes_readme"
+      "source": "web_sites_default_development_services",
+      "target": "github_workflows_graphify"
     }
   ],
   "hyperedges": [
@@ -6744,5 +6734,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "f7274e97ad596c178c0472d4a450fe3bafc99d19"
+  "built_at_commit": "40eb05d5b17c40c0930cf47c5d663386ea0c08b9"
 }
