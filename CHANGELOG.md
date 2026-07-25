@@ -3,6 +3,15 @@
 ## Changelog
 ---
 
+## 1.0.8 (2026-07-24)
+ 
+ - Updates to AI Agent instructions
+ - Documentation updates
+ - Script updates
+ - Added Staff List Maintainer role
+ - Added favicon
+ - Fixed membership rate table display on mobile
+
 ## 1.0.7 (2026-06-20)
 
  - Add Translator role

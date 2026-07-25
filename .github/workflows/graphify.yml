@@ -1,5 +1,8 @@
 name: Auto-Update Graphify Map
 on:
+  pull_request:
+    types: [closed]
+    branches: ['develop']
   push:
     branches:
       - 'develop'
@@ -19,7 +22,8 @@ jobs:
         with:
           # CRITICAL ADDITION: Persists the GitHub token credentials so the 
           # git-auto-commit-action step below can successfully push the map files back.
-          persist-credentials: true 
+          persist-credentials: true
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -62,28 +66,42 @@ jobs:
 
       - name: Safely Inject Copilot Instructions
         run: |
-          TARGET_FILE=".github/copilot-instructions.md"
+          TARGET_FILE="AGENTS.md"
           INSTRUCTION_LINE="Always reference graphify-out/GRAPH_REPORT.md to understand code architecture context before answering queries."
           
-          # Create the .github folder if it somehow doesn't exist
-          mkdir -p .github
+          # Create the file if it doesn't exist
+          if [ ! -f "$TARGET_FILE" ]; then
+            echo "# Montreal 2027 WorldCon Website - AI Assistant Guide" > "$TARGET_FILE"
+            echo "" >> "$TARGET_FILE"
+            echo "This guide serves as the single source of truth for AI assistants working with this Drupal 11 codebase." >> "$TARGET_FILE"
+            echo "" >> "$TARGET_FILE"
+          fi
           
-          # Check if the instruction already exists in the file to prevent duplicate entries
-          if [ -f "$TARGET_FILE" ]; then
-            if ! grep -q "$INSTRUCTION_LINE" "$TARGET_FILE"; then
-              echo -e "\n# Graphify Context\n$INSTRUCTION_LINE" >> "$TARGET_FILE"
-              echo "Appended Graphify block to existing copilot-instructions.md"
-            else
-              echo "Graphify instruction already exists. Skipping append."
-            fi
+          # Check if the instruction already exists to prevent duplicate entries
+          if ! grep -q "$INSTRUCTION_LINE" "$TARGET_FILE"; then
+            # Add the Graphify Context section
+            echo "" >> "$TARGET_FILE"
+            echo "# Graphify Context" >> "$TARGET_FILE"
+            echo "$INSTRUCTION_LINE" >> "$TARGET_FILE"
+            echo "" >> "$TARGET_FILE"
+            echo "Appended Graphify context to $TARGET_FILE"
           else
-            # Fallback if the file didn't exist prior to the run
-            echo -e "# Copilot Instructions\n\n# Graphify Context\n$INSTRUCTION_LINE" > "$TARGET_FILE"
-            echo "Created a brand new copilot-instructions.md"
+            echo "Graphify instruction already exists. Skipping append."
           fi
 
-      - name: Commit and Push Updated Files
+# PART A: Commit only the instruction file to your feature/develop branch
+      - name: Commit AI Instructions
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore(ai): auto-update graphify map and copilot context [skip ci]"
-          file_pattern: 'graphify-out/* .github/copilot-instructions.md'
+          commit_message: "chore(ai): update graphify context in AGENTS.md [skip ci]"
+          file_pattern: "AGENTS.md"
+
+      # PART B: Push the heavy graph data to the separate 'graph-data' branch
+      - name: Push Graph to Shadow Branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: graph-data
+          FOLDER: graphify-out
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "chore: graph update for ${{ github.sha }} [skip ci]"
