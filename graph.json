@@ -3123,7 +3123,7 @@
       "contributor": null,
       "community": 13,
       "norm_label": "new content issue template",
-      "id": "github_issue_template_new-content_md",
+      "id": "github_issue_template_new-content",
       "community_name": "Graphify Workflow"
     },
     {
@@ -3137,7 +3137,7 @@
       "contributor": null,
       "community": 13,
       "norm_label": "graphify workflow",
-      "id": "github_workflows_graphify_yml",
+      "id": "github_workflows_graphify",
       "community_name": "Graphify Workflow"
     },
     {
@@ -3151,7 +3151,7 @@
       "contributor": null,
       "community": 13,
       "norm_label": "recipes readme",
-      "id": "recipes_readme_txt",
+      "id": "recipes_readme",
       "community_name": "Graphify Workflow"
     },
     {
@@ -3165,7 +3165,7 @@
       "contributor": null,
       "community": 13,
       "norm_label": "development services configuration",
-      "id": "web_sites_default_development_services_yml",
+      "id": "web_sites_default_development_services",
       "community_name": "Graphify Workflow"
     }
   ],
@@ -6691,8 +6691,8 @@
       "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "github_workflows_graphify_yml",
-      "target": "github_issue_template_new-content_md"
+      "source": "github_workflows_graphify",
+      "target": "github_issue_template_new-content"
     },
     {
       "relation": "references",
@@ -6701,18 +6701,18 @@
       "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "github_workflows_graphify_yml",
-      "target": "recipes_readme_txt"
+      "source": "github_workflows_graphify",
+      "target": "web_sites_default_development_services"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/graphify.yml",
+      "source_file": "web/sites/default/development.services.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "github_workflows_graphify_yml",
-      "target": "web_sites_default_development_services_yml"
+      "source": "web_sites_default_development_services",
+      "target": "recipes_readme"
     }
   ],
   "hyperedges": [

@@ -282,10 +282,10 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "13": [
-      "github_issue_template_new-content_md",
-      "github_workflows_graphify_yml",
-      "recipes_readme_txt",
-      "web_sites_default_development_services_yml"
+      "github_issue_template_new-content",
+      "github_workflows_graphify",
+      "recipes_readme",
+      "web_sites_default_development_services"
     ],
     "14": [
       "docker_web_entrypoint",
@@ -480,7 +480,7 @@
     {
       "type": "isolated_nodes",
       "question": "What connects `name`, `description`, `type` to the rest of the system?",
-      "why": "140 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "139 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",

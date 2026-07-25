@@ -121,7 +121,7 @@ Cohesion: 0.50
 Nodes (4): New Content Issue Template, Graphify Workflow, Recipes README, Development Services Configuration
 
 ## Knowledge Gaps
-- **140 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+135 more)
+- **139 isolated node(s):** `name`, `description`, `type`, `license`, `homepage` (+134 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -135,7 +135,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `installer-paths` connect `Installation Paths` to `Project Setup Utilities`?**
   _High betweenness centrality (0.076) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `type` to the rest of the system?**
-  _140 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _139 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Drupal Admin Tools` be split into smaller, more focused modules?**
   _Cohesion score 0.03125 - nodes in this community are weakly interconnected._
 - **Should `Project Setup Utilities` be split into smaller, more focused modules?**
