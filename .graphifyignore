@@ -26,6 +26,6 @@ CHANGELOG.md
 README.md
 
 # AI instruction and agent configuration files — not code architecture
-.github/copilot-instructions.md
+AGENTS.md
 .github/agents/
 .continue/

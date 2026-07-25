@@ -78,3 +78,5 @@ web/themes/custom/montreal2027/css/montreal2027.min.css
 .install_completed
 .envrc
 /graphify-out
+.vscode/*
+!.vscode/mcp.json

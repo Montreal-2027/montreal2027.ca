@@ -242,14 +242,16 @@
     ],
     "9": [
       "docker-compose",
-      "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "web_modules_custom_montreal2027_tools_config_install",
       "web_modules_custom_montreal2027_tools_drush_services",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
+      "web_themes_custom_montreal2027_config_schema",
+      "web_themes_custom_montreal2027_montreal2027_info",
+      "web_themes_custom_montreal2027_montreal2027_libraries"
     ],
     "10": [
       "drupal_taxonomy_terminterface",
@@ -304,16 +306,10 @@
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
     "19": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_schema"
+      "web_modules_custom_montreal2027_tools_config_schema"
     ],
     "20": [
       "web_sites_default_settings"
-    ],
-    "21": [
-      "web_themes_custom_montreal2027_montreal2027_info"
-    ],
-    "22": [
-      "web_themes_custom_montreal2027_montreal2027_libraries"
     ]
   },
   "cohesion": {
@@ -326,7 +322,7 @@
     "6": 0.125,
     "7": 0.21978021978021978,
     "8": 0.2087912087912088,
-    "9": 0.4444444444444444,
+    "9": 0.18181818181818182,
     "10": 0.4444444444444444,
     "11": 0.42857142857142855,
     "12": 0.4666666666666667,
@@ -337,9 +333,7 @@
     "17": 1.0,
     "18": 1.0,
     "19": 1.0,
-    "20": 1.0,
-    "21": 1.0,
-    "22": 1.0
+    "20": 1.0
   },
   "gods": [
     {
@@ -378,6 +372,11 @@
       "degree": 7
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "label": "Montreal 2027 Tools Info",
+      "degree": 7
+    },
+    {
       "id": "composer_extra",
       "label": "extra",
       "degree": 6
@@ -385,11 +384,6 @@
     {
       "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
       "label": "ContactImportCommands",
-      "degree": 6
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
-      "label": "StaffPageSettingsForm",
       "degree": 6
     }
   ],
@@ -418,6 +412,17 @@
     },
     {
       "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Configuration Install",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Montreal 2027 Tools Configuration Install` unexpectedly reaches hub `Montreal 2027 Tools Info`"
+    },
+    {
+      "source": "Montreal 2027 Tools Info",
       "target": "Montreal 2027 Tools Config Translation",
       "source_files": [
         "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
@@ -428,30 +433,19 @@
       "why": "peripheral node `Montreal 2027 Tools Config Translation` unexpectedly reaches hub `Montreal 2027 Tools Info`"
     },
     {
-      "source": "Montreal 2027 Tools Libraries",
-      "target": "Montreal 2027 Tools Config Translation",
+      "source": "Montreal 2027 Tools Info",
+      "target": "Montreal 2027 Tools Libraries",
       "source_files": [
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml"
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
+        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "peripheral node `Montreal 2027 Tools Config Translation` unexpectedly reaches hub `Montreal 2027 Tools Libraries`"
-    },
-    {
-      "source": "Montreal 2027 Tools Schema",
-      "target": "Montreal 2027 Tools Info",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "cross-file semantic connection"
+      "why": "peripheral node `Montreal 2027 Tools Libraries` unexpectedly reaches hub `Montreal 2027 Tools Info`"
     }
   ],
   "tokens": {
     "input": 6746,
-    "output": 2903
+    "output": 2026
   }
 }

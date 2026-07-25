@@ -9,12 +9,11 @@
         "nodes": [
           "web_modules_custom_montreal2027_tools_drush_services",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-          "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-          "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+          "web_modules_custom_montreal2027_tools_config_install"
         ],
         "relation": "participate_in",
         "confidence": "EXTRACTED",
@@ -37,7 +36,7 @@
       "community": 14,
       "norm_label": "pre-commit",
       "id": "githooks_pre_commit",
-      "community_name": "Pre-commit Script"
+      "community_name": "Pre-commit Hook"
     },
     {
       "label": "pre-commit script",
@@ -52,7 +51,7 @@
       "community": 14,
       "norm_label": "pre-commit script",
       "id": "githooks_pre_commit__entry",
-      "community_name": "Pre-commit Script"
+      "community_name": "Pre-commit Hook"
     },
     {
       "label": "composer.json",
@@ -1141,7 +1140,7 @@
       "community": 1,
       "norm_label": "extra",
       "id": "composer_extra",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "patches",
@@ -1152,7 +1151,7 @@
       "community": 1,
       "norm_label": "patches",
       "id": "composer_extra_patches",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/social_media_links",
@@ -1163,7 +1162,7 @@
       "community": 1,
       "norm_label": "drupal/social_media_links",
       "id": "composer_patches_drupal_social_media_links",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Add Bluesky",
@@ -1174,7 +1173,7 @@
       "community": 1,
       "norm_label": "add bluesky",
       "id": "composer_drupal_social_media_links_add_bluesky",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/wse",
@@ -1185,7 +1184,7 @@
       "community": 1,
       "norm_label": "drupal/wse",
       "id": "composer_patches_drupal_wse",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Reset workflow state to draft when cloning workspace",
@@ -1196,7 +1195,7 @@
       "community": 1,
       "norm_label": "reset workflow state to draft when cloning workspace",
       "id": "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal/paragraphs_report",
@@ -1207,7 +1206,7 @@
       "community": 1,
       "norm_label": "drupal/paragraphs_report",
       "id": "composer_patches_drupal_paragraphs_report",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "Refactor to AliasManagerInterface",
@@ -1218,7 +1217,7 @@
       "community": 1,
       "norm_label": "refactor to aliasmanagerinterface",
       "id": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "drupal-scaffold",
@@ -1229,7 +1228,7 @@
       "community": 1,
       "norm_label": "drupal-scaffold",
       "id": "composer_extra_drupal_scaffold",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "locations",
@@ -1240,7 +1239,7 @@
       "community": 1,
       "norm_label": "locations",
       "id": "composer_drupal_scaffold_locations",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "web-root",
@@ -1251,7 +1250,7 @@
       "community": 1,
       "norm_label": "web-root",
       "id": "composer_locations_web_root",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "installer-types",
@@ -1262,7 +1261,7 @@
       "community": 1,
       "norm_label": "installer-types",
       "id": "composer_extra_installer_types",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "npm-asset",
@@ -1273,7 +1272,7 @@
       "community": 1,
       "norm_label": "npm-asset",
       "id": "ref_npm_asset",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "bower-asset",
@@ -1284,7 +1283,7 @@
       "community": 1,
       "norm_label": "bower-asset",
       "id": "ref_bower_asset",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "installer-paths",
@@ -1537,7 +1536,7 @@
       "community": 1,
       "norm_label": "drupal-core-project-message",
       "id": "composer_extra_drupal_core_project_message",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "include-keys",
@@ -1548,7 +1547,7 @@
       "community": 1,
       "norm_label": "include-keys",
       "id": "composer_drupal_core_project_message_include_keys",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "homepage",
@@ -1559,7 +1558,7 @@
       "community": 1,
       "norm_label": "homepage",
       "id": "ref_homepage",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "support",
@@ -1570,7 +1569,7 @@
       "community": 1,
       "norm_label": "support",
       "id": "ref_support",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "post-create-project-cmd-message",
@@ -1581,7 +1580,7 @@
       "community": 1,
       "norm_label": "post-create-project-cmd-message",
       "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>                                                         </>",
@@ -1592,7 +1591,7 @@
       "community": 1,
       "norm_label": "<bg=blue;fg=white>                                                         </>",
       "id": "ref_bg_blue_fg_white",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
@@ -1603,7 +1602,7 @@
       "community": 1,
       "norm_label": "<bg=blue;fg=white>  congratulations, you\u2019ve installed the drupal codebase  </>",
       "id": "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
@@ -1614,7 +1613,7 @@
       "community": 1,
       "norm_label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
       "id": "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "<bg=yellow;fg=black>Next steps</>:",
@@ -1625,7 +1624,7 @@
       "community": 1,
       "norm_label": "<bg=yellow;fg=black>next steps</>:",
       "id": "ref_bg_yellow_fg_black_next_steps",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Install the site: https://www.drupal.org/docs/installing-drupal",
@@ -1636,7 +1635,7 @@
       "community": 1,
       "norm_label": "  * install the site: https://www.drupal.org/docs/installing-drupal",
       "id": "ref_install_the_site_https_www_drupal_org_docs_installing_drupal",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
@@ -1647,7 +1646,7 @@
       "community": 1,
       "norm_label": "  * read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
       "id": "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Get support: https://www.drupal.org/support",
@@ -1658,7 +1657,7 @@
       "community": 1,
       "norm_label": "  * get support: https://www.drupal.org/support",
       "id": "ref_get_support_https_www_drupal_org_support",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Get involved with the Drupal community:",
@@ -1669,7 +1668,7 @@
       "community": 1,
       "norm_label": "  * get involved with the drupal community:",
       "id": "ref_get_involved_with_the_drupal_community",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "      https://www.drupal.org/getting-involved",
@@ -1680,7 +1679,7 @@
       "community": 1,
       "norm_label": "      https://www.drupal.org/getting-involved",
       "id": "ref_https_www_drupal_org_getting_involved",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "  * Remove the plugin that prints this message:",
@@ -1691,7 +1690,7 @@
       "community": 1,
       "norm_label": "  * remove the plugin that prints this message:",
       "id": "ref_remove_the_plugin_that_prints_this_message",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "      composer remove drupal/core-project-message",
@@ -1702,7 +1701,7 @@
       "community": 1,
       "norm_label": "      composer remove drupal/core-project-message",
       "id": "ref_composer_remove_drupal_core_project_message",
-      "community_name": "Project Setup Configuration"
+      "community_name": "Project Setup Utilities"
     },
     {
       "label": "entrypoint.sh",
@@ -2045,7 +2044,7 @@
       "community": 10,
       "norm_label": "staffpagecontroller.php",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": "StaffPageController",
@@ -2056,7 +2055,7 @@
       "community": 10,
       "norm_label": "staffpagecontroller",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".build()",
@@ -2067,7 +2066,7 @@
       "community": 10,
       "norm_label": ".build()",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".buildChildData()",
@@ -2078,7 +2077,7 @@
       "community": 10,
       "norm_label": ".buildchilddata()",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".getTermStorage()",
@@ -2089,7 +2088,7 @@
       "community": 10,
       "norm_label": ".gettermstorage()",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".getTranslatedTerm()",
@@ -2100,7 +2099,7 @@
       "community": 10,
       "norm_label": ".gettranslatedterm()",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": ".buildContactModalMarkup()",
@@ -2111,7 +2110,7 @@
       "community": 10,
       "norm_label": ".buildcontactmodalmarkup()",
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": "StaffContactSettingsForm.php",
@@ -2122,7 +2121,7 @@
       "community": 7,
       "norm_label": "staffcontactsettingsform.php",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm",
@@ -2133,7 +2132,7 @@
       "community": 7,
       "norm_label": "staffpagesettingsform",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getFormId()",
@@ -2144,7 +2143,7 @@
       "community": 7,
       "norm_label": ".getformid()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_getformid",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getEditableConfigNames()",
@@ -2155,7 +2154,7 @@
       "community": 7,
       "norm_label": ".geteditableconfignames()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_geteditableconfignames",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".buildForm()",
@@ -2166,7 +2165,7 @@
       "community": 7,
       "norm_label": ".buildform()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_buildform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".submitForm()",
@@ -2177,7 +2176,7 @@
       "community": 7,
       "norm_label": ".submitform()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_submitform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm.php",
@@ -2188,7 +2187,7 @@
       "community": 7,
       "norm_label": "staffpagesettingsform.php",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "StaffPageSettingsForm",
@@ -2199,7 +2198,7 @@
       "community": 7,
       "norm_label": "staffpagesettingsform",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getFormId()",
@@ -2210,7 +2209,7 @@
       "community": 7,
       "norm_label": ".getformid()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".getEditableConfigNames()",
@@ -2221,7 +2220,7 @@
       "community": 7,
       "norm_label": ".geteditableconfignames()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_geteditableconfignames",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".buildForm()",
@@ -2232,7 +2231,7 @@
       "community": 7,
       "norm_label": ".buildform()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_buildform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": ".submitForm()",
@@ -2243,7 +2242,7 @@
       "community": 7,
       "norm_label": ".submitform()",
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "LanguageToggleBlock.php",
@@ -2815,7 +2814,7 @@
       "community": 10,
       "norm_label": "drupal\\taxonomy\\terminterface",
       "id": "drupal_taxonomy_terminterface",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": "Drupal\\taxonomy\\TermStorageInterface",
@@ -2826,7 +2825,7 @@
       "community": 10,
       "norm_label": "drupal\\taxonomy\\termstorageinterface",
       "id": "drupal_taxonomy_termstorageinterface",
-      "community_name": "Staff Page Controller"
+      "community_name": "Staff Page Management"
     },
     {
       "label": "Drupal\\Core\\Form\\ConfigFormBase",
@@ -2837,7 +2836,7 @@
       "community": 7,
       "norm_label": "drupal\\core\\form\\configformbase",
       "id": "drupal_core_form_configformbase",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "Drupal\\Core\\Form\\FormStateInterface",
@@ -2848,7 +2847,7 @@
       "community": 7,
       "norm_label": "drupal\\core\\form\\formstateinterface",
       "id": "drupal_core_form_formstateinterface",
-      "community_name": "Staff Settings Forms"
+      "community_name": "Drupal Form Management"
     },
     {
       "label": "Drupal\\Core\\Block\\BlockBase",
@@ -2895,7 +2894,7 @@
       "community": 9,
       "norm_label": "docker compose configuration",
       "id": "docker-compose",
-      "community_name": "Montreal 2027 Configuration"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Drush Services Configuration",
@@ -2909,7 +2908,7 @@
       "community": 9,
       "norm_label": "drush services configuration",
       "id": "web_modules_custom_montreal2027_tools_drush_services",
-      "community_name": "Montreal 2027 Configuration"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Info",
@@ -2923,21 +2922,7 @@
       "community": 9,
       "norm_label": "montreal 2027 tools info",
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "community_name": "Montreal 2027 Configuration"
-    },
-    {
-      "label": "Montreal 2027 Tools Menu Links",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 9,
-      "norm_label": "montreal 2027 tools menu links",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "community_name": "Montreal 2027 Configuration"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Routing",
@@ -2951,24 +2936,24 @@
       "community": 9,
       "norm_label": "montreal 2027 tools routing",
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "community_name": "Montreal 2027 Configuration"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
-      "label": "Staff Contact Settings Configuration",
+      "label": "Montreal 2027 Tools Menu Links",
       "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
       "community": 9,
-      "norm_label": "staff contact settings configuration",
-      "id": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-      "community_name": "Montreal 2027 Configuration"
+      "norm_label": "montreal 2027 tools menu links",
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
-      "label": "Montreal 2027 Tools Schema",
+      "label": "Montreal 2027 Tools Configuration Schema",
       "file_type": "code",
       "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
       "source_location": null,
@@ -2976,10 +2961,25 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
+      "community": 19,
+      "norm_label": "montreal 2027 tools configuration schema",
+      "id": "web_modules_custom_montreal2027_tools_config_schema",
+      "community_name": "Montreal 2027 Configuration Schema"
+    },
+    {
+      "label": "Montreal 2027 Tools Configuration Install",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "verification": "unverified",
       "community": 9,
-      "norm_label": "montreal 2027 tools schema",
-      "id": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "community_name": "Montreal 2027 Configuration"
+      "norm_label": "montreal 2027 tools configuration install",
+      "id": "web_modules_custom_montreal2027_tools_config_install",
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Libraries",
@@ -2994,7 +2994,7 @@
       "community": 9,
       "norm_label": "montreal 2027 tools libraries",
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "community_name": "Montreal 2027 Configuration"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Tools Config Translation",
@@ -3008,21 +3008,7 @@
       "community": 9,
       "norm_label": "montreal 2027 tools config translation",
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
-      "community_name": "Montreal 2027 Configuration"
-    },
-    {
-      "label": "Montreal 2027 Theme Schema",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 19,
-      "norm_label": "montreal 2027 theme schema",
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_schema",
-      "community_name": "Montreal 2027 Theme Schema"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Theme Info",
@@ -3033,10 +3019,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 9,
       "norm_label": "montreal 2027 theme info",
       "id": "web_themes_custom_montreal2027_montreal2027_info",
-      "community_name": "Montreal 2027 Theme Info"
+      "community_name": "Montreal 2027 Tools Configuration"
     },
     {
       "label": "Montreal 2027 Theme Libraries",
@@ -3047,10 +3033,24 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 22,
+      "community": 9,
       "norm_label": "montreal 2027 theme libraries",
       "id": "web_themes_custom_montreal2027_montreal2027_libraries",
-      "community_name": "Montreal 2027 Theme Libraries"
+      "community_name": "Montreal 2027 Tools Configuration"
+    },
+    {
+      "label": "Montreal 2027 Theme Configuration Schema",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 9,
+      "norm_label": "montreal 2027 theme configuration schema",
+      "id": "web_themes_custom_montreal2027_config_schema",
+      "community_name": "Montreal 2027 Tools Configuration"
     }
   ],
   "links": [
@@ -6470,11 +6470,11 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
+      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "target": "web_modules_custom_montreal2027_tools_config_install"
     },
     {
       "relation": "references",
@@ -6520,91 +6520,31 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
+      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "target": "web_themes_custom_montreal2027_montreal2027_info"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
+      "source": "web_themes_custom_montreal2027_montreal2027_info",
+      "target": "web_themes_custom_montreal2027_config_schema"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+      "source": "web_themes_custom_montreal2027_montreal2027_info",
+      "target": "web_themes_custom_montreal2027_montreal2027_libraries"
     }
   ],
   "hyperedges": [
@@ -6614,12 +6554,11 @@
       "nodes": [
         "web_modules_custom_montreal2027_tools_drush_services",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-        "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-        "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+        "web_modules_custom_montreal2027_tools_config_install"
       ],
       "relation": "participate_in",
       "confidence": "EXTRACTED",
@@ -6627,5 +6566,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "e7cf12d1b35f3d603ac704d4cd790ecae05ccd2c"
+  "built_at_commit": "229b7d6ac00700a6ffc5e49bfcc4a115ff324da4"
 }

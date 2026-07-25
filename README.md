@@ -1,10 +1,8 @@
-   # Montreal 2027 WorldCon Website
-
-Official website for the 85th World Science Fiction Convention (Worldcon), taking place in Montreal, Quebec, Canada in 2027.
+# Montreal 2027 WorldCon Website
 
 ## About
 
-This Drupal 11 website serves as the central hub for Montreal 2027 WorldCon, providing:
+This website serves as the central hub for the official website for the 85th World Science Fiction Convention (Worldcon), taking place in Montreal, Quebec, Canada in 2027., providing:
 
 - Event information and schedules
 - Guest of Honor biographies and photos
@@ -29,19 +27,20 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 
 You can run this project either with Docker or in a native local environment (macOS/Linux with PHP, MariaDB, and Nginx installed locally).
 
-### Quick Start Script
+### Quick Start
 
 **Prerequisites:**
 - `git` installed on your machine.
 - SSH access configured for the Git repository.
 - Docker and Docker Compose (if you plan to start the containers and sync the database automatically).
+- Your ssh key added to the production server.
 
-The easiest way to get the project up and running is to clone the repository and run the setup script.
+The easiest way to get the project up and running using docker is to clone the repository and run the setup script.
 
 ```bash
 git clone git@git.montreal2027.ca:Montreal-2027/montreal2027.ca.git [DESTINATION_DIR]
-cd {montreal2027.ca | DESTINATION_DIR}
-git checkout {BRANCH}
+cd montreal2027.ca | DESTINATION_DIR
+git checkout [BRANCH]
 ./scripts/install.sh
 ```
 
@@ -52,6 +51,34 @@ The setup script will prompt you to automatically start the Docker containers an
 ## A note about git commits
 
 After running `composer install`, git will be configured to use the scripts in the `.githooks/` directory.  Currently, there is a pre-commit hook that checks that the running Drupal config matches the config on disk.  If it does not, the commit is aborted.  In the rare case that you need to bypass this check, add the `--no-verify` option to your `git commit` command. If you are using VS Code, you can enable the `Allow No Verify Commit` option. To use the `No Verify` for a commit, click on the `...` next to either the repository or `Changes` right below `Repositories`. Expand the `Commit` menu, and select one of the `(No Verify)` options. There will be a pop-up warning that you are about to bypass the pre-commit hook and asks you to confirm the action.
+
+## Git Hooks
+
+Git hooks are configured automatically via Composer scripts and manual setup. The hooks are stored in the `.githooks/` directory and are configured using `git config core.hooksPath .githooks`.
+
+### Configuration
+- Automatically configured via Composer post-install and post-update scripts
+- Manual setup: `git config core.hooksPath .githooks`
+
+### Pre-Commit Validation
+Automatic check to ensure Drupal config is exported before commits:
+- **Script:** [.githooks/pre-commit](.githooks/pre-commit)
+- **Functionality:** Checks that Drupal configuration is in sync before allowing commits
+- **Environment Detection:** Automatically detects Docker or local Drush environments
+- **Bypass (emergency only):** `git commit --no-verify`
+
+The hook blocks commits if config changes haven't been exported via `drush cex`.
+
+### Post-Merge Hook
+Automatic synchronization of AI architecture map:
+- **Script:** [.githooks/post-merge](.githooks/post-merge)
+- **Functionality:** Syncs the graphify worktree after git merge operations
+- **Graphify Integration:** Automatically pulls updates from the `graph-data` branch
+
+### Merge Driver Configuration
+- The `merge.ours` driver is enabled via `git config merge.ours.driver true`
+- This driver can be used in `.gitattributes` to always prefer local changes during merges
+- Manual setup: `git config merge.ours.driver true`
 
 ## Getting Started with Docker
 
@@ -149,8 +176,8 @@ While Docker Desktop is a convenient option, there are several open source alter
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Montreal-2027/montreal2027.ca.git
-   cd montreal2027.ca
+   git clone https://github.com/Montreal-2027/montreal2027.ca.git [DESTINATION_DIR]
+   cd montreal2027.ca | DESTINATION_DIR
    ```
 
 2. **Environment configuration (optional)**
@@ -159,7 +186,7 @@ While Docker Desktop is a convenient option, there are several open source alter
    
    **Default values:**
    - Web accessible at: `http://localhost:8080`
-   - Database: `drupal` / `drupal` / `drupal`
+   - Database name/user/password: `drupal` / `drupal` / `drupal`
    - Container names: `montreal2027-web`, `montreal2027-db`
    - PHP version: 8.3
    - MariaDB version: 11.4
@@ -263,8 +290,8 @@ While Docker Desktop is a convenient option, there are several open source alter
 
 ```bash
 # View logs
-docker-compose logs -f web
-docker-compose logs -f db
+docker logs -f montreal2027-web
+docker logs -f montreal2027-db
 
 # Stop containers
 docker-compose stop
@@ -282,16 +309,16 @@ docker-compose down
 docker-compose down -v
 
 # Access web container shell
-docker-compose exec web sh
-
-# Access database (password: drupal)
-docker-compose exec db mysql -u drupal -p drupal
+docker exec -it montreal2027-web sh
 
 # Run Drush commands
-docker-compose exec web drush [command]
+docker exec -it montreal2027-web drush [command]
+
+# Access database
+docker exec -it montreal2027-web drush sqlc
 
 # Clear cache
-docker-compose exec web drush cr
+docker exec -it montreal2027-web drush cr
 
 # Rebuild containers after Dockerfile changes
 docker-compose up -d --build
@@ -301,11 +328,11 @@ docker-compose up -d --build
 
 1. **CSS Development**
    
-   The theme uses Sass. For local development outside Docker:
+   The theme uses Sass. For local and Docker development:
    ```bash
    cd web/themes/custom/montreal2027
    npm install
-   npm run watch
+   npm run watch:css
    ```
 
 2. **Syncing Production Data**
@@ -337,38 +364,38 @@ docker-compose up -d --build
    
    Export configuration changes:
    ```bash
-   docker-compose exec web drush config:export
+   [docker exec -it montreal2027-web ]drush config:export
    ```
 
    Import configuration:
    ```bash
-   docker-compose exec web drush config:import
+   [docker exec -it montreal2027-web ]drush config:import
    ```
 
 4. **Database Backups**
    ```bash
-   docker-compose exec web drush sql:dump --gzip > backup-$(date +%Y%m%d-%H%M%S).sql.gz
+   [docker exec -it montreal2027-web ]drush sql:dump --gzip > backup-$(date +%Y-%m-%d_%H:%M:%S).sql.gz
    ```
 
-### Troubleshooting
+### Docker Troubleshooting
 
 **Port conflicts**: If port 8080 is already in use, change `WEB_EXTERNAL_PORT` in `.env`
 
 **Permission issues**: The web container runs as the `nginx` user. If you encounter permission issues:
 ```bash
-docker-compose exec web chown -R nginx:nginx /var/www/html/web/sites/default/files
+docker exec -it montreal2027-web chown -R nginx:nginx /var/www/html/web/sites/default/files
 ```
 
 **Database connection errors**: Ensure the `DB_HOST` in `.env` is set to `db` (the service name)
 
 **Configuration not found**: Import the module configurations:
 ```bash
-docker-compose exec web drush config:import --partial --source=modules/custom/montreal2027_tools/config/install
+docker exec -it montreal2027-web drush config:import --partial --source=modules/custom/montreal2027_tools/config/install
 ```
 
 **Clear all caches**:
 ```bash
-docker-compose exec web drush cr
+docker exec -it montreal2027-web drush cr
 ```
 
 ## Getting Started with Native/Local Development
@@ -600,6 +627,17 @@ Synchronizes files and database from the production server to your local develop
 - SSH access to production server
 - SSH key configured for authentication
 - `rsync` installed locally
+
+## Common Pitfalls and Solutions
+
+- **Don't edit compiled CSS:** Always edit `src/scss/*.scss`, not `css/*.css`
+- **Config sync required:** After entity/field changes, run `drush cex` before committing (pre-commit hook enforces this)
+- **File permissions:** If permission errors occur, run `chmod -R u+w web/sites/default`
+- **Environment detection:** Pre-commit hook auto-detects Docker vs local - ensure containers are running if using Docker
+- **Git hooks not working:** If githooks aren't functioning, run `git config core.hooksPath .githooks` manually
+- **Graphify worktree issues:** If graphify isn't updating, ensure the worktree is properly set up via `scripts/setup-graphify.sh`
+- **Port conflicts (Docker):** Default is `8080:80` - change `WEB_EXTERNAL_PORT` in `.env` if needed
+- **Node modules in deployment:** Deployment workflow removes `node_modules` after CSS build to reduce footprint
 
 ## Custom Modules
 

@@ -68,4 +68,33 @@ if [ "$current_hooks_path" != ".githooks" ]; then
     git config core.hooksPath .githooks
 fi
 
+# Enable the merge driver for merge.ours
+git config merge.ours.driver true
+
+# --- GUARDRAIL 5: MCP Server Setup ---
+# Install graphify MCP server if not present (useful for all developers)
+printf "Checking for graphify MCP server...\n"
+
+# Check if graphify-mcp is available
+if ! command -v graphify-mcp >/dev/null 2>&1; then
+    printf "Installing graphify MCP server...\n"
+    # Try to install via pip
+    if command -v pip3 >/dev/null 2>&1; then
+        pip3 install graphify-mcp-server 2>/dev/null || printf "Failed to install via pip3. Please install graphify-mcp manually.\n"
+    elif command -v pip >/dev/null 2>&1; then
+        pip install graphify-mcp-server 2>/dev/null || printf "Failed to install via pip. Please install graphify-mcp manually.\n"
+    else
+        printf "No pip found. Please install graphify-mcp manually.\n"
+    fi
+else
+    printf "graphify MCP server is already installed.\n"
+fi
+
+# Verify the installation
+if command -v graphify-mcp >/dev/null 2>&1; then
+    printf "graphify MCP server is ready for use with .vscode/mcp.json configuration.\n"
+else
+    printf "Please ensure graphify-mcp is in your PATH for MCP integration.\n"
+fi
+
 printf "✔ Environment is synchronized via %s.\n" "$SCRIPT_NAME"

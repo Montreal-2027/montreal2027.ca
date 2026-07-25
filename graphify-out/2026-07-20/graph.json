@@ -9,12 +9,11 @@
         "nodes": [
           "web_modules_custom_montreal2027_tools_drush_services",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-          "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-          "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
           "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-          "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+          "web_modules_custom_montreal2027_tools_config_install"
         ],
         "relation": "participate_in",
         "confidence": "EXTRACTED",
@@ -2666,19 +2665,6 @@
       "norm_label": "montreal 2027 tools info"
     },
     {
-      "label": "Montreal 2027 Tools Menu Links",
-      "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "community": 9,
-      "norm_label": "montreal 2027 tools menu links"
-    },
-    {
       "label": "Montreal 2027 Tools Routing",
       "file_type": "code",
       "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
@@ -2692,20 +2678,20 @@
       "norm_label": "montreal 2027 tools routing"
     },
     {
-      "label": "Staff Contact Settings Configuration",
+      "label": "Montreal 2027 Tools Menu Links",
       "file_type": "code",
-      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
+      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "community": 9,
-      "norm_label": "staff contact settings configuration"
+      "norm_label": "montreal 2027 tools menu links"
     },
     {
-      "label": "Montreal 2027 Tools Schema",
+      "label": "Montreal 2027 Tools Configuration Schema",
       "file_type": "code",
       "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
       "source_location": null,
@@ -2713,9 +2699,23 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "id": "web_modules_custom_montreal2027_tools_config_schema",
+      "community": 19,
+      "norm_label": "montreal 2027 tools configuration schema"
+    },
+    {
+      "label": "Montreal 2027 Tools Configuration Install",
+      "file_type": "code",
+      "source_file": "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "verification": "unverified",
+      "id": "web_modules_custom_montreal2027_tools_config_install",
       "community": 9,
-      "norm_label": "montreal 2027 tools schema"
+      "norm_label": "montreal 2027 tools configuration install"
     },
     {
       "label": "Montreal 2027 Tools Libraries",
@@ -2745,19 +2745,6 @@
       "norm_label": "montreal 2027 tools config translation"
     },
     {
-      "label": "Montreal 2027 Theme Schema",
-      "file_type": "code",
-      "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_schema",
-      "community": 19,
-      "norm_label": "montreal 2027 theme schema"
-    },
-    {
       "label": "Montreal 2027 Theme Info",
       "file_type": "code",
       "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
@@ -2767,7 +2754,7 @@
       "author": null,
       "contributor": null,
       "id": "web_themes_custom_montreal2027_montreal2027_info",
-      "community": 21,
+      "community": 9,
       "norm_label": "montreal 2027 theme info"
     },
     {
@@ -2780,8 +2767,21 @@
       "author": null,
       "contributor": null,
       "id": "web_themes_custom_montreal2027_montreal2027_libraries",
-      "community": 22,
+      "community": 9,
       "norm_label": "montreal 2027 theme libraries"
+    },
+    {
+      "label": "Montreal 2027 Theme Configuration Schema",
+      "file_type": "code",
+      "source_file": "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "web_themes_custom_montreal2027_config_schema",
+      "community": 9,
+      "norm_label": "montreal 2027 theme configuration schema"
     }
   ],
   "links": [
@@ -6201,11 +6201,11 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_info"
+      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "target": "web_modules_custom_montreal2027_tools_config_install"
     },
     {
       "relation": "references",
@@ -6251,91 +6251,31 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
+      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
+      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
+      "target": "web_themes_custom_montreal2027_montreal2027_info"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu"
+      "source": "web_themes_custom_montreal2027_montreal2027_info",
+      "target": "web_themes_custom_montreal2027_config_schema"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
+      "source_file": "web/themes/custom/montreal2027/montreal2027.info.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "target": "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+      "source": "web_themes_custom_montreal2027_montreal2027_info",
+      "target": "web_themes_custom_montreal2027_montreal2027_libraries"
     }
   ],
   "hyperedges": [
@@ -6345,12 +6285,11 @@
       "nodes": [
         "web_modules_custom_montreal2027_tools_drush_services",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-        "web_modules_custom_montreal2027_tools_config_install_montreal2027_tools_staff_contact_settings",
-        "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
+        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
         "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-        "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation"
+        "web_modules_custom_montreal2027_tools_config_install"
       ],
       "relation": "participate_in",
       "confidence": "EXTRACTED",
@@ -6358,5 +6297,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "e7cf12d1b35f3d603ac704d4cd790ecae05ccd2c"
+  "built_at_commit": "229b7d6ac00700a6ffc5e49bfcc4a115ff324da4"
 }
