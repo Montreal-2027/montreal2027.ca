@@ -3113,7 +3113,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_issue_template_new-content",
+      "id": "github_issue_template_new-content_md",
       "community": 13,
       "norm_label": "new content issue template"
     },
@@ -3126,7 +3126,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_workflows_graphify",
+      "id": "github_workflows_graphify_yml",
       "community": 13,
       "norm_label": "graphify workflow"
     },
@@ -3139,7 +3139,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "recipes_readme",
+      "id": "recipes_readme_txt",
       "community": 13,
       "norm_label": "recipes readme"
     },
@@ -3152,7 +3152,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "web_sites_default_development_services",
+      "id": "web_sites_default_development_services_yml",
       "community": 13,
       "norm_label": "development services configuration"
     }
@@ -6676,31 +6676,31 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/graphify",
+      "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "github_workflows_graphify",
-      "target": "github_issue_template_new-content"
+      "source": "github_workflows_graphify_yml",
+      "target": "github_issue_template_new-content_md"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "recipes/README",
+      "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "recipes_readme",
-      "target": "github_workflows_graphify"
+      "source": "github_workflows_graphify_yml",
+      "target": "recipes_readme_txt"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "web/sites/default/development.services",
+      "source_file": ".github/workflows/graphify.yml",
       "source_location": null,
       "weight": 1.0,
-      "source": "web_sites_default_development_services",
-      "target": "github_workflows_graphify"
+      "source": "github_workflows_graphify_yml",
+      "target": "web_sites_default_development_services_yml"
     }
   ],
   "hyperedges": [
@@ -6722,5 +6722,5 @@
       "source_file": "web/modules/custom/montreal2027_tools/drush.services.yml"
     }
   ],
-  "built_at_commit": "40eb05d5b17c40c0930cf47c5d663386ea0c08b9"
+  "built_at_commit": "6839fd227b6fcdd443a2617d0789e47373fb1b0c"
 }
