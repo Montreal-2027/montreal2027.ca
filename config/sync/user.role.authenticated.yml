@@ -2,7 +2,10 @@ uuid: 41e2a67d-c7b6-4f27-b23e-d83b02356a08
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
+    - filter
     - media
     - system
     - workspaces_access
@@ -14,5 +17,6 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
+  - 'use text format webform_default'
   - 'view media'
   - workspace_live_view_content

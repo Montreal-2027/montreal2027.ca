@@ -6,6 +6,7 @@ dependencies:
     - filter.format.full_html
     - taxonomy.vocabulary.divisions
   module:
+    - entity_workflow_workspace
     - filter
     - help
     - system
