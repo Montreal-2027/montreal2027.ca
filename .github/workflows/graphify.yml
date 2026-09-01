@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required to push updates back to the branch
-      models: read   # Required for GitHub Models API access (used as LLM backend)
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
@@ -55,20 +54,6 @@ jobs:
             echo "ERROR: Graphify command not found"
             exit 1
           fi
-
-      - name: Debug Network Connectivity
-        run: |
-          echo "Testing connectivity to incorrect OpenAI endpoint..."
-          curl -v https://models.inference.ai.azure.com || echo "Original incorrect endpoint failed (expected)"
-          echo "Testing DNS resolution for original endpoint..."
-          nslookup models.inference.ai.azure.com || echo "DNS resolution failed for incorrect endpoint (expected)"
-          
-          echo "Testing connectivity to GitHub API endpoint..."
-          curl -v https://api.github.com || echo "GitHub API endpoint failed"
-          echo "Testing DNS resolution for GitHub API..."
-          nslookup api.github.com || echo "DNS resolution failed for GitHub API"
-          
-          echo "Network connectivity test completed"
 
       - name: Patch Graphify for Drupal extensions
         run: |
@@ -120,76 +105,17 @@ jobs:
           
           echo "Patch applied successfully"
 
-      - name: Regenerate Code Architecture Map
-        env:
-          # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
-          # No external API key required — just the models: read permission above.
-          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://api.github.com
-          OPENAI_MODEL: gpt-4o-mini
-        # Use `graphify extract` (headless CI mode) so --token-budget is available.
-        # --token-budget 6000 keeps each chunk under the 8k token limit of gpt-4o-mini on GitHub Models.
-        # Adding retries for connection stability and debugging information
+      - name: Build Codebase Knowledge Graph
         run: |
-          echo "Debug: Checking environment variables"
-          echo "OPENAI_API_KEY set: ${{ secrets.GITHUB_TOKEN != '' && 'YES' || 'NO' }}"
-          echo "OPENAI_BASE_URL: $OPENAI_BASE_URL"
-          echo "OPENAI_MODEL: $OPENAI_MODEL"
+          python3 -m graphify update .
           
-          retry_count=5
-          for i in $(seq 1 $retry_count); do
-            echo "Attempt $i of $retry_count"
-            if graphify extract . --token-budget 6000; then
-              echo "Graphify extraction succeeded"
-              break
-            else
-              echo "Graphify extraction failed, retrying..."
-              if [ $i -eq $retry_count ]; then
-                echo "All attempts failed"
-                # Try without token budget as fallback
-                echo "Trying without token budget as fallback..."
-                if graphify extract .; then
-                  echo "Fallback extraction succeeded"
-                  break
-                else
-                  echo "Fallback extraction also failed"
-                  exit 1
-                fi
-              fi
-              sleep 10
-            fi
-          done
-
       - name: Cluster Graph and Generate Report
-        env:
-          # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
-          # No external API key required — just the models: read permission above.
-          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://api.github.com
-          OPENAI_MODEL: gpt-4o-mini
-        # Runs community detection, names communities via LLM, and writes GRAPH_REPORT.md + graph.html
-        # Adding retries for connection stability and debugging information
         run: |
-          echo "Debug: Checking environment variables for clustering"
-          echo "OPENAI_API_KEY set: ${{ secrets.GITHUB_TOKEN != '' && 'YES' || 'NO' }}"
-          echo "OPENAI_BASE_URL: $OPENAI_BASE_URL"
-          echo "OPENAI_MODEL: $OPENAI_MODEL"
+          graphify cluster-only .
           
-          retry_count=5
-          for i in $(seq 1 $retry_count); do
-            echo "Attempt $i of $retry_count"
-            if graphify cluster-only .; then
-              echo "Graphify clustering succeeded"
-              break
-            else
-              echo "Graphify clustering failed, retrying..."
-              if [ $i -eq $retry_count ]; then
-                echo "All attempts failed"
-                exit 1
-              fi
-              sleep 10
-            fi
-          done
+      - name: Export Architecture Artifacts
+        run: |
+          graphify export callflow-html
 
       - name: Safely Inject Copilot Instructions
         run: |
@@ -217,10 +143,10 @@ jobs:
           fi
 
 # PART A: Commit only the instruction file to your feature/develop branch
-      - name: Commit AI Instructions
+      - name: Commit Graphify Instructions
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore(ai): update graphify context in AGENTS.md [skip ci]"
+          commit_message: "chore(graphify): update graphify context in AGENTS.md [skip ci]"
           file_pattern: "AGENTS.md"
 
       # PART B: Push the heavy graph data to the separate 'graph-data' branch
