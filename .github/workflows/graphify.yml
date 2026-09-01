@@ -49,7 +49,6 @@ jobs:
           if command -v graphify >/dev/null 2>&1; then
             echo "Graphify command found"
             graphify --version || echo "Failed to get graphify version"
-            graphify --help || echo "Failed to get graphify help"
           else
             echo "ERROR: Graphify command not found"
             exit 1
