@@ -150,7 +150,7 @@ jobs:
 
       # PART B: Push the heavy graph data to the separate 'graph-data' branch
       - name: Push Graph to Shadow Branch
-        uses: s0/git-publish-subdir-action@develop
+        uses: s0/git-publish-subdir-action@v2
         env:
           REPO: self
           BRANCH: graph-data
