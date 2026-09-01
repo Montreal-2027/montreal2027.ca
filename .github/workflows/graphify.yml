@@ -58,10 +58,17 @@ jobs:
 
       - name: Debug Network Connectivity
         run: |
-          echo "Testing connectivity to OpenAI endpoint..."
-          curl -v https://models.inference.ai.azure.com || echo "curl failed to connect"
-          echo "Testing DNS resolution..."
-          nslookup models.inference.ai.azure.com
+          echo "Testing connectivity to incorrect OpenAI endpoint..."
+          curl -v https://models.inference.ai.azure.com || echo "Original incorrect endpoint failed (expected)"
+          echo "Testing DNS resolution for original endpoint..."
+          nslookup models.inference.ai.azure.com || echo "DNS resolution failed for incorrect endpoint (expected)"
+          
+          echo "Testing connectivity to GitHub API endpoint..."
+          curl -v https://api.github.com || echo "GitHub API endpoint failed"
+          echo "Testing DNS resolution for GitHub API..."
+          nslookup api.github.com || echo "DNS resolution failed for GitHub API"
+          
+          echo "Network connectivity test completed"
 
       - name: Patch Graphify for Drupal extensions
         run: |
@@ -118,7 +125,7 @@ jobs:
           # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
           # No external API key required — just the models: read permission above.
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://models.inference.ai.azure.com
+          OPENAI_BASE_URL: https://api.github.com
           OPENAI_MODEL: gpt-4o-mini
         # Use `graphify extract` (headless CI mode) so --token-budget is available.
         # --token-budget 6000 keeps each chunk under the 8k token limit of gpt-4o-mini on GitHub Models.
@@ -155,8 +162,10 @@ jobs:
 
       - name: Cluster Graph and Generate Report
         env:
+          # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
+          # No external API key required — just the models: read permission above.
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://models.inference.ai.azure.com
+          OPENAI_BASE_URL: https://api.github.com
           OPENAI_MODEL: gpt-4o-mini
         # Runs community detection, names communities via LLM, and writes GRAPH_REPORT.md + graph.html
         # Adding retries for connection stability and debugging information
