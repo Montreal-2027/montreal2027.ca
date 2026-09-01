@@ -99,34 +99,6 @@
       "ref_support"
     ],
     "2": [
-      "drupal_core_block_blockbase",
-      "drupal_core_controller_controllerbase",
-      "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_language_languagemanagerinterface",
-      "drupal_core_logger_loggerchannelfactoryinterface",
-      "drupal_core_mail_mailmanagerinterface",
-      "drupal_core_plugin_containerfactoryplugininterface",
-      "drupal_core_routing_routematchinterface",
-      "symfony_component_dependencyinjection_containerinterface",
-      "symfony_component_httpfoundation_jsonresponse",
-      "symfony_component_httpfoundation_request",
-      "url",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
-    ],
-    "3": [
       "composer_extra_installer_paths",
       "composer_installer_paths_drush_commands_contrib_name",
       "composer_installer_paths_recipes_name",
@@ -141,6 +113,7 @@
       "ref_type_bower_asset",
       "ref_type_drupal_core",
       "ref_type_drupal_custom_module",
+      "ref_type_drupal_custom_profile",
       "ref_type_drupal_custom_theme",
       "ref_type_drupal_drush",
       "ref_type_drupal_library",
@@ -149,6 +122,30 @@
       "ref_type_drupal_recipe",
       "ref_type_drupal_theme",
       "ref_type_npm_asset"
+    ],
+    "3": [
+      "drupal_core_controller_controllerbase",
+      "drupal_core_entity_entitytypemanagerinterface",
+      "drupal_core_logger_loggerchannelfactoryinterface",
+      "drupal_core_mail_mailmanagerinterface",
+      "drupal_user_userinterface",
+      "drush_commands_drushcommands",
+      "jsonresponse",
+      "symfony_component_dependencyinjection_containerinterface",
+      "symfony_component_httpfoundation_jsonresponse",
+      "symfony_component_httpfoundation_request",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
     ],
     "4": [
       "composer",
@@ -208,6 +205,24 @@
       "composer_platform_php"
     ],
     "7": [
+      "drupal_core_block_attribute_block",
+      "drupal_core_block_blockbase",
+      "drupal_core_language_languagemanagerinterface",
+      "drupal_core_plugin_containerfactoryplugininterface",
+      "drupal_core_routing_routematchinterface",
+      "drupal_core_stringtranslation_translatablemarkup",
+      "drupal_core_url",
+      "url",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
+    ],
+    "8": [
       "drupal_core_form_configformbase",
       "drupal_core_form_formstateinterface",
       "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
@@ -223,7 +238,7 @@
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform"
     ],
-    "8": [
+    "9": [
       "web_themes_custom_montreal2027_montreal2027",
       "web_themes_custom_montreal2027_montreal2027_get_image_info",
       "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
@@ -239,23 +254,10 @@
       "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
-    "9": [
-      "docker-compose",
-      "montreal2027_theme_info",
-      "montreal2027_theme_libraries",
-      "montreal2027_theme_schema",
-      "montreal2027_tools_contact_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "web_modules_custom_montreal2027_tools_drush_services",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
-      "web_sites_default_development_services"
-    ],
     "10": [
-      "drupal_core_url",
+      "drupal_component_utility_html",
+      "drupal_core_language_languageinterface",
+      "drupal_core_render_markup",
       "drupal_taxonomy_terminterface",
       "drupal_taxonomy_termstorageinterface",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
@@ -267,15 +269,6 @@
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
     ],
     "11": [
-      "drush_commands_drushcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath"
-    ],
-    "12": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_module_formstateinterface",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_overview_terms_alter",
@@ -283,29 +276,33 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
-    "13": [
+    "12": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "14": [
+    "13": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "15": [
+    "14": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "16": [
+    "15": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "17": [
+    "16": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "18": [
+    "17": [
       "scripts_sync",
       "scripts_sync_sh__entry"
+    ],
+    "18": [
+      "symfony_component_dotenv_dotenv",
+      "web_sites_default_settings"
     ],
     "19": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
@@ -316,32 +313,23 @@
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
     "21": [
-      "github_issue_template_new-content"
-    ],
-    "22": [
-      "github_workflows_graphify"
-    ],
-    "23": [
-      "recipes_readme"
-    ],
-    "24": [
-      "web_sites_default_settings"
+      "github_issue_template_new_content"
     ]
   },
   "cohesion": {
     "0": 0.03125,
     "1": 0.06666666666666667,
-    "2": 0.14461538461538462,
-    "3": 0.09523809523809523,
+    "2": 0.08695652173913043,
+    "3": 0.15151515151515152,
     "4": 0.11764705882352941,
     "5": 0.11764705882352941,
     "6": 0.125,
-    "7": 0.21978021978021978,
-    "8": 0.2087912087912088,
-    "9": 0.1794871794871795,
-    "10": 0.37777777777777777,
-    "11": 0.42857142857142855,
-    "12": 0.4666666666666667,
+    "7": 0.2,
+    "8": 0.21978021978021978,
+    "9": 0.2087912087912088,
+    "10": 0.2878787878787879,
+    "11": 0.4666666666666667,
+    "12": 1.0,
     "13": 1.0,
     "14": 1.0,
     "15": 1.0,
@@ -350,10 +338,7 @@
     "18": 1.0,
     "19": 1.0,
     "20": 1.0,
-    "21": 1.0,
-    "22": 1.0,
-    "23": 1.0,
-    "24": 1.0
+    "21": 1.0
   },
   "gods": [
     {
@@ -362,13 +347,13 @@
       "degree": 64
     },
     {
-      "id": "composer_config_allow_plugins",
-      "label": "allow-plugins",
+      "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
+      "label": "post-create-project-cmd-message",
       "degree": 12
     },
     {
-      "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "label": "post-create-project-cmd-message",
+      "id": "composer_config_allow_plugins",
+      "label": "allow-plugins",
       "degree": 12
     },
     {
@@ -387,118 +372,85 @@
       "degree": 9
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
-      "label": "Montreal 2027 Tools Info",
-      "degree": 9
-    },
-    {
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
       "label": "StaffPageController",
       "degree": 7
     },
     {
-      "id": "composer_extra",
-      "label": "extra",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "label": "ContactImportCommands",
       "degree": 6
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "label": "ContactImportCommands",
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
+      "label": "StaffPageSettingsForm",
+      "degree": 6
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform",
+      "label": "StaffPageSettingsForm",
       "degree": 6
     }
   ],
   "surprises": [
     {
-      "source": "Docker Compose Configuration",
-      "target": "Montreal 2027 Theme Info",
+      "source": "StaffPageController",
+      "target": "Drupal\\Core\\Controller\\ControllerBase",
       "source_files": [
-        "docker-compose.yml",
-        "web/themes/custom/montreal2027/montreal2027.info.yml"
+        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+        ""
       ],
       "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
+      "relation": "inherits",
+      "note": "Bridges community 10 → community 3"
     },
     {
-      "source": "Docker Compose Configuration",
-      "target": "Montreal 2027 Theme Libraries",
+      "source": "StaffContactController",
+      "target": "Drupal\\Core\\Language\\LanguageManagerInterface",
       "source_files": [
-        "docker-compose.yml",
-        "web/themes/custom/montreal2027/montreal2027.libraries.yml"
+        "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+        ""
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Docker Compose Configuration",
-      "target": "Montreal 2027 Tools Info",
-      "source_files": [
-        "docker-compose.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Docker Compose Configuration",
-      "target": "Montreal 2027 Tools Libraries",
-      "source_files": [
-        "docker-compose.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "connects across different repos/directories"
-    },
-    {
-      "source": "Drush Services Configuration",
-      "target": "Montreal 2027 Tools Info",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/drush.services.yml",
-        "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "peripheral node `Drush Services Configuration` unexpectedly reaches hub `Montreal 2027 Tools Info`"
+      "note": "Bridges community 3 → community 7"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `require` connect `Drupal Admin Tools` to `Composer Configuration`?",
-      "why": "High betweenness centrality (0.194) - this node is a cross-community bridge."
+      "question": "Why does `require` connect `require` to `composer.json`?",
+      "why": "High betweenness centrality (0.205) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `extra` connect `Project Setup Utilities` to `Web Asset Management`, `Composer Configuration`?",
-      "why": "High betweenness centrality (0.155) - this node is a cross-community bridge."
+      "question": "Why does `extra` connect `post-create-project-cmd-message` to `installer-paths`, `composer.json`?",
+      "why": "High betweenness centrality (0.166) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `installer-paths` connect `Web Asset Management` to `Project Setup Utilities`?",
-      "why": "High betweenness centrality (0.076) - this node is a cross-community bridge."
+      "question": "Why does `installer-paths` connect `installer-paths` to `post-create-project-cmd-message`?",
+      "why": "High betweenness centrality (0.083) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
-      "question": "What connects `name`, `description`, `type` to the rest of the system?",
-      "why": "141 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "question": "What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?",
+      "why": "132 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Drupal Admin Tools` be split into smaller, more focused modules?",
+      "question": "Should `require` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.03125 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Project Setup Utilities` be split into smaller, more focused modules?",
+      "question": "Should `post-create-project-cmd-message` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
-      "question": "Should `Drupal Core Components` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.14461538461538462 - nodes in this community are weakly interconnected."
+      "question": "Should `installer-paths` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
     }
   ]
 }

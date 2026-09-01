@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --border: #334155;
+  --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8;
+  --warn: #fbbf24; --err: #f87171; --ok: #34d399;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 24px; }
+h1 { font-size: 2.4rem; margin-bottom: 8px; background: linear-gradient(135deg, var(--accent), #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 1.7rem; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+h3 { font-size: 1.25rem; margin: 32px 0 12px; color: var(--accent); }
+h4 { font-size: 1.05rem; margin: 20px 0 8px; color: var(--warn); }
+p { margin: 8px 0; color: var(--muted); }
+.subtitle { color: var(--muted); font-size: 1.1rem; margin-bottom: 32px; }
+.mermaid { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin: 20px 0; overflow-x: auto; position: relative; }
+.mermaid.is-enhanced { padding: 0; overflow: hidden; min-height: 260px; }
+.mermaid-viewport { padding: 54px 24px 24px; overflow: hidden; cursor: grab; touch-action: none; min-height: 260px; }
+.mermaid-viewport.is-dragging { cursor: grabbing; }
+.mermaid-viewport svg { max-width: none !important; height: auto; transform-origin: 0 0; transition: transform 120ms ease; }
+.mermaid-toolbar { position: absolute; top: 10px; right: 10px; z-index: 3; display: flex; align-items: center; gap: 6px; padding: 6px; background: rgba(15,23,42,0.92); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+.mermaid-toolbar button, .mermaid-toolbar .zoom-level { height: 28px; min-width: 32px; border: 1px solid var(--border); border-radius: 6px; background: #1e293b; color: var(--text); font: 600 0.78rem system-ui, sans-serif; display: inline-flex; align-items: center; justify-content: center; }
+.mermaid-toolbar button { cursor: pointer; }
+.mermaid-toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+.mermaid-toolbar .zoom-level { min-width: 52px; color: var(--muted); background: transparent; }
+.call-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+.call-table th { background: #1a2744; color: var(--accent); text-align: left; padding: 10px 14px; border: 1px solid var(--border); }
+.call-table td { padding: 8px 14px; border: 1px solid var(--border); vertical-align: top; }
+.call-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.tag-async { background: #7c3aed33; color: #a78bfa; }
+.tag-class { background: #05966933; color: var(--ok); }
+.tag-func { background: #2563eb33; color: var(--accent); }
+.tag-cmd { background: #d9770633; color: var(--warn); }
+.tag-endpoint { background: #dc262633; color: var(--err); }
+.tag-hook { background: #db277733; color: #f472b6; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin: 16px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin: 16px 0; }
+.arrow-chain { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: var(--accent); padding: 10px; background: rgba(56,189,248,0.06); border-radius: 6px; }
+code { font-family: 'Fira Code', 'Cascadia Code', monospace; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 3px; font-size: 0.88em; }
+ul, ol { margin: 8px 0 8px 24px; color: var(--muted); }
+li { margin: 4px 0; }
+a { color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.nav { position: sticky; top: 0; background: var(--bg); z-index: 10; padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.9rem; }
+.nav a { text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .container { padding: 16px; } h1 { font-size: 1.8rem; } }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
+<p class="subtitle">Generated from graphify knowledge graph: 271 nodes, 310 edges, 22 communities. Commit: f76ffb6</p>
+
+<div class="nav">
+    <a href="#overview">Architecture Overview</a>
+    <a href="#extract-pipeline">Extraction Pipeline</a>
+    <a href="#build-graph">Graph Build</a>
+    <a href="#cli-skills">CLI &amp; Skill Installers</a>
+    <a href="#ingest-cache-update">Ingestion &amp; Updates</a>
+    <a href="#staffcontactcontroller-php">StaffContactController.php</a>
+    <a href="#drupal-core-form-formstateinterface">Drupal\Core\Form\FormStateInterface</a>
+    <a href="#staffpagecontroller-php">StaffPageController.php</a>
+    <a href="#montreal2027-tools-module">montreal2027_tools.module</a>
+    <a href="#entrypoint-sh">entrypoint.sh</a>
+    <a href="#pre-commit">pre-commit</a>
+    <a href="#setup-graphify-sh">setup-graphify.sh</a>
+    <a href="#sync-sh">sync.sh</a>
+    <a href="#symfony-component-dotenv-dotenv">Symfony\Component\Dotenv\Dotenv</a>
+    <a href="#staff-contact-modal-js">staff-contact-modal.js</a>
+    <a href="#other">Other</a>
+</div>
+
+<!-- ====== Architecture Overview ====== -->
+<h2 id="overview">1. Architecture Overview</h2>
+
+<div class="mermaid">
+
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>2 nodes</small>")
+    class EXTRACT_PIPELINE_5F350230 module;
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>184 nodes</small>")
+    class BUILD_GRAPH_321CBB04 module;
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>2 nodes</small>")
+    class CLI_SKILLS_9964CBB8 module;
+    INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>16 nodes</small>")
+    class INGEST_CACHE_UPDATE_FF457338 module;
+    STAFFCONTACTCONTROLLER_PHP_37D57701("StaffContactController.php<br/><small>22 nodes</small>")
+    class STAFFCONTACTCONTROLLER_PHP_37D57701 module;
+    DRUPAL_CORE_FORM_FORMSTATEINTERFACE_2CE0A312("Drupal\Core\Form\FormStateInterface<br/><small>14 nodes</small>")
+    class DRUPAL_CORE_FORM_FORMSTATEINTERFACE_2CE0A312 module;
+    STAFFPAGECONTROLLER_PHP_64D0CFEE("StaffPageController.php<br/><small>12 nodes</small>")
+    class STAFFPAGECONTROLLER_PHP_64D0CFEE module;
+    MONTREAL2027_TOOLS_MODULE_C93A87C0("montreal2027_tools.module<br/><small>6 nodes</small>")
+    class MONTREAL2027_TOOLS_MODULE_C93A87C0 module;
+    ENTRYPOINT_SH_6694B177("entrypoint.sh<br/><small>2 nodes</small>")
+    class ENTRYPOINT_SH_6694B177 module;
+    PRE_COMMIT_5A0B1BB2("pre-commit<br/><small>2 nodes</small>")
+    class PRE_COMMIT_5A0B1BB2 module;
+    SETUP_GRAPHIFY_SH_EC9F7844("setup-graphify.sh<br/><small>2 nodes</small>")
+    class SETUP_GRAPHIFY_SH_EC9F7844 module;
+    SYNC_SH_E29BAD95("sync.sh<br/><small>2 nodes</small>")
+    class SYNC_SH_E29BAD95 module;
+    SYMFONY_COMPONENT_DOTENV_DOTENV_871B7CAE("Symfony\Component\Dotenv\Dotenv<br/><small>2 nodes</small>")
+    class SYMFONY_COMPONENT_DOTENV_DOTENV_871B7CAE module;
+    STAFF_CONTACT_MODAL_JS_F3937AE8("staff-contact-modal.js<br/><small>2 nodes</small>")
+    class STAFF_CONTACT_MODAL_JS_F3937AE8 module;
+    OTHER_D0941E68("Other<br/><small>1 nodes</small>")
+    class OTHER_D0941E68 module;
+    STAFFCONTACTCONTROLLER_PHP_37D57701 -->|references x3| INGEST_CACHE_UPDATE_FF457338
+    STAFFPAGECONTROLLER_PHP_64D0CFEE -->|inherits x2| STAFFCONTACTCONTROLLER_PHP_37D57701
+    STAFFPAGECONTROLLER_PHP_64D0CFEE -->|calls x2| INGEST_CACHE_UPDATE_FF457338
+    INGEST_CACHE_UPDATE_FF457338 -->|references x2| STAFFCONTACTCONTROLLER_PHP_37D57701
+    INGEST_CACHE_UPDATE_FF457338 -->|imports| STAFFPAGECONTROLLER_PHP_64D0CFEE
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h4>Architecture Layers</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
+      <tr><td>Extraction Pipeline</td><td>2</td><td><code>19</code></td></tr><tr><td>Graph Build</td><td>184</td><td><code>0, 1, 2, 4, 5, 6, 9, 13</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>15</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>16</td><td><code>7</code></td></tr><tr><td>StaffContactController.php</td><td>22</td><td><code>3</code></td></tr><tr><td>Drupal\Core\Form\FormStateInterface</td><td>14</td><td><code>8</code></td></tr><tr><td>StaffPageController.php</td><td>12</td><td><code>10</code></td></tr><tr><td>montreal2027_tools.module</td><td>6</td><td><code>11</code></td></tr><tr><td>entrypoint.sh</td><td>2</td><td><code>12</code></td></tr><tr><td>pre-commit</td><td>2</td><td><code>14</code></td></tr><tr><td>setup-graphify.sh</td><td>2</td><td><code>16</code></td></tr><tr><td>sync.sh</td><td>2</td><td><code>17</code></td></tr><tr><td>Symfony\Component\Dotenv\Dotenv</td><td>2</td><td><code>18</code></td></tr><tr><td>staff-contact-modal.js</td><td>2</td><td><code>20</code></td></tr><tr><td>Other</td><td>1</td><td><code>21</code></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Core Flow</h4>
+    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; CLI &amp; Skill Installers -&gt; Ingestion &amp; Updates -&gt; StaffContactController.php -&gt; Drupal\Core\Form\FormStateInterface -&gt; StaffPageController.php</div>
+  </div>
+</div>
+<div class="grid">
+  <div class="card">
+    <h4>Graph Report Highlights</h4>
+    <ul>
+      <li>271 nodes · 310 edges · 22 communities (12 shown, 7 thin omitted)</li>
+      <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)</li>
+      <li>Token cost: 0 input · 0 output</li>
+      <li>1. `require` - 64 edges</li>
+      <li>2. `post-create-project-cmd-message` - 12 edges</li>
+      <li>3. `allow-plugins` - 12 edges</li>
+    </ul>
+  </div>
+</div>
+<hr>
+<!-- ====== 2. Extraction Pipeline ====== -->
+<h2 id="extract-pipeline">2. Extraction Pipeline</h2>
+<p>Extraction Pipeline groups implementation around language, togglejs, web, modules, mostly in montreal2027_tools/js/language-toggle.js. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Extraction Pipeline (2 nodes, 1 edges)
+    web_modules_custom_montreal2027_tools_js_languag_77f7e00c("language-toggle.js")
+    web_modules_custom_montreal2027_tools_js_languag_9ede02dd("attach()<br/><small>montreal2027_tools/js/language-toggle.js</small>")
+    web_modules_custom_montreal2027_tools_js_languag_77f7e00c -->|contains| web_modules_custom_montreal2027_tools_js_languag_9ede02dd
+    class web_modules_custom_montreal2027_tools_js_languag_77f7e00c module;
+    class web_modules_custom_montreal2027_tools_js_languag_9ede02dd function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>attach()</code><br><small style="color:var(--muted)">montreal2027_tools/js/language-toggle.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>attach() node in montreal2027_tools/js/language-toggle.js.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>language-toggle.js</code><br><small style="color:var(--muted)">montreal2027_tools/js/language-toggle.js</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>language-toggle.js node in montreal2027_tools/js/language-toggle.js.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>montreal2027_tools/js/language-toggle.js</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 3. Graph Build ====== -->
+<h2 id="build-graph">3. Graph Build</h2>
+<p>Graph Build groups implementation around composerjson, drupal, montreal2027, web, mostly in composer.json, custom/montreal2027/package.json, custom/montreal2027/montreal2027.theme. This section covers 184 nodes and 187 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Graph Build (184 nodes, 187 edges)
+    subgraph build_graph_custom_montreal2027_montreal2027_the_705bf604["custom/montreal2027/montreal2027.theme"]
+        web_themes_custom_montreal2027_montreal2027_049635f7("montreal2027.theme")
+        web_themes_custom_montreal2027_montreal2027_mont_ac3e389e("block montreal2027 content()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa("node guest teaser()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_0ace2877("montreal2027 preprocess page()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65("paragraph guest block()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_031934fa("preprocess paragraph guests()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_cf74bc54("in content language()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_get_a1dce736("get_image_info()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+        web_themes_custom_montreal2027_montreal2027_mont_050352ea("guest taxonomy paragraph()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+    end
+    subgraph build_graph_custom_montreal2027_package_json_99ded968["custom/montreal2027/package.json"]
+        web_themes_custom_montreal2027_package_dependenc_c4903f80("@parcel/watcher<br/><small>custom/montreal2027/package.json</small>")
+        parcel_watcher_c33ddc4f("@parcel/watcher<br/><small>custom/montreal2027/package.json</small>")
+        web_themes_custom_montreal2027_package_devdepend_5da53dd0("sass<br/><small>custom/montreal2027/package.json</small>")
+        sass_5d7463cd("sass<br/><small>custom/montreal2027/package.json</small>")
+    end
+    subgraph build_graph_githooks_post_merge_9de8f209[".githooks/post-merge"]
+        githooks_post_merge_d7e2d0d9("post-merge")
+        githooks_post_merge_entry_d80608cd("post-merge script<br/><small>.githooks/post-merge</small>")
+    end
+    subgraph build_graph_composer_json_6a456e64["composer.json"]
+        ref_get_involved_with_the_drupal_community_4a31138e("* Get involved with the Drupal community:<br/><small>composer.json</small>")
+        ref_get_support_https_www_drupal_org_support_cfdb92dd("* Get support: https://www.drupal.org/s...<br/><small>composer.json</small>")
+    end
+    web_themes_custom_montreal2027_montreal2027_them_ab7ec458("FormStateInterface")
+    web_themes_custom_montreal2027_montreal2027_mont_ac3e389e -->|calls| web_themes_custom_montreal2027_montreal2027_mont_cf74bc54
+    web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa -->|calls| web_themes_custom_montreal2027_montreal2027_get_a1dce736
+    web_themes_custom_montreal2027_montreal2027_mont_0ace2877 -->|calls| web_themes_custom_montreal2027_montreal2027_mont_cf74bc54
+    web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65 -->|calls| web_themes_custom_montreal2027_montreal2027_mont_050352ea
+    web_themes_custom_montreal2027_montreal2027_mont_031934fa -->|calls| web_themes_custom_montreal2027_montreal2027_mont_050352ea
+    web_themes_custom_montreal2027_package_dependenc_c4903f80 -->|imports| parcel_watcher_c33ddc4f
+    web_themes_custom_montreal2027_package_devdepend_5da53dd0 -->|imports| sass_5d7463cd
+    web_themes_custom_montreal2027_montreal2027_049635f7 -->|imports| web_themes_custom_montreal2027_montreal2027_them_ab7ec458
+    %% Omitted for readability: 166 nodes, 0 edges
+    class web_themes_custom_montreal2027_montreal2027_049635f7 function;
+    class web_themes_custom_montreal2027_montreal2027_mont_ac3e389e function;
+    class web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa function;
+    class web_themes_custom_montreal2027_montreal2027_mont_0ace2877 function;
+    class web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65 function;
+    class web_themes_custom_montreal2027_montreal2027_mont_031934fa function;
+    class web_themes_custom_montreal2027_montreal2027_mont_cf74bc54 function;
+    class web_themes_custom_montreal2027_montreal2027_get_a1dce736 function;
+    class web_themes_custom_montreal2027_montreal2027_mont_050352ea function;
+    class web_themes_custom_montreal2027_package_dependenc_c4903f80 function;
+    class parcel_watcher_c33ddc4f function;
+    class web_themes_custom_montreal2027_package_devdepend_5da53dd0 function;
+    class sass_5d7463cd function;
+    class githooks_post_merge_d7e2d0d9 function;
+    class githooks_post_merge_entry_d80608cd function;
+    class ref_get_involved_with_the_drupal_community_4a31138e function;
+    class ref_get_support_https_www_drupal_org_support_cfdb92dd function;
+    class web_themes_custom_montreal2027_montreal2027_them_ab7ec458 klass;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>require</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>require node in composer.json.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>composer/installers</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>composer/installers node in composer.json.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>cweagans/composer-patches</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>cweagans/composer-patches node in composer.json.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>drupal/admin_theme</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/admin_theme node in composer.json.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>drupal/admin_toolbar</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/admin_toolbar node in composer.json.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>drupal/block_field</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/block_field node in composer.json.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>drupal/chosen</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/chosen node in composer.json.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>drupal/ckeditor5_open_new_tab</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ckeditor5_open_new_tab node in composer.json.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>drupal/ckeditor5_paste_filter</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ckeditor5_paste_filter node in composer.json.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>drupal/ckeditor_media_resize</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ckeditor_media_resize node in composer.json.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>drupal/conditional_fields</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/conditional_fields node in composer.json.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>drupal/config_ignore</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>drupal/core-composer-scaffold</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/core-composer-scaffold node in composer.json.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>drupal/core-dev</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/core-dev node in composer.json.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>drupal/core-project-message</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/core-project-message node in composer.json.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>drupal/core-recipe-unpack</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/core-recipe-unpack node in composer.json.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>drupal/core-recommended</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/core-recommended node in composer.json.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>drupal/crop</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/crop node in composer.json.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>drupal/draggableviews</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Supports retrieval-augmented Q&amp;A or streaming chat.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>drupal/easy_breadcrumb</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/easy_breadcrumb node in composer.json.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>drupal/ebt_basic_button</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ebt_basic_button node in composer.json.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>drupal/ebt_core</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ebt_core node in composer.json.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>drupal/ebt_hero</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ebt_hero node in composer.json.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>drupal/ebt_text</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ebt_text node in composer.json.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>drupal/ebt_tiles</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ebt_tiles node in composer.json.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>drupal/entity_embed</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/entity_embed node in composer.json.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>drupal/entity_workflow</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/entity_workflow node in composer.json.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>drupal/ept_basic_button</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ept_basic_button node in composer.json.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>drupal/ept_hero</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ept_hero node in composer.json.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>drupal/ept_text</code><br><small style="color:var(--muted)">composer.json</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>drupal/ept_text node in composer.json.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>composer.json</code></td><td>151 nodes</td></tr>
+<tr><td><code>custom/montreal2027/package.json</code></td><td>17 nodes</td></tr>
+<tr><td><code>custom/montreal2027/montreal2027.theme</code></td><td>13 nodes</td></tr>
+<tr><td><code>.githooks/post-merge</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x149, extends x29, calls x5, imports x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 4. CLI & Skill Installers ====== -->
+<h2 id="cli-skills">4. CLI &amp; Skill Installers</h2>
+<p>CLI &amp; Skill Installers groups implementation around installsh, scripts, script, mostly in scripts/install.sh. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: CLI &amp; Skill Installers (2 nodes, 1 edges)
+    scripts_install_7dee6d13("install.sh")
+    scripts_install_sh_entry_5f0072fe("install.sh script<br/><small>scripts/install.sh</small>")
+    scripts_install_7dee6d13 -->|contains| scripts_install_sh_entry_5f0072fe
+    class scripts_install_7dee6d13 function;
+    class scripts_install_sh_entry_5f0072fe function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>install.sh</code><br><small style="color:var(--muted)">scripts/install.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>install.sh node in scripts/install.sh.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>install.sh script</code><br><small style="color:var(--muted)">scripts/install.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>install.sh script node in scripts/install.sh.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>scripts/install.sh</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 5. Ingestion & Updates ====== -->
+<h2 id="ingest-cache-update">5. Ingestion &amp; Updates</h2>
+<p>Ingestion &amp; Updates groups implementation around languagetoggleblockphp, web, modules, custom, mostly in Plugin/Block/LanguageToggleBlock.php. This section covers 16 nodes and 24 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Ingestion &amp; Updates (16 nodes, 24 edges)
+    subgraph ingest_cache_update_External_generated_9d67cab5["External / generated"]
+        url_81736358("Url")
+        drupal_core_language_languagemanagerinterface_1a9a8870("Drupal\Core\Language\LanguageManagerInt...")
+        drupal_core_plugin_containerfactoryplugininterfa_50690d89("Drupal\Core\Plugin\ContainerFactoryPlug...")
+        drupal_core_routing_routematchinterface_a90af012("Drupal\Core\Routing\RouteMatchInterface")
+        drupal_core_stringtranslation_translatablemarkup_226d54a6("Drupal\Core\StringTranslation\Translata...")
+        drupal_core_url_babe6316("Drupal\Core\Url")
+        drupal_core_block_attribute_block_706a15ed("Drupal\Core\Block\Attribute\Block")
+        drupal_core_block_blockbase_a5af1689("Drupal\Core\Block\BlockBase")
+        web_modules_custom_montreal2027_tools_src_plugin_fcdc1d6a("static")
+    end
+    subgraph ingest_cache_update_Plugin_Block_LanguageToggleB_023b5a4d["Plugin/Block/LanguageToggleBlock.php"]
+        web_modules_custom_montreal2027_tools_src_plugin_bad924b4("LanguageToggleBlock.php")
+        web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf("LanguageToggleBlock<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_78220e70("buildLinkData()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_e35bc456("build()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_e72d7072("buildLinkElement()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_01de3c74("__construct()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4("create()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
+    end
+    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_78220e70
+    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_e72d7072
+    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_01de3c74
+    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4
+    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_e35bc456
+    web_modules_custom_montreal2027_tools_src_plugin_e35bc456 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_78220e70
+    web_modules_custom_montreal2027_tools_src_plugin_78220e70 -->|calls| url_81736358
+    web_modules_custom_montreal2027_tools_src_plugin_78220e70 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_e72d7072
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_language_languagemanagerinterface_1a9a8870
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_plugin_containerfactoryplugininterfa_50690d89
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_routing_routematchinterface_a90af012
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_stringtranslation_translatablemarkup_226d54a6
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_url_babe6316
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_block_attribute_block_706a15ed
+    web_modules_custom_montreal2027_tools_src_plugin_bad924b4 -->|imports| drupal_core_block_blockbase_a5af1689
+    class url_81736358 klass;
+    class drupal_core_language_languagemanagerinterface_1a9a8870 klass;
+    class drupal_core_plugin_containerfactoryplugininterfa_50690d89 klass;
+    class drupal_core_routing_routematchinterface_a90af012 api;
+    class drupal_core_stringtranslation_translatablemarkup_226d54a6 klass;
+    class drupal_core_url_babe6316 klass;
+    class drupal_core_block_attribute_block_706a15ed klass;
+    class drupal_core_block_blockbase_a5af1689 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_fcdc1d6a function;
+    class web_modules_custom_montreal2027_tools_src_plugin_bad924b4 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_78220e70 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_e35bc456 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_e72d7072 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_01de3c74 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>build()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br>+2 more</td>
+  <td>LanguageToggleBlock node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>.build()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><code>buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>.build() node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>.buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>build()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><code>buildLinkElement()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>Url</code></td>
+  <td>.buildLinkData() node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.buildLinkElement()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.buildLinkElement() node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.__construct()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.__construct() node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.create()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.create() node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Drupal\Core\Block\Attribute\Block</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Block\Attribute\Block node in project.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>Drupal\Core\Block\BlockBase</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Block\BlockBase node in project.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Drupal\Core\Language\LanguageManagerInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Language\LanguageManagerInterface node in project.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Drupal\Core\Plugin\ContainerFactoryPluginInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Plugin\ContainerFactoryPluginInterface node in project.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Drupal\Core\Routing\RouteMatchInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Routing\RouteMatchInterface node in project.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>Drupal\Core\StringTranslation\TranslatableMarkup</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\StringTranslation\TranslatableMarkup node in project.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Drupal\Core\Url</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Url node in project.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Url</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>buildContactModalMarkup()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Url node in project.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Block\Attribute\Block</code><br><code>Drupal\Core\Block\BlockBase</code><br><code>Drupal\Core\Language\LanguageInterface</code><br>+6 more</td>
+  <td>LanguageToggleBlock.php node in Plugin/Block/LanguageToggleBlock.php.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>static</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>static node in project.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>Plugin/Block/LanguageToggleBlock.php</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: imports x7, references x6, method x5, calls x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 6. StaffContactController.php ====== -->
+<h2 id="staffcontactcontroller-php">6. StaffContactController.php</h2>
+<p>StaffContactController.php groups implementation around web, modules, custom, montreal2027, mostly in src/Commands/ContactImportCommands.php, src/Controller/StaffContactController.php. This section covers 22 nodes and 35 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: StaffContactController.php (22 nodes, 35 edges)
+    subgraph staffcontactcontroller_php_External_generated_fa4292cc["External / generated"]
+        jsonresponse_ac9458b3("JsonResponse")
+        drupal_core_entity_entitytypemanagerinterface_fa40aaaf("Drupal\Core\Entity\EntityTypeManagerInt...")
+        drupal_user_userinterface_bf2f0fe6("Drupal\user\UserInterface")
+        drush_commands_drushcommands_41af6e2b("Drush\Commands\DrushCommands")
+        symfony_component_dependencyinjection_containeri_fee6c328("Symfony\Component\DependencyInjection\C...")
+        symfony_component_httpfoundation_jsonresponse_b375ce49("Symfony\Component\HttpFoundation\JsonRe...")
+        symfony_component_httpfoundation_request_9c1ea60d("Symfony\Component\HttpFoundation\Request")
+    end
+    subgraph staffcontactcontroller_php_src_Commands_ContactI_21ddb956["src/Commands/ContactImportCommands.php"]
+        web_modules_custom_montreal2027_tools_src_comman_9745b406("ContactImportCommands<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_0bf6dd76("ContactImportCommands.php")
+        web_modules_custom_montreal2027_tools_src_comman_47a891c2("importContacts()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_666a9f7e("resolvePath()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_d7193f46("combineHeaderAndRow()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_d4aaaf68("__construct()<br/><small>src/Commands/ContactImportCommands.php</small>")
+    end
+    subgraph staffcontactcontroller_php_src_Controller_StaffC_17c3d385["src/Controller/StaffContactController.php"]
+        web_modules_custom_montreal2027_tools_src_contro_b983e1bc("StaffContactController.php")
+        web_modules_custom_montreal2027_tools_src_contro_7bc76770("StaffContactController<br/><small>src/Controller/StaffContactController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_2a020627("submit()<br/><small>src/Controller/StaffContactController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_396cb679("__construct()<br/><small>src/Controller/StaffContactController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_40ad6e8f("create()<br/><small>src/Controller/StaffContactController.php</small>")
+    end
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d7193f46
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d4aaaf68
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_47a891c2
+    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_396cb679
+    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_40ad6e8f
+    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_2a020627
+    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_d7193f46
+    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
+    web_modules_custom_montreal2027_tools_src_contro_2a020627 -->|calls| jsonresponse_ac9458b3
+    web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drupal_core_entity_entitytypemanagerinterface_fa40aaaf
+    web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drupal_user_userinterface_bf2f0fe6
+    web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drush_commands_drushcommands_41af6e2b
+    web_modules_custom_montreal2027_tools_src_contro_b983e1bc -->|imports| symfony_component_dependencyinjection_containeri_fee6c328
+    web_modules_custom_montreal2027_tools_src_contro_b983e1bc -->|imports| symfony_component_httpfoundation_jsonresponse_b375ce49
+    web_modules_custom_montreal2027_tools_src_contro_b983e1bc -->|imports| symfony_component_httpfoundation_request_9c1ea60d
+    web_modules_custom_montreal2027_tools_src_contro_b983e1bc -->|imports| drupal_core_entity_entitytypemanagerinterface_fa40aaaf
+    %% Omitted for readability: 4 nodes, 0 edges
+    class jsonresponse_ac9458b3 klass;
+    class drupal_core_entity_entitytypemanagerinterface_fa40aaaf klass;
+    class drupal_user_userinterface_bf2f0fe6 klass;
+    class drush_commands_drushcommands_41af6e2b entry;
+    class symfony_component_dependencyinjection_containeri_fee6c328 ui;
+    class symfony_component_httpfoundation_jsonresponse_b375ce49 ui;
+    class symfony_component_httpfoundation_request_9c1ea60d ui;
+    class web_modules_custom_montreal2027_tools_src_comman_9745b406 entry;
+    class web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 entry;
+    class web_modules_custom_montreal2027_tools_src_comman_47a891c2 function;
+    class web_modules_custom_montreal2027_tools_src_comman_666a9f7e function;
+    class web_modules_custom_montreal2027_tools_src_comman_d7193f46 function;
+    class web_modules_custom_montreal2027_tools_src_comman_d4aaaf68 function;
+    class web_modules_custom_montreal2027_tools_src_contro_b983e1bc klass;
+    class web_modules_custom_montreal2027_tools_src_contro_7bc76770 klass;
+    class web_modules_custom_montreal2027_tools_src_contro_2a020627 function;
+    class web_modules_custom_montreal2027_tools_src_contro_396cb679 function;
+    class web_modules_custom_montreal2027_tools_src_contro_40ad6e8f function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br>+1 more</td>
+  <td>ContactImportCommands node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>create()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>StaffContactController node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>.combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.combineHeaderAndRow() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.__construct() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>.importContacts() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.resolvePath() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>.__construct()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.__construct() node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>.create()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.create() node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>.submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><code>JsonResponse</code></td>
+  <td>.submit() node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Drupal\Core\Controller\ControllerBase</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Controller\ControllerBase node in project.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Drupal\Core\Entity\EntityTypeManagerInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Entity\EntityTypeManagerInterface node in project.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>Drupal\Core\Logger\LoggerChannelFactoryInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Logger\LoggerChannelFactoryInterface node in project.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>Drupal\Core\Mail\MailManagerInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Mail\MailManagerInterface node in project.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>Drupal\user\UserInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\user\UserInterface node in project.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>Drush\Commands\DrushCommands</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drush\Commands\DrushCommands node in project.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>JsonResponse</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>JsonResponse node in project.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>Symfony\Component\DependencyInjection\ContainerInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>Symfony\Component\HttpFoundation\JsonResponse</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Symfony\Component\HttpFoundation\JsonResponse node in project.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>Symfony\Component\HttpFoundation\Request</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Symfony\Component\HttpFoundation\Request node in project.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Entity\EntityTypeManagerInt...</code><br><code>Drupal\user\UserInterface</code><br><code>Drush\Commands\DrushCommands</code></td>
+  <td>ContactImportCommands.php node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Controller\ControllerBase</code><br><code>Drupal\Core\Entity\EntityTypeManagerInt...</code><br><code>Drupal\Core\Language\LanguageManagerInt...</code><br>+5 more</td>
+  <td>StaffContactController.php node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>static</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>static node in project.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>src/Commands/ContactImportCommands.php</code></td><td>6 nodes</td></tr>
+<tr><td><code>src/Controller/StaffContactController.php</code></td><td>5 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: references x11, imports x10, method x7, calls x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 7. Drupal\Core\Form\FormStateInterface ====== -->
+<h2 id="drupal-core-form-formstateinterface">7. Drupal\Core\Form\FormStateInterface</h2>
+<p>Drupal\Core\Form\FormStateInterface groups implementation around web, modules, custom, montreal2027, mostly in src/Form/StaffContactSettingsForm.php, src/Form/StaffPageSettingsForm.php. This section covers 14 nodes and 20 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Drupal\Core\Form\FormStateInterface (14 nodes, 20 edges)
+    subgraph drupal_core_form_formstateinterface_src_Form_Sta_ed3b94d5["src/Form/StaffContactSettingsForm.php"]
+        web_modules_custom_montreal2027_tools_src_form_s_dbd085d8("StaffPageSettingsForm<br/><small>src/Form/StaffContactSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_515b33f2("StaffContactSettingsForm.php")
+        web_modules_custom_montreal2027_tools_src_form_s_e538b1d5("submitForm()<br/><small>src/Form/StaffContactSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_23ce4f28("getFormId()<br/><small>src/Form/StaffContactSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_fe94d1cb("getEditableConfigNames()<br/><small>src/Form/StaffContactSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_01df555d("buildForm()<br/><small>src/Form/StaffContactSettingsForm.php</small>")
+    end
+    subgraph drupal_core_form_formstateinterface_src_Form_Sta_f3c44d59["src/Form/StaffPageSettingsForm.php"]
+        web_modules_custom_montreal2027_tools_src_form_s_613065dc("StaffPageSettingsForm<br/><small>src/Form/StaffPageSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_1e15d33c("StaffPageSettingsForm.php")
+        web_modules_custom_montreal2027_tools_src_form_s_db9e9d5a("getFormId()<br/><small>src/Form/StaffPageSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_00a2ed53("submitForm()<br/><small>src/Form/StaffPageSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_697f8f4f("getEditableConfigNames()<br/><small>src/Form/StaffPageSettingsForm.php</small>")
+        web_modules_custom_montreal2027_tools_src_form_s_4f848de0("buildForm()<br/><small>src/Form/StaffPageSettingsForm.php</small>")
+    end
+    subgraph drupal_core_form_formstateinterface_External_gen_b47f1dab["External / generated"]
+        drupal_core_form_configformbase_a753097b("Drupal\Core\Form\ConfigFormBase")
+        drupal_core_form_formstateinterface_4b20b46e("Drupal\Core\Form\FormStateInterface")
+    end
+    web_modules_custom_montreal2027_tools_src_form_s_dbd085d8 -->|method| web_modules_custom_montreal2027_tools_src_form_s_e538b1d5
+    web_modules_custom_montreal2027_tools_src_form_s_dbd085d8 -->|method| web_modules_custom_montreal2027_tools_src_form_s_23ce4f28
+    web_modules_custom_montreal2027_tools_src_form_s_dbd085d8 -->|method| web_modules_custom_montreal2027_tools_src_form_s_fe94d1cb
+    web_modules_custom_montreal2027_tools_src_form_s_dbd085d8 -->|method| web_modules_custom_montreal2027_tools_src_form_s_01df555d
+    web_modules_custom_montreal2027_tools_src_form_s_613065dc -->|method| web_modules_custom_montreal2027_tools_src_form_s_db9e9d5a
+    web_modules_custom_montreal2027_tools_src_form_s_613065dc -->|method| web_modules_custom_montreal2027_tools_src_form_s_00a2ed53
+    web_modules_custom_montreal2027_tools_src_form_s_613065dc -->|method| web_modules_custom_montreal2027_tools_src_form_s_697f8f4f
+    web_modules_custom_montreal2027_tools_src_form_s_613065dc -->|method| web_modules_custom_montreal2027_tools_src_form_s_4f848de0
+    web_modules_custom_montreal2027_tools_src_form_s_515b33f2 -->|imports| drupal_core_form_configformbase_a753097b
+    web_modules_custom_montreal2027_tools_src_form_s_515b33f2 -->|imports| drupal_core_form_formstateinterface_4b20b46e
+    web_modules_custom_montreal2027_tools_src_form_s_1e15d33c -->|imports| drupal_core_form_configformbase_a753097b
+    web_modules_custom_montreal2027_tools_src_form_s_1e15d33c -->|imports| drupal_core_form_formstateinterface_4b20b46e
+    class web_modules_custom_montreal2027_tools_src_form_s_dbd085d8 klass;
+    class web_modules_custom_montreal2027_tools_src_form_s_515b33f2 klass;
+    class web_modules_custom_montreal2027_tools_src_form_s_e538b1d5 function;
+    class web_modules_custom_montreal2027_tools_src_form_s_23ce4f28 function;
+    class web_modules_custom_montreal2027_tools_src_form_s_fe94d1cb function;
+    class web_modules_custom_montreal2027_tools_src_form_s_01df555d function;
+    class web_modules_custom_montreal2027_tools_src_form_s_613065dc klass;
+    class web_modules_custom_montreal2027_tools_src_form_s_1e15d33c klass;
+    class web_modules_custom_montreal2027_tools_src_form_s_db9e9d5a function;
+    class web_modules_custom_montreal2027_tools_src_form_s_00a2ed53 function;
+    class web_modules_custom_montreal2027_tools_src_form_s_697f8f4f function;
+    class web_modules_custom_montreal2027_tools_src_form_s_4f848de0 function;
+    class drupal_core_form_configformbase_a753097b klass;
+    class drupal_core_form_formstateinterface_4b20b46e klass;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>buildForm()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small><br><code>getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small><br><code>getFormId()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small><br>+1 more</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>buildForm()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small><br><code>getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small><br><code>getFormId()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small><br>+1 more</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>.buildForm()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.buildForm() node in src/Form/StaffContactSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.getFormId()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.getFormId() node in src/Form/StaffContactSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.submitForm()</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.submitForm() node in src/Form/StaffContactSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>.buildForm()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.buildForm() node in src/Form/StaffPageSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>.getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>.getFormId()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.getFormId() node in src/Form/StaffPageSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>.submitForm()</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageSettingsForm</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.submitForm() node in src/Form/StaffPageSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Drupal\Core\Form\ConfigFormBase</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small><br><code>StaffPageSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>Drupal\Core\Form\FormStateInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small><br><code>StaffPageSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Form\FormStateInterface node in project.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>StaffContactSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffContactSettingsForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Form\ConfigFormBase</code><br><code>Drupal\Core\Form\FormStateInterface</code></td>
+  <td>StaffContactSettingsForm.php node in src/Form/StaffContactSettingsForm.php.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>StaffPageSettingsForm.php</code><br><small style="color:var(--muted)">src/Form/StaffPageSettingsForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Form\ConfigFormBase</code><br><code>Drupal\Core\Form\FormStateInterface</code></td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>src/Form/StaffContactSettingsForm.php</code></td><td>6 nodes</td></tr>
+<tr><td><code>src/Form/StaffPageSettingsForm.php</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: method x8, references x4, imports x4, inherits x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 8. StaffPageController.php ====== -->
+<h2 id="staffpagecontroller-php">8. StaffPageController.php</h2>
+<p>StaffPageController.php groups implementation around staffpagecontrollerphp, web, modules, custom, mostly in src/Controller/StaffPageController.php. This section covers 12 nodes and 19 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: StaffPageController.php (12 nodes, 19 edges)
+    subgraph staffpagecontroller_php_src_Controller_StaffPage_9ab78d5f["src/Controller/StaffPageController.php"]
+        web_modules_custom_montreal2027_tools_src_contro_11cd54c9("StaffPageController.php")
+        web_modules_custom_montreal2027_tools_src_contro_7e170e01("StaffPageController<br/><small>src/Controller/StaffPageController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_0b9907fc("build()<br/><small>src/Controller/StaffPageController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_631de08d("buildChildData()<br/><small>src/Controller/StaffPageController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_8413453c("getTermStorage()<br/><small>src/Controller/StaffPageController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_4ab3f03c("getTranslatedTerm()<br/><small>src/Controller/StaffPageController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_f3cd3908("buildContactModalMarkup()<br/><small>src/Controller/StaffPageController.php</small>")
+    end
+    subgraph staffpagecontroller_php_External_generated_aacd2c73["External / generated"]
+        drupal_taxonomy_terminterface_ebd8244f("Drupal\taxonomy\TermInterface")
+        drupal_taxonomy_termstorageinterface_15d018d0("Drupal\taxonomy\TermStorageInterface")
+        drupal_core_language_languageinterface_372040bb("Drupal\Core\Language\LanguageInterface")
+        drupal_core_render_markup_3244b866("Drupal\Core\Render\Markup")
+        drupal_component_utility_html_37c5afda("Drupal\Component\Utility\Html")
+    end
+    web_modules_custom_montreal2027_tools_src_contro_7e170e01 -->|method| web_modules_custom_montreal2027_tools_src_contro_631de08d
+    web_modules_custom_montreal2027_tools_src_contro_7e170e01 -->|method| web_modules_custom_montreal2027_tools_src_contro_8413453c
+    web_modules_custom_montreal2027_tools_src_contro_7e170e01 -->|method| web_modules_custom_montreal2027_tools_src_contro_4ab3f03c
+    web_modules_custom_montreal2027_tools_src_contro_7e170e01 -->|method| web_modules_custom_montreal2027_tools_src_contro_f3cd3908
+    web_modules_custom_montreal2027_tools_src_contro_7e170e01 -->|method| web_modules_custom_montreal2027_tools_src_contro_0b9907fc
+    web_modules_custom_montreal2027_tools_src_contro_0b9907fc -->|calls| web_modules_custom_montreal2027_tools_src_contro_8413453c
+    web_modules_custom_montreal2027_tools_src_contro_0b9907fc -->|calls| web_modules_custom_montreal2027_tools_src_contro_4ab3f03c
+    web_modules_custom_montreal2027_tools_src_contro_0b9907fc -->|calls| web_modules_custom_montreal2027_tools_src_contro_631de08d
+    web_modules_custom_montreal2027_tools_src_contro_0b9907fc -->|calls| web_modules_custom_montreal2027_tools_src_contro_f3cd3908
+    web_modules_custom_montreal2027_tools_src_contro_631de08d -->|calls| web_modules_custom_montreal2027_tools_src_contro_8413453c
+    web_modules_custom_montreal2027_tools_src_contro_631de08d -->|calls| web_modules_custom_montreal2027_tools_src_contro_4ab3f03c
+    web_modules_custom_montreal2027_tools_src_contro_11cd54c9 -->|imports| drupal_taxonomy_terminterface_ebd8244f
+    web_modules_custom_montreal2027_tools_src_contro_11cd54c9 -->|imports| drupal_taxonomy_termstorageinterface_15d018d0
+    web_modules_custom_montreal2027_tools_src_contro_11cd54c9 -->|imports| drupal_core_language_languageinterface_372040bb
+    web_modules_custom_montreal2027_tools_src_contro_11cd54c9 -->|imports| drupal_core_render_markup_3244b866
+    web_modules_custom_montreal2027_tools_src_contro_11cd54c9 -->|imports| drupal_component_utility_html_37c5afda
+    class web_modules_custom_montreal2027_tools_src_contro_11cd54c9 klass;
+    class web_modules_custom_montreal2027_tools_src_contro_7e170e01 klass;
+    class web_modules_custom_montreal2027_tools_src_contro_0b9907fc function;
+    class web_modules_custom_montreal2027_tools_src_contro_631de08d function;
+    class web_modules_custom_montreal2027_tools_src_contro_8413453c function;
+    class web_modules_custom_montreal2027_tools_src_contro_4ab3f03c function;
+    class web_modules_custom_montreal2027_tools_src_contro_f3cd3908 function;
+    class drupal_taxonomy_terminterface_ebd8244f klass;
+    class drupal_taxonomy_termstorageinterface_15d018d0 klass;
+    class drupal_core_language_languageinterface_372040bb klass;
+    class drupal_core_render_markup_3244b866 klass;
+    class drupal_component_utility_html_37c5afda ui;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildChildData()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildContactModalMarkup()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br>+2 more</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>.build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><code>buildChildData()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildContactModalMarkup()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>getTermStorage()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br>+1 more</td>
+  <td>.build() node in src/Controller/StaffPageController.php.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>.buildChildData()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><code>getTermStorage()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>getTranslatedTerm()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>.buildChildData() node in src/Controller/StaffPageController.php.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.buildContactModalMarkup()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><code>Url</code></td>
+  <td>.buildContactModalMarkup() node in src/Controller/StaffPageController.php.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.getTermStorage()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildChildData()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Supports retrieval-augmented Q&amp;A or streaming chat.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.getTranslatedTerm()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>build()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>buildChildData()</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small><br><code>StaffPageController</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.getTranslatedTerm() node in src/Controller/StaffPageController.php.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Drupal\Component\Utility\Html</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Exports documentation data to a target format.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>Drupal\Core\Language\LanguageInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Language\LanguageInterface node in project.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>Drupal\Core\Render\Markup</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Render\Markup node in project.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>Drupal\taxonomy\TermInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\taxonomy\TermInterface node in project.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>Drupal\taxonomy\TermStorageInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Supports retrieval-augmented Q&amp;A or streaming chat.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Component\Utility\Html</code><br><code>Drupal\Core\Controller\ControllerBase</code><br><code>Drupal\Core\Language\LanguageInterface</code><br>+4 more</td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>src/Controller/StaffPageController.php</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: calls x6, method x5, imports x5, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 9. montreal2027_tools.module ====== -->
+<h2 id="montreal2027-tools-module">9. montreal2027_tools.module</h2>
+<p>montreal2027_tools.module groups implementation around montreal2027, tools, toolsmodule, web, mostly in custom/montreal2027_tools/montreal2027_tools.module. This section covers 6 nodes and 7 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: montreal2027_tools.module (6 nodes, 7 edges)
+    subgraph montreal2027_tools_module_custom_montreal2027_to_420a44e4["custom/montreal2027_tools/montreal2027_tools.module"]
+        web_modules_custom_montreal2027_tools_montreal20_f292689b("montreal2027_tools.module")
+        web_modules_custom_montreal2027_tools_montreal20_de53d245("montreal2027_tools_mail()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_5c2a481e("montreal2027_tools_theme()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_40e245e5("overview terms alter()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_01796f10("term form alter()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+    end
+    web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff("FormStateInterface")
+    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff
+    class web_modules_custom_montreal2027_tools_montreal20_f292689b function;
+    class web_modules_custom_montreal2027_tools_montreal20_de53d245 function;
+    class web_modules_custom_montreal2027_tools_montreal20_5c2a481e function;
+    class web_modules_custom_montreal2027_tools_montreal20_40e245e5 function;
+    class web_modules_custom_montreal2027_tools_montreal20_01796f10 function;
+    class web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff klass;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>montreal2027_tools_form_taxonomy_overview_terms_alter()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_form_taxonomy_overview_terms_alter() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>montreal2027_tools_form_taxonomy_term_form_alter()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_form_taxonomy_term_form_alter() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>montreal2027_tools_mail()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_mail() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>montreal2027_tools_theme()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_theme() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>FormStateInterface</code></td>
+  <td>montreal2027_tools.module node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>FormStateInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td>No direct outbound edge</td>
+  <td>FormStateInterface node in project.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>custom/montreal2027_tools/montreal2027_tools.module</code></td><td>5 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x4, references x2, imports x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 10. entrypoint.sh ====== -->
+<h2 id="entrypoint-sh">10. entrypoint.sh</h2>
+<p>entrypoint.sh groups implementation around entrypointsh, docker, web, script, mostly in docker/web/entrypoint.sh. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: entrypoint.sh (2 nodes, 1 edges)
+    docker_web_entrypoint_ef1f65bd("entrypoint.sh")
+    docker_web_entrypoint_sh_entry_cfffcc4b("entrypoint.sh script<br/><small>docker/web/entrypoint.sh</small>")
+    docker_web_entrypoint_ef1f65bd -->|contains| docker_web_entrypoint_sh_entry_cfffcc4b
+    class docker_web_entrypoint_ef1f65bd function;
+    class docker_web_entrypoint_sh_entry_cfffcc4b function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>entrypoint.sh</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>entrypoint.sh node in docker/web/entrypoint.sh.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>entrypoint.sh script</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>entrypoint.sh script node in docker/web/entrypoint.sh.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>docker/web/entrypoint.sh</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 11. pre-commit ====== -->
+<h2 id="pre-commit">11. pre-commit</h2>
+<p>pre-commit groups implementation around pre, commit, githooks, script, mostly in .githooks/pre-commit. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: pre-commit (2 nodes, 1 edges)
+    githooks_pre_commit_52616355("pre-commit")
+    githooks_pre_commit_entry_af729878("pre-commit script<br/><small>.githooks/pre-commit</small>")
+    githooks_pre_commit_52616355 -->|contains| githooks_pre_commit_entry_af729878
+    class githooks_pre_commit_52616355 function;
+    class githooks_pre_commit_entry_af729878 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>pre-commit</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>pre-commit node in .githooks/pre-commit.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>pre-commit script</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>pre-commit script node in .githooks/pre-commit.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>.githooks/pre-commit</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 12. setup-graphify.sh ====== -->
+<h2 id="setup-graphify-sh">12. setup-graphify.sh</h2>
+<p>setup-graphify.sh groups implementation around setup, graphifysh, scripts, script, mostly in scripts/setup-graphify.sh. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: setup-graphify.sh (2 nodes, 1 edges)
+    scripts_setup_graphify_472c5efe("setup-graphify.sh")
+    scripts_setup_graphify_sh_entry_f6c721f2("setup-graphify.sh script<br/><small>scripts/setup-graphify.sh</small>")
+    scripts_setup_graphify_472c5efe -->|contains| scripts_setup_graphify_sh_entry_f6c721f2
+    class scripts_setup_graphify_472c5efe function;
+    class scripts_setup_graphify_sh_entry_f6c721f2 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>setup-graphify.sh</code><br><small style="color:var(--muted)">scripts/setup-graphify.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>setup-graphify.sh script</code><br><small style="color:var(--muted)">scripts/setup-graphify.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>scripts/setup-graphify.sh</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 13. sync.sh ====== -->
+<h2 id="sync-sh">13. sync.sh</h2>
+<p>sync.sh groups implementation around syncsh, scripts, script, mostly in scripts/sync.sh. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: sync.sh (2 nodes, 1 edges)
+    scripts_sync_69859379("sync.sh")
+    scripts_sync_sh_entry_3970b3f6("sync.sh script<br/><small>scripts/sync.sh</small>")
+    scripts_sync_69859379 -->|contains| scripts_sync_sh_entry_3970b3f6
+    class scripts_sync_69859379 function;
+    class scripts_sync_sh_entry_3970b3f6 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>sync.sh</code><br><small style="color:var(--muted)">scripts/sync.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>sync.sh node in scripts/sync.sh.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>sync.sh script</code><br><small style="color:var(--muted)">scripts/sync.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>sync.sh script node in scripts/sync.sh.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>scripts/sync.sh</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 14. Symfony\Component\Dotenv\Dotenv ====== -->
+<h2 id="symfony-component-dotenv-dotenv">14. Symfony\Component\Dotenv\Dotenv</h2>
+<p>Symfony\Component\Dotenv\Dotenv groups implementation around settingsphp, symfonycomponentdotenvdotenv, web, sites, mostly in sites/default/settings.php. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Symfony\Component\Dotenv\Dotenv (2 nodes, 1 edges)
+    symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
+    web_sites_default_settings_893897a6("settings.php")
+    web_sites_default_settings_893897a6 -->|imports| symfony_component_dotenv_dotenv_20661c2d
+    class symfony_component_dotenv_dotenv_20661c2d ui;
+    class web_sites_default_settings_893897a6 module;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>Symfony\Component\Dotenv\Dotenv</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>settings.php</code><br><small style="color:var(--muted)">sites/default/settings.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Symfony\Component\Dotenv\Dotenv node in project.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>settings.php</code><br><small style="color:var(--muted)">sites/default/settings.php</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Symfony\Component\Dotenv\Dotenv</code></td>
+  <td>settings.php node in sites/default/settings.php.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>sites/default/settings.php</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: imports x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 15. staff-contact-modal.js ====== -->
+<h2 id="staff-contact-modal-js">15. staff-contact-modal.js</h2>
+<p>staff-contact-modal.js groups implementation around staff, contact, modaljs, web, mostly in montreal2027_tools/js/staff-contact-modal.js. This section covers 2 nodes and 1 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: staff-contact-modal.js (2 nodes, 1 edges)
+    web_modules_custom_montreal2027_tools_js_staff_c_2f3ff3f1("staff-contact-modal.js")
+    web_modules_custom_montreal2027_tools_js_staff_c_2e50f85b("attach()<br/><small>montreal2027_tools/js/staff-contact-modal.js</small>")
+    web_modules_custom_montreal2027_tools_js_staff_c_2f3ff3f1 -->|contains| web_modules_custom_montreal2027_tools_js_staff_c_2e50f85b
+    class web_modules_custom_montreal2027_tools_js_staff_c_2f3ff3f1 module;
+    class web_modules_custom_montreal2027_tools_js_staff_c_2e50f85b function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>attach()</code><br><small style="color:var(--muted)">montreal2027_tools/js/staff-contact-modal.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>attach() node in montreal2027_tools/js/staff-contact-modal.js.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>staff-contact-modal.js</code><br><small style="color:var(--muted)">montreal2027_tools/js/staff-contact-modal.js</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>staff-contact-modal.js node in montreal2027_tools/js/staff-contact-modal.js.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>montreal2027_tools/js/staff-contact-modal.js</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around new, contentmd, github, issue, mostly in .github/ISSUE_TEMPLATE/new-content.md. This section covers 1 nodes and 0 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Other (1 nodes, 0 edges)
+    github_issue_template_new_content_7f4bf26b("new-content.md")
+    class github_issue_template_new_content_7f4bf26b concept;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>new-content.md</code><br><small style="color:var(--muted)">.github/ISSUE_TEMPLATE/new-content.md</small></td>
+  <td><span class="tag tag-func">Concept</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Documentation node describing new-content.md.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>.github/ISSUE_TEMPLATE/new-content.md</code></td><td>1 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: No high-confidence call edges detected. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<h2 id="stats">Project Statistics</h2>
+
+<div class="grid">
+  <div class="card">
+    <h4>Graph</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>Nodes</td><td>271</td></tr>
+      <tr><td>Edges</td><td>310</td></tr>
+      <tr><td>Hyperedges</td><td>0</td></tr>
+      <tr><td>Communities</td><td>22</td></tr>
+      <tr><td>Documented Sections</td><td>15</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Edge Confidence</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><td>EXTRACTED</td><td>309</td></tr>
+      <tr><td>INFERRED</td><td>1</td></tr>
+      <tr><td>AMBIGUOUS</td><td>0</td></tr>
+    </table>
+  </div>
+</div>
+
+<div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
+  <p>montreal2027.ca — Architecture Documentation</p>
+  <p>Generated: 2026-09-01 03:12 UTC · graphify callflow-html</p>
+</div>
+
+</div><!-- .container -->
+
+<script>
+(function () {
+  const mermaidConfig = {
+    startOnLoad: false,
+    theme: 'dark',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true },
+    themeVariables: {
+      primaryColor: '#1e293b',
+      primaryTextColor: '#e2e8f0',
+      primaryBorderColor: '#38bdf8',
+      secondaryColor: '#0f172a',
+      tertiaryColor: '#334155',
+      lineColor: '#64748b',
+      textColor: '#e2e8f0',
+    }
+  };
+
+  mermaid.initialize(mermaidConfig);
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function enhanceMermaidDiagrams() {
+    document.querySelectorAll('.mermaid').forEach((container) => {
+      if (container.dataset.zoomReady === 'true') return;
+      const svg = container.querySelector('svg');
+      if (!svg) return;
+
+      container.dataset.zoomReady = 'true';
+      container.classList.add('is-enhanced');
+
+      const viewport = document.createElement('div');
+      viewport.className = 'mermaid-viewport';
+      svg.parentNode.insertBefore(viewport, svg);
+      viewport.appendChild(svg);
+
+      const toolbar = document.createElement('div');
+      toolbar.className = 'mermaid-toolbar';
+      toolbar.innerHTML = [
+        '<button type="button" data-action="zoom-out" title="Zoom out">-</button>',
+        '<span class="zoom-level" data-role="level">100%</span>',
+        '<button type="button" data-action="zoom-in" title="Zoom in">+</button>',
+        '<button type="button" data-action="fit" title="Fit width">Fit</button>',
+        '<button type="button" data-action="reset" title="Reset view">Reset</button>'
+      ].join('');
+      container.insertBefore(toolbar, viewport);
+
+      const state = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0, originX: 0, originY: 0 };
+      const level = toolbar.querySelector('[data-role="level"]');
+
+      function applyTransform() {
+        svg.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+        level.textContent = `${Math.round(state.scale * 100)}%`;
+      }
+
+      function zoomBy(delta) {
+        state.scale = clamp(state.scale + delta, 0.25, 3);
+        applyTransform();
+      }
+
+      function reset() {
+        state.scale = 1;
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      function fitWidth() {
+        const rawWidth = svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.width
+          ? svg.viewBox.baseVal.width
+          : svg.getBoundingClientRect().width / state.scale;
+        if (!rawWidth) {
+          reset();
+          return;
+        }
+        state.scale = clamp((viewport.clientWidth - 48) / rawWidth, 0.25, 1.4);
+        state.x = 0;
+        state.y = 0;
+        applyTransform();
+      }
+
+      toolbar.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-action]');
+        if (!button) return;
+        const action = button.dataset.action;
+        if (action === 'zoom-in') zoomBy(0.15);
+        if (action === 'zoom-out') zoomBy(-0.15);
+        if (action === 'fit') fitWidth();
+        if (action === 'reset') reset();
+      });
+
+      viewport.addEventListener('wheel', (event) => {
+        if (!event.ctrlKey && !event.metaKey) return;
+        event.preventDefault();
+        zoomBy(event.deltaY < 0 ? 0.1 : -0.1);
+      }, { passive: false });
+
+      viewport.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0) return;
+        state.dragging = true;
+        state.startX = event.clientX;
+        state.startY = event.clientY;
+        state.originX = state.x;
+        state.originY = state.y;
+        viewport.classList.add('is-dragging');
+        viewport.setPointerCapture(event.pointerId);
+      });
+
+      viewport.addEventListener('pointermove', (event) => {
+        if (!state.dragging) return;
+        state.x = state.originX + event.clientX - state.startX;
+        state.y = state.originY + event.clientY - state.startY;
+        applyTransform();
+      });
+
+      function endDrag(event) {
+        if (!state.dragging) return;
+        state.dragging = false;
+        viewport.classList.remove('is-dragging');
+        if (viewport.hasPointerCapture(event.pointerId)) {
+          viewport.releasePointerCapture(event.pointerId);
+        }
+      }
+
+      viewport.addEventListener('pointerup', endDrag);
+      viewport.addEventListener('pointercancel', endDrag);
+      applyTransform();
+    });
+  }
+
+  function renderMermaid() {
+    const result = mermaid.run
+      ? mermaid.run({ querySelector: '.mermaid' })
+      : Promise.resolve();
+    Promise.resolve(result)
+      .then(enhanceMermaidDiagrams)
+      .catch((error) => {
+        console.error('Mermaid render failed:', error);
+        enhanceMermaidDiagrams();
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMermaid);
+  } else {
+    renderMermaid();
+  }
+})();
+</script>
+
+</body>
+</html>
