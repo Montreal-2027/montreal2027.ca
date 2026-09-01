@@ -1,7 +1,7 @@
 # Graph Report - montreal2027.ca  (2026-09-01)
 
 ## Corpus Check
-- 23 files · ~20,634 words
+- 23 files · ~20,625 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f76ffb65`
+- Built from commit: `b56e497a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
