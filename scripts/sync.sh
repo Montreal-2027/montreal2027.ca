@@ -122,7 +122,7 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 else
     echo "Backing up local database..."
     mkdir -p "${BACKUP_DIR}"
-    $DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
+    $DRUSH --gzip sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
 
     echo "Exporting changes..."
     $DRUSH cex
@@ -135,7 +135,11 @@ echo "Importing production database into local database..."
 if [ "$APP_ENV_TYPE" = "docker" ]; then
     docker compose exec -T web bash -c "$(${DRUSH} sql:connect) < /var/www/html/dump.sql"
 elif [ "$SYNC_LOCAL" = "true" ]; then
-    (cd "$SYNC_PROD_ROOT" && ./vendor/bin/drush sql:dump) | $(${DRUSH} sql:connect)
+    DEST_CONNECT=$(${DRUSH} sql:connect)
+    (unset DB_NAME DB_USER DB_PASSWORD DB_HOST DATABASE_URL && \
+    cd "$SYNC_PROD_ROOT" && \
+    set -a && source .env && set +a && \
+    ./vendor/bin/drush sql:dump) | eval $DEST_CONNECT
 else
     $(${DRUSH} sql:connect) < dump.sql
 fi
