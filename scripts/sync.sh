@@ -139,7 +139,7 @@ elif [ "$SYNC_LOCAL" = "true" ]; then
     (unset DB_NAME DB_USER DB_PASSWORD DB_HOST DATABASE_URL && \
     cd "$SYNC_PROD_ROOT" && \
     set -a && source .env && set +a && \
-    ./vendor/bin/drush sql:dump) | eval $DEST_CONNECT
+    ./vendor/bin/drush sql:dump) | $DEST_CONNECT
 else
     $(${DRUSH} sql:connect) < dump.sql
 fi
