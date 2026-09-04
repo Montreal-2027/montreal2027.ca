@@ -3,10 +3,16 @@ display:
     display_title: 'Par défaut'
     display_options:
       title: Média
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
       filters:
         name:
           expose:
             label: Nom
+        langcode:
+          expose:
+            label: Langue
   page:
     display_options:
       fields:
@@ -14,6 +20,10 @@ display:
           text: Supprimer
   widget:
     display_options:
+      arguments:
+        bundle:
+          exception:
+            title: Tout
       filters:
         name:
           expose:
@@ -23,6 +33,10 @@ display:
       fields:
         name:
           label: Nom
+      arguments:
+        bundle:
+          exception:
+            title: Tout
       filters:
         name:
           expose:

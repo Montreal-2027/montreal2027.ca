@@ -2,6 +2,12 @@
 
 ## Changelog
 ---
+## 1.0.9 (2026-09-09)
+
+- Updated deploy scripts to better support new hosting provider
+- Updated language detection settings
+- Changed "Staff" to "Team" in staff page configuration
+- Changed the url 
 
 ## 1.0.8 (2026-07-24)
  

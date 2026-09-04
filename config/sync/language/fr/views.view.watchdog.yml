@@ -5,6 +5,12 @@ display:
       fields:
         type:
           label: Type
+        link:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
       filters:
         type:
           expose:

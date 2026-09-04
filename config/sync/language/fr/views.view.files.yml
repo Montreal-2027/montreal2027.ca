@@ -7,8 +7,18 @@ display:
           label: Nom
         count:
           label: 'Utilisé dans'
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
   page_2:
     display_options:
       fields:
         type:
           label: "Type d'entité"
+      arguments:
+        fid:
+          exception:
+            title: Tout
