@@ -7,10 +7,19 @@ display:
       fields:
         bundle:
           label: Type
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
       filters:
         bundle:
           expose:
             label: Type
+        langcode:
+          expose:
+            label: Langue
   media_page_list:
     display_title: Média
     display_options:

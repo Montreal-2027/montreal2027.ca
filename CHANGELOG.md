@@ -2,6 +2,15 @@
 
 ## Changelog
 ---
+## 1.0.9 (2026-09-09)
+
+- Updated deploy scripts to better support new hosting provider
+- Updated language detection settings
+- Changed "Staff" to "Team" in staff page configuration
+- Changed the url routing from /staff to /team
+- Installed redirect module and added permanent redirect from /staff to /team
+- Added local sync to sync.sh to enable an additional instance of the same server to sync assets and database with the production site
+- Documented new enviroment settings in .env.example and README.md 
 
 ## 1.0.8 (2026-07-24)
  
