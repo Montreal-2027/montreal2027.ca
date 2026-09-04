@@ -6,7 +6,9 @@ settings:
   default_reset_button_label: Réinitialiser
   default_delete_button_label: Supprimer
   default_form_confidential_message: 'Ce formulaire est confidentiel. Vous devez vous <a href="[site:login-url]/logout?destination=[current-page:url:relative]">déconnecter</a> pour l''utiliser.'
+  default_form_access_denied_message: '<p>Please log in to access this form.</p>'
   default_form_required_label: 'Indique si le champs est requis'
+  default_form_file_limit_message: "<p>This form's file upload quota of %quota has been exceeded. Please remove some files.</p>"
   default_wizard_prev_button_label: '< Précédent'
   default_wizard_next_button_label: 'Suivant >'
   default_wizard_start_label: Début
@@ -17,6 +19,7 @@ settings:
   default_preview_prev_button_label: '< Précédent'
   default_preview_label: Aperçu
   default_preview_title: '[webform:title] : Prévisualisation'
+  default_preview_message: '<p>Please review your submission. Your submission is not complete until you press the "Submit" button!</p>'
   default_draft_button_label: 'Enregistrer le brouillon'
   default_draft_saved_message: 'Soumissions enregistrées. Vous pourrez revenir sur ce formulaire plus tard, cela restaurera les valeurs actuelles.'
   default_draft_loaded_message: 'Un formulaire partiellement complété a été trouvé. Veuillez compléter les portions restantes.'
@@ -40,6 +43,8 @@ element:
   empty_message: '{Vide}'
   default_more_title: Plus
   default_section_title_tag: h2
+file:
+  file_private_redirect_message: '<p>Please log in to access the uploaded file.</p>'
 mail:
   default_from_name: '[site:name]'
   default_body_html: "<p>Envoyé le [webform_submission:created]</p>\r\n<p>Envoyé par : [webform_submission:user]</p>\r\n<p>Les valeurs soumises sont :</p>\r\n[webform_submission:values]\n"

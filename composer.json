@@ -32,6 +32,8 @@
         "drupal/ckeditor5_open_new_tab": "^1.0",
         "drupal/ckeditor5_paste_filter": "^1.1",
         "drupal/ckeditor_media_resize": "^1.1",
+        "drupal/clientside_validation": "^4.1",
+        "drupal/clientside_validation_jquery": "^4.1",
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_ignore": "^3.3",
         "drupal/core-composer-scaffold": "~11.2.0",
@@ -79,6 +81,7 @@
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
         "drupal/twig_tweak": "^3.4",
+        "drupal/webform": "^6.3",
         "drupal/workspaces_access": "^1.1",
         "drupal/wse": "^2.0@alpha",
         "drush/drush": "^13.6",
@@ -197,4 +200,3 @@
         }
     }
 }
-
