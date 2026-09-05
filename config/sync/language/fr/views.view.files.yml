@@ -16,6 +16,12 @@ display:
           label: 'Utilisé dans'
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+        operations:
+          label: Actions
       pager:
         options:
           expose:
@@ -38,6 +44,10 @@ display:
       fields:
         type:
           label: "Type d'entité"
+      arguments:
+        fid:
+          exception:
+            title: Tout
       pager:
         options:
           expose:

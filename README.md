@@ -224,6 +224,10 @@ While Docker Desktop is a convenient option, there are several open source alter
    HASH_SALT=RandomHashSaltForDevelopmentPurposesOnly
 
    # Production sync settings (for scripts/sync.sh)
+   # Set to true when production is available locally; no SSH is used.
+   SYNC_LOCAL=false
+   # Local production checkout used when SYNC_LOCAL=true.
+   SYNC_PROD_ROOT=/home/cansmof/prod.montreal2027.ca
    SYNC_HOST=montreal2027.ca
    SYNC_USER=www-data
    SYNC_REMOTE_ROOT=/var/www/montreal2027.ca/

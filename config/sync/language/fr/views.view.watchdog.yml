@@ -34,6 +34,12 @@ display:
         area:
           admin_label: "Aucune entrée du journal n'est disponible."
           content: "Aucune entrée du journal n'est disponible."
+        link:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
       filters:
         type:
           expose:

@@ -25,3 +25,7 @@ display:
           sort_desc_label: Desc
   page_1:
     display_title: Page
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser

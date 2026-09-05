@@ -40,6 +40,12 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
       filters:
         bundle:
           expose:
@@ -49,6 +55,9 @@ display:
             group_items:
               1:
                 title: Publié
+        langcode:
+          expose:
+            label: Langue
         langcode:
           expose:
             label: Langue

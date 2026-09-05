@@ -23,3 +23,9 @@ display:
           separator: ', '
   page_1:
     display_title: Page
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser

@@ -3,6 +3,20 @@ display:
   default:
     display_title: 'Par défaut'
     display_options:
+      fields:
+        langcode:
+          label: Langue
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Réinitialiser
+      filters:
+        langcode:
+          expose:
+            label: Langue
+    display_options:
       title: Contenu
       fields:
         title:

@@ -74,6 +74,7 @@
         "drupal/pathauto": "^1.14",
         "drupal/phpmailer_smtp": "^2.4",
         "drupal/recreate_block_content": "3.0.1",
+        "drupal/redirect": "^1.13",
         "drupal/search_api": "^1.40",
         "drupal/social_media_links": "^2.10",
         "drupal/structure_sync": "^2.0",

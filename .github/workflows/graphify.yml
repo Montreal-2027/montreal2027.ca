@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Required to push updates back to the branch
-      models: read   # Required for GitHub Models API access (used as LLM backend)
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
@@ -31,38 +30,91 @@ jobs:
           python-version: '3.11'
 
       - name: Install Graphify
-        run: pip install "graphifyy[openai]"
+        run: |
+          # Install graphifyy package (temporary name while graphify name is being reclaimed)
+          pip install "graphifyy[openai]"
+          
+          # Verify installation
+          python -c "import graphify; print('Graphify installed successfully')" || {
+            echo "INFO: Failed to import graphify, trying graphifyy..."
+            python -c "import graphifyy; print('Graphifyy installed successfully')" || {
+              echo "ERROR: Failed to import graphify or graphifyy after installation"
+              exit 1
+            }
+          }
+
+      - name: Verify Graphify Installation
+        run: |
+          echo "Checking if graphify command is available..."
+          if command -v graphify >/dev/null 2>&1; then
+            echo "Graphify command found"
+            graphify --version || echo "Failed to get graphify version"
+          else
+            echo "ERROR: Graphify command not found"
+            exit 1
+          fi
 
       - name: Patch Graphify for Drupal extensions
         run: |
-          GRAPHIFY_DIR=$(python -c "import graphify, os; print(os.path.dirname(graphify.__file__))")
+          # Find the graphify installation directory
+          GRAPHIFY_DIR=""
+          for pkg in graphify graphifyy; do
+            GRAPHIFY_DIR=$(python -c "import $pkg, os; print(os.path.dirname($pkg.__file__))" 2>/dev/null)
+            if [ -n "$GRAPHIFY_DIR" ]; then
+              echo "Found $pkg installation at: $GRAPHIFY_DIR"
+              break
+            fi
+          done
+          
+          if [ -z "$GRAPHIFY_DIR" ]; then
+            echo "ERROR: Could not find graphify or graphifyy installation directory"
+            echo "Listing Python packages..."
+            pip list | grep graphify || echo "No graphify packages found"
+            exit 1
+          fi
+
+          # Check if files exist before patching
+          if [ ! -f "$GRAPHIFY_DIR/detect.py" ]; then
+            echo "ERROR: $GRAPHIFY_DIR/detect.py not found"
+            ls -la "$GRAPHIFY_DIR"
+            exit 1
+          fi
+          
+          if [ ! -f "$GRAPHIFY_DIR/extract.py" ]; then
+            echo "ERROR: $GRAPHIFY_DIR/extract.py not found"
+            ls -la "$GRAPHIFY_DIR"
+            exit 1
+          fi
 
           # detect.py: add Drupal extensions to CODE_EXTENSIONS so graphify finds and classifies these files
           # (.scss omitted — graphify has no SCSS AST extractor, so it would contribute nothing to the graph)
-          sed -i "s/CODE_EXTENSIONS = {/CODE_EXTENSIONS = {'.module', '.theme', '.install', /" "$GRAPHIFY_DIR/detect.py"
+          echo "Patching detect.py..."
+          sed -i "s/CODE_EXTENSIONS = {/CODE_EXTENSIONS = {'.module', '.theme', '.install', /" "$GRAPHIFY_DIR/detect.py" || {
+            echo "ERROR: Failed to patch detect.py"
+            exit 1
+          }
 
           # extract.py: add .module/.theme/.install to _DISPATCH so they are parsed with the PHP AST extractor
           # (.scss has no AST extractor in graphify, so detect.py classification alone is sufficient)
-          sed -i "s/    \".php\": extract_php,/    \".php\": extract_php,\n    \".module\": extract_php,\n    \".theme\": extract_php,\n    \".install\": extract_php,/" "$GRAPHIFY_DIR/extract.py"
+          echo "Patching extract.py..."
+          sed -i "s/    \".php\": extract_php,/    \".php\": extract_php,\n    \".module\": extract_php,\n    \".theme\": extract_php,\n    \".install\": extract_php,/" "$GRAPHIFY_DIR/extract.py" || {
+            echo "ERROR: Failed to patch extract.py"
+            exit 1
+          }
+          
+          echo "Patch applied successfully"
 
-      - name: Regenerate Code Architecture Map
-        env:
-          # GitHub Models provides an OpenAI-compatible API via the built-in GITHUB_TOKEN.
-          # No external API key required — just the models: read permission above.
-          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://models.inference.ai.azure.com
-          OPENAI_MODEL: gpt-4o-mini
-        # Use `graphify extract` (headless CI mode) so --token-budget is available.
-        # --token-budget 6000 keeps each chunk under the 8k token limit of gpt-4o-mini on GitHub Models.
-        run: graphify extract . --token-budget 6000
-
+      - name: Build Codebase Knowledge Graph
+        run: |
+          python3 -m graphify update .
+          
       - name: Cluster Graph and Generate Report
-        env:
-          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: https://models.inference.ai.azure.com
-          OPENAI_MODEL: gpt-4o-mini
-        # Runs community detection, names communities via LLM, and writes GRAPH_REPORT.md + graph.html
-        run: graphify cluster-only .
+        run: |
+          graphify cluster-only .
+          
+      - name: Export Architecture Artifacts
+        run: |
+          graphify export callflow-html
 
       - name: Safely Inject Copilot Instructions
         run: |
@@ -90,15 +142,15 @@ jobs:
           fi
 
 # PART A: Commit only the instruction file to your feature/develop branch
-      - name: Commit AI Instructions
+      - name: Commit Graphify Instructions
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore(ai): update graphify context in AGENTS.md [skip ci]"
+          commit_message: "chore(graphify): update graphify context in AGENTS.md [skip ci]"
           file_pattern: "AGENTS.md"
 
       # PART B: Push the heavy graph data to the separate 'graph-data' branch
       - name: Push Graph to Shadow Branch
-        uses: s0/git-publish-subdir-action@develop
+        uses: s0/git-publish-subdir-action@v2.6.0
         env:
           REPO: self
           BRANCH: graph-data

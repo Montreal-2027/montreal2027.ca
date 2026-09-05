@@ -24,3 +24,11 @@ display:
             title: Tout
   page_1:
     display_title: Page
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
+      arguments:
+        tid:
+          exception:
+            title: Tout
