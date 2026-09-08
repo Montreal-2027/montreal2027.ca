@@ -73,7 +73,6 @@
     "1": [
       "composer_drupal_core_project_message_include_keys",
       "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
       "composer_drupal_scaffold_locations",
       "composer_drupal_social_media_links_add_bluesky",
       "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace",
@@ -94,7 +93,6 @@
       "composer_installer_paths_web_themes_contrib_name",
       "composer_installer_paths_web_themes_custom_name",
       "composer_locations_web_root",
-      "composer_patches_drupal_paragraphs_report",
       "composer_patches_drupal_social_media_links",
       "composer_patches_drupal_wse"
     ],
@@ -294,7 +292,7 @@
   },
   "cohesion": {
     "0": 0.029411764705882353,
-    "1": 0.07692307692307693,
+    "1": 0.08333333333333333,
     "2": 0.11764705882352941,
     "3": 0.11764705882352941,
     "4": 0.125,
@@ -396,22 +394,22 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.205) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.203) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.091) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.084) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
-      "why": "High betweenness centrality (0.057) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.056) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?",
-      "why": "126 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "125 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
@@ -421,7 +419,7 @@
     {
       "type": "low_cohesion",
       "question": "Should `installer-paths` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",

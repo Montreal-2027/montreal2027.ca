@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 247 nodes · 285 edges · 22 communities (12 shown, 7 thin omitted)
+- 245 nodes · 283 edges · 22 communities (12 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6e932e3b`
+- Built from commit: `4b1577ab`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -63,7 +63,7 @@ Nodes (68): require, composer/installers, cweagans/composer-patches, drupal/admi
 
 ### Community 1 - "installer-paths"
 Cohesion: 0.08
-Nodes (26): include-keys, post-create-project-cmd-message, Refactor to AliasManagerInterface, locations, Add Bluesky, Reset workflow state to draft when cloning workspace, extra, drupal-core-project-message (+18 more)
+Nodes (24): include-keys, post-create-project-cmd-message, locations, Add Bluesky, Reset workflow state to draft when cloning workspace, extra, drupal-core-project-message, drupal-scaffold (+16 more)
 
 ### Community 2 - "composer.json"
 Cohesion: 0.12
@@ -106,24 +106,24 @@ Cohesion: 0.47
 Nodes (3): FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027_tools_form_taxonomy_term_form_alter()
 
 ## Knowledge Gaps
-- **126 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+121 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 158 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **125 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+120 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 157 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `require` to `composer.json`?**
-  _High betweenness centrality (0.205) - this node is a cross-community bridge._
+  _High betweenness centrality (0.203) - this node is a cross-community bridge._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
-  _High betweenness centrality (0.091) - this node is a cross-community bridge._
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
 - **Why does `config` connect `allow-plugins` to `composer.json`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+  _High betweenness centrality (0.056) - this node is a cross-community bridge._
 - **What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?**
-  _126 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _125 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `require` be split into smaller, more focused modules?**
   _Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected._
 - **Should `installer-paths` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

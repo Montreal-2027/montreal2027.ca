@@ -1354,7 +1354,7 @@
       "file_type": "code",
       "norm_label": "include-keys",
       "source_file": "composer.json",
-      "source_location": "L182"
+      "source_location": "L179"
     },
     {
       "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
@@ -1365,18 +1365,7 @@
       "file_type": "code",
       "norm_label": "post-create-project-cmd-message",
       "source_file": "composer.json",
-      "source_location": "L186"
-    },
-    {
-      "id": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
-      "label": "Refactor to AliasManagerInterface",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "installer-paths",
-      "file_type": "code",
-      "norm_label": "refactor to aliasmanagerinterface",
-      "source_file": "composer.json",
-      "source_location": "L135"
+      "source_location": "L183"
     },
     {
       "id": "composer_drupal_scaffold_locations",
@@ -1387,7 +1376,7 @@
       "file_type": "code",
       "norm_label": "locations",
       "source_file": "composer.json",
-      "source_location": "L139"
+      "source_location": "L136"
     },
     {
       "id": "composer_drupal_social_media_links_add_bluesky",
@@ -1431,7 +1420,7 @@
       "file_type": "code",
       "norm_label": "drupal-core-project-message",
       "source_file": "composer.json",
-      "source_location": "L181"
+      "source_location": "L178"
     },
     {
       "id": "composer_extra_drupal_scaffold",
@@ -1442,7 +1431,7 @@
       "file_type": "code",
       "norm_label": "drupal-scaffold",
       "source_file": "composer.json",
-      "source_location": "L138"
+      "source_location": "L135"
     },
     {
       "id": "composer_extra_installer_paths",
@@ -1453,7 +1442,7 @@
       "file_type": "code",
       "norm_label": "installer-paths",
       "source_file": "composer.json",
-      "source_location": "L147"
+      "source_location": "L144"
     },
     {
       "id": "composer_extra_installer_types",
@@ -1464,7 +1453,7 @@
       "file_type": "code",
       "norm_label": "installer-types",
       "source_file": "composer.json",
-      "source_location": "L143"
+      "source_location": "L140"
     },
     {
       "id": "composer_extra_patches",
@@ -1486,7 +1475,7 @@
       "file_type": "code",
       "norm_label": "drush/commands/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L165"
+      "source_location": "L162"
     },
     {
       "id": "composer_installer_paths_recipes_name",
@@ -1497,7 +1486,7 @@
       "file_type": "code",
       "norm_label": "recipes/{$name}",
       "source_file": "composer.json",
-      "source_location": "L177"
+      "source_location": "L174"
     },
     {
       "id": "composer_installer_paths_web_core",
@@ -1508,7 +1497,7 @@
       "file_type": "code",
       "norm_label": "web/core",
       "source_file": "composer.json",
-      "source_location": "L148"
+      "source_location": "L145"
     },
     {
       "id": "composer_installer_paths_web_libraries_name",
@@ -1519,7 +1508,7 @@
       "file_type": "code",
       "norm_label": "web/libraries/{$name}",
       "source_file": "composer.json",
-      "source_location": "L151"
+      "source_location": "L148"
     },
     {
       "id": "composer_installer_paths_web_modules_contrib_name",
@@ -1530,7 +1519,7 @@
       "file_type": "code",
       "norm_label": "web/modules/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L156"
+      "source_location": "L153"
     },
     {
       "id": "composer_installer_paths_web_modules_custom_name",
@@ -1541,7 +1530,7 @@
       "file_type": "code",
       "norm_label": "web/modules/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L168"
+      "source_location": "L165"
     },
     {
       "id": "composer_installer_paths_web_profiles_contrib_name",
@@ -1552,7 +1541,7 @@
       "file_type": "code",
       "norm_label": "web/profiles/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L159"
+      "source_location": "L156"
     },
     {
       "id": "composer_installer_paths_web_profiles_custom_name",
@@ -1563,7 +1552,7 @@
       "file_type": "code",
       "norm_label": "web/profiles/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L171"
+      "source_location": "L168"
     },
     {
       "id": "composer_installer_paths_web_themes_contrib_name",
@@ -1574,7 +1563,7 @@
       "file_type": "code",
       "norm_label": "web/themes/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L162"
+      "source_location": "L159"
     },
     {
       "id": "composer_installer_paths_web_themes_custom_name",
@@ -1585,7 +1574,7 @@
       "file_type": "code",
       "norm_label": "web/themes/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L174"
+      "source_location": "L171"
     },
     {
       "id": "composer_locations_web_root",
@@ -1596,18 +1585,7 @@
       "file_type": "code",
       "norm_label": "web-root",
       "source_file": "composer.json",
-      "source_location": "L140"
-    },
-    {
-      "id": "composer_patches_drupal_paragraphs_report",
-      "label": "drupal/paragraphs_report",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "installer-paths",
-      "file_type": "code",
-      "norm_label": "drupal/paragraphs_report",
-      "source_file": "composer.json",
-      "source_location": "L134"
+      "source_location": "L137"
     },
     {
       "id": "composer_patches_drupal_social_media_links",
@@ -4155,7 +4133,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L140",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -4177,7 +4155,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L138",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -4188,7 +4166,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L143",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -4199,7 +4177,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L147",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -4210,7 +4188,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L181",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -4221,7 +4199,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L182",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -4232,7 +4210,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L186",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -4243,7 +4221,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L139",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -4254,7 +4232,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L148",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -4265,7 +4243,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L151",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -4276,7 +4254,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L156",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
@@ -4287,7 +4265,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L159",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -4298,7 +4276,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L162",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -4309,7 +4287,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L165",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -4320,7 +4298,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L168",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -4331,7 +4309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L171",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -4342,7 +4320,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L174",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -4353,7 +4331,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L177",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -4376,28 +4354,6 @@
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L131",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_extra_patches",
-      "target": "composer_patches_drupal_paragraphs_report",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L134",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_patches_drupal_paragraphs_report",
-      "target": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -6053,5 +6009,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6e932e3b2bc56b9dba3f661e38ce78113e217b03"
+  "built_at_commit": "4b1577abf1b3070fa53bc2a4c942485c20abfa02"
 }

@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 247 nodes, 285 edges, 22 communities. Commit: 6e932e3</p>
+<p class="subtitle">Generated from graphify knowledge graph: 245 nodes, 283 edges, 22 communities. Commit: 4b1577a</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -90,7 +90,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 flowchart LR
     EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>2 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
-    BUILD_GRAPH_321CBB04("Graph Build<br/><small>160 nodes</small>")
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>158 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
     CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>2 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
@@ -140,7 +140,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>2</td><td><code>19</code></td></tr><tr><td>Graph Build</td><td>160</td><td><code>0, 1, 2, 3, 4, 8, 13</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>15</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>16</td><td><code>5</code></td></tr><tr><td>StaffContactController.php</td><td>14</td><td><code>6</code></td></tr><tr><td>Drupal\Core\Form\FormStateInterface</td><td>14</td><td><code>7</code></td></tr><tr><td>StaffPageController.php</td><td>12</td><td><code>9</code></td></tr><tr><td>ContactImportCommands</td><td>8</td><td><code>10</code></td></tr><tr><td>montreal2027_tools.module</td><td>6</td><td><code>11</code></td></tr><tr><td>entrypoint.sh</td><td>2</td><td><code>12</code></td></tr><tr><td>pre-commit</td><td>2</td><td><code>14</code></td></tr><tr><td>setup-graphify.sh</td><td>2</td><td><code>16</code></td></tr><tr><td>sync.sh</td><td>2</td><td><code>17</code></td></tr><tr><td>Symfony\Component\Dotenv\Dotenv</td><td>2</td><td><code>18</code></td></tr><tr><td>Other</td><td>3</td><td><code>20, 21</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>2</td><td><code>19</code></td></tr><tr><td>Graph Build</td><td>158</td><td><code>0, 1, 2, 3, 4, 8, 13</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>15</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>16</td><td><code>5</code></td></tr><tr><td>StaffContactController.php</td><td>14</td><td><code>6</code></td></tr><tr><td>Drupal\Core\Form\FormStateInterface</td><td>14</td><td><code>7</code></td></tr><tr><td>StaffPageController.php</td><td>12</td><td><code>9</code></td></tr><tr><td>ContactImportCommands</td><td>8</td><td><code>10</code></td></tr><tr><td>montreal2027_tools.module</td><td>6</td><td><code>11</code></td></tr><tr><td>entrypoint.sh</td><td>2</td><td><code>12</code></td></tr><tr><td>pre-commit</td><td>2</td><td><code>14</code></td></tr><tr><td>setup-graphify.sh</td><td>2</td><td><code>16</code></td></tr><tr><td>sync.sh</td><td>2</td><td><code>17</code></td></tr><tr><td>Symfony\Component\Dotenv\Dotenv</td><td>2</td><td><code>18</code></td></tr><tr><td>Other</td><td>3</td><td><code>20, 21</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -152,7 +152,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>247 nodes · 285 edges · 22 communities (12 shown, 7 thin omitted)</li>
+      <li>245 nodes · 283 edges · 22 communities (12 shown, 7 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `require` - 68 edges</li>
@@ -231,12 +231,12 @@ flowchart LR
 
 <!-- ====== 3. Graph Build ====== -->
 <h2 id="build-graph">3. Graph Build</h2>
-<p>Graph Build groups implementation around composerjson, drupal, montreal2027, web, mostly in composer.json, custom/montreal2027/package.json, custom/montreal2027/montreal2027.theme. This section covers 160 nodes and 162 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Graph Build groups implementation around composerjson, drupal, montreal2027, web, mostly in composer.json, custom/montreal2027/package.json, custom/montreal2027/montreal2027.theme. This section covers 158 nodes and 160 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Graph Build (160 nodes, 162 edges)
+    %% Section: Graph Build (158 nodes, 160 edges)
     subgraph build_graph_custom_montreal2027_montreal2027_the_705bf604["custom/montreal2027/montreal2027.theme"]
         web_themes_custom_montreal2027_montreal2027_049635f7("montreal2027.theme")
         web_themes_custom_montreal2027_montreal2027_mont_ac3e389e("block montreal2027 content()<br/><small>custom/montreal2027/montreal2027.theme</small>")
@@ -250,8 +250,8 @@ flowchart LR
     end
     subgraph build_graph_composer_json_6a456e64["composer.json"]
         composer_drupal_social_media_links_add_bluesky_8da78263("Add Bluesky<br/><small>composer.json</small>")
-        composer_drupal_paragraphs_report_refactor_to_al_5bc6d7ec("Refactor to AliasManagerInterface<br/><small>composer.json</small>")
         composer_drupal_wse_reset_workflow_state_to_draf_b0d78e67("Reset workflow state to draft when clon...<br/><small>composer.json</small>")
+        composer_config_allow_plugins_affd51fa("allow-plugins<br/><small>composer.json</small>")
     end
     subgraph build_graph_custom_montreal2027_package_json_99ded968["custom/montreal2027/package.json"]
         web_themes_custom_montreal2027_package_ade4f3b0("package.json")
@@ -271,7 +271,7 @@ flowchart LR
     web_themes_custom_montreal2027_package_ade4f3b0 -->|imports| ref_sass_6c3c8cb7
     web_themes_custom_montreal2027_package_ade4f3b0 -->|imports| ref_parcel_watcher_d04eff59
     web_themes_custom_montreal2027_montreal2027_049635f7 -->|imports| web_themes_custom_montreal2027_montreal2027_them_ab7ec458
-    %% Omitted for readability: 142 nodes, 0 edges
+    %% Omitted for readability: 140 nodes, 0 edges
     class web_themes_custom_montreal2027_montreal2027_049635f7 function;
     class web_themes_custom_montreal2027_montreal2027_mont_ac3e389e function;
     class web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa function;
@@ -282,8 +282,8 @@ flowchart LR
     class web_themes_custom_montreal2027_montreal2027_mont_050352ea function;
     class web_themes_custom_montreal2027_montreal2027_mont_031934fa function;
     class composer_drupal_social_media_links_add_bluesky_8da78263 klass;
-    class composer_drupal_paragraphs_report_refactor_to_al_5bc6d7ec klass;
     class composer_drupal_wse_reset_workflow_state_to_draf_b0d78e67 klass;
+    class composer_config_allow_plugins_affd51fa function;
     class web_themes_custom_montreal2027_package_ade4f3b0 function;
     class ref_sass_6c3c8cb7 function;
     class ref_parcel_watcher_d04eff59 function;
@@ -558,7 +558,7 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>composer.json</code></td><td>127 nodes</td></tr>
+      <tr><td><code>composer.json</code></td><td>125 nodes</td></tr>
 <tr><td><code>custom/montreal2027/package.json</code></td><td>17 nodes</td></tr>
 <tr><td><code>custom/montreal2027/montreal2027.theme</code></td><td>13 nodes</td></tr>
 <tr><td><code>.githooks/post-merge</code></td><td>2 nodes</td></tr>
@@ -566,7 +566,7 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x153, calls x5, imports x3, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x151, calls x5, imports x3, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -2123,8 +2123,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>247</td></tr>
-      <tr><td>Edges</td><td>285</td></tr>
+      <tr><td>Nodes</td><td>245</td></tr>
+      <tr><td>Edges</td><td>283</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>22</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -2133,7 +2133,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>284</td></tr>
+      <tr><td>EXTRACTED</td><td>282</td></tr>
       <tr><td>INFERRED</td><td>1</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -2142,7 +2142,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>montreal2027.ca — Architecture Documentation</p>
-  <p>Generated: 2026-09-08 03:40 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-09-08 03:44 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
