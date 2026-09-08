@@ -4,43 +4,17 @@
   "graph": {},
   "nodes": [
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "label": "StaffPageController",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "StaffPageController.php",
-      "file_type": "code",
-      "norm_label": "staffpagecontroller",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L16"
-    },
-    {
       "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
       "label": "ContactImportCommands",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
+      "community": 10,
+      "community_name": "ContactImportCommands",
       "file_type": "code",
       "norm_label": "contactimportcommands",
       "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
       "source_location": "L12"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
-      "label": "StaffContactController",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "staffcontactcontroller",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
-      "source_location": "L17"
     },
     {
       "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
@@ -48,7 +22,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "languagetoggleblock",
@@ -56,12 +30,25 @@
       "source_location": "L20"
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "label": "StaffContactController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "staffcontactcontroller",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+      "source_location": "L17"
+    },
+    {
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform",
       "label": "StaffPageSettingsForm",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "staffpagesettingsform",
@@ -74,7 +61,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "staffpagesettingsform",
@@ -82,64 +69,65 @@
       "source_location": "L11"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "label": ".build()",
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "label": "StaffPageController",
       "_callable": true,
+      "_callable_class": true,
       "_origin": "ast",
-      "community": 10,
+      "community": 9,
       "community_name": "StaffPageController.php",
       "file_type": "code",
-      "norm_label": ".build()",
+      "norm_label": "staffpagecontroller",
       "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L21"
+      "source_location": "L16"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "label": ".buildChildData()",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "label": ".combineHeaderAndRow()",
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": ".buildchilddata()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L108"
+      "norm_label": ".combineheaderandrow()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
+      "source_location": "L233"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "label": ".buildContactModalMarkup()",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "label": ".__construct()",
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": ".buildcontactmodalmarkup()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L183"
+      "norm_label": ".__construct()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
+      "source_location": "L24"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "label": ".getTermStorage()",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "label": ".importContacts()",
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": ".gettermstorage()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L160"
+      "norm_label": ".importcontacts()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
+      "source_location": "L54"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
-      "label": ".getTranslatedTerm()",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "label": ".resolvePath()",
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": ".gettranslatedterm()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-      "source_location": "L170"
+      "norm_label": ".resolvepath()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
+      "source_location": "L221"
     },
     {
       "id": "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_form_taxonomy_overview_terms_alter",
@@ -214,95 +202,11 @@
       "source_location": "L3"
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "label": ".combineHeaderAndRow()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".combineheaderandrow()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
-      "source_location": "L233"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "label": ".__construct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
-      "source_location": "L24"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "label": ".importContacts()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".importcontacts()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
-      "source_location": "L54"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "label": ".resolvePath()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".resolvepath()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
-      "source_location": "L221"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
-      "label": ".__construct()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".__construct()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
-      "source_location": "L22"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
-      "label": ".create()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".create()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
-      "source_location": "L32"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
-      "label": ".submit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": ".submit()",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
-      "source_location": "L44"
-    },
-    {
       "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
       "label": ".build()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": ".build()",
@@ -314,7 +218,7 @@
       "label": ".buildLinkData()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": ".buildlinkdata()",
@@ -326,7 +230,7 @@
       "label": ".buildLinkElement()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": ".buildlinkelement()",
@@ -338,7 +242,7 @@
       "label": ".__construct()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": ".__construct()",
@@ -350,7 +254,7 @@
       "label": ".create()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": ".create()",
@@ -358,11 +262,47 @@
       "source_location": "L48"
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
+      "label": ".__construct()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": ".__construct()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+      "source_location": "L22"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "label": ".create()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": ".create()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+      "source_location": "L32"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
+      "label": ".submit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": ".submit()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+      "source_location": "L44"
+    },
+    {
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform_staffpagesettingsform_buildform",
       "label": ".buildForm()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".buildform()",
@@ -374,7 +314,7 @@
       "label": ".getEditableConfigNames()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".geteditableconfignames()",
@@ -386,7 +326,7 @@
       "label": ".getFormId()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".getformid()",
@@ -398,7 +338,7 @@
       "label": ".submitForm()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".submitform()",
@@ -410,7 +350,7 @@
       "label": ".buildForm()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".buildform()",
@@ -422,7 +362,7 @@
       "label": ".getEditableConfigNames()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".geteditableconfignames()",
@@ -434,7 +374,7 @@
       "label": ".getFormId()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".getformid()",
@@ -446,7 +386,7 @@
       "label": ".submitForm()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": ".submitform()",
@@ -458,31 +398,31 @@
       "label": "get_image_info()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "get_image_info()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L71"
+      "source_location": "L74"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
       "label": "montreal2027_entity_in_content_language()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_entity_in_content_language()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L286"
+      "source_location": "L292"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_type_alter",
       "label": "montreal2027_entity_type_alter()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_entity_type_alter()",
@@ -494,108 +434,168 @@
       "label": "montreal2027_form_alter()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_form_alter()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20"
+      "source_location": "L21"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_montreal2027_content",
       "label": "montreal2027_preprocess_block__montreal2027_content()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_block__montreal2027_content()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L246"
+      "source_location": "L250"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_block_system_branding_block",
       "label": "montreal2027_preprocess_block__system_branding_block()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_block__system_branding_block()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L39"
+      "source_location": "L41"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_guest_taxonomy_paragraph",
       "label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_guest_taxonomy_paragraph()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L333"
+      "source_location": "L339"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node",
       "label": "montreal2027_preprocess_node()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_node()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L501"
+      "source_location": "L507"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_node_guest_teaser",
       "label": "montreal2027_preprocess_node__guest__teaser()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_node__guest__teaser()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L228"
+      "source_location": "L231"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_page",
       "label": "montreal2027_preprocess_page()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_page()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L261"
+      "source_location": "L266"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guest_block",
       "label": "montreal2027_preprocess_paragraph__guest_block()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_paragraph__guest_block()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L313"
+      "source_location": "L319"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "label": "montreal2027_preprocess_paragraph__guests()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027_preprocess_paragraph__guests()",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L323"
+      "source_location": "L329"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "label": ".build()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": ".build()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L21"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "label": ".buildChildData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": ".buildchilddata()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L108"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "label": ".buildContactModalMarkup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": ".buildcontactmodalmarkup()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L183"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
+      "label": ".getTermStorage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": ".gettermstorage()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L160"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
+      "label": ".getTranslatedTerm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": ".gettranslatedterm()",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L170"
     },
     {
       "id": "composer_require",
@@ -708,6 +708,28 @@
       "source_location": "L34"
     },
     {
+      "id": "composer_require_drupal_clientside_validation",
+      "label": "drupal/clientside_validation",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "require",
+      "file_type": "code",
+      "norm_label": "drupal/clientside_validation",
+      "source_file": "composer.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "composer_require_drupal_clientside_validation_jquery",
+      "label": "drupal/clientside_validation_jquery",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "require",
+      "file_type": "code",
+      "norm_label": "drupal/clientside_validation_jquery",
+      "source_file": "composer.json",
+      "source_location": "L36"
+    },
+    {
       "id": "composer_require_drupal_conditional_fields",
       "label": "drupal/conditional_fields",
       "_origin": "ast",
@@ -716,7 +738,7 @@
       "file_type": "code",
       "norm_label": "drupal/conditional_fields",
       "source_file": "composer.json",
-      "source_location": "L35"
+      "source_location": "L37"
     },
     {
       "id": "composer_require_drupal_config_ignore",
@@ -727,7 +749,7 @@
       "file_type": "code",
       "norm_label": "drupal/config_ignore",
       "source_file": "composer.json",
-      "source_location": "L36"
+      "source_location": "L38"
     },
     {
       "id": "composer_require_drupal_core_composer_scaffold",
@@ -738,7 +760,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-composer-scaffold",
       "source_file": "composer.json",
-      "source_location": "L37"
+      "source_location": "L39"
     },
     {
       "id": "composer_require_drupal_core_dev",
@@ -749,7 +771,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-dev",
       "source_file": "composer.json",
-      "source_location": "L38"
+      "source_location": "L40"
     },
     {
       "id": "composer_require_drupal_core_project_message",
@@ -760,7 +782,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-project-message",
       "source_file": "composer.json",
-      "source_location": "L39"
+      "source_location": "L41"
     },
     {
       "id": "composer_require_drupal_core_recipe_unpack",
@@ -771,7 +793,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-recipe-unpack",
       "source_file": "composer.json",
-      "source_location": "L40"
+      "source_location": "L42"
     },
     {
       "id": "composer_require_drupal_core_recommended",
@@ -782,7 +804,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-recommended",
       "source_file": "composer.json",
-      "source_location": "L41"
+      "source_location": "L43"
     },
     {
       "id": "composer_require_drupal_crop",
@@ -793,7 +815,7 @@
       "file_type": "code",
       "norm_label": "drupal/crop",
       "source_file": "composer.json",
-      "source_location": "L42"
+      "source_location": "L44"
     },
     {
       "id": "composer_require_drupal_draggableviews",
@@ -804,7 +826,7 @@
       "file_type": "code",
       "norm_label": "drupal/draggableviews",
       "source_file": "composer.json",
-      "source_location": "L43"
+      "source_location": "L45"
     },
     {
       "id": "composer_require_drupal_easy_breadcrumb",
@@ -815,7 +837,7 @@
       "file_type": "code",
       "norm_label": "drupal/easy_breadcrumb",
       "source_file": "composer.json",
-      "source_location": "L44"
+      "source_location": "L46"
     },
     {
       "id": "composer_require_drupal_ebt_basic_button",
@@ -826,7 +848,7 @@
       "file_type": "code",
       "norm_label": "drupal/ebt_basic_button",
       "source_file": "composer.json",
-      "source_location": "L45"
+      "source_location": "L47"
     },
     {
       "id": "composer_require_drupal_ebt_core",
@@ -837,7 +859,7 @@
       "file_type": "code",
       "norm_label": "drupal/ebt_core",
       "source_file": "composer.json",
-      "source_location": "L46"
+      "source_location": "L48"
     },
     {
       "id": "composer_require_drupal_ebt_hero",
@@ -848,7 +870,7 @@
       "file_type": "code",
       "norm_label": "drupal/ebt_hero",
       "source_file": "composer.json",
-      "source_location": "L47"
+      "source_location": "L49"
     },
     {
       "id": "composer_require_drupal_ebt_text",
@@ -859,7 +881,7 @@
       "file_type": "code",
       "norm_label": "drupal/ebt_text",
       "source_file": "composer.json",
-      "source_location": "L48"
+      "source_location": "L50"
     },
     {
       "id": "composer_require_drupal_ebt_tiles",
@@ -870,7 +892,7 @@
       "file_type": "code",
       "norm_label": "drupal/ebt_tiles",
       "source_file": "composer.json",
-      "source_location": "L49"
+      "source_location": "L51"
     },
     {
       "id": "composer_require_drupal_entity_embed",
@@ -881,7 +903,7 @@
       "file_type": "code",
       "norm_label": "drupal/entity_embed",
       "source_file": "composer.json",
-      "source_location": "L50"
+      "source_location": "L52"
     },
     {
       "id": "composer_require_drupal_entity_workflow",
@@ -892,7 +914,7 @@
       "file_type": "code",
       "norm_label": "drupal/entity_workflow",
       "source_file": "composer.json",
-      "source_location": "L51"
+      "source_location": "L53"
     },
     {
       "id": "composer_require_drupal_ept_basic_button",
@@ -903,7 +925,7 @@
       "file_type": "code",
       "norm_label": "drupal/ept_basic_button",
       "source_file": "composer.json",
-      "source_location": "L52"
+      "source_location": "L54"
     },
     {
       "id": "composer_require_drupal_ept_hero",
@@ -914,7 +936,7 @@
       "file_type": "code",
       "norm_label": "drupal/ept_hero",
       "source_file": "composer.json",
-      "source_location": "L53"
+      "source_location": "L55"
     },
     {
       "id": "composer_require_drupal_ept_text",
@@ -925,7 +947,7 @@
       "file_type": "code",
       "norm_label": "drupal/ept_text",
       "source_file": "composer.json",
-      "source_location": "L54"
+      "source_location": "L56"
     },
     {
       "id": "composer_require_drupal_ept_tiles",
@@ -936,7 +958,7 @@
       "file_type": "code",
       "norm_label": "drupal/ept_tiles",
       "source_file": "composer.json",
-      "source_location": "L55"
+      "source_location": "L57"
     },
     {
       "id": "composer_require_drupal_facets",
@@ -947,7 +969,7 @@
       "file_type": "code",
       "norm_label": "drupal/facets",
       "source_file": "composer.json",
-      "source_location": "L56"
+      "source_location": "L58"
     },
     {
       "id": "composer_require_drupal_field_group",
@@ -958,7 +980,7 @@
       "file_type": "code",
       "norm_label": "drupal/field_group",
       "source_file": "composer.json",
-      "source_location": "L57"
+      "source_location": "L59"
     },
     {
       "id": "composer_require_drupal_first_paragraph",
@@ -969,7 +991,7 @@
       "file_type": "code",
       "norm_label": "drupal/first_paragraph",
       "source_file": "composer.json",
-      "source_location": "L58"
+      "source_location": "L60"
     },
     {
       "id": "composer_require_drupal_focal_point",
@@ -980,7 +1002,7 @@
       "file_type": "code",
       "norm_label": "drupal/focal_point",
       "source_file": "composer.json",
-      "source_location": "L59"
+      "source_location": "L61"
     },
     {
       "id": "composer_require_drupal_gin",
@@ -991,7 +1013,7 @@
       "file_type": "code",
       "norm_label": "drupal/gin",
       "source_file": "composer.json",
-      "source_location": "L60"
+      "source_location": "L62"
     },
     {
       "id": "composer_require_drupal_image_effects",
@@ -1002,7 +1024,7 @@
       "file_type": "code",
       "norm_label": "drupal/image_effects",
       "source_file": "composer.json",
-      "source_location": "L61"
+      "source_location": "L63"
     },
     {
       "id": "composer_require_drupal_image_field_caption",
@@ -1013,7 +1035,7 @@
       "file_type": "code",
       "norm_label": "drupal/image_field_caption",
       "source_file": "composer.json",
-      "source_location": "L62"
+      "source_location": "L64"
     },
     {
       "id": "composer_require_drupal_lang_dropdown",
@@ -1024,7 +1046,7 @@
       "file_type": "code",
       "norm_label": "drupal/lang_dropdown",
       "source_file": "composer.json",
-      "source_location": "L63"
+      "source_location": "L65"
     },
     {
       "id": "composer_require_drupal_languageicons",
@@ -1035,7 +1057,7 @@
       "file_type": "code",
       "norm_label": "drupal/languageicons",
       "source_file": "composer.json",
-      "source_location": "L64"
+      "source_location": "L66"
     },
     {
       "id": "composer_require_drupal_mailsystem",
@@ -1046,7 +1068,7 @@
       "file_type": "code",
       "norm_label": "drupal/mailsystem",
       "source_file": "composer.json",
-      "source_location": "L65"
+      "source_location": "L67"
     },
     {
       "id": "composer_require_drupal_media_gallery",
@@ -1057,7 +1079,7 @@
       "file_type": "code",
       "norm_label": "drupal/media_gallery",
       "source_file": "composer.json",
-      "source_location": "L66"
+      "source_location": "L68"
     },
     {
       "id": "composer_require_drupal_media_library_form_element",
@@ -1068,7 +1090,7 @@
       "file_type": "code",
       "norm_label": "drupal/media_library_form_element",
       "source_file": "composer.json",
-      "source_location": "L67"
+      "source_location": "L69"
     },
     {
       "id": "composer_require_drupal_menu_block",
@@ -1079,7 +1101,7 @@
       "file_type": "code",
       "norm_label": "drupal/menu_block",
       "source_file": "composer.json",
-      "source_location": "L68"
+      "source_location": "L70"
     },
     {
       "id": "composer_require_drupal_menu_item_extras",
@@ -1090,7 +1112,7 @@
       "file_type": "code",
       "norm_label": "drupal/menu_item_extras",
       "source_file": "composer.json",
-      "source_location": "L69"
+      "source_location": "L71"
     },
     {
       "id": "composer_require_drupal_metatag",
@@ -1101,7 +1123,7 @@
       "file_type": "code",
       "norm_label": "drupal/metatag",
       "source_file": "composer.json",
-      "source_location": "L70"
+      "source_location": "L72"
     },
     {
       "id": "composer_require_drupal_paragraphs_report",
@@ -1112,7 +1134,7 @@
       "file_type": "code",
       "norm_label": "drupal/paragraphs_report",
       "source_file": "composer.json",
-      "source_location": "L71"
+      "source_location": "L73"
     },
     {
       "id": "composer_require_drupal_pathauto",
@@ -1123,7 +1145,7 @@
       "file_type": "code",
       "norm_label": "drupal/pathauto",
       "source_file": "composer.json",
-      "source_location": "L72"
+      "source_location": "L74"
     },
     {
       "id": "composer_require_drupal_phpmailer_smtp",
@@ -1134,7 +1156,7 @@
       "file_type": "code",
       "norm_label": "drupal/phpmailer_smtp",
       "source_file": "composer.json",
-      "source_location": "L73"
+      "source_location": "L75"
     },
     {
       "id": "composer_require_drupal_recreate_block_content",
@@ -1145,7 +1167,7 @@
       "file_type": "code",
       "norm_label": "drupal/recreate_block_content",
       "source_file": "composer.json",
-      "source_location": "L74"
+      "source_location": "L76"
     },
     {
       "id": "composer_require_drupal_redirect",
@@ -1156,7 +1178,7 @@
       "file_type": "code",
       "norm_label": "drupal/redirect",
       "source_file": "composer.json",
-      "source_location": "L75"
+      "source_location": "L77"
     },
     {
       "id": "composer_require_drupal_search_api",
@@ -1167,7 +1189,7 @@
       "file_type": "code",
       "norm_label": "drupal/search_api",
       "source_file": "composer.json",
-      "source_location": "L76"
+      "source_location": "L78"
     },
     {
       "id": "composer_require_drupal_social_media_links",
@@ -1178,7 +1200,7 @@
       "file_type": "code",
       "norm_label": "drupal/social_media_links",
       "source_file": "composer.json",
-      "source_location": "L77"
+      "source_location": "L79"
     },
     {
       "id": "composer_require_drupal_structure_sync",
@@ -1189,7 +1211,7 @@
       "file_type": "code",
       "norm_label": "drupal/structure_sync",
       "source_file": "composer.json",
-      "source_location": "L78"
+      "source_location": "L80"
     },
     {
       "id": "composer_require_drupal_superfish",
@@ -1200,7 +1222,7 @@
       "file_type": "code",
       "norm_label": "drupal/superfish",
       "source_file": "composer.json",
-      "source_location": "L79"
+      "source_location": "L81"
     },
     {
       "id": "composer_require_drupal_svg_image",
@@ -1211,7 +1233,7 @@
       "file_type": "code",
       "norm_label": "drupal/svg_image",
       "source_file": "composer.json",
-      "source_location": "L80"
+      "source_location": "L82"
     },
     {
       "id": "composer_require_drupal_svg_image_field",
@@ -1222,7 +1244,7 @@
       "file_type": "code",
       "norm_label": "drupal/svg_image_field",
       "source_file": "composer.json",
-      "source_location": "L81"
+      "source_location": "L83"
     },
     {
       "id": "composer_require_drupal_twig_tweak",
@@ -1233,7 +1255,18 @@
       "file_type": "code",
       "norm_label": "drupal/twig_tweak",
       "source_file": "composer.json",
-      "source_location": "L82"
+      "source_location": "L84"
+    },
+    {
+      "id": "composer_require_drupal_webform",
+      "label": "drupal/webform",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "require",
+      "file_type": "code",
+      "norm_label": "drupal/webform",
+      "source_file": "composer.json",
+      "source_location": "L85"
     },
     {
       "id": "composer_require_drupal_workspaces_access",
@@ -1244,7 +1277,7 @@
       "file_type": "code",
       "norm_label": "drupal/workspaces_access",
       "source_file": "composer.json",
-      "source_location": "L83"
+      "source_location": "L86"
     },
     {
       "id": "composer_require_drupal_wse",
@@ -1255,7 +1288,7 @@
       "file_type": "code",
       "norm_label": "drupal/wse",
       "source_file": "composer.json",
-      "source_location": "L84"
+      "source_location": "L87"
     },
     {
       "id": "composer_require_drush_drush",
@@ -1266,7 +1299,7 @@
       "file_type": "code",
       "norm_label": "drush/drush",
       "source_file": "composer.json",
-      "source_location": "L85"
+      "source_location": "L88"
     },
     {
       "id": "composer_require_omscllc_clean_blog_theme",
@@ -1277,7 +1310,7 @@
       "file_type": "code",
       "norm_label": "omscllc/clean_blog_theme",
       "source_file": "composer.json",
-      "source_location": "L86"
+      "source_location": "L89"
     },
     {
       "id": "composer_require_oomphinc_composer_installers_extender",
@@ -1288,7 +1321,7 @@
       "file_type": "code",
       "norm_label": "oomphinc/composer-installers-extender",
       "source_file": "composer.json",
-      "source_location": "L87"
+      "source_location": "L90"
     },
     {
       "id": "composer_require_symfony_dotenv",
@@ -1299,7 +1332,7 @@
       "file_type": "code",
       "norm_label": "symfony/dotenv",
       "source_file": "composer.json",
-      "source_location": "L88"
+      "source_location": "L91"
     },
     {
       "id": "composer_require_wikimedia_composer_merge_plugin",
@@ -1310,402 +1343,325 @@
       "file_type": "code",
       "norm_label": "wikimedia/composer-merge-plugin",
       "source_file": "composer.json",
-      "source_location": "L89"
+      "source_location": "L92"
     },
     {
       "id": "composer_drupal_core_project_message_include_keys",
       "label": "include-keys",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "include-keys",
       "source_file": "composer.json",
-      "source_location": "L179"
+      "source_location": "L182"
     },
     {
       "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
       "label": "post-create-project-cmd-message",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "post-create-project-cmd-message",
       "source_file": "composer.json",
-      "source_location": "L183"
+      "source_location": "L186"
     },
     {
       "id": "composer_drupal_paragraphs_report_refactor_to_aliasmanagerinterface",
       "label": "Refactor to AliasManagerInterface",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "refactor to aliasmanagerinterface",
       "source_file": "composer.json",
-      "source_location": "L132"
+      "source_location": "L135"
     },
     {
       "id": "composer_drupal_scaffold_locations",
       "label": "locations",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "locations",
       "source_file": "composer.json",
-      "source_location": "L136"
+      "source_location": "L139"
     },
     {
       "id": "composer_drupal_social_media_links_add_bluesky",
       "label": "Add Bluesky",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "add bluesky",
       "source_file": "composer.json",
-      "source_location": "L126"
+      "source_location": "L129"
     },
     {
       "id": "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace",
       "label": "Reset workflow state to draft when cloning workspace",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "reset workflow state to draft when cloning workspace",
       "source_file": "composer.json",
-      "source_location": "L129"
+      "source_location": "L132"
     },
     {
       "id": "composer_extra",
       "label": "extra",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "extra",
       "source_file": "composer.json",
-      "source_location": "L123"
+      "source_location": "L126"
     },
     {
       "id": "composer_extra_drupal_core_project_message",
       "label": "drupal-core-project-message",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "drupal-core-project-message",
       "source_file": "composer.json",
-      "source_location": "L178"
+      "source_location": "L181"
     },
     {
       "id": "composer_extra_drupal_scaffold",
       "label": "drupal-scaffold",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "drupal-scaffold",
       "source_file": "composer.json",
-      "source_location": "L135"
+      "source_location": "L138"
+    },
+    {
+      "id": "composer_extra_installer_paths",
+      "label": "installer-paths",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "installer-paths",
+      "source_file": "composer.json",
+      "source_location": "L147"
     },
     {
       "id": "composer_extra_installer_types",
       "label": "installer-types",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "installer-types",
       "source_file": "composer.json",
-      "source_location": "L140"
+      "source_location": "L143"
     },
     {
       "id": "composer_extra_patches",
       "label": "patches",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "patches",
       "source_file": "composer.json",
-      "source_location": "L124"
+      "source_location": "L127"
+    },
+    {
+      "id": "composer_installer_paths_drush_commands_contrib_name",
+      "label": "drush/Commands/contrib/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "drush/commands/contrib/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L165"
+    },
+    {
+      "id": "composer_installer_paths_recipes_name",
+      "label": "recipes/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "recipes/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L177"
+    },
+    {
+      "id": "composer_installer_paths_web_core",
+      "label": "web/core",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/core",
+      "source_file": "composer.json",
+      "source_location": "L148"
+    },
+    {
+      "id": "composer_installer_paths_web_libraries_name",
+      "label": "web/libraries/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/libraries/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L151"
+    },
+    {
+      "id": "composer_installer_paths_web_modules_contrib_name",
+      "label": "web/modules/contrib/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/modules/contrib/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L156"
+    },
+    {
+      "id": "composer_installer_paths_web_modules_custom_name",
+      "label": "web/modules/custom/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/modules/custom/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L168"
+    },
+    {
+      "id": "composer_installer_paths_web_profiles_contrib_name",
+      "label": "web/profiles/contrib/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/profiles/contrib/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L159"
+    },
+    {
+      "id": "composer_installer_paths_web_profiles_custom_name",
+      "label": "web/profiles/custom/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/profiles/custom/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L171"
+    },
+    {
+      "id": "composer_installer_paths_web_themes_contrib_name",
+      "label": "web/themes/contrib/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/themes/contrib/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L162"
+    },
+    {
+      "id": "composer_installer_paths_web_themes_custom_name",
+      "label": "web/themes/custom/{$name}",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "installer-paths",
+      "file_type": "code",
+      "norm_label": "web/themes/custom/{$name}",
+      "source_file": "composer.json",
+      "source_location": "L174"
     },
     {
       "id": "composer_locations_web_root",
       "label": "web-root",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "web-root",
       "source_file": "composer.json",
-      "source_location": "L137"
+      "source_location": "L140"
     },
     {
       "id": "composer_patches_drupal_paragraphs_report",
       "label": "drupal/paragraphs_report",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "drupal/paragraphs_report",
       "source_file": "composer.json",
-      "source_location": "L131"
+      "source_location": "L134"
     },
     {
       "id": "composer_patches_drupal_social_media_links",
       "label": "drupal/social_media_links",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "drupal/social_media_links",
       "source_file": "composer.json",
-      "source_location": "L125"
+      "source_location": "L128"
     },
     {
       "id": "composer_patches_drupal_wse",
       "label": "drupal/wse",
       "_origin": "ast",
       "community": 1,
-      "community_name": "post-create-project-cmd-message",
+      "community_name": "installer-paths",
       "file_type": "code",
       "norm_label": "drupal/wse",
       "source_file": "composer.json",
-      "source_location": "L128"
+      "source_location": "L131"
     },
     {
-      "id": "ref_bg_blue_fg_white",
-      "label": "<bg=blue;fg=white>                                                         </>",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "<bg=blue;fg=white>                                                         </>",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase",
-      "label": "<bg=blue;fg=white>  Congratulations, you\u2019ve installed the Drupal codebase  </>",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "<bg=blue;fg=white>  congratulations, you\u2019ve installed the drupal codebase  </>",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template",
-      "label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_bg_yellow_fg_black_next_steps",
-      "label": "<bg=yellow;fg=black>Next steps</>:",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "<bg=yellow;fg=black>next steps</>:",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_bower_asset",
-      "label": "bower-asset",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "bower-asset",
-      "source_file": "composer.json",
-      "source_location": "L140"
-    },
-    {
-      "id": "ref_composer_remove_drupal_core_project_message",
-      "label": "      composer remove drupal/core-project-message",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "      composer remove drupal/core-project-message",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_get_involved_with_the_drupal_community",
-      "label": "  * Get involved with the Drupal community:",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "  * get involved with the drupal community:",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_get_support_https_www_drupal_org_support",
-      "label": "  * Get support: https://www.drupal.org/support",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "  * get support: https://www.drupal.org/support",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_homepage",
-      "label": "homepage",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "homepage",
-      "source_file": "composer.json",
-      "source_location": "L179"
-    },
-    {
-      "id": "ref_https_www_drupal_org_getting_involved",
-      "label": "      https://www.drupal.org/getting-involved",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "      https://www.drupal.org/getting-involved",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_install_the_site_https_www_drupal_org_docs_installing_drupal",
-      "label": "  * Install the site: https://www.drupal.org/docs/installing-drupal",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "  * install the site: https://www.drupal.org/docs/installing-drupal",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_npm_asset",
-      "label": "npm-asset",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "npm-asset",
-      "source_file": "composer.json",
-      "source_location": "L140"
-    },
-    {
-      "id": "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html",
-      "label": "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "  * read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_remove_the_plugin_that_prints_this_message",
-      "label": "  * Remove the plugin that prints this message:",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "  * remove the plugin that prints this message:",
-      "source_file": "composer.json",
-      "source_location": "L183"
-    },
-    {
-      "id": "ref_support",
-      "label": "support",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "post-create-project-cmd-message",
-      "file_type": "concept",
-      "norm_label": "support",
-      "source_file": "composer.json",
-      "source_location": "L179"
-    },
-    {
-      "id": "drupal_component_utility_html",
-      "label": "Drupal\\Component\\Utility\\Html",
+      "id": "drupal_user_userinterface",
+      "label": "Drupal\\user\\UserInterface",
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": "drupal\\component\\utility\\html",
+      "norm_label": "drupal\\user\\userinterface",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "drupal_core_language_languageinterface",
-      "label": "Drupal\\Core\\Language\\LanguageInterface",
+      "id": "drush_commands_drushcommands",
+      "label": "Drush\\Commands\\DrushCommands",
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": "drupal\\core\\language\\languageinterface",
+      "norm_label": "drush\\commands\\drushcommands",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "drupal_core_render_markup",
-      "label": "Drupal\\Core\\Render\\Markup",
+      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "label": "ContactImportCommands.php",
       "_origin": "ast",
       "community": 10,
-      "community_name": "StaffPageController.php",
+      "community_name": "ContactImportCommands",
       "file_type": "code",
-      "norm_label": "drupal\\core\\render\\markup",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_taxonomy_terminterface",
-      "label": "Drupal\\taxonomy\\TermInterface",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "StaffPageController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\taxonomy\\terminterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_taxonomy_termstorageinterface",
-      "label": "Drupal\\taxonomy\\TermStorageInterface",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "StaffPageController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\taxonomy\\termstorageinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "label": "StaffPageController.php",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "StaffPageController.php",
-      "file_type": "code",
-      "norm_label": "staffpagecontroller.php",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "norm_label": "contactimportcommands.php",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
       "source_location": "L1"
     },
     {
@@ -1944,257 +1900,191 @@
       "source_location": "L1"
     },
     {
-      "id": "composer_extra_installer_paths",
-      "label": "installer-paths",
+      "id": "composer",
+      "label": "composer.json",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "installer-paths",
+      "norm_label": "composer.json",
       "source_file": "composer.json",
-      "source_location": "L144"
+      "source_location": "L1"
     },
     {
-      "id": "composer_installer_paths_drush_commands_contrib_name",
-      "label": "drush/Commands/contrib/{$name}",
+      "id": "composer_conflict",
+      "label": "conflict",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "drush/commands/contrib/{$name}",
+      "norm_label": "conflict",
       "source_file": "composer.json",
-      "source_location": "L162"
+      "source_location": "L94"
     },
     {
-      "id": "composer_installer_paths_recipes_name",
-      "label": "recipes/{$name}",
+      "id": "composer_conflict_drupal_drupal",
+      "label": "drupal/drupal",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "recipes/{$name}",
+      "norm_label": "drupal/drupal",
       "source_file": "composer.json",
-      "source_location": "L174"
+      "source_location": "L95"
     },
     {
-      "id": "composer_installer_paths_web_core",
-      "label": "web/core",
+      "id": "composer_description",
+      "label": "description",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/core",
+      "norm_label": "description",
       "source_file": "composer.json",
-      "source_location": "L145"
+      "source_location": "L3"
     },
     {
-      "id": "composer_installer_paths_web_libraries_name",
-      "label": "web/libraries/{$name}",
+      "id": "composer_homepage",
+      "label": "homepage",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/libraries/{$name}",
+      "norm_label": "homepage",
       "source_file": "composer.json",
-      "source_location": "L148"
+      "source_location": "L6"
     },
     {
-      "id": "composer_installer_paths_web_modules_contrib_name",
-      "label": "web/modules/contrib/{$name}",
+      "id": "composer_license",
+      "label": "license",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/modules/contrib/{$name}",
+      "norm_label": "license",
       "source_file": "composer.json",
-      "source_location": "L153"
+      "source_location": "L5"
     },
     {
-      "id": "composer_installer_paths_web_modules_custom_name",
-      "label": "web/modules/custom/{$name}",
+      "id": "composer_minimum_stability",
+      "label": "minimum-stability",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/modules/custom/{$name}",
+      "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L165"
+      "source_location": "L97"
     },
     {
-      "id": "composer_installer_paths_web_profiles_contrib_name",
-      "label": "web/profiles/contrib/{$name}",
+      "id": "composer_name",
+      "label": "name",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/profiles/contrib/{$name}",
+      "norm_label": "name",
       "source_file": "composer.json",
-      "source_location": "L156"
+      "source_location": "L2"
     },
     {
-      "id": "composer_installer_paths_web_profiles_custom_name",
-      "label": "web/profiles/custom/{$name}",
+      "id": "composer_prefer_stable",
+      "label": "prefer-stable",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/profiles/custom/{$name}",
+      "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L168"
+      "source_location": "L98"
     },
     {
-      "id": "composer_installer_paths_web_themes_contrib_name",
-      "label": "web/themes/contrib/{$name}",
+      "id": "composer_repositories",
+      "label": "repositories",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/themes/contrib/{$name}",
+      "norm_label": "repositories",
       "source_file": "composer.json",
-      "source_location": "L159"
+      "source_location": "L11"
     },
     {
-      "id": "composer_installer_paths_web_themes_custom_name",
-      "label": "web/themes/custom/{$name}",
+      "id": "composer_scripts",
+      "label": "scripts",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
+      "community_name": "composer.json",
       "file_type": "code",
-      "norm_label": "web/themes/custom/{$name}",
+      "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L171"
+      "source_location": "L118"
     },
     {
-      "id": "ref_type_bower_asset",
-      "label": "type:bower-asset",
+      "id": "composer_scripts_post_install_cmd",
+      "label": "post-install-cmd",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:bower-asset",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "post-install-cmd",
       "source_file": "composer.json",
-      "source_location": "L148"
+      "source_location": "L119"
     },
     {
-      "id": "ref_type_drupal_core",
-      "label": "type:drupal-core",
+      "id": "composer_scripts_post_update_cmd",
+      "label": "post-update-cmd",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-core",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "post-update-cmd",
       "source_file": "composer.json",
-      "source_location": "L145"
+      "source_location": "L122"
     },
     {
-      "id": "ref_type_drupal_custom_module",
-      "label": "type:drupal-custom-module",
+      "id": "composer_support",
+      "label": "support",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-custom-module",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "support",
       "source_file": "composer.json",
-      "source_location": "L165"
+      "source_location": "L7"
     },
     {
-      "id": "ref_type_drupal_custom_profile",
-      "label": "type:drupal-custom-profile",
+      "id": "composer_support_chat",
+      "label": "chat",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-custom-profile",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "chat",
       "source_file": "composer.json",
-      "source_location": "L168"
+      "source_location": "L9"
     },
     {
-      "id": "ref_type_drupal_custom_theme",
-      "label": "type:drupal-custom-theme",
+      "id": "composer_support_docs",
+      "label": "docs",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-custom-theme",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "docs",
       "source_file": "composer.json",
-      "source_location": "L171"
+      "source_location": "L8"
     },
     {
-      "id": "ref_type_drupal_drush",
-      "label": "type:drupal-drush",
+      "id": "composer_type",
+      "label": "type",
       "_origin": "ast",
       "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-drush",
+      "community_name": "composer.json",
+      "file_type": "code",
+      "norm_label": "type",
       "source_file": "composer.json",
-      "source_location": "L162"
-    },
-    {
-      "id": "ref_type_drupal_library",
-      "label": "type:drupal-library",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-library",
-      "source_file": "composer.json",
-      "source_location": "L148"
-    },
-    {
-      "id": "ref_type_drupal_module",
-      "label": "type:drupal-module",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-module",
-      "source_file": "composer.json",
-      "source_location": "L153"
-    },
-    {
-      "id": "ref_type_drupal_profile",
-      "label": "type:drupal-profile",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-profile",
-      "source_file": "composer.json",
-      "source_location": "L156"
-    },
-    {
-      "id": "ref_type_drupal_recipe",
-      "label": "type:drupal-recipe",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-recipe",
-      "source_file": "composer.json",
-      "source_location": "L174"
-    },
-    {
-      "id": "ref_type_drupal_theme",
-      "label": "type:drupal-theme",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:drupal-theme",
-      "source_file": "composer.json",
-      "source_location": "L159"
-    },
-    {
-      "id": "ref_type_npm_asset",
-      "label": "type:npm-asset",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "installer-paths",
-      "file_type": "concept",
-      "norm_label": "type:npm-asset",
-      "source_file": "composer.json",
-      "source_location": "L148"
+      "source_location": "L4"
     },
     {
       "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
@@ -2227,351 +2117,10 @@
       "source_location": "L1"
     },
     {
-      "id": "drupal_core_controller_controllerbase",
-      "label": "Drupal\\Core\\Controller\\ControllerBase",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\controller\\controllerbase",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_core_entity_entitytypemanagerinterface",
-      "label": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\entity\\entitytypemanagerinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_core_logger_loggerchannelfactoryinterface",
-      "label": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\logger\\loggerchannelfactoryinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_core_mail_mailmanagerinterface",
-      "label": "Drupal\\Core\\Mail\\MailManagerInterface",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\mail\\mailmanagerinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_user_userinterface",
-      "label": "Drupal\\user\\UserInterface",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\user\\userinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drush_commands_drushcommands",
-      "label": "Drush\\Commands\\DrushCommands",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "drush\\commands\\drushcommands",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "jsonresponse",
-      "label": "JsonResponse",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "jsonresponse",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "symfony_component_dependencyinjection_containerinterface",
-      "label": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "symfony\\component\\dependencyinjection\\containerinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "symfony_component_httpfoundation_jsonresponse",
-      "label": "Symfony\\Component\\HttpFoundation\\JsonResponse",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "symfony\\component\\httpfoundation\\jsonresponse",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "symfony_component_httpfoundation_request",
-      "label": "Symfony\\Component\\HttpFoundation\\Request",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "symfony\\component\\httpfoundation\\request",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "label": "ContactImportCommands.php",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "contactimportcommands.php",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
-      "label": "StaffContactController.php",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "staffcontactcontroller.php",
-      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
-      "label": "static",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "StaffContactController.php",
-      "file_type": "code",
-      "norm_label": "static",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "composer",
-      "label": "composer.json",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "composer.json",
-      "source_file": "composer.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "composer_conflict",
-      "label": "conflict",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "conflict",
-      "source_file": "composer.json",
-      "source_location": "L91"
-    },
-    {
-      "id": "composer_conflict_drupal_drupal",
-      "label": "drupal/drupal",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "drupal/drupal",
-      "source_file": "composer.json",
-      "source_location": "L92"
-    },
-    {
-      "id": "composer_description",
-      "label": "description",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "description",
-      "source_file": "composer.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "composer_homepage",
-      "label": "homepage",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "homepage",
-      "source_file": "composer.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "composer_license",
-      "label": "license",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "license",
-      "source_file": "composer.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "composer_minimum_stability",
-      "label": "minimum-stability",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "minimum-stability",
-      "source_file": "composer.json",
-      "source_location": "L94"
-    },
-    {
-      "id": "composer_name",
-      "label": "name",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "name",
-      "source_file": "composer.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "composer_prefer_stable",
-      "label": "prefer-stable",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "prefer-stable",
-      "source_file": "composer.json",
-      "source_location": "L95"
-    },
-    {
-      "id": "composer_repositories",
-      "label": "repositories",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "repositories",
-      "source_file": "composer.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "composer_scripts",
-      "label": "scripts",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "scripts",
-      "source_file": "composer.json",
-      "source_location": "L115"
-    },
-    {
-      "id": "composer_scripts_post_install_cmd",
-      "label": "post-install-cmd",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "post-install-cmd",
-      "source_file": "composer.json",
-      "source_location": "L116"
-    },
-    {
-      "id": "composer_scripts_post_update_cmd",
-      "label": "post-update-cmd",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "post-update-cmd",
-      "source_file": "composer.json",
-      "source_location": "L119"
-    },
-    {
-      "id": "composer_support",
-      "label": "support",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "support",
-      "source_file": "composer.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "composer_support_chat",
-      "label": "chat",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "chat",
-      "source_file": "composer.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "composer_support_docs",
-      "label": "docs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "docs",
-      "source_file": "composer.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "composer_type",
-      "label": "type",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "code",
-      "norm_label": "type",
-      "source_file": "composer.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "ref_git_config_core_hookspath_githooks_true",
-      "label": "git config core.hooksPath .githooks || true",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "composer.json",
-      "file_type": "concept",
-      "norm_label": "git config core.hookspath .githooks || true",
-      "source_file": "composer.json",
-      "source_location": "L116"
-    },
-    {
       "id": "web_themes_custom_montreal2027_package",
       "label": "package.json",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "package.json",
@@ -2582,7 +2131,7 @@
       "id": "web_themes_custom_montreal2027_package_dependencies",
       "label": "dependencies",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "dependencies",
@@ -2593,7 +2142,7 @@
       "id": "web_themes_custom_montreal2027_package_dependencies_parcel_watcher",
       "label": "@parcel/watcher",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "@parcel/watcher",
@@ -2604,7 +2153,7 @@
       "id": "web_themes_custom_montreal2027_package_description",
       "label": "description",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "description",
@@ -2615,7 +2164,7 @@
       "id": "web_themes_custom_montreal2027_package_devdependencies",
       "label": "devDependencies",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "devdependencies",
@@ -2626,7 +2175,7 @@
       "id": "web_themes_custom_montreal2027_package_devdependencies_sass",
       "label": "sass",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "sass",
@@ -2637,7 +2186,7 @@
       "id": "web_themes_custom_montreal2027_package_engines",
       "label": "engines",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "engines",
@@ -2648,7 +2197,7 @@
       "id": "web_themes_custom_montreal2027_package_engines_node",
       "label": "node",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "node",
@@ -2659,7 +2208,7 @@
       "id": "web_themes_custom_montreal2027_package_engines_npm",
       "label": "npm",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "npm",
@@ -2670,7 +2219,7 @@
       "id": "web_themes_custom_montreal2027_package_name",
       "label": "name",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "name",
@@ -2681,7 +2230,7 @@
       "id": "web_themes_custom_montreal2027_package_private",
       "label": "private",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "private",
@@ -2692,7 +2241,7 @@
       "id": "web_themes_custom_montreal2027_package_scripts",
       "label": "scripts",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "scripts",
@@ -2703,7 +2252,7 @@
       "id": "web_themes_custom_montreal2027_package_scripts_build_css",
       "label": "build:css",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "build:css",
@@ -2714,7 +2263,7 @@
       "id": "web_themes_custom_montreal2027_package_scripts_watch_css",
       "label": "watch:css",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "watch:css",
@@ -2725,7 +2274,7 @@
       "id": "web_themes_custom_montreal2027_package_version",
       "label": "version",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "code",
       "norm_label": "version",
@@ -2733,10 +2282,10 @@
       "source_location": "L3"
     },
     {
-      "id": "parcel_watcher",
+      "id": "ref_parcel_watcher",
       "label": "@parcel/watcher",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "concept",
       "norm_label": "@parcel/watcher",
@@ -2744,10 +2293,10 @@
       "source_location": "L18"
     },
     {
-      "id": "sass",
+      "id": "ref_sass",
       "label": "sass",
       "_origin": "ast",
-      "community": 5,
+      "community": 3,
       "community_name": "package.json",
       "file_type": "concept",
       "norm_label": "sass",
@@ -2758,183 +2307,183 @@
       "id": "composer_allow_plugins_composer_installers",
       "label": "composer/installers",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L101"
+      "source_location": "L104"
     },
     {
       "id": "composer_allow_plugins_cweagans_composer_patches",
       "label": "cweagans/composer-patches",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "cweagans/composer-patches",
       "source_file": "composer.json",
-      "source_location": "L102"
+      "source_location": "L105"
     },
     {
       "id": "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
       "label": "dealerdirect/phpcodesniffer-composer-installer",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "dealerdirect/phpcodesniffer-composer-installer",
       "source_file": "composer.json",
-      "source_location": "L103"
+      "source_location": "L106"
     },
     {
       "id": "composer_allow_plugins_drupal_core_composer_scaffold",
       "label": "drupal/core-composer-scaffold",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "drupal/core-composer-scaffold",
       "source_file": "composer.json",
-      "source_location": "L104"
+      "source_location": "L107"
     },
     {
       "id": "composer_allow_plugins_drupal_core_project_message",
       "label": "drupal/core-project-message",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "drupal/core-project-message",
       "source_file": "composer.json",
-      "source_location": "L105"
+      "source_location": "L108"
     },
     {
       "id": "composer_allow_plugins_drupal_core_recipe_unpack",
       "label": "drupal/core-recipe-unpack",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "drupal/core-recipe-unpack",
       "source_file": "composer.json",
-      "source_location": "L106"
+      "source_location": "L109"
     },
     {
       "id": "composer_allow_plugins_oomphinc_composer_installers_extender",
       "label": "oomphinc/composer-installers-extender",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "oomphinc/composer-installers-extender",
       "source_file": "composer.json",
-      "source_location": "L107"
+      "source_location": "L110"
     },
     {
       "id": "composer_allow_plugins_php_http_discovery",
       "label": "php-http/discovery",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "php-http/discovery",
       "source_file": "composer.json",
-      "source_location": "L108"
+      "source_location": "L111"
     },
     {
       "id": "composer_allow_plugins_php_tuf_composer_integration",
       "label": "php-tuf/composer-integration",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "php-tuf/composer-integration",
       "source_file": "composer.json",
-      "source_location": "L109"
+      "source_location": "L112"
     },
     {
       "id": "composer_allow_plugins_phpstan_extension_installer",
       "label": "phpstan/extension-installer",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "phpstan/extension-installer",
       "source_file": "composer.json",
-      "source_location": "L110"
+      "source_location": "L113"
     },
     {
       "id": "composer_allow_plugins_wikimedia_composer_merge_plugin",
       "label": "wikimedia/composer-merge-plugin",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "wikimedia/composer-merge-plugin",
       "source_file": "composer.json",
-      "source_location": "L111"
+      "source_location": "L114"
     },
     {
       "id": "composer_config",
       "label": "config",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L96"
+      "source_location": "L99"
     },
     {
       "id": "composer_config_allow_plugins",
       "label": "allow-plugins",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L100"
+      "source_location": "L103"
     },
     {
       "id": "composer_config_platform",
       "label": "platform",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "platform",
       "source_file": "composer.json",
-      "source_location": "L97"
+      "source_location": "L100"
     },
     {
       "id": "composer_config_sort_packages",
       "label": "sort-packages",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L113"
+      "source_location": "L116"
     },
     {
       "id": "composer_platform_php",
       "label": "php",
       "_origin": "ast",
-      "community": 6,
+      "community": 4,
       "community_name": "allow-plugins",
       "file_type": "code",
       "norm_label": "php",
       "source_file": "composer.json",
-      "source_location": "L98"
+      "source_location": "L101"
     },
     {
       "id": "drupal_core_block_attribute_block",
       "label": "Drupal\\Core\\Block\\Attribute\\Block",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\block\\attribute\\block",
@@ -2945,7 +2494,7 @@
       "id": "drupal_core_block_blockbase",
       "label": "Drupal\\Core\\Block\\BlockBase",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\block\\blockbase",
@@ -2956,7 +2505,7 @@
       "id": "drupal_core_language_languagemanagerinterface",
       "label": "Drupal\\Core\\Language\\LanguageManagerInterface",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\language\\languagemanagerinterface",
@@ -2967,7 +2516,7 @@
       "id": "drupal_core_plugin_containerfactoryplugininterface",
       "label": "Drupal\\Core\\Plugin\\ContainerFactoryPluginInterface",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\plugin\\containerfactoryplugininterface",
@@ -2978,7 +2527,7 @@
       "id": "drupal_core_routing_routematchinterface",
       "label": "Drupal\\Core\\Routing\\RouteMatchInterface",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\routing\\routematchinterface",
@@ -2989,7 +2538,7 @@
       "id": "drupal_core_stringtranslation_translatablemarkup",
       "label": "Drupal\\Core\\StringTranslation\\TranslatableMarkup",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\stringtranslation\\translatablemarkup",
@@ -3000,7 +2549,7 @@
       "id": "drupal_core_url",
       "label": "Drupal\\Core\\Url",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\url",
@@ -3011,7 +2560,7 @@
       "id": "url",
       "label": "Url",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "url",
@@ -3022,7 +2571,7 @@
       "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
       "label": "LanguageToggleBlock.php",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "languagetoggleblock.php",
@@ -3033,8 +2582,118 @@
       "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static",
       "label": "static",
       "_origin": "ast",
-      "community": 7,
+      "community": 5,
       "community_name": "LanguageToggleBlock.php",
+      "file_type": "code",
+      "norm_label": "static",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_controller_controllerbase",
+      "label": "Drupal\\Core\\Controller\\ControllerBase",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\controller\\controllerbase",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_entity_entitytypemanagerinterface",
+      "label": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\entity\\entitytypemanagerinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_logger_loggerchannelfactoryinterface",
+      "label": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\logger\\loggerchannelfactoryinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_mail_mailmanagerinterface",
+      "label": "Drupal\\Core\\Mail\\MailManagerInterface",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\mail\\mailmanagerinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "jsonresponse",
+      "label": "JsonResponse",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "jsonresponse",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "symfony_component_dependencyinjection_containerinterface",
+      "label": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "symfony\\component\\dependencyinjection\\containerinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "symfony_component_httpfoundation_jsonresponse",
+      "label": "Symfony\\Component\\HttpFoundation\\JsonResponse",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "symfony\\component\\httpfoundation\\jsonresponse",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "symfony_component_httpfoundation_request",
+      "label": "Symfony\\Component\\HttpFoundation\\Request",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "symfony\\component\\httpfoundation\\request",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
+      "label": "StaffContactController.php",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
+      "file_type": "code",
+      "norm_label": "staffcontactcontroller.php",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "label": "static",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "StaffContactController.php",
       "file_type": "code",
       "norm_label": "static",
       "source_file": "",
@@ -3044,7 +2703,7 @@
       "id": "drupal_core_form_configformbase",
       "label": "Drupal\\Core\\Form\\ConfigFormBase",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "drupal\\core\\form\\configformbase",
@@ -3055,7 +2714,7 @@
       "id": "drupal_core_form_formstateinterface",
       "label": "Drupal\\Core\\Form\\FormStateInterface",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "drupal\\core\\form\\formstateinterface",
@@ -3066,7 +2725,7 @@
       "id": "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
       "label": "StaffContactSettingsForm.php",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "staffcontactsettingsform.php",
@@ -3077,7 +2736,7 @@
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform",
       "label": "StaffPageSettingsForm.php",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "community_name": "Drupal\\Core\\Form\\FormStateInterface",
       "file_type": "code",
       "norm_label": "staffpagesettingsform.php",
@@ -3088,7 +2747,7 @@
       "id": "web_themes_custom_montreal2027_montreal2027",
       "label": "montreal2027.theme",
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "montreal2027.theme",
@@ -3099,12 +2758,78 @@
       "id": "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface",
       "label": "FormStateInterface",
       "_origin": "ast",
-      "community": 9,
+      "community": 8,
       "community_name": "montreal2027.theme",
       "file_type": "code",
       "norm_label": "formstateinterface",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "drupal_component_utility_html",
+      "label": "Drupal\\Component\\Utility\\Html",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\component\\utility\\html",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_language_languageinterface",
+      "label": "Drupal\\Core\\Language\\LanguageInterface",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\language\\languageinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_render_markup",
+      "label": "Drupal\\Core\\Render\\Markup",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\render\\markup",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_taxonomy_terminterface",
+      "label": "Drupal\\taxonomy\\TermInterface",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\taxonomy\\terminterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_taxonomy_termstorageinterface",
+      "label": "Drupal\\taxonomy\\TermStorageInterface",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\taxonomy\\termstorageinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "label": "StaffPageController.php",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "staffpagecontroller.php",
+      "source_file": "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+      "source_location": "L1"
     }
   ],
   "links": [
@@ -3261,7 +2986,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L252",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
@@ -3273,7 +2998,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L235",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -3285,7 +3010,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L267",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -3297,7 +3022,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L315",
+      "source_location": "L321",
       "weight": 1.0
     },
     {
@@ -3309,7 +3034,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L325",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -3382,354 +3107,6 @@
       "context": "field",
       "source_file": "web/modules/custom/montreal2027_tools/src/Plugin/Block/LanguageToggleBlock.php",
       "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_include_keys",
-      "target": "ref_homepage",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L179",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_include_keys",
-      "target": "ref_support",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L179",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_bg_blue_fg_white",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_bg_yellow_fg_black_next_steps",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_composer_remove_drupal_core_project_message",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_get_involved_with_the_drupal_community",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_get_support_https_www_drupal_org_support",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_https_www_drupal_org_getting_involved",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_install_the_site_https_www_drupal_org_docs_installing_drupal",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "target": "ref_remove_the_plugin_that_prints_this_message",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L183",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_extra_installer_types",
-      "target": "ref_bower_asset",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L140",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_extra_installer_types",
-      "target": "ref_npm_asset",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L140",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_drush_commands_contrib_name",
-      "target": "ref_type_drupal_drush",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L162",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_recipes_name",
-      "target": "ref_type_drupal_recipe",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L174",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_core",
-      "target": "ref_type_drupal_core",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L145",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_libraries_name",
-      "target": "ref_type_bower_asset",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L148",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_libraries_name",
-      "target": "ref_type_drupal_library",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L148",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_libraries_name",
-      "target": "ref_type_npm_asset",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L148",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_modules_contrib_name",
-      "target": "ref_type_drupal_module",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L153",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_modules_custom_name",
-      "target": "ref_type_drupal_custom_module",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L165",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_profiles_contrib_name",
-      "target": "ref_type_drupal_profile",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L156",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_profiles_custom_name",
-      "target": "ref_type_drupal_custom_profile",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L168",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_themes_contrib_name",
-      "target": "ref_type_drupal_theme",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L159",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_installer_paths_web_themes_custom_name",
-      "target": "ref_type_drupal_custom_theme",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L171",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_scripts_post_install_cmd",
-      "target": "ref_git_config_core_hookspath_githooks_true",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L116",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_scripts_post_update_cmd",
-      "target": "ref_git_config_core_hookspath_githooks_true",
-      "relation": "extends",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "composer.json",
-      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -4141,20 +3518,8 @@
       "weight": 1.0
     },
     {
-      "source": "web_themes_custom_montreal2027_package_dependencies_parcel_watcher",
-      "target": "parcel_watcher",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "web/themes/custom/montreal2027/package.json",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "web_themes_custom_montreal2027_package_devdependencies_sass",
-      "target": "sass",
+      "source": "web_themes_custom_montreal2027_package",
+      "target": "ref_sass",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4162,6 +3527,18 @@
       "context": "import",
       "source_file": "web/themes/custom/montreal2027/package.json",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "web_themes_custom_montreal2027_package",
+      "target": "ref_parcel_watcher",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "web/themes/custom/montreal2027/package.json",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -4377,7 +3754,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -4459,7 +3836,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L115",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -4470,7 +3847,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L123",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -4558,7 +3935,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L91",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -4569,7 +3946,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L94",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -4580,7 +3957,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L95",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -4591,29 +3968,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L96",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_config",
-      "target": "composer_config_allow_plugins",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L100",
-      "weight": 1.0
-    },
-    {
-      "source": "composer_config",
-      "target": "composer_config_sort_packages",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L113",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -4624,7 +3979,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L97",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_config",
+      "target": "composer_config_allow_plugins",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_config",
+      "target": "composer_config_sort_packages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -4635,7 +4012,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L101",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -4646,7 +4023,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L102",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -4657,7 +4034,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L103",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -4668,7 +4045,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L104",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -4679,7 +4056,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L105",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -4690,7 +4067,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L106",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -4701,7 +4078,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L107",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -4712,7 +4089,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L108",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -4723,7 +4100,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L109",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -4734,7 +4111,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L110",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -4745,7 +4122,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L111",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -4756,7 +4133,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L98",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
@@ -4767,7 +4144,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L92",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -4778,7 +4155,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L137",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -4789,7 +4166,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L124",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -4800,7 +4177,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L135",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -4811,7 +4188,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L140",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -4822,7 +4199,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L144",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -4833,7 +4210,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L178",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -4844,7 +4221,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L179",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -4855,7 +4232,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L183",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -4866,7 +4243,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L136",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -4877,7 +4254,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L145",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -4888,7 +4265,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L148",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -4899,7 +4276,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L153",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -4910,7 +4287,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -4921,7 +4298,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L159",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -4932,7 +4309,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L162",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -4943,7 +4320,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L165",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -4954,7 +4331,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L168",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -4965,7 +4342,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L171",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -4976,7 +4353,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L174",
+      "source_location": "L177",
       "weight": 1.0
     },
     {
@@ -4987,7 +4364,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L125",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -4998,7 +4375,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L128",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -5009,7 +4386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L131",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -5020,7 +4397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L132",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -5031,7 +4408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L126",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -5042,7 +4419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L129",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -5146,7 +4523,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_conditional_fields",
+      "target": "composer_require_drupal_clientside_validation",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5157,7 +4534,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_config_ignore",
+      "target": "composer_require_drupal_clientside_validation_jquery",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5168,7 +4545,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_core_composer_scaffold",
+      "target": "composer_require_drupal_conditional_fields",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5179,7 +4556,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_core_dev",
+      "target": "composer_require_drupal_config_ignore",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5190,7 +4567,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_core_project_message",
+      "target": "composer_require_drupal_core_composer_scaffold",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5201,7 +4578,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_core_recipe_unpack",
+      "target": "composer_require_drupal_core_dev",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5212,7 +4589,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_core_recommended",
+      "target": "composer_require_drupal_core_project_message",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5223,7 +4600,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_crop",
+      "target": "composer_require_drupal_core_recipe_unpack",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5234,7 +4611,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_draggableviews",
+      "target": "composer_require_drupal_core_recommended",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5245,7 +4622,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_easy_breadcrumb",
+      "target": "composer_require_drupal_crop",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5256,7 +4633,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ebt_basic_button",
+      "target": "composer_require_drupal_draggableviews",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5267,7 +4644,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ebt_core",
+      "target": "composer_require_drupal_easy_breadcrumb",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5278,7 +4655,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ebt_hero",
+      "target": "composer_require_drupal_ebt_basic_button",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5289,7 +4666,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ebt_text",
+      "target": "composer_require_drupal_ebt_core",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5300,7 +4677,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ebt_tiles",
+      "target": "composer_require_drupal_ebt_hero",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5311,7 +4688,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_entity_embed",
+      "target": "composer_require_drupal_ebt_text",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5322,7 +4699,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_entity_workflow",
+      "target": "composer_require_drupal_ebt_tiles",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5333,7 +4710,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ept_basic_button",
+      "target": "composer_require_drupal_entity_embed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5344,7 +4721,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ept_hero",
+      "target": "composer_require_drupal_entity_workflow",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5355,7 +4732,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ept_text",
+      "target": "composer_require_drupal_ept_basic_button",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5366,7 +4743,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_ept_tiles",
+      "target": "composer_require_drupal_ept_hero",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5377,7 +4754,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_facets",
+      "target": "composer_require_drupal_ept_text",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5388,7 +4765,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_field_group",
+      "target": "composer_require_drupal_ept_tiles",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5399,7 +4776,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_first_paragraph",
+      "target": "composer_require_drupal_facets",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5410,7 +4787,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_focal_point",
+      "target": "composer_require_drupal_field_group",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5421,7 +4798,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_gin",
+      "target": "composer_require_drupal_first_paragraph",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5432,7 +4809,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_image_effects",
+      "target": "composer_require_drupal_focal_point",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5443,7 +4820,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_image_field_caption",
+      "target": "composer_require_drupal_gin",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5454,7 +4831,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_lang_dropdown",
+      "target": "composer_require_drupal_image_effects",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5465,7 +4842,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_languageicons",
+      "target": "composer_require_drupal_image_field_caption",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5476,7 +4853,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_mailsystem",
+      "target": "composer_require_drupal_lang_dropdown",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5487,7 +4864,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_media_gallery",
+      "target": "composer_require_drupal_languageicons",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5498,7 +4875,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_media_library_form_element",
+      "target": "composer_require_drupal_mailsystem",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5509,7 +4886,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_menu_block",
+      "target": "composer_require_drupal_media_gallery",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5520,7 +4897,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_menu_item_extras",
+      "target": "composer_require_drupal_media_library_form_element",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5531,7 +4908,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_metatag",
+      "target": "composer_require_drupal_menu_block",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5542,7 +4919,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_paragraphs_report",
+      "target": "composer_require_drupal_menu_item_extras",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5553,7 +4930,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_pathauto",
+      "target": "composer_require_drupal_metatag",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5564,7 +4941,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_phpmailer_smtp",
+      "target": "composer_require_drupal_paragraphs_report",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5575,7 +4952,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_recreate_block_content",
+      "target": "composer_require_drupal_pathauto",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5586,7 +4963,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_redirect",
+      "target": "composer_require_drupal_phpmailer_smtp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5597,7 +4974,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_search_api",
+      "target": "composer_require_drupal_recreate_block_content",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5608,7 +4985,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_social_media_links",
+      "target": "composer_require_drupal_redirect",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5619,7 +4996,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_structure_sync",
+      "target": "composer_require_drupal_search_api",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5630,7 +5007,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_superfish",
+      "target": "composer_require_drupal_social_media_links",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5641,7 +5018,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_svg_image",
+      "target": "composer_require_drupal_structure_sync",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5652,7 +5029,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_svg_image_field",
+      "target": "composer_require_drupal_superfish",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5663,7 +5040,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_twig_tweak",
+      "target": "composer_require_drupal_svg_image",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5674,7 +5051,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_workspaces_access",
+      "target": "composer_require_drupal_svg_image_field",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5685,7 +5062,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_wse",
+      "target": "composer_require_drupal_twig_tweak",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5696,7 +5073,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drush_drush",
+      "target": "composer_require_drupal_webform",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5707,7 +5084,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_omscllc_clean_blog_theme",
+      "target": "composer_require_drupal_workspaces_access",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5718,7 +5095,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_oomphinc_composer_installers_extender",
+      "target": "composer_require_drupal_wse",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5729,7 +5106,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_symfony_dotenv",
+      "target": "composer_require_drush_drush",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5740,13 +5117,46 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_wikimedia_composer_merge_plugin",
+      "target": "composer_require_omscllc_clean_blog_theme",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require",
+      "target": "composer_require_oomphinc_composer_installers_extender",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require",
+      "target": "composer_require_symfony_dotenv",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require",
+      "target": "composer_require_wikimedia_composer_merge_plugin",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -5757,7 +5167,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L116",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -5768,7 +5178,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L119",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -6010,7 +5420,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6021,7 +5431,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L228",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -6032,7 +5442,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L246",
+      "source_location": "L250",
       "weight": 1.0
     },
     {
@@ -6043,7 +5453,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L261",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -6054,7 +5464,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L286",
+      "source_location": "L292",
       "weight": 1.0
     },
     {
@@ -6065,7 +5475,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L313",
+      "source_location": "L319",
       "weight": 1.0
     },
     {
@@ -6076,7 +5486,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L323",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -6087,7 +5497,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L333",
+      "source_location": "L339",
       "weight": 1.0
     },
     {
@@ -6098,7 +5508,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L39",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -6109,7 +5519,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L501",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
@@ -6120,7 +5530,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
-      "source_location": "L71",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -6643,5 +6053,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c1ed27fc107ff3ffdf5d317b9f433e594ffcd102"
+  "built_at_commit": "6e932e3b2bc56b9dba3f661e38ce78113e217b03"
 }

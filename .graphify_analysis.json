@@ -11,6 +11,8 @@
       "composer_require_drupal_ckeditor5_open_new_tab",
       "composer_require_drupal_ckeditor5_paste_filter",
       "composer_require_drupal_ckeditor_media_resize",
+      "composer_require_drupal_clientside_validation",
+      "composer_require_drupal_clientside_validation_jquery",
       "composer_require_drupal_conditional_fields",
       "composer_require_drupal_config_ignore",
       "composer_require_drupal_core_composer_scaffold",
@@ -59,6 +61,7 @@
       "composer_require_drupal_svg_image",
       "composer_require_drupal_svg_image_field",
       "composer_require_drupal_twig_tweak",
+      "composer_require_drupal_webform",
       "composer_require_drupal_workspaces_access",
       "composer_require_drupal_wse",
       "composer_require_drush_drush",
@@ -77,30 +80,9 @@
       "composer_extra",
       "composer_extra_drupal_core_project_message",
       "composer_extra_drupal_scaffold",
+      "composer_extra_installer_paths",
       "composer_extra_installer_types",
       "composer_extra_patches",
-      "composer_locations_web_root",
-      "composer_patches_drupal_paragraphs_report",
-      "composer_patches_drupal_social_media_links",
-      "composer_patches_drupal_wse",
-      "ref_bg_blue_fg_white",
-      "ref_bg_blue_fg_white_congratulations_you_ve_installed_the_drupal_codebase",
-      "ref_bg_blue_fg_white_from_the_drupal_recommended_project_template",
-      "ref_bg_yellow_fg_black_next_steps",
-      "ref_bower_asset",
-      "ref_composer_remove_drupal_core_project_message",
-      "ref_get_involved_with_the_drupal_community",
-      "ref_get_support_https_www_drupal_org_support",
-      "ref_homepage",
-      "ref_https_www_drupal_org_getting_involved",
-      "ref_install_the_site_https_www_drupal_org_docs_installing_drupal",
-      "ref_npm_asset",
-      "ref_read_the_user_guide_https_www_drupal_org_docs_user_guide_en_index_html",
-      "ref_remove_the_plugin_that_prints_this_message",
-      "ref_support"
-    ],
-    "2": [
-      "composer_extra_installer_paths",
       "composer_installer_paths_drush_commands_contrib_name",
       "composer_installer_paths_recipes_name",
       "composer_installer_paths_web_core",
@@ -111,44 +93,12 @@
       "composer_installer_paths_web_profiles_custom_name",
       "composer_installer_paths_web_themes_contrib_name",
       "composer_installer_paths_web_themes_custom_name",
-      "ref_type_bower_asset",
-      "ref_type_drupal_core",
-      "ref_type_drupal_custom_module",
-      "ref_type_drupal_custom_profile",
-      "ref_type_drupal_custom_theme",
-      "ref_type_drupal_drush",
-      "ref_type_drupal_library",
-      "ref_type_drupal_module",
-      "ref_type_drupal_profile",
-      "ref_type_drupal_recipe",
-      "ref_type_drupal_theme",
-      "ref_type_npm_asset"
+      "composer_locations_web_root",
+      "composer_patches_drupal_paragraphs_report",
+      "composer_patches_drupal_social_media_links",
+      "composer_patches_drupal_wse"
     ],
-    "3": [
-      "drupal_core_controller_controllerbase",
-      "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_logger_loggerchannelfactoryinterface",
-      "drupal_core_mail_mailmanagerinterface",
-      "drupal_user_userinterface",
-      "drush_commands_drushcommands",
-      "jsonresponse",
-      "symfony_component_dependencyinjection_containerinterface",
-      "symfony_component_httpfoundation_jsonresponse",
-      "symfony_component_httpfoundation_request",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
-    ],
-    "4": [
+    "2": [
       "composer",
       "composer_conflict",
       "composer_conflict_drupal_drupal",
@@ -165,12 +115,11 @@
       "composer_support",
       "composer_support_chat",
       "composer_support_docs",
-      "composer_type",
-      "ref_git_config_core_hookspath_githooks_true"
+      "composer_type"
     ],
-    "5": [
-      "parcel_watcher",
-      "sass",
+    "3": [
+      "ref_parcel_watcher",
+      "ref_sass",
       "web_themes_custom_montreal2027_package",
       "web_themes_custom_montreal2027_package_dependencies",
       "web_themes_custom_montreal2027_package_dependencies_parcel_watcher",
@@ -187,7 +136,7 @@
       "web_themes_custom_montreal2027_package_scripts_watch_css",
       "web_themes_custom_montreal2027_package_version"
     ],
-    "6": [
+    "4": [
       "composer_allow_plugins_composer_installers",
       "composer_allow_plugins_cweagans_composer_patches",
       "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
@@ -205,7 +154,7 @@
       "composer_config_sort_packages",
       "composer_platform_php"
     ],
-    "7": [
+    "5": [
       "drupal_core_block_attribute_block",
       "drupal_core_block_blockbase",
       "drupal_core_language_languagemanagerinterface",
@@ -223,7 +172,23 @@
       "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
       "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
     ],
-    "8": [
+    "6": [
+      "drupal_core_controller_controllerbase",
+      "drupal_core_entity_entitytypemanagerinterface",
+      "drupal_core_logger_loggerchannelfactoryinterface",
+      "drupal_core_mail_mailmanagerinterface",
+      "jsonresponse",
+      "symfony_component_dependencyinjection_containerinterface",
+      "symfony_component_httpfoundation_jsonresponse",
+      "symfony_component_httpfoundation_request",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit"
+    ],
+    "7": [
       "drupal_core_form_configformbase",
       "drupal_core_form_formstateinterface",
       "web_modules_custom_montreal2027_tools_src_form_staffcontactsettingsform",
@@ -239,7 +204,7 @@
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform_submitform"
     ],
-    "9": [
+    "8": [
       "web_themes_custom_montreal2027_montreal2027",
       "web_themes_custom_montreal2027_montreal2027_get_image_info",
       "web_themes_custom_montreal2027_montreal2027_montreal2027_entity_in_content_language",
@@ -255,7 +220,7 @@
       "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
-    "10": [
+    "9": [
       "drupal_component_utility_html",
       "drupal_core_language_languageinterface",
       "drupal_core_render_markup",
@@ -268,6 +233,16 @@
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
+    ],
+    "10": [
+      "drupal_user_userinterface",
+      "drush_commands_drushcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath"
     ],
     "11": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
@@ -318,17 +293,17 @@
     ]
   },
   "cohesion": {
-    "0": 0.03076923076923077,
-    "1": 0.06666666666666667,
-    "2": 0.08695652173913043,
-    "3": 0.15151515151515152,
-    "4": 0.11764705882352941,
-    "5": 0.11764705882352941,
-    "6": 0.125,
-    "7": 0.2,
-    "8": 0.21978021978021978,
-    "9": 0.2087912087912088,
-    "10": 0.2878787878787879,
+    "0": 0.029411764705882353,
+    "1": 0.07692307692307693,
+    "2": 0.11764705882352941,
+    "3": 0.11764705882352941,
+    "4": 0.125,
+    "5": 0.2,
+    "6": 0.25274725274725274,
+    "7": 0.21978021978021978,
+    "8": 0.2087912087912088,
+    "9": 0.2878787878787879,
+    "10": 0.35714285714285715,
     "11": 0.4666666666666667,
     "12": 1.0,
     "13": 1.0,
@@ -345,12 +320,7 @@
     {
       "id": "composer_require",
       "label": "require",
-      "degree": 65
-    },
-    {
-      "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
-      "label": "post-create-project-cmd-message",
-      "degree": 12
+      "degree": 68
     },
     {
       "id": "composer_config_allow_plugins",
@@ -391,20 +361,14 @@
       "id": "web_modules_custom_montreal2027_tools_src_form_staffpagesettingsform_staffpagesettingsform",
       "label": "StaffPageSettingsForm",
       "degree": 6
+    },
+    {
+      "id": "composer_extra",
+      "label": "extra",
+      "degree": 6
     }
   ],
   "surprises": [
-    {
-      "source": "StaffPageController",
-      "target": "Drupal\\Core\\Controller\\ControllerBase",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-        ""
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "inherits",
-      "note": "Bridges community 10 → community 3"
-    },
     {
       "source": "StaffContactController",
       "target": "Drupal\\Core\\Language\\LanguageManagerInterface",
@@ -414,44 +378,55 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "note": "Bridges community 3 → community 7"
+      "note": "Bridges community 6 → community 5"
+    },
+    {
+      "source": "StaffPageController",
+      "target": "Drupal\\Core\\Controller\\ControllerBase",
+      "source_files": [
+        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
+        ""
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "note": "Bridges community 9 → community 6"
     }
   ],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.207) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.205) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `extra` connect `post-create-project-cmd-message` to `installer-paths`, `composer.json`?",
-      "why": "High betweenness centrality (0.166) - this node is a cross-community bridge."
+      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
+      "why": "High betweenness centrality (0.091) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `installer-paths` connect `installer-paths` to `post-create-project-cmd-message`?",
-      "why": "High betweenness centrality (0.083) - this node is a cross-community bridge."
+      "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
+      "why": "High betweenness centrality (0.057) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?",
-      "why": "133 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "126 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
       "question": "Should `require` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.03076923076923077 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `post-create-project-cmd-message` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",
       "question": "Should `installer-paths` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `composer.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected."
     }
   ]
 }
