@@ -130,9 +130,6 @@
             },
             "drupal/wse": {
                 "Reset workflow state to draft when cloning workspace": "patches/wse-reset-workflow-state-on-clone.patch"
-            },
-            "drupal/paragraphs_report": {
-                "Refactor to AliasManagerInterface": "patches/paragraphs_report_use_alias_manager_interface.patch"
             }
         },
         "drupal-scaffold": {
