@@ -1,7 +1,12 @@
 display:
   default:
-    display_title: 'Par défaut'
     display_options:
+      empty:
+        link:
+          label: Actions
+        area:
+          admin_label: "Aucune entrée du journal n'est disponible."
+          content: "Aucune entrée du journal n'est disponible."
       fields:
         type:
           label: Type
@@ -30,19 +35,10 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      empty:
-        area:
-          admin_label: "Aucune entrée du journal n'est disponible."
-          content: "Aucune entrée du journal n'est disponible."
-        link:
-          label: Actions
-      exposed_form:
-        options:
-          submit_button: Filtrer
-          reset_button_label: Réinitialiser
       filters:
         type:
           expose:
             label: Type
+    display_title: 'Par défaut'
   page:
     display_title: Page

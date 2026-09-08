@@ -28,13 +28,6 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      fields:
-        operations:
-          label: Actions
-      exposed_form:
-        options:
-          submit_button: Filtrer
-          reset_button_label: Réinitialiser
       filters:
         status:
           group_info:

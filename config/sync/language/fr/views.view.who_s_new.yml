@@ -1,4 +1,10 @@
 display:
+  block_1:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
+      block_category: Utilisateur
   default:
     display_title: 'Par défaut'
     display_options:
@@ -9,10 +15,3 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-  block_1:
-    display_options:
-      block_category: Utilisateur
-    display_options:
-      exposed_form:
-        options:
-          reset_button_label: Réinitialiser

@@ -1,5 +1,10 @@
-label: Archiver
 display:
+  page_1:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Réinitialiser
+    display_title: Page
   default:
     display_title: 'Par défaut'
     display_options:
@@ -19,8 +24,4 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-  page_1:
-    display_title: Page
-      exposed_form:
-        options:
-          reset_button_label: Réinitialiser
+label: Archiver

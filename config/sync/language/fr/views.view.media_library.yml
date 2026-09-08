@@ -21,9 +21,6 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      exposed_form:
-        options:
-          reset_button_label: Réinitialiser
       filters:
         status:
           group_info:
@@ -71,10 +68,6 @@ display:
           label: Auteur
         changed:
           label: 'Mis à jour'
-      arguments:
-        bundle:
-          exception:
-            title: Tout
       arguments:
         bundle:
           exception:

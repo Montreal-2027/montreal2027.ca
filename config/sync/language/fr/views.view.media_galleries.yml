@@ -1,6 +1,6 @@
 display:
   default:
-    display_title: Principal
+    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -23,9 +23,3 @@ display:
           separator: ', '
   page_1:
     display_title: Page
-display:
-  default:
-    display_options:
-      exposed_form:
-        options:
-          reset_button_label: Réinitialiser

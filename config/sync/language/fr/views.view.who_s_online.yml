@@ -9,7 +9,3 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-    display_options:
-      exposed_form:
-        options:
-          reset_button_label: Réinitialiser
