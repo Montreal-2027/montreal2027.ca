@@ -4,26 +4,26 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 245 nodes · 283 edges · 22 communities (12 shown, 7 thin omitted)
+- 244 nodes · 282 edges · 22 communities (12 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4b1577ab`
+- Built from commit: `c1ed27fc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - require
 - installer-paths
+- LanguageToggleBlock.php
 - composer.json
 - package.json
 - allow-plugins
-- LanguageToggleBlock.php
-- StaffContactController.php
 - Drupal\Core\Form\FormStateInterface
 - montreal2027.theme
 - StaffPageController.php
+- StaffContactController.php
 - ContactImportCommands
 - montreal2027_tools.module
 - entrypoint.sh
@@ -35,7 +35,7 @@
 - Symfony\Component\Dotenv\Dotenv
 
 ## God Nodes (most connected - your core abstractions)
-1. `require` - 68 edges
+1. `require` - 65 edges
 2. `allow-plugins` - 12 edges
 3. `installer-paths` - 11 edges
 4. `LanguageToggleBlock` - 10 edges
@@ -47,10 +47,10 @@
 10. `extra` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `StaffContactController` --references--> `Drupal\Core\Language\LanguageManagerInterface`  [EXTRACTED]
-  web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php →   _Bridges community 6 → community 5_
+- `LanguageToggleBlock` --references--> `Drupal\Core\Language\LanguageManagerInterface`  [EXTRACTED]
+  web/modules/custom/montreal2027_tools/src/Plugin/Block/LanguageToggleBlock.php →   _Bridges community 2 → community 9_
 - `StaffPageController` --inherits--> `Drupal\Core\Controller\ControllerBase`  [EXTRACTED]
-  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 9 → community 6_
+  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 8 → community 9_
 
 ## Import Cycles
 - None detected.
@@ -59,43 +59,43 @@
 
 ### Community 0 - "require"
 Cohesion: 0.03
-Nodes (68): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+60 more)
+Nodes (65): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+57 more)
 
 ### Community 1 - "installer-paths"
 Cohesion: 0.08
-Nodes (24): include-keys, post-create-project-cmd-message, locations, Add Bluesky, Reset workflow state to draft when cloning workspace, extra, drupal-core-project-message, drupal-scaffold (+16 more)
+Nodes (26): include-keys, post-create-project-cmd-message, Refactor to AliasManagerInterface, locations, Add Bluesky, Reset workflow state to draft when cloning workspace, extra, drupal-core-project-message (+18 more)
 
-### Community 2 - "composer.json"
+### Community 2 - "LanguageToggleBlock.php"
+Cohesion: 0.16
+Nodes (11): Drupal\Core\Block\Attribute\Block, Drupal\Core\Block\BlockBase, Drupal\Core\Language\LanguageInterface, Drupal\Core\Plugin\ContainerFactoryPluginInterface, Drupal\Core\Routing\RouteMatchInterface, Drupal\Core\StringTranslation\TranslatableMarkup, Symfony\Component\DependencyInjection\ContainerInterface, Url (+3 more)
+
+### Community 3 - "composer.json"
 Cohesion: 0.12
 Nodes (16): conflict, drupal/drupal, description, homepage, license, minimum-stability, name, prefer-stable (+8 more)
 
-### Community 3 - "package.json"
+### Community 4 - "package.json"
 Cohesion: 0.12
 Nodes (16): @parcel/watcher, sass, dependencies, @parcel/watcher, description, devDependencies, sass, engines (+8 more)
 
-### Community 4 - "allow-plugins"
+### Community 5 - "allow-plugins"
 Cohesion: 0.12
 Nodes (16): composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender, php-http/discovery (+8 more)
 
-### Community 5 - "LanguageToggleBlock.php"
-Cohesion: 0.20
-Nodes (10): Drupal\Core\Block\Attribute\Block, Drupal\Core\Block\BlockBase, Drupal\Core\Language\LanguageManagerInterface, Drupal\Core\Plugin\ContainerFactoryPluginInterface, Drupal\Core\Routing\RouteMatchInterface, Drupal\Core\StringTranslation\TranslatableMarkup, Drupal\Core\Url, Url (+2 more)
-
-### Community 6 - "StaffContactController.php"
-Cohesion: 0.25
-Nodes (10): Drupal\Core\Controller\ControllerBase, Drupal\Core\Entity\EntityTypeManagerInterface, Drupal\Core\Logger\LoggerChannelFactoryInterface, Drupal\Core\Mail\MailManagerInterface, JsonResponse, Symfony\Component\DependencyInjection\ContainerInterface, Symfony\Component\HttpFoundation\JsonResponse, Symfony\Component\HttpFoundation\Request (+2 more)
-
-### Community 7 - "Drupal\Core\Form\FormStateInterface"
+### Community 6 - "Drupal\Core\Form\FormStateInterface"
 Cohesion: 0.22
 Nodes (4): Drupal\Core\Form\ConfigFormBase, Drupal\Core\Form\FormStateInterface, StaffPageSettingsForm, StaffPageSettingsForm
 
-### Community 8 - "montreal2027.theme"
+### Community 7 - "montreal2027.theme"
 Cohesion: 0.21
 Nodes (10): get_image_info(), montreal2027_entity_in_content_language(), montreal2027_form_alter(), montreal2027_preprocess_block__montreal2027_content(), montreal2027_preprocess_guest_taxonomy_paragraph(), montreal2027_preprocess_node__guest__teaser(), montreal2027_preprocess_page(), montreal2027_preprocess_paragraph__guest_block() (+2 more)
 
-### Community 9 - "StaffPageController.php"
+### Community 8 - "StaffPageController.php"
 Cohesion: 0.29
-Nodes (6): Drupal\Component\Utility\Html, Drupal\Core\Language\LanguageInterface, Drupal\Core\Render\Markup, Drupal\taxonomy\TermInterface, Drupal\taxonomy\TermStorageInterface, StaffPageController
+Nodes (6): Drupal\Component\Utility\Html, Drupal\Core\Render\Markup, Drupal\Core\Url, Drupal\taxonomy\TermInterface, Drupal\taxonomy\TermStorageInterface, StaffPageController
+
+### Community 9 - "StaffContactController.php"
+Cohesion: 0.33
+Nodes (9): Drupal\Core\Controller\ControllerBase, Drupal\Core\Entity\EntityTypeManagerInterface, Drupal\Core\Language\LanguageManagerInterface, Drupal\Core\Logger\LoggerChannelFactoryInterface, Drupal\Core\Mail\MailManagerInterface, JsonResponse, Symfony\Component\HttpFoundation\JsonResponse, Symfony\Component\HttpFoundation\Request (+1 more)
 
 ### Community 10 - "ContactImportCommands"
 Cohesion: 0.36
@@ -106,24 +106,24 @@ Cohesion: 0.47
 Nodes (3): FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027_tools_form_taxonomy_term_form_alter()
 
 ## Knowledge Gaps
-- **125 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+120 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 157 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **123 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+118 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 155 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `require` to `composer.json`?**
-  _High betweenness centrality (0.203) - this node is a cross-community bridge._
+  _High betweenness centrality (0.197) - this node is a cross-community bridge._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
-  _High betweenness centrality (0.084) - this node is a cross-community bridge._
+  _High betweenness centrality (0.091) - this node is a cross-community bridge._
 - **Why does `config` connect `allow-plugins` to `composer.json`?**
   _High betweenness centrality (0.056) - this node is a cross-community bridge._
 - **What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?**
-  _125 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _123 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `require` be split into smaller, more focused modules?**
-  _Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.03076923076923077 - nodes in this community are weakly interconnected._
 - **Should `installer-paths` be split into smaller, more focused modules?**
-  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
