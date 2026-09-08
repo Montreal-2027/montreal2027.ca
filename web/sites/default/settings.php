@@ -42,6 +42,8 @@ $config['image.settings']['allow_insecure_derivatives'] = TRUE;
 $config['image.settings']['suppress_itok_output'] = TRUE;
 
 $settings['config_sync_directory'] = '../config/sync';
+$config['locale.settings']['translation']['path'] = 'sites/default/files/translations';
+// $config['system.file']['path']['temporary'] = '/home/cansmof/tmp';
 
 // Override the logo path for site theme.
 // $config['theme_name.settings']['logo']['use_default'] = FALSE;
