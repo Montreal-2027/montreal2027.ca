@@ -14,10 +14,10 @@ montreal2027_tools.staff_contact_submit:
   requirements:
     _permission: 'access content'
 
-montreal2027_tools.staff_page_settings:
-  path: '/admin/config/system/team-page-settings'
+montreal2027_tools.settings:
+  path: '/admin/config/montreal2027'
   defaults:
-    _form: '\Drupal\montreal2027_tools\Form\StaffPageSettingsForm'
-    _title: 'Team Page Settings'
+    _form: '\Drupal\montreal2027_tools\Form\MontrealConfigurationForm'
+    _title: 'Montreal Configuration'
   requirements:
     _permission: 'administer site configuration'

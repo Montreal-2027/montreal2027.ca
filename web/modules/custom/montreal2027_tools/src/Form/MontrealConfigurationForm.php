@@ -6,16 +6,16 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Settings form for the staff page and contact modal.
+ * General Montreal 2027 configuration page.
  */
-class StaffPageSettingsForm extends ConfigFormBase
+class MontrealConfigurationForm extends ConfigFormBase
 {
     /**
      * {@inheritdoc}
      */
     public function getFormId(): string
     {
-        return 'montreal2027_tools_staff_contact_settings_form';
+        return 'montreal2027_tools_settings_form';
     }
 
     /**
@@ -23,7 +23,10 @@ class StaffPageSettingsForm extends ConfigFormBase
      */
     protected function getEditableConfigNames(): array
     {
-        return ['montreal2027_tools.staff_page_settings'];
+        return [
+          'montreal2027_tools.staff_page_settings',
+          'montreal2027_tools.guest_settings',
+        ];
     }
 
     /**
@@ -32,6 +35,7 @@ class StaffPageSettingsForm extends ConfigFormBase
     public function buildForm(array $form, FormStateInterface $form_state): array
     {
         $config = $this->config('montreal2027_tools.staff_page_settings');
+        $guest_config = $this->config('montreal2027_tools.guest_settings');
 
         // Page content settings
         $page_title = trim((string) ($config->get('page_title.value') ?? ''));
@@ -71,14 +75,26 @@ class StaffPageSettingsForm extends ConfigFormBase
             $heading_prefix = (string) $this->t('Send a message to the ');
         }
 
+        // Guest teaser settings
+        $guest_read_more_text = trim((string) ($guest_config->get('guest_read_more_text') ?? ''));
+        if ($guest_read_more_text === '') {
+            $guest_read_more_text = (string) $this->t("Read @name's Full Bio");
+        }
+
+        $form['team_page'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Team page'),
+          '#open' => true,
+        ];
+
         // Page Content fieldset
-        $form['page_content'] = [
+        $form['team_page']['page_content'] = [
           '#type' => 'fieldset',
           '#title' => $this->t('Page Content'),
           '#collapsible' => false,
         ];
 
-        $form['page_content']['page_title'] = [
+        $form['team_page']['page_content']['page_title'] = [
           '#type' => 'text_format',
           '#title' => $this->t('Page title'),
           '#description' => $this->t('The main heading displayed at the top of the staff page.'),
@@ -87,7 +103,7 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#format' => $page_title_format,
         ];
 
-        $form['page_content']['page_body'] = [
+        $form['team_page']['page_content']['page_body'] = [
           '#type' => 'text_format',
           '#title' => $this->t('Introduction text'),
           '#description' => $this->t('The introductory paragraph displayed below the page title.'),
@@ -96,12 +112,12 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#format' => $page_body_format,
         ];
 
-        $form['page_content']['empty_position_link'] = [
+        $form['team_page']['page_content']['empty_position_link'] = [
           '#type' => 'container',
           '#tree' => true,
         ];
 
-        $form['page_content']['empty_position_link']['title'] = [
+        $form['team_page']['page_content']['empty_position_link']['title'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Empty position link text'),
           '#description' => $this->t('Text for the link shown when no positions are found.'),
@@ -110,7 +126,7 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#required' => true,
         ];
 
-        $form['page_content']['empty_position_link']['uri'] = [
+        $form['team_page']['page_content']['empty_position_link']['uri'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Empty position link URL'),
           '#description' => $this->t('URL for the empty position link. Use internal paths (e.g., /contact) or external URLs (e.g., https://example.com).'),
@@ -119,7 +135,7 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#required' => true,
         ];
 
-        $form['page_content']['contact_link_text'] = [
+        $form['team_page']['page_content']['contact_link_text'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Contact link text'),
           '#description' => $this->t('Label for the button that opens the contact modal on each staff row.'),
@@ -129,13 +145,13 @@ class StaffPageSettingsForm extends ConfigFormBase
         ];
 
         // Contact Form Settings fieldset
-        $form['contact_form'] = [
+        $form['team_page']['contact_form'] = [
           '#type' => 'fieldset',
           '#title' => $this->t('Contact Form Settings'),
           '#collapsible' => false,
         ];
 
-        $form['contact_form']['failure_message'] = [
+        $form['team_page']['contact_form']['failure_message'] = [
           '#type' => 'textarea',
           '#title' => $this->t('Failure message'),
           '#description' => $this->t('Shown in the status modal when the message cannot be sent.'),
@@ -144,7 +160,7 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#rows' => 3,
         ];
 
-        $form['contact_form']['success_message'] = [
+        $form['team_page']['contact_form']['success_message'] = [
           '#type' => 'textarea',
           '#title' => $this->t('Success message'),
           '#description' => $this->t('Shown in the status modal after a successful send.'),
@@ -153,7 +169,7 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#rows' => 3,
         ];
 
-        $form['contact_form']['subject_prefix'] = [
+        $form['team_page']['contact_form']['subject_prefix'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Subject prefix'),
           '#description' => $this->t('Prepended to the division label in outgoing email subjects.'),
@@ -162,11 +178,26 @@ class StaffPageSettingsForm extends ConfigFormBase
           '#maxlength' => 255,
         ];
 
-        $form['contact_form']['heading_prefix'] = [
+        $form['team_page']['contact_form']['heading_prefix'] = [
           '#type' => 'textfield',
           '#title' => $this->t('Form heading prefix'),
           '#description' => $this->t('Prepended to the division name in the contact modal heading.'),
           '#default_value' => $heading_prefix,
+          '#required' => true,
+          '#maxlength' => 255,
+        ];
+
+        $form['guest_teaser'] = [
+          '#type' => 'details',
+          '#title' => $this->t('Guest Teaser'),
+          '#open' => true,
+        ];
+
+        $form['guest_teaser']['guest_read_more_text'] = [
+          '#type' => 'textfield',
+          '#title' => $this->t('Read more link text'),
+          '#description' => $this->t('Use @name as a placeholder for the guest name. This is shown on the guest teaser "read more" link.'),
+          '#default_value' => $guest_read_more_text,
           '#required' => true,
           '#maxlength' => 255,
         ];
@@ -195,6 +226,10 @@ class StaffPageSettingsForm extends ConfigFormBase
           ->set('subject_prefix', trim((string) $form_state->getValue('subject_prefix')))
           ->set('heading_prefix', trim((string) $form_state->getValue('heading_prefix')))
           ->set('contact_link_text', trim((string) $form_state->getValue('contact_link_text')))
+          ->save();
+
+        $this->configFactory->getEditable('montreal2027_tools.guest_settings')
+          ->set('guest_read_more_text', trim((string) $form_state->getValue('guest_read_more_text')))
           ->save();
 
         parent::submitForm($form, $form_state);
