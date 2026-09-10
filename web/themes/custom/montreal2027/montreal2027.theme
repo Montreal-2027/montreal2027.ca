@@ -241,6 +241,13 @@ function montreal2027_preprocess_node__guest__teaser(array &$variables) {
     $language = \Drupal::languageManager()->getCurrentLanguage();
     $variables['current_langcode'] = $language->getId();
   }
+
+  // Text is configured at /admin/config/montreal2027, translatable via Configuration Translation.
+  $template = \Drupal::config('montreal2027_tools.guest_settings')->get('guest_read_more_text');
+  if (!$template) {
+    $template = t("Read @name's Full Bio");
+  }
+  $variables['guest_read_more_text'] = strtr($template, ['@name' => $variables['node']->label()]);
 }
 
 function montreal2027_preprocess_block__montreal2027_content(&$variables) {

@@ -161,11 +161,11 @@
     &.has-carousel {
       margin: 1rem 0 0 0;
 
-      & .container {
-        // border-radius: 0 0 1rem 1rem;
-      }
+      // & .container {
+      //   // border-radius: 0 0 1rem 1rem;
+      // }
     }
-  
+
     .page--text-area-top {
       position: fixed;
       bottom: 20px;
@@ -236,4 +236,11 @@ ul:not(.sf-accordion).sf-menu.sf-style-default a,
 ul:not(.sf-accordion).sf-menu.sf-style-default a:visited,
 ul:not(.sf-accordion).sf-menu.sf-style-default span.nolink {
   padding: 0.4rem 2rem .75rem 0;
+}
+
+div.region-content div[aria-label="Status message"].messages--status em {
+  background-color: var(--color-black);
+  opacity: 1;
+  color: var(--color-white);
+  padding: .25rem;
 }

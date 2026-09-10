@@ -119,4 +119,21 @@
       margin: 0 1rem;
     }
   }
+
+  // &-content {
+  //   & div[aria-label="Status message"].messages--status {
+  //     & div {
+  //       message__content {
+  //         em {
+  //           &.placeholder {
+  //             background-color: var(--color-black);
+  //             opacity: 1;
+  //             color: var(--color-white);
+  //             padding: .25rem;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }

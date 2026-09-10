@@ -2,7 +2,7 @@
 
 article .node.node--type-guest.node--view-mode-teaser {
   & h3 {
-    color: var(--color-bright-red);
+    color: var(--color-light-azure);
     font-weight: 900;
     text-align: left;
   }
@@ -31,7 +31,7 @@ article {
         }
 
         & h3 {
-          color: var(--color-red);
+          color: var(--color-light-cadmium-red);
           text-align: left;
           font-weight: 900;
           margin-bottom: 0;
@@ -78,8 +78,29 @@ article {
       & .node__content {
         display: grid;
         grid-template-columns: 30% 1fr;
-        align-items: start;
+        align-items: stretch;
         gap: 1rem;
+
+        & .maple-leaf-frame img {
+          max-height: 14rem;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        &-body {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+
+          & h3 {
+            margin-bottom: 0;
+          }
+
+          & .more-link {
+            margin-top: auto;
+            align-self: flex-end;
+          }
+        }
       }
     }
 

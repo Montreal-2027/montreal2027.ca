@@ -10,7 +10,6 @@ dependencies:
     - node.type.page
     - taxonomy.vocabulary.divisions
     - taxonomy.vocabulary.guest_type
-    - taxonomy.vocabulary.membership
   module:
     - block_content
     - config_translation
@@ -32,7 +31,6 @@ permissions:
   - 'translate guest_type taxonomy_term'
   - 'translate home_page node'
   - 'translate image media'
-  - 'translate membership taxonomy_term'
   - 'translate menu_link_content'
   - 'translate page node'
   - 'update content translations'

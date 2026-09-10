@@ -1,9 +1,27 @@
 uuid: a4f2ebba-39ee-4a31-9b3a-236f76d21e90
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - media_gallery
+    - node
+    - paragraphs
+    - system
+    - toolbar
+    - workspaces
 id: staff
 label: Staff
 weight: -7
 is_admin: false
-permissions: {  }
+permissions:
+  - 'access content'
+  - 'access toolbar'
+  - 'view any workspace'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view published media gallery entities'
+  - 'view unpublished media gallery entities'
+  - 'view unpublished paragraphs'
+  - workspace_live_view_content

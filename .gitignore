@@ -80,3 +80,4 @@ web/themes/custom/montreal2027/css/montreal2027.min.css
 /graphify-out
 .vscode/*
 !.vscode/mcp.json
+.notes/

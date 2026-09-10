@@ -30,6 +30,10 @@ fi
 # Local directory path to sync with remote server
 LOCAL_SYNC_DIR="${PROJECT_ROOT}/web/assets/"
 
+# Synchronize directly from a local production checkout when enabled.
+SYNC_LOCAL="${SYNC_LOCAL:-false}"
+SYNC_PROD_ROOT="${SYNC_PROD_ROOT:-/home/cansmof/prod.montreal2027.ca}"
+
 # Hostname or IP to sync from
 SYNC_FROM="${SYNC_HOST:-montreal2027.ca}"
 
@@ -68,12 +72,10 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
     fi
 
     DRUSH="docker compose exec -T web ./vendor/bin/drush"
-    SQL_CONNECT="docker compose exec -T web bash -c \"\$(./vendor/bin/drush sql:connect)\""
     COMPOSER="docker compose exec -T web composer"
 else
     echo "Using native environment for local commands..."
     DRUSH="./vendor/bin/drush"
-    SQL_CONNECT="\$(./vendor/bin/drush sql:connect)"
     COMPOSER="composer"
 fi
 
@@ -88,10 +90,20 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 fi
 
 # Sync files using rsync
-echo "Starting file synchronization of assets from ${SYNC_FROM}..."
-rsync -avz --delete -e "ssh -i ${SSH_KEY} -p ${SSH_PORT}"  --exclude 'php/*' --progress "${REMOTE_USER}@${SYNC_FROM}:${REMOTE_DIR}" "${LOCAL_SYNC_DIR}"
+if [ "$SYNC_LOCAL" = "true" ]; then
+    if [ ! -d "$SYNC_PROD_ROOT" ]; then
+        echo "Local production directory not found: ${SYNC_PROD_ROOT}"
+        exit 1
+    fi
 
-read -p "Import remote database? (Any existing local database will be replaced) (y/N): " confirm
+    echo "Starting local file synchronization of assets from ${SYNC_PROD_ROOT}..."
+    rsync -av --delete --exclude 'php/*' --progress "${SYNC_PROD_ROOT%/}/web/assets/" "${LOCAL_SYNC_DIR}"
+else
+    echo "Starting file synchronization of assets from ${SYNC_FROM}..."
+    rsync -avz --delete -e "ssh -i ${SSH_KEY} -p ${SSH_PORT}" --exclude 'php/*' --progress "${REMOTE_USER}@${SYNC_FROM}:${REMOTE_DIR}" "${LOCAL_SYNC_DIR}"
+fi
+
+read -p "Syncronize database with production? (Any existing local database will be replaced) (y/N): " confirm
 if [[ "$confirm" =~ ^[Nn]$ ]]
 then
     echo "Database synchronization aborted."
@@ -100,15 +112,17 @@ fi
 
 cd "${PROJECT_ROOT}"
 
-echo "Downloading remote database..."
-ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
+if [ "$SYNC_LOCAL" != "true" ]; then
+    echo "Downloading remote database..."
+    ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
+fi
 
 if [ ! -f "$INSTALL_FLAG" ]; then
     echo "Initial installation detected. Skipping database backup, config export, and drop."
 else
     echo "Backing up local database..."
     mkdir -p "${BACKUP_DIR}"
-    $DRUSH sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
+    $DRUSH --gzip sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
 
     echo "Exporting changes..."
     $DRUSH cex
@@ -117,11 +131,17 @@ else
     $DRUSH sql:drop -y
 fi
 
-echo "Importing remote database into local database..."
+echo "Importing production database into local database..."
 if [ "$APP_ENV_TYPE" = "docker" ]; then
-    docker compose exec -T web bash -c "$($DRUSH sql:connect) < /var/www/html/dump.sql"
+    docker compose exec -T web bash -c "$(${DRUSH} sql:connect) < /var/www/html/dump.sql"
+elif [ "$SYNC_LOCAL" = "true" ]; then
+    DEST_CONNECT=$(${DRUSH} sql:connect)
+    (unset DB_NAME DB_USER DB_PASSWORD DB_HOST DATABASE_URL && \
+    cd "$SYNC_PROD_ROOT" && \
+    set -a && source .env && set +a && \
+    ./vendor/bin/drush sql:dump) | $DEST_CONNECT
 else
-    $($DRUSH sql:connect) < dump.sql
+    $(${DRUSH} sql:connect) < dump.sql
 fi
 
 echo "Importing any exported changes..."
@@ -132,8 +152,10 @@ $DRUSH updb
 $DRUSH cr
 
 # Clean up
-echo "Cleaning up temporary files..."
-rm dump.sql
+if [ "$SYNC_LOCAL" != "true" ]; then
+    echo "Cleaning up temporary files..."
+    rm dump.sql
+fi
 
 echo "Synchronization complete."
 
