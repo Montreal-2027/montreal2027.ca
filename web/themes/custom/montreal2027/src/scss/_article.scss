@@ -5,10 +5,9 @@ article .node.node--type-guest.node--view-mode-teaser {
     color: var(--color-light-azure);
     font-weight: 900;
     text-align: left;
-  }
+  } 
 
   & a {
-    color: var(--color-bright-red);
     font-weight: 800;
     ;
   }
@@ -31,7 +30,7 @@ article {
         }
 
         & h3 {
-          color: var(--color-light-cadmium-red);
+          color: var(--guest-header-color);
           text-align: left;
           font-weight: 900;
           margin-bottom: 0;
@@ -99,6 +98,9 @@ article {
           & .more-link {
             margin-top: auto;
             align-self: flex-end;
+            & a {
+              color: var(--more-link-color);
+            }
           }
         }
       }
