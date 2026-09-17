@@ -8,7 +8,7 @@ dependencies:
 id: nodes
 label: Nodes
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   4c16be39-7f0d-4de7-873e-3816818a586e:
     id: 'entity_bundle:node'

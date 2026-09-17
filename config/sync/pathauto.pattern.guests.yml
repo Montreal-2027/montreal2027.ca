@@ -8,7 +8,7 @@ dependencies:
 id: guests
 label: Guests
 type: 'canonical_entities:node'
-pattern: 'guest/[node:title]'
+pattern: '/guest/[node:title]'
 selection_criteria:
   6152ea9b-f709-45e0-9441-617a253186d0:
     id: 'entity_bundle:node'
