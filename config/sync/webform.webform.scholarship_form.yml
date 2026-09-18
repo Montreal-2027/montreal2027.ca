@@ -9,7 +9,7 @@ uid: 2
 template: false
 archive: false
 id: scholarship_form
-title: 'Montréal 2027 Worldcon Staff Scholarship Programme Application'
+title: 'Montréal 2027 Worldcon Team Scholarship Programme Application'
 description: ''
 categories: {  }
 elements: |-
@@ -20,7 +20,7 @@ elements: |-
       '#type': processed_text
       '#admin_title': 'Staff Scholarship Programme Application'
       '#display_on': both
-      '#text': '<h2>Montréal 2027 Worldcon Staff Scholarship Programme Application</h2><p>If you are interested in applying for a Staff Scholarship award fill this form out.&nbsp;&nbsp;</p>'
+      '#text': '<h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>If you are interested in applying for a Team Scholarship award fill this form out.&nbsp;&nbsp;</p>'
       '#format': basic_html
     what_is_your_first_name_and_last_name:
       '#type': textfield
@@ -219,7 +219,7 @@ settings:
   confirmation_type: modal
   confirmation_url: ''
   confirmation_title: 'Thank You'
-  confirmation_message: '<p>Your application for the Staff Scholarship Programme has been submitted. A member of our staff will be in touch.</p>'
+  confirmation_message: '<p>Your application for the Tea, Scholarship Programme has been submitted. A member of our Team will be in touch.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -295,5 +295,58 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  remote_http_operations:
+    id: remote_post
+    handler_id: remote_http_operations
+    label: 'Send to Google Sheets'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      method: POST
+      type: json
+      excluded_data:
+        serial: serial
+        sid: sid
+        uuid: uuid
+        token: token
+        uri: uri
+        created: created
+        completed: completed
+        changed: changed
+        in_draft: in_draft
+        current_page: current_page
+        remote_addr: remote_addr
+        uid: uid
+        langcode: langcode
+        webform_id: webform_id
+        entity_type: entity_type
+        entity_id: entity_id
+        locked: locked
+        sticky: sticky
+        notes: notes
+        metatag: metatag
+      custom_data: ''
+      custom_options: ''
+      file_data: true
+      cast: false
+      check_access: false
+      debug: false
+      completed_url: 'https://script.google.com/macros/s/AKfycbz_-FSTG73FAHgKxDUhh6TkFg0i7YCa4-i4kF7kFF9GNzULX2GDQpn_utwLbDw9V8HsoA/exec'
+      completed_custom_data: ''
+      updated_url: ''
+      updated_custom_data: ''
+      deleted_url: ''
+      deleted_custom_data: ''
+      draft_created_url: ''
+      draft_created_custom_data: ''
+      draft_updated_url: ''
+      draft_updated_custom_data: ''
+      converted_url: ''
+      converted_custom_data: ''
+      message: ''
+      messages: {  }
+      error_url: ''
 variants: {  }
