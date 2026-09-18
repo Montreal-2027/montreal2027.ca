@@ -18,7 +18,7 @@ elements: |-
     '#title': 'Section 1 of 2'
     form_intro:
       '#type': processed_text
-      '#admin_title': 'Staff Scholarship Programme Application'
+      '#admin_title': 'Team Scholarship Programme Application'
       '#display_on': both
       '#text': '<h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>If you are interested in applying for a Team Scholarship award fill this form out.&nbsp;&nbsp;</p>'
       '#format': basic_html
@@ -28,6 +28,7 @@ elements: |-
       '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">This must be the legal name that you use for financial transactions.&nbsp; (This does NOT have to be the name on your badge; this is needed to deliver ANY award.)</span></p>'
       '#description_display': before
       '#required': true
+      '#required_error': 'Your name is required'
     if_you_are_usually_known_by_another_name_in_fandom_please_add_it:
       '#type': textfield
       '#title': 'If you are usually known by another name in fandom, please add it here.'
@@ -39,6 +40,7 @@ elements: |-
       '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">We will communicate with you via email.&nbsp; Please make sure this is one you check regularly.</span></p>'
       '#description_display': before
       '#required': true
+      '#required_error': 'This is not a valid email address'
     please_state_where_you_will_likely_live_at_the_time_of_the_montr:
       '#type': textfield
       '#title': 'Please state where you will likely live at the time of the Montréal 2027 Worldcon.'
@@ -219,7 +221,7 @@ settings:
   confirmation_type: modal
   confirmation_url: ''
   confirmation_title: 'Thank You'
-  confirmation_message: '<p>Your application for the Tea, Scholarship Programme has been submitted. A member of our Team will be in touch.</p>'
+  confirmation_message: '<p>Your application for the Team Scholarship Programme has been submitted. A member of our Team will be in touch.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
