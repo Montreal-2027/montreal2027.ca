@@ -1,4 +1,4 @@
-# Graph Report - montreal2027.ca  (2026-09-17)
+# Graph Report - montreal2027.ca  (2026-09-18)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
@@ -9,7 +9,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a86571a0`
+- Built from commit: `cfb7f23b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
