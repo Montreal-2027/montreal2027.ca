@@ -20,8 +20,8 @@ elements: |-
       '#type': processed_text
       '#admin_title': 'Team Scholarship Programme Application'
       '#display_on': both
-      '#text': '<h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>If you are interested in applying for a Team Scholarship award fill this form out.&nbsp;&nbsp;</p>'
-      '#format': basic_html
+      '#text': "<hr><h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>Montreal 2027 is funding a Staff Scholarship Program. We are aware of the commitment that people make to volunteering and recognize that not all who want to volunteer have the resources to do so.&nbsp;</p><p>We are also aware that our time to collect institutional knowledge from older fans is passing. If you are interested in deepening your volunteer skills in an area you are less familiar with this program may be for you!</p><p>Please fill out the application if you are interested in knowing more. Financial need, while a consideration, is not the sole basis of award grants, so don't hesitate to apply if you're willing to learn more about being a staff level volunteer!</p><hr>"
+      '#format': full_html
     what_is_your_first_name_and_last_name:
       '#type': textfield
       '#title': 'What is your first name and last name?'
