@@ -20,7 +20,7 @@ elements: |-
       '#type': processed_text
       '#admin_title': 'Team Scholarship Programme Application'
       '#display_on': both
-      '#text': "<hr><h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>Montreal 2027 is funding a Staff Scholarship Program. We are aware of the commitment that people make to volunteering and recognize that not all who want to volunteer have the resources to do so.&nbsp;</p><p>We are also aware that our time to collect institutional knowledge from older fans is passing. If you are interested in deepening your volunteer skills in an area you are less familiar with this program may be for you!</p><p>Please fill out the application if you are interested in knowing more. Financial need, while a consideration, is not the sole basis of award grants, so don't hesitate to apply if you're willing to learn more about being a staff level volunteer!</p><hr>"
+      '#text': "<hr><h2>Montréal 2027 Worldcon Team Scholarship Programme Application</h2><p>Montreal 2027 is funding a Team Scholarship Program. We are aware of the commitment that people make to volunteering and recognize that not all who want to volunteer have the resources to do so.&nbsp;</p><p>We are also aware that our time to collect institutional knowledge from older fans is passing. If you are interested in deepening your volunteer skills in an area you are less familiar with this program may be for you!</p><p>Please fill out the application if you are interested in knowing more. Financial need, while a consideration, is not the sole basis of award grants, so don't hesitate to apply if you're willing to learn more about being a staff level volunteer!</p><hr>"
       '#format': full_html
     what_is_your_first_name_and_last_name:
       '#type': textfield
@@ -85,9 +85,10 @@ elements: |-
     how_much_time_are_you_willing_to_spend_working_for_montreal_2027:
       '#type': textarea
       '#title': 'How much time are you willing to spend working for Montréal 2027 Worldcon?'
-      '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Montréal 2027 Worldcon expectations are that you will volunteer before the convention in planning and preparation work, that you will arrive a minimum of 1 day prior to the convention as well as volunteer at the convention, and that you will be expected to fulfill the duties of a senior staff member. This is NOT a 3 hour shift and then done position.</span></p>'
+      '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Montréal 2027 Worldcon expectations are that you will volunteer before the convention in planning and preparation work, that you will arrive a minimum of 1 day prior to the convention as well as volunteer at the convention, and that you will be expected to fulfill the duties of a senior team member. This is NOT a 3 hour shift and then done position.</span></p>'
       '#description_display': before
       '#required': true
+      '#required_error': 'How much time are you willing to spend working for Montréal 2027 Worldcon is a required field'
     please_outline_any_accessibility_support_needs_or_restrictions_t:
       '#type': textarea
       '#title': 'Please outline any accessibility support needs or restrictions that need to be considered when assigning you?'
@@ -105,11 +106,13 @@ elements: |-
       '#title': 'What is the amount of scholarship award you are seeking?  Please provide a minimum to maximum level.  The Attending Member Supplement is provided; do not include that amount in your request.'
       '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">You must purchase your own WSFS membership as part of any award received from Montréal 2027 Worldcon.&nbsp;&nbsp;</span></p>'
       '#required': true
+      '#required_error': 'The amount of the award requested is a required field'
     please_indicate_your_expenses_provide_estimated_amounts_for_item:
       '#type': textarea
       '#title': 'Please indicate your expenses. Provide estimated amounts for items in Canadian Dollars (CAD)'
       '#description': '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 31, 31);display:inline !important;float:none;font-family:docs-Roboto;font-size:14.6667px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">e.g. Plane tickets to Montréal @ $600CAD,, 3 hotel nights at $150 for $450CAD, 5 Uber/Lyft fare at $50 for $250 and similar</span></p>'
       '#required': true
+      '#required_error': 'The estimated expenses is a required field'
     is_there_anything_else_you_would_like_us_to_know_when_considerin:
       '#type': textarea
       '#title': 'Is there anything else you would like us to know when considering your application? More information helps us make better informed decisions. '
