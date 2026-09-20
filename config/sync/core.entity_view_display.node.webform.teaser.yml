@@ -1,0 +1,27 @@
+uuid: 7a8dcff1-8332-45b5-bcad-8f60bdaf0c9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.webform.webform
+    - node.type.webform
+  module:
+    - user
+_core:
+  default_config_hash: 1Fm_pxiqdI07PvxM8aiSmpsJf0NwkTgsqrNbO4MuID0
+id: node.webform.teaser
+targetEntityType: node
+bundle: webform
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_workspace_status: true
+  langcode: true
+  search_api_excerpt: true
+  webform: true
