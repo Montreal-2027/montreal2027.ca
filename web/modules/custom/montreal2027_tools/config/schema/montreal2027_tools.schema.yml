@@ -47,3 +47,11 @@ montreal2027_tools.staff_page_settings:
     contact_link_text:
       type: label
       label: 'Contact link text'
+
+montreal2027_tools.guest_settings:
+  type: config_object
+  label: 'Montreal 2027 guest teaser settings'
+  mapping:
+    guest_read_more_text:
+      type: label
+      label: 'Read more link text'

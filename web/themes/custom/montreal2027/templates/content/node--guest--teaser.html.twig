@@ -21,7 +21,7 @@
 				{{ content.field_guest_photo }}
 			{% endif %}
 		</div>
-		<div lang="{{ current_langcode }}">
+		<div class="node__content-body" lang="{{ current_langcode }}">
 			{{ title_prefix }}
 			<h3{{title_attributes}}>
 				{{ label }}
@@ -30,8 +30,8 @@
 
 			{{ content.field_bio }}
 			<div class="more-link">
-				<a href="{{ url }}" rel="bookmark">Read
-					{{ node.title.value }}'s Full Bio</a>
+				{# guest_read_more_text is built in montreal2027_preprocess_node__guest__teaser() from a configurable, translatable theme setting #}
+				<a href="{{ url }}" rel="bookmark">{{ guest_read_more_text }}</a>
 			</div>
 		</div>
 	</div>
