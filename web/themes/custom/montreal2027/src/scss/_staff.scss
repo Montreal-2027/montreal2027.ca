@@ -15,6 +15,27 @@
             }
         }
 
+        &__jump-menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: .5rem;
+            margin: 1rem 0;
+
+            & label {
+                font-weight: 700;
+            }
+
+            & select {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-dark-gray);
+                border-radius: .4rem;
+                color: var(--color-black);
+                padding: .4rem .6rem;
+                font-size: clamp(0.85rem, 0.5vw + 0.7rem, 1.1rem);
+            }
+        }
+
         & .division {
             background-color: floralwhite;
             padding: .4rem;
@@ -23,6 +44,8 @@
             font-style: italic;
             margin: 0.4rem 0 0;
             padding: 1rem;
+            /* Keeps the fixed header from covering the target after a jump-menu scroll */
+            scroll-margin-top: var(--site-main-content-top);
         }
 
         & .division--row>.staff-row:nth-child(odd) {

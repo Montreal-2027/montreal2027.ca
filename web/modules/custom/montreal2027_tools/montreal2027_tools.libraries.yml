@@ -10,6 +10,14 @@ staff_contact_modal:
     - core/drupalSettings
     - core/once
 
+staff_jump_menu:
+  version: 1.x
+  js:
+    js/staff-jump-menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
 language_toggle:
   version: 1.x
   js:

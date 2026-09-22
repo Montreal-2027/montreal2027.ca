@@ -124,6 +124,11 @@
         ]
     },
     "extra": {
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
+        },
         "patches": {
             "drupal/social_media_links": {
                 "Add Bluesky": "https://www.drupal.org/files/issues/2025-01-28/3485279-2.patch"
