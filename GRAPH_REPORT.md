@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 244 nodes · 277 edges · 22 communities (11 shown, 11 thin omitted)
+- 245 nodes · 278 edges · 22 communities (11 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2d232956`
+- Built from commit: `8efc0de6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,7 +34,7 @@
 - Symfony\Component\Dotenv\Dotenv
 
 ## God Nodes (most connected - your core abstractions)
-1. `require` - 68 edges
+1. `require` - 69 edges
 2. `allow-plugins` - 12 edges
 3. `installer-paths` - 11 edges
 4. `LanguageToggleBlock` - 10 edges
@@ -56,7 +56,7 @@
 
 ### Community 0 - "require"
 Cohesion: 0.03
-Nodes (68): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+60 more)
+Nodes (69): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+61 more)
 
 ### Community 1 - "LanguageToggleBlock.php"
 Cohesion: 0.13
@@ -99,23 +99,23 @@ Cohesion: 0.32
 Nodes (5): entityforminterface, translatablemarkup, FormStateInterface, montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027_tools_form_taxonomy_term_form_alter()
 
 ## Knowledge Gaps
-- **126 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+121 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 160 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **127 isolated node(s):** `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme`, `drupal/admin_toolbar`, `drupal/block_field` (+122 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 161 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `require` connect `require` to `composer.json`?**
-  _High betweenness centrality (0.210) - this node is a cross-community bridge._
+  _High betweenness centrality (0.212) - this node is a cross-community bridge._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
   _High betweenness centrality (0.094) - this node is a cross-community bridge._
 - **Why does `config` connect `allow-plugins` to `composer.json`?**
   _High betweenness centrality (0.058) - this node is a cross-community bridge._
 - **What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?**
-  _126 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _127 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `require` be split into smaller, more focused modules?**
-  _Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.028985507246376812 - nodes in this community are weakly interconnected._
 - **Should `LanguageToggleBlock.php` be split into smaller, more focused modules?**
   _Cohesion score 0.12962962962962962 - nodes in this community are weakly interconnected._
 - **Should `installer-paths` be split into smaller, more focused modules?**
