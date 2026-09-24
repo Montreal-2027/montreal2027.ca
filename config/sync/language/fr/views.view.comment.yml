@@ -15,25 +15,14 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       fields:
-        comment_bulk_form:
-          action_title: Action
         subject:
           label: Objet
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
         changed:
           label: 'Mis à jour'
-          separator: ', '
         operations:
           label: Actions
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:
@@ -45,25 +34,14 @@ display:
     display_title: 'Par défaut'
     display_options:
       fields:
-        comment_bulk_form:
-          action_title: Action
         subject:
           label: Objet
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Auteur
-          separator: ', '
-        entity_id:
-          separator: ', '
         changed:
           label: 'Mis à jour'
-          separator: ', '
         operations:
           label: Actions
-        name_1:
-          separator: ', '
       pager:
         options:
           expose:
@@ -75,8 +53,6 @@ display:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       filters:
         subject:
           expose:

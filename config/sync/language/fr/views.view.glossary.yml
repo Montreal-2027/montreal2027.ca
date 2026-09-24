@@ -4,7 +4,6 @@ display:
       exposed_form:
         options:
           reset_button_label: Réinitialiser
-    display_title: Page
   default:
     display_title: 'Par défaut'
     display_options:
@@ -15,9 +14,6 @@ display:
           label: Auteur
       pager:
         options:
-          tags:
-            next: ››
-            previous: ‹‹
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
@@ -27,5 +23,3 @@ display:
           submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc

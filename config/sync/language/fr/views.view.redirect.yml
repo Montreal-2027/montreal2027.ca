@@ -1,15 +1,12 @@
 label: Rediriger
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
           submit_button: Filtrer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       pager:
         options:
           expose:
@@ -19,10 +16,8 @@ display:
       fields:
         redirect_source__path:
           label: 'A partir de'
-          separator: ', '
         enabled:
           label: Activé
-          separator: ', '
         created:
           label: Créé
       filters:
@@ -53,5 +48,3 @@ display:
               7:
                 title: '307 Redirection Temporaire'
       title: Rediriger
-  page_1:
-    display_title: Page
