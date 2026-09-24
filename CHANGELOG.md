@@ -2,6 +2,22 @@
 
 ## Changelog
 ---
+## 1.0.10 (2026-09-23)
+- Updated CSS for article content type
+- Adjusted link color and header styles for guest content type
+- Installed Webform
+- Team Scholarship Questionnaire
+- Program Participant Form
+- Updated composer.json to include composer.libraries.json from the Webform module
+- Updated global Webform settings
+- Added a quick jump menu to the team listing page
+- Added styling/css for Webform review page
+- Updated Team list maintainer role
+- Changed `Staff` role display name to `Team`
+- Changed `Staff List Maintainer` role display name to `Team List Maintainer`
+- Updated deploy workflow
+- Updated sync script
+
 ## 1.0.9 (2026-09-09)
 
 - Updated deploy scripts to better support new hosting provider

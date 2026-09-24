@@ -10,8 +10,9 @@ dependencies:
     - system
     - toolbar
     - workspaces
+    - workspaces_access
 id: staff
-label: Staff
+label: Team
 weight: -7
 is_admin: false
 permissions:

@@ -88,6 +88,7 @@ class StaffPageController extends ControllerBase
           '#attached' => [
             'library' => [
               'montreal2027_tools/staff_contact_modal',
+              'montreal2027_tools/staff_jump_menu',
             ],
             'drupalSettings' => [
               'montreal2027Tools' => [

@@ -26,6 +26,7 @@ display:
           label: Auteur
           separator: ', '
         entity_id:
+          label: 'Posté sur'
           separator: ', '
         changed:
           label: 'Mis à jour'
@@ -41,9 +42,13 @@ display:
         langcode:
           expose:
             label: Langue
+      menu:
+        title: 'Commentaires non approuvés'
+    display_title: 'Commentaires non approuvés'
   default:
     display_title: 'Par défaut'
     display_options:
+      title: Commentaires
       fields:
         comment_bulk_form:
           action_title: Action
@@ -56,6 +61,7 @@ display:
           label: Auteur
           separator: ', '
         entity_id:
+          label: 'Posté sur'
           separator: ', '
         changed:
           label: 'Mis à jour'
@@ -77,10 +83,23 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'Aucun commentaire disponible.'
       filters:
         subject:
           expose:
             label: Objet
+        combine:
+          expose:
+            label: "Nom de l'auteur"
         langcode:
           expose:
             label: Langue
+      use_more_text: plus
+  page_published:
+    display_title: 'Commentaires publiés'
+    display_options:
+      menu:
+        title: Commentaires
+label: Commentaires

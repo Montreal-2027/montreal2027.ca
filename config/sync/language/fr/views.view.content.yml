@@ -1,4 +1,5 @@
 label: Contenu
+description: 'Trouver et gérer le contenu.'
 display:
   default:
     display_title: 'Par défaut'
@@ -15,6 +16,7 @@ display:
         status:
           label: État
           settings:
+            format_custom_false: 'Non publié'
             format_custom_true: Publié
         changed:
           label: 'Mis à jour'
@@ -23,6 +25,13 @@ display:
           separator: ', '
         operations:
           label: Actions
+      pager:
+        options:
+          tags:
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
       exposed_form:
         options:
           submit_button: Filtrer
@@ -41,9 +50,12 @@ display:
           expose:
             label: État
           group_info:
+            label: 'Statut de publication'
             group_items:
               1:
                 title: Publié
+              2:
+                title: 'Non publié'
         langcode:
           expose:
             label: Langue

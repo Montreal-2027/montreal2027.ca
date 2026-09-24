@@ -145,11 +145,7 @@ else
 fi
 
 echo "Importing any exported changes..."
-$DRUSH cim
-$DRUSH updb
-
-# Rebuild Drupal cache
-$DRUSH cr
+$DRUSH deploy
 
 # Clean up
 if [ "$SYNC_LOCAL" != "true" ]; then

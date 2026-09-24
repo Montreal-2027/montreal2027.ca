@@ -32,3 +32,8 @@ display:
         tid:
           exception:
             title: Tout
+          title: '{{ arguments.tid }}'
+  feed_1:
+    display_title: Flux
+label: 'Terme de taxonomie'
+description: 'Contenu associé à un terme de taxonomie donné.'
