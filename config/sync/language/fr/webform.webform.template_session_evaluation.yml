@@ -5,3 +5,6 @@ settings:
 handlers:
   email_notification:
     label: 'Notification par courriel'
+    settings:
+      subject: _default
+      body: _default
