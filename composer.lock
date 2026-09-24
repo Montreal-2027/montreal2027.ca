@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30ebc0da010765bb225ce2036707e972",
+    "content-hash": "8d376e8161214a9a8914429eb6c5be09",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4327,6 +4327,50 @@
             "homepage": "https://www.drupal.org/project/languageicons",
             "support": {
                 "source": "https://git.drupalcode.org/project/languageicons"
+            }
+        },
+        {
+            "name": "drupal/logo_image_enhanced",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/logo_image_enhanced.git",
+                "reference": "1.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/logo_image_enhanced-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "d237e47729ad21d2e34c213551ae9f8ed9c86d97"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.2",
+                    "datestamp": "1771050633",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "nelo_drup",
+                    "homepage": "https://www.drupal.org/user/3602998"
+                }
+            ],
+            "description": "Apply image styles to theme logos with accessibility attributes (alt, title) and modern format support (WebP, AVIF, SVG).",
+            "homepage": "https://www.drupal.org/project/logo_image_enhanced",
+            "support": {
+                "source": "https://git.drupalcode.org/project/logo_image_enhanced"
             }
         },
         {

@@ -16,3 +16,10 @@ slide_title_1: ''
 slide_image_1: {  }
 slide_url_1: ''
 include_fontawesome: 0
+logo_style: _none
+logo_alt: 'Home | Image of a white cartoon lemming wearing bright red scarf. Text reads: Montreal 2027  2-6 septembre/ September 2-6'
+logo_title: 'Montréal 2027 Worldcon'
+logo_loading: eager
+logo_fetchpriority: high
+logo_decoding: auto
+debug_enabled: 0

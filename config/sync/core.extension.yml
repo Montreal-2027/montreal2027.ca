@@ -58,6 +58,7 @@ module:
   layout_discovery: 0
   link: 0
   locale: 0
+  logo_image_enhanced: 0
   mailsystem: 0
   media: 0
   media_gallery: 0

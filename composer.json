@@ -64,6 +64,7 @@
         "drupal/image_field_caption": "^4.0@RC",
         "drupal/lang_dropdown": "^2.4",
         "drupal/languageicons": "^2.0@beta",
+        "drupal/logo_image_enhanced": "^1.0",
         "drupal/mailsystem": "^4.5",
         "drupal/media_gallery": "^3.2",
         "drupal/media_library_form_element": "^2.1",
