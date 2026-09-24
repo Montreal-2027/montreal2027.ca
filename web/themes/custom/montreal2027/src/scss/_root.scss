@@ -18,6 +18,7 @@
   --color-maroon: oklch(0.4346 0.1737 13.84);
   --color-mastodon: oklch(0.5928 0.2243 276.82);
   --color-medium-gray: oklch(0.7843 0 0);
+  --color-off-white: oklch(0.98 0 0);
   --color-red: oklch(0.5217 0.2128 27.35);
   --color-slate-gray: oklch(0.5529 0.0196 257.43);
   --color-sm-blue: oklch(0.6246 0.1616 275.91); // oklch(from var(--color-blue) l calc(c + 0.25) h)
@@ -42,6 +43,7 @@
   height: 100vh;
   margin: 0;
   min-height: 100dvh;
+  scroll-behavior: smooth;
 
   @media (min-width: 992px) {
     --site-primary-menu-height: 2rem;

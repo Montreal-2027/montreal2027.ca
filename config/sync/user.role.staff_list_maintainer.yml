@@ -6,6 +6,7 @@ dependencies:
     - filter.format.full_html
     - taxonomy.vocabulary.divisions
   module:
+    - entity_workflow_workspace
     - filter
     - help
     - system
@@ -14,7 +15,7 @@ dependencies:
     - workspaces
     - workspaces_access
 id: staff_list_maintainer
-label: 'Staff List Maintainer'
+label: 'Team List Maintainer'
 weight: -6
 is_admin: false
 permissions:

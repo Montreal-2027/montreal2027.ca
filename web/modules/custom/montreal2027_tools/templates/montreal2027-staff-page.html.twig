@@ -19,9 +19,19 @@
 	<div class="staff-page__body">{{ page_body }}</div>
 
 	{% if divisions|length > 0 %}
+		<div class="staff-page__jump-menu">
+			<label for="staff-jump-menu" class="hidden">{% trans %}Jump to division{% endtrans %}</label>
+			<select id="staff-jump-menu">
+				<option value="" selected disabled>{% trans %}Jump to…{% endtrans %}</option>
+				{% for division in divisions %}
+					<option value="division-{{ division.term.id }}">{{ division.term.label }}</option>
+				{% endfor %}
+			</select>
+		</div>
+
 		{% for division in divisions %}
 			<div class="division--row">
-				<div class="division">{{ division.term.label }}</div>
+				<div class="division" id="division-{{ division.term.id }}">{{ division.term.label }}</div>
 				{% if division.children %}
 					{{ _self.render_positions(division.children, empty_position_link, contact_link_text) }}
 				{% endif %}

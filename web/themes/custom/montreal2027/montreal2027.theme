@@ -8,57 +8,60 @@ use Drupal\Component\Utility\Html;
  *
  * Adds workspace handler to node entity type to fix workspace publishing errors.
  */
-function montreal2027_entity_type_alter(array &$entity_types) {
-  if (isset($entity_types['node'])) {
-    $entity_types['node']->setHandlerClass('workspace', 'Drupal\workspaces\EntityTypeInfo\WorkspaceHandler');
-  }
+function montreal2027_entity_type_alter(array &$entity_types)
+{
+    if (isset($entity_types['node'])) {
+        $entity_types['node']->setHandlerClass('workspace', 'Drupal\workspaces\EntityTypeInfo\WorkspaceHandler');
+    }
 }
 
 /**
  * Implements hook_form_alter().
  */
-function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id === 'search_block_form') {
-    $form['keys']['#attributes']['placeholder'] = \Drupal::translation()->translate('I am looking for');
-  }
-
-  if ($form_id === 'views_exposed_form') {
-    $view = $form_state->getStorage()['view'];
-
-    if ($view->id() === 'search_page' && $view->current_display === 'page_1')  {
-      // Modify the submit button
-      $form['actions']['submit']['#type'] = 'button';
-      $form['actions']['submit']['#value'] = ''; // Optional text, can be empty
-      // Add the Font Awesome icon markup via #prefix
-      $form['actions']['submit']['#prefix'] = '<button type="submit" value="Search"><i class="fa-solid fa-magiifying-glass"></i>'; // Replace fa-search with your desired icon
-      $form['actions']['submit']['#suffix'] = '</button>';
+function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    if ($form_id === 'search_block_form') {
+        $form['keys']['#attributes']['placeholder'] = \Drupal::translation()->translate('I am looking for');
     }
-  }
+
+    if ($form_id === 'views_exposed_form') {
+        $view = $form_state->getStorage()['view'];
+
+        if ($view->id() === 'search_page' && $view->current_display === 'page_1') {
+            // Modify the submit button
+            $form['actions']['submit']['#type'] = 'button';
+            $form['actions']['submit']['#value'] = ''; // Optional text, can be empty
+            // Add the Font Awesome icon markup via #prefix
+            $form['actions']['submit']['#prefix'] = '<button type="submit" value="Search"><i class="fa-solid fa-magiifying-glass"></i>'; // Replace fa-search with your desired icon
+            $form['actions']['submit']['#suffix'] = '</button>';
+        }
+    }
 }
 
-function montreal2027_preprocess_block__system_branding_block(&$variables) {
-  // Wrap each word in the site slogan with a <span> so it can be styled separately.
-  if (!empty($variables['site_slogan'])) {
-    // This is user provided input, remove any existing markup and work with the plain text.
-    $slogan_text = strip_tags($variables['site_slogan']['#markup']);
+function montreal2027_preprocess_block__system_branding_block(&$variables)
+{
+    // Wrap each word in the site slogan with a <span> so it can be styled separately.
+    if (!empty($variables['site_slogan'])) {
+        // This is user provided input, remove any existing markup and work with the plain text.
+        $slogan_text = strip_tags($variables['site_slogan']['#markup']);
 
-    // Explode by whitespace.
-    $parts = explode(' ', $slogan_text);
+        // Explode by whitespace.
+        $parts = explode(' ', $slogan_text);
 
-    $wrapped = '';
-    foreach ($parts as $part) {
-      if (strlen($wrapped) > 0) {
-        // Add a space before all but the first word.
-        $wrapped .= ' ';
-      }
+        $wrapped = '';
+        foreach ($parts as $part) {
+            if (strlen($wrapped) > 0) {
+                // Add a space before all but the first word.
+                $wrapped .= ' ';
+            }
 
-      // Escape the word and wrap it because it's user provided input.
-      $wrapped .= '<span class="slogan-word">' . Html::escape($part) . '</span>';
+            // Escape the word and wrap it because it's user provided input.
+            $wrapped .= '<span class="slogan-word">' . Html::escape($part) . '</span>';
+        }
+
+        // Set as render array to ensure it's output as safe markup.
+        $variables['site_slogan'] = ['#markup' => $wrapped];
     }
-
-    // Set as render array to ensure it's output as safe markup.
-    $variables['site_slogan'] = ['#markup' => $wrapped];
-  }
 }
 
 /**
@@ -68,155 +71,155 @@ function montreal2027_preprocess_block__system_branding_block(&$variables) {
  * @param string $image_style The machine name of the image style to use for the URL.
  * @returns array An associative array with keys 'alt' and 'url'.
  */
-function get_image_info(mixed $item, string $image_style='convert_only') {
-  $result = [
-    'alt' => '',
-    'url' => '',
-  ];
+function get_image_info(mixed $item, string $image_style = 'convert_only')
+{
+    $result = [
+      'alt' => '',
+      'url' => '',
+    ];
 
-  // Handle render-array wrapping where the raw field item is stored under '#item'.
-  if (is_array($item) && isset($item['#item'])) {
-    $item = $item['#item'];
-  }
-
-  // If item is a render array that is itself a file render element, try '#file'.
-  if (is_array($item) && isset($item['#file']) && is_object($item['#file'])) {
-    $file = $item['#file'];
-    // Try to get alt from '#options' if provided.
-    $alt = '';
-    if (isset($item['#options']['alt'])) {
-      $alt = (string) $item['#options']['alt'];
-    }
-    $result['alt'] = $alt;
-
-    // Build URL from file entity if possible.
-    if (method_exists($file, 'getFileUri')) {
-      $uri = $file->getFileUri();
-      if ($uri) {
-        $style = \Drupal\image\Entity\ImageStyle::load($image_style);
-        if ($style) {
-          $result['url'] = $style->buildUrl($uri);
-        } else {
-          $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
-        }
-      }
+    // Handle render-array wrapping where the raw field item is stored under '#item'.
+    if (is_array($item) && isset($item['#item'])) {
+        $item = $item['#item'];
     }
 
-    return $result;
-  }
-
-  // If $item is an object (FieldItem, File, Media, etc.) inspect it.
-  if (is_object($item)) {
-    $alt = '';
-    $file = null;
-
-    // If the item directly has an alt property (common for image field items).
-    if (isset($item->alt)) {
-      $alt = (string) $item->alt;
-    } else {
-      // Try method-based access; some FieldItem implementations expose get('alt').
-      if (method_exists($item, 'get')) {
-        try {
-          $altVal = $item->get('alt')->getValue();
-          if (is_array($altVal)) {
-            $alt = reset($altVal) ?: '';
-          } elseif (is_string($altVal)) {
-            $alt = $altVal;
-          }
-        } catch (\Throwable $e) {
-          // ignore
+    // If item is a render array that is itself a file render element, try '#file'.
+    if (is_array($item) && isset($item['#file']) && is_object($item['#file'])) {
+        $file = $item['#file'];
+        // Try to get alt from '#options' if provided.
+        $alt = '';
+        if (isset($item['#options']['alt'])) {
+            $alt = (string) $item['#options']['alt'];
         }
-      }
-    }
+        $result['alt'] = $alt;
 
-    // If the item references an entity (could be a file or a media entity).
-    if (isset($item->entity) && is_object($item->entity)) {
-      $entity = $item->entity;
-      try {
-        $etype = method_exists($entity, 'getEntityTypeId') ? $entity->getEntityTypeId() : '';
-      } catch (\Throwable $e) {
-        $etype = '';
-      }
-
-      // If it's a media entity, find the media's image field item and extract file/alt.
-      if ($etype === 'media') {
-        $media = $entity;
-        $possible_image_fields = [
-          'field_media_image',
-          'field_media_photo',
-          'field_image',
-          'image',
-          'field_media_picture',
-        ];
-        $image_item = null;
-        foreach ($possible_image_fields as $field_name) {
-          if ($media->hasField($field_name) && !$media->get($field_name)->isEmpty()) {
-            $image_item = $media->get($field_name)->first();
-            break;
-          }
-        }
-        if ($image_item) {
-          // Extract alt from the media's image field item if available.
-          if (isset($image_item->alt)) {
-            $alt = (string) $image_item->alt;
-          } else {
-            try {
-              $altVal = $image_item->get('alt')->getValue();
-              if (is_array($altVal)) {
-                $alt = reset($altVal) ?: '';
-              } elseif (is_string($altVal)) {
-                $alt = $altVal;
-              }
-            } catch (\Throwable $e) {
-              // ignore
+        // Build URL from file entity if possible.
+        if (method_exists($file, 'getFileUri')) {
+            $uri = $file->getFileUri();
+            if ($uri) {
+                $style = \Drupal\image\Entity\ImageStyle::load($image_style);
+                if ($style) {
+                    $result['url'] = $style->buildUrl($uri);
+                } else {
+                    $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+                }
             }
-          }
-
-          // File entity referenced by the media image field.
-          if (isset($image_item->entity) && is_object($image_item->entity)) {
-            $file = $image_item->entity;
-          }
         }
 
-        // Fallback: if no image_item resolved, try the media's field_media_image directly.
-        if (!$file && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
-          $maybe = $media->get('field_media_image')->first();
-          if ($maybe && isset($maybe->entity) && is_object($maybe->entity)) {
-            $file = $maybe->entity;
-          }
-        }
-      }
-      else {
-        // If the referenced entity is a file entity, use it directly.
-        if ($etype === 'file' || is_subclass_of(get_class($entity), 'Drupal\\file\\Entity\\File') || method_exists($entity, 'getFileUri')) {
-          $file = $entity;
-        }
-      }
+        return $result;
     }
 
-    // Build the image URL from the resolved file entity when possible.
-    if ($file) {
-      try {
-        $uri = method_exists($file, 'getFileUri') ? $file->getFileUri() : '';
-        if ($uri) {
-          $style = \Drupal\image\Entity\ImageStyle::load($image_style);
-          if ($style) {
-            $result['url'] = $style->buildUrl($uri);
-          } else {
-            $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
-          }
+    // If $item is an object (FieldItem, File, Media, etc.) inspect it.
+    if (is_object($item)) {
+        $alt = '';
+        $file = null;
+
+        // If the item directly has an alt property (common for image field items).
+        if (isset($item->alt)) {
+            $alt = (string) $item->alt;
+        } else {
+            // Try method-based access; some FieldItem implementations expose get('alt').
+            if (method_exists($item, 'get')) {
+                try {
+                    $altVal = $item->get('alt')->getValue();
+                    if (is_array($altVal)) {
+                        $alt = reset($altVal) ?: '';
+                    } elseif (is_string($altVal)) {
+                        $alt = $altVal;
+                    }
+                } catch (\Throwable $e) {
+                    // ignore
+                }
+            }
         }
-      } catch (\Throwable $e) {
-        // ignore
-      }
+
+        // If the item references an entity (could be a file or a media entity).
+        if (isset($item->entity) && is_object($item->entity)) {
+            $entity = $item->entity;
+            try {
+                $etype = method_exists($entity, 'getEntityTypeId') ? $entity->getEntityTypeId() : '';
+            } catch (\Throwable $e) {
+                $etype = '';
+            }
+
+            // If it's a media entity, find the media's image field item and extract file/alt.
+            if ($etype === 'media') {
+                $media = $entity;
+                $possible_image_fields = [
+                  'field_media_image',
+                  'field_media_photo',
+                  'field_image',
+                  'image',
+                  'field_media_picture',
+                ];
+                $image_item = null;
+                foreach ($possible_image_fields as $field_name) {
+                    if ($media->hasField($field_name) && !$media->get($field_name)->isEmpty()) {
+                        $image_item = $media->get($field_name)->first();
+                        break;
+                    }
+                }
+                if ($image_item) {
+                    // Extract alt from the media's image field item if available.
+                    if (isset($image_item->alt)) {
+                        $alt = (string) $image_item->alt;
+                    } else {
+                        try {
+                            $altVal = $image_item->get('alt')->getValue();
+                            if (is_array($altVal)) {
+                                $alt = reset($altVal) ?: '';
+                            } elseif (is_string($altVal)) {
+                                $alt = $altVal;
+                            }
+                        } catch (\Throwable $e) {
+                            // ignore
+                        }
+                    }
+
+                    // File entity referenced by the media image field.
+                    if (isset($image_item->entity) && is_object($image_item->entity)) {
+                        $file = $image_item->entity;
+                    }
+                }
+
+                // Fallback: if no image_item resolved, try the media's field_media_image directly.
+                if (!$file && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+                    $maybe = $media->get('field_media_image')->first();
+                    if ($maybe && isset($maybe->entity) && is_object($maybe->entity)) {
+                        $file = $maybe->entity;
+                    }
+                }
+            } else {
+                // If the referenced entity is a file entity, use it directly.
+                if ($etype === 'file' || is_subclass_of(get_class($entity), 'Drupal\\file\\Entity\\File') || method_exists($entity, 'getFileUri')) {
+                    $file = $entity;
+                }
+            }
+        }
+
+        // Build the image URL from the resolved file entity when possible.
+        if ($file) {
+            try {
+                $uri = method_exists($file, 'getFileUri') ? $file->getFileUri() : '';
+                if ($uri) {
+                    $style = \Drupal\image\Entity\ImageStyle::load($image_style);
+                    if ($style) {
+                        $result['url'] = $style->buildUrl($uri);
+                    } else {
+                        $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+                    }
+                }
+            } catch (\Throwable $e) {
+                // ignore
+            }
+        }
+
+        $result['alt'] = $alt;
+        return $result;
     }
 
-    $result['alt'] = $alt;
+    // Nothing resolved.
     return $result;
-  }
-
-  // Nothing resolved.
-  return $result;
 }
 
 /**
@@ -250,14 +253,15 @@ function montreal2027_preprocess_node__guest__teaser(array &$variables) {
   $variables['guest_read_more_text'] = strtr($template, ['@name' => $variables['node']->label()]);
 }
 
-function montreal2027_preprocess_block__montreal2027_content(&$variables) {
-  // Get the current node object if available.
-  $node = \Drupal::routeMatch()->getParameter('node');
+function montreal2027_preprocess_block__montreal2027_content(&$variables)
+{
+    // Get the current node object if available.
+    $node = \Drupal::routeMatch()->getParameter('node');
 
-  // Check if a node was found and pass it to the template.
-  if ($node instanceof \Drupal\node\NodeInterface) {
-    $variables['current_node'] = montreal2027_entity_in_content_language($node);
-  }
+    // Check if a node was found and pass it to the template.
+    if ($node instanceof \Drupal\node\NodeInterface) {
+        $variables['current_node'] = montreal2027_entity_in_content_language($node);
+    }
 }
 
 /**
@@ -265,47 +269,48 @@ function montreal2027_preprocess_block__montreal2027_content(&$variables) {
  *
  * Provides translated node and carousel item entities for Twig.
  */
-function montreal2027_preprocess_page(array &$variables): void {
-  $route_node = \Drupal::routeMatch()->getParameter('node');
-  if (!$route_node instanceof \Drupal\node\NodeInterface) {
-    return;
-  }
-
-  $node = montreal2027_entity_in_content_language($route_node);
-  $variables['current_node'] = $node;
-
-  $carousel_items = [];
-  if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
-    foreach ($node->get('field_carousel_items') as $item) {
-      if (empty($item->entity)) {
-        continue;
-      }
-      $carousel_items[] = montreal2027_entity_in_content_language($item->entity);
+function montreal2027_preprocess_page(array &$variables): void
+{
+    $route_node = \Drupal::routeMatch()->getParameter('node');
+    if (!$route_node instanceof \Drupal\node\NodeInterface) {
+        return;
     }
-  }
 
-  $variables['carousel_items'] = $carousel_items;
+    $node = montreal2027_entity_in_content_language($route_node);
+    $variables['current_node'] = $node;
+
+    $carousel_items = [];
+    if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
+        foreach ($node->get('field_carousel_items') as $item) {
+            if (empty($item->entity)) {
+                continue;
+            }
+            $carousel_items[] = montreal2027_entity_in_content_language($item->entity);
+        }
+    }
+
+    $variables['carousel_items'] = $carousel_items;
 }
 
 /**
  * Returns an entity translated to current content language when available.
  */
-function montreal2027_entity_in_content_language($entity) {
-  if (!is_object($entity) || !method_exists($entity, 'hasTranslation')) {
+function montreal2027_entity_in_content_language($entity)
+{
+    if (!is_object($entity) || !method_exists($entity, 'hasTranslation')) {
+        return $entity;
+    }
+
+    $langcode = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
+    if ($langcode && $entity->hasTranslation($langcode)) {
+        try {
+            return $entity->getTranslation($langcode);
+        } catch (\Throwable $e) {
+            return $entity;
+        }
+    }
+
     return $entity;
-  }
-
-  $langcode = \Drupal::languageManager()->getCurrentLanguage(\Drupal\Core\Language\LanguageInterface::TYPE_CONTENT)->getId();
-  if ($langcode && $entity->hasTranslation($langcode)) {
-    try {
-      return $entity->getTranslation($langcode);
-    }
-    catch (\Throwable $e) {
-      return $entity;
-    }
-  }
-
-  return $entity;
 }
 
 /**
@@ -319,7 +324,7 @@ function montreal2027_entity_in_content_language($entity) {
  */
 function montreal2027_preprocess_paragraph__guest_block(array &$variables)
 {
-  montreal2027_preprocess_guest_taxonomy_paragraph($variables);
+    montreal2027_preprocess_guest_taxonomy_paragraph($variables);
 }
 
 /**
@@ -329,7 +334,7 @@ function montreal2027_preprocess_paragraph__guest_block(array &$variables)
  */
 function montreal2027_preprocess_paragraph__guests(array &$variables)
 {
-  montreal2027_preprocess_guest_taxonomy_paragraph($variables);
+    montreal2027_preprocess_guest_taxonomy_paragraph($variables);
 }
 
 /**
@@ -339,164 +344,164 @@ function montreal2027_preprocess_paragraph__guests(array &$variables)
  */
 function montreal2027_preprocess_guest_taxonomy_paragraph(array &$variables)
 {
-  if (empty($variables['paragraph'])) {
-    return;
-  }
-  $paragraph = $variables['paragraph'];
-
-  // Default exposures for Twig.
-  $variables['guest_block_entity_translated'] = NULL;
-  $variables['guest_block_langcode'] = NULL;
-  $variables['guest_block_title'] = '';
-  $variables['guest_block_title_plural'] = '';
-  $variables['guest_block_description'] = '';
-
-  // Determine which field to use based on paragraph type
-  $referenced = NULL;
-  if ($paragraph->hasField('field_block') && !$paragraph->get('field_block')->isEmpty()) {
-    $referenced = $paragraph->get('field_block')->entity;
-  } elseif ($paragraph->hasField('field_guest_type') && !$paragraph->get('field_guest_type')->isEmpty()) {
-    $referenced = $paragraph->get('field_guest_type')->entity;
-  }
-
-  if (!$referenced) {
-    return;
-  }
-
-  // Robust language detection (server-side): prefer entity langcode, then
-  // current language from language manager, then request attributes.
-  $langcode = NULL;
-
-  // 1) Prefer the entity's own langcode (this is safe and explicit).
-  try {
-    $entity_lang = method_exists($referenced, 'getLangcode') ? $referenced->getLangcode() : null;
-    if ($entity_lang) {
-      $langcode = $entity_lang;
+    if (empty($variables['paragraph'])) {
+        return;
     }
-  } catch (\Throwable $e) {
-    // ignore
-  }
+    $paragraph = $variables['paragraph'];
 
-  // 2) Language manager current language
-  if (empty($langcode)) {
-    try {
-      $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    } catch (\Throwable $e) {
-      // ignore
-    }
-  }
-
-  // 3) Request attributes (Negotiation may set these)
-  if (empty($langcode)) {
-    $request = \Drupal::request();
-    if ($request) {
-      $req_lang = $request->attributes->get('_language');
-      if ($req_lang && method_exists($req_lang, 'getId')) {
-        $langcode = $req_lang->getId();
-      }
-    }
-  }
-
-  // 4) Locale fallback
-  if (empty($langcode)) {
-    $request = \Drupal::request();
-    if ($request) {
-      $locale_attr = $request->attributes->get('_locale');
-      if ($locale_attr) {
-        $langcode = preg_split('/[_-]/', (string)$locale_attr)[0];
-      } else {
-        $locale = $request->getLocale();
-        if ($locale) {
-          $langcode = preg_split('/[_-]/', (string)$locale)[0];
-        }
-      }
-    }
-  }
-
-  // 5) Fallback: derive language from the first URL path segment (path prefix)
-  // This handles cases where language negotiation uses path prefixes (e.g. /fr/...).
-  if (empty($langcode)) {
-    $request = \Drupal::request();
-    if ($request) {
-      $path = trim($request->getPathInfo(), '/');
-
-      // If getPathInfo() has had the language prefix removed (some middlewares
-      // or language negotiation can do this), try the original request URI
-      // and strip base path.
-      if ($path === '') {
-        $raw = $request->getRequestUri();
-        // Remove query string
-        $raw = preg_replace('/\?.*/', '', $raw);
-        $base = $request->getBasePath() ?: '';
-        if ($base && strpos($raw, $base) === 0) {
-          $raw = substr($raw, strlen($base));
-        }
-        $raw = trim($raw, '/');
-        $path = $raw;
-      }
-
-      if ($path !== '') {
-        $first_segment = preg_split('#/+#', $path)[0];
-        // Check against configured languages. Accept exact matches or primary-subtag matches
-        try {
-          $languages = \Drupal::languageManager()->getLanguages();
-          foreach ($languages as $lid => $lang) {
-            // Exact key match first.
-            if ($first_segment === $lid) {
-              $langcode = $lid;
-              break;
-            }
-            // Accept matching the primary subtag (e.g. 'fr' for 'fr-FR' or 'fr_CA').
-            $primary = preg_split('/[_-]/', $lid)[0];
-            if ($first_segment === $primary) {
-              $langcode = $lid;
-              break;
-            }
-          }
-        } catch (\Throwable $e) {
-          // ignore
-        }
-      }
-    }
-  }
-
-  // Determine translated entity (if available)
-  $translated = $referenced;
-  if ($langcode && $referenced->hasTranslation($langcode)) {
-    try {
-      $translated = $referenced->getTranslation($langcode);
-    } catch (\Throwable $e) {
-      // ignore and fall back to original
-    }
-  }
-
-  $variables['guest_block_entity_translated'] = $translated;
-  $variables['guest_block_langcode'] = $langcode;
-
-  // Convenience values for the template
-  try {
-    $variables['guest_block_title'] = $translated->label();
-  } catch (\Throwable $e) {
+    // Default exposures for Twig.
+    $variables['guest_block_entity_translated'] = null;
+    $variables['guest_block_langcode'] = null;
     $variables['guest_block_title'] = '';
-  }
+    $variables['guest_block_title_plural'] = '';
+    $variables['guest_block_description'] = '';
 
-  // Title plural (field_plural)
-  if ($translated && $translated->hasField('field_plural') && !$translated->get('field_plural')->isEmpty()) {
-    try {
-      $variables['guest_block_title_plural'] = (string)$translated->get('field_plural')->first()->value;
-    } catch (\Throwable $e) {
-      $variables['guest_block_title_plural'] = '';
+    // Determine which field to use based on paragraph type
+    $referenced = null;
+    if ($paragraph->hasField('field_block') && !$paragraph->get('field_block')->isEmpty()) {
+        $referenced = $paragraph->get('field_block')->entity;
+    } elseif ($paragraph->hasField('field_guest_type') && !$paragraph->get('field_guest_type')->isEmpty()) {
+        $referenced = $paragraph->get('field_guest_type')->entity;
     }
-  }
 
-  // Description - guard for the field existence
-  if ($translated && $translated->hasField('description') && !$translated->get('description')->isEmpty()) {
-    try {
-      $variables['guest_block_description'] = (string) $translated->get('description')->first()->value;
-    } catch (\Throwable $e) {
-      $variables['guest_block_description'] = '';
+    if (!$referenced) {
+        return;
     }
-  }
+
+    // Robust language detection (server-side): prefer entity langcode, then
+    // current language from language manager, then request attributes.
+    $langcode = null;
+
+    // 1) Prefer the entity's own langcode (this is safe and explicit).
+    try {
+        $entity_lang = method_exists($referenced, 'getLangcode') ? $referenced->getLangcode() : null;
+        if ($entity_lang) {
+            $langcode = $entity_lang;
+        }
+    } catch (\Throwable $e) {
+        // ignore
+    }
+
+    // 2) Language manager current language
+    if (empty($langcode)) {
+        try {
+            $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+        } catch (\Throwable $e) {
+            // ignore
+        }
+    }
+
+    // 3) Request attributes (Negotiation may set these)
+    if (empty($langcode)) {
+        $request = \Drupal::request();
+        if ($request) {
+            $req_lang = $request->attributes->get('_language');
+            if ($req_lang && method_exists($req_lang, 'getId')) {
+                $langcode = $req_lang->getId();
+            }
+        }
+    }
+
+    // 4) Locale fallback
+    if (empty($langcode)) {
+        $request = \Drupal::request();
+        if ($request) {
+            $locale_attr = $request->attributes->get('_locale');
+            if ($locale_attr) {
+                $langcode = preg_split('/[_-]/', (string) $locale_attr)[0];
+            } else {
+                $locale = $request->getLocale();
+                if ($locale) {
+                    $langcode = preg_split('/[_-]/', (string) $locale)[0];
+                }
+            }
+        }
+    }
+
+    // 5) Fallback: derive language from the first URL path segment (path prefix)
+    // This handles cases where language negotiation uses path prefixes (e.g. /fr/...).
+    if (empty($langcode)) {
+        $request = \Drupal::request();
+        if ($request) {
+            $path = trim($request->getPathInfo(), '/');
+
+            // If getPathInfo() has had the language prefix removed (some middlewares
+            // or language negotiation can do this), try the original request URI
+            // and strip base path.
+            if ($path === '') {
+                $raw = $request->getRequestUri();
+                // Remove query string
+                $raw = preg_replace('/\?.*/', '', $raw);
+                $base = $request->getBasePath() ?: '';
+                if ($base && strpos($raw, $base) === 0) {
+                    $raw = substr($raw, strlen($base));
+                }
+                $raw = trim($raw, '/');
+                $path = $raw;
+            }
+
+            if ($path !== '') {
+                $first_segment = preg_split('#/+#', $path)[0];
+                // Check against configured languages. Accept exact matches or primary-subtag matches
+                try {
+                    $languages = \Drupal::languageManager()->getLanguages();
+                    foreach ($languages as $lid => $lang) {
+                        // Exact key match first.
+                        if ($first_segment === $lid) {
+                            $langcode = $lid;
+                            break;
+                        }
+                        // Accept matching the primary subtag (e.g. 'fr' for 'fr-FR' or 'fr_CA').
+                        $primary = preg_split('/[_-]/', $lid)[0];
+                        if ($first_segment === $primary) {
+                            $langcode = $lid;
+                            break;
+                        }
+                    }
+                } catch (\Throwable $e) {
+                    // ignore
+                }
+            }
+        }
+    }
+
+    // Determine translated entity (if available)
+    $translated = $referenced;
+    if ($langcode && $referenced->hasTranslation($langcode)) {
+        try {
+            $translated = $referenced->getTranslation($langcode);
+        } catch (\Throwable $e) {
+            // ignore and fall back to original
+        }
+    }
+
+    $variables['guest_block_entity_translated'] = $translated;
+    $variables['guest_block_langcode'] = $langcode;
+
+    // Convenience values for the template
+    try {
+        $variables['guest_block_title'] = $translated->label();
+    } catch (\Throwable $e) {
+        $variables['guest_block_title'] = '';
+    }
+
+    // Title plural (field_plural)
+    if ($translated && $translated->hasField('field_plural') && !$translated->get('field_plural')->isEmpty()) {
+        try {
+            $variables['guest_block_title_plural'] = (string) $translated->get('field_plural')->first()->value;
+        } catch (\Throwable $e) {
+            $variables['guest_block_title_plural'] = '';
+        }
+    }
+
+    // Description - guard for the field existence
+    if ($translated && $translated->hasField('description') && !$translated->get('description')->isEmpty()) {
+        try {
+            $variables['guest_block_description'] = (string) $translated->get('description')->first()->value;
+        } catch (\Throwable $e) {
+            $variables['guest_block_description'] = '';
+        }
+    }
 }
 
 /**
@@ -505,14 +510,15 @@ function montreal2027_preprocess_guest_taxonomy_paragraph(array &$variables)
  * Hide the carousel field from the main content area since it's displayed
  * separately in the page template.
  */
-    function montreal2027_preprocess_node(&$variables) {
-  $node = $variables['node'];
-  
-  // If this node has the carousel field and we're in full view mode
-  if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
-    // Hide the field from the content render array
-    if (isset($variables['content']['field_carousel_items'])) {
-      $variables['content']['field_carousel_items']['#access'] = FALSE;
+function montreal2027_preprocess_node(&$variables)
+{
+    $node = $variables['node'];
+
+    // If this node has the carousel field and we're in full view mode
+    if ($node->hasField('field_carousel_items') && !$node->get('field_carousel_items')->isEmpty()) {
+        // Hide the field from the content render array
+        if (isset($variables['content']['field_carousel_items'])) {
+            $variables['content']['field_carousel_items']['#access'] = false;
+        }
     }
-  }
 }
