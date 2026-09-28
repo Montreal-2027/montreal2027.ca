@@ -114,7 +114,7 @@ cd "${PROJECT_ROOT}"
 
 if [ "$SYNC_LOCAL" != "true" ]; then
     echo "Downloading remote database..."
-    ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
+    ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && /var/nfph-opt/alt/php83/usr/bin/php ./vendor/bin/drush.php sql:dump)" > dump.sql
 fi
 
 if [ ! -f "$INSTALL_FLAG" ]; then
