@@ -1077,6 +1077,17 @@
       "source_location": "L72"
     },
     {
+      "id": "composer_require_drupal_menu_link_attributes",
+      "label": "drupal/menu_link_attributes",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "require",
+      "file_type": "code",
+      "norm_label": "drupal/menu_link_attributes",
+      "source_file": "composer.json",
+      "source_location": "L73"
+    },
+    {
       "id": "composer_require_drupal_metatag",
       "label": "drupal/metatag",
       "_origin": "ast",
@@ -1085,7 +1096,7 @@
       "file_type": "code",
       "norm_label": "drupal/metatag",
       "source_file": "composer.json",
-      "source_location": "L73"
+      "source_location": "L74"
     },
     {
       "id": "composer_require_drupal_paragraphs_report",
@@ -1096,7 +1107,7 @@
       "file_type": "code",
       "norm_label": "drupal/paragraphs_report",
       "source_file": "composer.json",
-      "source_location": "L74"
+      "source_location": "L75"
     },
     {
       "id": "composer_require_drupal_pathauto",
@@ -1107,7 +1118,7 @@
       "file_type": "code",
       "norm_label": "drupal/pathauto",
       "source_file": "composer.json",
-      "source_location": "L75"
+      "source_location": "L76"
     },
     {
       "id": "composer_require_drupal_phpmailer_smtp",
@@ -1118,7 +1129,7 @@
       "file_type": "code",
       "norm_label": "drupal/phpmailer_smtp",
       "source_file": "composer.json",
-      "source_location": "L76"
+      "source_location": "L77"
     },
     {
       "id": "composer_require_drupal_recreate_block_content",
@@ -1129,7 +1140,7 @@
       "file_type": "code",
       "norm_label": "drupal/recreate_block_content",
       "source_file": "composer.json",
-      "source_location": "L77"
+      "source_location": "L78"
     },
     {
       "id": "composer_require_drupal_redirect",
@@ -1140,7 +1151,7 @@
       "file_type": "code",
       "norm_label": "drupal/redirect",
       "source_file": "composer.json",
-      "source_location": "L78"
+      "source_location": "L79"
     },
     {
       "id": "composer_require_drupal_search_api",
@@ -1151,7 +1162,7 @@
       "file_type": "code",
       "norm_label": "drupal/search_api",
       "source_file": "composer.json",
-      "source_location": "L79"
+      "source_location": "L80"
     },
     {
       "id": "composer_require_drupal_social_media_links",
@@ -1162,7 +1173,7 @@
       "file_type": "code",
       "norm_label": "drupal/social_media_links",
       "source_file": "composer.json",
-      "source_location": "L80"
+      "source_location": "L81"
     },
     {
       "id": "composer_require_drupal_structure_sync",
@@ -1173,7 +1184,7 @@
       "file_type": "code",
       "norm_label": "drupal/structure_sync",
       "source_file": "composer.json",
-      "source_location": "L81"
+      "source_location": "L82"
     },
     {
       "id": "composer_require_drupal_superfish",
@@ -1184,7 +1195,7 @@
       "file_type": "code",
       "norm_label": "drupal/superfish",
       "source_file": "composer.json",
-      "source_location": "L82"
+      "source_location": "L83"
     },
     {
       "id": "composer_require_drupal_svg_image",
@@ -1195,7 +1206,7 @@
       "file_type": "code",
       "norm_label": "drupal/svg_image",
       "source_file": "composer.json",
-      "source_location": "L83"
+      "source_location": "L84"
     },
     {
       "id": "composer_require_drupal_svg_image_field",
@@ -1206,7 +1217,7 @@
       "file_type": "code",
       "norm_label": "drupal/svg_image_field",
       "source_file": "composer.json",
-      "source_location": "L84"
+      "source_location": "L85"
     },
     {
       "id": "composer_require_drupal_twig_tweak",
@@ -1217,7 +1228,7 @@
       "file_type": "code",
       "norm_label": "drupal/twig_tweak",
       "source_file": "composer.json",
-      "source_location": "L85"
+      "source_location": "L86"
     },
     {
       "id": "composer_require_drupal_webform",
@@ -1228,7 +1239,7 @@
       "file_type": "code",
       "norm_label": "drupal/webform",
       "source_file": "composer.json",
-      "source_location": "L86"
+      "source_location": "L87"
     },
     {
       "id": "composer_require_drupal_workspaces_access",
@@ -1239,7 +1250,7 @@
       "file_type": "code",
       "norm_label": "drupal/workspaces_access",
       "source_file": "composer.json",
-      "source_location": "L87"
+      "source_location": "L88"
     },
     {
       "id": "composer_require_drupal_wse",
@@ -1250,7 +1261,7 @@
       "file_type": "code",
       "norm_label": "drupal/wse",
       "source_file": "composer.json",
-      "source_location": "L88"
+      "source_location": "L89"
     },
     {
       "id": "composer_require_drush_drush",
@@ -1261,7 +1272,7 @@
       "file_type": "code",
       "norm_label": "drush/drush",
       "source_file": "composer.json",
-      "source_location": "L89"
+      "source_location": "L90"
     },
     {
       "id": "composer_require_omscllc_clean_blog_theme",
@@ -1272,7 +1283,7 @@
       "file_type": "code",
       "norm_label": "omscllc/clean_blog_theme",
       "source_file": "composer.json",
-      "source_location": "L90"
+      "source_location": "L91"
     },
     {
       "id": "composer_require_oomphinc_composer_installers_extender",
@@ -1283,7 +1294,7 @@
       "file_type": "code",
       "norm_label": "oomphinc/composer-installers-extender",
       "source_file": "composer.json",
-      "source_location": "L91"
+      "source_location": "L92"
     },
     {
       "id": "composer_require_symfony_dotenv",
@@ -1294,7 +1305,7 @@
       "file_type": "code",
       "norm_label": "symfony/dotenv",
       "source_file": "composer.json",
-      "source_location": "L92"
+      "source_location": "L93"
     },
     {
       "id": "composer_require_wikimedia_composer_merge_plugin",
@@ -1305,7 +1316,7 @@
       "file_type": "code",
       "norm_label": "wikimedia/composer-merge-plugin",
       "source_file": "composer.json",
-      "source_location": "L93"
+      "source_location": "L94"
     },
     {
       "id": "drupal_core_block_attribute_block",
@@ -1760,7 +1771,7 @@
       "file_type": "code",
       "norm_label": "include-keys",
       "source_file": "composer.json",
-      "source_location": "L185"
+      "source_location": "L186"
     },
     {
       "id": "composer_drupal_core_project_message_post_create_project_cmd_message",
@@ -1771,7 +1782,7 @@
       "file_type": "code",
       "norm_label": "post-create-project-cmd-message",
       "source_file": "composer.json",
-      "source_location": "L189"
+      "source_location": "L190"
     },
     {
       "id": "composer_drupal_scaffold_locations",
@@ -1782,7 +1793,7 @@
       "file_type": "code",
       "norm_label": "locations",
       "source_file": "composer.json",
-      "source_location": "L142"
+      "source_location": "L143"
     },
     {
       "id": "composer_drupal_social_media_links_add_bluesky",
@@ -1793,7 +1804,7 @@
       "file_type": "code",
       "norm_label": "add bluesky",
       "source_file": "composer.json",
-      "source_location": "L135"
+      "source_location": "L136"
     },
     {
       "id": "composer_drupal_wse_reset_workflow_state_to_draft_when_cloning_workspace",
@@ -1804,7 +1815,7 @@
       "file_type": "code",
       "norm_label": "reset workflow state to draft when cloning workspace",
       "source_file": "composer.json",
-      "source_location": "L138"
+      "source_location": "L139"
     },
     {
       "id": "composer_extra",
@@ -1815,7 +1826,7 @@
       "file_type": "code",
       "norm_label": "extra",
       "source_file": "composer.json",
-      "source_location": "L127"
+      "source_location": "L128"
     },
     {
       "id": "composer_extra_drupal_core_project_message",
@@ -1826,7 +1837,7 @@
       "file_type": "code",
       "norm_label": "drupal-core-project-message",
       "source_file": "composer.json",
-      "source_location": "L184"
+      "source_location": "L185"
     },
     {
       "id": "composer_extra_drupal_scaffold",
@@ -1837,7 +1848,7 @@
       "file_type": "code",
       "norm_label": "drupal-scaffold",
       "source_file": "composer.json",
-      "source_location": "L141"
+      "source_location": "L142"
     },
     {
       "id": "composer_extra_installer_paths",
@@ -1848,7 +1859,7 @@
       "file_type": "code",
       "norm_label": "installer-paths",
       "source_file": "composer.json",
-      "source_location": "L150"
+      "source_location": "L151"
     },
     {
       "id": "composer_extra_installer_types",
@@ -1859,7 +1870,7 @@
       "file_type": "code",
       "norm_label": "installer-types",
       "source_file": "composer.json",
-      "source_location": "L146"
+      "source_location": "L147"
     },
     {
       "id": "composer_extra_merge_plugin",
@@ -1870,7 +1881,7 @@
       "file_type": "code",
       "norm_label": "merge-plugin",
       "source_file": "composer.json",
-      "source_location": "L128"
+      "source_location": "L129"
     },
     {
       "id": "composer_extra_patches",
@@ -1881,7 +1892,7 @@
       "file_type": "code",
       "norm_label": "patches",
       "source_file": "composer.json",
-      "source_location": "L133"
+      "source_location": "L134"
     },
     {
       "id": "composer_installer_paths_drush_commands_contrib_name",
@@ -1892,7 +1903,7 @@
       "file_type": "code",
       "norm_label": "drush/commands/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L168"
+      "source_location": "L169"
     },
     {
       "id": "composer_installer_paths_recipes_name",
@@ -1903,7 +1914,7 @@
       "file_type": "code",
       "norm_label": "recipes/{$name}",
       "source_file": "composer.json",
-      "source_location": "L180"
+      "source_location": "L181"
     },
     {
       "id": "composer_installer_paths_web_core",
@@ -1914,7 +1925,7 @@
       "file_type": "code",
       "norm_label": "web/core",
       "source_file": "composer.json",
-      "source_location": "L151"
+      "source_location": "L152"
     },
     {
       "id": "composer_installer_paths_web_libraries_name",
@@ -1925,7 +1936,7 @@
       "file_type": "code",
       "norm_label": "web/libraries/{$name}",
       "source_file": "composer.json",
-      "source_location": "L154"
+      "source_location": "L155"
     },
     {
       "id": "composer_installer_paths_web_modules_contrib_name",
@@ -1936,7 +1947,7 @@
       "file_type": "code",
       "norm_label": "web/modules/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L159"
+      "source_location": "L160"
     },
     {
       "id": "composer_installer_paths_web_modules_custom_name",
@@ -1947,7 +1958,7 @@
       "file_type": "code",
       "norm_label": "web/modules/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L171"
+      "source_location": "L172"
     },
     {
       "id": "composer_installer_paths_web_profiles_contrib_name",
@@ -1958,7 +1969,7 @@
       "file_type": "code",
       "norm_label": "web/profiles/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L162"
+      "source_location": "L163"
     },
     {
       "id": "composer_installer_paths_web_profiles_custom_name",
@@ -1969,7 +1980,7 @@
       "file_type": "code",
       "norm_label": "web/profiles/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L174"
+      "source_location": "L175"
     },
     {
       "id": "composer_installer_paths_web_themes_contrib_name",
@@ -1980,7 +1991,7 @@
       "file_type": "code",
       "norm_label": "web/themes/contrib/{$name}",
       "source_file": "composer.json",
-      "source_location": "L165"
+      "source_location": "L166"
     },
     {
       "id": "composer_installer_paths_web_themes_custom_name",
@@ -1991,7 +2002,7 @@
       "file_type": "code",
       "norm_label": "web/themes/custom/{$name}",
       "source_file": "composer.json",
-      "source_location": "L177"
+      "source_location": "L178"
     },
     {
       "id": "composer_locations_web_root",
@@ -2002,7 +2013,7 @@
       "file_type": "code",
       "norm_label": "web-root",
       "source_file": "composer.json",
-      "source_location": "L143"
+      "source_location": "L144"
     },
     {
       "id": "composer_merge_plugin_include",
@@ -2013,7 +2024,7 @@
       "file_type": "code",
       "norm_label": "include",
       "source_file": "composer.json",
-      "source_location": "L129"
+      "source_location": "L130"
     },
     {
       "id": "composer_patches_drupal_social_media_links",
@@ -2024,7 +2035,7 @@
       "file_type": "code",
       "norm_label": "drupal/social_media_links",
       "source_file": "composer.json",
-      "source_location": "L134"
+      "source_location": "L135"
     },
     {
       "id": "composer_patches_drupal_wse",
@@ -2035,7 +2046,7 @@
       "file_type": "code",
       "norm_label": "drupal/wse",
       "source_file": "composer.json",
-      "source_location": "L137"
+      "source_location": "L138"
     },
     {
       "id": "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
@@ -2087,7 +2098,7 @@
       "file_type": "code",
       "norm_label": "conflict",
       "source_file": "composer.json",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "composer_conflict_drupal_drupal",
@@ -2098,7 +2109,7 @@
       "file_type": "code",
       "norm_label": "drupal/drupal",
       "source_file": "composer.json",
-      "source_location": "L96"
+      "source_location": "L97"
     },
     {
       "id": "composer_description",
@@ -2142,7 +2153,7 @@
       "file_type": "code",
       "norm_label": "minimum-stability",
       "source_file": "composer.json",
-      "source_location": "L98"
+      "source_location": "L99"
     },
     {
       "id": "composer_name",
@@ -2164,7 +2175,7 @@
       "file_type": "code",
       "norm_label": "prefer-stable",
       "source_file": "composer.json",
-      "source_location": "L99"
+      "source_location": "L100"
     },
     {
       "id": "composer_repositories",
@@ -2186,7 +2197,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "composer.json",
-      "source_location": "L119"
+      "source_location": "L120"
     },
     {
       "id": "composer_scripts_post_install_cmd",
@@ -2197,7 +2208,7 @@
       "file_type": "code",
       "norm_label": "post-install-cmd",
       "source_file": "composer.json",
-      "source_location": "L120"
+      "source_location": "L121"
     },
     {
       "id": "composer_scripts_post_update_cmd",
@@ -2208,7 +2219,7 @@
       "file_type": "code",
       "norm_label": "post-update-cmd",
       "source_file": "composer.json",
-      "source_location": "L123"
+      "source_location": "L124"
     },
     {
       "id": "composer_support",
@@ -2450,7 +2461,7 @@
       "file_type": "code",
       "norm_label": "composer/installers",
       "source_file": "composer.json",
-      "source_location": "L105"
+      "source_location": "L106"
     },
     {
       "id": "composer_allow_plugins_cweagans_composer_patches",
@@ -2461,7 +2472,7 @@
       "file_type": "code",
       "norm_label": "cweagans/composer-patches",
       "source_file": "composer.json",
-      "source_location": "L106"
+      "source_location": "L107"
     },
     {
       "id": "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
@@ -2472,7 +2483,7 @@
       "file_type": "code",
       "norm_label": "dealerdirect/phpcodesniffer-composer-installer",
       "source_file": "composer.json",
-      "source_location": "L107"
+      "source_location": "L108"
     },
     {
       "id": "composer_allow_plugins_drupal_core_composer_scaffold",
@@ -2483,7 +2494,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-composer-scaffold",
       "source_file": "composer.json",
-      "source_location": "L108"
+      "source_location": "L109"
     },
     {
       "id": "composer_allow_plugins_drupal_core_project_message",
@@ -2494,7 +2505,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-project-message",
       "source_file": "composer.json",
-      "source_location": "L109"
+      "source_location": "L110"
     },
     {
       "id": "composer_allow_plugins_drupal_core_recipe_unpack",
@@ -2505,7 +2516,7 @@
       "file_type": "code",
       "norm_label": "drupal/core-recipe-unpack",
       "source_file": "composer.json",
-      "source_location": "L110"
+      "source_location": "L111"
     },
     {
       "id": "composer_allow_plugins_oomphinc_composer_installers_extender",
@@ -2516,7 +2527,7 @@
       "file_type": "code",
       "norm_label": "oomphinc/composer-installers-extender",
       "source_file": "composer.json",
-      "source_location": "L111"
+      "source_location": "L112"
     },
     {
       "id": "composer_allow_plugins_php_http_discovery",
@@ -2527,7 +2538,7 @@
       "file_type": "code",
       "norm_label": "php-http/discovery",
       "source_file": "composer.json",
-      "source_location": "L112"
+      "source_location": "L113"
     },
     {
       "id": "composer_allow_plugins_php_tuf_composer_integration",
@@ -2538,7 +2549,7 @@
       "file_type": "code",
       "norm_label": "php-tuf/composer-integration",
       "source_file": "composer.json",
-      "source_location": "L113"
+      "source_location": "L114"
     },
     {
       "id": "composer_allow_plugins_phpstan_extension_installer",
@@ -2549,7 +2560,7 @@
       "file_type": "code",
       "norm_label": "phpstan/extension-installer",
       "source_file": "composer.json",
-      "source_location": "L114"
+      "source_location": "L115"
     },
     {
       "id": "composer_allow_plugins_wikimedia_composer_merge_plugin",
@@ -2560,7 +2571,7 @@
       "file_type": "code",
       "norm_label": "wikimedia/composer-merge-plugin",
       "source_file": "composer.json",
-      "source_location": "L115"
+      "source_location": "L116"
     },
     {
       "id": "composer_config",
@@ -2571,7 +2582,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "composer.json",
-      "source_location": "L100"
+      "source_location": "L101"
     },
     {
       "id": "composer_config_allow_plugins",
@@ -2582,7 +2593,7 @@
       "file_type": "code",
       "norm_label": "allow-plugins",
       "source_file": "composer.json",
-      "source_location": "L104"
+      "source_location": "L105"
     },
     {
       "id": "composer_config_platform",
@@ -2593,7 +2604,7 @@
       "file_type": "code",
       "norm_label": "platform",
       "source_file": "composer.json",
-      "source_location": "L101"
+      "source_location": "L102"
     },
     {
       "id": "composer_config_sort_packages",
@@ -2604,7 +2615,7 @@
       "file_type": "code",
       "norm_label": "sort-packages",
       "source_file": "composer.json",
-      "source_location": "L117"
+      "source_location": "L118"
     },
     {
       "id": "composer_platform_php",
@@ -2615,7 +2626,7 @@
       "file_type": "code",
       "norm_label": "php",
       "source_file": "composer.json",
-      "source_location": "L102"
+      "source_location": "L103"
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027",
@@ -3768,13 +3779,24 @@
     },
     {
       "source": "composer",
-      "target": "composer_config",
+      "target": "composer_prefer_stable",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "composer",
+      "target": "composer_config",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
@@ -3796,7 +3818,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L119",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -3807,7 +3829,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -3895,23 +3917,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
       "source": "composer",
       "target": "composer_minimum_stability",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "composer.json",
-      "source_location": "L98",
-      "weight": 1.0
-    },
-    {
-      "source": "composer",
-      "target": "composer_prefer_stable",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3928,7 +3939,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L101",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -3939,7 +3950,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -3950,7 +3961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L117",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -3961,7 +3972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L105",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -3972,7 +3983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L106",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -3983,7 +3994,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L107",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -3994,7 +4005,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L108",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -4005,7 +4016,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L109",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -4016,7 +4027,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L110",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -4027,7 +4038,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L111",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -4038,7 +4049,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L112",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -4049,7 +4060,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L113",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -4060,7 +4071,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L114",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -4071,7 +4082,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L115",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -4082,7 +4093,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L102",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -4093,7 +4104,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L96",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -4104,7 +4115,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L143",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -4115,7 +4126,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L128",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -4126,7 +4137,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L133",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -4137,7 +4148,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L141",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -4148,7 +4159,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L146",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -4159,7 +4170,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L150",
+      "source_location": "L151",
       "weight": 1.0
     },
     {
@@ -4170,7 +4181,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L184",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -4181,7 +4192,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L185",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -4192,7 +4203,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L189",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -4203,7 +4214,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L142",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -4214,7 +4225,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L151",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -4225,7 +4236,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L154",
+      "source_location": "L155",
       "weight": 1.0
     },
     {
@@ -4236,7 +4247,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L159",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -4247,7 +4258,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L162",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -4258,7 +4269,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L165",
+      "source_location": "L166",
       "weight": 1.0
     },
     {
@@ -4269,7 +4280,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L168",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -4280,7 +4291,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L171",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -4291,7 +4302,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -4302,7 +4313,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L177",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -4313,7 +4324,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L180",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -4324,7 +4335,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L129",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -4335,7 +4346,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L134",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -4346,7 +4357,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L137",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -4357,7 +4368,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -4368,7 +4379,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L138",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -4890,7 +4901,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_metatag",
+      "target": "composer_require_drupal_menu_link_attributes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4901,7 +4912,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_paragraphs_report",
+      "target": "composer_require_drupal_metatag",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4912,7 +4923,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_pathauto",
+      "target": "composer_require_drupal_paragraphs_report",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4923,7 +4934,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_phpmailer_smtp",
+      "target": "composer_require_drupal_pathauto",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4934,7 +4945,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_recreate_block_content",
+      "target": "composer_require_drupal_phpmailer_smtp",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4945,7 +4956,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_redirect",
+      "target": "composer_require_drupal_recreate_block_content",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4956,7 +4967,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_search_api",
+      "target": "composer_require_drupal_redirect",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4967,7 +4978,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_social_media_links",
+      "target": "composer_require_drupal_search_api",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4978,7 +4989,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_structure_sync",
+      "target": "composer_require_drupal_social_media_links",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4989,7 +5000,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_superfish",
+      "target": "composer_require_drupal_structure_sync",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5000,7 +5011,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_svg_image",
+      "target": "composer_require_drupal_superfish",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5011,7 +5022,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_svg_image_field",
+      "target": "composer_require_drupal_svg_image",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5022,7 +5033,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_twig_tweak",
+      "target": "composer_require_drupal_svg_image_field",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5033,7 +5044,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_webform",
+      "target": "composer_require_drupal_twig_tweak",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5044,7 +5055,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_workspaces_access",
+      "target": "composer_require_drupal_webform",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5055,7 +5066,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drupal_wse",
+      "target": "composer_require_drupal_workspaces_access",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5066,7 +5077,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_drush_drush",
+      "target": "composer_require_drupal_wse",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5077,7 +5088,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_omscllc_clean_blog_theme",
+      "target": "composer_require_drush_drush",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5088,7 +5099,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_oomphinc_composer_installers_extender",
+      "target": "composer_require_omscllc_clean_blog_theme",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5099,7 +5110,7 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_symfony_dotenv",
+      "target": "composer_require_oomphinc_composer_installers_extender",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5110,13 +5121,24 @@
     },
     {
       "source": "composer_require",
-      "target": "composer_require_wikimedia_composer_merge_plugin",
+      "target": "composer_require_symfony_dotenv",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
       "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "composer_require",
+      "target": "composer_require_wikimedia_composer_merge_plugin",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "composer.json",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -5127,7 +5149,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L120",
+      "source_location": "L121",
       "weight": 1.0
     },
     {
@@ -5138,7 +5160,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "composer.json",
-      "source_location": "L123",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -5946,5 +5968,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8efc0de61696d5204c144e902de656e3d5803421"
+  "built_at_commit": "ebc3b25c428a9edd72ba1989de52d8dbc6bb74d7"
 }
