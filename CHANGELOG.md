@@ -2,6 +2,12 @@
 
 ## Changelog
 ---
+
+## 1.0.11 (2026-09-30)
+- Updated sync script to use nfp hosting for remote sync
+- Added menu_link_attributes module and updated configuration for registration links
+- Refactored grid layout for new membership rate table structure
+
 ## 1.0.10 (2026-09-23)
 - Updated CSS for article content type
 - Adjusted link color and header styles for guest content type
