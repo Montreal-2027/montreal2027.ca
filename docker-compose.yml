@@ -21,7 +21,7 @@ services:
     ports:
       - "${WEB_EXTERNAL_PORT:-8080}:${WEB_INTERNAL_PORT:-80}"
     volumes:
-      - ./:/var/www/html
+      - "${HOST_PROJECT_ROOT:-./}:/var/www/html"
     networks:
       - frontend
       - backend
