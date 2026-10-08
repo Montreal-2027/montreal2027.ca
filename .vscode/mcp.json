@@ -1,22 +1,4 @@
 {
     "servers": {
-        "obscura": {
-            "type": "stdio",
-            "command": "obscura",
-            "args": ["mcp"]
-        },
-        "graphify": {
-            "command": "graphify-mcp",
-            "args": [
-                "graphify-out/graph.json"
-            ]
-        },
-        "fetch": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@edictum/captatum"
-            ]
-        }
     }
 }

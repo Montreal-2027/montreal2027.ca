@@ -1,0 +1,35 @@
+{
+	"mcpServers": {
+		"fetch": {
+			"type": "local",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@edictum/captatum"
+			],
+			"tools": [
+				"*"
+			]
+		},
+		"graphify": {
+			"type": "local",
+			"command": "graphify-mcp",
+			"args": [
+				"graphify-out/graph.json"
+			],
+			"tools": [
+				"*"
+			]
+		},
+		"obscura": {
+			"type": "local",
+			"command": "obscura",
+			"args": [
+				"mcp"
+			],
+			"tools": [
+				"*"
+			]
+		}
+	}
+}

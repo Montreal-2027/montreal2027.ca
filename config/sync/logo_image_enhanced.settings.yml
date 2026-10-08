@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: A-NYbAZrlfFKvYGlc4x7RtXKpa34FzV_g3mIDbpru7s
+logo_style: _none
+logo_path: Montreal2027-Logo_CMYK_Date-Full.svg
+logo_alt: 'Home | Image of a white cartoon lemming wearing bright red scarf. Text reads: Montreal 2027  2-6 septembre/ September 2-6'
+logo_title: 'Montréal 2027 Worldcon'
+logo_loading: eager
+logo_fetchpriority: high
+logo_decoding: auto
+debug_enabled: false

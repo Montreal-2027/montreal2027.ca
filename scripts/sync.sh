@@ -50,8 +50,14 @@ SSH_PORT="${SYNC_SSH_PORT:-345}"
 # Local backup directory
 BACKUP_DIR="${SYNC_BACKUP_DIR:-../backups}"
 
+# Backup filename prefix
+BU_FILENAME_PREFIX="${BU_FILENAME_PREFIX:-m2027-local}"
+
 # Directory to sync
 REMOTE_DIR="${REMOTE_ROOT}/web/assets/"
+
+# Path to PHP
+PHP_PATH="${PHP_PATH:-/usr/bin/php}"
 
 # Determine drush command based on environment type
 APP_ENV_TYPE="${APP_ENV_TYPE:-docker}"
@@ -114,7 +120,7 @@ cd "${PROJECT_ROOT}"
 
 if [ "$SYNC_LOCAL" != "true" ]; then
     echo "Downloading remote database..."
-    ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && drush sql:dump)" > dump.sql
+    ssh "${REMOTE_USER}@${SYNC_FROM}" -i "${SSH_KEY}" -p "${SSH_PORT}" "(cd ${REMOTE_ROOT} && ${PHP_PATH} ./vendor/bin/drush.php sql:dump)" > dump.sql
 fi
 
 if [ ! -f "$INSTALL_FLAG" ]; then
@@ -122,7 +128,7 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 else
     echo "Backing up local database..."
     mkdir -p "${BACKUP_DIR}"
-    $DRUSH --gzip sql:dump > "${BACKUP_DIR}/m2707-$(date +%Y-%m-%d_%H:%M).sql"
+    $DRUSH --gzip sql:dump > "${BACKUP_DIR}/${BU_FILENAME_PREFIX}-$(date +%Y-%m-%d_%H:%M).sql"
 
     echo "Exporting changes..."
     $DRUSH cex
