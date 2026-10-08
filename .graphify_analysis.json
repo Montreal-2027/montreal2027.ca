@@ -77,13 +77,13 @@
       "drupal_core_block_blockbase",
       "drupal_core_controller_controllerbase",
       "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_language_languageinterface",
       "drupal_core_language_languagemanagerinterface",
       "drupal_core_logger_loggerchannelfactoryinterface",
       "drupal_core_mail_mailmanagerinterface",
       "drupal_core_plugin_containerfactoryplugininterface",
       "drupal_core_routing_routematchinterface",
       "drupal_core_stringtranslation_translatablemarkup",
+      "drupal_core_url",
       "symfony_component_dependencyinjection_containerinterface",
       "symfony_component_httpfoundation_jsonresponse",
       "symfony_component_httpfoundation_request",
@@ -205,8 +205,8 @@
     ],
     "7": [
       "drupal_component_utility_html",
+      "drupal_core_language_languageinterface",
       "drupal_core_render_markup",
-      "drupal_core_url",
       "drupal_taxonomy_terminterface",
       "drupal_taxonomy_termstorageinterface",
       "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
@@ -248,52 +248,62 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
     "11": [
+      "mcp",
+      "mcp_command_graphify_mcp",
+      "mcp_command_npx",
+      "mcp_command_obscura",
+      "mcp_mcp_server_fetch",
+      "mcp_mcp_server_graphify",
+      "mcp_mcp_server_obscura",
+      "mcp_package_edictum_captatum"
+    ],
+    "12": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "12": [
+    "13": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "13": [
+    "14": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "14": [
+    "15": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "15": [
+    "16": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "16": [
+    "17": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "17": [
+    "18": [
       "symfony_component_dotenv_dotenv",
       "web_sites_default_settings"
     ],
-    "18": [
+    "19": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "19": [
+    "20": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "20": [
+    "21": [
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu_attach"
     ],
-    "21": [
+    "22": [
       "github_issue_template_new_content"
     ]
   },
   "cohesion": {
     "0": 0.02857142857142857,
-    "1": 0.12962962962962962,
+    "1": 0.13227513227513227,
     "2": 0.07692307692307693,
     "3": 0.11764705882352941,
     "4": 0.11764705882352941,
@@ -303,7 +313,7 @@
     "8": 0.35714285714285715,
     "9": 0.35714285714285715,
     "10": 0.32142857142857145,
-    "11": 1.0,
+    "11": 0.25,
     "12": 1.0,
     "13": 1.0,
     "14": 1.0,
@@ -313,7 +323,8 @@
     "18": 1.0,
     "19": 1.0,
     "20": 1.0,
-    "21": 1.0
+    "21": 1.0,
+    "22": 1.0
   },
   "gods": [
     {
@@ -384,22 +395,12 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.215) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.094) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
-      "why": "High betweenness centrality (0.058) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.201) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
       "question": "What connects `composer/installers`, `cweagans/composer-patches`, `drupal/admin_theme` to the rest of the system?",
-      "why": "128 weakly-connected nodes found - possible documentation gaps or missing edges."
+      "why": "132 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
       "type": "low_cohesion",
@@ -407,9 +408,19 @@
       "why": "Cohesion score 0.02857142857142857 - nodes in this community are weakly interconnected."
     },
     {
+      "type": "bridge_node",
+      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
+      "why": "High betweenness centrality (0.088) - this node is a cross-community bridge."
+    },
+    {
       "type": "low_cohesion",
       "question": "Should `LanguageToggleBlock.php` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.12962962962962962 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.13227513227513227 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `config` connect `allow-plugins` to `composer.json`?",
+      "why": "High betweenness centrality (0.054) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",

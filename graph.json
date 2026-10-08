@@ -1,7 +1,10 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {},
+  "graph": {
+    "schema_version": 1,
+    "graphify_version": "0.9.80"
+  },
   "nodes": [
     {
       "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
@@ -217,7 +220,7 @@
       "label": "attach()",
       "_callable": true,
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "community_name": "language-toggle.js",
       "file_type": "code",
       "norm_label": "attach()",
@@ -229,7 +232,7 @@
       "label": "attach()",
       "_callable": true,
       "_origin": "ast",
-      "community": 19,
+      "community": 20,
       "community_name": "staff-contact-modal.js",
       "file_type": "code",
       "norm_label": "attach()",
@@ -241,7 +244,7 @@
       "label": "attach()",
       "_callable": true,
       "_origin": "ast",
-      "community": 20,
+      "community": 21,
       "community_name": "staff-jump-menu.js",
       "file_type": "code",
       "norm_label": "attach()",
@@ -1363,17 +1366,6 @@
       "source_location": ""
     },
     {
-      "id": "drupal_core_language_languageinterface",
-      "label": "Drupal\\Core\\Language\\LanguageInterface",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "LanguageToggleBlock.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\language\\languageinterface",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "drupal_core_language_languagemanagerinterface",
       "label": "Drupal\\Core\\Language\\LanguageManagerInterface",
       "_origin": "ast",
@@ -1436,6 +1428,17 @@
       "community_name": "LanguageToggleBlock.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\stringtranslation\\translatablemarkup",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "drupal_core_url",
+      "label": "Drupal\\Core\\Url",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "LanguageToggleBlock.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\url",
       "source_file": "",
       "source_location": ""
     },
@@ -1539,10 +1542,122 @@
       "source_location": ""
     },
     {
+      "id": "mcp",
+      "label": ".mcp.json",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_config_file"
+      },
+      "norm_label": ".mcp.json",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_command_graphify_mcp",
+      "label": "graphify-mcp",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "norm_label": "graphify-mcp",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_command_npx",
+      "label": "npx",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "norm_label": "npx",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_command_obscura",
+      "label": "obscura",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_command"
+      },
+      "norm_label": "obscura",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_mcp_server_fetch",
+      "label": "fetch",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "norm_label": "fetch",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_mcp_server_graphify",
+      "label": "graphify",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "norm_label": "graphify",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_mcp_server_obscura",
+      "label": "obscura",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_server"
+      },
+      "norm_label": "obscura",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "mcp_package_edictum_captatum",
+      "label": "@edictum/captatum",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": ".mcp.json",
+      "file_type": "code",
+      "metadata": {
+        "mcp_kind": "mcp_package"
+      },
+      "norm_label": "@edictum/captatum",
+      "source_file": ".mcp.json",
+      "source_location": "L1"
+    },
+    {
       "id": "docker_web_entrypoint",
       "label": "entrypoint.sh",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "entrypoint.sh",
       "file_type": "code",
       "metadata": {
@@ -1557,7 +1672,7 @@
       "id": "docker_web_entrypoint_sh__entry",
       "label": "entrypoint.sh script",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "community_name": "entrypoint.sh",
       "file_type": "code",
       "metadata": {
@@ -1572,7 +1687,7 @@
       "id": "githooks_post_merge",
       "label": "post-merge",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "post-merge",
       "file_type": "code",
       "metadata": {
@@ -1587,7 +1702,7 @@
       "id": "githooks_post_merge__entry",
       "label": "post-merge script",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "community_name": "post-merge",
       "file_type": "code",
       "metadata": {
@@ -1602,7 +1717,7 @@
       "id": "githooks_pre_commit",
       "label": "pre-commit",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "pre-commit",
       "file_type": "code",
       "metadata": {
@@ -1617,7 +1732,7 @@
       "id": "githooks_pre_commit__entry",
       "label": "pre-commit script",
       "_origin": "ast",
-      "community": 13,
+      "community": 14,
       "community_name": "pre-commit",
       "file_type": "code",
       "metadata": {
@@ -1632,7 +1747,7 @@
       "id": "scripts_install",
       "label": "install.sh",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "install.sh",
       "file_type": "code",
       "metadata": {
@@ -1647,7 +1762,7 @@
       "id": "scripts_install_sh__entry",
       "label": "install.sh script",
       "_origin": "ast",
-      "community": 14,
+      "community": 15,
       "community_name": "install.sh",
       "file_type": "code",
       "metadata": {
@@ -1662,7 +1777,7 @@
       "id": "scripts_setup_graphify",
       "label": "setup-graphify.sh",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "setup-graphify.sh",
       "file_type": "code",
       "metadata": {
@@ -1677,7 +1792,7 @@
       "id": "scripts_setup_graphify_sh__entry",
       "label": "setup-graphify.sh script",
       "_origin": "ast",
-      "community": 15,
+      "community": 16,
       "community_name": "setup-graphify.sh",
       "file_type": "code",
       "metadata": {
@@ -1692,7 +1807,7 @@
       "id": "scripts_sync",
       "label": "sync.sh",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "sync.sh",
       "file_type": "code",
       "metadata": {
@@ -1707,7 +1822,7 @@
       "id": "scripts_sync_sh__entry",
       "label": "sync.sh script",
       "_origin": "ast",
-      "community": 16,
+      "community": 17,
       "community_name": "sync.sh",
       "file_type": "code",
       "metadata": {
@@ -1722,7 +1837,7 @@
       "id": "symfony_component_dotenv_dotenv",
       "label": "Symfony\\Component\\Dotenv\\Dotenv",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "Symfony\\Component\\Dotenv\\Dotenv",
       "file_type": "code",
       "norm_label": "symfony\\component\\dotenv\\dotenv",
@@ -1733,7 +1848,7 @@
       "id": "web_sites_default_settings",
       "label": "settings.php",
       "_origin": "ast",
-      "community": 17,
+      "community": 18,
       "community_name": "Symfony\\Component\\Dotenv\\Dotenv",
       "file_type": "code",
       "norm_label": "settings.php",
@@ -1744,22 +1859,11 @@
       "id": "web_modules_custom_montreal2027_tools_js_language_toggle",
       "label": "language-toggle.js",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "community_name": "language-toggle.js",
       "file_type": "code",
       "norm_label": "language-toggle.js",
       "source_file": "web/modules/custom/montreal2027_tools/js/language-toggle.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
-      "label": "staff-contact-modal.js",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "staff-contact-modal.js",
-      "file_type": "code",
-      "norm_label": "staff-contact-modal.js",
-      "source_file": "web/modules/custom/montreal2027_tools/js/staff-contact-modal.js",
       "source_location": "L1"
     },
     {
@@ -2049,10 +2153,21 @@
       "source_location": "L138"
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
+      "label": "staff-contact-modal.js",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "staff-contact-modal.js",
+      "file_type": "code",
+      "norm_label": "staff-contact-modal.js",
+      "source_file": "web/modules/custom/montreal2027_tools/js/staff-contact-modal.js",
+      "source_location": "L1"
+    },
+    {
       "id": "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "label": "staff-jump-menu.js",
       "_origin": "ast",
-      "community": 20,
+      "community": 21,
       "community_name": "staff-jump-menu.js",
       "file_type": "code",
       "norm_label": "staff-jump-menu.js",
@@ -2063,7 +2178,7 @@
       "id": "github_issue_template_new_content",
       "label": "new-content.md",
       "_origin": "ast",
-      "community": 21,
+      "community": 22,
       "community_name": "new-content.md",
       "file_type": "document",
       "frontmatter": {
@@ -2662,6 +2777,17 @@
       "source_location": ""
     },
     {
+      "id": "drupal_core_language_languageinterface",
+      "label": "Drupal\\Core\\Language\\LanguageInterface",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "StaffPageController.php",
+      "file_type": "code",
+      "norm_label": "drupal\\core\\language\\languageinterface",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "drupal_core_render_markup",
       "label": "Drupal\\Core\\Render\\Markup",
       "_origin": "ast",
@@ -2669,17 +2795,6 @@
       "community_name": "StaffPageController.php",
       "file_type": "code",
       "norm_label": "drupal\\core\\render\\markup",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "drupal_core_url",
-      "label": "Drupal\\Core\\Url",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "StaffPageController.php",
-      "file_type": "code",
-      "norm_label": "drupal\\core\\url",
       "source_file": "",
       "source_location": ""
     },
@@ -3007,6 +3122,42 @@
       "context": "call",
       "source_file": "web/themes/custom/montreal2027/montreal2027.theme",
       "source_location": "L337",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp_mcp_server_fetch",
+      "target": "mcp_command_npx",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "command",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp_mcp_server_graphify",
+      "target": "mcp_command_graphify_mcp",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "command",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp_mcp_server_obscura",
+      "target": "mcp_command_obscura",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "command",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -3523,6 +3674,18 @@
       "context": "import",
       "source_file": "web/themes/custom/montreal2027/package.json",
       "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp_mcp_server_fetch",
+      "target": "mcp_package_edictum_captatum",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "package",
+      "source_file": ".mcp.json",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -5219,6 +5382,39 @@
       "weight": 1.0
     },
     {
+      "source": "mcp",
+      "target": "mcp_mcp_server_fetch",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp",
+      "target": "mcp_mcp_server_graphify",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "mcp",
+      "target": "mcp_mcp_server_obscura",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".mcp.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_install",
       "target": "scripts_install_sh__entry",
       "relation": "contains",
@@ -5968,5 +6164,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cef68e44ab0e585c5e5f19d6a103b8d5082211f0"
+  "built_at_commit": "16b4f433c806b4dfff9d1971d4eec4a02fdd6c51"
 }
