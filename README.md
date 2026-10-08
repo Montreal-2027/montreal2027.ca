@@ -197,6 +197,9 @@ While Docker Desktop is a convenient option, there are several open source alter
    APP_ENV_TYPE=docker  # or 'native' for local development
    OS_TYPE=macos        # or 'linux' (used in native mode only)
 
+   # Used to map the project to the container
+   HOST_PROJECT_ROOT=/path/to/your/project/root # Default is ./ which should work in most situations
+
    # Web server ports (default: 8080 -> 80)
    WEB_EXTERNAL_PORT=8080
    WEB_INTERNAL_PORT=80
@@ -226,7 +229,9 @@ While Docker Desktop is a convenient option, there are several open source alter
    # Production sync settings (for scripts/sync.sh)
    # Set to true when production is available locally; no SSH is used.
    SYNC_LOCAL=false
-   # Local production checkout used when SYNC_LOCAL=true.
+
+   # Local production checkout used when SYNC_LOCAL=true. 
+   # It is unlikely that you will need these, so don't set them
    SYNC_PROD_ROOT=/home/cansmof/prod.montreal2027.ca
    SYNC_HOST=montreal2027.ca
    SYNC_USER=www-data
@@ -385,7 +390,7 @@ docker-compose up -d --build
 
 **Port conflicts**: If port 8080 is already in use, change `WEB_EXTERNAL_PORT` in `.env`
 
-**Permission issues**: The web container runs as the `nginx` user. If you encounter permission issues:
+**Permission issues**: The web container runs `nginx` as the `nginx` user. If you encounter permission issues:
 ```bash
 docker exec -it montreal2027-web chown -R nginx:nginx /var/www/html/web/sites/default/files
 ```
@@ -501,6 +506,195 @@ docker exec -it montreal2027-web drush cr
    }
    ```
 
+   Example .htaccess if you're using Apache
+   ```
+   #
+# Apache/PHP/Drupal settings:
+#
+
+# Protect files and directories from prying eyes.
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config|yarn\.lock|package\.json)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+  </IfModule>
+</FilesMatch>
+
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+# Set the default handler.
+DirectoryIndex index.php index.html index.htm
+
+# Add correct encoding for SVGZ.
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+# Add correct encoding for webp.
+AddType image/webp .webp
+
+# Most of the following PHP settings cannot be changed at runtime. See
+# sites/default/default.settings.php and
+# Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
+# changed at runtime.
+<IfModule mod_php.c>
+  php_value assert.active                   0
+</IfModule>
+
+# Requires mod_expires to be enabled.
+<IfModule mod_expires.c>
+  # Enable expirations.
+  ExpiresActive On
+
+  # Cache all files for 1 year after access.
+  ExpiresDefault "access plus 1 year"
+
+  <FilesMatch \.php$>
+    # Do not allow PHP scripts to be cached unless they explicitly send cache
+    # headers themselves. Otherwise all scripts would have to overwrite the
+    # headers set by mod_expires if they want another caching behavior. This may
+    # fail if an error occurs early in the bootstrap process, and it may cause
+    # problems if a non-Drupal PHP file is installed in a subdirectory.
+    ExpiresActive Off
+  </FilesMatch>
+</IfModule>
+
+# Set a fallback resource if mod_rewrite is not enabled. This allows Drupal to
+# work without clean URLs. This requires Apache version >= 2.2.16. If Drupal is
+# not accessed by the top level URL (i.e.: http://example.com/drupal/ instead of
+# http://example.com/), the path to index.php will need to be adjusted.
+<IfModule !mod_rewrite.c>
+  FallbackResource /index.php
+</IfModule>
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Set "protossl" to "s" if we were accessed via https://.  This is used later
+  # if you enable "www." stripping or enforcement, in order to ensure that
+  # you don't bounce between http and https.
+  RewriteRule ^ - [E=protossl]
+  RewriteCond %{HTTPS} on
+  RewriteRule ^ - [E=protossl:s]
+
+  # Make sure Authorization HTTP header is available to PHP
+  # even when running as CGI or FastCGI.
+  RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # Block access to "hidden" directories whose names begin with a period. This
+  # includes directories used by version control systems such as Subversion or
+  # Git to store control files. Files whose names begin with a period, as well
+  # as the control files used by CVS, are protected by the FilesMatch directive
+  # above.
+  #
+  # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
+  # not possible to block access to entire directories from .htaccess because
+  # <DirectoryMatch> is not allowed here.
+  #
+  # If you do not have mod_rewrite installed, you should remove these
+  # directories from your webroot or otherwise protect them from being
+  # downloaded.
+  RewriteRule "/\.|^\.(?!well-known/)" - [F]
+
+  # If your site can be accessed both with and without the 'www.' prefix, you
+  # can use one of the following settings to redirect users to your preferred
+  # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
+  #
+  # To redirect all users to access the site WITH the 'www.' prefix,
+  # (http://example.com/foo will be redirected to http://www.example.com/foo)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} .
+  # RewriteCond %{HTTP_HOST} !^www\. [NC]
+  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  #
+  # To redirect all users to access the site WITHOUT the 'www.' prefix,
+  # (http://www.example.com/foo will be redirected to http://example.com/foo)
+  # uncomment the following:
+  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+  # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
+  # VirtualDocumentRoot and the rewrite rules are not working properly.
+  # For example if your site is at http://example.com/drupal uncomment and
+  # modify the following line:
+  # RewriteBase /drupal
+  #
+  # If your site is running in a VirtualDocumentRoot at http://example.com/,
+  # uncomment the following line:
+  # RewriteBase /
+
+  # Redirect common PHP files to their new locations.
+  RewriteCond %{REQUEST_URI} ^(.*)?/(install\.php) [OR]
+  RewriteCond %{REQUEST_URI} ^(.*)?/(rebuild\.php)
+  RewriteCond %{REQUEST_URI} !core
+  RewriteRule ^ %1/core/%2 [L,QSA,R=301]
+
+  # Rewrite install.php during installation to see if mod_rewrite is working
+  RewriteRule ^core/install\.php core/install.php?rewrite=ok [QSA,L]
+
+  # Pass all requests not referring directly to files in the filesystem to
+  # index.php.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^ index.php [L]
+
+  # For security reasons, deny access to other PHP files on public sites.
+  # Note: The following URI conditions are not anchored at the start (^),
+  # because Drupal may be located in a subdirectory. To further improve
+  # security, you can replace '!/' with '!^/'.
+  # Allow access to PHP files in /core (like authorize.php or install.php):
+  RewriteCond %{REQUEST_URI} !/core/[^/]*\.php$
+  # Allow access to test-specific PHP files:
+  RewriteCond %{REQUEST_URI} !/core/modules/system/tests/https?\.php
+  # Deny access to any other PHP files that do not match the rules above.
+  # Specifically, disallow autoload.php from being served directly.
+  RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]
+
+  # Rules to correctly serve gzip compressed CSS and JS files.
+  # Requires both mod_rewrite and mod_headers to be enabled.
+  <IfModule mod_headers.c>
+    # Serve gzip compressed CSS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*css_[a-zA-Z0-9-_]+)\.css$ $1\.css\.gz [QSA]
+
+    # Serve gzip compressed JS files if they exist and the client accepts gzip.
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*js_[a-zA-Z0-9-_]+)\.js$ $1\.js\.gz [QSA]
+
+    # Serve correct content types, and prevent double compression.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1,E=no-brotli:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1,E=no-brotli:1]
+
+    <FilesMatch "(\.js\.gz|\.css\.gz)$">
+      # Serve correct encoding type.
+      Header set Content-Encoding gzip
+      # Force proxies to cache gzipped & non-gzipped css/js files separately.
+      Header append Vary Accept-Encoding
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+# Various header fixes.
+<IfModule mod_headers.c>
+  # Disable content sniffing for all responses, since it's an attack vector.
+  # This header is also set in FinishResponseSubscriber, which depending on
+  # Apache configuration might get placed in the 'onsuccess' table. To prevent
+  # header duplication, unset that one prior to setting in the 'always' table.
+  # See "To circumvent this limitation..." in
+  # https://httpd.apache.org/docs/current/mod/mod_headers.html.
+  Header onsuccess unset X-Content-Type-Options
+  Header always set X-Content-Type-Options nosniff
+  # Disable Proxy header, since it's an attack vector.
+  RequestHeader unset Proxy
+</IfModule>
+```
+
 7. **Access the site**
    
    Open your browser to your configured URL (e.g., `http://localhost:8080`)
@@ -584,9 +778,14 @@ For more details see the [Obscura GitHub repository](https://github.com/h4ckf0r0
 
 ```
 .
+├── .githooks/                   # Git pre-commit and post-merge hook scripts
+├── .github/                     # Github configurations
+│   └── ISSUE_TEMPLATE/          # Template(s) for opening an issue on Github
+│   └── workflows/               # Github Actions workflows
 ├── config/sync/                 # Drupal configuration
 ├── docker/                      # Docker configuration files
-│   └── web/                     # Web container configs (Nginx, PHP-FPM, etc.)
+│   └── web/                     # Dockerfile and web container configs (Nginx, PHP-FPM, etc.)
+├── patches/                     # Local patches to be applied by composer
 ├── scripts/                     # Build and deployment scripts
 ├── web/                         # Drupal web root
 │   ├── modules/custom/          # Custom modules
@@ -659,7 +858,7 @@ Provides utilities for convention management:
 3. Test thoroughly in your development environment (Docker or native)
 4. Commit with descriptive messages
 5. Push to your branch. This will auto-deploy to https://dev.montreal2027.ca. Test thoroughly
-6. Create a pull request for your feature branch against `develop`. Assign the PR to yourself. Add meaningful labels. Add the PR to the `Website` project, and link it to the issue under `Development`
+6. Create a pull request for your feature branch against `develop`. Assign the PR to yourself. Add meaningful labels. Add the PR to the `Tech` project, and link it to the issue under `Development`
 
 ## License
 
