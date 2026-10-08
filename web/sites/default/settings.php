@@ -82,6 +82,10 @@ $databases['default']['default'] = [
 
 $settings['hash_salt'] = $_ENV['HASH_SALT'];
 
+# The configuration locale.setting:translation.path is deprecated. 
+# Support for setting this through configuration will be removed in 
+# Drupal 13.0.0 and must set in settings.php
+$settings['locale_translation_path'] = 'sites/default/files/translations';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';

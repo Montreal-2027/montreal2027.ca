@@ -105,16 +105,19 @@
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
     "scripts": {
         "post-install-cmd": [
-            "git config core.hooksPath .githooks || true"
+            "git config core.hooksPath .githooks || true",
+            "chmod +w web/sites/default"
         ],
         "post-update-cmd": [
-            "git config core.hooksPath .githooks || true"
+            "git config core.hooksPath .githooks || true",
+            "chmod -w web/sites/default"
         ]
     },
     "extra": {
