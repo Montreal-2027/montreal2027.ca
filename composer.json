@@ -78,6 +78,7 @@
         "drupal/recreate_block_content": "3.0.1",
         "drupal/redirect": "^1.13",
         "drupal/search_api": "^1.40",
+        "drupal/social_auth_google": "^4.0",
         "drupal/social_media_links": "^2.10",
         "drupal/structure_sync": "^2.0",
         "drupal/superfish": "^1.13",
