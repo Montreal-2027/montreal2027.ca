@@ -2,6 +2,9 @@
 
 ## Changelog
 ---
+## 1.1.0 (2026-10-17)
+- Upgraded to Drupal 11.4.8
+- Removed unused modules
 
 ## 1.0.11 (2026-10-07)
 - Updated sync script to use nfp hosting for remote sync
