@@ -1,4 +1,4 @@
-# Graph Report - montreal2027.ca  (2026-10-09)
+# Graph Report - montreal2027.ca  (2026-10-12)
 
 ## Corpus Check
 - 23 files · ~20,296 words
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `801b1ab9`
+- Built from commit: `689b4aea`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
