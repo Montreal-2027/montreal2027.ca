@@ -7,5 +7,6 @@ ignored_config_entities:
   - montreal2027_tools.guest_settings
   - montreal2027_tools.staff_page_settings
   - phpmailer_smtp.settings
+  - social_auth_google.settings
   - system.site
   - views.view.workflow_transition_log

@@ -2,6 +2,11 @@
 
 ## Changelog
 ---
+## 1.1.0 (2026-10-17)
+- Upgraded to Drupal 11.4.8
+- Removed unused modules
+- Added Google authentication for Montreal 2027 team members
+- Revised CSS for news carousel
 
 ## 1.0.11 (2026-10-07)
 - Updated sync script to use nfp hosting for remote sync
