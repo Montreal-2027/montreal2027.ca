@@ -37,7 +37,7 @@
 - Changed the url routing from /staff to /team
 - Installed redirect module and added permanent redirect from /staff to /team
 - Added local sync to sync.sh to enable an additional instance of the same server to sync assets and database with the production site
-- Documented new enviroment settings in .env.example and README.md 
+- Documented new environment settings in .env.example and README.md 
 
 ## 1.0.8 (2026-07-24)
  
