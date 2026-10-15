@@ -57,12 +57,12 @@
     container: main / inline-size;
     flex-grow: 1;
     margin: 0;
+    padding: 0;
 
     @container page-wrapper (min-width: 992px) {
       // margin: 12rem 0 0 0;
       margin: 3rem 0 0 0;
       z-index: 1;
-      padding: 0;
     }
 
     & .container {
