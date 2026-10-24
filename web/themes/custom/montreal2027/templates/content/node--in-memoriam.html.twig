@@ -1,0 +1,28 @@
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{attributes.addClass(classes)}}>
+	<div{{content_attributes.addClass('node__content')}}>
+		<p>
+			<strong>{{ node.label|trim }}</strong>,
+			{% if node.field_category is defined and node.field_category is not empty %}
+				{% for item in node.field_category  %}
+					{% if loop.index == 2 %}
+						&nbsp;and&nbsp;
+					{% endif %}
+					{{ item.entity.label|lower }}{% endfor %}{% endif %}{% if node.field_date_of_death is defined and node.field_date_of_death is not empty %}, died on {{ node.field_date_of_death.value|date("M jS, Y") }}.{% else %}, {% endif %}
+            {% if node.field_reason is defined and node.field_reason is not empty %}
+                    {{ node.field_reason.value|striptags }}
+            {% endif %}
+
+		</p>
+	</div>
+</article>

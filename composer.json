@@ -72,8 +72,11 @@
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
+        "drupal/tagify": "^2.0",
+        "drupal/taxonomy_manager": "^2.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.3",
+        "drupal/webform_content_creator": "^4.0",
         "drupal/workspaces_access": "^1.1",
         "drupal/wse": "^3.0@alpha",
         "drush/drush": "^13.6",
@@ -116,18 +119,16 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "git config core.hooksPath .githooks || true",
-            "chmod +w web/sites/default"
+            "git config core.hooksPath .githooks || true"
         ],
         "post-update-cmd": [
-            "git config core.hooksPath .githooks || true",
-            "chmod -w web/sites/default"
+            "git config core.hooksPath .githooks || true"
         ]
     },
     "extra": {
         "merge-plugin": {
             "include": [
-                "web/modules/contrib/webform/composer.libraries.json"
+                "composer.libraries.json"
             ]
         },
         "patches": {

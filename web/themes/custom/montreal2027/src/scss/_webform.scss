@@ -55,3 +55,42 @@
         }
     }
 }
+
+.webform-submission-form {
+    & .webform-2col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    & .webform-3col {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        grid-gap: 4px;
+    }
+
+    & .webform-2row {
+        display: grid;
+        grid-template-rows: 1rem 1rem;
+        grid-gap: 10px;
+    }
+
+    & .day-of-death {
+        height: 2.4rem;
+    }
+
+    & .year-of-death-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+
+        & > label::after {
+            margin: 0;
+            position: absolute;
+        }
+
+        & > strong.error.form-item--error-message {
+            display: block;
+        }
+    }
+}

@@ -26,6 +26,7 @@
               max-height: 10rem;
             }
           }
+
           &--horizontal {
             border: 0;
           }
@@ -39,6 +40,28 @@
       border-bottom: 1px solid var(--color-white);
     }
   }
+
+  &-in-memoriam {
+    & .view-header {
+      & hr {
+        border-radius: 5px;
+        border-top: 10px double var(--body-color);
+        margin: 1rem auto;
+        opacity: 1;
+        width: 50%;
+      }
+
+      & h2 {
+        padding-bottom: 1rem;
+      }
+    }
+
+    & .view-content {
+      & div.views-row {
+        border-bottom: 1px solid var(--body-color);
+      }
+    }
+  }
 }
 
 #views {
@@ -48,5 +71,3 @@
     }
   }
 }
-
-

@@ -1,0 +1,21 @@
+uuid: 822b97ec-91a5-4c1a-8420-254a166dfb1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_death
+    - node.type.in_memoriam
+  module:
+    - datetime
+id: node.in_memoriam.field_date_of_death
+field_name: field_date_of_death
+entity_type: node
+bundle: in_memoriam
+label: "Date of the deceased person's death"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
