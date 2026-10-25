@@ -62,9 +62,17 @@ class StaffContactController extends ControllerBase {
     $tid = (int) $request->request->get('tid', 0);
     $name = trim((string) $request->request->get('name', ''));
     $email = trim((string) $request->request->get('email', ''));
+    // A dot-less domain like "localhost" is officially valid, but filter_var()
+    // doesn't like it. For our purposes, we don't need to accept them, so we 
+    // return it as an error
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $failure_message = $this->t("@email is not a valid email", ['@email' => $email]);
+      $email = '';
+    }
     $message = trim((string) $request->request->get('message', ''));
 
-    if ($tid <= 0 || $name === '' || $email === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+    if ($tid <= 0 || $name === '' || $email === '' || $message === '') {
       return new JsonResponse([
         'success' => FALSE,
         'message' => $failure_message,
