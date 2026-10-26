@@ -192,7 +192,7 @@ class StaffPageController extends ControllerBase
 
         return '<dialog id="staff-contact-modal">'
           . '<form method="dialog" class="staff-contact-modal__close-row">'
-          . '<button type="submit" class="staff-contact-modal__close" aria-label="'. $this->t('Close'). '">&times;</button>'
+          . '<button type="submit" class="staff-contact-modal__close" aria-label="' . Html::escape((string) $this->t('Close')) . '">&times;</button>'
           . '</form>'
           . '<h2 id="staff-contact-modal-title">' . Html::escape($heading_prefix) . '</h2>'
           . '<form id="staff-contact-form" method="post" action="' . Html::escape($action) . '">'
