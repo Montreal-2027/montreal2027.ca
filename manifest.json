@@ -1,289 +1,289 @@
 {
   ".githooks/post-merge": {
-    "mtime": 1792974896.2479672,
-    "seen": 1792974913.7220595,
+    "mtime": 1792975042.823906,
+    "seen": 1792975052.2603269,
     "ast_hash": "f104fc2bab6a79218c146fc0399f37c1",
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1792974896.2493086,
-    "seen": 1792974913.722063,
+    "mtime": 1792975042.8244574,
+    "seen": 1792975052.2603302,
     "ast_hash": "12a42e428c89ce635c1888bd57856be1",
     "semantic_hash": ""
   },
   ".github/workflows/graphify.yml": {
-    "mtime": 1792974896.2496147,
-    "seen": 1792974913.7220645,
+    "mtime": 1792975042.824696,
+    "seen": 1792975052.2603319,
     "ast_hash": "65fde30d81bc936f7daa61260a96f765",
     "semantic_hash": ""
   },
   ".mcp.json": {
-    "mtime": 1792974896.2496147,
-    "seen": 1792974913.7220657,
+    "mtime": 1792975042.824696,
+    "seen": 1792975052.2603328,
     "ast_hash": "5cca3a3c2e58fda3bdc8670ec6b4f860",
     "semantic_hash": ""
   },
   "composer.json": {
-    "mtime": 1792974896.2496147,
-    "seen": 1792974913.7220664,
+    "mtime": 1792975042.8249059,
+    "seen": 1792975052.2603335,
     "ast_hash": "8d2857084cea8566e488a87d7805c3e9",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1792974896.2869678,
-    "seen": 1792974913.722067,
+    "mtime": 1792975042.8559062,
+    "seen": 1792975052.2603343,
     "ast_hash": "92c7a2d0688f1ff531e35f0b7f8c7f80",
     "semantic_hash": ""
   },
   "docker/web/entrypoint.sh": {
-    "mtime": 1792974896.2879546,
-    "seen": 1792974913.7220685,
+    "mtime": 1792975042.8571064,
+    "seen": 1792975052.2603357,
     "ast_hash": "0858a8a4e4f26eb9ca0d2094bfdb98bc",
     "semantic_hash": ""
   },
   "graphify.config.json": {
-    "mtime": 1792974896.2879546,
-    "seen": 1792974913.7220702,
+    "mtime": 1792975042.8571064,
+    "seen": 1792975052.2603374,
     "ast_hash": "0220118292b225d3c38f49d1d49d35fe",
     "semantic_hash": ""
   },
   "scripts/install.sh": {
-    "mtime": 1792974896.2881238,
-    "seen": 1792974913.7220721,
+    "mtime": 1792975042.857296,
+    "seen": 1792975052.2603388,
     "ast_hash": "831464400864096bf967709dc7df26ad",
     "semantic_hash": ""
   },
   "scripts/setup-graphify.sh": {
-    "mtime": 1792974896.2882519,
-    "seen": 1792974913.722073,
+    "mtime": 1792975042.8574162,
+    "seen": 1792975052.2603397,
     "ast_hash": "d16a304dc6d74f2eb6ad48897cbfc94e",
     "semantic_hash": ""
   },
   "scripts/sync.sh": {
-    "mtime": 1792974896.2882519,
-    "seen": 1792974913.7220738,
+    "mtime": 1792975042.8574162,
+    "seen": 1792975052.2603407,
     "ast_hash": "7a16aa545136389904c8816a6ba60214",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/config/install/montreal2027_tools.staff_contact_settings.yml": {
-    "mtime": 1792974896.289527,
-    "seen": 1792974913.7220745,
+    "mtime": 1792975042.8586843,
+    "seen": 1792975052.2603414,
     "ast_hash": "cfe2079c77a2a8d5218a54edd691a624",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/config/schema/montreal2027_tools.schema.yml": {
-    "mtime": 1792974896.289527,
-    "seen": 1792974913.7220755,
+    "mtime": 1792975042.8586843,
+    "seen": 1792975052.2603424,
     "ast_hash": "90629f6d6cd609152a53856fd409c715",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/drush.services.yml": {
-    "mtime": 1792974896.2897449,
-    "seen": 1792974913.7220762,
+    "mtime": 1792975042.8588908,
+    "seen": 1792975052.260343,
     "ast_hash": "c67feeb0913e73e23e95c660b995b057",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/js/language-toggle.js": {
-    "mtime": 1792974896.2897449,
-    "seen": 1792974913.722077,
+    "mtime": 1792975042.8588908,
+    "seen": 1792975052.2603438,
     "ast_hash": "304d928fece5af77e3772f2ed4311961",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/js/staff-contact-modal.js": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220774,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.2603445,
     "ast_hash": "61ecdae24e2d2e4ca7ab5bb4b5d40803",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/js/staff-jump-menu.js": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220783,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.260345,
     "ast_hash": "f15df883836d0edbdf46bd2d335458fa",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.config_translation.yml": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.722079,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.260346,
     "ast_hash": "81c5825e7d18f7c9b391911265e0e7bf",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.info.yml": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220795,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.2603467,
     "ast_hash": "bf80c46a62331d0746ff26b72230770d",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.libraries.yml": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220802,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.2603474,
     "ast_hash": "98517ca3439d663cac25779ad7753535",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.links.menu.yml": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220812,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.260348,
     "ast_hash": "c8b3236ff61c67f0fcf02798cc9cafdc",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.module": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.722082,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.260349,
     "ast_hash": "ea6ace88e4e80eb1b263d35c99017a9f",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/montreal2027_tools.routing.yml": {
-    "mtime": 1792974896.2898574,
-    "seen": 1792974913.7220829,
+    "mtime": 1792975042.8590033,
+    "seen": 1792975052.26035,
     "ast_hash": "2962e9f193bb6862058fb5a228f06873",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/src/Commands/ContactImportCommands.php": {
-    "mtime": 1792974896.2901247,
-    "seen": 1792974913.7220836,
+    "mtime": 1792975042.8592727,
+    "seen": 1792975052.260351,
     "ast_hash": "dddf028793e498ac3a81397e7acdcbf1",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/src/Controller/StaffContactController.php": {
-    "mtime": 1792974896.2901247,
-    "seen": 1792974913.7220843,
-    "ast_hash": "0534b8dc9922de88795cba9fb29af6d8",
+    "mtime": 1792975042.8592727,
+    "seen": 1792975052.2603517,
+    "ast_hash": "e5d722223326a34563f8197b14c7fa39",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php": {
-    "mtime": 1792974896.2902539,
-    "seen": 1792974913.7220852,
+    "mtime": 1792975042.8594034,
+    "seen": 1792975052.2603526,
     "ast_hash": "e9ae716745dc78c9238ecdc0a07a9084",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/src/Form/MontrealConfigurationForm.php": {
-    "mtime": 1792974896.2902539,
-    "seen": 1792974913.7220857,
+    "mtime": 1792975042.8594034,
+    "seen": 1792975052.260353,
     "ast_hash": "2e90480bb9314a2739bb6421688e3db3",
     "semantic_hash": ""
   },
   "web/modules/custom/montreal2027_tools/src/Plugin/Block/LanguageToggleBlock.php": {
-    "mtime": 1792974896.2904015,
-    "seen": 1792974913.7220864,
+    "mtime": 1792975042.8595533,
+    "seen": 1792975052.260354,
     "ast_hash": "3c85bf0b2c52605aae1c9b8f4daefdeb",
     "semantic_hash": ""
   },
   "web/sites/default/development.services.yml": {
-    "mtime": 1792974896.2905602,
-    "seen": 1792974913.7220871,
+    "mtime": 1792975042.859707,
+    "seen": 1792975052.2603545,
     "ast_hash": "b9cdb9957eeb062fdf3c78d626a38aba",
     "semantic_hash": ""
   },
   "web/sites/default/settings.php": {
-    "mtime": 1792974896.290606,
-    "seen": 1792974913.7220879,
+    "mtime": 1792975042.8597517,
+    "seen": 1792975052.2603552,
     "ast_hash": "ae3345617d7da9d5e0f599821d2bc329",
     "semantic_hash": ""
   },
   "web/themes/custom/montreal2027/config/schema/montreal2027.schema.yml": {
-    "mtime": 1792974896.2908075,
-    "seen": 1792974913.7220883,
+    "mtime": 1792975042.859942,
+    "seen": 1792975052.2603562,
     "ast_hash": "a8e537dbcecf0fcf61201c337f34f777",
     "semantic_hash": ""
   },
   "web/themes/custom/montreal2027/montreal2027.info.yml": {
-    "mtime": 1792974896.2908814,
-    "seen": 1792974913.7220893,
+    "mtime": 1792975042.8600159,
+    "seen": 1792975052.260357,
     "ast_hash": "7d0d727699bc36cbebfccfb5042037cf",
     "semantic_hash": ""
   },
   "web/themes/custom/montreal2027/montreal2027.libraries.yml": {
-    "mtime": 1792974896.2908814,
-    "seen": 1792974913.72209,
+    "mtime": 1792975042.8600159,
+    "seen": 1792975052.2603574,
     "ast_hash": "56637cc11f9c073a66e028d753f7f691",
     "semantic_hash": ""
   },
   "web/themes/custom/montreal2027/montreal2027.theme": {
-    "mtime": 1792974896.2908814,
-    "seen": 1792974913.7220905,
+    "mtime": 1792975042.8600159,
+    "seen": 1792975052.260358,
     "ast_hash": "7007337d0758dfddb3cc00c674e61158",
     "semantic_hash": ""
   },
   "web/themes/custom/montreal2027/package.json": {
-    "mtime": 1792974896.2908814,
-    "seen": 1792974913.7220912,
+    "mtime": 1792975042.8600159,
+    "seen": 1792975052.2603588,
     "ast_hash": "b514ce5aaedb9fb51bcce2209413ebd9",
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/new-content.md": {
-    "mtime": 1792974896.249392,
-    "seen": 1792974913.722092,
+    "mtime": 1792975042.8245263,
+    "seen": 1792975052.2603598,
     "ast_hash": "985e30e0d4e7bb0929cfe70790693e5d",
     "semantic_hash": ""
   },
   "recipes/README.txt": {
-    "mtime": 1792974896.2881238,
-    "seen": 1792974913.7220926,
+    "mtime": 1792975042.857296,
+    "seen": 1792975052.2603605,
     "ast_hash": "819a9b0846d400d6791558bbc24ec1f0",
     "semantic_hash": ""
   },
   "web/assets/2025-11/53876623114_a7f20e1dbb_o.jpg": {
-    "mtime": 1792974896.2884607,
-    "seen": 1792974913.7220933,
+    "mtime": 1792975042.8576243,
+    "seen": 1792975052.2603612,
     "ast_hash": "cb73ef7105d1cd494965c63173c7a8d4",
     "semantic_hash": ""
   },
   "web/assets/2025-11/m2027mascot@4x.png": {
-    "mtime": 1792974896.2888556,
-    "seen": 1792974913.722094,
+    "mtime": 1792975042.8580074,
+    "seen": 1792975052.260362,
     "ast_hash": "a2ec650a9a9ab46bb780ec4206294737",
     "semantic_hash": ""
   },
   "web/assets/2025-11/mapleleaf_g.svg": {
-    "mtime": 1792974896.2888556,
-    "seen": 1792974913.7220948,
+    "mtime": 1792975042.8580074,
+    "seen": 1792975052.2603629,
     "ast_hash": "df3fa407366d39da3796c7c5701b9caf",
     "semantic_hash": ""
   },
   "web/assets/favicon-96x96.png": {
-    "mtime": 1792974896.2888556,
-    "seen": 1792974913.722096,
+    "mtime": 1792975042.8580074,
+    "seen": 1792975052.2603633,
     "ast_hash": "77935f3b105b8c9338b7e440ba334815",
     "semantic_hash": ""
   },
   "web/assets/m2027-logo.svg": {
-    "mtime": 1792974896.2888556,
-    "seen": 1792974913.7220967,
+    "mtime": 1792975042.8580074,
+    "seen": 1792975052.260364,
     "ast_hash": "d27e5a26100b35e2b18962671a24b6c9",
     "semantic_hash": ""
   },
   "web/assets/media-icons/en-flag.svg": {
-    "mtime": 1792974896.2888556,
-    "seen": 1792974913.7220974,
+    "mtime": 1792975042.8580074,
+    "seen": 1792975052.2603648,
     "ast_hash": "eec07c2d0b1a3fdcd7062b07e315d8b2",
     "semantic_hash": ""
   },
   "web/assets/media-icons/fr-flag.svg": {
-    "mtime": 1792974896.2892106,
-    "seen": 1792974913.7220988,
+    "mtime": 1792975042.8583622,
+    "seen": 1792975052.2603674,
     "ast_hash": "2154d76a0ecfce8a81733d8ea487e0e4",
     "semantic_hash": ""
   },
   "web/assets/media-icons/generic/audio.png": {
-    "mtime": 1792974896.2892106,
-    "seen": 1792974913.7220995,
+    "mtime": 1792975042.8583622,
+    "seen": 1792975052.260368,
     "ast_hash": "df698446bdf59336c8773e47fdcc8a96",
     "semantic_hash": ""
   },
   "web/assets/media-icons/generic/generic.png": {
-    "mtime": 1792974896.2893007,
-    "seen": 1792974913.7221003,
+    "mtime": 1792975042.8584523,
+    "seen": 1792975052.2603688,
     "ast_hash": "f9860cc9d7a101962f2d8c4c9427f2d0",
     "semantic_hash": ""
   },
   "web/assets/media-icons/generic/no-thumbnail.png": {
-    "mtime": 1792974896.2893007,
-    "seen": 1792974913.722101,
+    "mtime": 1792975042.8584523,
+    "seen": 1792975052.2603698,
     "ast_hash": "b3c0da3adbcb14fb4cb6096aea831f14",
     "semantic_hash": ""
   },
   "web/assets/media-icons/generic/video.png": {
-    "mtime": 1792974896.2893007,
-    "seen": 1792974913.7221014,
+    "mtime": 1792975042.8584523,
+    "seen": 1792975052.2603703,
     "ast_hash": "c970475f973f695f6d241c7131cd7e87",
     "semantic_hash": ""
   }
