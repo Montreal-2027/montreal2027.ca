@@ -66,7 +66,7 @@ class StaffContactController extends ControllerBase {
     // doesn't like it. For our purposes, we don't need to accept them, so we 
     // return it as an error
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $failure_message = $this->t("@email is not a valid email", ['@email' => $email]);
+      $failure_message = $this->t('Please enter a valid email address.');
       $email = '';
     }
     $message = trim((string) $request->request->get('message', ''));
