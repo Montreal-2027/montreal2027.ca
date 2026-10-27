@@ -38,14 +38,16 @@ SYNC_PROD_ROOT="${SYNC_PROD_ROOT:-/home/cansmof/prod.montreal2027.ca}"
 SYNC_FROM="${SYNC_HOST:-montreal2027.ca}"
 
 # Remote user for SSH
-REMOTE_USER="${SYNC_USER:-www-data}"
+REMOTE_USER="${SYNC_USER:-cansmof}"
 
 # Remote root directory
-REMOTE_ROOT="${SYNC_REMOTE_ROOT:-/var/www/montreal2027.ca/}"
+REMOTE_ROOT="${SYNC_REMOTE_ROOT:-/home/cansmof/mirror.montreal2027.ca}"
 
-# SSH key path and port
+# SET THIS TO THE PATH OF THE KEY USED FOR ACCESS TO THE REMOTE SERVER
 SSH_KEY="${SYNC_SSH_KEY:-~/.ssh/montreal2027}"
-SSH_PORT="${SYNC_SSH_PORT:-345}"
+
+#SSH Port
+SSH_PORT="${SYNC_SSH_PORT:-32}"
 
 # Local backup directory
 BACKUP_DIR="${SYNC_BACKUP_DIR:-../backups}"
@@ -56,8 +58,8 @@ BU_FILENAME_PREFIX="${BU_FILENAME_PREFIX:-m2027-local}"
 # Directory to sync
 REMOTE_DIR="${REMOTE_ROOT}/web/assets/"
 
-# Path to PHP
-PHP_PATH="${PHP_PATH:-/usr/bin/php}"
+# Path to PHP on remote server
+PHP_PATH="${PHP_PATH:-/var/nfph-opt/alt/php83/usr/bin/php}"
 
 # Determine drush command based on environment type
 APP_ENV_TYPE="${APP_ENV_TYPE:-docker}"
@@ -128,7 +130,7 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 else
     echo "Backing up local database..."
     mkdir -p "${BACKUP_DIR}"
-    $DRUSH --gzip sql:dump > "${BACKUP_DIR}/${BU_FILENAME_PREFIX}-$(date +%Y-%m-%d_%H:%M).sql"
+    $DRUSH sql:dump --gzip > "${BACKUP_DIR}/${BU_FILENAME_PREFIX}-$(date +%Y-%m-%d_%H:%M).sql"
 
     echo "Exporting changes..."
     $DRUSH cex

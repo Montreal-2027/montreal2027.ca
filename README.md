@@ -232,12 +232,14 @@ While Docker Desktop is a convenient option, there are several open source alter
 
    # Local production checkout used when SYNC_LOCAL=true. 
    # It is unlikely that you will need these, so don't set them
+   # See .env.example for full documentation
+
    SYNC_PROD_ROOT=/home/cansmof/prod.montreal2027.ca
    SYNC_HOST=montreal2027.ca
-   SYNC_USER=www-data
-   SYNC_REMOTE_ROOT=/var/www/montreal2027.ca/
+   SYNC_USER=cansmof
+   SYNC_REMOTE_ROOT=/home/cansmof/mirror.montreal2027.ca
    SYNC_SSH_KEY=~/.ssh/montreal2027
-   SYNC_SSH_PORT=345
+   SYNC_SSH_PORT=32
    SYNC_BACKUP_DIR=../backups
    ```
 
@@ -853,12 +855,17 @@ Provides utilities for convention management:
 
 ## Contributing
 
-1. Create a feature branch from `develop`. Naming convention is `feature/[short_token]`
+The default branch is `main`. Direct pushes to `develop` and `main` are prohibited; submit changes through pull requests.
+
+1. For feature work, create a branch from `develop` named `feature/<issue-number>_<short-description>` (for example, `feature/135_contact-form`).
 2. Make your changes
 3. Test thoroughly in your development environment (Docker or native)
 4. Commit with descriptive messages
 5. Push to your branch. This will auto-deploy to https://dev.montreal2027.ca. Test thoroughly
-6. Create a pull request for your feature branch against `develop`. Assign the PR to yourself. Add meaningful labels. Add the PR to the `Tech` project, and link it to the issue under `Development`
+6. Create a pull request for your feature branch against `develop`. Assign the PR to yourself. Add meaningful labels. Add the PR to the `Tech` project, and link it to the issue under `Development`.
+7. Request reviews from at least two other developers. At least two reviewers must approve, and all automated checks must pass before merging. The Area Head makes the final merge decision.
+
+For hotfixes, use `hotfix/<issue-number>_<short-description>` (for example, `hotfix/135_contact-form`) and target the pull request to `main`.
 
 ## License
 

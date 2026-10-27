@@ -1,0 +1,11 @@
+uuid: 5920799a-a46f-446c-bc3e-27fc66d60358
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.in_memoriam
+id: node.in_memoriam
+target_entity_type_id: node
+target_bundle: in_memoriam
+default_langcode: site_default
+language_alterable: false
