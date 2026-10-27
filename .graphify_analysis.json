@@ -62,53 +62,6 @@
       "composer_require_wikimedia_composer_merge_plugin"
     ],
     "1": [
-      "drupal_core_block_attribute_block",
-      "drupal_core_block_blockbase",
-      "drupal_core_controller_controllerbase",
-      "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_language_languagemanagerinterface",
-      "drupal_core_logger_loggerchannelfactoryinterface",
-      "drupal_core_mail_mailmanagerinterface",
-      "drupal_core_plugin_containerfactoryplugininterface",
-      "drupal_core_routing_routematchinterface",
-      "drupal_core_stringtranslation_translatablemarkup",
-      "drupal_core_url",
-      "drupal_user_userinterface",
-      "drush_commands_drushcommands",
-      "exception",
-      "object",
-      "symfony_component_dependencyinjection_containerinterface",
-      "symfony_component_httpfoundation_jsonresponse",
-      "symfony_component_httpfoundation_request",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getemailto",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getsubject",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getsubmitteddata",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_gettargetterm",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_gettranslatedmessages",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_gettranslatedterm",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_sendcontactemail",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
-      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
-    ],
-    "2": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_1",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_2",
@@ -152,44 +105,90 @@
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_9_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_9_type"
     ],
+    "2": [
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_failure_message_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_failure_message_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_format_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_format_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_guest_read_more_text_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_guest_read_more_text_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_contact_link_text",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_failure_message",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_format",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_guest_read_more_text",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_heading_prefix",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_body",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_title",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_subject_prefix",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_success_message",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_value",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_mapping",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_mapping",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_mapping",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_mapping",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_type",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_value_label",
+      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_value_type"
+    ],
     "3": [
-      "composer",
-      "composer_advisories_ignore",
-      "composer_allow_plugins_composer_installers",
-      "composer_allow_plugins_cweagans_composer_patches",
-      "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
-      "composer_allow_plugins_drupal_core_composer_scaffold",
-      "composer_allow_plugins_drupal_core_project_message",
-      "composer_allow_plugins_drupal_core_recipe_unpack",
-      "composer_allow_plugins_oomphinc_composer_installers_extender",
-      "composer_allow_plugins_php_http_discovery",
-      "composer_allow_plugins_php_tuf_composer_integration",
-      "composer_allow_plugins_phpstan_extension_installer",
-      "composer_allow_plugins_symfony_runtime",
-      "composer_allow_plugins_wikimedia_composer_merge_plugin",
-      "composer_config",
-      "composer_config_allow_plugins",
-      "composer_config_platform",
-      "composer_config_policy",
-      "composer_config_sort_packages",
-      "composer_conflict",
-      "composer_conflict_drupal_drupal",
-      "composer_description",
-      "composer_homepage",
-      "composer_license",
-      "composer_minimum_stability",
-      "composer_name",
-      "composer_platform_php",
-      "composer_policy_advisories",
-      "composer_prefer_stable",
-      "composer_repositories",
-      "composer_scripts",
-      "composer_scripts_post_install_cmd",
-      "composer_scripts_post_update_cmd",
-      "composer_support",
-      "composer_support_chat",
-      "composer_support_docs",
-      "composer_type"
+      "drupal_component_utility_html",
+      "drupal_core_block_attribute_block",
+      "drupal_core_block_blockbase",
+      "drupal_core_controller_controllerbase",
+      "drupal_core_entity_entitytypemanagerinterface",
+      "drupal_core_language_languageinterface",
+      "drupal_core_language_languagemanagerinterface",
+      "drupal_core_logger_loggerchannelfactoryinterface",
+      "drupal_core_mail_mailmanagerinterface",
+      "drupal_core_plugin_containerfactoryplugininterface",
+      "drupal_core_render_markup",
+      "drupal_core_routing_routematchinterface",
+      "drupal_core_stringtranslation_translatablemarkup",
+      "drupal_core_url",
+      "drupal_taxonomy_terminterface",
+      "drupal_taxonomy_termstorageinterface",
+      "symfony_component_dependencyinjection_containerinterface",
+      "symfony_component_httpfoundation_jsonresponse",
+      "symfony_component_httpfoundation_request",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_submit",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
+      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_build",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkdata",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_buildlinkelement",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_construct",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
     ],
     "4": [
       "docker_compose",
@@ -362,6 +361,28 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_staff_jump_menu_version"
     ],
     "10": [
+      "composer_advisories_ignore",
+      "composer_allow_plugins_composer_installers",
+      "composer_allow_plugins_cweagans_composer_patches",
+      "composer_allow_plugins_dealerdirect_phpcodesniffer_composer_installer",
+      "composer_allow_plugins_drupal_core_composer_scaffold",
+      "composer_allow_plugins_drupal_core_project_message",
+      "composer_allow_plugins_drupal_core_recipe_unpack",
+      "composer_allow_plugins_oomphinc_composer_installers_extender",
+      "composer_allow_plugins_php_http_discovery",
+      "composer_allow_plugins_php_tuf_composer_integration",
+      "composer_allow_plugins_phpstan_extension_installer",
+      "composer_allow_plugins_symfony_runtime",
+      "composer_allow_plugins_wikimedia_composer_merge_plugin",
+      "composer_config",
+      "composer_config_allow_plugins",
+      "composer_config_platform",
+      "composer_config_policy",
+      "composer_config_sort_packages",
+      "composer_platform_php",
+      "composer_policy_advisories"
+    ],
+    "11": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_defaults_controller",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_defaults_form",
@@ -381,7 +402,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_montreal2027_tools_staff_requirements",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_requirements_permission"
     ],
-    "11": [
+    "12": [
       "web_sites_default_development_services",
       "web_sites_default_development_services_cache_backend_null_class",
       "web_sites_default_development_services_config_schema_checker_arguments",
@@ -401,7 +422,26 @@
       "web_sites_default_development_services_twig_config_cache",
       "web_sites_default_development_services_twig_config_debug"
     ],
-    "12": [
+    "13": [
+      "composer",
+      "composer_conflict",
+      "composer_conflict_drupal_drupal",
+      "composer_description",
+      "composer_homepage",
+      "composer_license",
+      "composer_minimum_stability",
+      "composer_name",
+      "composer_prefer_stable",
+      "composer_repositories",
+      "composer_scripts",
+      "composer_scripts_post_install_cmd",
+      "composer_scripts_post_update_cmd",
+      "composer_support",
+      "composer_support_chat",
+      "composer_support_docs",
+      "composer_type"
+    ],
+    "14": [
       "ref_parcel_watcher",
       "ref_sass",
       "web_themes_custom_montreal2027_package",
@@ -420,7 +460,7 @@
       "web_themes_custom_montreal2027_package_scripts_watch_css",
       "web_themes_custom_montreal2027_package_version"
     ],
-    "13": [
+    "15": [
       "html",
       "web_themes_custom_montreal2027_montreal2027",
       "web_themes_custom_montreal2027_montreal2027_get_image_info",
@@ -437,21 +477,7 @@
       "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_paragraph_guests",
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
-    "14": [
-      "drupal_component_utility_html",
-      "drupal_core_language_languageinterface",
-      "drupal_core_render_markup",
-      "drupal_taxonomy_terminterface",
-      "drupal_taxonomy_termstorageinterface",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_build",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildchilddata",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_buildcontactmodalmarkup",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettermstorage",
-      "web_modules_custom_montreal2027_tools_src_controller_staffpagecontroller_staffpagecontroller_gettranslatedterm"
-    ],
-    "15": [
+    "16": [
       "web_themes_custom_montreal2027_montreal2027_libraries",
       "web_themes_custom_montreal2027_montreal2027_libraries_base_css_montreal2027_min_css",
       "web_themes_custom_montreal2027_montreal2027_libraries_base_https_cdnjs_cloudflare_com_ajax_libs_font_awesome_6_4_0_css_all_min_css",
@@ -465,45 +491,7 @@
       "web_themes_custom_montreal2027_montreal2027_libraries_https_cdnjs_cloudflare_com_ajax_libs_font_awesome_6_4_0_css_all_min_css_type",
       "web_themes_custom_montreal2027_montreal2027_libraries_js_https_cdn_jsdelivr_net_npm_bootstrap_5_3_3_dist_js_bootstrap_bundle_min_js"
     ],
-    "16": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_guest_read_more_text_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_guest_read_more_text_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_guest_read_more_text",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_mapping",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_guest_settings_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_type"
-    ],
     "17": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_format_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_format_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_format",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_body",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_value",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_mapping",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_body_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_mapping",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_value_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_value_type"
-    ],
-    "18": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_failure_message_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_failure_message_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_contact_link_text",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_failure_message",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_subject_prefix",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_mapping",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_type"
-    ],
-    "19": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_mapping",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_type",
@@ -515,7 +503,7 @@
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_uri_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_uri_type"
     ],
-    "20": [
+    "18": [
       "drupal_core_form_configformbase",
       "drupal_core_form_formstateinterface",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform",
@@ -525,7 +513,17 @@
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_submitform"
     ],
-    "21": [
+    "19": [
+      "drupal_user_userinterface",
+      "drush_commands_drushcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath"
+    ],
+    "20": [
       "entityforminterface",
       "translatablemarkup",
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
@@ -535,7 +533,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
-    "22": [
+    "21": [
       "mcp",
       "mcp_command_graphify_mcp",
       "mcp_command_npx",
@@ -545,7 +543,7 @@
       "mcp_mcp_server_obscura",
       "mcp_package_edictum_captatum"
     ],
-    "23": [
+    "22": [
       "web_modules_custom_montreal2027_tools_drush_services",
       "web_modules_custom_montreal2027_tools_drush_services_montreal2027_tools_commands_arguments",
       "web_modules_custom_montreal2027_tools_drush_services_montreal2027_tools_commands_class",
@@ -554,7 +552,7 @@
       "web_modules_custom_montreal2027_tools_drush_services_services_montreal2027_tools_commands",
       "web_modules_custom_montreal2027_tools_drush_services_tags_name"
     ],
-    "24": [
+    "23": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_description",
@@ -563,7 +561,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_title",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_weight"
     ],
-    "25": [
+    "24": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_count",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_6",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_mapping",
@@ -572,7 +570,7 @@
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_6_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_6_type"
     ],
-    "26": [
+    "25": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_core_version_requirement",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_description",
@@ -580,213 +578,198 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_package",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_type"
     ],
-    "27": [
+    "26": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_base_route_name",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_names",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_title"
     ],
-    "28": [
+    "27": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_type"
     ],
-    "29": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_type",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_heading_prefix"
-    ],
-    "30": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_title",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_type"
-    ],
-    "31": [
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_success_message",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_label",
-      "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_type"
-    ],
-    "32": [
+    "28": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_type",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_include_fontawesome"
     ],
-    "33": [
+    "29": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_1",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_1_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_1_type"
     ],
-    "34": [
+    "30": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_type"
     ],
-    "35": [
+    "31": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_type"
     ],
-    "36": [
+    "32": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_type"
     ],
-    "37": [
+    "33": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_type"
     ],
-    "38": [
+    "34": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_type"
     ],
-    "39": [
+    "35": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_6",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_type"
     ],
-    "40": [
+    "36": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_type"
     ],
-    "41": [
+    "37": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_type"
     ],
-    "42": [
+    "38": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_type"
     ],
-    "43": [
+    "39": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_1",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_1_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_1_type"
     ],
-    "44": [
+    "40": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_type"
     ],
-    "45": [
+    "41": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_type"
     ],
-    "46": [
+    "42": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_type"
     ],
-    "47": [
+    "43": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_type"
     ],
-    "48": [
+    "44": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_type"
     ],
-    "49": [
+    "45": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_type"
     ],
-    "50": [
+    "46": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_type"
     ],
-    "51": [
+    "47": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_type"
     ],
-    "52": [
+    "48": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slideshow_display",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_type"
     ],
-    "53": [
+    "49": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "54": [
+    "50": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "55": [
+    "51": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "56": [
+    "52": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "57": [
+    "53": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "58": [
+    "54": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "59": [
+    "55": [
       "symfony_component_dotenv_dotenv",
       "web_sites_default_settings"
     ],
-    "60": [
+    "56": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "61": [
+    "57": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "62": [
+    "58": [
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu_attach"
     ],
-    "63": [
+    "59": [
       "github_issue_template_new_content"
     ]
   },
   "cohesion": {
     "0": 0.03389830508474576,
-    "1": 0.08080808080808081,
-    "2": 0.05807200929152149,
-    "3": 0.05405405405405406,
+    "1": 0.05807200929152149,
+    "2": 0.05121951219512195,
+    "3": 0.09358974358974359,
     "4": 0.06666666666666667,
     "5": 0.06896551724137931,
     "6": 0.06896551724137931,
     "7": 0.07692307692307693,
     "8": 0.08695652173913043,
     "9": 0.1,
-    "10": 0.13725490196078433,
-    "11": 0.1111111111111111,
-    "12": 0.1323529411764706,
-    "13": 0.19047619047619047,
-    "14": 0.2878787878787879,
-    "15": 0.16666666666666666,
-    "16": 0.18181818181818182,
+    "10": 0.1,
+    "11": 0.13725490196078433,
+    "12": 0.1111111111111111,
+    "13": 0.11764705882352941,
+    "14": 0.1323529411764706,
+    "15": 0.19047619047619047,
+    "16": 0.16666666666666666,
     "17": 0.2,
-    "18": 0.2,
-    "19": 0.2,
-    "20": 0.35714285714285715,
-    "21": 0.32142857142857145,
-    "22": 0.25,
+    "18": 0.35714285714285715,
+    "19": 0.35714285714285715,
+    "20": 0.32142857142857145,
+    "21": 0.25,
+    "22": 0.2857142857142857,
     "23": 0.2857142857142857,
     "24": 0.2857142857142857,
-    "25": 0.2857142857142857,
-    "26": 0.3333333333333333,
-    "27": 0.4,
-    "28": 0.5,
+    "25": 0.3333333333333333,
+    "26": 0.4,
+    "27": 0.5,
+    "28": 0.6666666666666666,
     "29": 0.6666666666666666,
     "30": 0.6666666666666666,
     "31": 0.6666666666666666,
@@ -807,21 +790,17 @@
     "46": 0.6666666666666666,
     "47": 0.6666666666666666,
     "48": 0.6666666666666666,
-    "49": 0.6666666666666666,
-    "50": 0.6666666666666666,
-    "51": 0.6666666666666666,
-    "52": 0.6666666666666666,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
     "53": 1.0,
     "54": 1.0,
     "55": 1.0,
     "56": 1.0,
     "57": 1.0,
     "58": 1.0,
-    "59": 1.0,
-    "60": 1.0,
-    "61": 1.0,
-    "62": 1.0,
-    "63": 1.0
+    "59": 1.0
   },
   "gods": [
     {
@@ -833,11 +812,6 @@
       "id": "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_mapping",
       "label": "mapping",
       "degree": 34
-    },
-    {
-      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
-      "label": "StaffContactController",
-      "degree": 16
     },
     {
       "id": "web_themes_custom_montreal2027_montreal2027_info_regions",
@@ -870,29 +844,22 @@
       "degree": 10
     },
     {
+      "id": "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
+      "label": "StaffContactController",
+      "degree": 9
+    },
+    {
       "id": "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_montreal2027_tools_staff_page_settings_mapping",
       "label": "mapping",
       "degree": 9
     }
   ],
-  "surprises": [
-    {
-      "source": "StaffPageController",
-      "target": "Drupal\\Core\\Controller\\ControllerBase",
-      "source_files": [
-        "web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php",
-        ""
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "inherits",
-      "note": "Bridges community 14 → community 1"
-    }
-  ],
+  "surprises": [],
   "questions": [
     {
       "type": "bridge_node",
       "question": "Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `include_fontawesome`, `slide_title_1`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_1`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?",
-      "why": "High betweenness centrality (0.031) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.032) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -907,22 +874,22 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.027) - this node is a cross-community bridge."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `StaffContactController` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08080808080808081 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.013) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.028) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
       "question": "Should `label` be split into smaller, more focused modules?",
       "why": "Cohesion score 0.05807200929152149 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
+      "why": "High betweenness centrality (0.014) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `mapping` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05121951219512195 - nodes in this community are weakly interconnected."
     }
   ]
 }
