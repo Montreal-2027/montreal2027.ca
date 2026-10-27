@@ -23,6 +23,7 @@ class StaffContactController extends ControllerBase
   const SUBJECT_PREFIX = 'subject_prefix';
 
   var $translated_content = [];
+  var $langcode = '';
 
   /**
    * Constructs the contact controller.
@@ -54,6 +55,7 @@ class StaffContactController extends ControllerBase
    */
   public function submit(Request $request): JsonResponse
   {
+    $this->langcode = $this->siteLanguageManager->getCurrentLanguage()->getId();
     $this->getTranslatedMessages();
 
     try {
@@ -83,14 +85,13 @@ class StaffContactController extends ControllerBase
    */
   private function sendContactEmail(array $submission) : void {
     $email_to = $this->getEmailTo($submission['term']);
-    $langcode = $this->siteLanguageManager->getCurrentLanguage()->getId();
     $subject = $this->getSubject($submission['tid']);
 
     $result = $this->mailManager->mail(
       'montreal2027_tools',
       'staff_contact',
       $email_to,
-      $langcode,
+      $this->langcode,
       [
         'subject' => $subject,
         'body' => $submission['message'],
@@ -205,19 +206,31 @@ class StaffContactController extends ControllerBase
    * @return string
    */
   private function getSubject(int $tid): string {
-    /** @var \Drupal\taxonomy\TermStorageInterface $term_storage */
-    $term_storage = $this->typedEntityManager->getStorage('taxonomy_term');
-
-    foreach ($term_storage->loadAllParents($tid) as $ancestor_term) {
-      $division_label = $this->t($ancestor_term->label());
-    }
-
+    $division_label = $this->getTranslatedTerm($tid);
     $prefix = $this->translated_content[self::SUBJECT_PREFIX];
     if ($prefix == '') {
       return $division_label;
     }
 
     return rtrim($prefix) . ' ' . $division_label;
+  }
+
+  /**
+   * Get the translated text for a taxonomy term
+   * 
+   * @param int $tid
+   * @return string
+   */
+  private function getTranslatedTerm(int $tid) : string {
+    /** @var \Drupal\taxonomy\TermStorageInterface $term_storage */
+    $term_storage = $this->typedEntityManager->getStorage('taxonomy_term');
+
+    $parents = $term_storage->loadAllParents($tid);
+    
+    // The parents are returned with the current term first, and the top parent at the end
+    $top_ancestor = array_pop($parents);
+    $translated_term = \Drupal::service('entity.repository')->getTranslationFromContext($top_ancestor, $this->langcode);
+    return $translated_term->getName();
   }
 
   /**
