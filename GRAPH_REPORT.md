@@ -4,37 +4,37 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 627 nodes · 681 edges · 61 communities (45 shown, 16 thin omitted)
+- 628 nodes · 683 edges · 64 communities (50 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b4c12632`
+- Built from commit: `799ac29c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - require
-- label
-- mapping
 - StaffContactController
+- label
+- composer.json
 - db
 - steps
 - regions
 - installer-paths
 - web
 - language_toggle
-- allow-plugins
 - montreal2027_tools.staff_contact_submit
 - twig.config
-- composer.json
 - package.json
 - montreal2027.theme
 - StaffPageController.php
 - global
 - montreal2027_tools.guest_settings
+- format
+- mapping
+- empty_position_link
 - MontrealConfigurationForm
-- ContactImportCommands
 - montreal2027_tools.module
 - .mcp.json
 - montreal2027_tools.commands
@@ -43,6 +43,9 @@
 - montreal2027_tools.info.yml
 - montreal2027_tools.settings
 - montreal2027.settings
+- heading_prefix
+- page_title
+- success_message
 - include_fontawesome
 - slide_title_1
 - slide_title_10
@@ -72,8 +75,8 @@
 ## God Nodes (most connected - your core abstractions)
 1. `require` - 59 edges
 2. `mapping` - 34 edges
-3. `regions` - 16 edges
-4. `StaffContactController` - 15 edges
+3. `StaffContactController` - 16 edges
+4. `regions` - 16 edges
 5. `allow-plugins` - 13 edges
 6. `installer-paths` - 11 edges
 7. `LanguageToggleBlock` - 10 edges
@@ -83,24 +86,28 @@
 
 ## Surprising Connections (you probably didn't know these)
 - `StaffPageController` --inherits--> `Drupal\Core\Controller\ControllerBase`  [EXTRACTED]
-  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 16 → community 3_
+  web/modules/custom/montreal2027_tools/src/Controller/StaffPageController.php →   _Bridges community 14 → community 1_
 
 ## Import Cycles
 - None detected.
 
-## Communities (61 total, 16 thin omitted)
+## Communities (64 total, 14 thin omitted)
 
 ### Community 0 - "require"
 Cohesion: 0.03
 Nodes (59): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+51 more)
 
-### Community 1 - "label"
+### Community 1 - "StaffContactController"
+Cohesion: 0.08
+Nodes (3): ContactImportCommands, StaffContactController, LanguageToggleBlock
+
+### Community 2 - "label"
 Cohesion: 0.06
 Nodes (42): slide_image_1, slide_image_10, slide_image_2, slide_image_3, slide_image_4, slide_image_5, slide_image_6, slide_image_7 (+34 more)
 
-### Community 2 - "mapping"
+### Community 3 - "composer.json"
 Cohesion: 0.05
-Nodes (40): label, type, label, mapping, type, label, type, label (+32 more)
+Nodes (36): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+28 more)
 
 ### Community 4 - "db"
 Cohesion: 0.07
@@ -126,37 +133,41 @@ Nodes (23): PHP_VERSION, WEB_INTERNAL_PORT, args, context, dockerfile, condition
 Cohesion: 0.10
 Nodes (20): css/language-toggle.css, css/staff-contact-modal.css, component, js/language-toggle.js, js/staff-contact-modal.js, js/staff-jump-menu.js, language_toggle, css (+12 more)
 
-### Community 10 - "allow-plugins"
-Cohesion: 0.10
-Nodes (20): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+12 more)
-
-### Community 11 - "montreal2027_tools.staff_contact_submit"
+### Community 10 - "montreal2027_tools.staff_contact_submit"
 Cohesion: 0.14
 Nodes (17): _controller, _form, _title, montreal2027_tools.settings, defaults, path, requirements, montreal2027_tools.staff (+9 more)
 
-### Community 12 - "twig.config"
+### Community 11 - "twig.config"
 Cohesion: 0.11
 Nodes (17): class, arguments, class, tags, arguments, parent, parameters, http.response.debug_cacheability_headers (+9 more)
 
-### Community 13 - "composer.json"
-Cohesion: 0.12
-Nodes (16): conflict, drupal/drupal, description, homepage, license, minimum-stability, name, prefer-stable (+8 more)
-
-### Community 14 - "package.json"
+### Community 12 - "package.json"
 Cohesion: 0.13
 Nodes (16): @parcel/watcher, sass, dependencies, @parcel/watcher@^2.5.6, description, devDependencies, sass@^1.73.1, engines (+8 more)
 
-### Community 15 - "montreal2027.theme"
+### Community 13 - "montreal2027.theme"
 Cohesion: 0.19
 Nodes (9): get_image_info(), montreal2027_entity_in_content_language(), montreal2027_form_alter(), montreal2027_preprocess_block__montreal2027_content(), montreal2027_preprocess_guest_taxonomy_paragraph(), montreal2027_preprocess_node__guest__teaser(), montreal2027_preprocess_page(), montreal2027_preprocess_paragraph__guest_block() (+1 more)
 
-### Community 17 - "global"
+### Community 15 - "global"
 Cohesion: 0.17
 Nodes (11): css/montreal2027.min.css, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css, base, global, css, dependencies, js, minified (+3 more)
 
-### Community 18 - "montreal2027_tools.guest_settings"
+### Community 16 - "montreal2027_tools.guest_settings"
 Cohesion: 0.18
 Nodes (10): label, type, guest_read_more_text, montreal2027_tools.guest_settings, label, mapping, type, montreal2027_tools.staff_page_settings (+2 more)
+
+### Community 17 - "format"
+Cohesion: 0.20
+Nodes (11): label, type, format, page_body, value, label, mapping, type (+3 more)
+
+### Community 18 - "mapping"
+Cohesion: 0.20
+Nodes (10): label, type, label, type, contact_link_text, failure_message, subject_prefix, mapping (+2 more)
+
+### Community 19 - "empty_position_link"
+Cohesion: 0.20
+Nodes (10): label, mapping, type, empty_position_link, title, uri, label, type (+2 more)
 
 ### Community 22 - ".mcp.json"
 Cohesion: 0.25
@@ -186,94 +197,106 @@ Nodes (4): montreal2027_tools.settings, base_route_name, names, title
 Cohesion: 0.50
 Nodes (3): montreal2027.settings, label, type
 
-### Community 29 - "include_fontawesome"
+### Community 29 - "heading_prefix"
+Cohesion: 0.67
+Nodes (3): label, type, heading_prefix
+
+### Community 30 - "page_title"
+Cohesion: 0.67
+Nodes (3): page_title, label, type
+
+### Community 31 - "success_message"
+Cohesion: 0.67
+Nodes (3): success_message, label, type
+
+### Community 32 - "include_fontawesome"
 Cohesion: 0.67
 Nodes (3): label, type, include_fontawesome
 
-### Community 30 - "slide_title_1"
+### Community 33 - "slide_title_1"
 Cohesion: 0.67
 Nodes (3): slide_title_1, label, type
 
-### Community 31 - "slide_title_10"
+### Community 34 - "slide_title_10"
 Cohesion: 0.67
 Nodes (3): slide_title_10, label, type
 
-### Community 32 - "slide_title_2"
+### Community 35 - "slide_title_2"
 Cohesion: 0.67
 Nodes (3): slide_title_2, label, type
 
-### Community 33 - "slide_title_3"
+### Community 36 - "slide_title_3"
 Cohesion: 0.67
 Nodes (3): slide_title_3, label, type
 
-### Community 34 - "slide_title_4"
+### Community 37 - "slide_title_4"
 Cohesion: 0.67
 Nodes (3): slide_title_4, label, type
 
-### Community 35 - "slide_title_5"
+### Community 38 - "slide_title_5"
 Cohesion: 0.67
 Nodes (3): slide_title_5, label, type
 
-### Community 36 - "slide_title_6"
+### Community 39 - "slide_title_6"
 Cohesion: 0.67
 Nodes (3): slide_title_6, label, type
 
-### Community 37 - "slide_title_7"
+### Community 40 - "slide_title_7"
 Cohesion: 0.67
 Nodes (3): slide_title_7, label, type
 
-### Community 38 - "slide_title_8"
+### Community 41 - "slide_title_8"
 Cohesion: 0.67
 Nodes (3): slide_title_8, label, type
 
-### Community 39 - "slide_title_9"
+### Community 42 - "slide_title_9"
 Cohesion: 0.67
 Nodes (3): slide_title_9, label, type
 
-### Community 40 - "slide_url_1"
+### Community 43 - "slide_url_1"
 Cohesion: 0.67
 Nodes (3): slide_url_1, label, type
 
-### Community 41 - "slide_url_10"
+### Community 44 - "slide_url_10"
 Cohesion: 0.67
 Nodes (3): slide_url_10, label, type
 
-### Community 42 - "slide_url_2"
+### Community 45 - "slide_url_2"
 Cohesion: 0.67
 Nodes (3): slide_url_2, label, type
 
-### Community 43 - "slide_url_3"
+### Community 46 - "slide_url_3"
 Cohesion: 0.67
 Nodes (3): slide_url_3, label, type
 
-### Community 44 - "slide_url_4"
+### Community 47 - "slide_url_4"
 Cohesion: 0.67
 Nodes (3): slide_url_4, label, type
 
-### Community 45 - "slide_url_5"
+### Community 48 - "slide_url_5"
 Cohesion: 0.67
 Nodes (3): slide_url_5, label, type
 
-### Community 46 - "slide_url_7"
+### Community 49 - "slide_url_7"
 Cohesion: 0.67
 Nodes (3): slide_url_7, label, type
 
-### Community 47 - "slide_url_8"
+### Community 50 - "slide_url_8"
 Cohesion: 0.67
 Nodes (3): slide_url_8, label, type
 
-### Community 48 - "slide_url_9"
+### Community 51 - "slide_url_9"
 Cohesion: 0.67
 Nodes (3): slide_url_9, label, type
 
-### Community 49 - "slideshow_display"
+### Community 52 - "slideshow_display"
 Cohesion: 0.67
 Nodes (3): slideshow_display, label, type
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `graphify-mcp`, `npx`, `obscura`, `@edictum/captatum`
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 383 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -286,9 +309,9 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.03389830508474576 - nodes in this community are weakly interconnected._
 - **Why does `require` connect `require` to `composer.json`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Should `label` be split into smaller, more focused modules?**
-  _Cohesion score 0.05807200929152149 - nodes in this community are weakly interconnected._
+- **Should `StaffContactController` be split into smaller, more focused modules?**
+  _Cohesion score 0.08080808080808081 - nodes in this community are weakly interconnected._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Should `mapping` be split into smaller, more focused modules?**
-  _Cohesion score 0.052564102564102565 - nodes in this community are weakly interconnected._
+- **Should `label` be split into smaller, more focused modules?**
+  _Cohesion score 0.05807200929152149 - nodes in this community are weakly interconnected._

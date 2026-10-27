@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 627 nodes, 681 edges, 61 communities. Commit: b4c1263</p>
+<p class="subtitle">Generated from graphify knowledge graph: 628 nodes, 683 edges, 64 communities. Commit: 799ac29</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -76,8 +76,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#web">web</a>
     <a href="#staffpagecontroller-php">StaffPageController.php</a>
     <a href="#montrealconfigurationform">MontrealConfigurationForm</a>
-    <a href="#contactimportcommands">ContactImportCommands</a>
     <a href="#montreal2027-tools-module">montreal2027_tools.module</a>
+    <a href="#montreal2027-tools-commands">montreal2027_tools.commands</a>
     <a href="#other">Other</a>
 </div>
 
@@ -98,7 +98,7 @@ flowchart LR
     class CLI_SKILLS_9964CBB8 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>12 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    STAFFCONTACTCONTROLLER_D3912A17("StaffContactController<br/><small>36 nodes</small>")
+    STAFFCONTACTCONTROLLER_D3912A17("StaffContactController<br/><small>45 nodes</small>")
     class STAFFCONTACTCONTROLLER_D3912A17 module;
     DB_0352A8AC("db<br/><small>30 nodes</small>")
     class DB_0352A8AC module;
@@ -112,14 +112,13 @@ flowchart LR
     class STAFFPAGECONTROLLER_PHP_64D0CFEE module;
     MONTREALCONFIGURATIONFORM_E72B8BCB("MontrealConfigurationForm<br/><small>8 nodes</small>")
     class MONTREALCONFIGURATIONFORM_E72B8BCB module;
-    CONTACTIMPORTCOMMANDS_95D725AA("ContactImportCommands<br/><small>8 nodes</small>")
-    class CONTACTIMPORTCOMMANDS_95D725AA module;
     MONTREAL2027_TOOLS_MODULE_C93A87C0("montreal2027_tools.module<br/><small>8 nodes</small>")
     class MONTREAL2027_TOOLS_MODULE_C93A87C0 module;
-    OTHER_D0941E68("Other<br/><small>40 nodes</small>")
+    MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8("montreal2027_tools.commands<br/><small>7 nodes</small>")
+    class MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8 module;
+    OTHER_D0941E68("Other<br/><small>33 nodes</small>")
     class OTHER_D0941E68 module;
     STAFFPAGECONTROLLER_PHP_64D0CFEE -->|imports x3| STAFFCONTACTCONTROLLER_D3912A17
-    CONTACTIMPORTCOMMANDS_95D725AA -->|references x2| STAFFCONTACTCONTROLLER_D3912A17
     STAFFCONTACTCONTROLLER_D3912A17 -->|imports| STAFFPAGECONTROLLER_PHP_64D0CFEE
     DB_0352A8AC -->|contains| WEB_CA84D134
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -138,7 +137,7 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>23</td><td><code>9, 57</code></td></tr><tr><td>Graph Build</td><td>349</td><td><code>0, 1, 2, 7, 10, 12, 13, 14, 15, 18, 22, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>11</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>53</code></td></tr><tr><td>Security &amp; Global Graph</td><td>12</td><td><code>17</code></td></tr><tr><td>StaffContactController</td><td>36</td><td><code>3</code></td></tr><tr><td>db</td><td>30</td><td><code>4</code></td></tr><tr><td>steps</td><td>29</td><td><code>5</code></td></tr><tr><td>regions</td><td>29</td><td><code>6</code></td></tr><tr><td>web</td><td>23</td><td><code>8</code></td></tr><tr><td>StaffPageController.php</td><td>12</td><td><code>16</code></td></tr><tr><td>MontrealConfigurationForm</td><td>8</td><td><code>19</code></td></tr><tr><td>ContactImportCommands</td><td>8</td><td><code>20</code></td></tr><tr><td>montreal2027_tools.module</td><td>8</td><td><code>21</code></td></tr><tr><td>Other</td><td>40</td><td><code>23, 24, 26, 27, 50, 52, 54, 55, 56, 58, 59, 60</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>23</td><td><code>9, 60</code></td></tr><tr><td>Graph Build</td><td>349</td><td><code>0, 2, 3, 7, 11, 12, 13, 16, 17, 18, 19, 22, 25, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 54</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>10</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>56</code></td></tr><tr><td>Security &amp; Global Graph</td><td>12</td><td><code>15</code></td></tr><tr><td>StaffContactController</td><td>45</td><td><code>1</code></td></tr><tr><td>db</td><td>30</td><td><code>4</code></td></tr><tr><td>steps</td><td>29</td><td><code>5</code></td></tr><tr><td>regions</td><td>29</td><td><code>6</code></td></tr><tr><td>web</td><td>23</td><td><code>8</code></td></tr><tr><td>StaffPageController.php</td><td>12</td><td><code>14</code></td></tr><tr><td>MontrealConfigurationForm</td><td>8</td><td><code>20</code></td></tr><tr><td>montreal2027_tools.module</td><td>8</td><td><code>21</code></td></tr><tr><td>montreal2027_tools.commands</td><td>7</td><td><code>23</code></td></tr><tr><td>Other</td><td>33</td><td><code>24, 26, 27, 53, 55, 57, 58, 59, 61, 62, 63</code></td></tr>
     </table>
   </div>
   <div class="card">
@@ -150,12 +149,12 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>627 nodes · 681 edges · 61 communities (45 shown, 16 thin omitted)</li>
+      <li>628 nodes · 683 edges · 64 communities (50 shown, 14 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `require` - 59 edges</li>
       <li>2. `mapping` - 34 edges</li>
-      <li>3. `regions` - 16 edges</li>
+      <li>3. `StaffContactController` - 16 edges</li>
     </ul>
   </div>
 </div>
@@ -1291,75 +1290,71 @@ flowchart LR
 
 <!-- ====== 7. StaffContactController ====== -->
 <h2 id="staffcontactcontroller">7. StaffContactController</h2>
-<p>StaffContactController groups implementation around web, modules, custom, montreal2027, mostly in src/Controller/StaffContactController.php, Plugin/Block/LanguageToggleBlock.php. This section covers 36 nodes and 66 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>StaffContactController groups implementation around web, modules, custom, montreal2027, mostly in src/Controller/StaffContactController.php, Plugin/Block/LanguageToggleBlock.php, src/Commands/ContactImportCommands.php. This section covers 45 nodes and 80 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: StaffContactController (36 nodes, 66 edges)
+    %% Section: StaffContactController (45 nodes, 80 edges)
     subgraph staffcontactcontroller_src_Controller_StaffConta_ba9a17e3["src/Controller/StaffContactController.php"]
-        web_modules_custom_montreal2027_tools_src_contro_b983e1bc("StaffContactController.php")
         web_modules_custom_montreal2027_tools_src_contro_7bc76770("StaffContactController<br/><small>src/Controller/StaffContactController.php</small>")
-        web_modules_custom_montreal2027_tools_src_contro_2a020627("submit()<br/><small>src/Controller/StaffContactController.php</small>")
-        web_modules_custom_montreal2027_tools_src_contro_c3e673d5("sendContactEmail()<br/><small>src/Controller/StaffContactController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_b983e1bc("StaffContactController.php")
         web_modules_custom_montreal2027_tools_src_contro_b0228183("getSubmittedData()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_f4363d47("getTargetTerm()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_fa8fccad("getEmailTo()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_11d3b015("getSubject()<br/><small>src/Controller/StaffContactController.php</small>")
+        web_modules_custom_montreal2027_tools_src_contro_b38d35c2("getTranslatedTerm()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_823a7766("getTranslatedMessages()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_396cb679("__construct()<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_40ad6e8f("create()<br/><small>src/Controller/StaffContactController.php</small>")
     end
+    subgraph staffcontactcontroller_src_Commands_ContactImpor_0acfd582["src/Commands/ContactImportCommands.php"]
+        web_modules_custom_montreal2027_tools_src_comman_9745b406("ContactImportCommands<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_0bf6dd76("ContactImportCommands.php")
+        web_modules_custom_montreal2027_tools_src_comman_666a9f7e("resolvePath()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_d7193f46("combineHeaderAndRow()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_d4aaaf68("__construct()<br/><small>src/Commands/ContactImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_47a891c2("importContacts()<br/><small>src/Commands/ContactImportCommands.php</small>")
+    end
     subgraph staffcontactcontroller_Plugin_Block_LanguageTogg_4276bdd4["Plugin/Block/LanguageToggleBlock.php"]
         web_modules_custom_montreal2027_tools_src_plugin_bad924b4("LanguageToggleBlock.php")
         web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf("LanguageToggleBlock<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_78220e70("buildLinkData()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_e72d7072("buildLinkElement()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_01de3c74("__construct()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4("create()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_e35bc456("build()<br/><small>Plugin/Block/LanguageToggleBlock.php</small>")
     end
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d7193f46
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d4aaaf68
+    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_47a891c2
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_b0228183
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_f4363d47
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_fa8fccad
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_11d3b015
+    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_b38d35c2
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_823a7766
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_396cb679
     web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_40ad6e8f
-    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_2a020627
-    web_modules_custom_montreal2027_tools_src_contro_7bc76770 -->|method| web_modules_custom_montreal2027_tools_src_contro_c3e673d5
-    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_78220e70
-    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_e72d7072
-    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_01de3c74
-    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4
-    web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf -->|method| web_modules_custom_montreal2027_tools_src_plugin_e35bc456
+    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_d7193f46
+    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
+    web_modules_custom_montreal2027_tools_src_contro_11d3b015 -->|calls| web_modules_custom_montreal2027_tools_src_contro_b38d35c2
     web_modules_custom_montreal2027_tools_src_contro_b0228183 -->|calls| web_modules_custom_montreal2027_tools_src_contro_f4363d47
-    web_modules_custom_montreal2027_tools_src_contro_c3e673d5 -->|calls| web_modules_custom_montreal2027_tools_src_contro_fa8fccad
-    web_modules_custom_montreal2027_tools_src_contro_c3e673d5 -->|calls| web_modules_custom_montreal2027_tools_src_contro_11d3b015
-    web_modules_custom_montreal2027_tools_src_contro_2a020627 -->|calls| web_modules_custom_montreal2027_tools_src_contro_823a7766
-    web_modules_custom_montreal2027_tools_src_contro_2a020627 -->|calls| web_modules_custom_montreal2027_tools_src_contro_b0228183
-    web_modules_custom_montreal2027_tools_src_contro_2a020627 -->|calls| web_modules_custom_montreal2027_tools_src_contro_c3e673d5
-    web_modules_custom_montreal2027_tools_src_plugin_e35bc456 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_78220e70
-    web_modules_custom_montreal2027_tools_src_plugin_78220e70 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_e72d7072
-    %% Omitted for readability: 18 nodes, 0 edges
-    class web_modules_custom_montreal2027_tools_src_contro_b983e1bc klass;
+    %% Omitted for readability: 27 nodes, 0 edges
     class web_modules_custom_montreal2027_tools_src_contro_7bc76770 klass;
-    class web_modules_custom_montreal2027_tools_src_contro_2a020627 function;
-    class web_modules_custom_montreal2027_tools_src_contro_c3e673d5 function;
+    class web_modules_custom_montreal2027_tools_src_contro_b983e1bc klass;
     class web_modules_custom_montreal2027_tools_src_contro_b0228183 function;
     class web_modules_custom_montreal2027_tools_src_contro_f4363d47 function;
     class web_modules_custom_montreal2027_tools_src_contro_fa8fccad function;
     class web_modules_custom_montreal2027_tools_src_contro_11d3b015 function;
+    class web_modules_custom_montreal2027_tools_src_contro_b38d35c2 function;
     class web_modules_custom_montreal2027_tools_src_contro_823a7766 function;
     class web_modules_custom_montreal2027_tools_src_contro_396cb679 function;
     class web_modules_custom_montreal2027_tools_src_contro_40ad6e8f function;
+    class web_modules_custom_montreal2027_tools_src_comman_9745b406 entry;
+    class web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 entry;
+    class web_modules_custom_montreal2027_tools_src_comman_666a9f7e function;
+    class web_modules_custom_montreal2027_tools_src_comman_d7193f46 function;
+    class web_modules_custom_montreal2027_tools_src_comman_d4aaaf68 function;
+    class web_modules_custom_montreal2027_tools_src_comman_47a891c2 function;
     class web_modules_custom_montreal2027_tools_src_plugin_bad924b4 klass;
     class web_modules_custom_montreal2027_tools_src_plugin_e9b4bccf klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_78220e70 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_e72d7072 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_01de3c74 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_c6ba81a4 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_e35bc456 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1383,14 +1378,22 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>create()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>getEmailTo()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br>+6 more</td>
-  <td>StaffContactController node in src/Controller/StaffContactController.php.</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br>+1 more</td>
+  <td>ContactImportCommands node in src/Commands/ContactImportCommands.php.</td>
 </tr>
 <tr>
   <td>2</td>
+  <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>create()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>getEmailTo()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br>+7 more</td>
+  <td>StaffContactController node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>3</td>
   <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
@@ -1398,7 +1401,39 @@ flowchart LR
   <td>LanguageToggleBlock node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>4</td>
+  <td><code>.combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.combineHeaderAndRow() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.__construct() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>.importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>.importContacts() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>.resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.resolvePath() node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>8</td>
   <td><code>.__construct()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1406,7 +1441,7 @@ flowchart LR
   <td>.__construct() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>9</td>
   <td><code>.create()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1414,7 +1449,7 @@ flowchart LR
   <td>.create() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>10</td>
   <td><code>.getEmailTo()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>sendContactEmail()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1422,15 +1457,15 @@ flowchart LR
   <td>.getEmailTo() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>11</td>
   <td><code>.getSubject()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>sendContactEmail()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
-  <td>No direct outbound edge</td>
+  <td><code>getTranslatedTerm()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td>.getSubject() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>12</td>
   <td><code>.getSubmittedData()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1438,7 +1473,7 @@ flowchart LR
   <td>.getSubmittedData() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>13</td>
   <td><code>.getTargetTerm()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>getSubmittedData()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1446,7 +1481,7 @@ flowchart LR
   <td>.getTargetTerm() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>14</td>
   <td><code>.getTranslatedMessages()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1454,7 +1489,15 @@ flowchart LR
   <td>.getTranslatedMessages() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>15</td>
+  <td><code>.getTranslatedTerm()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>getSubject()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.getTranslatedTerm() node in src/Controller/StaffContactController.php.</td>
+</tr>
+<tr>
+  <td>16</td>
   <td><code>.sendContactEmail()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1462,7 +1505,7 @@ flowchart LR
   <td>.sendContactEmail() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>17</td>
   <td><code>.submit()</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>StaffContactController</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1470,7 +1513,7 @@ flowchart LR
   <td>.submit() node in src/Controller/StaffContactController.php.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>18</td>
   <td><code>.build()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1478,7 +1521,7 @@ flowchart LR
   <td>.build() node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>19</td>
   <td><code>.buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>build()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1486,7 +1529,7 @@ flowchart LR
   <td>.buildLinkData() node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>20</td>
   <td><code>.buildLinkElement()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>buildLinkData()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1494,7 +1537,7 @@ flowchart LR
   <td>.buildLinkElement() node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>21</td>
   <td><code>.__construct()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1502,7 +1545,7 @@ flowchart LR
   <td>.__construct() node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>22</td>
   <td><code>.create()</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>LanguageToggleBlock</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1510,7 +1553,7 @@ flowchart LR
   <td>.create() node in Plugin/Block/LanguageToggleBlock.php.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>23</td>
   <td><code>Drupal\Core\Block\Attribute\Block</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1518,7 +1561,7 @@ flowchart LR
   <td>Drupal\Core\Block\Attribute\Block node in project.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>24</td>
   <td><code>Drupal\Core\Block\BlockBase</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -1526,7 +1569,7 @@ flowchart LR
   <td>Drupal\Core\Block\BlockBase node in project.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>25</td>
   <td><code>Drupal\Core\Controller\ControllerBase</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
@@ -1534,7 +1577,7 @@ flowchart LR
   <td>Drupal\Core\Controller\ControllerBase node in project.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>26</td>
   <td><code>Drupal\Core\Entity\EntityTypeManagerInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1542,7 +1585,7 @@ flowchart LR
   <td>Drupal\Core\Entity\EntityTypeManagerInterface node in project.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>27</td>
   <td><code>Drupal\Core\Language\LanguageManagerInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1550,7 +1593,7 @@ flowchart LR
   <td>Drupal\Core\Language\LanguageManagerInterface node in project.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>28</td>
   <td><code>Drupal\Core\Logger\LoggerChannelFactoryInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1558,7 +1601,7 @@ flowchart LR
   <td>Drupal\Core\Logger\LoggerChannelFactoryInterface node in project.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>29</td>
   <td><code>Drupal\Core\Mail\MailManagerInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
@@ -1566,60 +1609,12 @@ flowchart LR
   <td>Drupal\Core\Mail\MailManagerInterface node in project.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>30</td>
   <td><code>Drupal\Core\Plugin\ContainerFactoryPluginInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
   <td>No direct outbound edge</td>
   <td>Drupal\Core\Plugin\ContainerFactoryPluginInterface node in project.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>Drupal\Core\Routing\RouteMatchInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-endpoint">API</span></td>
-  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\Core\Routing\RouteMatchInterface node in project.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>Drupal\Core\StringTranslation\TranslatableMarkup</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\Core\StringTranslation\TranslatableMarkup node in project.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>Drupal\Core\Url</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\Core\Url node in project.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>Exception</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Exception node in project.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>Object</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Object node in project.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>Symfony\Component\DependencyInjection\ContainerInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Builds dependency relationships and graph data.</td>
 </tr>
 </table>
 
@@ -1628,13 +1623,14 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>src/Controller/StaffContactController.php</code></td><td>11 nodes</td></tr>
+      <tr><td><code>src/Controller/StaffContactController.php</code></td><td>12 nodes</td></tr>
 <tr><td><code>Plugin/Block/LanguageToggleBlock.php</code></td><td>7 nodes</td></tr>
+<tr><td><code>src/Commands/ContactImportCommands.php</code></td><td>6 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: references x22, imports x17, method x14, calls x8. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: references x23, imports x20, method x19, calls x11. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3250,146 +3246,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 14. ContactImportCommands ====== -->
-<h2 id="contactimportcommands">14. ContactImportCommands</h2>
-<p>ContactImportCommands groups implementation around contactimportcommandsphp, web, modules, custom, mostly in src/Commands/ContactImportCommands.php. This section covers 8 nodes and 10 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: ContactImportCommands (8 nodes, 10 edges)
-    subgraph contactimportcommands_src_Commands_ContactImport_8ec5a13a["src/Commands/ContactImportCommands.php"]
-        web_modules_custom_montreal2027_tools_src_comman_9745b406("ContactImportCommands<br/><small>src/Commands/ContactImportCommands.php</small>")
-        web_modules_custom_montreal2027_tools_src_comman_0bf6dd76("ContactImportCommands.php")
-        web_modules_custom_montreal2027_tools_src_comman_47a891c2("importContacts()<br/><small>src/Commands/ContactImportCommands.php</small>")
-        web_modules_custom_montreal2027_tools_src_comman_666a9f7e("resolvePath()<br/><small>src/Commands/ContactImportCommands.php</small>")
-        web_modules_custom_montreal2027_tools_src_comman_d7193f46("combineHeaderAndRow()<br/><small>src/Commands/ContactImportCommands.php</small>")
-        web_modules_custom_montreal2027_tools_src_comman_d4aaaf68("__construct()<br/><small>src/Commands/ContactImportCommands.php</small>")
-    end
-    subgraph contactimportcommands_External_generated_38f5c87a["External / generated"]
-        drupal_user_userinterface_bf2f0fe6("Drupal\user\UserInterface")
-        drush_commands_drushcommands_41af6e2b("Drush\Commands\DrushCommands")
-    end
-    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
-    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d7193f46
-    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d4aaaf68
-    web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_47a891c2
-    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_d7193f46
-    web_modules_custom_montreal2027_tools_src_comman_47a891c2 -->|calls| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
-    web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drupal_user_userinterface_bf2f0fe6
-    web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drush_commands_drushcommands_41af6e2b
-    class web_modules_custom_montreal2027_tools_src_comman_9745b406 entry;
-    class web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 entry;
-    class web_modules_custom_montreal2027_tools_src_comman_47a891c2 function;
-    class web_modules_custom_montreal2027_tools_src_comman_666a9f7e function;
-    class web_modules_custom_montreal2027_tools_src_comman_d7193f46 function;
-    class web_modules_custom_montreal2027_tools_src_comman_d4aaaf68 function;
-    class drupal_user_userinterface_bf2f0fe6 klass;
-    class drush_commands_drushcommands_41af6e2b entry;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br>+1 more</td>
-  <td>ContactImportCommands node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>.combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.combineHeaderAndRow() node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>.__construct()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.__construct() node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>.importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><code>combineHeaderAndRow()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>.importContacts() node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>.resolvePath()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>ContactImportCommands</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>importContacts()</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.resolvePath() node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>Drupal\user\UserInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\user\UserInterface node in project.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>Drush\Commands\DrushCommands</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drush\Commands\DrushCommands node in project.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>Drupal\Core\Entity\EntityTypeManagerInt...</code><br><code>Drupal\user\UserInterface</code><br><code>Drush\Commands\DrushCommands</code></td>
-  <td>ContactImportCommands.php node in src/Commands/ContactImportCommands.php.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>src/Commands/ContactImportCommands.php</code></td><td>6 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: method x4, calls x2, imports x2, inherits x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 15. montreal2027_tools.module ====== -->
-<h2 id="montreal2027-tools-module">15. montreal2027_tools.module</h2>
+<!-- ====== 14. montreal2027_tools.module ====== -->
+<h2 id="montreal2027-tools-module">14. montreal2027_tools.module</h2>
 <p>montreal2027_tools.module groups implementation around montreal2027, tools, toolsmodule, web, mostly in custom/montreal2027_tools/montreal2027_tools.module. This section covers 8 nodes and 9 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3521,60 +3379,34 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 16. Other ====== -->
-<h2 id="other">16. Other</h2>
-<p>Other groups implementation around montreal2027, web, modules, custom, mostly in custom/montreal2027_tools/drush.services.yml, custom/montreal2027_tools/montreal2027_tools.links.menu.yml, custom/montreal2027_tools/montreal2027_tools.info.yml. This section covers 40 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 15. montreal2027_tools.commands ====== -->
+<h2 id="montreal2027-tools-commands">15. montreal2027_tools.commands</h2>
+<p>montreal2027_tools.commands groups implementation around drushservicesyml, montreal2027, web, modules, mostly in custom/montreal2027_tools/drush.services.yml. This section covers 7 nodes and 6 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (40 nodes, 28 edges)
-    subgraph other_custom_montreal2027_tools_drush_services_y_ee3b2a49["custom/montreal2027_tools/drush.services.yml"]
-        web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_f82b60ac("class<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_e809d8cb("drush.services.yml")
-        web_modules_custom_montreal2027_tools_drush_serv_ff19580f("montreal2027_tools.commands<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_9e1203d3("name<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_538801c7("services<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3("tags<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-    end
-    subgraph other_custom_montreal2027_tools_montreal2027_too_36cf4aee["custom/montreal2027_tools/montreal2027_tools.config_translation.yml"]
-        web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8("base_route_name<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
-        web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb("montreal2027 tools.config translation.yml<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
-        web_modules_custom_montreal2027_tools_montreal20_455963af("montreal2027_tools.settings<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
-        web_modules_custom_montreal2027_tools_montreal20_29619b50("names<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
-        web_modules_custom_montreal2027_tools_montreal20_651ab53d("title<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
-    end
-    subgraph other_githooks_pre_commit_58d4070e[".githooks/pre-commit"]
-        githooks_pre_commit_52616355("pre-commit")
-        githooks_pre_commit_entry_af729878("pre-commit script<br/><small>.githooks/pre-commit</small>")
-    end
-    subgraph other_custom_montreal2027_tools_montreal2027_too_7e425737["custom/montreal2027_tools/montreal2027_tools.info.yml"]
-        web_modules_custom_montreal2027_tools_montreal20_5df542b1("core_version_requirement<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
-        web_modules_custom_montreal2027_tools_montreal20_3cdbfda3("description<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
-    end
-    symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
-    web_sites_default_settings_893897a6("settings.php")
-    web_sites_default_settings_893897a6 -->|imports| symfony_component_dotenv_dotenv_20661c2d
-    %% Omitted for readability: 22 nodes, 0 edges
+    %% Section: montreal2027_tools.commands (7 nodes, 6 edges)
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f("montreal2027_tools.commands<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_e809d8cb("drush.services.yml")
+    web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3("tags<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_538801c7("services<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_9e1203d3("name<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_f82b60ac("class<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_e809d8cb -->|contains| web_modules_custom_montreal2027_tools_drush_serv_538801c7
+    web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_9e1203d3
+    web_modules_custom_montreal2027_tools_drush_serv_538801c7 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_ff19580f
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_f82b60ac
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3
+    class web_modules_custom_montreal2027_tools_drush_serv_ff19580f entry;
+    class web_modules_custom_montreal2027_tools_drush_serv_e809d8cb function;
+    class web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_538801c7 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_9e1203d3 function;
     class web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0 function;
     class web_modules_custom_montreal2027_tools_drush_serv_f82b60ac function;
-    class web_modules_custom_montreal2027_tools_drush_serv_e809d8cb function;
-    class web_modules_custom_montreal2027_tools_drush_serv_ff19580f entry;
-    class web_modules_custom_montreal2027_tools_drush_serv_9e1203d3 function;
-    class web_modules_custom_montreal2027_tools_drush_serv_538801c7 function;
-    class web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3 function;
-    class web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8 api;
-    class web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb function;
-    class web_modules_custom_montreal2027_tools_montreal20_455963af function;
-    class web_modules_custom_montreal2027_tools_montreal20_29619b50 function;
-    class web_modules_custom_montreal2027_tools_montreal20_651ab53d function;
-    class githooks_pre_commit_52616355 function;
-    class githooks_pre_commit_entry_af729878 function;
-    class web_modules_custom_montreal2027_tools_montreal20_5df542b1 function;
-    class web_modules_custom_montreal2027_tools_montreal20_3cdbfda3 function;
-    class symfony_component_dotenv_dotenv_20661c2d ui;
-    class web_sites_default_settings_893897a6 module;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -3652,190 +3484,6 @@ flowchart LR
   <td>No direct outbound edge</td>
   <td>name node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
-<tr>
-  <td>8</td>
-  <td><code>montreal2027_tools.links.menu.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.links.menu.yml node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>montreal2027_tools.settings</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.settings node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>description node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>parent</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>parent node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>route_name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-endpoint">API</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>route_name node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>title node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>weight</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>weight node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>montreal2027_tools.info.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.info.yml node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>core_version_requirement</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>core_version_requirement node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>description node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>name node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>package</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>package node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>type</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>type node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>montreal2027_tools.config_translation.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>montreal2027_tools.settings</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.settings node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>base_route_name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
-  <td><span class="tag tag-endpoint">API</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>base_route_name node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>names</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>names node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>title node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>entrypoint.sh</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>entrypoint.sh node in docker/web/entrypoint.sh.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>entrypoint.sh script</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>entrypoint.sh script node in docker/web/entrypoint.sh.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>pre-commit</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>pre-commit node in .githooks/pre-commit.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>pre-commit script</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>pre-commit script node in .githooks/pre-commit.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>setup-graphify.sh</code><br><small style="color:var(--muted)">scripts/setup-graphify.sh</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Builds dependency relationships and graph data.</td>
-</tr>
 </table>
 
 <div class="grid">
@@ -3844,18 +3492,350 @@ flowchart LR
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>custom/montreal2027_tools/drush.services.yml</code></td><td>7 nodes</td></tr>
-<tr><td><code>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</code></td><td>7 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 16. Other ====== -->
+<h2 id="other">16. Other</h2>
+<p>Other groups implementation around montreal2027, web, modules, custom, mostly in custom/montreal2027_tools/montreal2027_tools.links.menu.yml, custom/montreal2027_tools/montreal2027_tools.info.yml, custom/montreal2027_tools/montreal2027_tools.config_translation.yml. This section covers 33 nodes and 22 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: Other (33 nodes, 22 edges)
+    subgraph other_custom_montreal2027_tools_montreal2027_too_7e425737["custom/montreal2027_tools/montreal2027_tools.info.yml"]
+        web_modules_custom_montreal2027_tools_montreal20_5df542b1("core_version_requirement<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_3cdbfda3("description<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_4542af63("montreal2027_tools.info.yml")
+        web_modules_custom_montreal2027_tools_montreal20_defab284("name<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_d8abdcfd("package<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_bb7cb59f("type<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
+    end
+    subgraph other_custom_montreal2027_tools_montreal2027_too_36cf4aee["custom/montreal2027_tools/montreal2027_tools.config_translation.yml"]
+        web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8("base_route_name<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb("montreal2027 tools.config translation.yml<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_455963af("montreal2027_tools.settings<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_29619b50("names<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_651ab53d("title<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+    end
+    subgraph other_custom_montreal2027_tools_montreal2027_too_fb9e2e56["custom/montreal2027_tools/montreal2027_tools.links.menu.yml"]
+        web_modules_custom_montreal2027_tools_montreal20_1ec84cdc("description<br/><small>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_59d88efd("montreal2027 tools.links.menu.yml<br/><small>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_842e8858("montreal2027_tools.settings<br/><small>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small>")
+    end
+    subgraph other_githooks_pre_commit_58d4070e[".githooks/pre-commit"]
+        githooks_pre_commit_52616355("pre-commit")
+        githooks_pre_commit_entry_af729878("pre-commit script<br/><small>.githooks/pre-commit</small>")
+    end
+    symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
+    web_sites_default_settings_893897a6("settings.php")
+    web_sites_default_settings_893897a6 -->|imports| symfony_component_dotenv_dotenv_20661c2d
+    %% Omitted for readability: 15 nodes, 0 edges
+    class web_modules_custom_montreal2027_tools_montreal20_5df542b1 function;
+    class web_modules_custom_montreal2027_tools_montreal20_3cdbfda3 function;
+    class web_modules_custom_montreal2027_tools_montreal20_4542af63 function;
+    class web_modules_custom_montreal2027_tools_montreal20_defab284 function;
+    class web_modules_custom_montreal2027_tools_montreal20_d8abdcfd function;
+    class web_modules_custom_montreal2027_tools_montreal20_bb7cb59f function;
+    class web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8 api;
+    class web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb function;
+    class web_modules_custom_montreal2027_tools_montreal20_455963af function;
+    class web_modules_custom_montreal2027_tools_montreal20_29619b50 function;
+    class web_modules_custom_montreal2027_tools_montreal20_651ab53d function;
+    class web_modules_custom_montreal2027_tools_montreal20_1ec84cdc function;
+    class web_modules_custom_montreal2027_tools_montreal20_59d88efd function;
+    class web_modules_custom_montreal2027_tools_montreal20_842e8858 function;
+    class githooks_pre_commit_52616355 function;
+    class githooks_pre_commit_entry_af729878 function;
+    class symfony_component_dotenv_dotenv_20661c2d ui;
+    class web_sites_default_settings_893897a6 module;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>montreal2027_tools.links.menu.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools.links.menu.yml node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>montreal2027_tools.settings</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools.settings node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>parent</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>parent node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>route_name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>route_name node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>title node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>weight</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>weight node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>montreal2027_tools.info.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools.info.yml node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>core_version_requirement</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>core_version_requirement node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>name node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>package</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>package node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>type</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>type node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>montreal2027_tools.config_translation.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>montreal2027_tools.settings</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools.settings node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>base_route_name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>base_route_name node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>names</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>names node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>title node in custom/montreal2027_tools/montreal2027_tools.config_translation.yml.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>entrypoint.sh</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>entrypoint.sh node in docker/web/entrypoint.sh.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>entrypoint.sh script</code><br><small style="color:var(--muted)">docker/web/entrypoint.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>entrypoint.sh script node in docker/web/entrypoint.sh.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>pre-commit</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>pre-commit node in .githooks/pre-commit.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>pre-commit script</code><br><small style="color:var(--muted)">.githooks/pre-commit</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>pre-commit script node in .githooks/pre-commit.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>setup-graphify.sh</code><br><small style="color:var(--muted)">scripts/setup-graphify.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>setup-graphify.sh script</code><br><small style="color:var(--muted)">scripts/setup-graphify.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>Builds dependency relationships and graph data.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>sync.sh</code><br><small style="color:var(--muted)">scripts/sync.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>sync.sh node in scripts/sync.sh.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>sync.sh script</code><br><small style="color:var(--muted)">scripts/sync.sh</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>sync.sh script node in scripts/sync.sh.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>Symfony\Component\Dotenv\Dotenv</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>settings.php</code><br><small style="color:var(--muted)">sites/default/settings.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Symfony\Component\Dotenv\Dotenv node in project.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>settings.php</code><br><small style="color:var(--muted)">sites/default/settings.php</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Symfony\Component\Dotenv\Dotenv</code></td>
+  <td>settings.php node in sites/default/settings.php.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>attach()</code><br><small style="color:var(--muted)">montreal2027_tools/js/staff-contact-modal.js</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>attach() node in montreal2027_tools/js/staff-contact-modal.js.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>staff-contact-modal.js</code><br><small style="color:var(--muted)">montreal2027_tools/js/staff-contact-modal.js</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>staff-contact-modal.js node in montreal2027_tools/js/staff-contact-modal.js.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</code></td><td>7 nodes</td></tr>
 <tr><td><code>custom/montreal2027_tools/montreal2027_tools.info.yml</code></td><td>6 nodes</td></tr>
 <tr><td><code>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</code></td><td>5 nodes</td></tr>
 <tr><td><code>.githooks/pre-commit</code></td><td>2 nodes</td></tr>
 <tr><td><code>docker/web/entrypoint.sh</code></td><td>2 nodes</td></tr>
 <tr><td><code>scripts/setup-graphify.sh</code></td><td>2 nodes</td></tr>
 <tr><td><code>scripts/sync.sh</code></td><td>2 nodes</td></tr>
+<tr><td><code>montreal2027_tools/js/staff-contact-modal.js</code></td><td>2 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x27, imports x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x21, imports x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3866,17 +3846,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>627</td></tr>
-      <tr><td>Edges</td><td>681</td></tr>
+      <tr><td>Nodes</td><td>628</td></tr>
+      <tr><td>Edges</td><td>683</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>61</td></tr>
+      <tr><td>Communities</td><td>64</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>681</td></tr>
+      <tr><td>EXTRACTED</td><td>683</td></tr>
       <tr><td>INFERRED</td><td>0</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3885,7 +3865,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>montreal2027.ca — Architecture Documentation</p>
-  <p>Generated: 2026-10-27 03:25 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-10-27 05:16 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
