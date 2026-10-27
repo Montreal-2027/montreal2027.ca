@@ -22,8 +22,8 @@ class StaffContactController extends ControllerBase
   const SUCCESS_MESSAGE = 'success_message';
   const SUBJECT_PREFIX = 'subject_prefix';
 
-  var $translated_content = [];
-  var $langcode = '';
+  private $translated_content = [];
+  private $langcode = '';
 
   /**
    * Constructs the contact controller.
@@ -115,11 +115,11 @@ class StaffContactController extends ControllerBase
   /**
    * Get and validate the submitted data
    * 
-   * @param Object $request
+   * @param Request $request
    * @throws Exception
    * @return void
    */
-  private function getSubmittedData(Object $request): array {
+  private function getSubmittedData(Request $request): array {
     $result = [
       'tid' => (int) $request->get('tid', 0),
       'name' => trim((string) $request->get('name', '')),
@@ -177,11 +177,11 @@ class StaffContactController extends ControllerBase
    * Get the email address the Contact Message is being sent to, based on the
    * target's taxonomy term
    * 
-   * @param object $term
+   * @param \Drupal\taxonomy\TermInterface $term
    * @throws Exception
    * @return string
    */
-  private function getEmailTo(Object $term): string {
+  private function getEmailTo(\Drupal\taxonomy\TermInterface $term): string {
     $result = '';
 
     foreach ($term->get('field_email_address') as $item) {
@@ -253,7 +253,7 @@ class StaffContactController extends ControllerBase
     $this->translated_content = [];
     foreach ($messages as $msg_id => $default_message) {
       $translation = trim((string) ($config->get($msg_id) ?? ''));
-      $this->translated_content[$msg_id] = $this->t($translation ?: $default_message);
+      $this->translated_content[$msg_id] = $translation ?: $this->t($default_message);
     }
   }
 }
