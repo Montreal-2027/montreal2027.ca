@@ -7,6 +7,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Mail\MailManagerInterface;
+use Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +15,14 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Handles AJAX submission for staff contact messages.
  */
-class StaffContactController extends ControllerBase {
+class StaffContactController extends ControllerBase
+{
+  const FAILURE_MESSAGE = 'failure_message';
+  const FAILURE_MESSAGE_EMAIL = 'failure_message_email';
+  const SUCCESS_MESSAGE = 'success_message';
+  const SUBJECT_PREFIX = 'subject_prefix';
+
+  var $translated_content = [];
 
   /**
    * Constructs the contact controller.
@@ -40,123 +48,199 @@ class StaffContactController extends ControllerBase {
 
   /**
    * Submits a contact message to the staff term's email address.
+   * 
+   * @param Request $request
+   * @return JsonResponse
    */
-  public function submit(Request $request): JsonResponse {
-    $config = $this->config('montreal2027_tools.staff_page_settings');
+  public function submit(Request $request): JsonResponse
+  {
+    $this->getTranslatedMessages();
 
-    $failure_message = trim((string) ($config->get('failure_message') ?? ''));
-    if ($failure_message === '') {
-      $failure_message = 'There was a problem sending your message.  Please try again later.';
-    }
+    try {
+      $submission = $this->getSubmittedData($request->request);
+      $this->sendContactEmail($submission);
 
-    $success_message = trim((string) ($config->get('success_message') ?? ''));
-    if ($success_message === '') {
-      $success_message = 'Your message has been sent.  A member of our staff will reach out if appropriate.';
-    }
+      return new JsonResponse([
+        'success' => TRUE,
+        'message' => $this->translated_content[self::SUCCESS_MESSAGE],
+      ]);
 
-    $subject_prefix = trim((string) ($config->get('subject_prefix') ?? ''));
-    if ($subject_prefix === '') {
-      $subject_prefix = 'Staff contact message for ';
-    }
-
-    $tid = (int) $request->request->get('tid', 0);
-    $name = trim((string) $request->request->get('name', ''));
-    $email = trim((string) $request->request->get('email', ''));
-    // A dot-less domain like "localhost" is officially valid, but filter_var()
-    // doesn't like it. For our purposes, we don't need to accept them, so we 
-    // return it as an error
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $failure_message = $this->t('Please enter a valid email address.');
-      $email = '';
-    }
-    $message = trim((string) $request->request->get('message', ''));
-
-
-    if ($tid <= 0 || $name === '' || $email === '' || $message === '') {
+    } catch (Exception $e) {
       return new JsonResponse([
         'success' => FALSE,
-        'message' => $failure_message,
-      ], 400);
+        // Return a general failure message unless a specific one has been thrown
+        'message' => $e->getMessage() ?: $this->translated_content[self::FAILURE_MESSAGE],
+      ], $e->getCode());
     }
+  }
 
-    /** @var \Drupal\taxonomy\TermInterface|null $term */
-    $term = $this->typedEntityManager->getStorage('taxonomy_term')->load($tid);
-    if (!$term || !$term->hasField('field_email_address') || $term->get('field_email_address')->isEmpty()) {
-      return new JsonResponse([
-        'success' => FALSE,
-        'message' => $failure_message,
-      ], 404);
-    }
-
-    $recipient = '';
-    foreach ($term->get('field_email_address') as $item) {
-      $candidate = trim((string) $item->value);
-      if ($candidate !== '' && filter_var($candidate, FILTER_VALIDATE_EMAIL)) {
-        $recipient = $candidate;
-        break;
-      }
-    }
-
-    if ($recipient === '') {
-      return new JsonResponse([
-        'success' => FALSE,
-        'message' => $failure_message,
-      ], 404);
-    }
-
-    // Prevent header injection from line breaks in user-entered name.
-    $safe_name = preg_replace('/[\r\n]+/', ' ', $name) ?? '';
-    $safe_name = trim($safe_name);
-    if ($safe_name === '') {
-      return new JsonResponse([
-        'success' => FALSE,
-        'message' => $failure_message,
-      ], 400);
-    }
-
+  /**
+   * Send a contact email to the selected Team member
+   * 
+   * @param array $submission
+   * @throws Exception
+   * @return JsonResponse
+   */
+  private function sendContactEmail(array $submission) : void {
+    $email_to = $this->getEmailTo($submission['term']);
     $langcode = $this->siteLanguageManager->getCurrentLanguage()->getId();
-
-    /** @var \Drupal\taxonomy\TermStorageInterface $term_storage */
-    $term_storage = $this->typedEntityManager->getStorage('taxonomy_term');
-    $all_parents = $term_storage->loadAllParents($tid);
-    $division_label = (string) $term->label();
-    foreach ($all_parents as $ancestor_term) {
-      $division_label = (string) $ancestor_term->label();
-    }
-
-    $subject = $subject_prefix !== ''
-      ? rtrim($subject_prefix) . ' ' . $division_label
-      : $division_label;
+    $subject = $this->getSubject($submission['tid']);
 
     $result = $this->mailManager->mail(
       'montreal2027_tools',
       'staff_contact',
-      $recipient,
+      $email_to,
       $langcode,
       [
         'subject' => $subject,
-        'body' => $message,
-        'from_name' => $safe_name,
-        'from_email' => $email,
+        'body' => $submission['message'],
+        'from_name' => $submission['name'],
+        'from_email' => $submission['email'],
       ],
-      $email,
+      $submission['email'],
       TRUE,
     );
 
     if (empty($result['result'])) {
+      // Something went wrong sending the email
       $this->logChannelFactory->get('montreal2027_tools')->error('Failed to send staff contact email for term ID @tid.', [
-        '@tid' => $tid,
+        '@tid' => $submission['tid'],
       ]);
-      return new JsonResponse([
-        'success' => FALSE,
-        'message' => $failure_message,
-      ], 500);
-    }
 
-    return new JsonResponse([
-      'success' => TRUE,
-      'message' => $success_message,
-    ]);
+      throw new Exception('', 500);
+    }
   }
 
+  /**
+   * Get and validate the submitted data
+   * 
+   * @param Object $request
+   * @throws Exception
+   * @return void
+   */
+  private function getSubmittedData(Object $request): array {
+    $result = [
+      'tid' => (int) $request->get('tid', 0),
+      'name' => trim((string) $request->get('name', '')),
+      'email' => trim((string) $request->get('email', '')),
+      'message' => trim((string) $request->get('message', '')),
+    ];
+
+    $result['term'] = $this->getTargetTerm($result['tid']);
+
+    // A dot-less domain like "localhost" is officially valid, but filter_var()
+    // doesn't like it. For our purposes, we don't need to accept them, so we 
+    // return it as an error
+    if (!filter_var($result['email'], FILTER_VALIDATE_EMAIL)) {
+      throw new Exception($this->translated_content[self::FAILURE_MESSAGE_EMAIL], 500);
+    }
+
+    // Prevent header injection from line breaks in user-entered name.
+    $safe_name = preg_replace('/[\r\n]+/', ' ', $result['name']) ?? '';
+    $safe_name = trim($safe_name);
+    if ($safe_name === '') {
+      throw new Exception('', 400);
+    }
+
+    // Require all fields to be non-empty
+    if (
+      $result['tid'] <= 0
+      || $result['name'] === ''
+      || $result['email'] === ''
+      || $result['message'] === ''
+    ) {
+      throw new Exception('', 400);
+    }
+
+    return $result;
+  }
+
+  /**
+   * Get the taxonomy term for the target of this Contact Message
+   * 
+   * @param int $tid
+   * @throws Exception
+   * @return \Drupal\taxonomy\TermInterface
+   */
+  private function getTargetTerm(int $tid) : Object {
+    /** @var \Drupal\taxonomy\TermInterface|null $term */
+    $term = $this->typedEntityManager->getStorage('taxonomy_term')->load($tid);
+    if (!$term || !$term->hasField('field_email_address') || $term->get('field_email_address')->isEmpty()) {
+      throw new Exception('', 404);
+    }
+
+    return $term;
+  }
+
+  /**
+   * Get the email address the Contact Message is being sent to, based on the
+   * target's taxonomy term
+   * 
+   * @param object $term
+   * @throws Exception
+   * @return string
+   */
+  private function getEmailTo(Object $term): string {
+    $result = '';
+
+    foreach ($term->get('field_email_address') as $item) {
+      $candidate = trim((string) $item->value);
+      if ($candidate !== '' && filter_var($candidate, FILTER_VALIDATE_EMAIL)) {
+        $result = $candidate;
+        break;
+      }
+    }
+
+    if ($result === '') {
+      throw new Exception('', 404);
+    }
+
+    return $result;
+  }
+
+  /**
+   * Get the subject of the Contact Message email
+   * 
+   * @param int $tid
+   * @return string
+   */
+  private function getSubject(int $tid): string {
+    /** @var \Drupal\taxonomy\TermStorageInterface $term_storage */
+    $term_storage = $this->typedEntityManager->getStorage('taxonomy_term');
+
+    foreach ($term_storage->loadAllParents($tid) as $ancestor_term) {
+      $division_label = $this->t($ancestor_term->label());
+    }
+
+    $prefix = $this->translated_content[self::SUBJECT_PREFIX];
+    if ($prefix == '') {
+      return $division_label;
+    }
+
+    return rtrim($prefix) . ' ' . $division_label;
+  }
+
+  /**
+   * Get the messages used in the email and also being returned to the sender (in the browser)
+   * 
+   * @return void
+   */
+  private function getTranslatedMessages(): void {
+    $messages = [
+      self::FAILURE_MESSAGE => 'There was a problem sending your message.  Please try again later.',
+      self::SUCCESS_MESSAGE => 'Your message has been sent.  A member of our staff will reach out if appropriate.',
+      self::SUBJECT_PREFIX => 'Staff contact message for ',
+      self::FAILURE_MESSAGE_EMAIL => 'Please enter a valid email address.',
+    ];
+
+    $config = $this->config('montreal2027_tools.staff_page_settings');
+
+    // If there is a message in the montreal2027 configuration use it, otherwise
+    // use the default message above
+    $this->translated_content = [];
+    foreach ($messages as $msg_id => $default_message) {
+      $translation = trim((string) ($config->get($msg_id) ?? ''));
+      $this->translated_content[$msg_id] = $this->t($translation ?: $default_message);
+    }
+  }
 }
