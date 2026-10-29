@@ -30,7 +30,7 @@ dependencies:
     - workspaces
 id: content_creator
 label: 'Content creator'
-weight: -5
+weight: -7
 is_admin: true
 permissions:
   - 'access administration pages'

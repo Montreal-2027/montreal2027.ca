@@ -69,5 +69,13 @@
     &-search-page-1 {
       margin-bottom: 0;
     }
+
+    &-in-memoriam-list {
+      justify-content: left;
+
+      & .form--inline {
+        grid-gap: 1rem;
+      }
+    }
   }
 }

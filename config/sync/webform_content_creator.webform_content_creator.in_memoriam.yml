@@ -32,6 +32,12 @@ elements:
     webform_field: date_of_death
     custom_check: 0
     custom_value: ''
+  field_first_name:
+    type: false
+    mapping: default_mapping
+    webform_field: deceased_first_name
+    custom_check: 0
+    custom_value: ''
   field_reason:
     type: false
     mapping: default_mapping
@@ -50,9 +56,15 @@ elements:
     webform_field: submitter_email
     custom_check: 0
     custom_value: ''
+  field_year_of_birth:
+    type: false
+    mapping: default_mapping
+    webform_field: birth_year
+    custom_check: 0
+    custom_value: ''
   title:
     type: false
     mapping: default_mapping
-    webform_field: deceased
+    webform_field: deceased_last_name
     custom_check: 0
     custom_value: ''

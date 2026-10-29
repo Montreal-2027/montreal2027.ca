@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.field.node.in_memoriam.field_category
     - field.field.node.in_memoriam.field_date_of_death
+    - field.field.node.in_memoriam.field_first_name
     - field.field.node.in_memoriam.field_reason
     - field.field.node.in_memoriam.field_submitted_by
     - field.field.node.in_memoriam.field_submitted_email
+    - field.field.node.in_memoriam.field_year_of_birth
     - node.type.in_memoriam
   module:
-    - datetime
     - text
 id: node.in_memoriam.default
 targetEntityType: node
@@ -19,23 +20,33 @@ mode: default
 content:
   field_category:
     type: entity_reference_autocomplete_tags
-    weight: 1
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
-      placeholder: ''
+      placeholder: 'Start typing category name and select up to 4 categories'
     third_party_settings: {  }
   field_date_of_death:
-    type: datetime_default
-    weight: 2
+    type: string_textfield
+    weight: 4
     region: content
-    settings: {  }
+    settings:
+      size: 30
+      placeholder: 'YYYY-MM-DD or time of year'
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_reason:
     type: text_textarea
-    weight: 3
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -43,7 +54,7 @@ content:
     third_party_settings: {  }
   field_submitted_by:
     type: string_textfield
-    weight: 4
+    weight: 6
     region: content
     settings:
       size: 60
@@ -51,22 +62,30 @@ content:
     third_party_settings: {  }
   field_submitted_email:
     type: email_default
-    weight: 5
+    weight: 7
     region: content
     settings:
       placeholder: ''
       size: 60
     third_party_settings: {  }
+  field_year_of_birth:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 4
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60

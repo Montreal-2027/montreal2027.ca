@@ -1,0 +1,19 @@
+uuid: 0a38ed48-2c75-46df-9175-0c289676e760
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_of_birth
+    - node.type.in_memoriam
+id: node.in_memoriam.field_year_of_birth
+field_name: field_year_of_birth
+entity_type: node
+bundle: in_memoriam
+label: "Year of deceased's birth (if known)"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

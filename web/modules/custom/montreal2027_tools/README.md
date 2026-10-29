@@ -107,3 +107,18 @@ A summary is printed at the end:
 - Created (or Would create in dry-run)
 - Skipped
 - Failed
+
+## In Memoriam spreadsheet import
+
+`montreal2027:import-in-memoriam /path/to/in-memoriam.xlsx` (alias: `m2027:iim`) imports the first worksheet of an XLSX file. The path must be readable from the `web` container when using Docker. The six required column headers are case-sensitive: `First Name`, `Last Name`, `Year of Birth`, `Date of Death`, `Category`, and `Bio`.
+
+The migration validates the destination fields and workbook headers, processes rows in batches of 25, creates missing taxonomy terms, and keeps imported nodes unpublished. It runs entity validation as user 1 so the configured text format is permitted; new nodes are therefore owned by user 1. Exact name matches update changed values; unchanged matches are skipped. Submission fields (`field_submitted_by` and `field_submitted_email`) are excluded from change detection. Category values are semicolon-delimited and limited to the first four terms. `Date of Death` cells formatted as Excel dates are read as displayed text: `m/yyyy` becomes `YYYY-MM`, and `m/d/yyyy` becomes `YYYY-MM-DD`. Text such as `Summer` is kept. Fully blank rows, such as rows created by formatting an entire column, are skipped.
+
+Import the migration configuration with `drush cim` before its first use.
+The YAML file in `config/sync` is not discovered until it is imported into active configuration. If the command reports that the migration is unavailable, review `drush config:status` before importing configuration; `drush cim` may apply other pending changes.
+
+Example:
+
+```bash
+docker compose exec web vendor/bin/drush montreal2027:import-in-memoriam /tmp/in-memoriam.xlsx
+```

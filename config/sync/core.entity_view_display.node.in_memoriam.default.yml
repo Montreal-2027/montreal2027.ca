@@ -5,12 +5,13 @@ dependencies:
   config:
     - field.field.node.in_memoriam.field_category
     - field.field.node.in_memoriam.field_date_of_death
+    - field.field.node.in_memoriam.field_first_name
     - field.field.node.in_memoriam.field_reason
     - field.field.node.in_memoriam.field_submitted_by
     - field.field.node.in_memoriam.field_submitted_email
+    - field.field.node.in_memoriam.field_year_of_birth
     - node.type.in_memoriam
   module:
-    - datetime
     - text
     - user
 id: node.in_memoriam.default
@@ -27,13 +28,22 @@ content:
     weight: 0
     region: content
   field_date_of_death:
-    type: datetime_default
-    label: hidden
+    type: string
+    label: above
     settings:
-      timezone_override: ''
-      format_type: medium
+      link_to_entity: false
+      link_rel: canonical
     third_party_settings: {  }
-    weight: 2
+    weight: 3
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_reason:
     type: text_default
@@ -41,6 +51,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_year_of_birth:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   entity_workspace_status: true

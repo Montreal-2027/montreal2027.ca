@@ -15,7 +15,7 @@ categories: {  }
 elements: |-
   intro:
     '#type': processed_text
-    '#text': '<h2 class="text-align-center">In Memoriam</h2><p>Thank you for your interest in adding someone to the In Memoriam listings on the Montréal 2027 website. This will help us tremendously.&nbsp; Please provide all of the information below, along with a valid email address for you (the submitter), so we can reach out if we have further questions.</p>'
+    '#text': '<h2 class="text-align-center">In Memoriam</h2><p>Thank you for your interest in adding someone to the In Memoriam listings on the Montréal 2027 website. This will help us tremendously.&nbsp; Please provide all of the information below, along with a valid email address for you (the submitter), so we can reach out if we have further questions.</p><p>Entries received after July 1, 2027 will not be included in the souvenir book.</p>'
     '#format': full_html
   horizontal_rule:
     '#type': webform_horizontal_rule
@@ -47,10 +47,13 @@ elements: |-
   category:
     '#type': webform_term_select
     '#title': Category
-    '#multiple': true
+    '#multiple': 4
+    '#multiple_error': 'You may only select 4 categories'
+    '#placeholder': 'Start typing to select or add a category. Select up to 4 categories'
     '#choices': true
     '#required': true
-    '#required_error': 'You must select at least one category'
+    '#required_error': 'You must select at least one category.'
+    '#format': label
     '#vocabulary': in_memoriam
     '#depth': 1
   dates:
@@ -62,58 +65,15 @@ elements: |-
       '#type': textfield
       '#title': "Year of the deceased's birth (if known)"
       '#minlength': 4
-      '#maxlength': 1
+      '#maxlength': 4
       '#size': 8
     date_of_death:
-      '#type': container
-      '#attributes':
-        class:
-          - webform-2row
-      date_of_death_label:
-        '#type': webform_markup
-        '#markup': '<div><label>Date of Death, if known</label></div>'
-      date_container:
-        '#type': container
-        '#attributes':
-          class:
-            - webform-3col
-        month_of_death:
-          '#type': select
-          '#title': Month
-          '#title_display': invisible
-          '#options': months
-          '#empty_option': Month
-        day_of_death:
-          '#type': number
-          '#title': Day
-          '#title_display': invisible
-          '#required': true
-          '#default_value': '1'
-          '#wrapper_attributes':
-            class:
-              - 'form--inline clearfix'
-          '#attributes':
-            class:
-              - day-of-death
-          '#min': 1
-          '#max': 31
-          '#step': 1
-        year_of_death:
-          '#type': select
-          '#title': ' '
-          '#title_display': inline
-          '#options':
-            2026: '2026'
-            2027: '2027'
-          '#empty_option': Year
-          '#required_error': 'Year is required'
-          '#states':
-            required:
-              ':input[name="month_of_death"]':
-                filled: true
-          '#wrapper_attributes':
-            class:
-              - year-of-death-wrapper
+      '#type': textfield
+      '#title': 'Date of death, if known'
+      '#minlength': 4
+      '#maxlength': 20
+      '#size': 8
+      '#placeholder': 'YYYY-MM-DD or YYYY-MM, i.e, 2026-10-01 or 2026-10'
   reason:
     '#type': textarea
     '#title': 'Why should this person be included on our list?'
@@ -137,7 +97,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -215,12 +175,13 @@ settings:
   wizard_toggle_hide_label: ''
   wizard_page_type: container
   wizard_page_title_tag: h2
-  preview: 0
+  preview: 2
   preview_label: ''
-  preview_title: ''
-  preview_message: ''
+  preview_title: 'Review your submission'
+  preview_message: '<p>Please review your submission for any errors. Click <strong>« Previous</strong> to go back and make corrections.</p>'
   preview_attributes: {  }
-  preview_excluded_elements: {  }
+  preview_excluded_elements:
+    horizontal_rule_01: horizontal_rule_01
   preview_exclude_empty: true
   preview_exclude_empty_checkbox: false
   draft: none
@@ -230,12 +191,12 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
+  confirmation_type: page
   confirmation_url: ''
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: 'Thank You'
+  confirmation_message: '<p>Thank you for your submission. &nbsp;A copy of your responses will be emailed to you.</p>'
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
