@@ -254,6 +254,9 @@ class StaffContactController extends ControllerBase
     $this->translated_content = [];
     foreach ($fallback_messages as $msg_id => $default_message) {
       $translation = trim((string) ($config->get($msg_id) ?? ''));
+      // Calling the t() method causes the text to appear in the User Interface Translation
+      // entry for the text, but it won't appear until the page containing the text 
+      // is viewed in the translated language
       $fallback_translation = $this->t($default_message);
       $this->translated_content[$msg_id] = $translation ?: $fallback_translation;
     }
