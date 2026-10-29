@@ -70,8 +70,11 @@ final class InMemoriamImportCommands extends DrushCommands {
    *   Loads the destination content type and taxonomy vocabulary.
    * @param \Drupal\Core\Session\AccountSwitcherInterface $accountSwitcher
    *   Switches to the site administrator while validating configured text formats.
-   * @param \Drupal\migrate\Plugin\MigrationPluginManagerInterface $migrationPluginManager
+   * @param \Drupal\migrate\Plugin\MigrationPluginManagerInterface|null $migrationPluginManager
    *   Creates configured migration instances for source discovery and batches.
+   *   NULL while the Migrate module is disabled. The service is optional so
+   *   Drush can bootstrap, and run "drush deploy", before config import
+   *   enables Migrate.
    * @param \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $keyValueFactory
    *   Provides key/value storage required by the migrate executable.
    * @param \Drupal\Component\Datetime\TimeInterface $time
@@ -83,7 +86,7 @@ final class InMemoriamImportCommands extends DrushCommands {
     private readonly EntityFieldManagerInterface $entityFieldManager,
     private readonly EntityTypeManagerInterface $entityTypeManager,
     private readonly AccountSwitcherInterface $accountSwitcher,
-    private readonly MigrationPluginManagerInterface $migrationPluginManager,
+    private readonly ?MigrationPluginManagerInterface $migrationPluginManager,
     private readonly KeyValueFactoryInterface $keyValueFactory,
     private readonly TimeInterface $time,
     private readonly TranslationInterface $translation,
@@ -252,9 +255,15 @@ final class InMemoriamImportCommands extends DrushCommands {
    *   A fresh migration instance configured for the supplied workbook.
    *
    * @throws \RuntimeException
-   *   When the migration definition is unavailable.
+   *   When Migrate is disabled or the migration definition is unavailable.
    */
   private function createMigration(string $path, string $worksheet): MigrationInterface {
+    // ValidateModulesEnabled normally stops the command first; this guard
+    // covers a stale container built before Migrate was enabled.
+    if ($this->migrationPluginManager === NULL) {
+      throw new \RuntimeException('The Migrate module is not enabled. Run "drush cim" or "drush deploy", then "drush cr", before retrying.');
+    }
+
     $migration = $this->migrationPluginManager->createInstance(self::MIGRATION_ID, [
       'source' => [
         'file' => $path,

@@ -10,7 +10,9 @@ services:
       - '@entity_field.manager'
       - '@entity_type.manager'
       - '@account_switcher'
-      - '@plugin.manager.migration'
+      # Optional: Migrate may be disabled until a deployment's config import
+      # enables it. A required reference would break Drush bootstrap first.
+      - '@?plugin.manager.migration'
       - '@keyvalue'
       - '@datetime.time'
       - '@string_translation'
