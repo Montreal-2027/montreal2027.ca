@@ -9,6 +9,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Mail\MailManagerInterface;
 use Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\InputBag;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -115,16 +116,16 @@ class StaffContactController extends ControllerBase
   /**
    * Get and validate the submitted data
    * 
-   * @param Request $request
+   * @param InputBag $request_params
    * @throws Exception
    * @return void
    */
-  private function getSubmittedData(Request $request): array {
+  private function getSubmittedData(InputBag $request_params): array {
     $result = [
-      'tid' => (int) $request->get('tid', 0),
-      'name' => trim((string) $request->get('name', '')),
-      'email' => trim((string) $request->get('email', '')),
-      'message' => trim((string) $request->get('message', '')),
+      'tid' => $request_params->getint('tid'),
+      'name' => $request_params->getString('name'),
+      'email' => $request_params->getString('email'),
+      'message' => $request_params->getString('message'),
     ];
 
     $result['term'] = $this->getTargetTerm($result['tid']);
@@ -239,7 +240,7 @@ class StaffContactController extends ControllerBase
    * @return void
    */
   private function getTranslatedMessages(): void {
-    $messages = [
+    $fallback_messages = [
       self::FAILURE_MESSAGE => 'There was a problem sending your message.  Please try again later.',
       self::SUCCESS_MESSAGE => 'Your message has been sent.  A member of our staff will reach out if appropriate.',
       self::SUBJECT_PREFIX => 'Staff contact message for ',
@@ -251,9 +252,11 @@ class StaffContactController extends ControllerBase
     // If there is a message in the montreal2027 configuration use it, otherwise
     // use the default message above
     $this->translated_content = [];
-    foreach ($messages as $msg_id => $default_message) {
+    foreach ($fallback_messages as $msg_id => $default_message) {
       $translation = trim((string) ($config->get($msg_id) ?? ''));
-      $this->translated_content[$msg_id] = $translation ?: $this->t($default_message);
+      $fallback_translation = $this->t($default_message);
+      $this->translated_content[$msg_id] = $translation ?: $fallback_translation;
     }
+
   }
 }
