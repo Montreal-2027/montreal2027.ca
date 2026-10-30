@@ -41,6 +41,7 @@ final class InMemoriamImportCommands extends DrushCommands {
     'Last Name',
     'Year of Birth',
     'Date of Death',
+    'Sort Date',
     'Category',
     'Bio',
   ];
@@ -57,6 +58,7 @@ final class InMemoriamImportCommands extends DrushCommands {
     'field_first_name',
     'field_year_of_birth',
     'field_date_of_death',
+    'field_sort_date',
     'field_category',
     'field_reason',
   ];
@@ -176,6 +178,7 @@ final class InMemoriamImportCommands extends DrushCommands {
 
     // Use fresh migration instances per batch; MigrateExecutable marks each
     // instance busy and resets its source and listeners during import.
+    $warningCount = 0;
     foreach (array_chunk($sourceIds, 25) as $batch) {
       $batchMigration = $this->createMigration($path, $worksheet);
       // Spreadsheet row indexes form the migration source IDs. Serialize
@@ -224,6 +227,7 @@ final class InMemoriamImportCommands extends DrushCommands {
       // Advance for all selected IDs. Unchanged rows are deliberate skips,
       // while failed rows are reported by the executable's failure counter.
       $progress->advance(count($batch));
+      $warningCount += $this->reportWarnings($batchMigration, $batch, $progress);
       if ($executable->getFailedCount() > 0) {
         $progress->finish();
         $this->logger()->error(sprintf(
@@ -236,7 +240,55 @@ final class InMemoriamImportCommands extends DrushCommands {
 
     $progress->finish();
     $this->output()->writeln(sprintf('Processed %d rows.', $total));
+    if ($warningCount > 0) {
+      $this->logger()->warning(sprintf(
+        '%d row(s) skipped with warnings. Correct them and re-run the import.',
+        $warningCount,
+      ));
+    }
     return self::EXIT_SUCCESS;
+  }
+
+  /**
+   * Prints warning-level migrate messages saved for a batch's rows.
+   *
+   * Process plugins save warnings for rows they skip on purpose, such as an
+   * invalid Sort Date. MigrateExecutable stores those messages in the ID map
+   * but does not display them, so the command prints them after each batch.
+   *
+   * @param \Drupal\migrate\Plugin\MigrationInterface $migration
+   *   The batch migration whose ID map holds the messages.
+   * @param array $batch
+   *   Source ID arrays for the rows in this batch, keyed by source ID field.
+   * @param \Symfony\Component\Console\Helper\ProgressBar $progress
+   *   The progress bar, cleared while printing and redrawn afterward.
+   *
+   * @return int
+   *   The number of rows in the batch that have a warning.
+   */
+  private function reportWarnings(MigrationInterface $migration, array $batch, ProgressBar $progress): int {
+    $idMap = $migration->getIdMap();
+    $rows = 0;
+
+    foreach ($batch as $sourceId) {
+      // Messages are keyed by source ID hash; earlier messages for a row are
+      // cleared when the row is read again, so these are from this run.
+      $messages = $idMap->getMessages($sourceId, MigrationInterface::MESSAGE_WARNING);
+      $found = FALSE;
+      foreach ($messages as $message) {
+        if (!$found) {
+          $progress->clear();
+          $found = TRUE;
+        }
+        $this->logger()->warning(sprintf('Spreadsheet row %s: %s', implode(':', $sourceId), $message->message));
+      }
+      if ($found) {
+        $progress->display();
+        $rows++;
+      }
+    }
+
+    return $rows;
   }
 
   /**

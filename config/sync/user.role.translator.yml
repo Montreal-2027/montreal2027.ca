@@ -7,20 +7,40 @@ dependencies:
     - node.type.article
     - node.type.guest
     - node.type.home_page
+    - node.type.in_memoriam
     - node.type.page
     - taxonomy.vocabulary.divisions
     - taxonomy.vocabulary.guest_type
+    - taxonomy.vocabulary.in_memoriam
   module:
     - block_content
     - config_translation
     - content_translation
     - menu_link_content
+    - node
+    - system
+    - taxonomy
 id: translator
 label: Translator
 weight: -1
 is_admin: false
 permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'create article content'
   - 'create content translations'
+  - 'create guest content'
+  - 'create in_memoriam content'
+  - 'create page content'
+  - 'delete any article content'
+  - 'delete any guest content'
+  - 'delete any page content'
+  - 'edit any article content'
+  - 'edit any guest content'
+  - 'edit any home_page content'
+  - 'edit any in_memoriam content'
+  - 'edit any page content'
+  - 'edit terms in in_memoriam'
   - 'translate any entity'
   - 'translate article node'
   - 'translate block_content'
@@ -31,6 +51,9 @@ permissions:
   - 'translate guest_type taxonomy_term'
   - 'translate home_page node'
   - 'translate image media'
+  - 'translate in_memoriam node'
+  - 'translate in_memoriam taxonomy_term'
   - 'translate menu_link_content'
   - 'translate page node'
   - 'update content translations'
+  - 'view own unpublished content'

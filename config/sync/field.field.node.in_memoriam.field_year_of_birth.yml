@@ -12,7 +12,7 @@ bundle: in_memoriam
 label: "Year of deceased's birth (if known)"
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

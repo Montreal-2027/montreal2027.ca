@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.in_memoriam.field_date_of_death
     - field.field.node.in_memoriam.field_first_name
     - field.field.node.in_memoriam.field_reason
+    - field.field.node.in_memoriam.field_sort_date
     - field.field.node.in_memoriam.field_submitted_by
     - field.field.node.in_memoriam.field_submitted_email
     - field.field.node.in_memoriam.field_year_of_birth
@@ -51,6 +52,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_sort_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_year_of_birth:
     type: string

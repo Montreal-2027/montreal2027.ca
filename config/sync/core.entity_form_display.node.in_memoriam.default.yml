@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.in_memoriam.field_date_of_death
     - field.field.node.in_memoriam.field_first_name
     - field.field.node.in_memoriam.field_reason
+    - field.field.node.in_memoriam.field_sort_date
     - field.field.node.in_memoriam.field_submitted_by
     - field.field.node.in_memoriam.field_submitted_email
     - field.field.node.in_memoriam.field_year_of_birth
@@ -46,15 +47,23 @@ content:
     third_party_settings: {  }
   field_reason:
     type: text_textarea
-    weight: 5
+    weight: 6
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_sort_date:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 30
+      placeholder: YYYY-MM-DD
+    third_party_settings: {  }
   field_submitted_by:
     type: string_textfield
-    weight: 6
+    weight: 7
     region: content
     settings:
       size: 60
@@ -62,7 +71,7 @@ content:
     third_party_settings: {  }
   field_submitted_email:
     type: email_default
-    weight: 7
+    weight: 8
     region: content
     settings:
       placeholder: ''
@@ -78,7 +87,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true

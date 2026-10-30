@@ -23,6 +23,7 @@ source:
   plugin: in_memoriam_spreadsheet
   formatted_columns:
     - 'Date of Death'
+    - 'Sort Date'
   file: null
   worksheet: null
   origin: A2
@@ -33,6 +34,7 @@ source:
     - 'Last Name'
     - 'Year of Birth'
     - 'Date of Death'
+    - 'Sort Date'
     - Category
     - Bio
   row_index_column: 'Source Row'
@@ -52,6 +54,11 @@ process:
   field_date_of_death:
     plugin: in_memoriam_date
     source: 'Date of Death'
+  field_sort_date:
+    plugin: in_memoriam_sort_date
+    source:
+      - 'Sort Date'
+      - 'Date of Death'
   field_category:
     plugin: in_memoriam_categories
     source: Category
