@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 704 nodes, 827 edges, 65 communities. Commit: 563d270</p>
+<p class="subtitle">Generated from graphify knowledge graph: 717 nodes, 874 edges, 68 communities. Commit: 10f6ada</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -69,12 +69,12 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#analysis-clustering">Analysis &amp; Clustering</a>
     <a href="#cli-skills">CLI &amp; Skill Installers</a>
     <a href="#security-global">Security &amp; Global Graph</a>
-    <a href="#drupal-core-entity-entitytypemanagerinterface">Drupal\Core\Entity\EntityTypeManagerInterface</a>
     <a href="#inmemoriamimportcommands-php">InMemoriamImportCommands.php</a>
     <a href="#db">db</a>
     <a href="#steps">steps</a>
     <a href="#regions">regions</a>
     <a href="#web">web</a>
+    <a href="#inmemoriamspreadsheet-php">InMemoriamSpreadsheet.php</a>
     <a href="#montreal2027-tools-commands">montreal2027_tools.commands</a>
     <a href="#montrealconfigurationform">MontrealConfigurationForm</a>
     <a href="#montreal2027-tools-module">montreal2027_tools.module</a>
@@ -88,9 +88,9 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>72 nodes</small>")
+    EXTRACT_PIPELINE_5F350230("Extraction Pipeline<br/><small>69 nodes</small>")
     class EXTRACT_PIPELINE_5F350230 module;
-    BUILD_GRAPH_321CBB04("Graph Build<br/><small>357 nodes</small>")
+    BUILD_GRAPH_321CBB04("Graph Build<br/><small>401 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
     ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>18 nodes</small>")
     class ANALYSIS_CLUSTERING_C79796DA module;
@@ -98,8 +98,6 @@ flowchart LR
     class CLI_SKILLS_9964CBB8 module;
     SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>12 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
-    DRUPAL_CORE_ENTITY_ENTITYTYPEMANAGERINTERFACE_1581BE64("Drupal\Core\Entity\EntityTypeManagerInterface<br/><small>40 nodes</small>")
-    class DRUPAL_CORE_ENTITY_ENTITYTYPEMANAGERINTERFACE_1581BE64 module;
     INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77("InMemoriamImportCommands.php<br/><small>31 nodes</small>")
     class INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 module;
     DB_0352A8AC("db<br/><small>30 nodes</small>")
@@ -110,6 +108,8 @@ flowchart LR
     class REGIONS_7FF078F2 module;
     WEB_CA84D134("web<br/><small>23 nodes</small>")
     class WEB_CA84D134 module;
+    INMEMORIAMSPREADSHEET_PHP_631FEAA4("InMemoriamSpreadsheet.php<br/><small>12 nodes</small>")
+    class INMEMORIAMSPREADSHEET_PHP_631FEAA4 module;
     MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8("montreal2027_tools.commands<br/><small>11 nodes</small>")
     class MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8 module;
     MONTREALCONFIGURATIONFORM_E72B8BCB("MontrealConfigurationForm<br/><small>8 nodes</small>")
@@ -118,9 +118,10 @@ flowchart LR
     class MONTREAL2027_TOOLS_MODULE_C93A87C0 module;
     OTHER_D0941E68("Other<br/><small>34 nodes</small>")
     class OTHER_D0941E68 module;
-    INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 -->|references x6| DRUPAL_CORE_ENTITY_ENTITYTYPEMANAGERINTERFACE_1581BE64
-    EXTRACT_PIPELINE_5F350230 -->|references x5| DRUPAL_CORE_ENTITY_ENTITYTYPEMANAGERINTERFACE_1581BE64
-    DRUPAL_CORE_ENTITY_ENTITYTYPEMANAGERINTERFACE_1581BE64 -->|imports x4| EXTRACT_PIPELINE_5F350230
+    EXTRACT_PIPELINE_5F350230 -->|references x9| BUILD_GRAPH_321CBB04
+    INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 -->|references x8| BUILD_GRAPH_321CBB04
+    INMEMORIAMSPREADSHEET_PHP_631FEAA4 -->|references x4| BUILD_GRAPH_321CBB04
+    INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 -->|imports| INMEMORIAMSPREADSHEET_PHP_631FEAA4
     DB_0352A8AC -->|contains| WEB_CA84D134
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -138,19 +139,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>72</td><td><code>1, 11, 61</code></td></tr><tr><td>Graph Build</td><td>357</td><td><code>0, 2, 4, 9, 12, 14, 15, 17, 18, 20, 21, 24, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>13</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>57</code></td></tr><tr><td>Security &amp; Global Graph</td><td>12</td><td><code>16</code></td></tr><tr><td>Drupal\Core\Entity\EntityTypeManagerInterface</td><td>40</td><td><code>3</code></td></tr><tr><td>InMemoriamImportCommands.php</td><td>31</td><td><code>5</code></td></tr><tr><td>db</td><td>30</td><td><code>6</code></td></tr><tr><td>steps</td><td>29</td><td><code>7</code></td></tr><tr><td>regions</td><td>29</td><td><code>8</code></td></tr><tr><td>web</td><td>23</td><td><code>10</code></td></tr><tr><td>montreal2027_tools.commands</td><td>11</td><td><code>19</code></td></tr><tr><td>MontrealConfigurationForm</td><td>8</td><td><code>22</code></td></tr><tr><td>montreal2027_tools.module</td><td>8</td><td><code>23</code></td></tr><tr><td>Other</td><td>34</td><td><code>25, 26, 28, 54, 56, 58, 59, 60, 62, 63, 64</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>69</td><td><code>1, 11, 64</code></td></tr><tr><td>Graph Build</td><td>401</td><td><code>0, 2, 3, 8, 9, 12, 14, 15, 16, 19, 20, 22, 23, 26, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 58</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>13</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>2</td><td><code>60</code></td></tr><tr><td>Security &amp; Global Graph</td><td>12</td><td><code>18</code></td></tr><tr><td>InMemoriamImportCommands.php</td><td>31</td><td><code>4</code></td></tr><tr><td>db</td><td>30</td><td><code>5</code></td></tr><tr><td>steps</td><td>29</td><td><code>6</code></td></tr><tr><td>regions</td><td>29</td><td><code>7</code></td></tr><tr><td>web</td><td>23</td><td><code>10</code></td></tr><tr><td>InMemoriamSpreadsheet.php</td><td>12</td><td><code>17</code></td></tr><tr><td>montreal2027_tools.commands</td><td>11</td><td><code>21</code></td></tr><tr><td>MontrealConfigurationForm</td><td>8</td><td><code>24</code></td></tr><tr><td>montreal2027_tools.module</td><td>8</td><td><code>25</code></td></tr><tr><td>Other</td><td>34</td><td><code>27, 28, 29, 57, 59, 61, 62, 63, 65, 66, 67</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Graph Build -&gt; Extraction Pipeline -&gt; Drupal\Core\Entity\EntityTypeManagerInterface -&gt; Analysis &amp; Clustering -&gt; CLI &amp; Skill Installers -&gt; Security &amp; Global Graph -&gt; InMemoriamImportCommands.php</div>
+    <div class="arrow-chain">Extraction Pipeline -&gt; Graph Build -&gt; Analysis &amp; Clustering -&gt; CLI &amp; Skill Installers -&gt; Security &amp; Global Graph -&gt; InMemoriamImportCommands.php -&gt; InMemoriamSpreadsheet.php</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>704 nodes · 827 edges · 65 communities (51 shown, 14 thin omitted)</li>
+      <li>717 nodes · 874 edges · 68 communities (53 shown, 15 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `require` - 65 edges</li>
@@ -162,12 +163,12 @@ flowchart LR
 <hr>
 <!-- ====== 2. Extraction Pipeline ====== -->
 <h2 id="extract-pipeline">2. Extraction Pipeline</h2>
-<p>Extraction Pipeline groups implementation around montreal2027, web, modules, custom, mostly in custom/montreal2027_tools/montreal2027_tools.libraries.yml, src/Controller/StaffContactController.php, src/Controller/StaffPageController.php. This section covers 72 nodes and 111 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Extraction Pipeline groups implementation around montreal2027, web, modules, custom, mostly in custom/montreal2027_tools/montreal2027_tools.libraries.yml, src/Controller/StaffContactController.php, src/Controller/StaffPageController.php. This section covers 69 nodes and 105 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Extraction Pipeline (72 nodes, 111 edges)
+    %% Section: Extraction Pipeline (69 nodes, 105 edges)
     subgraph extract_pipeline_src_Controller_StaffContactCont_4d14918c["src/Controller/StaffContactController.php"]
         web_modules_custom_montreal2027_tools_src_contro_7bc76770("StaffContactController<br/><small>src/Controller/StaffContactController.php</small>")
         web_modules_custom_montreal2027_tools_src_contro_b983e1bc("StaffContactController.php")
@@ -213,7 +214,7 @@ flowchart LR
     web_modules_custom_montreal2027_tools_src_contro_2a020627 -->|calls| web_modules_custom_montreal2027_tools_src_contro_c3e673d5
     web_modules_custom_montreal2027_tools_src_contro_631de08d -->|calls| web_modules_custom_montreal2027_tools_src_contro_8413453c
     web_modules_custom_montreal2027_tools_src_contro_631de08d -->|calls| web_modules_custom_montreal2027_tools_src_contro_631de08d
-    %% Omitted for readability: 54 nodes, 0 edges
+    %% Omitted for readability: 51 nodes, 0 edges
     class web_modules_custom_montreal2027_tools_src_contro_7bc76770 klass;
     class web_modules_custom_montreal2027_tools_src_contro_b983e1bc klass;
     class web_modules_custom_montreal2027_tools_src_contro_b0228183 function;
@@ -439,14 +440,6 @@ flowchart LR
 </tr>
 <tr>
   <td>24</td>
-  <td><code>.create()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamNodeLookup</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.create() node in migrate/process/InMemoriamNodeLookup.php.</td>
-</tr>
-<tr>
-  <td>25</td>
   <td><code>Drupal\Component\Utility\Html</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
@@ -454,7 +447,7 @@ flowchart LR
   <td>Exports documentation data to a target format.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>25</td>
   <td><code>Drupal\Core\Block\Attribute\Block</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -462,7 +455,7 @@ flowchart LR
   <td>Drupal\Core\Block\Attribute\Block node in project.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>26</td>
   <td><code>Drupal\Core\Block\BlockBase</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
@@ -470,7 +463,7 @@ flowchart LR
   <td>Drupal\Core\Block\BlockBase node in project.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>27</td>
   <td><code>Drupal\Core\Controller\ControllerBase</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
@@ -478,7 +471,7 @@ flowchart LR
   <td>Drupal\Core\Controller\ControllerBase node in project.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>28</td>
   <td><code>Drupal\Core\Language\LanguageInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffPageController.php</code><br><small style="color:var(--muted)">src/Controller/StaffPageController.php</small></td>
@@ -486,12 +479,20 @@ flowchart LR
   <td>Drupal\Core\Language\LanguageInterface node in project.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>29</td>
   <td><code>Drupal\Core\Language\LanguageManagerInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small><br><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
   <td>No direct outbound edge</td>
   <td>Drupal\Core\Language\LanguageManagerInterface node in project.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>Drupal\Core\Logger\LoggerChannelFactoryInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>StaffContactController.php</code><br><small style="color:var(--muted)">src/Controller/StaffContactController.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\Core\Logger\LoggerChannelFactoryInterface node in project.</td>
 </tr>
 </table>
 
@@ -505,80 +506,81 @@ flowchart LR
 <tr><td><code>src/Controller/StaffPageController.php</code></td><td>7 nodes</td></tr>
 <tr><td><code>Plugin/Block/LanguageToggleBlock.php</code></td><td>7 nodes</td></tr>
 <tr><td><code>montreal2027_tools/js/language-toggle.js</code></td><td>2 nodes</td></tr>
-<tr><td><code>migrate/process/InMemoriamNodeLookup.php</code></td><td>1 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x25, references x24, imports x23, method x20. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x25, imports x21, references x20, method x20. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 3. Graph Build ====== -->
 <h2 id="build-graph">3. Graph Build</h2>
-<p>Graph Build groups implementation around montreal2027, web, custom, config, mostly in composer.json, config/schema/montreal2027.schema.yml, config/schema/montreal2027_tools.schema.yml. This section covers 357 nodes and 377 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Graph Build groups implementation around montreal2027, web, custom, config, mostly in composer.json, config/schema/montreal2027.schema.yml, config/schema/montreal2027_tools.schema.yml. This section covers 401 nodes and 486 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Graph Build (357 nodes, 377 edges)
-    subgraph build_graph_custom_montreal2027_montreal2027_the_705bf604["custom/montreal2027/montreal2027.theme"]
-        web_themes_custom_montreal2027_montreal2027_049635f7("montreal2027.theme")
-        web_themes_custom_montreal2027_montreal2027_mont_ac3e389e("block montreal2027 content()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa("node guest teaser()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_0ace2877("montreal2027 preprocess page()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65("paragraph guest block()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_cf74bc54("in content language()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_get_a1dce736("get_image_info()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_050352ea("guest taxonomy paragraph()<br/><small>custom/montreal2027/montreal2027.theme</small>")
-        web_themes_custom_montreal2027_montreal2027_mont_031934fa("preprocess paragraph guests()<br/><small>custom/montreal2027/montreal2027.theme</small>")
+    %% Section: Graph Build (401 nodes, 486 edges)
+    subgraph build_graph_migrate_process_InMemoriamNodeLookup_5022bef2["migrate/process/InMemoriamNodeLookup.php"]
+        web_modules_custom_montreal2027_tools_src_plugin_d666975d("InMemoriamNodeLookup.php")
+        web_modules_custom_montreal2027_tools_src_plugin_916ff889("InMemoriamNodeLookup<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_5bc3faae("create()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_02b5644e("transform()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_8c7a1cd4("repointStaleMapping()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_8565a886("handlePreviousDestination()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
     end
-    subgraph build_graph_custom_montreal2027_package_json_99ded968["custom/montreal2027/package.json"]
-        web_themes_custom_montreal2027_package_ade4f3b0("package.json")
-        ref_sass_6c3c8cb7("sass<br/><small>custom/montreal2027/package.json</small>")
-        ref_parcel_watcher_d04eff59("@parcel/watcher<br/><small>custom/montreal2027/package.json</small>")
+    subgraph build_graph_migrate_process_InMemoriamCategories_81949003["migrate/process/InMemoriamCategories.php"]
+        web_modules_custom_montreal2027_tools_src_plugin_12af542f("InMemoriamCategories.php")
+        web_modules_custom_montreal2027_tools_src_plugin_fdf16556("InMemoriamCategories<br/><small>migrate/process/InMemoriamCategories.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_1de29d17("transform()<br/><small>migrate/process/InMemoriamCategories.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_ef4751f7("__construct()<br/><small>migrate/process/InMemoriamCategories.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_32e3584f("create()<br/><small>migrate/process/InMemoriamCategories.php</small>")
     end
-    subgraph build_graph_githooks_post_merge_9de8f209[".githooks/post-merge"]
-        githooks_post_merge_d7e2d0d9("post-merge")
-        githooks_post_merge_entry_d80608cd("post-merge script<br/><small>.githooks/post-merge</small>")
+    subgraph build_graph_migrate_process_InMemoriamDate_php_b5807be8["migrate/process/InMemoriamDate.php"]
+        web_modules_custom_montreal2027_tools_src_plugin_3b28641c("InMemoriamDate.php")
+        web_modules_custom_montreal2027_tools_src_plugin_552d82b6("InMemoriamDate<br/><small>migrate/process/InMemoriamDate.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_7a2946b7("normalize()<br/><small>migrate/process/InMemoriamDate.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7("transform()<br/><small>migrate/process/InMemoriamDate.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_3b7fc442("skipWithWarning()<br/><small>migrate/process/InMemoriamDate.php</small>")
     end
-    subgraph build_graph_mcp_json_6059b5f4[".mcp.json"]
-        mcp_c3ecbf70(".mcp.json")
-        mcp_package_edictum_captatum_25dbf6cc("@edictum/captatum<br/><small>.mcp.json</small>")
-    end
-    subgraph build_graph_External_generated_653891f5["External / generated"]
-        web_themes_custom_montreal2027_montreal2027_them_ab7ec458("FormStateInterface")
-        html_950a39b6("html")
-    end
-    web_themes_custom_montreal2027_montreal2027_mont_ac3e389e -->|calls| web_themes_custom_montreal2027_montreal2027_mont_cf74bc54
-    web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa -->|calls| web_themes_custom_montreal2027_montreal2027_get_a1dce736
-    web_themes_custom_montreal2027_montreal2027_mont_0ace2877 -->|calls| web_themes_custom_montreal2027_montreal2027_mont_cf74bc54
-    web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65 -->|calls| web_themes_custom_montreal2027_montreal2027_mont_050352ea
-    web_themes_custom_montreal2027_montreal2027_mont_031934fa -->|calls| web_themes_custom_montreal2027_montreal2027_mont_050352ea
-    web_themes_custom_montreal2027_package_ade4f3b0 -->|imports| ref_sass_6c3c8cb7
-    web_themes_custom_montreal2027_package_ade4f3b0 -->|imports| ref_parcel_watcher_d04eff59
-    web_themes_custom_montreal2027_montreal2027_049635f7 -->|imports| web_themes_custom_montreal2027_montreal2027_them_ab7ec458
-    web_themes_custom_montreal2027_montreal2027_049635f7 -->|imports| html_950a39b6
-    %% Omitted for readability: 339 nodes, 0 edges
-    class web_themes_custom_montreal2027_montreal2027_049635f7 function;
-    class web_themes_custom_montreal2027_montreal2027_mont_ac3e389e function;
-    class web_themes_custom_montreal2027_montreal2027_mont_1c7a6bfa function;
-    class web_themes_custom_montreal2027_montreal2027_mont_0ace2877 function;
-    class web_themes_custom_montreal2027_montreal2027_mont_a8ec5a65 function;
-    class web_themes_custom_montreal2027_montreal2027_mont_cf74bc54 function;
-    class web_themes_custom_montreal2027_montreal2027_get_a1dce736 function;
-    class web_themes_custom_montreal2027_montreal2027_mont_050352ea function;
-    class web_themes_custom_montreal2027_montreal2027_mont_031934fa function;
-    class web_themes_custom_montreal2027_package_ade4f3b0 function;
-    class ref_sass_6c3c8cb7 function;
-    class ref_parcel_watcher_d04eff59 function;
-    class githooks_post_merge_d7e2d0d9 function;
-    class githooks_post_merge_entry_d80608cd function;
-    class mcp_c3ecbf70 function;
-    class mcp_package_edictum_captatum_25dbf6cc function;
-    class web_themes_custom_montreal2027_montreal2027_them_ab7ec458 klass;
-    class html_950a39b6 function;
+    web_modules_custom_montreal2027_tools_src_plugin_5b005a65("InMemoriamSortDate.php")
+    web_modules_custom_montreal2027_tools_src_plugin_c306a4cc("InMemoriamTrim.php")
+    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_1de29d17
+    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_ef4751f7
+    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_32e3584f
+    web_modules_custom_montreal2027_tools_src_plugin_552d82b6 -->|method| web_modules_custom_montreal2027_tools_src_plugin_7a2946b7
+    web_modules_custom_montreal2027_tools_src_plugin_552d82b6 -->|method| web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7
+    web_modules_custom_montreal2027_tools_src_plugin_552d82b6 -->|method| web_modules_custom_montreal2027_tools_src_plugin_3b7fc442
+    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_5bc3faae
+    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_02b5644e
+    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_8c7a1cd4
+    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_8565a886
+    web_modules_custom_montreal2027_tools_src_plugin_1de29d17 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_32e3584f
+    web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_7a2946b7
+    web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_3b7fc442
+    web_modules_custom_montreal2027_tools_src_plugin_02b5644e -->|calls| web_modules_custom_montreal2027_tools_src_plugin_8565a886
+    web_modules_custom_montreal2027_tools_src_plugin_02b5644e -->|calls| web_modules_custom_montreal2027_tools_src_plugin_8c7a1cd4
+    %% Omitted for readability: 383 nodes, 0 edges
+    class web_modules_custom_montreal2027_tools_src_plugin_d666975d klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_916ff889 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_5bc3faae function;
+    class web_modules_custom_montreal2027_tools_src_plugin_02b5644e function;
+    class web_modules_custom_montreal2027_tools_src_plugin_8c7a1cd4 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_8565a886 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_12af542f klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_fdf16556 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_1de29d17 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_ef4751f7 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_32e3584f function;
+    class web_modules_custom_montreal2027_tools_src_plugin_3b28641c klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_552d82b6 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_7a2946b7 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_3b7fc442 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_5b005a65 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_c306a4cc klass;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -853,13 +855,13 @@ flowchart LR
 <tr><td><code>custom/montreal2027/package.json</code></td><td>19 nodes</td></tr>
 <tr><td><code>sites/default/development.services.yml</code></td><td>18 nodes</td></tr>
 <tr><td><code>custom/montreal2027/montreal2027.theme</code></td><td>13 nodes</td></tr>
+<tr><td><code>migrate/process/InMemoriamNodeLookup.php</code></td><td>10 nodes</td></tr>
 <tr><td><code>.mcp.json</code></td><td>8 nodes</td></tr>
-<tr><td><code>.githooks/post-merge</code></td><td>2 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x361, references x5, calls x5, imports x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x369, imports x41, references x32, method x16. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -1355,365 +1357,19 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 7. Drupal\Core\Entity\EntityTypeManagerInterface ====== -->
-<h2 id="drupal-core-entity-entitytypemanagerinterface">7. Drupal\Core\Entity\EntityTypeManagerInterface</h2>
-<p>Drupal\Core\Entity\EntityTypeManagerInterface groups implementation around web, modules, custom, montreal2027, mostly in migrate/process/InMemoriamCategories.php, migrate/source/InMemoriamSpreadsheet.php, migrate/process/InMemoriamNodeLookup.php. This section covers 40 nodes and 79 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 7. InMemoriamImportCommands.php ====== -->
+<h2 id="inmemoriamimportcommands-php">7. InMemoriamImportCommands.php</h2>
+<p>InMemoriamImportCommands.php groups implementation around web, modules, custom, montreal2027, mostly in src/Commands/InMemoriamImportCommands.php, src/Commands/ContactImportCommands.php. This section covers 31 nodes and 53 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Drupal\Core\Entity\EntityTypeManagerInterface (40 nodes, 79 edges)
-    subgraph drupal_core_entity_entitytypemanagerinterface_mi_6853a2c1["migrate/process/InMemoriamCategories.php"]
-        web_modules_custom_montreal2027_tools_src_plugin_12af542f("InMemoriamCategories.php")
-        web_modules_custom_montreal2027_tools_src_plugin_fdf16556("InMemoriamCategories<br/><small>migrate/process/InMemoriamCategories.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_1de29d17("transform()<br/><small>migrate/process/InMemoriamCategories.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_ef4751f7("__construct()<br/><small>migrate/process/InMemoriamCategories.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_32e3584f("create()<br/><small>migrate/process/InMemoriamCategories.php</small>")
-    end
-    subgraph drupal_core_entity_entitytypemanagerinterface_mi_0d29d611["migrate/process/InMemoriamNodeLookup.php"]
-        web_modules_custom_montreal2027_tools_src_plugin_d666975d("InMemoriamNodeLookup.php")
-        web_modules_custom_montreal2027_tools_src_plugin_916ff889("InMemoriamNodeLookup<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_02b5644e("transform()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_1611ca85("normalize()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_96d1143f("__construct()<br/><small>migrate/process/InMemoriamNodeLookup.php</small>")
-    end
-    subgraph drupal_core_entity_entitytypemanagerinterface_mi_206f2a4e["migrate/process/InMemoriamDate.php"]
-        web_modules_custom_montreal2027_tools_src_plugin_3b28641c("InMemoriamDate.php")
-        web_modules_custom_montreal2027_tools_src_plugin_552d82b6("InMemoriamDate<br/><small>migrate/process/InMemoriamDate.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7("transform()<br/><small>migrate/process/InMemoriamDate.php</small>")
-    end
-    subgraph drupal_core_entity_entitytypemanagerinterface_mi_69fd54a9["migrate/process/InMemoriamTrim.php"]
-        web_modules_custom_montreal2027_tools_src_plugin_c306a4cc("InMemoriamTrim.php")
-        web_modules_custom_montreal2027_tools_src_plugin_4fc52e78("InMemoriamTrim<br/><small>migrate/process/InMemoriamTrim.php</small>")
-        web_modules_custom_montreal2027_tools_src_plugin_b371d0db("transform()<br/><small>migrate/process/InMemoriamTrim.php</small>")
-    end
-    subgraph drupal_core_entity_entitytypemanagerinterface_mi_cf782583["migrate/source/InMemoriamSpreadsheet.php"]
-        web_modules_custom_montreal2027_tools_src_plugin_589d28c1("InMemoriamSpreadsheet.php")
-        web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d("InMemoriamSpreadsheet<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
-    end
-    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_1de29d17
-    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_ef4751f7
-    web_modules_custom_montreal2027_tools_src_plugin_fdf16556 -->|method| web_modules_custom_montreal2027_tools_src_plugin_32e3584f
-    web_modules_custom_montreal2027_tools_src_plugin_552d82b6 -->|method| web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7
-    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_02b5644e
-    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_1611ca85
-    web_modules_custom_montreal2027_tools_src_plugin_916ff889 -->|method| web_modules_custom_montreal2027_tools_src_plugin_96d1143f
-    web_modules_custom_montreal2027_tools_src_plugin_4fc52e78 -->|method| web_modules_custom_montreal2027_tools_src_plugin_b371d0db
-    web_modules_custom_montreal2027_tools_src_plugin_1de29d17 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_32e3584f
-    web_modules_custom_montreal2027_tools_src_plugin_02b5644e -->|calls| web_modules_custom_montreal2027_tools_src_plugin_1611ca85
-    %% Omitted for readability: 22 nodes, 0 edges
-    class web_modules_custom_montreal2027_tools_src_plugin_12af542f klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_fdf16556 klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_1de29d17 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_ef4751f7 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_32e3584f function;
-    class web_modules_custom_montreal2027_tools_src_plugin_d666975d klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_916ff889 klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_02b5644e function;
-    class web_modules_custom_montreal2027_tools_src_plugin_1611ca85 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_96d1143f function;
-    class web_modules_custom_montreal2027_tools_src_plugin_3b28641c klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_552d82b6 klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_4a1c67b7 function;
-    class web_modules_custom_montreal2027_tools_src_plugin_c306a4cc klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_4fc52e78 klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_b371d0db function;
-    class web_modules_custom_montreal2027_tools_src_plugin_589d28c1 klass;
-    class web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d klass;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>InMemoriamCategories</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>__construct()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>create()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td>InMemoriamCategories node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>InMemoriamDate</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small></td>
-  <td>InMemoriamDate node in migrate/process/InMemoriamDate.php.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>InMemoriamNodeLookup</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>__construct()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br><code>create()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br><code>normalize()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+1 more</td>
-  <td>InMemoriamNodeLookup node in migrate/process/InMemoriamNodeLookup.php.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>InMemoriamTrim</code><br><small style="color:var(--muted)">migrate/process/InMemoriamTrim.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamTrim.php</small></td>
-  <td>InMemoriamTrim node in migrate/process/InMemoriamTrim.php.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>defaultConfiguration()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>loadWorksheet()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br>+1 more</td>
-  <td>InMemoriamSpreadsheet node in migrate/source/InMemoriamSpreadsheet.php.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>{closure#1}()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>{closure#1}() node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>{closure#2}()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>{closure#2}() node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>.__construct()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamCategories</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.__construct() node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>.create()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamCategories</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.create() node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>.transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamCategories</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td><code>create()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small></td>
-  <td>.transform() node in migrate/process/InMemoriamCategories.php.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>.transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamDate</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.transform() node in migrate/process/InMemoriamDate.php.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>.__construct()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamNodeLookup</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.__construct() node in migrate/process/InMemoriamNodeLookup.php.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>.normalize()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamNodeLookup</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br><code>transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.normalize() node in migrate/process/InMemoriamNodeLookup.php.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>.transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamNodeLookup</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td><code>normalize()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td>.transform() node in migrate/process/InMemoriamNodeLookup.php.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>.transform()</code><br><small style="color:var(--muted)">migrate/process/InMemoriamTrim.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamTrim</code><br><small style="color:var(--muted)">migrate/process/InMemoriamTrim.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.transform() node in migrate/process/InMemoriamTrim.php.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>.defaultConfiguration()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Reads, resolves, or persists project configuration.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>.isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>prepareRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.isBlankRow() node in migrate/source/InMemoriamSpreadsheet.php.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>.loadWorksheet()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>.loadWorksheet() node in migrate/source/InMemoriamSpreadsheet.php.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>.prepareRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td><code>isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>.prepareRow() node in migrate/source/InMemoriamSpreadsheet.php.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>Drupal\Core\Entity\EntityTypeManagerInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small><br><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br>+2 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\Core\Entity\EntityTypeManagerInterface node in project.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>Drupal\Core\Plugin\ContainerFactoryPluginInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br><code>LanguageToggleBlock.php</code><br><small style="color:var(--muted)">Plugin/Block/LanguageToggleBlock.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\Core\Plugin\ContainerFactoryPluginInterface node in project.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>Drupal\migrate\Attribute\MigrateProcess</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+1 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\Attribute\MigrateProcess node in project.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>Drupal\migrate\Attribute\MigrateSource</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\Attribute\MigrateSource node in project.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>Drupal\migrate\MigrateException</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+1 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\MigrateException node in project.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>Drupal\migrate\MigrateExecutableInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+1 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\MigrateExecutableInterface node in project.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>Drupal\migrate\MigrateSkipRowException</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\MigrateSkipRowException node in project.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>Drupal\migrate\Plugin\MigrateProcessInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\Plugin\MigrateProcessInterface node in project.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>Drupal\migrate\ProcessPluginBase</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+1 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\ProcessPluginBase node in project.</td>
-</tr>
-<tr>
-  <td>29</td>
-  <td><code>Drupal\migrate\Row</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamCategories.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamCategories.php</small><br><code>InMemoriamDate.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamDate.php</small><br><code>InMemoriamNodeLookup.php</code><br><small style="color:var(--muted)">migrate/process/InMemoriamNodeLookup.php</small><br>+2 more</td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\Row node in project.</td>
-</tr>
-<tr>
-  <td>30</td>
-  <td><code>Drupal\migrate_spreadsheet\Plugin\migrate\source\Spreadsheet</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate_spreadsheet\Plugin\migrate\source\Spreadsheet node in project.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>migrate/process/InMemoriamCategories.php</code></td><td>7 nodes</td></tr>
-<tr><td><code>migrate/source/InMemoriamSpreadsheet.php</code></td><td>6 nodes</td></tr>
-<tr><td><code>migrate/process/InMemoriamNodeLookup.php</code></td><td>5 nodes</td></tr>
-<tr><td><code>migrate/process/InMemoriamDate.php</code></td><td>3 nodes</td></tr>
-<tr><td><code>migrate/process/InMemoriamTrim.php</code></td><td>3 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: imports x33, references x16, method x12, contains x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 8. InMemoriamImportCommands.php ====== -->
-<h2 id="inmemoriamimportcommands-php">8. InMemoriamImportCommands.php</h2>
-<p>InMemoriamImportCommands.php groups implementation around web, modules, custom, montreal2027, mostly in src/Commands/InMemoriamImportCommands.php, src/Commands/ContactImportCommands.php. This section covers 31 nodes and 51 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: InMemoriamImportCommands.php (31 nodes, 51 edges)
+    %% Section: InMemoriamImportCommands.php (31 nodes, 53 edges)
     subgraph inmemoriamimportcommands_php_src_Commands_InMemo_0dd58d95["src/Commands/InMemoriamImportCommands.php"]
         web_modules_custom_montreal2027_tools_src_comman_4583b35b("InMemoriamImportCommands.php")
         web_modules_custom_montreal2027_tools_src_comman_45c1ad7d("InMemoriamImportCommands<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
         web_modules_custom_montreal2027_tools_src_comman_5f3a7e66("import()<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
+        web_modules_custom_montreal2027_tools_src_comman_3282bed8("reportWarnings()<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
         web_modules_custom_montreal2027_tools_src_comman_33f3f6f3("createMigration()<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
         web_modules_custom_montreal2027_tools_src_comman_2b3c7f0e("validateDestinationFields()<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
         web_modules_custom_montreal2027_tools_src_comman_aa30707f("validateWorkbook()<br/><small>src/Commands/InMemoriamImportCommands.php</small>")
@@ -1732,13 +1388,13 @@ flowchart LR
         drush_commands_drushcommands_41af6e2b("Drush\Commands\DrushCommands")
         drupal_core_keyvaluestore_keyvaluefactoryinterfa_fe17c855("Drupal\Core\KeyValueStore\KeyValueFacto...")
         drupal_core_session_accountinterface_f5721242("Drupal\Core\Session\AccountInterface")
-        drupal_core_session_accountswitcherinterface_8dc1469b("Drupal\Core\Session\AccountSwitcherInte...")
     end
     web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_666a9f7e
     web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d7193f46
     web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_d4aaaf68
     web_modules_custom_montreal2027_tools_src_comman_9745b406 -->|method| web_modules_custom_montreal2027_tools_src_comman_47a891c2
     web_modules_custom_montreal2027_tools_src_comman_45c1ad7d -->|method| web_modules_custom_montreal2027_tools_src_comman_5f3a7e66
+    web_modules_custom_montreal2027_tools_src_comman_45c1ad7d -->|method| web_modules_custom_montreal2027_tools_src_comman_3282bed8
     web_modules_custom_montreal2027_tools_src_comman_45c1ad7d -->|method| web_modules_custom_montreal2027_tools_src_comman_33f3f6f3
     web_modules_custom_montreal2027_tools_src_comman_45c1ad7d -->|method| web_modules_custom_montreal2027_tools_src_comman_2b3c7f0e
     web_modules_custom_montreal2027_tools_src_comman_45c1ad7d -->|method| web_modules_custom_montreal2027_tools_src_comman_aa30707f
@@ -1749,16 +1405,17 @@ flowchart LR
     web_modules_custom_montreal2027_tools_src_comman_5f3a7e66 -->|calls| web_modules_custom_montreal2027_tools_src_comman_aa30707f
     web_modules_custom_montreal2027_tools_src_comman_5f3a7e66 -->|calls| web_modules_custom_montreal2027_tools_src_comman_33f3f6f3
     web_modules_custom_montreal2027_tools_src_comman_5f3a7e66 -->|calls| web_modules_custom_montreal2027_tools_src_comman_5f3a7e66
+    web_modules_custom_montreal2027_tools_src_comman_5f3a7e66 -->|calls| web_modules_custom_montreal2027_tools_src_comman_3282bed8
     web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drupal_user_userinterface_bf2f0fe6
     web_modules_custom_montreal2027_tools_src_comman_0bf6dd76 -->|imports| drush_commands_drushcommands_41af6e2b
     web_modules_custom_montreal2027_tools_src_comman_4583b35b -->|imports| drupal_core_keyvaluestore_keyvaluefactoryinterfa_fe17c855
     web_modules_custom_montreal2027_tools_src_comman_4583b35b -->|imports| drupal_core_session_accountinterface_f5721242
-    web_modules_custom_montreal2027_tools_src_comman_4583b35b -->|imports| drupal_core_session_accountswitcherinterface_8dc1469b
     web_modules_custom_montreal2027_tools_src_comman_4583b35b -->|imports| drush_commands_drushcommands_41af6e2b
     %% Omitted for readability: 13 nodes, 0 edges
     class web_modules_custom_montreal2027_tools_src_comman_4583b35b entry;
     class web_modules_custom_montreal2027_tools_src_comman_45c1ad7d entry;
     class web_modules_custom_montreal2027_tools_src_comman_5f3a7e66 function;
+    class web_modules_custom_montreal2027_tools_src_comman_3282bed8 function;
     class web_modules_custom_montreal2027_tools_src_comman_33f3f6f3 function;
     class web_modules_custom_montreal2027_tools_src_comman_2b3c7f0e function;
     class web_modules_custom_montreal2027_tools_src_comman_aa30707f function;
@@ -1773,7 +1430,6 @@ flowchart LR
     class drush_commands_drushcommands_41af6e2b entry;
     class drupal_core_keyvaluestore_keyvaluefactoryinterfa_fe17c855 ui;
     class drupal_core_session_accountinterface_f5721242 klass;
-    class drupal_core_session_accountswitcherinterface_8dc1469b klass;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1808,7 +1464,7 @@ flowchart LR
   <td><code>InMemoriamImportCommands</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>createMigration()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br>+2 more</td>
+  <td><code>__construct()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>createMigration()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br>+3 more</td>
   <td>InMemoriamImportCommands node in src/Commands/InMemoriamImportCommands.php.</td>
 </tr>
 <tr>
@@ -1864,11 +1520,19 @@ flowchart LR
   <td><code>.import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>InMemoriamImportCommands</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
-  <td><code>createMigration()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>validateDestinationFields()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br>+1 more</td>
+  <td><code>createMigration()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>reportWarnings()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br>+2 more</td>
   <td>.import() node in src/Commands/InMemoriamImportCommands.php.</td>
 </tr>
 <tr>
   <td>10</td>
+  <td><code>.reportWarnings()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>InMemoriamImportCommands</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.reportWarnings() node in src/Commands/InMemoriamImportCommands.php.</td>
+</tr>
+<tr>
+  <td>11</td>
   <td><code>.validateDestinationFields()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>InMemoriamImportCommands</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1876,7 +1540,7 @@ flowchart LR
   <td>.validateDestinationFields() node in src/Commands/InMemoriamImportCommands.php.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>12</td>
   <td><code>.validateWorkbook()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>import()</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>InMemoriamImportCommands</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1884,7 +1548,7 @@ flowchart LR
   <td>.validateWorkbook() node in src/Commands/InMemoriamImportCommands.php.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>13</td>
   <td><code>Drupal\Component\Datetime\TimeInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1892,7 +1556,7 @@ flowchart LR
   <td>Drupal\Component\Datetime\TimeInterface node in project.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>14</td>
   <td><code>Drupal\Core\Entity\EntityFieldManagerInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1900,7 +1564,7 @@ flowchart LR
   <td>Drupal\Core\Entity\EntityFieldManagerInterface node in project.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>15</td>
   <td><code>Drupal\Core\KeyValueStore\KeyValueFactoryInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1908,7 +1572,7 @@ flowchart LR
   <td>Drupal\Core\KeyValueStore\KeyValueFactoryInterface node in project.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>16</td>
   <td><code>Drupal\Core\Session\AccountInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1916,7 +1580,7 @@ flowchart LR
   <td>Drupal\Core\Session\AccountInterface node in project.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>17</td>
   <td><code>Drupal\Core\Session\AccountSwitcherInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -1924,20 +1588,12 @@ flowchart LR
   <td>Drupal\Core\Session\AccountSwitcherInterface node in project.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>18</td>
   <td><code>Drupal\Core\StringTranslation\TranslationInterface</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
   <td>No direct outbound edge</td>
   <td>Drupal\Core\StringTranslation\TranslationInterface node in project.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>Drupal\migrate\Plugin\MigrationInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\migrate\Plugin\MigrationInterface node in project.</td>
 </tr>
 <tr>
   <td>19</td>
@@ -2005,14 +1661,6 @@ flowchart LR
 </tr>
 <tr>
   <td>27</td>
-  <td><code>MigrationInterface</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>MigrationInterface node in project.</td>
-</tr>
-<tr>
-  <td>28</td>
   <td><code>PhpOffice\PhpSpreadsheet\Cell\Coordinate</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -2020,7 +1668,7 @@ flowchart LR
   <td>PhpOffice\PhpSpreadsheet\Cell\Coordinate node in project.</td>
 </tr>
 <tr>
-  <td>29</td>
+  <td>28</td>
   <td><code>Symfony\Component\Console\Helper\ProgressBar</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
@@ -2028,12 +1676,20 @@ flowchart LR
   <td>Symfony\Component\Console\Helper\ProgressBar node in project.</td>
 </tr>
 <tr>
-  <td>30</td>
+  <td>29</td>
   <td><code>ContactImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/ContactImportCommands.php</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
   <td><code>Drupal\Core\Entity\EntityTypeManagerInt...</code><br><code>Drupal\user\UserInterface</code><br><code>Drush\Commands\DrushCommands</code></td>
   <td>ContactImportCommands.php node in src/Commands/ContactImportCommands.php.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Component\Datetime\TimeInterface</code><br><code>Drupal\Core\Entity\EntityFieldManagerIn...</code><br><code>Drupal\Core\Entity\EntityTypeManagerInt...</code><br>+15 more</td>
+  <td>InMemoriamImportCommands.php node in src/Commands/InMemoriamImportCommands.php.</td>
 </tr>
 </table>
 
@@ -2042,19 +1698,19 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>src/Commands/InMemoriamImportCommands.php</code></td><td>7 nodes</td></tr>
+      <tr><td><code>src/Commands/InMemoriamImportCommands.php</code></td><td>8 nodes</td></tr>
 <tr><td><code>src/Commands/ContactImportCommands.php</code></td><td>6 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: imports x18, references x13, method x9, calls x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: imports x17, references x13, method x10, calls x7. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 9. db ====== -->
-<h2 id="db">9. db</h2>
+<!-- ====== 8. db ====== -->
+<h2 id="db">8. db</h2>
 <p>db groups implementation around docker, composeyml, mariadb, name, mostly in docker-compose.yml. This section covers 30 nodes and 29 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2393,8 +2049,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 10. steps ====== -->
-<h2 id="steps">10. steps</h2>
+<!-- ====== 9. steps ====== -->
+<h2 id="steps">9. steps</h2>
 <p>steps groups implementation around graphifyyml, github, workflows, message, mostly in .github/workflows/graphify.yml. This section covers 29 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2725,8 +2381,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 11. regions ====== -->
-<h2 id="regions">11. regions</h2>
+<!-- ====== 10. regions ====== -->
+<h2 id="regions">10. regions</h2>
 <p>regions groups implementation around montreal2027infoyml, web, themes, custom, mostly in custom/montreal2027/montreal2027.info.yml. This section covers 29 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3057,8 +2713,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. web ====== -->
-<h2 id="web">12. web</h2>
+<!-- ====== 11. web ====== -->
+<h2 id="web">11. web</h2>
 <p>web groups implementation around docker, composeyml, web, port, mostly in docker-compose.yml. This section covers 23 nodes and 22 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3337,6 +2993,187 @@ flowchart LR
   <div class="card">
     <h4>Design Notes</h4>
     <p>This section comes from graphify community clustering. Relationship summary: contains x22. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 12. InMemoriamSpreadsheet.php ====== -->
+<h2 id="inmemoriamspreadsheet-php">12. InMemoriamSpreadsheet.php</h2>
+<p>InMemoriamSpreadsheet.php groups implementation around inmemoriamspreadsheetphp, web, modules, custom, mostly in migrate/source/InMemoriamSpreadsheet.php. This section covers 12 nodes and 14 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: InMemoriamSpreadsheet.php (12 nodes, 14 edges)
+    subgraph inmemoriamspreadsheet_php_External_generated_e7ec51ba["External / generated"]
+        drupal_migrate_spreadsheet_plugin_migrate_source_4ba5035d("Drupal\migrate spreadsheet\Plugin\migra...")
+        phpoffice_phpspreadsheet_iofactory_3963dff9("PhpOffice\PhpSpreadsheet\IOFactory")
+        phpoffice_phpspreadsheet_reader_csv_19a10ce3("PhpOffice\PhpSpreadsheet\Reader\Csv")
+        phpoffice_phpspreadsheet_shared_date_92194c01("PhpOffice\PhpSpreadsheet\Shared\Date")
+        phpoffice_phpspreadsheet_worksheet_worksheet_d669e384("PhpOffice\PhpSpreadsheet\Worksheet\Work...")
+        drupal_migrate_attribute_migratesource_bdc6e945("Drupal\migrate\Attribute\MigrateSource")
+    end
+    subgraph inmemoriamspreadsheet_php_migrate_source_InMemor_c166f3f0["migrate/source/InMemoriamSpreadsheet.php"]
+        web_modules_custom_montreal2027_tools_src_plugin_589d28c1("InMemoriamSpreadsheet.php")
+        web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d("InMemoriamSpreadsheet<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_6754aad9("prepareRow()<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_f63cf6ea("isBlankRow()<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_1abe4ef6("loadWorksheet()<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
+        web_modules_custom_montreal2027_tools_src_plugin_60d0cbf3("defaultConfiguration()<br/><small>migrate/source/InMemoriamSpreadsheet.php</small>")
+    end
+    web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d -->|method| web_modules_custom_montreal2027_tools_src_plugin_f63cf6ea
+    web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d -->|method| web_modules_custom_montreal2027_tools_src_plugin_1abe4ef6
+    web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d -->|method| web_modules_custom_montreal2027_tools_src_plugin_60d0cbf3
+    web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d -->|method| web_modules_custom_montreal2027_tools_src_plugin_6754aad9
+    web_modules_custom_montreal2027_tools_src_plugin_6754aad9 -->|calls| web_modules_custom_montreal2027_tools_src_plugin_f63cf6ea
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| drupal_migrate_spreadsheet_plugin_migrate_source_4ba5035d
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| phpoffice_phpspreadsheet_iofactory_3963dff9
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| phpoffice_phpspreadsheet_reader_csv_19a10ce3
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| phpoffice_phpspreadsheet_shared_date_92194c01
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| phpoffice_phpspreadsheet_worksheet_worksheet_d669e384
+    web_modules_custom_montreal2027_tools_src_plugin_589d28c1 -->|imports| drupal_migrate_attribute_migratesource_bdc6e945
+    class drupal_migrate_spreadsheet_plugin_migrate_source_4ba5035d klass;
+    class phpoffice_phpspreadsheet_iofactory_3963dff9 klass;
+    class phpoffice_phpspreadsheet_reader_csv_19a10ce3 klass;
+    class phpoffice_phpspreadsheet_shared_date_92194c01 klass;
+    class phpoffice_phpspreadsheet_worksheet_worksheet_d669e384 klass;
+    class drupal_migrate_attribute_migratesource_bdc6e945 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_589d28c1 klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_5bcfcc6d klass;
+    class web_modules_custom_montreal2027_tools_src_plugin_6754aad9 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_f63cf6ea function;
+    class web_modules_custom_montreal2027_tools_src_plugin_1abe4ef6 function;
+    class web_modules_custom_montreal2027_tools_src_plugin_60d0cbf3 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>defaultConfiguration()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>loadWorksheet()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br>+1 more</td>
+  <td>InMemoriamSpreadsheet node in migrate/source/InMemoriamSpreadsheet.php.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>.defaultConfiguration()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Reads, resolves, or persists project configuration.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>.isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small><br><code>prepareRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.isBlankRow() node in migrate/source/InMemoriamSpreadsheet.php.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>.loadWorksheet()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>.loadWorksheet() node in migrate/source/InMemoriamSpreadsheet.php.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>.prepareRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>InMemoriamSpreadsheet</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><code>isBlankRow()</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>.prepareRow() node in migrate/source/InMemoriamSpreadsheet.php.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>Drupal\migrate\Attribute\MigrateSource</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\migrate\Attribute\MigrateSource node in project.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>Drupal\migrate_spreadsheet\Plugin\migrate\source\Spreadsheet</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\migrate_spreadsheet\Plugin\migrate\source\Spreadsheet node in project.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>PhpOffice\PhpSpreadsheet\IOFactory</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamImportCommands.php</code><br><small style="color:var(--muted)">src/Commands/InMemoriamImportCommands.php</small><br><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>PhpOffice\PhpSpreadsheet\IOFactory node in project.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>PhpOffice\PhpSpreadsheet\Reader\Csv</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>PhpOffice\PhpSpreadsheet\Reader\Csv node in project.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>PhpOffice\PhpSpreadsheet\Shared\Date</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>PhpOffice\PhpSpreadsheet\Shared\Date node in project.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>PhpOffice\PhpSpreadsheet\Worksheet\Worksheet</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>PhpOffice\PhpSpreadsheet\Worksheet\Worksheet node in project.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>InMemoriamSpreadsheet.php</code><br><small style="color:var(--muted)">migrate/source/InMemoriamSpreadsheet.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\migrate spreadsheet\Plugin\migra...</code><br><code>Drupal\migrate\Attribute\MigrateSource</code><br><code>Drupal\migrate\MigrateException</code><br>+5 more</td>
+  <td>InMemoriamSpreadsheet.php node in migrate/source/InMemoriamSpreadsheet.php.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>migrate/source/InMemoriamSpreadsheet.php</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: imports x6, method x4, inherits x1, references x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4122,17 +3959,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>704</td></tr>
-      <tr><td>Edges</td><td>827</td></tr>
+      <tr><td>Nodes</td><td>717</td></tr>
+      <tr><td>Edges</td><td>874</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>65</td></tr>
+      <tr><td>Communities</td><td>68</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>827</td></tr>
+      <tr><td>EXTRACTED</td><td>874</td></tr>
       <tr><td>INFERRED</td><td>0</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -4141,7 +3978,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>montreal2027.ca — Architecture Documentation</p>
-  <p>Generated: 2026-10-29 21:45 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-10-30 04:09 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
