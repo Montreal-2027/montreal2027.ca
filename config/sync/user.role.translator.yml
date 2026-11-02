@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.full_html
     - media.type.image
     - node.type.article
     - node.type.guest
@@ -14,6 +16,7 @@ dependencies:
     - block_content
     - config_translation
     - content_translation
+    - filter
     - menu_link_content
 id: translator
 label: Translator
@@ -34,3 +37,5 @@ permissions:
   - 'translate menu_link_content'
   - 'translate page node'
   - 'update content translations'
+  - 'use text format basic_html'
+  - 'use text format full_html'

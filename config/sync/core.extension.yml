@@ -14,6 +14,7 @@ module:
   ckeditor5: 0
   ckeditor5_open_new_tab: 0
   ckeditor5_paste_filter: 0
+  ckeditor_details: 0
   ckeditor_media_resize: 0
   clientside_validation: 0
   clientside_validation_jquery: 0

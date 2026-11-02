@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.basic
     - block_content.type.theme_image
+    - filter.format.basic_html
     - filter.format.full_html
     - media.type.audio
     - media.type.document
@@ -100,6 +101,7 @@ permissions:
   - 'translate page node'
   - 'update any media'
   - 'update content translations'
+  - 'use text format basic_html'
   - 'use text format full_html'
   - 'use workspace transition back_to_draft'
   - 'use workspace transition reviewed'

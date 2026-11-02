@@ -1,13 +1,24 @@
 @use 'mixins' as *;
 
+.view-empty {
+    display: grid;
+    grid-template-rows: auto;
+
+    & p {
+        font-weight: 600;
+        justify-self: center;
+
+        &::first-letter {
+            font-size: calc(.65rem + .5vw);
+            font-size: clamp(.75rem, .65rem + .5vw, 1.25rem);
+        }
+    }
+}
+
 .views-exposed-form {
     display: grid;
     grid-template-rows: auto;
     justify-content: center;
-
-    & h2 {
-        justify-self: center;
-    }
 
     & .form--inline {
         display: flex;
@@ -16,10 +27,10 @@
         & .form-actions {
             & .button {
                 background: var(--color-blue);
-                color: var(--color-bright-red);
-                box-sizing: border-box;
-                border-radius: 1rem;
                 border: 1px solid var(--color-black);
+                border-radius: 1rem;
+                box-sizing: border-box;
+                color: var(--color-bright-red);
                 transition: transform 0.1s ease, box-shadow 0.1s ease;
 
                 // &:hover {
@@ -34,19 +45,8 @@
             margin: 0.2rem 0;
         }
     }
-}
 
-.view-empty {
-    display: grid;
-    grid-template-rows: auto;
-
-    & p {
+    & h2 {
         justify-self: center;
-        font-weight: 600;
-
-        &::first-letter {
-            font-size: calc(.65rem + .5vw);
-            font-size: clamp(.75rem, .65rem + .5vw, 1.25rem);
-        }
     }
 }
