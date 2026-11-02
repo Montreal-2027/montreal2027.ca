@@ -9,6 +9,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\Core\Mail\MailManagerInterface;
 use Exception;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\InputBag;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -22,8 +23,8 @@ class StaffContactController extends ControllerBase
   const SUCCESS_MESSAGE = 'success_message';
   const SUBJECT_PREFIX = 'subject_prefix';
 
-  var $translated_content = [];
-  var $langcode = '';
+  private $translated_content = [];
+  private $langcode = '';
 
   /**
    * Constructs the contact controller.
@@ -115,16 +116,16 @@ class StaffContactController extends ControllerBase
   /**
    * Get and validate the submitted data
    * 
-   * @param Object $request
+   * @param InputBag $request_params
    * @throws Exception
    * @return void
    */
-  private function getSubmittedData(Object $request): array {
+  private function getSubmittedData(InputBag $request_params): array {
     $result = [
-      'tid' => (int) $request->get('tid', 0),
-      'name' => trim((string) $request->get('name', '')),
-      'email' => trim((string) $request->get('email', '')),
-      'message' => trim((string) $request->get('message', '')),
+      'tid' => $request_params->getint('tid'),
+      'name' => $request_params->getString('name'),
+      'email' => $request_params->getString('email'),
+      'message' => $request_params->getString('message'),
     ];
 
     $result['term'] = $this->getTargetTerm($result['tid']);
@@ -177,11 +178,11 @@ class StaffContactController extends ControllerBase
    * Get the email address the Contact Message is being sent to, based on the
    * target's taxonomy term
    * 
-   * @param object $term
+   * @param \Drupal\taxonomy\TermInterface $term
    * @throws Exception
    * @return string
    */
-  private function getEmailTo(Object $term): string {
+  private function getEmailTo(\Drupal\taxonomy\TermInterface $term): string {
     $result = '';
 
     foreach ($term->get('field_email_address') as $item) {
@@ -239,7 +240,7 @@ class StaffContactController extends ControllerBase
    * @return void
    */
   private function getTranslatedMessages(): void {
-    $messages = [
+    $fallback_messages = [
       self::FAILURE_MESSAGE => 'There was a problem sending your message.  Please try again later.',
       self::SUCCESS_MESSAGE => 'Your message has been sent.  A member of our staff will reach out if appropriate.',
       self::SUBJECT_PREFIX => 'Staff contact message for ',
@@ -251,9 +252,14 @@ class StaffContactController extends ControllerBase
     // If there is a message in the montreal2027 configuration use it, otherwise
     // use the default message above
     $this->translated_content = [];
-    foreach ($messages as $msg_id => $default_message) {
+    foreach ($fallback_messages as $msg_id => $default_message) {
       $translation = trim((string) ($config->get($msg_id) ?? ''));
-      $this->translated_content[$msg_id] = $this->t($translation ?: $default_message);
+      // Calling the t() method causes the text to appear in the User Interface Translation
+      // entry for the text, but it won't appear until the page containing the text 
+      // is viewed in the translated language
+      $fallback_translation = $this->t($default_message);
+      $this->translated_content[$msg_id] = $translation ?: $fallback_translation;
     }
+
   }
 }
