@@ -18,6 +18,10 @@
             "url": "https://github.com/omscllc/clean_blog_theme.git"
         },
         {
+            "type": "git",
+            "url": "https://github.com/dweinerATL/ckeditor_details.git"
+        },
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
@@ -83,6 +87,7 @@
         "drupal/workspaces_access": "^1.1",
         "drupal/wse": "^3.0@alpha",
         "drush/drush": "^13.6",
+        "dweineratl/ckeditor_details": "2.1.x-dev",
         "omscllc/clean_blog_theme": "dev-develop",
         "oomphinc/composer-installers-extender": "^2.0",
         "symfony/dotenv": "^7.4",

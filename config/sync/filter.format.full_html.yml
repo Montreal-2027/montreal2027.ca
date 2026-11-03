@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.1400_pixels
+    - core.entity_view_mode.media.1600_pixels
     - core.entity_view_mode.media.16_9
+    - core.entity_view_mode.media.4_3
     - core.entity_view_mode.media.cke_media_resize_large
     - core.entity_view_mode.media.cke_media_resize_medium
     - core.entity_view_mode.media.cke_media_resize_small
@@ -56,7 +58,7 @@ filters:
     status: false
     weight: -45
     settings:
-      allowed_html: '<a hreflang target>'
+      allowed_html: '<a hreflang target> <details name>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:
@@ -100,7 +102,9 @@ filters:
       allowed_view_modes:
         default: default
         1400_pixels: 1400_pixels
+        1600_pixels: 1600_pixels
         '16_9': '16_9'
+        '4_3': '4_3'
         cke_media_resize_large: cke_media_resize_large
         cke_media_resize_medium: cke_media_resize_medium
         cke_media_resize_small: cke_media_resize_small

@@ -4,17 +4,17 @@
     &--platforms {
         a {
             &.social-media-link-icon {
+
+                &--bluesky {
+                    color: var(--color-bluesky);
+                    font-weight: 900;
+                }
                 &--email {
                     color: var(--color-white);
                 }
 
                 &--facebook {
                     color: var(--color-facebook);
-                    font-weight: 900;
-                }
-
-                &--bluesky {
-                    color: var(--color-bluesky);
                     font-weight: 900;
                 }
 

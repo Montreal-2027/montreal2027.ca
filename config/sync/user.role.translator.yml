@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.full_html
     - media.type.image
     - node.type.article
     - node.type.guest
@@ -18,6 +20,7 @@ dependencies:
     - config_translation
     - content_translation
     - locale
+    - filter
     - menu_link_content
     - node
     - paragraphs
@@ -71,3 +74,5 @@ permissions:
   - 'update content translations'
   - 'view own unpublished content'
   - 'view webform submissions any node'
+  - 'use text format basic_html'
+  - 'use text format full_html'

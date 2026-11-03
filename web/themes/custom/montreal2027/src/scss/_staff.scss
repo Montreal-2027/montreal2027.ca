@@ -1,48 +1,13 @@
 #block-montreal2027-content {
     & .staff-page {
-        div {
-            border-radius: .4rem;
-        }
-
-        .wsfs-only {
-            background-color: oklch(from var(--color-white) l c h / 0.55);
-        }
-
-        &__title {
-            h1 {
-                text-align: center;
-                margin: 0;
-            }
-        }
-
-        &__jump-menu {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: .5rem;
-            margin: 1rem 0;
-
-            & label {
-                font-weight: 700;
-            }
-
-            & select {
-                background-color: var(--color-white);
-                border: 1px solid var(--color-dark-gray);
-                border-radius: .4rem;
-                color: var(--color-black);
-                padding: .4rem .6rem;
-                font-size: clamp(0.85rem, 0.5vw + 0.7rem, 1.1rem);
-            }
-        }
 
         & .division {
             background-color: floralwhite;
-            padding: .4rem;
             font-size: calc(0.900rem + 0.500vw);
-            font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+            font-size: var(--font-size-h6);
             font-style: italic;
             margin: 0.4rem 0 0;
+            padding: .4rem;
             padding: 1rem;
             /* Keeps the fixed header from covering the target after a jump-menu scroll */
             scroll-margin-top: var(--site-main-content-top);
@@ -54,12 +19,37 @@
 
         & .staff-row {
             display: grid;
-            grid-template-columns: 40% 40% 1fr;
             gap: .5rem;
+            grid-template-columns: 40% 40% 1fr;
             padding: .2rem 0;
+
+            &.indent-1 div:nth-child(-n+2) {
+                padding: 0 0 0 1.5rem;
+            }
+
+            &.indent-2 div:nth-child(-n+2) {
+                padding: 0 0 0 10px;
+            }
+
+            &.indent-3 div:nth-child(-n+2) {
+                padding: 0 0 0 2rem;
+            }
+
+            &.indent-4 div:nth-child(-n+2) {
+                padding: 0 0 0 4rem;
+            }
 
             &:not(.indent-1) {
                 margin-left: 2rem;
+            }
+
+            & a {
+                & button {
+                    border-radius: 1rem;
+                    font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1rem);
+                    line-height: clamp(0.6rem, 0.6vw + 0.48rem, 1.2rem);
+                    padding: 0 .5rem .25rem;
+                }
             }
 
             & form {
@@ -77,31 +67,41 @@
                 padding: 0;
                 text-decoration: underline;
             }
+        }
 
-            & a {
-                & button {
-                    border-radius: 1rem;
-                    padding: 0 .5rem .25rem;
-                    font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1rem);
-                    line-height: clamp(0.6rem, 0.6vw + 0.48rem, 1.2rem);
-                }
+        .wsfs-only {
+            background-color: oklch(from var(--color-white) l c h / 0.55);
+        }
+
+        &__jump-menu {
+            align-items: center;
+            display: flex;
+            gap: .5rem;
+            justify-content: flex-end;
+            margin: 1rem 0;
+
+            & label {
+                font-weight: 700;
             }
 
-            &.indent-1 div:nth-child(-n+2) {
-                padding: 0 0 0 1.5rem;
+            & select {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-dark-gray);
+                border-radius: .4rem;
+                color: var(--color-black);
+                font-size: clamp(0.85rem, 0.5vw + 0.7rem, 1.1rem);
+                padding: .4rem .6rem;
             }
+        }
 
-            &.indent-2 div:nth-child(-n+2) {
-                padding: 0 0 0 10px;
+        &__title {
+            h1 {
+                margin: 0;
+                text-align: center;
             }
-
-            &.indent-3 div:nth-child(-n+2) {
-                padding: 0 0 0 2rem;
-            }
-
-            &.indent-4 div:nth-child(-n+2) {
-                padding: 0 0 0 4rem;
-            }
+        }
+        div {
+            border-radius: .4rem;
         }
     }
 }

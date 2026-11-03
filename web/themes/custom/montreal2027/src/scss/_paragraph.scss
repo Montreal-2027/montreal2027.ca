@@ -1,16 +1,9 @@
 .paragraph {
-  &--guest-type {
-    &:not(h4) {
-      text-align: center;
-      margin: 0 1.5rem 0 1rem;
-      text-wrap: balance;
-    }
-  }
 
   &--guest-list {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 10px;
+    grid-template-columns: 1fr;
 
     @container page-wrapper (min-width: 1200px) {
       grid-template-columns: repeat(2, 1fr);
@@ -18,13 +11,20 @@
 
     & article {
       background: var(--color-dark-blue);
-      padding: .8rem;
       border-radius: .5rem;
       box-shadow: 0 2px 8px 0 var(--shadow-color, rgba(0, 0, 0, 0.15));
+      padding: .8rem;
 
       & p {
         color: var(--color-white);
       }
+    }
+  }
+  &--guest-type {
+    &:not(h4) {
+      margin: 0 1.5rem 0 1rem;
+      text-align: center;
+      text-wrap: balance;
     }
   }
 }
