@@ -20,13 +20,13 @@
   $border-color: rgba(255, 255, 255, 0.3),
   $border-radius: .5rem,
 ) {
-  background-color: $bg-color;
-  backdrop-filter: blur($blur);
   -webkit-backdrop-filter: blur($blur);
+  backdrop-filter: blur($blur);
+  background-color: $bg-color;
   border-radius: $border-radius;
 }
 
-@mixin noto-font ($weight: 500, $style: "sans") {
+@mixin noto-font ($weight: var(--font-weight-medium), $style: "sans") {
   @if ($style == "sans") {
     font-family: "Noto Sans", sans-serif;
   } @else {
@@ -34,20 +34,20 @@
   }
 
   font-optical-sizing: auto;
-  font-weight: $weight;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  font-weight: $weight;
 }
 
 @mixin button {
-
-      font-weight: 900;
+      border: 1px solid var(--color-black);
+      border-radius: 1rem;
+      box-sizing: border-box;
       font-size: 1.5rem;
       font-size: clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem);
-      box-sizing: border-box;
+
+      font-weight: 900;
       padding: 1rem;
-      border-radius: 1rem;
-      border: 1px solid var(--color-black);
       @include drop-shadow-slight();
       transition: transform 0.1s ease, box-shadow 0.1s ease;
 

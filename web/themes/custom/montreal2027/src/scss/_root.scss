@@ -2,19 +2,20 @@
 
 :root {
   --body-color: var(--color-black);
+  --body-font: "Noto Sans", sans-serif;
   --color-black: oklch(0 0 0);
   --color-blue-bell: oklch(76% 0.096 265);
   --color-blue: oklch(0.3664 0.1223 278.5);
   --color-bluesky: oklch(0.648 0.191659 254.4114);
   --color-bright-red: oklch(0.628 0.2577 29.23);
-  --color-light-azure: oklch(.7676 0.1159 253.06);
   --color-dark-blue: oklch(0.30 0.18 275);
   --color-dark-gray: oklch(0.6941 0 0);
   --color-dim-gray: oklch(0.4667 0 0);
   --color-facebook: oklch(0.5891 0.2029 257.86);
   --color-gray: oklch(0.683 0 0);
-  --color-light-gray: oklch(0.8669 0 0);
+  --color-light-azure: oklch(.7676 0.1159 253.06);
   --color-light-cadmium-red: oklch(0.6967 0.2245 23.87);
+  --color-light-gray: oklch(0.8669 0 0);
   --color-maroon: oklch(0.4346 0.1737 13.84);
   --color-mastodon: oklch(0.5928 0.2243 276.82);
   --color-medium-gray: oklch(0.7843 0 0);
@@ -24,7 +25,19 @@
   --color-sm-blue: oklch(0.6246 0.1616 275.91); // oklch(from var(--color-blue) l calc(c + 0.25) h)
   --color-white: oklch(1 0 0);
   --footer-fixed-breakpoint: 64rem;
+  --font-size-body: clamp(0.75rem, calc(0.650rem + 0.500vw), 1.25rem);
+  --font-size-h1: clamp(2.25rem, calc(2.150rem + 0.500vw), 2.75rem);
+  --font-size-h2: clamp(2.00rem, calc(1.900rem + 0.500vw), 2.50rem);
+  --font-size-h3: clamp(1.75rem, calc(1.650rem + 0.500vw), 2.25rem);
+  --font-size-h4: clamp(1.50rem, calc(1.400rem + 0.500vw), 2.00rem);
+  --font-size-h5: clamp(1.25rem, calc(1.150rem + 0.500vw), 1.75rem);
+  --font-size-h6: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
   --guest-header-color: var(--color-light-cadmium-red);
+  --header-font: "Noto Serif", serif;
   --link-color: var(--color-blue);
   --more-link-color: var(--color-light-azure);
   --shadow-color: var(--color-black);
@@ -50,6 +63,10 @@
   }
 }
 
+a {
+  color: var(--link-color);
+}
+
 body {
   background-attachment: fixed;
   /* keeps image static */
@@ -59,25 +76,27 @@ body {
   background-size: cover;
   /* fills the page */
   color: var(--body-color);
-  @include noto-font($weight: 350);
-}
-
-img {
-  filter: brightness(1.2) contrast(1.06) saturate(1.14);
+  @include noto-font($weight: var(--font-weight-normal));
 }
 
 body,
 p {
+  color: var(--body-color);
   font-size: calc(0.650rem + 0.500vw);
-  font-size: clamp(0.75rem, calc(0.650rem + 0.500vw), 1.25rem);
+  font-size: var(--font-size-body);
   line-height: calc(0.5vw + 1.025rem);
   line-height: clamp(1.125rem, 0.5vw + 1.025rem, 1.625rem);
-  color: var(--body-color);
 }
 
-p::first-letter {
-  font-size: calc(0.900rem + 0.500vw);
-  font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+h1 {
+  font-size: calc(2.150rem + 0.500vw);
+  font-size: var(--font-size-h1);
+
+  &.paragraph--guest-type {
+    font-size: calc(1.400rem + 0.500vw);
+    font-size: var(--font-size-h4);
+    padding-top: 1rem;
+  }
 }
 
 h1,
@@ -87,62 +106,56 @@ h4,
 h5,
 h6 {
   color: var(--color-black);
-  @include noto-font($weight: 700, $style: 'serif');
+  @include noto-font($weight: var(--font-weight-bold), $style: 'serif');
   margin: 0;
-}
-
-h1 {
-  font-size: calc(2.150rem + 0.500vw);
-  font-size: clamp(2.25rem, calc(2.150rem + 0.500vw), 2.75rem);
-
-  &.paragraph--guest-type {
-    padding-top: 1rem;
-    font-size: calc(1.400rem + 0.500vw);
-    font-size: clamp(1.50rem, calc(1.400rem + 0.500vw), 2.00rem);
-  }
 }
 
 h2 {
   font-size: calc(1.900rem + 0.500vw);
-  font-size: clamp(2.00rem, calc(1.900rem + 0.500vw), 2.50rem);
-
-  &.paragraph--guest-type,
-  &.faq {
-    padding-bottom: 1rem;
-    font-size: calc(1.150rem + 0.500vw);
-    font-size: clamp(1.25rem, calc(1.150rem + 0.500vw), 1.75rem);
-  }
+  font-size: var(--font-size-h2);
 
   &.bottom--margin-small {
     margin-bottom: .25rem;
+  }
+
+  &.paragraph--guest-type,
+  &.faq {
+    font-size: calc(1.150rem + 0.500vw);
+    font-size: var(--font-size-h5);
+    padding-bottom: 1rem;
   }
 }
 
 h3 {
   font-size: calc(1.650rem + 0.500vw);
-  font-size: clamp(1.75rem, calc(1.650rem + 0.500vw), 2.25rem);
+  font-size: var(--font-size-h3);
 
   &.faq {
     font-size: calc(0.900rem + 0.500vw);
-    font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+    font-size: var(--font-size-h6);
   }
 }
 
 h4 {
   font-size: calc(1.400rem + 0.500vw);
-  font-size: clamp(1.50rem, calc(1.400rem + 0.500vw), 2.00rem);
+  font-size: var(--font-size-h4);
 }
 
 h5 {
   font-size: calc(1.150rem + 0.500vw);
-  font-size: clamp(1.25rem, calc(1.150rem + 0.500vw), 1.75rem);
+  font-size: var(--font-size-h5);
 }
 
 h6 {
   font-size: calc(0.900rem + 0.500vw);
-  font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+  font-size: var(--font-size-h6);
 }
 
-a {
-  color: var(--link-color);
+img {
+  filter: brightness(1.2) contrast(1.06) saturate(1.14);
+}
+
+p::first-letter {
+  font-size: calc(0.900rem + 0.500vw);
+  font-size: var(--font-size-h6);
 }
