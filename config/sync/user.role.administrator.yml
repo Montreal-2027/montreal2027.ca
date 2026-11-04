@@ -11,8 +11,8 @@ _core:
   default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
 id: administrator
 label: Administrator
-weight: 0
-is_admin: false
+weight: -2
+is_admin: true
 permissions:
   - 'use text format basic_html'
   - 'use text format full_html'

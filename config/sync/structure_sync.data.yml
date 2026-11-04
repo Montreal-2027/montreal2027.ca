@@ -1,6 +1,279 @@
 menus:
   -
     menu_name: main
+    title: About
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -48
+    langcode: en
+    uuid: 2898ad03-37cd-4a74-bffe-f7d76342d896
+    options: {  }
+  -
+    menu_name: main
+    title: Policies
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -46
+    langcode: en
+    uuid: 83039fa9-1e1c-48a6-87c7-6062e380e0eb
+    options: {  }
+  -
+    menu_name: main
+    title: 'Code of Conduct'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/12'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 44fc0c5f-77be-4c94-a383-053b9ac89607
+    options: {  }
+  -
+    menu_name: main
+    title: 'Communications Policy'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/16'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: d93687d1-da4d-4c83-b20c-96563b0e6b72
+    options: {  }
+  -
+    menu_name: main
+    title: 'Data Privacy Policy'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/13'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 03f10e9b-515d-4cd9-9f19-167136cf5b1c
+    options: {  }
+  -
+    menu_name: main
+    title: Volunteer
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'entity:node/14'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: a0cd243b-1364-48c5-b8c2-166163fb4a76
+    options: {  }
+  -
+    menu_name: main
+    title: Facilities
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 1ac71e33-7787-432f-87d8-b6a5e2143e9f
+    options: {  }
+  -
+    menu_name: main
+    title: 'Montréal Convention Centre'
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/19'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -47
+    langcode: en
+    uuid: bc131aba-fb34-477e-854a-bb2193f11796
+    options: {  }
+  -
+    menu_name: main
+    title: Montréal
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/10'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -50
+    langcode: en
+    uuid: cc90509c-37d7-49d1-b15e-ba172d23e741
+    options: {  }
+  -
+    menu_name: main
+    title: 'Getting To Montréal'
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/8'
+    link_title: ''
+    description: null
+    enabled: false
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 170f858f-bee4-4a33-82c9-4cc783828b05
+    options: {  }
+  -
+    menu_name: main
+    title: Home
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -50
+    langcode: en
+    uuid: 48b4b5c9-eee5-458b-9fd0-c0d967d7228f
+    options: {  }
+  -
+    menu_name: main
+    title: Hotels
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/21'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -48
+    langcode: en
+    uuid: e32e1ca2-64cf-4afa-bffc-91326f6df577
+    options: {  }
+  -
+    menu_name: main
+    title: 'Committee & Team'
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'internal:/team'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 9d39147e-9760-4361-9758-c9f8b6249e43
+    options: {  }
+  -
+    menu_name: null
+    title: Membership
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: null
+    weight: null
+    langcode: en
+    uuid: 3ef1dc62-f74c-4b10-8155-516eaec645a0
+    options: {  }
+  -
+    menu_name: null
+    title: 'Membership Rates'
+    parent: null
+    uri: 'entity:node/18'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: null
+    weight: null
+    langcode: en
+    uuid: 5618e058-d5ea-4fad-ada5-2e685f469985
+    options: {  }
+  -
+    menu_name: main
+    title: Programming
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -42
+    langcode: en
+    uuid: 97762b64-3290-4848-9f1f-d7c2f0a6e13e
+    options: {  }
+  -
+    menu_name: main
+    title: 'Participant Questionnaire'
+    parent: 'menu_link_content:97762b64-3290-4848-9f1f-d7c2f0a6e13e'
+    uri: 'internal:/programming_questionnaire'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: df1b98c7-1139-4e7d-98df-4a4f2b4cab4c
+    options: {  }
+  -
+    menu_name: main
+    title: Scholarships
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'internal:/scholarships'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 280f2bf5-d38a-46cd-9028-ea5368bb82f9
+    options: {  }
+  -
+    menu_name: main
+    title: Membership
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -43
+    langcode: en
+    uuid: 6a7a8397-874e-4acc-9bea-20c9cb0bd0b1
+    options: {  }
+  -
+    menu_name: main
+    title: Information
+    parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
+    uri: 'entity:node/18'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: ba65ff06-1554-4af3-8c30-26f0bbdd8db7
+    options: {  }
+  -
+    menu_name: main
+    title: Registration
+    parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
+    uri: 'https://reg.montreal2027.ca'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: d9cf5820-c0bd-4821-b1d8-1a6c7c575316
+    options: {  }
+  -
+    menu_name: main
     title: WSFS
     parent: null
     uri: 'route:<nolink>'
@@ -8,7 +281,124 @@ menus:
     description: null
     enabled: true
     expanded: false
+    weight: -41
+    langcode: en
+    uuid: b9cdad1e-428f-4ef6-989f-c6d3fbe43e15
+    options: {  }
+  -
+    menu_name: main
+    title: FAQ
+    parent: 'menu_link_content:b9cdad1e-428f-4ef6-989f-c6d3fbe43e15'
+    uri: 'entity:node/27'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
     weight: 0
     langcode: en
-    uuid: d9ce1f67-963d-49d1-8195-2e79033eae94
+    uuid: 2f64d2de-20b8-44ff-812d-914d8ddde1e9
+    options: {  }
+  -
+    menu_name: main
+    title: 'Meeting Announcement'
+    parent: 'menu_link_content:b9cdad1e-428f-4ef6-989f-c6d3fbe43e15'
+    uri: 'entity:node/28'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: a9d23ce7-3fcb-4eaa-99bb-d37d4e4437f1
+    options: {  }
+  -
+    menu_name: main
+    title: 'Ad Rates'
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'entity:node/30'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: f919f043-df87-4ee7-a00a-a677b1e8eabb
+    options: {  }
+  -
+    menu_name: main
+    title: Exhibits
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -44
+    langcode: en
+    uuid: b8e6d90d-c25b-484a-8f27-27737af7804c
+    options: {  }
+  -
+    menu_name: main
+    title: "Dealers' FAQ"
+    parent: 'menu_link_content:b8e6d90d-c25b-484a-8f27-27737af7804c'
+    uri: 'entity:node/31'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: c8102bfa-255e-4407-a234-ceeadcbe9c8e
+    options: {  }
+  -
+    menu_name: main
+    title: Events
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -45
+    langcode: en
+    uuid: 9a86b23a-b1ee-49b4-8e05-bb4d89e255fc
+    options: {  }
+  -
+    menu_name: main
+    title: 'List of Events'
+    parent: 'menu_link_content:9a86b23a-b1ee-49b4-8e05-bb4d89e255fc'
+    uri: 'entity:node/32'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 05069bbf-f194-4b73-85d1-fbb33bdcd26b
+    options: {  }
+  -
+    menu_name: main
+    title: 'Team Only'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -40
+    langcode: en
+    uuid: 50757cf7-73ad-4794-9edd-a971db3bbfba
+    options: {  }
+  -
+    menu_name: main
+    title: Resources
+    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
+    uri: 'entity:node/33'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: c5223633-e8be-4597-b8ad-0ce1b85c2f6d
     options: {  }

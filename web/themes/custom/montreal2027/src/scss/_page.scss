@@ -19,7 +19,7 @@
     width: 100%;
     z-index: 500;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
       left: 0;
       width: 100%;
@@ -30,7 +30,7 @@
         display: flex;
         flex-direction: row;
 
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
           align-items: center;
           display: grid;
           grid-template-columns: 400px 1fr 96px;

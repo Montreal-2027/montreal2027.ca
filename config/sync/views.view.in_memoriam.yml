@@ -487,7 +487,7 @@ display:
         type: normal
         title: 'In Memoriam'
         description: ''
-        weight: 0
+        weight: -39
         expanded: false
         menu_name: main
         parent: 'menu_link_content:d9ce1f67-963d-49d1-8195-2e79033eae94'

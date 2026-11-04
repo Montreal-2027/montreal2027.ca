@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
-    - filter.format.full_html
     - media.type.image
     - node.type.article
     - node.type.guest
@@ -20,41 +18,24 @@ dependencies:
     - config_translation
     - content_translation
     - locale
-    - filter
     - menu_link_content
     - node
     - paragraphs
-    - system
-    - taxonomy
+    - private_content
     - webform
-    - webform_node
 id: translator
 label: Translator
 weight: -1
 is_admin: false
 permissions:
-  - 'access content'
-  - 'access content overview'
-  - 'access webform help'
   - 'access webform overview'
-  - 'create article content'
   - 'create content translations'
-  - 'create guest content'
-  - 'create in_memoriam content'
-  - 'create page content'
-  - 'delete any article content'
-  - 'delete any guest content'
-  - 'delete any page content'
-  - 'delete content translations'
-  - 'edit any article content'
-  - 'edit any guest content'
-  - 'edit any home_page content'
-  - 'edit any in_memoriam content'
-  - 'edit any page content'
+  - 'create webform content'
+  - 'delete own webform content'
   - 'edit any webform'
   - 'edit any webform content'
-  - 'edit terms in in_memoriam'
-  - 'edit webform submissions any node'
+  - 'edit private content'
+  - 'mark content as private'
   - 'translate any entity'
   - 'translate article node'
   - 'translate block_content'
@@ -72,7 +53,3 @@ permissions:
   - 'translate page node'
   - 'translate paragraph'
   - 'update content translations'
-  - 'view own unpublished content'
-  - 'view webform submissions any node'
-  - 'use text format basic_html'
-  - 'use text format full_html'

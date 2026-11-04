@@ -127,4 +127,13 @@ function montreal2027_tools_mail(string $key, array &$message, array $params): v
     $message['from'] = $formatted_from;
     $message['headers']['From'] = $formatted_from;
     $message['headers']['Reply-to'] = $safe_email;
+}/**
+ * Implements hook_form_FORM_ID_alter() for user_register_form.
+ */
+function montreal2027_tools_form_user_register_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $account = \Drupal::currentUser();
+  if (!$account->hasPermission('administer users')) {
+    // Hide form elements from anonymous visitors.
+    $form['#access'] = FALSE;
+  }
 }

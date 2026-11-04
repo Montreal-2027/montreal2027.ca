@@ -33,6 +33,7 @@ dependencies:
     - media
     - media_gallery
     - node
+    - private_content
     - system
     - taxonomy
     - toolbar
@@ -91,9 +92,11 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own user_picture media'
   - 'edit own video media'
+  - 'edit private content'
   - 'edit terms in divisions'
   - 'edit terms in guest_type'
   - 'edit terms in tags'
+  - 'mark content as private'
   - 'translate article node'
   - 'translate block_content'
   - 'translate guest node'

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05a96e98113a00050c02038cc8b61b71",
+    "content-hash": "945216f7d2e153ea5329c7738e38db19",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4084,6 +4084,55 @@
             }
         },
         {
+            "name": "drupal/menu_item_role_access",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_item_role_access.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_item_role_access-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "33a9990922304948c38b465eb69daaf61e6f798b"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1727189435",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "liampower",
+                    "homepage": "https://www.drupal.org/user/3016225"
+                },
+                {
+                    "name": "littlepixiez",
+                    "homepage": "https://www.drupal.org/user/2568718"
+                }
+            ],
+            "description": "Provide role based access to menu items.",
+            "homepage": "https://www.drupal.org/project/menu_item_role_access",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_item_role_access"
+            },
+            "published-time": "2024-09-24T14:50:28+00:00"
+        },
+        {
             "name": "drupal/menu_link_attributes",
             "version": "1.10.0",
             "source": {
@@ -4753,6 +4802,56 @@
                 "source": "https://git.drupalcode.org/project/phpmailer_smtp",
                 "issues": "https://www.drupal.org/project/issues/phpmailer_smtp"
             }
+        },
+        {
+            "name": "drupal/private_content",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/private_content.git",
+                "reference": "3.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/private_content-3.1.0.zip",
+                "reference": "3.1.0",
+                "shasum": "550f99e5b616fee69ff34a0e991a45220655ee2b"
+            },
+            "require": {
+                "drupal/core": "^11.4 || ^12"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.1.0",
+                    "datestamp": "1788034010",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "adamps",
+                    "homepage": "https://www.drupal.org/user/2650563"
+                },
+                {
+                    "name": "batigolix",
+                    "homepage": "https://www.drupal.org/user/22175"
+                }
+            ],
+            "description": "Allows users to mark content as private, and hide that content from visitors.",
+            "homepage": "https://www.drupal.org/project/private_content",
+            "support": {
+                "source": "https://git.drupalcode.org/project/private_content",
+                "issues": "https://www.drupal.org/project/issues/private_content"
+            },
+            "published-time": "2026-08-29T20:06:29+00:00"
         },
         {
             "name": "drupal/recreate_block_content",
@@ -12510,5 +12609,5 @@
     "platform-overrides": {
         "php": "8.3"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }
