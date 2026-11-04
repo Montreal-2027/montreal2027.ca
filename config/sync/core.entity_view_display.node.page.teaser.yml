@@ -25,7 +25,7 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
   field_tags:
     type: entity_reference_label
@@ -33,14 +33,17 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 0
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   entity_workspace_status: true
   field_guests: true
   field_show_title: true
   langcode: true
+  private: true
   search_api_excerpt: true

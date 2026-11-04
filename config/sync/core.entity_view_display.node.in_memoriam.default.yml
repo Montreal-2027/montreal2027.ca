@@ -44,7 +44,7 @@ content:
       link_to_entity: false
       link_rel: canonical
     third_party_settings: {  }
-    weight: 5
+    weight: 4
     region: content
   field_reason:
     type: text_default
@@ -60,7 +60,7 @@ content:
       link_to_entity: false
       link_rel: canonical
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_year_of_birth:
     type: string
@@ -77,4 +77,5 @@ hidden:
   field_submitted_email: true
   langcode: true
   links: true
+  private: true
   search_api_excerpt: true

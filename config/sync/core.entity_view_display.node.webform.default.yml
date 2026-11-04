@@ -18,16 +18,19 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
   webform:
     type: webform_entity_reference_entity_view
     label: hidden
-    settings: {  }
+    settings:
+      source_entity: true
+      lazy: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
 hidden:
   entity_workspace_status: true
   langcode: true
+  private: true
   search_api_excerpt: true

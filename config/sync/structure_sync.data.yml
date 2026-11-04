@@ -402,3 +402,18 @@ menus:
     langcode: en
     uuid: c5223633-e8be-4597-b8ad-0ce1b85c2f6d
     options: {  }
+  -
+    menu_name: main
+    title: Register
+    parent: null
+    uri: 'https://reg.montreal2027.ca'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 16d364c5-0e23-4986-ae44-690b497b40b9
+    options:
+      attributes:
+        target: _blank
