@@ -9,7 +9,6 @@ dependencies:
     - node.type.carousel_page
   module:
     - entity_reference_revisions
-    - private_content
     - text
     - user
 id: node.carousel_page.default
@@ -33,29 +32,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_show_title:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 101
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  private:
-    type: private
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   entity_workspace_status: true
+  field_show_title: true
   langcode: true
+  private: true
   search_api_excerpt: true

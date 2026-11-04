@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.carousel_page.field_show_title
     - node.type.carousel_page
   module:
-    - private_content
     - text
     - user
 id: node.carousel_page.teaser
@@ -28,13 +27,6 @@ content:
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
-    region: content
-  private:
-    type: private
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     weight: 1
     region: content
 hidden:
@@ -42,4 +34,5 @@ hidden:
   field_carousel_items: true
   field_show_title: true
   langcode: true
+  private: true
   search_api_excerpt: true
