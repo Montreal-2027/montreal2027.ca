@@ -490,7 +490,7 @@ display:
         weight: -39
         expanded: false
         menu_name: main
-        parent: 'menu_link_content:d9ce1f67-963d-49d1-8195-2e79033eae94'
+        parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
         context: '0'
     cache_metadata:
       max-age: -1
