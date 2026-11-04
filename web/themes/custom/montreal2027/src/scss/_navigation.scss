@@ -21,14 +21,14 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     left: 1.5rem;
     position: absolute;
     top: 1.9rem;
     z-index: 1000;
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199.98px) {
     background-color: rgba(255, 255, 255, 0.15);
     border: 2px solid var(--color-white);
     border-radius: 0.5rem;
@@ -71,7 +71,7 @@
     border-color: var(--color-white);
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199.98px) {
     font-size: 1em;
     padding: 0.5rem 0.75rem;
   }
@@ -84,7 +84,7 @@
   justify-content: space-between;
   padding: 0;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     background: transparent;
   }
 
@@ -101,7 +101,7 @@
 
 .navbar-collapse,
 #navbarMainMenu {
-  @media (max-width: 991px) {
+  @media (max-width: 1199.98px) {
     background: var(--color-blue);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     left: 0;
@@ -110,7 +110,10 @@
     padding: 1rem;
     position: fixed;
     top: 3.5rem;
-    width: 35dvw;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    width: 25vw;
+    width: 25dvw;
     z-index: 650;
 
     &.collapsing {
@@ -122,7 +125,7 @@
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     display: flex !important;
   }
 }
@@ -130,7 +133,7 @@
 .navbar-nav {
   align-items: baseline;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1199.98px) {
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
@@ -157,7 +160,7 @@
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .nav-item.dropdown {
       align-items: center;
       display: flex;
@@ -176,7 +179,7 @@
   position: relative;
   z-index: 700;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     display: none;
   }
 

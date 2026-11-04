@@ -1,0 +1,9 @@
+uuid: 2b3fe578-7cac-4709-8e5b-1b2a27498144
+langcode: en
+status: true
+dependencies: {  }
+name: 'In Memoriam'
+vid: in_memoriam
+description: 'Categories for the In Memoriam page'
+weight: 0
+new_revision: false

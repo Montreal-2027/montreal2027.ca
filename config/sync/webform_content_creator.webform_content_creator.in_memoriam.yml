@@ -1,0 +1,70 @@
+uuid: 276c8205-8163-4425-9fc9-608b38980b6f
+langcode: en
+status: true
+dependencies: {  }
+id: in_memoriam
+title: 'In Memoriam'
+webform: in_memoriam
+content_type: null
+field_title: null
+use_encrypt: null
+encryption_profile: null
+redirect_to_entity: false
+redirect_to_entity_message: ''
+redirect_to_entity_message_on_update: '0'
+sync_unique: false
+sync_content: false
+sync_content_delete: false
+sync_content_field: ''
+sync_content_node_field: null
+target_bundle: in_memoriam
+target_entity_type: node
+elements:
+  field_category:
+    type: false
+    mapping: default_mapping
+    webform_field: category
+    custom_check: 0
+    custom_value: ''
+  field_date_of_death:
+    type: false
+    mapping: default_mapping
+    webform_field: date_of_death
+    custom_check: 0
+    custom_value: ''
+  field_first_name:
+    type: false
+    mapping: default_mapping
+    webform_field: deceased_first_name
+    custom_check: 0
+    custom_value: ''
+  field_reason:
+    type: false
+    mapping: default_mapping
+    webform_field: reason
+    custom_check: 0
+    custom_value: ''
+  field_submitted_by:
+    type: false
+    mapping: default_mapping
+    webform_field: name_of_submitter
+    custom_check: 0
+    custom_value: ''
+  field_submitted_email:
+    type: false
+    mapping: default_mapping
+    webform_field: submitter_email
+    custom_check: 0
+    custom_value: ''
+  field_year_of_birth:
+    type: false
+    mapping: default_mapping
+    webform_field: birth_year
+    custom_check: 0
+    custom_value: ''
+  title:
+    type: false
+    mapping: default_mapping
+    webform_field: deceased_last_name
+    custom_check: 0
+    custom_value: ''

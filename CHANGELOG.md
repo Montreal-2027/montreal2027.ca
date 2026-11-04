@@ -5,6 +5,18 @@
 ## 1.1.1 (2026-11-04)
 - Improved error message when sending Committee & Team emails with Contact Form
 - Completed translation on Contact Form
+- In Memoriam
+  - Submission form
+  - Spreadsheet import
+  - Listing page w/filtering
+- Added ckeditor5 plugin to simplify using `<details>` and `<summary>` in body copy
+- Updated styling for `<details>` and `<summary>`
+- Team Login
+  - Added URL field to theme image custom block and wrap image in the url if present
+  - Added hook to prevent access to registration page while still allowing users using 
+    Google social auth to register
+  - Installed Private Content and Menu Item Role Access modules to restrict access to
+    team only content and menus
 
 ## 1.1.0 (2026-10-17)
 - Upgraded to Drupal 11.4.8

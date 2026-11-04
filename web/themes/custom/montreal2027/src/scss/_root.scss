@@ -48,7 +48,7 @@
   --site-header-height: 6rem;
   --site-main-content-height: calc(100dvh - var(--site-main-content-top) - var(--site-footer-height));
   --site-main-content-top: calc(var(--site-header-height) + var(--site-primary-menu-height) + var(--site-breadcrumb-height));
-  --site-primary-menu-height: 2rem;
+  --site-primary-menu-height: 0rem;
   --site-primary-menu-top: var(--site-header-height);
   --social-media-icon-color: var(--color-sm-blue);
   --title-font: 'Cinzel, serif';
@@ -58,7 +58,7 @@
   min-height: 100dvh;
   scroll-behavior: smooth;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     --site-primary-menu-height: 2rem;
   }
 }

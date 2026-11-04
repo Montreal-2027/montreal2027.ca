@@ -15,7 +15,7 @@
     z-index: 90;
     @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
     }
   }
@@ -104,7 +104,7 @@
     width: auto;
     z-index: 600;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       // @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
       background-color: var(--color-medium-gray);
       border-bottom: 1px solid black;
@@ -116,6 +116,34 @@
       width: 100%;
       // background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
       z-index: 100;
+    }
+
+    // Keep the module's 992px desktop overrides out of the compact header.
+    &.region-primary-menu {
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-right: 0;
+
+        > #block-montreal2027-languagetoggleenfr {
+          display: block;
+          position: fixed;
+          padding: 0.25rem;
+          color: var(--color-white);
+
+          .language-toggle__link {
+            padding: 0.4rem 0.5rem;
+            font-size: 0.85rem;
+            line-height: 1;
+          }
+
+          .language-toggle__flag {
+            width: 1.3em;
+          }
+        }
+
+        > #block-montreal2027-socialmedialinks-2 {
+          display: none;
+        }
+      }
     }
 
   }

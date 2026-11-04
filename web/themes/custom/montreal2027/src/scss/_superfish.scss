@@ -4,6 +4,13 @@
     background: transparent;
 }
 
+#superfish-main-accordion {
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    width: 25vw;
+    width: 25dvw;
+}
+
 div {
     &.sf-accordion-toggle {
         &.sf-style-default {

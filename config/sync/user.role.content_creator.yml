@@ -24,6 +24,7 @@ dependencies:
     - help
     - media
     - node
+    - private_content
     - system
     - taxonomy
     - toolbar
@@ -58,6 +59,8 @@ permissions:
   - 'edit own guest content'
   - 'edit own home_page content'
   - 'edit own page content'
+  - 'edit private content'
+  - 'mark content as private'
   - 'translate article node'
   - 'translate block_content'
   - 'translate guest node'

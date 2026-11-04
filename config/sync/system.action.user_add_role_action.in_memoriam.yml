@@ -1,0 +1,14 @@
+uuid: 6950f49a-d1fc-4b2d-b572-c7ef6b64bb3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.in_memoriam
+  module:
+    - user
+id: user_add_role_action.in_memoriam
+label: 'Add the In Memoriam Maintainer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: in_memoriam

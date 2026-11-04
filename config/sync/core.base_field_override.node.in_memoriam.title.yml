@@ -1,0 +1,18 @@
+uuid: 564a1037-d30b-419d-aeeb-c5f7bdd2b8b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.in_memoriam
+id: node.in_memoriam.title
+field_name: title
+entity_type: node
+bundle: in_memoriam
+label: 'Last name of the deceased'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

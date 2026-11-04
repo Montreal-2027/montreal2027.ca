@@ -1,0 +1,18 @@
+uuid: c56f792a-4771-44c0-bff5-15d29056c667
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'In Memoriam'
+type: in_memoriam
+description: 'Entries for the In Memoriam page'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

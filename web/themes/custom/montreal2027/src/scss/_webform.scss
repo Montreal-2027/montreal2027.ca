@@ -55,3 +55,27 @@
         @include noto-font($weight: var(--font-weight-bold), $style: 'serif');
     }
 }
+
+.webform-submission-form {
+    & .webform-2col {
+        display: grid;
+        grid-template-rows: 1fr;
+
+        @media screen and (min-width: 576px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+    }
+
+    & .webform-3col {
+        display: grid;
+        grid-template-columns: 40% 10% 40%;
+        grid-gap: 4px;
+    }
+
+    & .webform-2row {
+        display: grid;
+        grid-template-rows: 1rem 1rem;
+        grid-gap: 10px;
+    }
+}
