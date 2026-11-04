@@ -1,0 +1,11 @@
+uuid: edac6f90-c0ec-4456-a381-949894900640
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carousel_page
+id: node.carousel_page
+target_entity_type_id: node
+target_bundle: carousel_page
+default_langcode: site_default
+language_alterable: false

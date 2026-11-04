@@ -5,8 +5,8 @@
 // under .news-carousel to avoid leaking into the rest of the theme. Keeps the
 // payload tiny vs. pulling in all of Bootstrap CSS.
 .news-carousel {
-  position: relative;
-  // border-bottom: 2px solid hsla(0,0%,100%,.65);
+    background-color: oklch(0.0605 0.0049 281 / 40%);
+    position: relative;
 
   .carousel-caption {
     text-align: unset;

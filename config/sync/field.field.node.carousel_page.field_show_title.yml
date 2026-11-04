@@ -1,0 +1,23 @@
+uuid: 51b36386-c3ea-4a08-8750-8d9d6a79bb1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_title
+    - node.type.carousel_page
+id: node.carousel_page.field_show_title
+field_name: field_show_title
+entity_type: node
+bundle: carousel_page
+label: 'Show Title'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
