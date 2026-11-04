@@ -17,6 +17,9 @@
     Google social auth to register
   - Installed Private Content and Menu Item Role Access modules to restrict access to
     team only content and menus
+- Added new content type for pages that need a carousel
+- Made hero image optional for carousel slides
+- Added translucent background color for slides without a hero image
 
 ## 1.1.0 (2026-10-17)
 - Upgraded to Drupal 11.4.8
