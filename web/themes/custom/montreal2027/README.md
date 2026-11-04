@@ -61,7 +61,7 @@ Header and navigation
 - The Bootstrap main-menu template uses `navbar-expand-xl`.
 - Expanded hamburger menus use `25dvw` (25% of dynamic viewport width), with a `25vw` fallback.
 - The active menu is the Superfish block `montreal2027_mainnavigation_2`, not the Bootstrap template.
-- Its `smallbp` and `touchbp` settings must both be 1200 to match the theme; a backend/configuration maintainer must update active configuration and export it.
+- Its `smallbp` and `touchbp` settings must both be 1200 to match the theme.
 
 Maple Leaf block
 
@@ -69,7 +69,6 @@ Maple Leaf block
 - It extends the currently used parent-theme block template, preserving its wrappers and rendered media field.
 - Only `field_block_image` is linked; `field_target` supplies the destination without being displayed separately.
 - Populated targets use Drupal's link URL API; empty targets use `/user/login/google`.
-- Rebuild caches inside the running container after adding or changing the override: `docker compose exec web vendor/bin/drush cache:rebuild`.
 
 Troubleshooting
 - If you run into compilation errors, run `npm run build:css` locally and inspect the CLI output — it will point to the SCSS line with the error.
