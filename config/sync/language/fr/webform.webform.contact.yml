@@ -1,4 +1,5 @@
 title: Contact
+description: 'Basic email contact webform.'
 settings:
   confirmation_message: 'Votre message a été envoyé.'
 handlers:

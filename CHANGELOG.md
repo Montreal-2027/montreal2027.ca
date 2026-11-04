@@ -5,6 +5,10 @@
 ## 1.1.1 (2026-11-04)
 - Improved error message when sending Committee & Team emails with Contact Form
 - Completed translation on Contact Form
+- In Memoriam
+  - Submission form
+  - Spreadsheet import
+  - Listing page w/filtering
 
 ## 1.1.0 (2026-10-17)
 - Upgraded to Drupal 11.4.8

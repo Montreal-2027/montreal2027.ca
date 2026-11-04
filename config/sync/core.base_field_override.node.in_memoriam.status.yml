@@ -1,0 +1,22 @@
+uuid: ea0a75c3-bf00-475d-97fe-789c774105fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.in_memoriam
+id: node.in_memoriam.status
+field_name: status
+entity_type: node
+bundle: in_memoriam
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
