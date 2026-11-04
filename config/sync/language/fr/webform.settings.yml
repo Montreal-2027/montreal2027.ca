@@ -7,7 +7,7 @@ settings:
   default_delete_button_label: Supprimer
   default_form_confidential_message: 'Ce formulaire est confidentiel. Vous devez vous <a href="[site:login-url]/logout?destination=[current-page:url:relative]">déconnecter</a> pour l''utiliser.'
   default_form_access_denied_message: '<p>Please log in to access this form.</p>'
-  default_form_required_label: 'Indique si le champs est requis'
+  default_form_required_label: 'Indique un champ obligatoire'
   default_form_file_limit_message: "<p>This form's file upload quota of %quota has been exceeded. Please remove some files.</p>"
   default_wizard_prev_button_label: '< Précédent'
   default_wizard_next_button_label: 'Suivant >'

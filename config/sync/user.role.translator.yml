@@ -3,27 +3,32 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
-    - filter.format.full_html
     - media.type.image
     - node.type.article
     - node.type.guest
     - node.type.home_page
     - node.type.page
+    - node.type.webform
     - taxonomy.vocabulary.divisions
     - taxonomy.vocabulary.guest_type
   module:
     - block_content
     - config_translation
     - content_translation
-    - filter
     - menu_link_content
+    - node
+    - webform
 id: translator
 label: Translator
 weight: -1
 is_admin: false
 permissions:
+  - 'access webform overview'
   - 'create content translations'
+  - 'create webform content'
+  - 'delete own webform content'
+  - 'edit any webform'
+  - 'edit any webform content'
   - 'translate any entity'
   - 'translate article node'
   - 'translate block_content'
@@ -37,5 +42,3 @@ permissions:
   - 'translate menu_link_content'
   - 'translate page node'
   - 'update content translations'
-  - 'use text format basic_html'
-  - 'use text format full_html'
