@@ -417,3 +417,16 @@ menus:
     options:
       attributes:
         target: _blank
+  -
+    menu_name: main
+    title: Logout
+    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
+    uri: 'internal:/user/logout'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: f738f4e3-c315-4fb3-9691-7bea772e3ef9
+    options: {  }
