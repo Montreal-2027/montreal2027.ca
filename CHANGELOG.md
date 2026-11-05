@@ -2,6 +2,9 @@
 
 ## Changelog
 ---
+## 1.1.2 (2026-11-05 Hotfix)
+- Added access hook for In Memoriam role/content type to allow viewing and publishing of unpublished content regardless of owner
+  
 ## 1.1.1 (2026-11-04)
 - Improved error message when sending Committee & Team emails with Contact Form
 - Completed translation on Contact Form
