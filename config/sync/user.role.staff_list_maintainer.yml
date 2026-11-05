@@ -16,7 +16,7 @@ dependencies:
     - workspaces_access
 id: staff_list_maintainer
 label: 'Team List Maintainer'
-weight: -6
+weight: -2
 is_admin: false
 permissions:
   - 'access administration pages'

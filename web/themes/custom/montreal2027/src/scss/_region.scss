@@ -1,44 +1,21 @@
 @use 'mixins' as *;
 
 .region {
-  &-primary-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
-    width: auto;
-    z-index: 600;
-
-    @media (min-width: 992px) {
-      top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
-      padding: 0 0 0 1rem;
-      width: 100%;
-      height: 2rem;
-      // background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
-      z-index: 100;
-      // @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
-      background-color: var(--color-medium-gray);
-      border-bottom: 1px solid black;
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-    }
-
-  }
 
   &-breadcrumb {
-    height: var(--site-breadcrumb-height);
-    position: fixed;
-    top: var(--site-header-height);
-    z-index: 90;
-    margin: 0;
     // @include frosted-glass($border-radius: 0);
     background-color: var(--color-medium-gray);
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr auto auto;
+    height: var(--site-breadcrumb-height);
+    margin: 0;
+    position: fixed;
+    top: var(--site-header-height);
+    width: 100%;
+    z-index: 90;
     @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
     }
   }
@@ -46,39 +23,30 @@
   &-footer {
     &-first {
       display: grid;
-      grid-template-rows: auto;
       grid-gap: 0;
-      grid-template-columns: auto repeat(2, 1fr) auto;
       grid-template-areas:
         "top top top top"
         ". middle middle ."
         "bottom bottom bottom bottom";
+      grid-template-columns: auto repeat(2, 1fr) auto;
+      grid-template-rows: auto;
 
-      & nav {
-        & h2 {
-          color: var(--color-white);
-          font-size: .8rem;
-          margin: 0 0 .2rem 0;
-        }
-
-        & a {
-          color: var(--color-white);
-          font-size: .7rem;
-        }
+      & #edit-reset--2 {
+        display: none;
       }
 
       & #edit-search-for,
       & #edit-search-for--2 {
-        font-size: .7rem;
-        color: var(--color-white);
-        width: 30dvw;
-        border: 0;
         background: var(--color-black);
-        padding: .4rem 0 .5rem .5rem;
+        border: 0;
+        border-radius: 6px 0 0 6px;
+        border-radius: 6px 0 0 6px;
         box-sizing: border-box;
-        border-radius: 6px 0 0 6px;
+        color: var(--color-white);
+        font-size: .7rem;
         line-height: normal;
-        border-radius: 6px 0 0 6px;
+        padding: .4rem 0 .5rem .5rem;
+        width: 30dvw;
 
         @media (min-width: 768px) {
           width: 45dvw;
@@ -89,13 +57,13 @@
         }
 
         &::placeholder {
-          font-size: .7rem;
           color: var(--color-white);
+          font-size: .7rem;
         }
 
         &:focus {
-          outline: none !important;
           box-shadow: none !important;
+          outline: none !important;
         }
       }
 
@@ -103,21 +71,81 @@
       & #edit-submit-search--2 {
         background-color: var(--color-black);
         border: 0;
-        padding: 0 .5rem .2rem;
-        font-size: .9rem;
-        color: var(--color-white);
-        margin: 0;
         border-radius: 0 6px 6px 0;
+        color: var(--color-white);
+        font-size: .9rem;
+        margin: 0;
+        padding: 0 .5rem .2rem;
       }
 
-      & #edit-reset--2 {
-        display: none;
+      & nav {
+
+        & a {
+          color: var(--color-white);
+          font-size: .7rem;
+        }
+        & h2 {
+          color: var(--color-white);
+          font-size: .8rem;
+          margin: 0 0 .2rem 0;
+        }
       }
     }
 
     &-second {
       margin: 0 1rem;
     }
+  }
+  &-primary-menu {
+    left: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: auto;
+    z-index: 600;
+
+    @media (min-width: 1200px) {
+      // @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
+      background-color: var(--color-medium-gray);
+      border-bottom: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      height: 2rem;
+      padding: 0 0 0 1rem;
+      top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
+      width: 100%;
+      // background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
+      z-index: 100;
+    }
+
+    // Keep the module's 992px desktop overrides out of the compact header.
+    &.region-primary-menu {
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-right: 0;
+
+        > #block-montreal2027-languagetoggleenfr {
+          display: block;
+          position: fixed;
+          padding: 0.25rem;
+          color: var(--color-white);
+
+          .language-toggle__link {
+            padding: 0.4rem 0.5rem;
+            font-size: 0.85rem;
+            line-height: 1;
+          }
+
+          .language-toggle__flag {
+            width: 1.3em;
+          }
+        }
+
+        > #block-montreal2027-socialmedialinks-2 {
+          display: none;
+        }
+      }
+    }
+
   }
 
   // &-content {

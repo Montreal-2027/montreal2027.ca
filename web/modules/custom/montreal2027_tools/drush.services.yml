@@ -4,3 +4,17 @@ services:
     arguments: ['@entity_type.manager']
     tags:
       - { name: drush.command }
+  montreal2027_tools.in_memoriam_import_commands:
+    class: Drupal\montreal2027_tools\Commands\InMemoriamImportCommands
+    arguments:
+      - '@entity_field.manager'
+      - '@entity_type.manager'
+      - '@account_switcher'
+      # Optional: Migrate may be disabled until a deployment's config import
+      # enables it. A required reference would break Drush bootstrap first.
+      - '@?plugin.manager.migration'
+      - '@keyvalue'
+      - '@datetime.time'
+      - '@string_translation'
+    tags:
+      - { name: drush.command }

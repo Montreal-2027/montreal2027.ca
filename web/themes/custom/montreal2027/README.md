@@ -53,6 +53,23 @@ vendor/bin/drush cr
 
 - If the embedded source map is not desired, change the build script in `package.json` to produce an external `.map` file.
 
+Header and navigation
+
+- The compact header applies below 1200px; the desktop masthead and navigation bar apply at 1200px and above.
+- Compact mode keeps the language switcher at the header's lower-right and hides the navigation-bar social icons; footer social icons remain available.
+- `_region.scss` overrides the language-toggle module's 992px desktop positioning until the theme's 1200px breakpoint.
+- The Bootstrap main-menu template uses `navbar-expand-xl`.
+- Expanded hamburger menus use `25dvw` (25% of dynamic viewport width), with a `25vw` fallback.
+- The active menu is the Superfish block `montreal2027_mainnavigation_2`, not the Bootstrap template.
+- Its `smallbp` and `touchbp` settings must both be 1200 to match the theme.
+
+Maple Leaf block
+
+- `templates/block/block--montreal2027-mapleleaf.html.twig` applies only to the `montreal2027_mapleleaf` placement.
+- It extends the currently used parent-theme block template, preserving its wrappers and rendered media field.
+- Only `field_block_image` is linked; `field_target` supplies the destination without being displayed separately.
+- Populated targets use Drupal's link URL API; empty targets use `/user/login/google`.
+
 Troubleshooting
 - If you run into compilation errors, run `npm run build:css` locally and inspect the CLI output — it will point to the SCSS line with the error.
 - If DevTools shows styles coming from a different file or an older CSS, ensure caches are cleared and that the active theme is `montreal2027`.

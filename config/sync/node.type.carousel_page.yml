@@ -1,0 +1,21 @@
+uuid: 7c6d5157-dfe1-4884-9180-7712701d1cf4
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - private_content
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  private_content:
+    private: 1
+name: 'Carousel Page'
+type: carousel_page
+description: 'Use for pages that need or might need a carousel at the very top of the page'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

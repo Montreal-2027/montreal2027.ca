@@ -18,6 +18,10 @@
             "url": "https://github.com/omscllc/clean_blog_theme.git"
         },
         {
+            "type": "git",
+            "url": "https://github.com/dweinerATL/ckeditor_details.git"
+        },
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
@@ -58,11 +62,16 @@
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",
+        "drupal/menu_item_role_access": "^2.4",
         "drupal/menu_link_attributes": "^1.7",
         "drupal/metatag": "^2.2",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_spreadsheet": "^2.2",
+        "drupal/migrate_tools": "^6.1",
         "drupal/paragraphs_report": "^2.1",
         "drupal/pathauto": "^1.14",
         "drupal/phpmailer_smtp": "^2.4",
+        "drupal/private_content": "^3.1",
         "drupal/recreate_block_content": "3.0.1",
         "drupal/redirect": "^1.13",
         "drupal/search_api": "^1.40",
@@ -72,11 +81,15 @@
         "drupal/superfish": "^1.13",
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
+        "drupal/tagify": "^2.0",
+        "drupal/taxonomy_manager": "^2.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.3",
+        "drupal/webform_content_creator": "^4.0",
         "drupal/workspaces_access": "^1.1",
         "drupal/wse": "^3.0@alpha",
         "drush/drush": "^13.6",
+        "dweineratl/ckeditor_details": "2.1.x-dev",
         "omscllc/clean_blog_theme": "dev-develop",
         "oomphinc/composer-installers-extender": "^2.0",
         "symfony/dotenv": "^7.4",
@@ -116,18 +129,16 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "git config core.hooksPath .githooks || true",
-            "chmod +w web/sites/default"
+            "git config core.hooksPath .githooks || true"
         ],
         "post-update-cmd": [
-            "git config core.hooksPath .githooks || true",
-            "chmod -w web/sites/default"
+            "git config core.hooksPath .githooks || true"
         ]
     },
     "extra": {
         "merge-plugin": {
             "include": [
-                "web/modules/contrib/webform/composer.libraries.json"
+                "composer.libraries.json"
             ]
         },
         "patches": {

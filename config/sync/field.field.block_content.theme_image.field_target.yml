@@ -1,0 +1,23 @@
+uuid: 8dafed09-137d-4a55-829a-d28729eba537
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.theme_image
+    - field.storage.block_content.field_target
+  module:
+    - link
+id: block_content.theme_image.field_target
+field_name: field_target
+entity_type: block_content
+bundle: theme_image
+label: Target
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

@@ -1,0 +1,28 @@
+title: 'Questionnaire de participation à la programmation'
+elements: |
+  intro:
+    '#admin_title': 'Introduction du formulaire'
+    '#text': "<h1 class=\"text-align-center\">Questionnaire préliminaire de participation à la programmation</h1><p>Veuillez noter qu'il s'agit ici d'un formulaire préliminaire; un questionnaire plus détaillé vous sera envoyé plus tard. Nous nous attendons à ce qu'il y ait beaucoup plus de gens intéressés à participer que de places disponibles. Nous ne pouvons donc pas garantir votre participation au programme. Quoi qu'il arrive, nous vous remercions chaleureusement de vous proposer.</p><p>Notez par ailleurs que pour participer au programme de la Worldcon Montréal 2027, il vous faudra adhérer à la WSFS (de même qu'à un niveau d'<a href=\"https://montreal2027.ca/fr/registration\">adhésion</a> vous permettant d'assister en personne à l'événement). Si cela vous présente des difficultés financières, n'hésitez pas à faire appel à notre <a href=\"https://montreal2027.ca/fr/scholarships\">programme de bourse</a>.</p><p>Comme tous les membres, les participants doivent avoir lu et accepté notre <a href=\"https://montreal2027.ca/fr/code-de-conduite\">Code de conduite</a>.</p>"
+  first_name:
+    '#title': Prénom
+    '#required_error': 'Le champ Prénom est obligatoire'
+  last_name:
+    '#title': 'Nom de famille'
+    '#required_error': 'Le champ Nom de famille est obligatoire'
+  email_address:
+    '#title': Courriel
+  kind_programming:
+    '#title': 'À quel(s) titre(s) de programmation souhaitez vous participer? Ex.: Panel, atelier, présentation solo...'
+  interests:
+    '#title': "Quels sont vos champs d'intérêt?"
+  actions:
+    '#title': 'Bouton(s) de confirmation'
+    '#submit__label': 'Suivant »'
+    '#reset__label': 'Réinitialiser le formulaire'
+settings:
+  wizard_next_button_label: 'Suivant »'
+  preview_label: 'Suivant »'
+  preview_title: 'Vérifier vos réponses'
+  preview_message: '<p>Veuillez vérifier vos réponses avant de sauvegarder. Pour appliquer des mofications, utiliser le bouton "<strong>Précédent</strong>".</p>'
+  confirmation_message: '<p><span style="-webkit-text-stroke-width:0px;background-color:rgb(255, 255, 255);color:rgb(31, 35, 40);display:inline !important;float:none;font-family:&quot;Mona Sans VF&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, &quot;Noto Sans Backtick Fix&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;;font-size:14px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">Merci de nous offrir votre participation. La sélection aura lieu en 2027; nous vous informerons quand ce sera fait.</span></p><p>&nbsp;</p>'
+  confirmation_back_label: 'Retour au questionnaire'

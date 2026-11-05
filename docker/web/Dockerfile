@@ -14,6 +14,7 @@ RUN apk update && apk add --no-cache \
     nodejs \
     npm \
     nginx \
+    socat \
     fcgi \
     bash \
     gettext \

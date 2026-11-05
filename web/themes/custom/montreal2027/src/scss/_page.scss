@@ -1,35 +1,28 @@
 @use 'mixins' as *;
 
 #page-wrapper {
+  container: page-wrapper / inline-size;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  container: page-wrapper / inline-size;
-
-  & header[role="banner"] {
-    & .container {
-      max-width: unset;
-      padding-left: 0;
-    }
-  }
 
   & #header {
-    height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
+    align-content: center;
     background: var(--site-header-color);
-    width: 100%;
+    box-sizing: border-box;
+    height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
+    left: 0;
     padding-top: var(--drupal-displace-offset-top, 0px);
     position: sticky;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 500;
-    box-sizing: border-box;
-    align-content: center;
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
-      width: 100%;
       left: 0;
+      width: 100%;
     }
 
     & .container {
@@ -37,9 +30,9 @@
         display: flex;
         flex-direction: row;
 
-        @media (min-width: 992px) {
-          display: grid;
+        @media (min-width: 1200px) {
           align-items: center;
+          display: grid;
           grid-template-columns: 400px 1fr 96px;
           justify-content: space-between;
         }
@@ -48,16 +41,16 @@
   }
 
   & #main {
-    min-height: 0;
     /* neutralize clean_blog_theme's min-height: 750px */
     box-sizing: border-box;
-    transition: padding-bottom 220ms ease, padding-top 220ms ease;
-    top: var(--site-main-content-top);
     // overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
     margin: 0;
+    min-height: 0;
     padding: 0;
+    top: var(--site-main-content-top);
+    transition: padding-bottom 220ms ease, padding-top 220ms ease;
 
     @container page-wrapper (min-width: 992px) {
       // margin: 12rem 0 0 0;
@@ -68,15 +61,15 @@
     & .container {
       @include frosted-glass($border-radius: 1rem);
       @include drop-shadow-slight();
-      padding: .7rem 1rem;
-      padding: clamp(0.7rem, calc(0.64rem + 0.375vw), 1rem);
       margin: 0 auto 1.5rem auto;
       margin: 0 auto clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem) auto;
       max-width: 90dvw;
+      padding: .7rem 1rem;
+      padding: clamp(0.7rem, calc(0.64rem + 0.375vw), 1rem);
 
       @media (min-width: 992px) {
-        width: 75dvw;
         max-width: 1400px;
+        width: 75dvw;
       }
 
       & .node--type-article {
@@ -85,13 +78,45 @@
         }
       }
 
+      & .page--text-area {
+        @container page-wrapper (min-width: 992px) {
+          align-items: start;
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: repeat(2, auto);
+          margin: 1rem 0;
+        }
+
+        & figure {
+          margin: 0 auto 1rem;
+        }
+
+        & img {
+          @include drop-shadow-slight();
+        }
+
+        &-top-nav {
+
+          & a {
+            color: var(--color-dim-gray);
+          }
+          & h2 {
+            margin: 0 0 0.5rem 0;
+          }
+
+          & p {
+            color: var(--color-dim-gray)
+          }
+        }
+      }
+
       & .under-construction {
         text-align: center;
       }
 
       & .under-construction h1 {
-        font-size: 2rem;
         color: var(--color-red);
+        font-size: 2rem;
         margin: 1rem 0 0 0;
 
         @container main (min-width: 1200px) {
@@ -124,38 +149,6 @@
           }
         }
       }
-
-      & .page--text-area {
-        @container page-wrapper (min-width: 992px) {
-          display: grid;
-          grid-template-columns: repeat(2, auto);
-          align-items: start;
-          margin: 1rem 0;
-          gap: 1rem;
-        }
-
-        &-top-nav {
-          & h2 {
-            margin: 0 0 0.5rem 0;
-          }
-
-          & p {
-            color: var(--color-dim-gray)
-          }
-
-          & a {
-            color: var(--color-dim-gray);
-          }
-        }
-
-        & figure {
-          margin: 0 auto 1rem;
-        }
-
-        & img {
-          @include drop-shadow-slight();
-        }
-      }
     }
 
     &.has-carousel {
@@ -167,59 +160,43 @@
     }
 
     .page--text-area-top {
-      position: fixed;
       bottom: 20px;
-      right: 35px;
       padding: 0;
+      position: fixed;
+      right: 35px;
       text-decoration: none;
       z-index: 999;
-
-      & em {
-        border: 3px solid var(--color-white);
-        border-radius: 50%;
-        background-color: var(--color-white);
-      }
 
       & a {
         color: var(--color-black);
         font-size: 3rem;
         opacity: 50%;
       }
-    }
-  }
 
-  /* Footer: default is static (in-flow) for mobile/smaller screens */
-  footer.site-footer {
-    height: auto;
-    // calc(var(--site-footer-height) + var(--drupal-displace-offset-top, 0px));
-    box-sizing: border-box;
-    transition: transform 220ms ease, box-shadow 220ms ease;
-    width: 100%;
-    background-color: var(--color-blue);
-    transform: translateY(0);
-    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
-
-    @container page-wrapper (min-width: 1200px) {
-      padding: 0.5rem 0;
+      & em {
+        background-color: var(--color-white);
+        border: 3px solid var(--color-white);
+        border-radius: 50%;
+      }
     }
   }
 
   .frontpage {
     display: grid;
+    grid-gap: 1rem;
     grid-template-columns: repeat(2, auto);
     justify-content: center;
-    grid-gap: 1rem;
 
     & button {
       background: var(--color-blue);
+      border: 1px solid var(--color-black);
+      border-radius: 1rem;
+      box-sizing: border-box;
       color: var(--color-bright-red);
-      font-weight: 900;
       font-size: 1.5rem;
       font-size: clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem);
-      box-sizing: border-box;
+      font-weight: 900;
       padding: 1rem;
-      border-radius: 1rem;
-      border: 1px solid var(--color-black);
       @include drop-shadow-slight();
       transition: transform 0.1s ease, box-shadow 0.1s ease;
 
@@ -230,17 +207,40 @@
     }
   }
 
+  /* Footer: default is static (in-flow) for mobile/smaller screens */
+  footer.site-footer {
+    background-color: var(--color-blue);
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
+    // calc(var(--site-footer-height) + var(--drupal-displace-offset-top, 0px));
+    box-sizing: border-box;
+    height: auto;
+    transform: translateY(0);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    width: 100%;
+
+    @container page-wrapper (min-width: 1200px) {
+      padding: 0.5rem 0;
+    }
+  }
+
+  & header[role="banner"] {
+    & .container {
+      max-width: unset;
+      padding-left: 0;
+    }
+  }
+
+}
+
+div.region-content div[aria-label="Status message"].messages--status em {
+  background-color: unset;
+  // color: var(--color-white);
+  opacity: 1;
+  padding: .25rem;
 }
 
 ul:not(.sf-accordion).sf-menu.sf-style-default a,
 ul:not(.sf-accordion).sf-menu.sf-style-default a:visited,
 ul:not(.sf-accordion).sf-menu.sf-style-default span.nolink {
   padding: 0.4rem 2rem .75rem 0;
-}
-
-div.region-content div[aria-label="Status message"].messages--status em {
-  background-color: var(--color-black);
-  opacity: 1;
-  color: var(--color-white);
-  padding: .25rem;
 }

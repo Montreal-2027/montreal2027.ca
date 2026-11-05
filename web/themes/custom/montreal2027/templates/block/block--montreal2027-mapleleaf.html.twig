@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Links the Maple Leaf image to its target or the Google login fallback.
+ */
+#}
+{% extends '@clean_blog_theme/block.html.twig' %}
+
+{% block content %}
+  {% set target = content['#block_content'].field_target %}
+  {{ link(content.field_block_image, target.isEmpty() ? 'base:user/login/google' : target.get(0).getUrl()) }}
+  {{ content|without('field_block_image', 'field_target') }}
+{% endblock %}

@@ -1,0 +1,21 @@
+uuid: f8a93837-b7f8-4105-9c2d-cb54c5d4426b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sort_date
+field_name: field_sort_date
+entity_type: node
+type: string
+settings:
+  max_length: 12
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

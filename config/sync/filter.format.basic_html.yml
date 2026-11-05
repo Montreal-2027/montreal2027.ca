@@ -2,6 +2,15 @@ uuid: 3d192478-5632-4b54-91f4-d850ad56706c
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.1400_pixels
+    - core.entity_view_mode.media.1600_pixels
+    - core.entity_view_mode.media.16_9
+    - core.entity_view_mode.media.4_3
+    - core.entity_view_mode.media.cke_media_resize_large
+    - core.entity_view_mode.media.cke_media_resize_medium
+    - core.entity_view_mode.media.cke_media_resize_small
+    - core.entity_view_mode.media.cke_media_resize_xl
   module:
     - editor
     - entity_embed
@@ -42,7 +51,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <strong> <em> <code> <li> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align> <drupal-entity alt title data-align data-caption data-entity-embed-display data-entity-embed-display-settings data-view-mode data-entity-uuid data-langcode data-embed-button="node" data-entity-type="node">'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 id class="text-align-left text-align-center text-align-right text-align-justify"> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <strong> <em> <u> <code> <ul type> <ol type start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align> <details> <summary> <div class="details-wrapper text-align-left text-align-center text-align-right text-align-justify"> <drupal-entity alt title data-align data-caption data-entity-embed-display data-entity-embed-display-settings data-view-mode data-entity-uuid data-langcode data-embed-button="node" data-entity-type="node">'
       filter_html_help: false
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -64,5 +73,14 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
-      allowed_view_modes: {  }
-      allowed_media_types: {  }
+      allowed_view_modes:
+        1400_pixels: 1400_pixels
+        1600_pixels: 1600_pixels
+        '16_9': '16_9'
+        '4_3': '4_3'
+        cke_media_resize_large: cke_media_resize_large
+        cke_media_resize_medium: cke_media_resize_medium
+        cke_media_resize_small: cke_media_resize_small
+        cke_media_resize_xl: cke_media_resize_xl
+      allowed_media_types:
+        image: image
