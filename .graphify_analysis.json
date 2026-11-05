@@ -71,15 +71,133 @@
       "composer_require_wikimedia_composer_merge_plugin"
     ],
     "1": [
+      "drupal_core_plugin_containerfactoryplugininterface",
+      "drupal_migrate_attribute_migrateprocess",
+      "drupal_migrate_attribute_migratesource",
+      "drupal_migrate_migrateexception",
+      "drupal_migrate_migrateexecutableinterface",
+      "drupal_migrate_migrateskiprowexception",
+      "drupal_migrate_plugin_migrateidmapinterface",
+      "drupal_migrate_plugin_migrateprocessinterface",
+      "drupal_migrate_plugin_migrationinterface",
+      "drupal_migrate_processpluginbase",
+      "drupal_migrate_row",
+      "drupal_migrate_spreadsheet_plugin_migrate_source_spreadsheet",
+      "phpoffice_phpspreadsheet_iofactory",
+      "phpoffice_phpspreadsheet_reader_csv",
+      "phpoffice_phpspreadsheet_shared_date",
+      "phpoffice_phpspreadsheet_worksheet_worksheet",
+      "symfony_component_dependencyinjection_containerinterface",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
+      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_1",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_2",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_construct",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_transform",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_php_static",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_normalize",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_skipwithwarning",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_transform",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_closure_1",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_construct",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_create",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_handlepreviousdestination",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_normalize",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_repointstalemapping",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_skipwithwarning",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_transform",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_php_migrationinterface",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_php_static",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate_complete",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate_transform",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim_inmemoriamtrim",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim_inmemoriamtrim_transform",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_defaultconfiguration",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_isblankrow",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_loadworksheet",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_preparerow"
+    ],
+    "2": [
+      "drupal_core_access_accessresult",
+      "drupal_core_access_accessresultinterface",
+      "drupal_core_cache_context_cachecontextsmanager",
+      "drupal_core_field_fielddefinitioninterface",
+      "drupal_core_field_fielditemlistinterface",
+      "drupal_core_hook_attribute_hook",
+      "drupal_core_menu_menuactivetrailinterface",
+      "drupal_core_menu_menulinkinterface",
+      "drupal_core_menu_menulinktreeelement",
+      "drupal_core_path_pathmatcherinterface",
+      "drupal_core_routing_urlgeneratorinterface",
+      "drupal_core_session_accountinterface",
+      "drupal_node_nodeinterface",
+      "drupal_workspaces_workspacemanagerinterface",
+      "phpunit_framework_attributes_dataprovider",
+      "phpunit_framework_attributes_group",
+      "phpunit_framework_testcase",
+      "symfony_component_dependencyinjection_containerbuilder",
+      "symfony_component_httpfoundation_requeststack",
+      "web_modules_custom_montreal2027_tools_src_hook_inmemoriamaccesshooks",
+      "web_modules_custom_montreal2027_tools_src_hook_inmemoriamaccesshooks_inmemoriamaccesshooks",
+      "web_modules_custom_montreal2027_tools_src_hook_inmemoriamaccesshooks_inmemoriamaccesshooks_entityfieldaccess",
+      "web_modules_custom_montreal2027_tools_src_hook_inmemoriamaccesshooks_inmemoriamaccesshooks_nodeaccessrecords",
+      "web_modules_custom_montreal2027_tools_src_hook_inmemoriamaccesshooks_inmemoriamaccesshooks_nodegrants",
+      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks",
+      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks",
+      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks_construct",
+      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks_treemanipulatorsalter",
+      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator",
+      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator",
+      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator_construct",
+      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator_repairchildflags",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_fieldcases",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_grantcases",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_recordcases",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_setup",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_teardown",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_testentityfieldaccess",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_testfieldaccesswithoutitems",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_testnodeaccessrecords",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest_testnodegrants",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_element",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_manipulator",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testaccessiblesibling",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testdepthlimitandemptytree",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testhiddenchildren",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testhookintegration",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testlivetreeunchanged",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testnestedchildren",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testsuperfishsubmenuoutput",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testwithoutworkspaces",
+      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testworkspaceonlychild"
+    ],
+    "3": [
       "drupal_component_utility_html",
       "drupal_core_block_attribute_block",
       "drupal_core_block_blockbase",
       "drupal_core_controller_controllerbase",
+      "drupal_core_entity_entitytypemanagerinterface",
       "drupal_core_language_languageinterface",
       "drupal_core_language_languagemanagerinterface",
       "drupal_core_logger_loggerchannelfactoryinterface",
       "drupal_core_mail_mailmanagerinterface",
-      "drupal_core_plugin_containerfactoryplugininterface",
       "drupal_core_render_markup",
       "drupal_core_routing_routematchinterface",
       "drupal_core_stringtranslation_translatablemarkup",
@@ -88,16 +206,13 @@
       "drupal_taxonomy_termstorageinterface",
       "exception",
       "object",
-      "symfony_component_dependencyinjection_containerinterface",
       "symfony_component_httpfoundation_inputbag",
       "symfony_component_httpfoundation_jsonresponse",
       "symfony_component_httpfoundation_request",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_static",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_php_terminterface",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_construct",
-      "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_create",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getemailto",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getsubject",
       "web_modules_custom_montreal2027_tools_src_controller_staffcontactcontroller_staffcontactcontroller_getsubmitteddata",
@@ -122,58 +237,7 @@
       "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock_create",
       "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_php_static"
     ],
-    "2": [
-      "drupal_migrate_attribute_migrateprocess",
-      "drupal_migrate_attribute_migratesource",
-      "drupal_migrate_migrateexception",
-      "drupal_migrate_migrateexecutableinterface",
-      "drupal_migrate_migrateskiprowexception",
-      "drupal_migrate_plugin_migrateidmapinterface",
-      "drupal_migrate_plugin_migrateprocessinterface",
-      "drupal_migrate_processpluginbase",
-      "drupal_migrate_row",
-      "drupal_migrate_spreadsheet_plugin_migrate_source_spreadsheet",
-      "phpoffice_phpspreadsheet_iofactory",
-      "phpoffice_phpspreadsheet_reader_csv",
-      "phpoffice_phpspreadsheet_shared_date",
-      "phpoffice_phpspreadsheet_worksheet_worksheet",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_1",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_2",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_create",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_transform",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_php_static",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_normalize",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_skipwithwarning",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamdate_inmemoriamdate_transform",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_closure_1",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_handlepreviousdestination",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_normalize",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_repointstalemapping",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_skipwithwarning",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_transform",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_php_migrationinterface",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate_complete",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamsortdate_inmemoriamsortdate_transform",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim_inmemoriamtrim",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamtrim_inmemoriamtrim_transform",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_defaultconfiguration",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_isblankrow",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_loadworksheet",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_source_inmemoriamspreadsheet_inmemoriamspreadsheet_preparerow"
-    ],
-    "3": [
+    "4": [
       "composer",
       "composer_advisories_ignore",
       "composer_allow_plugins_composer_installers",
@@ -212,80 +276,7 @@
       "composer_support_docs",
       "composer_type"
     ],
-    "4": [
-      "drupal_component_datetime_timeinterface",
-      "drupal_core_entity_entityfieldmanagerinterface",
-      "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
-      "drupal_core_session_accountinterface",
-      "drupal_core_session_accountswitcherinterface",
-      "drupal_core_stringtranslation_translationinterface",
-      "drupal_migrate_plugin_migrationinterface",
-      "drupal_migrate_plugin_migrationpluginmanagerinterface",
-      "drupal_migrate_tools_drushlogmigratemessage",
-      "drupal_migrate_tools_migrateexecutable",
-      "drupal_user_userinterface",
-      "drush_attributes_argument",
-      "drush_attributes_command",
-      "drush_attributes_validatemodulesenabled",
-      "drush_commands_drushcommands",
-      "phpoffice_phpspreadsheet_cell_coordinate",
-      "symfony_component_console_helper_progressbar",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_create",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_php_static"
-    ],
     "5": [
-      "drupal_core_access_accessresult",
-      "drupal_core_hook_attribute_hook",
-      "drupal_core_menu_menuactivetrailinterface",
-      "drupal_core_menu_menulinkinterface",
-      "drupal_core_menu_menulinktreeelement",
-      "drupal_core_path_pathmatcherinterface",
-      "drupal_core_routing_urlgeneratorinterface",
-      "drupal_workspaces_workspacemanagerinterface",
-      "phpunit_framework_attributes_group",
-      "phpunit_framework_testcase",
-      "symfony_component_dependencyinjection_containerbuilder",
-      "symfony_component_httpfoundation_requeststack",
-      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks",
-      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks",
-      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks_construct",
-      "web_modules_custom_montreal2027_tools_src_hook_superfishhooks_superfishhooks_treemanipulatorsalter",
-      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator",
-      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator",
-      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator_construct",
-      "web_modules_custom_montreal2027_tools_src_menu_workspacemenutreemanipulator_workspacemenutreemanipulator_repairchildflags",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_element",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_manipulator",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testaccessiblesibling",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testdepthlimitandemptytree",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testhiddenchildren",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testhookintegration",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testlivetreeunchanged",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testnestedchildren",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testsuperfishsubmenuoutput",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testwithoutworkspaces",
-      "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testworkspaceonlychild"
-    ],
-    "6": [
       "docker_compose",
       "docker_compose_backend_internal",
       "docker_compose_backend_name",
@@ -316,6 +307,37 @@
       "docker_compose_services_db",
       "docker_compose_volumes",
       "docker_compose_volumes_db_data"
+    ],
+    "6": [
+      "drupal_component_datetime_timeinterface",
+      "drupal_core_entity_entityfieldmanagerinterface",
+      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
+      "drupal_core_session_accountswitcherinterface",
+      "drupal_core_stringtranslation_translationinterface",
+      "drupal_migrate_plugin_migrationpluginmanagerinterface",
+      "drupal_migrate_tools_drushlogmigratemessage",
+      "drupal_migrate_tools_migrateexecutable",
+      "drupal_user_userinterface",
+      "drush_attributes_argument",
+      "drush_attributes_command",
+      "drush_attributes_validatemodulesenabled",
+      "drush_commands_drushcommands",
+      "phpoffice_phpspreadsheet_cell_coordinate",
+      "symfony_component_console_helper_progressbar",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface"
     ],
     "7": [
       "github_workflows_graphify",
@@ -657,6 +679,18 @@
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_uri_type"
     ],
     "24": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_inmemoriamaccesshooks_class",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_superfishhooks_arguments",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_superfishhooks_class",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_montreal2027_tools_workspace_menu_tree_manipulator_arguments",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_montreal2027_tools_workspace_menu_tree_manipulator_class",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_drupal_montreal2027_tools_hook_inmemoriamaccesshooks",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_drupal_montreal2027_tools_hook_superfishhooks",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_montreal2027_tools_workspace_menu_tree_manipulator"
+    ],
+    "25": [
       "entityforminterface",
       "translatablemarkup",
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
@@ -667,7 +701,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
-    "25": [
+    "26": [
       "drupal_core_form_configformbase",
       "drupal_core_form_formstateinterface",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform",
@@ -677,7 +711,7 @@
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_submitform"
     ],
-    "26": [
+    "27": [
       "mcp",
       "mcp_command_graphify_mcp",
       "mcp_command_npx",
@@ -686,16 +720,6 @@
       "mcp_mcp_server_graphify",
       "mcp_mcp_server_obscura",
       "mcp_package_edictum_captatum"
-    ],
-    "27": [
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_superfishhooks_arguments",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_superfishhooks_class",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_montreal2027_tools_workspace_menu_tree_manipulator_arguments",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_montreal2027_tools_workspace_menu_tree_manipulator_class",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_drupal_montreal2027_tools_hook_superfishhooks",
-      "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_montreal2027_tools_workspace_menu_tree_manipulator"
     ],
     "28": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
@@ -716,204 +740,218 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_weight"
     ],
     "30": [
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content_description",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content_title",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_description",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_title"
+    ],
+    "31": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_base_route_name",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_names",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_title"
     ],
-    "31": [
+    "32": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_type"
     ],
-    "32": [
+    "33": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_type"
     ],
-    "33": [
+    "34": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_type"
     ],
-    "34": [
+    "35": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_type"
     ],
-    "35": [
+    "36": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_type"
     ],
-    "36": [
+    "37": [
+      "drupal_node_nodeaccessrebuild",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update",
+      "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update_montreal2027_tools_post_update_in_memoriam_access"
+    ],
+    "38": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_type",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_heading_prefix"
     ],
-    "37": [
+    "39": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_title",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_type"
     ],
-    "38": [
+    "40": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_success_message",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_type"
     ],
-    "39": [
+    "41": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_type",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_include_fontawesome"
     ],
-    "40": [
+    "42": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_type"
     ],
-    "41": [
+    "43": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_type"
     ],
-    "42": [
+    "44": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_type"
     ],
-    "43": [
+    "45": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_type"
     ],
-    "44": [
+    "46": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_type"
     ],
-    "45": [
+    "47": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_6",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_type"
     ],
-    "46": [
+    "48": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_type"
     ],
-    "47": [
+    "49": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_type"
     ],
-    "48": [
+    "50": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_type"
     ],
-    "49": [
+    "51": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_type"
     ],
-    "50": [
+    "52": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_type"
     ],
-    "51": [
+    "53": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_type"
     ],
-    "52": [
+    "54": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_type"
     ],
-    "53": [
+    "55": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_type"
     ],
-    "54": [
+    "56": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_type"
     ],
-    "55": [
+    "57": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_type"
     ],
-    "56": [
+    "58": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_type"
     ],
-    "57": [
+    "59": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slideshow_display",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_type"
     ],
-    "58": [
+    "60": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "59": [
+    "61": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "60": [
+    "62": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "61": [
+    "63": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "62": [
+    "64": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "63": [
+    "65": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "64": [
+    "66": [
       "symfony_component_dotenv_dotenv",
       "web_sites_default_settings"
     ],
-    "65": [
+    "67": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "66": [
+    "68": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "67": [
+    "69": [
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu_attach"
     ],
-    "68": [
+    "70": [
       "github_issue_template_new_content"
     ]
   },
   "cohesion": {
     "0": 0.029411764705882353,
-    "1": 0.07265306122448979,
-    "2": 0.08928571428571429,
-    "3": 0.05405405405405406,
-    "4": 0.10158730158730159,
-    "5": 0.11363636363636363,
-    "6": 0.06666666666666667,
+    "1": 0.0750151240169389,
+    "2": 0.06623376623376623,
+    "3": 0.07770582793709528,
+    "4": 0.05405405405405406,
+    "5": 0.06666666666666667,
+    "6": 0.1206896551724138,
     "7": 0.06896551724137931,
     "8": 0.06896551724137931,
     "9": 0.07692307692307693,
@@ -931,19 +969,19 @@
     "21": 0.2,
     "22": 0.2,
     "23": 0.2,
-    "24": 0.3055555555555556,
-    "25": 0.35714285714285715,
-    "26": 0.25,
+    "24": 0.2,
+    "25": 0.3055555555555556,
+    "26": 0.35714285714285715,
     "27": 0.25,
     "28": 0.2857142857142857,
     "29": 0.2857142857142857,
-    "30": 0.4,
-    "31": 0.5,
+    "30": 0.2857142857142857,
+    "31": 0.4,
     "32": 0.5,
     "33": 0.5,
     "34": 0.5,
     "35": 0.5,
-    "36": 0.6666666666666666,
+    "36": 0.5,
     "37": 0.6666666666666666,
     "38": 0.6666666666666666,
     "39": 0.6666666666666666,
@@ -965,8 +1003,8 @@
     "55": 0.6666666666666666,
     "56": 0.6666666666666666,
     "57": 0.6666666666666666,
-    "58": 1.0,
-    "59": 1.0,
+    "58": 0.6666666666666666,
+    "59": 0.6666666666666666,
     "60": 1.0,
     "61": 1.0,
     "62": 1.0,
@@ -975,7 +1013,9 @@
     "65": 1.0,
     "66": 1.0,
     "67": 1.0,
-    "68": 1.0
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0
   },
   "gods": [
     {
@@ -1019,14 +1059,14 @@
       "degree": 12
     },
     {
-      "id": "composer_extra_installer_paths",
-      "label": "installer-paths",
+      "id": "web_modules_custom_montreal2027_tools_tests_src_unit_inmemoriamaccesshookstest_inmemoriamaccesshookstest",
+      "label": "InMemoriamAccessHooksTest",
       "degree": 11
     },
     {
-      "id": "web_modules_custom_montreal2027_tools_src_plugin_block_languagetoggleblock_languagetoggleblock",
-      "label": "LanguageToggleBlock",
-      "degree": 10
+      "id": "composer_extra_installer_paths",
+      "label": "installer-paths",
+      "degree": 11
     }
   ],
   "surprises": [
@@ -1046,7 +1086,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.022) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -1061,22 +1101,22 @@
     {
       "type": "bridge_node",
       "question": "Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `slide_image_4`, `slide_image_5`, `slide_image_7`, `slide_image_8`, `include_fontawesome`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?",
-      "why": "High betweenness centrality (0.021) - this node is a cross-community bridge."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `StaffContactController` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.07265306122448979 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
       "question": "Should `Drupal\\migrate\\Row` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08928571428571429 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.0750151240169389 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
+      "why": "High betweenness centrality (0.009) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected."
     }
   ]
 }
