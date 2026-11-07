@@ -2,6 +2,71 @@
 
 Custom utility module for Montreal 2027 operations.
 
+## In Memoriam Access
+
+The `in_memoriam` role can view unpublished In Memoriam entries from any author,
+including in access-checked content listings, and edit and publish those entries.
+The module supplies `view any unpublished in_memoriam content` and
+`publish in_memoriam content`; editing uses the existing
+`edit any in_memoriam content` permission.
+
+These permissions do not grant access to unpublished content or publication
+controls for other content types. Existing workspace and private-content editing
+restrictions remain in force. Published content retains its existing access rules.
+
+Deploy with database updates, configuration import, and cache rebuild:
+
+```bash
+docker compose exec web vendor/bin/drush updatedb -y
+docker compose exec web vendor/bin/drush config:import -y
+docker compose exec web vendor/bin/drush cr
+```
+
+The post-update rebuilds node access grants for existing entries; new or updated
+entries receive grants automatically.
+
+With PHPUnit and Drupal's development test dependencies installed, run:
+
+```bash
+docker compose exec web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
+  web/modules/custom/montreal2027_tools/tests/src/Unit/InMemoriamAccessHooksTest.php
+```
+
+Tests cover authenticated grants, owner-independent access records, publication
+permissions, cacheability, and boundaries for other bundles and fields.
+
+## Workspace Menu Preview
+
+Superfish requires a parent's `hasChildren` flag to render its submenu. Drupal
+calculates that stored flag from Live-enabled links, so the first child created
+only in a workspace can leave its parent incorrectly marked as childless.
+
+[SuperfishHooks](src/Hook/SuperfishHooks.php) appends the
+[workspace menu tree processor](src/Menu/WorkspaceMenuTreeManipulator.php) after
+Superfish's disabled-link filtering and access checks. In an active workspace,
+the processor repairs child flags from the loaded, enabled, accessible children.
+It retains inaccessible links for cacheability metadata and preserves child hints
+where subtrees are empty because of a depth limit.
+
+Live rendering, menu depth, expansion settings, and stored menu data are unchanged.
+Workspaces remains optional; the processor does nothing when it is not installed.
+
+After deployment, rebuild Drupal's cache to discover the new hook and services:
+
+```bash
+docker compose exec web vendor/bin/drush cr
+```
+
+Verify that a workspace-only child appears under its parent in Staging, remains
+hidden in Live, and that disabled or inaccessible children remain hidden.
+
+With PHPUnit and Drupal's development test dependencies installed, run:
+
+```bash
+docker compose exec web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
+  web/modules/custom/montreal2027_tools/tests/src/Unit/WorkspaceMenuTreeManipulatorTest.php
+```
+
 ## Taxonomy UI Label Overrides
 
 This module customizes the `divisions` taxonomy vocabulary UI labels:
@@ -107,3 +172,18 @@ A summary is printed at the end:
 - Created (or Would create in dry-run)
 - Skipped
 - Failed
+
+## In Memoriam spreadsheet import
+
+`montreal2027:import-in-memoriam /path/to/in-memoriam.xlsx` (alias: `m2027:iim`) imports the first worksheet of an XLSX file. The path must be readable from the `web` container when using Docker. The seven required column headers are case-sensitive: `First Name`, `Last Name`, `Year of Birth`, `Date of Death`, `Sort Date`, `Category`, and `Bio`.
+
+The migration validates the destination fields and workbook headers, processes rows in batches of 25, creates missing taxonomy terms, and keeps imported nodes unpublished. It runs entity validation as user 1 so the configured text format is permitted; new nodes are therefore owned by user 1. Exact name matches update changed values; unchanged matches are skipped. Rows may be sorted, inserted or deleted between imports: the name, not the row number, decides which node is updated, and a row's stored mapping is corrected to its matching node. If no node matches a row exactly, but a node has the same first and last name ignoring letter case, the row is skipped with an on-screen warning instead of creating a duplicate, so site edits are kept; fix the spreadsheet name to update that node. If a previously imported row's old node has a different name, the row is treated as a new person and a new node is created without changing the old one. Submission fields (`field_submitted_by` and `field_submitted_email`) are excluded from change detection. Category values are semicolon-delimited and limited to the first four terms. `Date of Death` cells formatted as Excel dates are read as displayed text: `m/yyyy` becomes `YYYY-MM`, and `m/d/yyyy` becomes `YYYY-MM-DD`. Text such as `Summer` is kept. `field_sort_date` always holds a complete `YYYY-MM-DD` date: `Sort Date` is used when present, otherwise `Date of Death`. Either value is normalized with the same rules, and a month-only result uses the month's last day (`10/2026` becomes `2026-10-31`). A descriptive `Date of Death` with no `Sort Date` leaves the field empty. An invalid `Date of Death` (such as `13/2026` or `2/30/2027`) or an invalid or non-date `Sort Date` skips that row with an on-screen warning naming the column; the rest of the file still imports, and the row can be corrected and re-imported. Fully blank rows, such as rows created by formatting an entire column, are skipped.
+
+Import the migration configuration with `drush cim` before its first use.
+The YAML file in `config/sync` is not discovered until it is imported into active configuration. If the command reports that the migration is unavailable, review `drush config:status` before importing configuration; `drush cim` may apply other pending changes.
+
+Example:
+
+```bash
+docker compose exec web vendor/bin/drush montreal2027:import-in-memoriam /tmp/in-memoriam.xlsx
+```

@@ -1,0 +1,170 @@
+{
+    "name": "drupal/webform",
+    "description": "Enables the creation of webforms and questionnaires.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "homepage": "https://drupal.org/project/webform",
+    "authors": [
+        {
+            "name": "Jacob Rockowitz (jrockowitz)",
+            "homepage": "https://www.drupal.org/u/jrockowitz",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://www.drupal.org/node/7404/committers",
+            "role": "Contributor"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+        "source": "https://git.drupalcode.org/project/webform",
+        "docs": "https://www.drupal.org/docs/8/modules/webform",
+        "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+    },
+    "require": {
+        "choices/choices": "*",
+        "codemirror/codemirror": "*",
+        "jquery/image-picker": "*",
+        "progress-tracker/progress-tracker": "*",
+        "signature_pad/signature_pad": "*",
+        "svg-pan-zoom/svg-pan-zoom": "*",
+        "tabby/tabby": "*",
+        "tippyjs/tippyjs": "*"
+    },
+    "suggest": {
+        "drupal/jquery_ui_buttons": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+        "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+    },
+    "repositories": {
+        "choices": {
+            "type": "package",
+            "package": {
+                "name": "choices/choices",
+                "version": "11.0.2",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "choices"
+                },
+                "dist": {
+                    "url": "https://github.com/Choices-js/Choices/archive/refs/tags/v11.0.2.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "codemirror": {
+            "type": "package",
+            "package": {
+                "name": "codemirror/codemirror",
+                "version": "5.65.12",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "codemirror"
+                },
+                "dist": {
+                    "url": "https://github.com/components/codemirror/archive/refs/tags/5.65.12.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "jquery.image-picker": {
+            "type": "package",
+            "package": {
+                "name": "jquery/image-picker",
+                "version": "0.3.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.image-picker"
+                },
+                "dist": {
+                    "url": "https://github.com/rvera/image-picker/archive/refs/tags/0.3.1.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "progress-tracker": {
+            "type": "package",
+            "package": {
+                "name": "progress-tracker/progress-tracker",
+                "version": "2.0.7",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "progress-tracker"
+                },
+                "dist": {
+                    "url": "https://github.com/NigelOToole/progress-tracker/archive/refs/tags/2.0.7.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "signature_pad": {
+            "type": "package",
+            "package": {
+                "name": "signature_pad/signature_pad",
+                "version": "2.3.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "signature_pad"
+                },
+                "dist": {
+                    "url": "https://github.com/szimek/signature_pad/archive/refs/tags/v2.3.0.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "svg-pan-zoom": {
+            "type": "package",
+            "package": {
+                "name": "svg-pan-zoom/svg-pan-zoom",
+                "version": "3.6.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "svg-pan-zoom"
+                },
+                "dist": {
+                    "url": "https://github.com/ariutta/svg-pan-zoom/archive/refs/tags/3.6.1.zip",
+                    "type": "zip"
+                },
+                "license": "BSD-2-Clause"
+            }
+        },
+        "tabby": {
+            "type": "package",
+            "package": {
+                "name": "tabby/tabby",
+                "version": "12.0.3",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "tabby"
+                },
+                "dist": {
+                    "url": "https://github.com/cferdinandi/tabby/archive/refs/tags/v12.0.3.zip",
+                    "type": "zip"
+                },
+                "license": "MIT"
+            }
+        },
+        "tippyjs": {
+            "type": "package",
+            "package": {
+                "name": "tippyjs/tippyjs",
+                "version": "6.3.7",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "tippyjs"
+                },
+                "dist": {
+                    "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz",
+                    "type": "tar"
+                },
+                "license": "MIT"
+            }
+        }
+    }
+}

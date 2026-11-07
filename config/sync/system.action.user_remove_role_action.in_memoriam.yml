@@ -1,0 +1,14 @@
+uuid: 8b45cae1-4663-4746-a7ed-0a806b540cd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.in_memoriam
+  module:
+    - user
+id: user_remove_role_action.in_memoriam
+label: 'Remove the In Memoriam Maintainer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: in_memoriam

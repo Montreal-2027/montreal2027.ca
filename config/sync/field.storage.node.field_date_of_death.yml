@@ -1,17 +1,18 @@
-uuid: 6b93e0fa-2f8c-4ffb-9e9b-0c1d5c384542
+uuid: d9e2ad75-be53-4487-8f04-5bce4ace3d9f
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
 id: node.field_date_of_death
 field_name: field_date_of_death
 entity_type: node
-type: datetime
+type: string
 settings:
-  datetime_type: date
-module: datetime
+  max_length: 20
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -1,0 +1,52 @@
+uuid: 8205b319-4dec-4c56-ba51-0a6e9031c249
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.in_memoriam
+    - taxonomy.vocabulary.in_memoriam
+  module:
+    - filter
+    - help
+    - media
+    - media_gallery
+    - montreal2027_tools
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces_access
+    - wse_preview
+id: in_memoriam
+label: 'In Memoriam Maintainer'
+weight: -4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access help pages'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access workspace previews'
+  - 'create in_memoriam content'
+  - 'create terms in in_memoriam'
+  - 'delete any in_memoriam content'
+  - 'delete terms in in_memoriam'
+  - 'edit any in_memoriam content'
+  - 'edit terms in in_memoriam'
+  - 'publish in_memoriam content'
+  - 'revert in_memoriam revisions'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view any unpublished in_memoriam content'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view published media gallery entities'
+  - 'view the administration theme'
+  - workspace_live_add_content
+  - workspace_live_edit_content
+  - workspace_live_remove_content
+  - workspace_live_view_content

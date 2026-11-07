@@ -24,6 +24,7 @@ dependencies:
     - help
     - media
     - node
+    - private_content
     - system
     - taxonomy
     - toolbar
@@ -31,7 +32,7 @@ dependencies:
 id: content_creator
 label: 'Content creator'
 weight: -5
-is_admin: true
+is_admin: false
 permissions:
   - 'access administration pages'
   - 'access content'
@@ -58,6 +59,8 @@ permissions:
   - 'edit own guest content'
   - 'edit own home_page content'
   - 'edit own page content'
+  - 'edit private content'
+  - 'mark content as private'
   - 'translate article node'
   - 'translate block_content'
   - 'translate guest node'

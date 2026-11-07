@@ -13,7 +13,7 @@ dependencies:
     - workspaces_access
 id: staff
 label: Team
-weight: -7
+weight: -3
 is_admin: false
 permissions:
   - 'access content'

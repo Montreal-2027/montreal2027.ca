@@ -14,6 +14,7 @@ module:
   ckeditor5: 0
   ckeditor5_open_new_tab: 0
   ckeditor5_paste_filter: 0
+  ckeditor_details: 0
   ckeditor_media_resize: 0
   clientside_validation: 0
   clientside_validation_jquery: 0
@@ -67,10 +68,15 @@ module:
   media_library_form_element: 0
   menu_block: 0
   menu_item_extras: 0
+  menu_item_role_access: 0
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_spreadsheet: 0
+  migrate_tools: 0
   montreal2027_tools: 0
   mysql: 0
   node: 0
@@ -81,6 +87,7 @@ module:
   path_alias: 0
   photoswipe: 0
   phpmailer_smtp: 0
+  private_content: 0
   recreate_block_content: 0
   redirect: 0
   responsive_image: 0

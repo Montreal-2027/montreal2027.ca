@@ -13,11 +13,11 @@ bundle: in_memoriam
 label: Category
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: 'default:filter_existing_terms'
   handler_settings:
     target_bundles:
       in_memoriam: in_memoriam

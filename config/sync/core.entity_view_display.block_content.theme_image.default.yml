@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.theme_image
     - field.field.block_content.theme_image.field_block_image
+    - field.field.block_content.theme_image.field_target
 id: block_content.theme_image.default
 targetEntityType: block_content
 bundle: theme_image
@@ -17,9 +18,10 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
   entity_workspace_status: true
+  field_target: true
   langcode: true
   search_api_excerpt: true

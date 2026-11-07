@@ -1,0 +1,85 @@
+uuid: 2ffb04ba-84f4-4a46-8df5-8e69f82b3101
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.in_memoriam
+    - taxonomy.vocabulary.in_memoriam
+  module:
+    - migrate
+    - migrate_plus
+    - migrate_spreadsheet
+    - migrate_tools
+    - montreal2027_tools
+id: in_memoriam_import
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'In Memoriam'
+migration_group: null
+label: 'In Memoriam spreadsheet import'
+source:
+  plugin: in_memoriam_spreadsheet
+  formatted_columns:
+    - 'Date of Death'
+    - 'Sort Date'
+  file: null
+  worksheet: null
+  origin: A2
+  header_row: 1
+  track_changes: true
+  columns:
+    - 'First Name'
+    - 'Last Name'
+    - 'Year of Birth'
+    - 'Date of Death'
+    - 'Sort Date'
+    - Category
+    - Bio
+  row_index_column: 'Source Row'
+process:
+  title:
+    plugin: in_memoriam_trim
+    source: 'Last Name'
+  status:
+    plugin: default_value
+    default_value: 0
+  field_first_name:
+    plugin: in_memoriam_trim
+    source: 'First Name'
+  field_year_of_birth:
+    plugin: in_memoriam_trim
+    source: 'Year of Birth'
+  field_date_of_death:
+    plugin: in_memoriam_date
+    source: 'Date of Death'
+  field_sort_date:
+    plugin: in_memoriam_sort_date
+    source:
+      - 'Sort Date'
+      - 'Date of Death'
+  field_category:
+    plugin: in_memoriam_categories
+    source: Category
+  field_reason/value: Bio
+  field_reason/format:
+    plugin: default_value
+    default_value: basic_html
+  field_submitted_by:
+    plugin: default_value
+    default_value: ''
+    strict: true
+  field_submitted_email:
+    plugin: default_value
+    default_value: ''
+    strict: true
+  nid:
+    plugin: in_memoriam_node_lookup
+destination:
+  plugin: 'entity:node'
+  default_bundle: in_memoriam
+  validate: true
+idMap: {  }
+migration_dependencies: null
+include: null

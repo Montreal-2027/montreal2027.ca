@@ -11,8 +11,8 @@ entity_type: node
 bundle: in_memoriam
 label: 'Submitted by email'
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

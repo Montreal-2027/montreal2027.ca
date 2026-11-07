@@ -18,4 +18,5 @@ fi
 envsubst '${WEB_INTERNAL_PORT}' < /etc/nginx/templates/default.conf.template > /etc/nginx/http.d/default.conf
 
 php-fpm -D
+socat TCP-LISTEN:25,bind=127.0.0.1,reuseaddr,fork TCP:host.docker.internal:1025 &
 exec nginx -g 'daemon off;'

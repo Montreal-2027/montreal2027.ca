@@ -1,2989 +1,432 @@
-taxonomies:
-  divisions:
-    -
-      vid: divisions
-      tid: '18'
-      langcode: en
-      name: 'Facilities Division'
-      description__value: null
-      description__format: null
-      weight: '84'
-      parent: '0'
-      uuid: 862b3f1c-39e4-4e76-b31a-46fa497c3601
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '13'
-      langcode: en
-      name: 'Office of the Chair'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 6ba8c6a5-b883-423f-bc28-ff2f575098f8
-      field_email_address:
-        -
-          value: chairs@montreal2027.ca
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '25'
-      langcode: en
-      name: Chair
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '13'
-      uuid: d1d3a80e-201b-4540-9cbc-23caf88d7957
-      field_email_address:
-        -
-          value: chair@montreal2027.ca
-      field_name:
-        -
-          value: 'Bruce Farr'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '134'
-      langcode: en
-      name: 'Admin to Bruce Farr'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '25'
-      uuid: 0e8c962a-a13c-4695-ba8b-bc1834e89cfd
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jill Eastlake'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '138'
-      langcode: en
-      name: 'Chair Projects'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '25'
-      uuid: 96f164f6-d2ee-467b-a67b-d97dbe76d07d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Amanda Wakaruk'
-        -
-          value: 'Olav Rokne'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '14'
-      langcode: en
-      name: 'Communications Division'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '0'
-      uuid: 9b4ba045-a5af-4b6e-bb3f-4b273ea0d4e7
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '26'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '14'
-      uuid: be268c47-3d2f-4535-819e-d7a9f176e92a
-      field_email_address:
-        -
-          value: communications@montreal2027.ca
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '38'
-      langcode: en
-      name: 'Administrative Assistant'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '26'
-      uuid: 150f15a8-8855-4121-8288-b730fbb5d275
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Lisa Hertel'
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '39'
-      langcode: en
-      name: Ads
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '26'
-      uuid: aab201f9-8c89-4da0-973a-66c169ef8e9c
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '44'
-      langcode: en
-      name: Incoming
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '39'
-      uuid: de1d175e-98f8-4ccc-b689-b1ee15dda555
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Kees Van Toorn'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '43'
-      langcode: en
-      name: Outgoing
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '39'
-      uuid: e7330bbf-9c75-4322-a4c4-22cba8dff4f8
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '91'
-      langcode: en
-      name: 'Advertising Area Head'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '26'
-      uuid: 7a3ecda2-a41b-4be2-b7da-59c9981936ee
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '1'
-    -
-      vid: divisions
-      tid: '92'
-      langcode: en
-      name: 'Con Info FAQ/Wiki'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '26'
-      uuid: cbe2742f-8b2b-4db1-bcab-0a96e24e710a
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '102'
-      langcode: en
-      name: Newsletters
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '92'
-      uuid: f3932ee7-04cc-4f38-b0c2-72baaef6f2a3
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '108'
-      langcode: en
-      name: Pre-con
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '102'
-      uuid: 71753430-49b7-4f31-ba8d-3cac3624178f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Christine Ragan'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '101'
-      langcode: en
-      name: 'Website FAQ'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '92'
-      uuid: bc8ab63a-7893-40f3-9b93-03778be7bcf5
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Christine Ragan'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '93'
-      langcode: en
-      name: 'Creative Services'
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '26'
-      uuid: 91ada86a-20d0-470e-9e28-2197ba9eba8d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bridget Boyle'
-        -
-          value: 'Brenda Fortin'
-        -
-          value: 'Margaret Organ-Kean'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '104'
-      langcode: en
-      name: 'Badge Design'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '93'
-      uuid: ea687ace-5fa0-4f8a-bc9e-63a7b6ed5094
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bridget Boyle'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '105'
-      langcode: en
-      name: Ribbons
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '93'
-      uuid: 4804f631-759e-4ab8-8fff-93099d59ba1d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '107'
-      langcode: en
-      name: 'Style/Vibe Guide'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '93'
-      uuid: 3e5089ba-3165-462c-abfb-8ad1ffb94e7d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '90'
-      langcode: en
-      name: 'Foreign Agents Area Head'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '26'
-      uuid: af1ced13-6286-4eea-b196-da827d0c7ac3
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Pascale Chabrillat'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '86'
-      langcode: en
-      name: 'French Translations Area Head'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '26'
-      uuid: a8743cf7-617d-498a-aae6-ca185d71da14
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Pascale Chabrillat'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '98'
-      langcode: en
-      name: Proofreading
-      description__value: null
-      description__format: null
-      weight: '13'
-      parent: '26'
-      uuid: c2ed67bd-1218-4f12-bcf0-70d0ac49722d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jazilee Akins'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '100'
-      langcode: en
-      name: 'Social Media Area Head'
-      description__value: null
-      description__format: null
-      weight: '14'
-      parent: '26'
-      uuid: 9b47b2dd-4da9-4632-b16f-52ebca873b30
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Colin Ferguson'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '95'
-      langcode: en
-      name: 'Help Wanted Ads'
-      description__value: null
-      description__format: null
-      weight: '9'
-      parent: '26'
-      uuid: acf51523-4854-4ea3-8652-4a25fab3a3f6
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '97'
-      langcode: en
-      name: Merchandising
-      description__value: null
-      description__format: null
-      weight: '10'
-      parent: '26'
-      uuid: 293f6f27-4c42-454c-b40c-d2a90b5d2c90
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '96'
-      langcode: en
-      name: 'Montréal McNuggets Area Head'
-      description__value: null
-      description__format: null
-      weight: '11'
-      parent: '26'
-      uuid: 8d5fc14a-9b4e-4cb5-860d-1a63b19a2081
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Guillaume Boudrias'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '99'
-      langcode: en
-      name: 'Press Liaison'
-      description__value: null
-      description__format: null
-      weight: '12'
-      parent: '26'
-      uuid: 0a57e7d1-308c-4817-b8a1-2e207df9c08f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Juan Sanmiguel'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '74'
-      langcode: en
-      name: 'Souvenir Book Area Head'
-      description__value: null
-      description__format: null
-      weight: '15'
-      parent: '26'
-      uuid: 843f00cd-7113-40d2-b620-7e727f6dd685
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Vivian Abraham'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '137'
-      langcode: en
-      name: 'Sponsorships Area Head'
-      description__value: null
-      description__format: null
-      weight: '16'
-      parent: '26'
-      uuid: 6caec9d2-520e-4f89-be76-a30771e13cbd
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '1'
-    -
-      vid: divisions
-      tid: '109'
-      langcode: en
-      name: 'Website Services'
-      description__value: null
-      description__format: null
-      weight: '17'
-      parent: '26'
-      uuid: bde6dddb-f3e8-4a20-b240-30f40d89c9e2
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '110'
-      langcode: en
-      name: 'Content Creation'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '109'
-      uuid: 1443f54f-f716-448b-9852-cbaebb5d3b53
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Farah Mendlesohn'
-        -
-          value: 'Mark Richards'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '111'
-      langcode: en
-      name: 'Website Tech Liaison'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '109'
-      uuid: 89aa81d9-c919-4952-a286-ceed74be3b3f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bridget Boyle'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '15'
-      langcode: en
-      name: 'Convention Services Division'
-      description__value: null
-      description__format: null
-      weight: '41'
-      parent: '0'
-      uuid: 9f426031-8ab3-4305-b002-c3aa064bb352
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '27'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '15'
-      uuid: b352e85d-fbee-4b52-b44d-9f6aaed8556b
-      field_email_address:
-        -
-          value: conventionservices@montreal2027.ca
-      field_name:
-        -
-          value: 'Carolina Gomez Lagerlöf'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '75'
-      langcode: en
-      name: 'Deputy Division Heads'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '27'
-      uuid: 363dec46-900c-4824-8b1d-65b84cee948c
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Britt-Louise Viklund'
-        -
-          value: 'Ann Olsson Rousset'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '45'
-      langcode: en
-      name: 'Operations Area Heads'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '27'
-      uuid: 823060ef-09fb-49b9-8bae-8b49a2fa87ce
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Robbie Bourget'
-        -
-          value: 'John Harold'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '81'
-      langcode: en
-      name: Volunteers
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '27'
-      uuid: 16c5f181-c6e5-4309-bdad-9e4a80d22522
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '125'
-      langcode: en
-      name: 'Pre Con Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '81'
-      uuid: 80fc2b8c-0f91-4818-a4f4-59c49d36c757
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Linda Pierce'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '126'
-      langcode: en
-      name: 'At Con Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '81'
-      uuid: bcfca4d8-e3e5-4aa0-b67e-be78157eb8d4
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '17'
-      langcode: en
-      name: 'Exhibits Division'
-      description__value: null
-      description__format: null
-      weight: '69'
-      parent: '0'
-      uuid: 28959cf7-f404-48f0-9e08-fbedf5dddcf4
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '29'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '17'
-      uuid: 0d7e980b-514d-4e50-a791-3b1865bddc01
-      field_email_address:
-        -
-          value: exhibits@montral2027.ca
-      field_name:
-        -
-          value: 'Diane Lacey'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '77'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '29'
-      uuid: 47a9b7c5-ef2e-4321-8acc-b982b1ff58ce
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'René Walling'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '50'
-      langcode: en
-      name: 'Art Show Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '29'
-      uuid: 99b33d8c-42a0-4d54-bfc5-64a86710ca29
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Kerry Kuhn'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '84'
-      langcode: en
-      name: 'Customs Brokerage'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '29'
-      uuid: 74720a94-c565-4534-a12e-9ddb5f6c0539
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Alex von Thorn'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '51'
-      langcode: en
-      name: 'Dealers Area Head'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '29'
-      uuid: a57b861e-d7d9-4d20-aeea-a0987ee5bc82
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Chris Young'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '139'
-      langcode: en
-      name: 'Dealers Deputy Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '51'
-      uuid: 7039ca0a-e3f1-44e5-ad6d-d95090d61eff
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Mathilde Roussel'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '16'
-      langcode: en
-      name: 'Events Division'
-      description__value: null
-      description__format: null
-      weight: '50'
-      parent: '0'
-      uuid: 1d20cc8e-ea5c-4fbb-a577-8c053f1b40d7
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '28'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '16'
-      uuid: d2307466-b3c8-4fc6-a158-76db53e912e2
-      field_email_address:
-        -
-          value: events-dh@montreal2027.ca
-      field_name:
-        -
-          value: 'Patty Wells'
-        -
-          value: 'Randall Shepherd'
-        -
-          value: 'Kate Wood - Retired'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '76'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '28'
-      uuid: d49645cf-b59e-4722-af2e-9bb0caf44cf7
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Liana Olear'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '46'
-      langcode: en
-      name: Admin
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '28'
-      uuid: 21836691-60a6-4e4e-a4fe-f1c7630887b0
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Virginia Knight'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '47'
-      langcode: en
-      name: 'Dance Area Head'
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '28'
-      uuid: 1b2305d6-9405-4e74-adac-8725393b5710
-      field_email_address: {  }
-      field_name:
-        -
-          value: ' Virginia Knight'
-        -
-          value: 'Gillian Clinton (Resigned)'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '48'
-      langcode: en
-      name: 'Film Area Head'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '28'
-      uuid: 922ef188-57fa-4b3d-a589-691b17840d6f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Ray Low'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '49'
-      langcode: en
-      name: 'Masquerade Area Heads'
-      description__value: null
-      description__format: null
-      weight: '8'
-      parent: '28'
-      uuid: c5602212-d5b1-4a34-9eb5-79299bf6bd9c
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Sébastien Bouchard'
-        -
-          value: 'Emmanuel Hènault'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '83'
-      langcode: en
-      name: 'Decorator Liaison'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '29'
-      uuid: 3dc36a89-68c0-4429-8983-880c664efc2a
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Ruth Lichtwardt'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '82'
-      langcode: en
-      name: 'Fanzine Lounge'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '29'
-      uuid: 9f8c9c68-233b-4d57-9e99-3264ef994300
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '1'
-    -
-      vid: divisions
-      tid: '53'
-      langcode: en
-      name: 'Logistics Area Head'
-      description__value: null
-      description__format: null
-      weight: '8'
-      parent: '29'
-      uuid: cdea791b-d16c-42a9-82de-9bd4be3cb365
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jeff Orth'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '52'
-      langcode: en
-      name: 'Static Exhibits'
-      description__value: null
-      description__format: null
-      weight: '9'
-      parent: '29'
-      uuid: e63efe74-bd12-4e81-ab88-f8f99d43b786
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Marah Searle-Kovacevic'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '30'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '18'
-      uuid: d0c50e5f-6cad-41b3-bdfc-55eea62a9e70
-      field_email_address:
-        -
-          value: facilities@montreal2027.ca
-      field_name:
-        -
-          value: 'Sean McCoy'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '19'
-      langcode: en
-      name: 'Finance Division'
-      description__value: null
-      description__format: null
-      weight: '151'
-      parent: '0'
-      uuid: 75ef5c89-afb2-4c3e-bc88-782590693cc3
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '31'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '19'
-      uuid: 2a204ec1-908e-48b3-a5f3-16fac26545d5
-      field_email_address:
-        -
-          value: finance-dh@montreal2027.ca
-      field_name:
-        -
-          value: 'Alexia Hebel'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '70'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '31'
-      uuid: 478517f1-23f1-4ce4-90c2-73d573407916
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Joann Lawler'
-        -
-          value: 'Sam Scheiner'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '54'
-      langcode: en
-      name: 'Budget  Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '31'
-      uuid: 8b7f1fca-8fb9-400e-8767-4efc4cf0cf29
-      field_email_address:
-        -
-          value: budget@montreal2027.ca
-      field_name:
-        -
-          value: 'Sam Scheiner'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '55'
-      langcode: en
-      name: 'Contracts Area Head'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '31'
-      uuid: 45c63682-0be5-4223-a4af-fece13dc09a4
-      field_email_address:
-        -
-          value: contracts@montreal2027.ca
-      field_name:
-        -
-          value: 'Caycee Price'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '56'
-      langcode: en
-      name: 'Finance Liaison'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '31'
-      uuid: b6ee85a7-258c-4bdf-a67d-740e59024b22
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Laura Robinson'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '117'
-      langcode: en
-      name: 'S.W.O.C. Liaison'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '56'
-      uuid: 7a457ec8-3531-423e-abb4-f394e7e4cac7
-      field_email_address: {  }
-      field_name:
-        -
-          value: "Dick O'Shea"
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '57'
-      langcode: en
-      name: Registration
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '31'
-      uuid: 496bb452-0648-4b34-bc53-89c2a4f014d1
-      field_email_address:
-        -
-          value: reg@montreal2027.ca
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '119'
-      langcode: en
-      name: 'Pre Con Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '57'
-      uuid: e551e563-be40-46c8-a06b-345d178b490a
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Sharon Sbarsky'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '118'
-      langcode: en
-      name: 'At Con Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '57'
-      uuid: 3c510812-250f-4b2e-8942-00e35016ef12
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'David Guon'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '115'
-      langcode: en
-      name: Timeline
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '31'
-      uuid: 7d6d7143-29fb-40b5-af5b-fbff5ac0c0f5
-      field_email_address:
-        -
-          value: timeline@montreal2027.ca
-      field_name:
-        -
-          value: 'Bernie Strub'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '58'
-      langcode: en
-      name: 'Treasury Area Head'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '31'
-      uuid: b2774311-ca6e-4e87-afda-1d03345978df
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Joann Lawler'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '122'
-      langcode: en
-      name: 'At Con Treasurer'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '58'
-      uuid: 970abe70-925b-46f7-8e7a-cfd68d862bd6
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Annie Yotova'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '121'
-      langcode: en
-      name: Comptroller
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '58'
-      uuid: af84d96f-5f15-40fe-ba35-c4e1cb0ec8da
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Fredrik Coulter'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '20'
-      langcode: en
-      name: 'Member Services Division'
-      description__value: null
-      description__format: null
-      weight: '152'
-      parent: '0'
-      uuid: 2b9f4aab-8200-4116-80c2-4ae09db98299
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '32'
-      langcode: en
-      name: 'Division Heads'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '20'
-      uuid: 66e4c88d-adb7-4202-b9c1-61a4e2b7d91d
-      field_email_address:
-        -
-          value: memberservices@montreal2027.ca
-      field_name:
-        -
-          value: 'Joni Brill Dashoff'
-        -
-          value: 'Catelynn Cunningham'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '78'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '32'
-      uuid: cc84d4cb-35bc-4b97-8ad5-287885a167ba
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Saul Jaffe'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '22'
-      langcode: en
-      name: 'Programme Division'
-      description__value: null
-      description__format: null
-      weight: '153'
-      parent: '0'
-      uuid: f7ed0a1d-6cbb-4d91-a217-d086fba8ea9a
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '34'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '22'
-      uuid: 0834b2aa-2791-4380-8a84-5424b4821901
-      field_email_address:
-        -
-          value: programme-info@montreal2027.ca
-      field_name:
-        -
-          value: 'Carl Fink'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '72'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '34'
-      uuid: aa322aee-250f-42dd-8e31-07e85edb47c6
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Gary Feldbaum'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '127'
-      langcode: en
-      name: Advisor
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '34'
-      uuid: 819c9b3e-f3e2-485c-a4c7-4435038ded76
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Christine Doyle'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '133'
-      langcode: en
-      name: 'Academic Programme'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '34'
-      uuid: 95e6ae3d-71ef-482e-9a9e-5956485fd816
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Doug Van Belle'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '59'
-      langcode: en
-      name: 'Filk Area Head'
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '34'
-      uuid: c6e62b4d-2196-4557-841d-7c863a215294
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Peggi Warner-Lalonde'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '60'
-      langcode: en
-      name: 'Filk Deputy Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '59'
-      uuid: 3dddc217-8f7e-4c42-b93d-26518529b669
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Ken Lalonde'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '73'
-      langcode: en
-      name: 'Guest and Liaisons Area Head'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '34'
-      uuid: 755c229a-a445-468d-8c39-51142f45d237
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Debi Chowdhury'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '61'
-      langcode: en
-      name: 'Film Area Head'
-      description__value: null
-      description__format: null
-      weight: '8'
-      parent: '34'
-      uuid: 9f63348c-49e2-426e-9bf2-4dab0db32ea6
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Daniel Kimmel'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '23'
-      langcode: en
-      name: 'Technology & Production Division'
-      description__value: null
-      description__format: null
-      weight: '154'
-      parent: '0'
-      uuid: 0dec9df5-b5f3-4a5d-b962-9e167cc8cc41
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '62'
-      langcode: en
-      name: 'Zambia Coordinator'
-      description__value: null
-      description__format: null
-      weight: '9'
-      parent: '34'
-      uuid: a6e46ad4-b26f-4c52-9ffd-1a8760732bd4
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Stephanie Lucas'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '35'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '23'
-      uuid: cda6f3ef-9479-4576-8e25-b333567f0f2c
-      field_email_address:
-        -
-          value: tech@montreal2027.ca
-      field_name:
-        -
-          value: 'Carl "zbang" Zwanzig'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '129'
-      langcode: en
-      name: Advisors
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '35'
-      uuid: ac016d99-d2c4-4273-8d82-7a506b052fbd
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Fred Bauer'
-        -
-          value: 'Keith Smith'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '63'
-      langcode: en
-      name: Discord
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '35'
-      uuid: e9669e06-508e-4f3e-a731-cf85d6e49149
-      field_email_address: {  }
-      field_name:
-        -
-          value: Hobbit
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '142'
-      langcode: en
-      name: 'Costuming and Cosplay Area Head'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '34'
-      uuid: 9530277d-816c-4d5e-ae31-297d677ac337
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Dina Flockhart '
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '64'
-      langcode: en
-      name: 'GSuite & Onboarding'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '35'
-      uuid: bfef35d8-085e-463b-ac68-5821ee903b2b
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jason Betts'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '65'
-      langcode: en
-      name: IT
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '35'
-      uuid: 27d0ca95-cbc9-401e-b369-b7b8ea327a8d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Paul Timmins'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '36'
-      langcode: en
-      name: 'Website Area Head'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '35'
-      uuid: 9fdba22b-ccdb-447d-aac7-503eea39aa8b
-      field_email_address:
-        -
-          value: webteam@montreal2027.ca
-      field_name:
-        -
-          value: 'Dave Weiner'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '40'
-      langcode: en
-      name: 'Deputy Website Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '36'
-      uuid: ca619c51-b0a4-467f-8f0b-56af9334ba11
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'John Robertson'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '130'
-      langcode: en
-      name: 'Zambia Wrangler'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '35'
-      uuid: cd327645-fa71-43ab-ad6f-8bf3430d6cc9
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Peter Olszowka'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '21'
-      langcode: en
-      name: 'Virtual Operations Division'
-      description__value: null
-      description__format: null
-      weight: '155'
-      parent: '0'
-      uuid: 7b2ba263-bf73-41db-bd15-71719deb3d65
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '33'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '21'
-      uuid: 12fe020e-b6d4-4f58-815b-9c61a2635b8a
-      field_email_address:
-        -
-          value: virtualops-dh@montreal2027.ca
-      field_name:
-        -
-          value: 'Rodger Burns'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '24'
-      langcode: en
-      name: 'WSFS Division'
-      description__value: null
-      description__format: null
-      weight: '156'
-      parent: '0'
-      uuid: 72dc1c7f-b1cd-4e4d-aab2-a4c6f8446aac
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position: {  }
-    -
-      vid: divisions
-      tid: '37'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '24'
-      uuid: 1f979afb-e6c1-4e0a-af19-b5622641547b
-      field_email_address:
-        -
-          value: wsfs@montreal2027.ca
-      field_name:
-        -
-          value: 'Todd Dashoff'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '79'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '37'
-      uuid: 64bc14e9-0540-4010-80a6-994066dc4ac9
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Linda Deneroff'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '66'
-      langcode: en
-      name: 'Business Meeting Presiding Officer'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '37'
-      uuid: 4a41960b-4aee-44ad-a5d2-319162f65769
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Kayla Allen'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '67'
-      langcode: en
-      name: 'Hugo Admin'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '37'
-      uuid: 8e53601a-08ac-411b-a93a-416b06384a09
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Warren Buff'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '68'
-      langcode: en
-      name: 'Site Selection Worldcon'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '37'
-      uuid: ce44b131-3436-4e1f-b9d7-64b416be03b7
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bob MacIntosh'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '69'
-      langcode: en
-      name: 'Software Support NomNom'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '37'
-      uuid: 3b293576-00c7-4cc6-ab10-4b774e828987
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Chris Rose'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '103'
-      langcode: en
-      name: 'Team Wiki & Useful Links'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '92'
-      uuid: 5e609bc5-4852-4567-8987-70597fbccc9c
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Christine Ragan'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '106'
-      langcode: en
-      name: 'Team Artist'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '93'
-      uuid: 3a46e2b7-4682-4c38-acaf-c9160955fc76
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Margaret Organ-Kean'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '80'
-      langcode: en
-      name: 'Chief of Teams'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '25'
-      uuid: 288f3a3c-0bc8-4c2a-a03b-4f24c4eaf112
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Maree Pavletich'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '89'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '73'
-      uuid: 7931561c-7a9e-407f-9cf1-676a022521f8
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jennifer Nagle'
-        -
-          value: 'Mikołaj Kowalewski'
-        -
-          value: 'Elspeth Kovar'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '88'
-      langcode: en
-      name: 'General Division Team'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '35'
-      uuid: 39ae2e18-a65e-4d3d-8ac5-fb2cf5bea5ca
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Matthew Barr'
-        -
-          value: 'Sarah Goodman'
-        -
-          value: 'Jason Kuehl'
-        -
-          value: 'John Maizels'
-        -
-          value: 'Scott Dorsey'
-        -
-          value: 'Andrew McMillan'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '128'
-      langcode: en
-      name: 'General Team'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '34'
-      uuid: 5f06703c-9de5-4349-8e2f-60739baa3320
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Tim Szczesuil'
-        -
-          value: 'Quoc Vinh Van'
-        -
-          value: 'Jeff Mierzejewski'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '131'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '67'
-      uuid: 1dfdc7f1-23b7-4cfd-aa17-23969fdeaadb
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jesi Lipp'
-        -
-          value: 'Chris Hensley'
-        -
-          value: 'Jo Van'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '85'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '86'
-      uuid: 7e185308-6a47-4e80-93c4-36ddda20927d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Guilliame Boudrias'
-        -
-          value: 'Magali Couzigou'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '94'
-      langcode: en
-      name: 'General Team'
-      description__value: null
-      description__format: null
-      weight: '8'
-      parent: '26'
-      uuid: 2b4f9943-4618-459a-9f3b-699fd6903932
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Skip Morris'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '87'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '48'
-      uuid: 10a011df-a464-4662-b34a-7dac66c668cd
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Romie Stott'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '112'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '49'
-      uuid: 323fa6b2-3fde-4899-82ba-642d05154a1c
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Josianne Morel'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '141'
-      langcode: en
-      name: 'Dock Manager Team'
-      description__value: null
-      description__format: null
-      weight: '5'
-      parent: '29'
-      uuid: 2d7f3aa3-c9cf-4c88-aebc-3c227c0fc5c5
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Chris Marble'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '140'
-      langcode: en
-      name: 'Fan Tables Team'
-      description__value: null
-      description__format: null
-      weight: '6'
-      parent: '29'
-      uuid: d90ac421-ced9-42cd-9730-e14cab7bebda
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Debra Yeung'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '113'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '30'
-      uuid: deac1a15-8825-4682-bb62-1662e9a78747
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Matt C.'
-        -
-          value: 'David Ennis'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '114'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '54'
-      uuid: a1a6f7f8-c56f-43eb-8bf0-01f5343a386c
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Melanie Davis'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '120'
-      langcode: en
-      name: 'Deputy Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '119'
-      uuid: a6288e29-5838-46f9-901f-12031d041527
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Kristina Forsyth'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '145'
-      langcode: en
-      name: 'Deputy Art Show Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '50'
-      uuid: ec7a859f-81ee-4ee7-8ca4-4fbef279effd
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Nicholas Shectman'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '146'
-      langcode: en
-      name: 'Deputy Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '26'
-      uuid: ee54aa05-95c6-45a5-9692-b8fbf665700d
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Christian Maltais'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '151'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '50'
-      uuid: 5a9c7f21-dc19-448f-94de-800581c5cd81
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Andrea Senchy'
-        -
-          value: 'Ann Schottler'
-        -
-          value: 'Elizabeth Klein-Lebbink'
-        -
-          value: 'Madeleine Pelletier'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '147'
-      langcode: en
-      name: 'Deputy Presiding Officer'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '66'
-      uuid: 2feed21f-c27c-49f7-94a7-dc3fcdae1ade
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Donald Eastlake III'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '150'
-      langcode: en
-      name: Secretary
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '66'
-      uuid: a1377744-3b27-4b6b-bf9d-0bd2badf7847
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Martin Pyne'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '158'
-      langcode: en
-      name: Admin
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '35'
-      uuid: ecfc9df0-3261-419a-b382-c7f49d13cefc
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '163'
-      langcode: en
-      name: Concerts
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '28'
-      uuid: 39db04df-ca21-4f41-8daa-95758fe8c0a4
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Vince Docherty'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '167'
-      langcode: en
-      name: 'Web Developer'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '36'
-      uuid: bba1a9c4-5c55-4bc5-a500-a74feee5df63
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Doug Needham'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '166'
-      langcode: en
-      name: 'In Memoriam Collator'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '93'
-      uuid: 5ccdd681-df02-49ac-8a23-2b9e331850ba
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Steven Silver'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '156'
-      langcode: en
-      name: 'Operations Signage Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '27'
-      uuid: 20ac3ff1-218b-43e2-b8d4-3de88a82d7ab
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Anouk Arnal'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '148'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '81'
-      uuid: 3c1ab4fa-5aeb-4cfb-8649-f28b0dd259f3
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Elvi Dalgaard'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '162'
-      langcode: en
-      name: 'Creative Manager'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '163'
-      uuid: fb403519-c357-49ef-a14a-d5a05c6d1f5e
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Sara Felix'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '160'
-      langcode: en
-      name: 'Hugo Ceremony'
-      description__value: null
-      description__format: null
-      weight: '7'
-      parent: '28'
-      uuid: c5df5d6a-25af-4255-bc4e-4adbb642073b
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Alan Bond'
-        -
-          value: 'Michelle Morrell'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '161'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '160'
-      uuid: 7d5bba9c-53ab-4c05-bc73-693f4b2f3427
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Constanze Hofmann'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '164'
-      langcode: en
-      name: 'Opening Ceremony'
-      description__value: null
-      description__format: null
-      weight: '9'
-      parent: '28'
-      uuid: 74083905-1725-442e-b99b-d9a8f0c63654
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Sheril Bogenrief'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '157'
-      langcode: en
-      name: 'Catering Area Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '30'
-      uuid: 8951d48d-029e-4d3f-b038-d034ff06c0e6
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Gay Ellen Dennett'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '149'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '118'
-      uuid: 30252525-6549-4b08-8488-f6f62dbe9af7
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Cally Specht'
-        -
-          value: 'Jenny Kraus'
-        -
-          value: 'Jesper Stage'
-        -
-          value: 'Kate Wood'
-        -
-          value: 'Polly Peterson'
-        -
-          value: 'Yvonne Penney'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '170'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '123'
-      uuid: 1128e208-f5f3-4051-9003-9b63e0b4cc0f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Linda Ross-Mansfield'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '169'
-      langcode: en
-      name: 'At-Con Info Desk'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '124'
-      uuid: baa41865-59ec-4fd7-a46e-0cb070f1bf26
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '1'
-    -
-      vid: divisions
-      tid: '168'
-      langcode: en
-      name: 'Pre-Con Info Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '124'
-      uuid: a4d17a1a-c5e0-4ddf-ba18-16984bbf39b2
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Terry Neill'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '171'
-      langcode: en
-      name: 'Language Services'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '32'
-      uuid: 427f3826-630e-4f21-8313-cf64735c6ba9
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Meredith Peruzzi'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '154'
-      langcode: en
-      name: 'Listeners Area Head'
-      description__value: null
-      description__format: null
-      weight: '4'
-      parent: '32'
-      uuid: fced1b89-b258-409a-a32c-945bd732a290
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Stacy Masiello'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '155'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '154'
-      uuid: 33a0f3f4-4771-44a6-bb29-622071f44c5e
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Pam Burr'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '159'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '158'
-      uuid: 1eba2e40-1aa2-4d65-9e31-ea158c12bf6f
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Barbara Nelson'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '153'
-      langcode: en
-      name: 'Guest of Honour Manager'
-      description__value: null
-      description__format: null
-      weight: '3'
-      parent: '25'
-      uuid: 4250a0d7-bf01-45f4-9f35-960b1e6ad7bc
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Maree Pavletich'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '165'
-      langcode: en
-      name: Team
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '153'
-      uuid: 1159bf72-32cb-4ffd-8193-4e4ed340a0c1
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Shirley Meier'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '172'
-      langcode: en
-      name: 'Webteam Content Entry'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '36'
-      uuid: 52530c49-48fc-4bd4-84ed-8576b9036c55
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Caroline Mullan'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '173'
-      langcode: en
-      name: Graphics
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '48'
-      uuid: da40db18-179a-4a58-8ed4-6e447a3fcecc
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bill Child'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '174'
-      langcode: en
-      name: Wordsmith
-      description__value: null
-      description__format: null
-      weight: '11'
-      parent: '28'
-      uuid: 08497d06-8693-4e19-86ba-4a218a93c19e
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Rebecca Child'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '175'
-      langcode: en
-      name: 'First Night'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '28'
-      uuid: af1b1043-d986-4cd0-8bdd-29207e9aa0e4
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Randy Smith'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '176'
-      langcode: en
-      name: 'Scheduling Team'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '22'
-      uuid: c80a264f-23ca-4368-ace5-ae0964b39561
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Perianne Lurey'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '124'
-      langcode: en
-      name: 'Info Desk'
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '32'
-      uuid: d4f76653-96c4-46a2-9858-57b769cfcd18
-      field_email_address: {  }
-      field_name: {  }
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '123'
-      langcode: en
-      name: 'Accessibility Area Head'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '32'
-      uuid: 664b4cea-f030-4c9d-ad5d-2a884ec23c15
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Zac Wood'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '177'
-      langcode: en
-      name: 'Special Projects'
-      description__value: null
-      description__format: null
-      weight: '10'
-      parent: '28'
-      uuid: 8db312e1-6fa0-4d10-93eb-6c9ec25a9e43
-      field_email_address: {  }
-      field_name:
-        -
-          value: ' Colin Harris'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '178'
-      langcode: en
-      name: 'Division Admin'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '28'
-      uuid: cb0fbe61-74e9-46d3-ab49-669a40677903
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Virginia Knight'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '179'
-      langcode: en
-      name: Admin
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '34'
-      uuid: f3cc5e59-3f4e-46a4-bd9f-82be16a66565
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Sandra Manning'
-      field_vacant_position:
-        -
-          value: '0'
-    -
-      vid: divisions
-      tid: '180'
-      langcode: en
-      name: 'Book Swap Area'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '29'
-      uuid: 6fef5587-74bd-483a-bf5b-5d23fda0316e
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Jeanne Mealy'
-      field_vacant_position:
-        -
-          value: '0'
-  guest_type:
-    -
-      vid: guest_type
-      tid: '3'
-      langcode: en
-      name: 'Guest of Honour'
-      description__value: '<h2>Montréal 2027 Worldcon is excited to announce the following Guests of Honour will be joining us.</h2>'
-      description__format: basic_html
-      weight: '0'
-      parent: '0'
-      uuid: 7e09a191-7074-4dcd-af2e-d2aca4f16f03
-      field_plural:
-        -
-          value: 'Guests of Honour'
-    -
-      vid: guest_type
-      tid: '152'
-      langcode: en
-      name: Toastmaster
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: e746ac79-3533-4471-aa1e-99d7f7664acd
-      field_plural:
-        -
-          value: Toastmasters
-    -
-      vid: guest_type
-      tid: '1'
-      langcode: en
-      name: Artist
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '0'
-      uuid: 9c339bbc-b1bd-4d3d-9f8f-fc6de44d7a13
-      field_plural:
-        -
-          value: Artists
-    -
-      vid: guest_type
-      tid: '2'
-      langcode: en
-      name: Author
-      description__value: null
-      description__format: null
-      weight: '2'
-      parent: '0'
-      uuid: 30fe333c-9f33-479c-8a5f-e0e528859fc0
-      field_plural:
-        -
-          value: Authors
-  in_memoriam:
-    -
-      vid: in_memoriam
-      tid: '190'
-      langcode: en
-      name: Academic
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: c147a51c-671b-4a1d-abe8-24bbbec1bff2
-    -
-      vid: in_memoriam
-      tid: '194'
-      langcode: en
-      name: Agent
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: c19839b3-0f3f-49df-bb89-2583e5011654
-    -
-      vid: in_memoriam
-      tid: '188'
-      langcode: en
-      name: Artist
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: cc4eb6fa-5a59-4468-9477-a0204896180a
-    -
-      vid: in_memoriam
-      tid: '183'
-      langcode: en
-      name: Astronaut
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: da0740f6-50ef-4f47-9f4c-c40841ea54b9
-    -
-      vid: in_memoriam
-      tid: '181'
-      langcode: en
-      name: Author
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: af41099e-aeae-4a06-bd0d-a5e0660ce758
-    -
-      vid: in_memoriam
-      tid: '191'
-      langcode: en
-      name: Bookseller
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 5e640514-05b3-4b11-86ee-c5c5b0d5d506
-    -
-      vid: in_memoriam
-      tid: '184'
-      langcode: en
-      name: Collector
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 2a12dea0-2273-4ab1-bde6-96b80dc57244
-    -
-      vid: in_memoriam
-      tid: '186'
-      langcode: en
-      name: 'Comic Artist'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 619df9b9-5f14-4015-a1f1-3584b01b2986
-    -
-      vid: in_memoriam
-      tid: '198'
-      langcode: en
-      name: 'Comic Author'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 23809a44-cfb4-4e7c-8a2c-a574e82ecb4c
-    -
-      vid: in_memoriam
-      tid: '196'
-      langcode: en
-      name: 'Comic Creator'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: bc5ba925-1dee-49d2-8f5a-bcc942dc83e5
-    -
-      vid: in_memoriam
-      tid: '201'
-      langcode: en
-      name: Composer
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 9463df21-a105-4e48-b4c5-4a7044c2eba4
-    -
-      vid: in_memoriam
-      tid: '189'
-      langcode: en
-      name: Editor
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 39715520-5c44-4f67-8497-0d8410914e91
-    -
-      vid: in_memoriam
-      tid: '185'
-      langcode: en
-      name: Fan
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: bba4dc8b-39a7-48d0-b445-adc1de5dfb44
-    -
-      vid: in_memoriam
-      tid: '182'
-      langcode: en
-      name: Filker
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: ad3fe053-6acb-4484-8b5a-1e1467800c67
-    -
-      vid: in_memoriam
-      tid: '187'
-      langcode: en
-      name: 'Game Designer'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 5b6d7596-c8d0-41b4-a958-fb0a4944b654
-    -
-      vid: in_memoriam
-      tid: '199'
-      langcode: en
-      name: Poet
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 986c1ad6-d1ab-4053-afc6-679432e2e645
-    -
-      vid: in_memoriam
-      tid: '200'
-      langcode: en
-      name: Publisher
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 24f9bf8d-2f4b-48c3-9e0f-7f8afb684e47
-    -
-      vid: in_memoriam
-      tid: '192'
-      langcode: en
-      name: Reviewer
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: e540bcb0-fe1d-49b8-8d75-c8459aed31ee
-    -
-      vid: in_memoriam
-      tid: '197'
-      langcode: en
-      name: Scientist
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 1e6221b1-3967-45dc-86f2-34a3fcd98c18
-    -
-      vid: in_memoriam
-      tid: '195'
-      langcode: en
-      name: 'Special Effects Director'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: c034dbea-3e65-478c-a418-c9427dcd6732
-    -
-      vid: in_memoriam
-      tid: '193'
-      langcode: en
-      name: Translator
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '0'
-      uuid: 8f1c0427-c90b-4f0e-9267-fc052211f13f
-  tags:
-    -
-      vid: tags
-      tid: '12'
-      langcode: en
-      name: Policy
-      description__value: '<p>A policy of the Montréal 2027 Worldcon</p>'
-      description__format: basic_html
-      weight: '0'
-      parent: '0'
-      uuid: 7ba23501-e17f-4459-959f-110d4e20512e
+menus:
+  -
+    menu_name: main
+    title: About
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -48
+    langcode: en
+    uuid: 2898ad03-37cd-4a74-bffe-f7d76342d896
+    options: {  }
+  -
+    menu_name: main
+    title: Policies
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -46
+    langcode: en
+    uuid: 83039fa9-1e1c-48a6-87c7-6062e380e0eb
+    options: {  }
+  -
+    menu_name: main
+    title: 'Code of Conduct'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/12'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 44fc0c5f-77be-4c94-a383-053b9ac89607
+    options: {  }
+  -
+    menu_name: main
+    title: 'Communications Policy'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/16'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: d93687d1-da4d-4c83-b20c-96563b0e6b72
+    options: {  }
+  -
+    menu_name: main
+    title: 'Data Privacy Policy'
+    parent: 'menu_link_content:83039fa9-1e1c-48a6-87c7-6062e380e0eb'
+    uri: 'entity:node/13'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 03f10e9b-515d-4cd9-9f19-167136cf5b1c
+    options: {  }
+  -
+    menu_name: main
+    title: Volunteer
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'entity:node/14'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: a0cd243b-1364-48c5-b8c2-166163fb4a76
+    options: {  }
+  -
+    menu_name: main
+    title: Facilities
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 1ac71e33-7787-432f-87d8-b6a5e2143e9f
+    options: {  }
+  -
+    menu_name: main
+    title: 'Montréal Convention Centre'
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/19'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -47
+    langcode: en
+    uuid: bc131aba-fb34-477e-854a-bb2193f11796
+    options: {  }
+  -
+    menu_name: main
+    title: Montréal
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/10'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -50
+    langcode: en
+    uuid: cc90509c-37d7-49d1-b15e-ba172d23e741
+    options: {  }
+  -
+    menu_name: main
+    title: 'Getting To Montréal'
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/8'
+    link_title: ''
+    description: null
+    enabled: false
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 170f858f-bee4-4a33-82c9-4cc783828b05
+    options: {  }
+  -
+    menu_name: main
+    title: Home
+    parent: null
+    uri: 'internal:/'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -50
+    langcode: en
+    uuid: 48b4b5c9-eee5-458b-9fd0-c0d967d7228f
+    options: {  }
+  -
+    menu_name: main
+    title: Hotels
+    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    uri: 'entity:node/21'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -48
+    langcode: en
+    uuid: e32e1ca2-64cf-4afa-bffc-91326f6df577
+    options: {  }
+  -
+    menu_name: main
+    title: 'Committee & Team'
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'internal:/team'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 9d39147e-9760-4361-9758-c9f8b6249e43
+    options: {  }
+  -
+    menu_name: null
+    title: Membership
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: null
+    weight: null
+    langcode: en
+    uuid: 3ef1dc62-f74c-4b10-8155-516eaec645a0
+    options: {  }
+  -
+    menu_name: null
+    title: 'Membership Rates'
+    parent: null
+    uri: 'entity:node/18'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: null
+    weight: null
+    langcode: en
+    uuid: 5618e058-d5ea-4fad-ada5-2e685f469985
+    options: {  }
+  -
+    menu_name: main
+    title: Programming
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -42
+    langcode: en
+    uuid: 97762b64-3290-4848-9f1f-d7c2f0a6e13e
+    options: {  }
+  -
+    menu_name: main
+    title: 'Participant Questionnaire'
+    parent: 'menu_link_content:97762b64-3290-4848-9f1f-d7c2f0a6e13e'
+    uri: 'internal:/programming_questionnaire'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: df1b98c7-1139-4e7d-98df-4a4f2b4cab4c
+    options: {  }
+  -
+    menu_name: main
+    title: Scholarships
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'internal:/scholarships'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 280f2bf5-d38a-46cd-9028-ea5368bb82f9
+    options: {  }
+  -
+    menu_name: main
+    title: Membership
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -43
+    langcode: en
+    uuid: 6a7a8397-874e-4acc-9bea-20c9cb0bd0b1
+    options: {  }
+  -
+    menu_name: main
+    title: Information
+    parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
+    uri: 'entity:node/18'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: ba65ff06-1554-4af3-8c30-26f0bbdd8db7
+    options: {  }
+  -
+    menu_name: main
+    title: Registration
+    parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
+    uri: 'https://reg.montreal2027.ca'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: d9cf5820-c0bd-4821-b1d8-1a6c7c575316
+    options: {  }
+  -
+    menu_name: main
+    title: WSFS
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -41
+    langcode: en
+    uuid: b9cdad1e-428f-4ef6-989f-c6d3fbe43e15
+    options: {  }
+  -
+    menu_name: main
+    title: FAQ
+    parent: 'menu_link_content:b9cdad1e-428f-4ef6-989f-c6d3fbe43e15'
+    uri: 'entity:node/27'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 2f64d2de-20b8-44ff-812d-914d8ddde1e9
+    options: {  }
+  -
+    menu_name: main
+    title: 'Meeting Announcement'
+    parent: 'menu_link_content:b9cdad1e-428f-4ef6-989f-c6d3fbe43e15'
+    uri: 'entity:node/28'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: a9d23ce7-3fcb-4eaa-99bb-d37d4e4437f1
+    options: {  }
+  -
+    menu_name: main
+    title: 'Ad Rates'
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'entity:node/30'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: f919f043-df87-4ee7-a00a-a677b1e8eabb
+    options: {  }
+  -
+    menu_name: main
+    title: Exhibits
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -44
+    langcode: en
+    uuid: b8e6d90d-c25b-484a-8f27-27737af7804c
+    options: {  }
+  -
+    menu_name: main
+    title: "Dealers' FAQ"
+    parent: 'menu_link_content:b8e6d90d-c25b-484a-8f27-27737af7804c'
+    uri: 'entity:node/31'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: c8102bfa-255e-4407-a234-ceeadcbe9c8e
+    options: {  }
+  -
+    menu_name: main
+    title: Events
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -45
+    langcode: en
+    uuid: 9a86b23a-b1ee-49b4-8e05-bb4d89e255fc
+    options: {  }
+  -
+    menu_name: main
+    title: 'List of Events'
+    parent: 'menu_link_content:9a86b23a-b1ee-49b4-8e05-bb4d89e255fc'
+    uri: 'entity:node/32'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 05069bbf-f194-4b73-85d1-fbb33bdcd26b
+    options: {  }
+  -
+    menu_name: main
+    title: 'Team Only'
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -40
+    langcode: en
+    uuid: 50757cf7-73ad-4794-9edd-a971db3bbfba
+    options: {  }
+  -
+    menu_name: main
+    title: Resources
+    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
+    uri: 'entity:node/33'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: c5223633-e8be-4597-b8ad-0ce1b85c2f6d
+    options: {  }
+  -
+    menu_name: main
+    title: Register
+    parent: null
+    uri: 'https://reg.montreal2027.ca'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 16d364c5-0e23-4986-ae44-690b497b40b9
+    options:
+      attributes:
+        target: _blank
+  -
+    menu_name: main
+    title: Logout
+    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
+    uri: 'internal:/user/logout'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: f738f4e3-c315-4fb3-9691-7bea772e3ef9
+    options: {  }

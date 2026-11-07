@@ -1,0 +1,6 @@
+view any unpublished in_memoriam content:
+  title: 'In Memoriam: View any unpublished content'
+  description: 'View unpublished In Memoriam entries regardless of author, including in content listings.'
+publish in_memoriam content:
+  title: 'In Memoriam: Change published status'
+  description: 'Publish or unpublish In Memoriam entries that the user can edit.'

@@ -33,6 +33,7 @@ settings:
       - blockQuote
       - drupalMedia
       - insertTable
+      - detail
       - horizontalLine
       - '|'
       - heading
@@ -185,6 +186,7 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<a hreflang target>'
+        - '<details name>'
     ckeditor_media_resize_mediaResize:
       apply_image_styles: true
       image_styles:

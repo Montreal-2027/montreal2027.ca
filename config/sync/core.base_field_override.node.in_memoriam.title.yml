@@ -8,7 +8,7 @@ id: node.in_memoriam.title
 field_name: title
 entity_type: node
 bundle: in_memoriam
-label: 'Name of the deceased'
+label: 'Last name of the deceased'
 description: ''
 required: true
 translatable: true

@@ -1,35 +1,34 @@
-ul:not(.sf-accordion) {
-    &.sf-menu {
-        &.sf-style-default {
-             & a,
-             & a:visited,
-             span.nolink {
-                padding: .75rem 2rem .75rem 0;
-             }
-            & li:not(.sf-depth-2),
-            &.sf-navbar {
-                background: transparent;
-            }
 
-            & li:hover:not(.sf-depth-2),
-            & a:hover:not(.sf-depth-2),
-            & span.nolink:hover:not(.sf-depth-2) {
-                background: transparent
-            }
 
-            & .sf-depth-2 {
-                & a {
-                    background: #cfdeff;
-                    padding: .75rem 1rem .75rem .75rem;
-                }
-            }
-        }
+#superfish-main-toggle {
+    background: transparent;
+}
+
+#superfish-main-accordion {
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    max-width: 100vw;
+    max-width: 100dvw;
+    width: max-content;
+
+    li,
+    ul {
+        float: none;
     }
 }
 
 div {
     &.sf-accordion-toggle {
         &.sf-style-default {
+
+            & > a::after {
+                content: "\f0c9"; /* fa-bars unicode */
+                font-family: "Font Awesome 6 Free";
+                font-size: 1em;
+                font-weight: 900;
+                left: 0.5rem;
+                top: 1.2rem;
+            }
             & a {
                 background: transparent;
                 color: var(--color-white);
@@ -40,19 +39,35 @@ div {
                     display: none;
                 }
             }
-
-            & > a::after {    
-                content: "\f0c9"; /* fa-bars unicode */
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
-                font-size: 1em;
-                top: 1.2rem;
-                left: 0.5rem;
-            }
         }
     }
 }
 
-#superfish-main-toggle {
-    background: transparent;
+ul:not(.sf-accordion) {
+    &.sf-menu {
+        &.sf-style-default {
+
+            & .sf-depth-2 {
+                & a {
+                    background: #cfdeff;
+                    padding: .75rem 1rem .75rem .75rem;
+                }
+            }
+             & a,
+             & a:visited,
+             span.nolink {
+                padding: .75rem 2rem .75rem 0;
+             }
+
+            & li:hover:not(.sf-depth-2),
+            & a:hover:not(.sf-depth-2),
+            & span.nolink:hover:not(.sf-depth-2) {
+                background: transparent
+            }
+            & li:not(.sf-depth-2),
+            &.sf-navbar {
+                background: transparent;
+            }
+        }
+    }
 }
