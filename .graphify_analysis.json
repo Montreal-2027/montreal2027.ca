@@ -458,33 +458,6 @@
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_9_type"
     ],
     "11": [
-      "checklists_change_review",
-      "checklists_change_review_change_and_review_checklist",
-      "checklists_pull_requests",
-      "checklists_pull_requests_pull_request_checklist",
-      "checklists_releases",
-      "checklists_releases_content_hotfix_release",
-      "checklists_releases_hotfix_release",
-      "checklists_releases_release_checklists",
-      "checklists_releases_scheduled_release",
-      "development",
-      "development_branching_strategy",
-      "development_development",
-      "development_development_workflow",
-      "development_drupal_configuration_and_local_data",
-      "development_feature_work",
-      "development_hotfixes",
-      "development_pull_request_procedure",
-      "development_release_overview",
-      "development_workflow",
-      "sops",
-      "sops_change_control",
-      "sops_content_revisions_including_translations",
-      "sops_development",
-      "sops_standard_operating_procedures",
-      "sops_table_of_contents"
-    ],
-    "12": [
       "docker_compose_args_php_version",
       "docker_compose_args_web_internal_port",
       "docker_compose_build_args",
@@ -509,7 +482,7 @@
       "docker_compose_web_restart",
       "docker_compose_web_volumes"
     ],
-    "13": [
+    "12": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_component_css_language_toggle_css",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_component_css_staff_contact_modal_css",
@@ -532,7 +505,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_staff_jump_menu_js",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_libraries_staff_jump_menu_version"
     ],
-    "14": [
+    "13": [
       "ref_parcel_watcher",
       "ref_sass",
       "web_themes_custom_montreal2027_package",
@@ -553,7 +526,7 @@
       "web_themes_custom_montreal2027_package_scripts_watch_css",
       "web_themes_custom_montreal2027_package_version"
     ],
-    "15": [
+    "14": [
       "html",
       "url",
       "web_themes_custom_montreal2027_montreal2027",
@@ -573,7 +546,7 @@
       "web_themes_custom_montreal2027_montreal2027_montreal2027_preprocess_superfish_menu_items",
       "web_themes_custom_montreal2027_montreal2027_theme_formstateinterface"
     ],
-    "16": [
+    "15": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_defaults_controller",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_defaults_form",
@@ -593,7 +566,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_montreal2027_tools_staff_requirements",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_routing_requirements_permission"
     ],
-    "17": [
+    "16": [
       "web_sites_default_development_services",
       "web_sites_default_development_services_cache_backend_null_class",
       "web_sites_default_development_services_config_schema_checker_arguments",
@@ -613,23 +586,37 @@
       "web_sites_default_development_services_twig_config_cache",
       "web_sites_default_development_services_twig_config_debug"
     ],
-    "18": [
+    "17": [
+      "checklists_checklists",
+      "checklists_checklists_available_checklists",
+      "checklists_pre_commit",
+      "checklists_pre_commit_pre_commit_checklist",
+      "checklists_pull_requests",
+      "checklists_pull_requests_pull_request_checklist",
+      "checklists_releases",
+      "content",
       "contributing",
-      "contributing_contributing_to_the_montréal_2027_website_project",
-      "contributing_further_reading",
+      "development",
+      "intake",
       "project_guidelines",
-      "project_guidelines_before_you_contribute",
-      "project_guidelines_further_reading",
-      "project_guidelines_introduction",
-      "project_guidelines_project_at_a_glance",
-      "project_guidelines_project_guidelines",
-      "project_guidelines_style_template_or_code_fixes",
-      "project_guidelines_technical_documentation",
-      "project_guidelines_what_is_a_repository_i",
-      "technical",
-      "technical_repository_structure",
-      "technical_stack",
-      "technical_technical_documentation"
+      "sops",
+      "structure",
+      "technical"
+    ],
+    "18": [
+      "content_content_entry",
+      "content_content_intake_flow",
+      "content_contributing",
+      "content_introduction",
+      "content_managing_content_requests",
+      "content_montréal_2027_content_entry_and_translation_standard_operating_procedures_omit_in_toc",
+      "content_table_of_contents_omit_in_toc",
+      "content_team_structure",
+      "content_ticket_labels",
+      "content_ticket_statuses",
+      "content_tickets",
+      "content_workflow",
+      "content_workspaces"
     ],
     "19": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_count",
@@ -700,6 +687,30 @@
       "web_modules_custom_montreal2027_tools_drush_services_tags_name"
     ],
     "24": [
+      "development_branching_strategy",
+      "development_development_omit_from_toc",
+      "development_development_workflow",
+      "development_drupal_configuration_and_local_data",
+      "development_feature_work",
+      "development_hotfixes",
+      "development_pull_request_procedure",
+      "development_release_overview",
+      "development_table_of_contents_omit_from_toc",
+      "development_workflow"
+    ],
+    "25": [
+      "issues",
+      "issues_content_project",
+      "issues_github_issues_projects_omit_in_toc",
+      "issues_introduction",
+      "issues_issue_labels",
+      "issues_issue_statuses",
+      "issues_issue_types",
+      "issues_table_of_contents_omit_in_toc",
+      "issues_tech_project",
+      "issues_translation_project"
+    ],
+    "26": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_contact_link_text_type",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_failure_message_label",
@@ -711,7 +722,7 @@
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_subject_prefix_type"
     ],
-    "25": [
+    "27": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_mapping",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_empty_position_link_type",
@@ -723,7 +734,7 @@
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_uri_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_uri_type"
     ],
-    "26": [
+    "28": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_services",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_inmemoriamaccesshooks_class",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_services_drupal_montreal2027_tools_hook_superfishhooks_arguments",
@@ -735,7 +746,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_drupal_montreal2027_tools_hook_superfishhooks",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_services_services_montreal2027_tools_workspace_menu_tree_manipulator"
     ],
-    "27": [
+    "29": [
       "entityforminterface",
       "translatablemarkup",
       "web_modules_custom_montreal2027_tools_montreal2027_tools",
@@ -746,7 +757,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_mail",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_montreal2027_tools_theme"
     ],
-    "28": [
+    "30": [
       "drupal_core_form_configformbase",
       "drupal_core_form_formstateinterface",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform",
@@ -756,7 +767,7 @@
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_getformid",
       "web_modules_custom_montreal2027_tools_src_form_montrealconfigurationform_montrealconfigurationform_submitform"
     ],
-    "29": [
+    "31": [
       "mcp",
       "mcp_command_graphify_mcp",
       "mcp_command_npx",
@@ -766,7 +777,36 @@
       "mcp_mcp_server_obscura",
       "mcp_package_edictum_captatum"
     ],
-    "30": [
+    "32": [
+      "project_guidelines_before_you_contribute",
+      "project_guidelines_further_reading",
+      "project_guidelines_introduction",
+      "project_guidelines_project_at_a_glance",
+      "project_guidelines_project_guidelines_omit_in_toc",
+      "project_guidelines_standard_operating_procedures",
+      "project_guidelines_table_of_contents_omit_in_toc",
+      "project_guidelines_technical_documentation"
+    ],
+    "33": [
+      "sops_change_control",
+      "sops_common_tasks",
+      "sops_content_entry",
+      "sops_github_issues_projects",
+      "sops_local_setup",
+      "sops_software_development",
+      "sops_standard_operating_procedures_omit_in_toc",
+      "sops_table_of_contents_omit_in_toc"
+    ],
+    "34": [
+      "checklists_releases_content_hotfix_release",
+      "checklists_releases_deploy_to_production",
+      "checklists_releases_prepare_the_release",
+      "checklists_releases_release_checklists_omit_from_toc",
+      "checklists_releases_scheduled_release",
+      "checklists_releases_table_of_contents_omit_from_toc",
+      "checklists_releases_test_the_release"
+    ],
+    "35": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_core_version_requirement",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_dependencies",
@@ -775,7 +815,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_package",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_type"
     ],
-    "31": [
+    "36": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_description",
@@ -784,7 +824,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_title",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_weight"
     ],
-    "32": [
+    "37": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content_description",
@@ -793,199 +833,218 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_description",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_title"
     ],
-    "33": [
+    "38": [
+      "checklists_releases_backport_changes_to_develop",
+      "checklists_releases_clean_up_after_merge",
+      "checklists_releases_deploy_to_production_84",
+      "checklists_releases_non_content_hotfix_release",
+      "checklists_releases_prepare_the_release_65",
+      "checklists_releases_test_the_release_74"
+    ],
+    "39": [
+      "technical_further_reading",
+      "technical_montréal_2027_technical_documentation_omit_in_toc",
+      "technical_repository_structure",
+      "technical_table_of_contents_omit_in_toc",
+      "technical_technology_stack"
+    ],
+    "40": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_base_route_name",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_names",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_title"
     ],
-    "34": [
+    "41": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_type"
     ],
-    "35": [
+    "42": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_type"
     ],
-    "36": [
+    "43": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_type"
     ],
-    "37": [
+    "44": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_type"
     ],
-    "38": [
+    "45": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_type"
     ],
-    "39": [
+    "46": [
       "drupal_node_nodeaccessrebuild",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update_montreal2027_tools_post_update_in_memoriam_access"
     ],
-    "40": [
+    "47": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_type",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_heading_prefix"
     ],
-    "41": [
+    "48": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_title",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_type"
     ],
-    "42": [
+    "49": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_success_message",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_type"
     ],
-    "43": [
+    "50": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_type",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_include_fontawesome"
     ],
-    "44": [
+    "51": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_type"
     ],
-    "45": [
+    "52": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_type"
     ],
-    "46": [
+    "53": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_type"
     ],
-    "47": [
+    "54": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_type"
     ],
-    "48": [
+    "55": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_type"
     ],
-    "49": [
+    "56": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_6",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_type"
     ],
-    "50": [
+    "57": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_type"
     ],
-    "51": [
+    "58": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_type"
     ],
-    "52": [
+    "59": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_type"
     ],
-    "53": [
+    "60": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_type"
     ],
-    "54": [
+    "61": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_type"
     ],
-    "55": [
+    "62": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_type"
     ],
-    "56": [
+    "63": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_type"
     ],
-    "57": [
+    "64": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_type"
     ],
-    "58": [
+    "65": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_type"
     ],
-    "59": [
+    "66": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_type"
     ],
-    "60": [
+    "67": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_type"
     ],
-    "61": [
+    "68": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slideshow_display",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_type"
     ],
-    "62": [
+    "69": [
+      "contributing_contributing_to_the_montréal_2027_website_project",
+      "contributing_further_reading"
+    ],
+    "70": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "63": [
+    "71": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "64": [
+    "72": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "65": [
+    "73": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "66": [
+    "74": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "67": [
+    "75": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "68": [
+    "76": [
       "symfony_component_dotenv_dotenv",
       "web_sites_default_settings"
     ],
-    "69": [
+    "77": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "70": [
+    "78": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "71": [
+    "79": [
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu_attach"
     ],
-    "72": [
+    "80": [
       "github_issue_template_new_content"
     ]
   },
@@ -1001,14 +1060,14 @@
     "8": 0.06896551724137931,
     "9": 0.07692307692307693,
     "10": 0.09230769230769231,
-    "11": 0.08,
-    "12": 0.08695652173913043,
-    "13": 0.1,
-    "14": 0.11695906432748537,
-    "15": 0.1503267973856209,
-    "16": 0.13725490196078433,
-    "17": 0.1111111111111111,
-    "18": 0.125,
+    "11": 0.08695652173913043,
+    "12": 0.1,
+    "13": 0.11695906432748537,
+    "14": 0.1503267973856209,
+    "15": 0.13725490196078433,
+    "16": 0.1111111111111111,
+    "17": 0.19047619047619047,
+    "18": 0.15384615384615385,
     "19": 0.15384615384615385,
     "20": 0.16666666666666666,
     "21": 0.18181818181818182,
@@ -1017,25 +1076,25 @@
     "24": 0.2,
     "25": 0.2,
     "26": 0.2,
-    "27": 0.3055555555555556,
-    "28": 0.35714285714285715,
-    "29": 0.25,
-    "30": 0.2857142857142857,
-    "31": 0.2857142857142857,
-    "32": 0.2857142857142857,
-    "33": 0.4,
-    "34": 0.5,
-    "35": 0.5,
-    "36": 0.5,
-    "37": 0.5,
-    "38": 0.5,
-    "39": 0.6666666666666666,
-    "40": 0.6666666666666666,
-    "41": 0.6666666666666666,
-    "42": 0.6666666666666666,
-    "43": 0.6666666666666666,
-    "44": 0.6666666666666666,
-    "45": 0.6666666666666666,
+    "27": 0.2,
+    "28": 0.2,
+    "29": 0.3055555555555556,
+    "30": 0.35714285714285715,
+    "31": 0.25,
+    "32": 0.25,
+    "33": 0.25,
+    "34": 0.2857142857142857,
+    "35": 0.2857142857142857,
+    "36": 0.2857142857142857,
+    "37": 0.2857142857142857,
+    "38": 0.3333333333333333,
+    "39": 0.4,
+    "40": 0.4,
+    "41": 0.5,
+    "42": 0.5,
+    "43": 0.5,
+    "44": 0.5,
+    "45": 0.5,
     "46": 0.6666666666666666,
     "47": 0.6666666666666666,
     "48": 0.6666666666666666,
@@ -1052,17 +1111,25 @@
     "59": 0.6666666666666666,
     "60": 0.6666666666666666,
     "61": 0.6666666666666666,
-    "62": 1.0,
-    "63": 1.0,
-    "64": 1.0,
-    "65": 1.0,
-    "66": 1.0,
-    "67": 1.0,
-    "68": 1.0,
+    "62": 0.6666666666666666,
+    "63": 0.6666666666666666,
+    "64": 0.6666666666666666,
+    "65": 0.6666666666666666,
+    "66": 0.6666666666666666,
+    "67": 0.6666666666666666,
+    "68": 0.6666666666666666,
     "69": 1.0,
     "70": 1.0,
     "71": 1.0,
-    "72": 1.0
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0
   },
   "gods": [
     {
@@ -1133,7 +1200,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -1148,7 +1215,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `slide_image_4`, `slide_image_5`, `slide_image_7`, `slide_image_8`, `include_fontawesome`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?",
-      "why": "High betweenness centrality (0.017) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.016) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
@@ -1158,7 +1225,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `extra` connect `installer-paths` to `composer.json`?",
-      "why": "High betweenness centrality (0.008) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.007) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
