@@ -1,6 +1,11 @@
-# Technical Documentation
+# Montréal 2027 Technical Documentation <!-- omit in toc -->
 
-## Stack
+## Table of Contents <!-- omit in toc -->
+- [Technology Stack](#technology-stack)
+- [Repository Structure](#repository-structure)
+- [Further reading](#further-reading)
+
+## Technology Stack
 
 | Area | Technology |
 | --- | --- |
@@ -40,3 +45,10 @@ For exact dependency constraints, see [`composer.json`](composer.json) and [`pac
 └── docker-compose.yml               # Local web and database services
 ```
 Composer-managed Drupal core and dependencies are installed under `web/` and `vendor/`. Edit the Sass source under `web/themes/custom/montreal2027/src/scss/`; the CSS in `css/` is generated.
+
+## Further reading
+[Project README](README.md)
+[How to contribute](CONTRIBUTING.md)
+[Project Guidelines](PROJECT_GUIDELINES.md)
+[Standard Operating Procedures](SOPS.md)
+[Checklists](checklists/CHECKLISTS.MD)

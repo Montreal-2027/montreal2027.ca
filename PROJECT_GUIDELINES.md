@@ -1,4 +1,12 @@
-# Project Guidelines
+# Project Guidelines <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+- [Introduction](#introduction)
+- [Before You Contribute](#before-you-contribute)
+- [Project at a Glance 👀](#project-at-a-glance-)
+- [Technical Documentation 💻](#technical-documentation-)
+- [Standard Operating Procedures](#standard-operating-procedures)
+- [Further Reading](#further-reading)
 
 ## Introduction
 
@@ -12,21 +20,11 @@ All prospective contributors must contact the [Web Team Leadership](mailto:websi
 
 This repository contains the Drupal website for the 85th World Science Fiction Convention to be held in Montréal in September, 2027. Drupal provides content management and site functionality; the custom `montreal2027` theme provides the site's presentation, and `montreal2027_tools` contains project-specific utilities.
 
-## What is a repository? ℹ️
-A [repository](https://en.wikipedia.org/wiki/Repository_(version_control)), is a collection of metadata and files, stored in a directory structure. A repository, or repo, can be purely local, or distributed, where there is a copy of the repository on every user's system. This project uses a hybrid of the two types: the software developers maintain a copy of the repository on their local system, and there is a central repository ([GitHub](https://github.com)) that is the "source of truth".  The purpose of a repository in this type of instance, is to provide a version control system.  That is, every time a file is committed to the repository, the difference between the current version and the version before it is saved to the hard disk, as opposed to the whole file.  The only time the complete file is saved is when it is first added to the repository. By storing just the differences, any previous version can be retrieved, and any two versions can be compared to show the differences. For this project, the repository contains these informational documents, custom software, custom layout templates, and styling.
-
 ## Technical Documentation 💻
 See [Technical Documentation](TECHNICAL.md) for details.
 
-
-
-
-
-
-
-#### Style, template, or code fixes
-
-
+## Standard Operating Procedures
+See [Standard Operating Procedures](SOPS.md) for details.
 
 ## Further Reading
 

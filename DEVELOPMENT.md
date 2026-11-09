@@ -1,4 +1,14 @@
-# Development
+# Development <!-- omit from toc -->
+
+## Table of Contents <!-- omit from toc -->
+- [Workflow](#workflow)
+- [Branching Strategy](#branching-strategy)
+  - [Drupal Configuration and Local Data](#drupal-configuration-and-local-data)
+- [Development workflow](#development-workflow)
+  - [Feature work](#feature-work)
+  - [Hotfixes](#hotfixes)
+- [Pull Request Procedure](#pull-request-procedure)
+- [Release Overview](#release-overview)
 
 ## Workflow
 Follow the complete setup instructions in [`README.md`](README.md). The usual Docker-based procedure is:
