@@ -157,6 +157,6 @@ Just prior to a release, the `staging` or `hotfix` workspace will be reviewed, a
 4. Switch to the `Staging` workspace. For a hotfix, use the `Hotfix` workspace.
 5. Add, edit, or delete [content](https://montreal2027.ca/admin/content).
 6. Proofread your work.  Ideally, ask someone else to proofread your work.
-7. Until the scheduled release, you make come back to the workspace and revise your work. After switching to the workspace, from the same menu, you may click on `Manage workspace` to see all content that has currently been revised or added in the workspace.
+7. Until the scheduled release, you may come back to the workspace and revise your work. After switching to the workspace, from the same menu, you may click on `Manage workspace` to see all content that has currently been revised or added in the workspace.
 8. After the the English language content has been added, add a comment to the ticket documenting that the task had been completed, and change the status to `Ready to deploy`. Be sure to tag the Translation Team leader in the comment using `@c-maltais`.
 9. During the release window, the Area Head or other authorized team member will publish the content revisions and additions.
