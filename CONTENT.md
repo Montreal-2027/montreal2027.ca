@@ -137,7 +137,7 @@ The following labels are only to be used for technical ticket/issues and should 
 This applies to content entry and translations. We're a small team for a large, international convention, so any member of the Web Team may be asked to assist with content entry. If you have not received training on how to enter and update content, reach out to the Web Team leadership to schedule training. This site uses features that are not common to Drupal websites that require familiarization. This applies to both English and French content, taxonomy, menus, and user interface/configuration translations. All content tickets will have a sub-issue created for the French translation. Any and all ticket comments related to that translation should be done in the sub-issue.
 
 ### Workspaces
-We use a Drupal module that creates isolate workspaces within the main website. These workspaces allow for content to be safely added, edited, or deleted, without any risk to the main website. This will allow committee and team members with the same access you have, to preview the changes to the website, while eliminating the need to then copy the content from one location to another. There are three primary workspaces
+We use a Drupal module that creates isolated workspaces within the main website. These workspaces allow for content to be safely added, edited, or deleted, without any risk to the main website. This will allow committee and team members with the same access you have, to preview the changes to the website, while eliminating the need to then copy the content from one location to another. There are three primary workspaces
 
 |Name|Purpose|
 |---|---|
