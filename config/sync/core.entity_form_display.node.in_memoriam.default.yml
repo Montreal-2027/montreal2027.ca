@@ -85,6 +85,12 @@ content:
       size: 4
       placeholder: ''
     third_party_settings: {  }
+  private:
+    type: private
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 9

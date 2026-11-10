@@ -457,7 +457,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p>Below is a listing of members of our community who have passed away since the In Memoriam list was compiled for LA Worldcon 2026 last year. This covers the period beginning on September 1, 2026 until July 8, 2027. Submissions received after July 8 will not be included in the souvenir book.</p>\r\n<p>If you know of someone you believe should be included on this list, please let us know by filling out the <a href=\"/form/in-memoriam\">In Memoriam form</a>.</p>\r\n<p>You can also follow our <a href=\"https://bsky.app/profile/wcinmemoriam.bsky.social\">In Memoriam</a> feed on BlueSky.</p>\r\n<p>We would like to thank Steven H. Silver for his tireless work in maintaining this list on behalf of our community.</p>\r\n<hr>"
+            value: "<p>Below is a listing of members of our community who have passed away since the In Memoriam list was compiled for LA Worldcon 2026 last year. This covers the period beginning on September 1, 2026 until July 8, 2027. Submissions received after July 8 will not be included in the souvenir book.</p>\r\n<p>If you know of someone you believe should be included on this list, please let us know by filling out the <a href=\"/form/in-memoriam\">In Memoriam form</a>.</p>\r\n<p>You can also follow our <a href=\"https://bsky.app/profile/wcinmemoriam.bsky.social\">In Memoriam</a> feed on BlueSky.</p>\r\n<p>We would like to thank Steven H Silver for his tireless work in maintaining this list on behalf of our community.</p>\r\n<hr>"
             format: full_html
           tokenize: false
       footer: {  }
