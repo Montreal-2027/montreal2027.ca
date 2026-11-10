@@ -1,0 +1,14 @@
+uuid: 621b322f-9c2c-48d7-848e-aa92b1155653
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.area_head
+  module:
+    - user
+id: user_add_role_action.area_head
+label: 'Add the Area Head role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: area_head

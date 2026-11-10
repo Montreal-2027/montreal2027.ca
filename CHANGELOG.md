@@ -16,7 +16,12 @@
 - Revise PULL_REQUESTS.md checklist for clarity and completeness
 - Update RELEASES.md with detailed release procedures
 - Add content-sop.pdf for additional resources
-  
+- Fixed line spacing for `<summary>` tags ([#275](https://github.com/Montreal-2027/montreal2027.ca/issues/275))
+- Updated Carousel Page content type configuration to better support adding a node with a news carousel ([#235](https://github.com/Montreal-2027/montreal2027.ca/issues/235))
+- Additional roles for team members ([#238](https://github.com/Montreal-2027/montreal2027.ca/issues/238))
+- Changed page background ([#252](https://github.com/Montreal-2027/montreal2027.ca/issues/252))
+- In Memoriam visibility changes made in prod
+
 ## 1.1.2 (2026-11-05 Hotfix)
 - Added access hook for In Memoriam role/content type to allow viewing and publishing of unpublished content regardless of owner
   
