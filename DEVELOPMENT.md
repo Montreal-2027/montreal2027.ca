@@ -50,7 +50,7 @@ Keep local environment settings and credentials out of Git. Review the `README` 
 5. When your work has been completed, push the branch to GitHub and use the [development site](https://dev.montreal2027.ca) to verify the change after it's deployed.
 6. Open a pull request targeting `main-hotfix`. See [Pull Request Checklist](checklists/PULL_REQUESTS.md)
 
-*The current theme is not yet fully accessible. Until it is redesigned, contributors should make a best effort to target WCAG 2.1 Level AA for accessibility.*
+*The current theme is not yet fully accessible. Until it is redesigned, contributors should make a best effort to target [WCAG 2.1 Level AA](https://www.w3.org/TR/WCAG21/) for accessibility.*
 
 ## Pull Request Procedure
 
