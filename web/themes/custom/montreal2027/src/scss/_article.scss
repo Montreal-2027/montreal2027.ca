@@ -118,7 +118,6 @@ article {
           font-size: var(--font-size-h4);
           font-weight: var(--font-weight-bold);
           gap: .5rem;
-          line-height: calc(var(--font-size-h4) + .25rem);
           list-style: none;
 
           &::-webkit-details-marker {
