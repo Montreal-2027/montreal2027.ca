@@ -1,0 +1,14 @@
+uuid: bd00c635-5da9-4e43-adf8-4f3989ebb892
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.deputy_dh
+  module:
+    - user
+id: user_add_role_action.deputy_dh
+label: 'Add the Deputy Division Head role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: deputy_dh

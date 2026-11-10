@@ -1,0 +1,9 @@
+uuid: e551fbd9-ecd8-4655-8dcd-03eb8dd6841a
+langcode: en
+status: true
+dependencies: {  }
+id: area_head
+label: 'Area Head'
+weight: 2
+is_admin: false
+permissions: {  }

@@ -1,0 +1,14 @@
+uuid: 7e64e1db-11de-4be9-b1ec-1d076394a851
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.division_head
+  module:
+    - user
+id: user_add_role_action.division_head
+label: 'Add the Division Head role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: division_head
