@@ -15,7 +15,7 @@
 
 ## Introduction
 
-Welcome, and thank you for your interest in contributing to the Montréal 2027 website project. Before getting started, all prospective contributors must contact the Web Team at [website@montreal2027.ca](mailto:website@montreal2027.ca) and wait for guidance before proceeding. We are always interested in speaking with individuals that want to help out entering content.
+Welcome, and thank you for your interest in contributing to the Montréal 2027 website project. We are always interested in speaking with individuals that want to help out entering content.
 
 The site is built using Drupal with a custom theme, and uses specialized modules for convention management, including a team contact form.
 
@@ -147,7 +147,7 @@ We use a Drupal module that creates isolated workspaces within the main website.
 
 Just prior to a release, the `staging` or `hotfix` workspace will be reviewed, and once approved, the changes will be published during the release window.
 
-*Translation note: User interface and some other items, require being submitted in the **Live** workspace. A notice will be displayed, and you will have the option to submit your changes in **Live** or cancel. It is permitted to choose to submit your changes in **Live** if you are confident of the translation. It is also permitted to add these translations directly in the **Live** workspace in the future.*
+*Translation note: User interface and some other translations require you to submit them while working in the **Live** workspace. When you submit, a notice will be displayed and you will have the option to submit your changes in **Live** or cancel. It is permitted to choose to submit your changes in **Live** if you are confident of the translation. It is also permitted to add these translations directly in the **Live** workspace in the future.*
 
 ### Workflow
 
