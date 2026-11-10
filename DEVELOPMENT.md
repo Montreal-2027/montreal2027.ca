@@ -26,7 +26,7 @@ The default branch is `main`. Do not push directly to `develop` or `main`; chang
 
 ### Drupal Configuration and Local Data
 
-Drupal configuration is version-controlled in `config/sync/`. After changing site configuration in the admin UI, export it with Drush and include the resulting YAML changes in the same contribution. The configured pre-commit hook checks for configuration drift.
+Drupal configuration is version-controlled in `config/sync/`. After changing site configuration in the admin UI, export it with Drush (`drush config:export`) and include the resulting YAML changes in the same contribution. The configured pre-commit hook checks for configuration drift.
 
 Keep local environment settings and credentials out of Git. Review the `README` before using scripts that synchronize production files or database content.
 
