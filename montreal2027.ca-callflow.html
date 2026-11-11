@@ -60,14 +60,13 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 885 nodes, 1096 edges, 81 communities. Commit: 9615c01</p>
+<p class="subtitle">Generated from graphify knowledge graph: 807 nodes, 1010 edges, 72 communities. Commit: d4e7ac0</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
     <a href="#extract-pipeline">Extraction Pipeline</a>
     <a href="#build-graph">Graph Build</a>
     <a href="#analysis-clustering">Analysis &amp; Clustering</a>
-    <a href="#outputs-docs">Outputs &amp; Docs</a>
     <a href="#cli-skills">CLI &amp; Skill Installers</a>
     <a href="#ingest-cache-update">Ingestion &amp; Updates</a>
     <a href="#security-global">Security &amp; Global Graph</a>
@@ -77,7 +76,8 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
     <a href="#steps">steps</a>
     <a href="#regions">regions</a>
     <a href="#web">web</a>
-    <a href="#sops-md">SOPS.md</a>
+    <a href="#montreal2027-tools-commands">montreal2027_tools.commands</a>
+    <a href="#montreal2027-tools-module">montreal2027_tools.module</a>
     <a href="#other">Other</a>
 </div>
 
@@ -94,13 +94,11 @@ flowchart LR
     class BUILD_GRAPH_321CBB04 module;
     ANALYSIS_CLUSTERING_C79796DA("Analysis &amp; Clustering<br/><small>18 nodes</small>")
     class ANALYSIS_CLUSTERING_C79796DA module;
-    OUTPUTS_DOCS_ED82387C("Outputs &amp; Docs<br/><small>5 nodes</small>")
-    class OUTPUTS_DOCS_ED82387C module;
     CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>12 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     INGEST_CACHE_UPDATE_FF457338("Ingestion &amp; Updates<br/><small>3 nodes</small>")
     class INGEST_CACHE_UPDATE_FF457338 module;
-    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>12 nodes</small>")
+    SECURITY_GLOBAL_5B9C6A04("Security &amp; Global Graph<br/><small>16 nodes</small>")
     class SECURITY_GLOBAL_5B9C6A04 module;
     TESTS_FIXTURES_B84B1DCC("Tests &amp; Fixtures<br/><small>56 nodes</small>")
     class TESTS_FIXTURES_B84B1DCC module;
@@ -114,16 +112,15 @@ flowchart LR
     class REGIONS_7FF078F2 module;
     WEB_CA84D134("web<br/><small>23 nodes</small>")
     class WEB_CA84D134 module;
-    SOPS_MD_E4249B1F("SOPS.md<br/><small>15 nodes</small>")
-    class SOPS_MD_E4249B1F module;
-    OTHER_D0941E68("Other<br/><small>133 nodes</small>")
+    MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8("montreal2027_tools.commands<br/><small>11 nodes</small>")
+    class MONTREAL2027_TOOLS_COMMANDS_EA0ADBB8 module;
+    MONTREAL2027_TOOLS_MODULE_C93A87C0("montreal2027_tools.module<br/><small>9 nodes</small>")
+    class MONTREAL2027_TOOLS_MODULE_C93A87C0 module;
+    OTHER_D0941E68("Other<br/><small>51 nodes</small>")
     class OTHER_D0941E68 module;
     EXTRACT_PIPELINE_5F350230 -->|references x9| BUILD_GRAPH_321CBB04
     INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 -->|references x9| BUILD_GRAPH_321CBB04
-    SOPS_MD_E4249B1F -->|contains x7| OTHER_D0941E68
     TESTS_FIXTURES_B84B1DCC -->|imports x2| EXTRACT_PIPELINE_5F350230
-    SOPS_MD_E4249B1F -->|references x2| BUILD_GRAPH_321CBB04
-    SOPS_MD_E4249B1F -->|contains| OUTPUTS_DOCS_ED82387C
     DB_0352A8AC -->|contains| WEB_CA84D134
     INMEMORIAMIMPORTCOMMANDS_PHP_7454DC77 -->|imports| TESTS_FIXTURES_B84B1DCC
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
@@ -142,19 +139,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Extraction Pipeline</td><td>71</td><td><code>3, 12, 77</code></td></tr><tr><td>Graph Build</td><td>419</td><td><code>0, 2, 4, 10, 9, 13, 14, 16, 19, 21, 22, 26, 27, 31, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 71</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>15</code></td></tr><tr><td>Outputs &amp; Docs</td><td>5</td><td><code>39</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>12</td><td><code>28, 73</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>3</td><td><code>46</code></td></tr><tr><td>Security &amp; Global Graph</td><td>12</td><td><code>20</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>56</td><td><code>1</code></td></tr><tr><td>db</td><td>30</td><td><code>5</code></td></tr><tr><td>InMemoriamImportCommands.php</td><td>30</td><td><code>6</code></td></tr><tr><td>steps</td><td>29</td><td><code>7</code></td></tr><tr><td>regions</td><td>29</td><td><code>8</code></td></tr><tr><td>web</td><td>23</td><td><code>11</code></td></tr><tr><td>SOPS.md</td><td>15</td><td><code>17</code></td></tr><tr><td>Other</td><td>133</td><td><code>18, 23, 24, 25, 29, 30, 32, 33, 34, 35, 36, 37, 38, 40, 69, 70, 72, 74, 75, 76, 78, 79, 80</code></td></tr>
+      <tr><td>Extraction Pipeline</td><td>71</td><td><code>3, 12, 67</code></td></tr><tr><td>Graph Build</td><td>419</td><td><code>0, 2, 4, 10, 9, 13, 14, 16, 18, 19, 20, 22, 23, 27, 32, 33, 34, 35, 36, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61</code></td></tr><tr><td>Analysis &amp; Clustering</td><td>18</td><td><code>15</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>12</td><td><code>24, 63</code></td></tr><tr><td>Ingestion &amp; Updates</td><td>3</td><td><code>37</code></td></tr><tr><td>Security &amp; Global Graph</td><td>16</td><td><code>17</code></td></tr><tr><td>Tests &amp; Fixtures</td><td>56</td><td><code>1</code></td></tr><tr><td>db</td><td>30</td><td><code>5</code></td></tr><tr><td>InMemoriamImportCommands.php</td><td>30</td><td><code>6</code></td></tr><tr><td>steps</td><td>29</td><td><code>7</code></td></tr><tr><td>regions</td><td>29</td><td><code>8</code></td></tr><tr><td>web</td><td>23</td><td><code>11</code></td></tr><tr><td>montreal2027_tools.commands</td><td>11</td><td><code>21</code></td></tr><tr><td>montreal2027_tools.module</td><td>9</td><td><code>25</code></td></tr><tr><td>Other</td><td>51</td><td><code>26, 28, 29, 30, 31, 60, 62, 64, 65, 66, 68, 69, 70, 71</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Analysis &amp; Clustering -&gt; Extraction Pipeline -&gt; Graph Build -&gt; Outputs &amp; Docs -&gt; CLI &amp; Skill Installers -&gt; Ingestion &amp; Updates -&gt; Security &amp; Global Graph</div>
+    <div class="arrow-chain">Analysis &amp; Clustering -&gt; Extraction Pipeline -&gt; Graph Build -&gt; CLI &amp; Skill Installers -&gt; Ingestion &amp; Updates -&gt; Security &amp; Global Graph -&gt; Tests &amp; Fixtures</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>885 nodes · 1096 edges · 81 communities (66 shown, 15 thin omitted)</li>
+      <li>807 nodes · 1010 edges · 72 communities (57 shown, 15 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `require` - 68 edges</li>
@@ -1116,108 +1113,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 5. Outputs & Docs ====== -->
-<h2 id="outputs-docs">5. Outputs &amp; Docs</h2>
-<p>Outputs &amp; Docs groups implementation around technicalmd, omit, toc, further, mostly in TECHNICAL.md. This section covers 5 nodes and 4 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: Outputs &amp; Docs (5 nodes, 4 edges)
-    technical_montr_al_2027_technical_documentation_d650fb17("Montréal 2027 Technical Documentation &lt;...<br/><small>TECHNICAL.md</small>")
-    technical_repository_structure_b3668a1a("Repository Structure<br/><small>TECHNICAL.md</small>")
-    technical_table_of_contents_omit_in_toc_36612ff1("Table of Contents &lt;!-- omit in toc to<br/><small>TECHNICAL.md</small>")
-    technical_further_reading_059be6a8("Further reading<br/><small>TECHNICAL.md</small>")
-    technical_technology_stack_f4dfa860("Technology Stack<br/><small>TECHNICAL.md</small>")
-    technical_montr_al_2027_technical_documentation_d650fb17 -->|contains| technical_repository_structure_b3668a1a
-    technical_montr_al_2027_technical_documentation_d650fb17 -->|contains| technical_table_of_contents_omit_in_toc_36612ff1
-    technical_montr_al_2027_technical_documentation_d650fb17 -->|contains| technical_further_reading_059be6a8
-    technical_montr_al_2027_technical_documentation_d650fb17 -->|contains| technical_technology_stack_f4dfa860
-    class technical_montr_al_2027_technical_documentation_d650fb17 concept;
-    class technical_repository_structure_b3668a1a concept;
-    class technical_table_of_contents_omit_in_toc_36612ff1 concept;
-    class technical_further_reading_059be6a8 concept;
-    class technical_technology_stack_f4dfa860 concept;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>Further reading</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Further reading.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>Montréal 2027 Technical Documentation &lt;!-- omit in toc --&gt;</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Montréal 2027 Technical Documentation &lt;!-- omit in toc --&gt;.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>Repository Structure</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Repository Structure.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>Table of Contents &lt;!-- omit in toc --&gt;</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Table of Contents &lt;!-- omit in toc --&gt;.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>Technology Stack</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Technology Stack.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>TECHNICAL.md</code></td><td>5 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 6. CLI & Skill Installers ====== -->
-<h2 id="cli-skills">6. CLI &amp; Skill Installers</h2>
+<!-- ====== 5. CLI & Skill Installers ====== -->
+<h2 id="cli-skills">5. CLI &amp; Skill Installers</h2>
 <p>CLI &amp; Skill Installers groups implementation around montreal2027, toolsservicesyml, web, modules, mostly in custom/montreal2027_tools/montreal2027_tools.services.yml, scripts/install.sh. This section covers 12 nodes and 10 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1397,8 +1294,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 7. Ingestion & Updates ====== -->
-<h2 id="ingest-cache-update">7. Ingestion &amp; Updates</h2>
+<!-- ====== 6. Ingestion & Updates ====== -->
+<h2 id="ingest-cache-update">6. Ingestion &amp; Updates</h2>
 <p>Ingestion &amp; Updates groups implementation around montreal2027, tools, toolspost, updatephp, mostly in custom/montreal2027_tools/montreal2027_tools.post_update.php. This section covers 3 nodes and 2 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1476,27 +1373,32 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 8. Security & Global Graph ====== -->
-<h2 id="security-global">8. Security &amp; Global Graph</h2>
-<p>Security &amp; Global Graph groups implementation around montreal2027librariesyml, web, themes, custom, mostly in custom/montreal2027/montreal2027.libraries.yml. This section covers 12 nodes and 11 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 7. Security & Global Graph ====== -->
+<h2 id="security-global">7. Security &amp; Global Graph</h2>
+<p>Security &amp; Global Graph groups implementation around montreal2027librariesyml, web, themes, custom, mostly in custom/montreal2027/montreal2027.libraries.yml. This section covers 16 nodes and 15 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Security &amp; Global Graph (12 nodes, 11 edges)
+    %% Section: Security &amp; Global Graph (16 nodes, 15 edges)
     web_themes_custom_montreal2027_montreal2027_libr_7aa78003("global<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
+    web_themes_custom_montreal2027_montreal2027_libr_d28f68dc("montreal2027.libraries.yml")
     web_themes_custom_montreal2027_montreal2027_libr_711e501f("base<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_63a9e8f1("bootstrap.bundle.min.js<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
-    web_themes_custom_montreal2027_montreal2027_libr_d28f68dc("montreal2027.libraries.yml")
+    web_themes_custom_montreal2027_montreal2027_libr_f928f5d8("umap-feature<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_b8e6173b("https://cdnjs.cloudflare.com/ajax/libs/...<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
-    web_themes_custom_montreal2027_montreal2027_libr_8fd2a4c1("css<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_60516913("type<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_17bf2904("css/montreal2027.min.css<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_30fb8a6b("dependencies<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
+    web_themes_custom_montreal2027_montreal2027_libr_8fd2a4c1("css<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_022ba280("js<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_7460738a("type<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_e0ce9f8e("minified<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
+    web_themes_custom_montreal2027_montreal2027_libr_ebe011c1("js<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
+    web_themes_custom_montreal2027_montreal2027_libr_0f1f8d0b("dependencies<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
+    web_themes_custom_montreal2027_montreal2027_libr_bb9b92aa("umap-feature.js<br/><small>custom/montreal2027/montreal2027.libraries.yml</small>")
     web_themes_custom_montreal2027_montreal2027_libr_d28f68dc -->|contains| web_themes_custom_montreal2027_montreal2027_libr_7aa78003
+    web_themes_custom_montreal2027_montreal2027_libr_d28f68dc -->|contains| web_themes_custom_montreal2027_montreal2027_libr_f928f5d8
     web_themes_custom_montreal2027_montreal2027_libr_b8e6173b -->|contains| web_themes_custom_montreal2027_montreal2027_libr_60516913
     web_themes_custom_montreal2027_montreal2027_libr_711e501f -->|contains| web_themes_custom_montreal2027_montreal2027_libr_b8e6173b
     web_themes_custom_montreal2027_montreal2027_libr_711e501f -->|contains| web_themes_custom_montreal2027_montreal2027_libr_17bf2904
@@ -1507,18 +1409,25 @@ flowchart LR
     web_themes_custom_montreal2027_montreal2027_libr_022ba280 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_63a9e8f1
     web_themes_custom_montreal2027_montreal2027_libr_63a9e8f1 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_7460738a
     web_themes_custom_montreal2027_montreal2027_libr_63a9e8f1 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_e0ce9f8e
+    web_themes_custom_montreal2027_montreal2027_libr_f928f5d8 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_ebe011c1
+    web_themes_custom_montreal2027_montreal2027_libr_f928f5d8 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_0f1f8d0b
+    web_themes_custom_montreal2027_montreal2027_libr_ebe011c1 -->|contains| web_themes_custom_montreal2027_montreal2027_libr_bb9b92aa
     class web_themes_custom_montreal2027_montreal2027_libr_7aa78003 function;
+    class web_themes_custom_montreal2027_montreal2027_libr_d28f68dc function;
     class web_themes_custom_montreal2027_montreal2027_libr_711e501f function;
     class web_themes_custom_montreal2027_montreal2027_libr_63a9e8f1 module;
-    class web_themes_custom_montreal2027_montreal2027_libr_d28f68dc function;
+    class web_themes_custom_montreal2027_montreal2027_libr_f928f5d8 function;
     class web_themes_custom_montreal2027_montreal2027_libr_b8e6173b function;
-    class web_themes_custom_montreal2027_montreal2027_libr_8fd2a4c1 function;
     class web_themes_custom_montreal2027_montreal2027_libr_60516913 function;
     class web_themes_custom_montreal2027_montreal2027_libr_17bf2904 function;
     class web_themes_custom_montreal2027_montreal2027_libr_30fb8a6b function;
+    class web_themes_custom_montreal2027_montreal2027_libr_8fd2a4c1 function;
     class web_themes_custom_montreal2027_montreal2027_libr_022ba280 function;
     class web_themes_custom_montreal2027_montreal2027_libr_7460738a function;
     class web_themes_custom_montreal2027_montreal2027_libr_e0ce9f8e function;
+    class web_themes_custom_montreal2027_montreal2027_libr_ebe011c1 function;
+    class web_themes_custom_montreal2027_montreal2027_libr_0f1f8d0b function;
+    class web_themes_custom_montreal2027_montreal2027_libr_bb9b92aa module;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1636,6 +1545,38 @@ flowchart LR
   <td>No direct outbound edge</td>
   <td>https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js node in custom/montreal2027/montreal2027.libraries.yml.</td>
 </tr>
+<tr>
+  <td>13</td>
+  <td><code>js/umap-feature.js</code><br><small style="color:var(--muted)">custom/montreal2027/montreal2027.libraries.yml</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>js/umap-feature.js node in custom/montreal2027/montreal2027.libraries.yml.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>umap-feature</code><br><small style="color:var(--muted)">custom/montreal2027/montreal2027.libraries.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>umap-feature node in custom/montreal2027/montreal2027.libraries.yml.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>dependencies</code><br><small style="color:var(--muted)">custom/montreal2027/montreal2027.libraries.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>dependencies node in custom/montreal2027/montreal2027.libraries.yml.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>js</code><br><small style="color:var(--muted)">custom/montreal2027/montreal2027.libraries.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>js node in custom/montreal2027/montreal2027.libraries.yml.</td>
+</tr>
 </table>
 
 <div class="grid">
@@ -1643,18 +1584,18 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>custom/montreal2027/montreal2027.libraries.yml</code></td><td>12 nodes</td></tr>
+      <tr><td><code>custom/montreal2027/montreal2027.libraries.yml</code></td><td>16 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x11. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x15. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 9. Tests & Fixtures ====== -->
-<h2 id="tests-fixtures">9. Tests &amp; Fixtures</h2>
+<!-- ====== 8. Tests & Fixtures ====== -->
+<h2 id="tests-fixtures">8. Tests &amp; Fixtures</h2>
 <p>Tests &amp; Fixtures groups implementation around web, modules, custom, montreal2027, mostly in src/Unit/WorkspaceMenuTreeManipulatorTest.php, src/Unit/InMemoriamAccessHooksTest.php, src/Hook/InMemoriamAccessHooks.php. This section covers 56 nodes and 103 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2006,8 +1947,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 10. db ====== -->
-<h2 id="db">10. db</h2>
+<!-- ====== 9. db ====== -->
+<h2 id="db">9. db</h2>
 <p>db groups implementation around docker, composeyml, mariadb, name, mostly in docker-compose.yml. This section covers 30 nodes and 29 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2346,8 +2287,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 11. InMemoriamImportCommands.php ====== -->
-<h2 id="inmemoriamimportcommands-php">11. InMemoriamImportCommands.php</h2>
+<!-- ====== 10. InMemoriamImportCommands.php ====== -->
+<h2 id="inmemoriamimportcommands-php">10. InMemoriamImportCommands.php</h2>
 <p>InMemoriamImportCommands.php groups implementation around web, modules, custom, montreal2027, mostly in src/Commands/InMemoriamImportCommands.php, src/Commands/ContactImportCommands.php. This section covers 30 nodes and 52 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -2698,8 +2639,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 12. steps ====== -->
-<h2 id="steps">12. steps</h2>
+<!-- ====== 11. steps ====== -->
+<h2 id="steps">11. steps</h2>
 <p>steps groups implementation around graphifyyml, github, workflows, message, mostly in .github/workflows/graphify.yml. This section covers 29 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3030,8 +2971,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 13. regions ====== -->
-<h2 id="regions">13. regions</h2>
+<!-- ====== 12. regions ====== -->
+<h2 id="regions">12. regions</h2>
 <p>regions groups implementation around montreal2027infoyml, web, themes, custom, mostly in custom/montreal2027/montreal2027.info.yml. This section covers 29 nodes and 28 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3362,8 +3303,8 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 14. web ====== -->
-<h2 id="web">14. web</h2>
+<!-- ====== 13. web ====== -->
+<h2 id="web">13. web</h2>
 <p>web groups implementation around docker, composeyml, web, port, mostly in docker-compose.yml. This section covers 23 nodes and 22 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -3646,70 +3587,47 @@ flowchart LR
 </div>
 <hr>
 
-<!-- ====== 15. SOPS.md ====== -->
-<h2 id="sops-md">15. SOPS.md</h2>
-<p>SOPS.md groups implementation around checklists, pre, pull, checklistsmd, mostly in checklists/CHECKLISTS.MD, checklists/PRE-COMMIT.md, checklists/PULL_REQUESTS.md. This section covers 15 nodes and 20 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 14. montreal2027_tools.commands ====== -->
+<h2 id="montreal2027-tools-commands">14. montreal2027_tools.commands</h2>
+<p>montreal2027_tools.commands groups implementation around montreal2027, drushservicesyml, web, modules, mostly in custom/montreal2027_tools/drush.services.yml. This section covers 11 nodes and 11 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: SOPS.md (15 nodes, 20 edges)
-    subgraph sops_md_checklists_CHECKLISTS_MD_41f688ff["checklists/CHECKLISTS.MD"]
-        checklists_checklists_dce17872("CHECKLISTS.MD")
-        checklists_checklists_available_checklists_fa6d6b1e("Available Checklists<br/><small>checklists/CHECKLISTS.MD</small>")
-    end
-    subgraph sops_md_checklists_PRE_COMMIT_md_b7551c26["checklists/PRE-COMMIT.md"]
-        checklists_pre_commit_29a4f235("PRE-COMMIT.md")
-        checklists_pre_commit_pre_commit_checklist_8dec5dc2("Pre-commit Checklist<br/><small>checklists/PRE-COMMIT.md</small>")
-    end
-    subgraph sops_md_checklists_PULL_REQUESTS_md_94b0b952["checklists/PULL_REQUESTS.md"]
-        checklists_pull_requests_fc08d905("PULL_REQUESTS.md")
-        checklists_pull_requests_pull_request_checklist_9f441e75("Pull Request Checklist<br/><small>checklists/PULL_REQUESTS.md</small>")
-    end
-    content_040f06fd("CONTENT.md")
-    contributing_87503d48("CONTRIBUTING.md")
-    development_05134426("DEVELOPMENT.md")
-    intake_a0039c22("INTAKE.md")
-    project_guidelines_a333a006("PROJECT_GUIDELINES.md")
-    sops_cd736552("SOPS.md")
-    structure_2d309ce9("STRUCTURE.md")
-    technical_60944e57("TECHNICAL.md")
-    checklists_releases_2f0daf27("RELEASES.md")
-    checklists_checklists_dce17872 -->|references| checklists_pre_commit_29a4f235
-    checklists_checklists_dce17872 -->|references| checklists_pull_requests_fc08d905
-    checklists_checklists_dce17872 -->|references| checklists_releases_2f0daf27
-    content_040f06fd -->|references| structure_2d309ce9
-    content_040f06fd -->|references| intake_a0039c22
-    contributing_87503d48 -->|references| project_guidelines_a333a006
-    contributing_87503d48 -->|references| content_040f06fd
-    development_05134426 -->|references| checklists_pull_requests_fc08d905
-    development_05134426 -->|references| checklists_releases_2f0daf27
-    project_guidelines_a333a006 -->|references| technical_60944e57
-    project_guidelines_a333a006 -->|references| sops_cd736552
-    sops_cd736552 -->|references| development_05134426
-    sops_cd736552 -->|references| content_040f06fd
-    sops_cd736552 -->|references| checklists_checklists_dce17872
-    technical_60944e57 -->|references| contributing_87503d48
-    technical_60944e57 -->|references| sops_cd736552
-    technical_60944e57 -->|references| checklists_checklists_dce17872
-    checklists_checklists_dce17872 -->|contains| checklists_checklists_available_checklists_fa6d6b1e
-    checklists_pre_commit_29a4f235 -->|contains| checklists_pre_commit_pre_commit_checklist_8dec5dc2
-    checklists_pull_requests_fc08d905 -->|contains| checklists_pull_requests_pull_request_checklist_9f441e75
-    class checklists_checklists_dce17872 concept;
-    class checklists_checklists_available_checklists_fa6d6b1e concept;
-    class checklists_pre_commit_29a4f235 concept;
-    class checklists_pre_commit_pre_commit_checklist_8dec5dc2 concept;
-    class checklists_pull_requests_fc08d905 concept;
-    class checklists_pull_requests_pull_request_checklist_9f441e75 concept;
-    class content_040f06fd concept;
-    class contributing_87503d48 concept;
-    class development_05134426 concept;
-    class intake_a0039c22 concept;
-    class project_guidelines_a333a006 concept;
-    class sops_cd736552 concept;
-    class structure_2d309ce9 concept;
-    class technical_60944e57 concept;
-    class checklists_releases_2f0daf27 concept;
+    %% Section: montreal2027_tools.commands (11 nodes, 11 edges)
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f("montreal2027_tools.commands<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_2c900ad6("memoriam import commands<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_538801c7("services<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_e809d8cb("drush.services.yml")
+    web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3("tags<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_260cb4c9("tags<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_9e1203d3("name<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_f82b60ac("class<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_d74d0bcd("class<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_13df128a("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
+    web_modules_custom_montreal2027_tools_drush_serv_e809d8cb -->|contains| web_modules_custom_montreal2027_tools_drush_serv_538801c7
+    web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_9e1203d3
+    web_modules_custom_montreal2027_tools_drush_serv_260cb4c9 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_9e1203d3
+    web_modules_custom_montreal2027_tools_drush_serv_538801c7 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_ff19580f
+    web_modules_custom_montreal2027_tools_drush_serv_538801c7 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_2c900ad6
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_f82b60ac
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0
+    web_modules_custom_montreal2027_tools_drush_serv_ff19580f -->|contains| web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3
+    web_modules_custom_montreal2027_tools_drush_serv_2c900ad6 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_260cb4c9
+    web_modules_custom_montreal2027_tools_drush_serv_2c900ad6 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_d74d0bcd
+    web_modules_custom_montreal2027_tools_drush_serv_2c900ad6 -->|contains| web_modules_custom_montreal2027_tools_drush_serv_13df128a
+    class web_modules_custom_montreal2027_tools_drush_serv_ff19580f entry;
+    class web_modules_custom_montreal2027_tools_drush_serv_2c900ad6 entry;
+    class web_modules_custom_montreal2027_tools_drush_serv_538801c7 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_e809d8cb function;
+    class web_modules_custom_montreal2027_tools_drush_serv_f1ce8eb3 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_260cb4c9 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_9e1203d3 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_f82b60ac function;
+    class web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0 function;
+    class web_modules_custom_montreal2027_tools_drush_serv_d74d0bcd function;
+    class web_modules_custom_montreal2027_tools_drush_serv_13df128a function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -3733,123 +3651,91 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>CHECKLISTS.MD</code><br><small style="color:var(--muted)">checklists/CHECKLISTS.MD</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>drush.services.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing CHECKLISTS.MD.</td>
+  <td>drush.services.yml node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>2</td>
-  <td><code>Available Checklists</code><br><small style="color:var(--muted)">checklists/CHECKLISTS.MD</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>arguments</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Available Checklists.</td>
+  <td>arguments node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>3</td>
-  <td><code>PRE-COMMIT.md</code><br><small style="color:var(--muted)">checklists/PRE-COMMIT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>class</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing PRE-COMMIT.md.</td>
+  <td>class node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>4</td>
-  <td><code>Pre-commit Checklist</code><br><small style="color:var(--muted)">checklists/PRE-COMMIT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>tags</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Pre-commit Checklist.</td>
+  <td>tags node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>5</td>
-  <td><code>PULL_REQUESTS.md</code><br><small style="color:var(--muted)">checklists/PULL_REQUESTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>arguments</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing PULL_REQUESTS.md.</td>
+  <td>arguments node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>6</td>
-  <td><code>Pull Request Checklist</code><br><small style="color:var(--muted)">checklists/PULL_REQUESTS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>class</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Pull Request Checklist.</td>
+  <td>class node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>7</td>
-  <td><code>RELEASES.md</code><br><small style="color:var(--muted)">checklists/RELEASES.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>tags</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing RELEASES.md.</td>
+  <td>tags node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>8</td>
-  <td><code>CONTENT.md</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>services</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing CONTENT.md.</td>
+  <td>services node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>9</td>
-  <td><code>CONTRIBUTING.md</code><br><small style="color:var(--muted)">CONTRIBUTING.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>montreal2027_tools.commands</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing CONTRIBUTING.md.</td>
+  <td>montreal2027_tools.commands node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>10</td>
-  <td><code>DEVELOPMENT.md</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>montreal2027_tools.in_memoriam_import_commands</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing DEVELOPMENT.md.</td>
+  <td>montreal2027_tools.in_memoriam_import_commands node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 <tr>
   <td>11</td>
-  <td><code>INTAKE.md</code><br><small style="color:var(--muted)">INTAKE.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing INTAKE.md.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>PROJECT_GUIDELINES.md</code><br><small style="color:var(--muted)">PROJECT_GUIDELINES.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing PROJECT_GUIDELINES.md.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>SOPS.md</code><br><small style="color:var(--muted)">SOPS.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing SOPS.md.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>STRUCTURE.md</code><br><small style="color:var(--muted)">STRUCTURE.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing STRUCTURE.md.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>TECHNICAL.md</code><br><small style="color:var(--muted)">TECHNICAL.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing TECHNICAL.md.</td>
+  <td>name node in custom/montreal2027_tools/drush.services.yml.</td>
 </tr>
 </table>
 
@@ -3858,39 +3744,167 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>checklists/CHECKLISTS.MD</code></td><td>2 nodes</td></tr>
-<tr><td><code>checklists/PRE-COMMIT.md</code></td><td>2 nodes</td></tr>
-<tr><td><code>checklists/PULL_REQUESTS.md</code></td><td>2 nodes</td></tr>
-<tr><td><code>CONTENT.md</code></td><td>1 nodes</td></tr>
-<tr><td><code>CONTRIBUTING.md</code></td><td>1 nodes</td></tr>
-<tr><td><code>DEVELOPMENT.md</code></td><td>1 nodes</td></tr>
-<tr><td><code>INTAKE.md</code></td><td>1 nodes</td></tr>
-<tr><td><code>PROJECT_GUIDELINES.md</code></td><td>1 nodes</td></tr>
+      <tr><td><code>custom/montreal2027_tools/drush.services.yml</code></td><td>11 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: references x17, contains x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x11. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 15. montreal2027_tools.module ====== -->
+<h2 id="montreal2027-tools-module">15. montreal2027_tools.module</h2>
+<p>montreal2027_tools.module groups implementation around montreal2027, tools, toolsmodule, web, mostly in custom/montreal2027_tools/montreal2027_tools.module. This section covers 9 nodes and 11 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: montreal2027_tools.module (9 nodes, 11 edges)
+    subgraph montreal2027_tools_module_custom_montreal2027_to_420a44e4["custom/montreal2027_tools/montreal2027_tools.module"]
+        web_modules_custom_montreal2027_tools_montreal20_f292689b("montreal2027_tools.module")
+        web_modules_custom_montreal2027_tools_montreal20_de53d245("montreal2027_tools_mail()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_5c2a481e("montreal2027_tools_theme()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_40e245e5("overview terms alter()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_13f69980("register form alter()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+        web_modules_custom_montreal2027_tools_montreal20_01796f10("term form alter()<br/><small>custom/montreal2027_tools/montreal2027_tools.module</small>")
+    end
+    subgraph montreal2027_tools_module_External_generated_07a82af8["External / generated"]
+        web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff("FormStateInterface")
+        entityforminterface_88f2c2e4("entityforminterface")
+        translatablemarkup_35311f6b("translatablemarkup")
+    end
+    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff
+    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| entityforminterface_88f2c2e4
+    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| translatablemarkup_35311f6b
+    class web_modules_custom_montreal2027_tools_montreal20_f292689b function;
+    class web_modules_custom_montreal2027_tools_montreal20_de53d245 function;
+    class web_modules_custom_montreal2027_tools_montreal20_5c2a481e function;
+    class web_modules_custom_montreal2027_tools_montreal20_40e245e5 function;
+    class web_modules_custom_montreal2027_tools_montreal20_13f69980 function;
+    class web_modules_custom_montreal2027_tools_montreal20_01796f10 function;
+    class web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff klass;
+    class entityforminterface_88f2c2e4 function;
+    class translatablemarkup_35311f6b function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>montreal2027_tools_form_taxonomy_overview_terms_alter()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_form_taxonomy_overview_terms_alter() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>montreal2027_tools_form_taxonomy_term_form_alter()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_form_taxonomy_term_form_alter() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>montreal2027_tools_form_user_register_form_alter()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_form_user_register_form_alter() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>montreal2027_tools_mail()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_mail() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>montreal2027_tools_theme()</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools_theme() node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>entityforminterface</code><br><code>FormStateInterface</code><br><code>translatablemarkup</code></td>
+  <td>montreal2027_tools.module node in custom/montreal2027_tools/montreal2027_tools.module.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>FormStateInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td>No direct outbound edge</td>
+  <td>FormStateInterface node in project.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>entityforminterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td>No direct outbound edge</td>
+  <td>entityforminterface node in project.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>translatablemarkup</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>montreal2027_tools.module</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.module</small></td>
+  <td>No direct outbound edge</td>
+  <td>translatablemarkup node in project.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>custom/montreal2027_tools/montreal2027_tools.module</code></td><td>6 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x5, references x3, imports x3. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 16. Other ====== -->
 <h2 id="other">16. Other</h2>
-<p>Other groups implementation around montreal2027, tools, web, modules, mostly in CONTENT.md, checklists/RELEASES.md, custom/montreal2027_tools/drush.services.yml. This section covers 133 nodes and 118 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Other groups implementation around montreal2027, web, custom, modules, mostly in custom/montreal2027_tools/montreal2027_tools.info.yml, custom/montreal2027_tools/montreal2027_tools.links.menu.yml, custom/montreal2027_tools/montreal2027_tools.permissions.yml. This section covers 51 nodes and 40 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Other (133 nodes, 118 edges)
-    subgraph other_External_generated_9e8859fa["External / generated"]
-        web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff("FormStateInterface")
-        entityforminterface_88f2c2e4("entityforminterface")
-        translatablemarkup_35311f6b("translatablemarkup")
-        drupal_core_form_configformbase_a753097b("Drupal\Core\Form\ConfigFormBase")
-        drupal_core_form_formstateinterface_4b20b46e("Drupal\Core\Form\FormStateInterface")
-        symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
-    end
+    %% Section: Other (51 nodes, 40 edges)
     subgraph other_src_Form_MontrealConfigurationForm_php_e6962e8b["src/Form/MontrealConfigurationForm.php"]
         web_modules_custom_montreal2027_tools_src_form_m_89e22596("MontrealConfigurationForm<br/><small>src/Form/MontrealConfigurationForm.php</small>")
         web_modules_custom_montreal2027_tools_src_form_m_13454c7e("MontrealConfigurationForm.php")
@@ -3899,44 +3913,49 @@ flowchart LR
         web_modules_custom_montreal2027_tools_src_form_m_c3383992("getEditableConfigNames()<br/><small>src/Form/MontrealConfigurationForm.php</small>")
         web_modules_custom_montreal2027_tools_src_form_m_7f0d2951("buildForm()<br/><small>src/Form/MontrealConfigurationForm.php</small>")
     end
+    subgraph other_custom_montreal2027_tools_montreal2027_too_36cf4aee["custom/montreal2027_tools/montreal2027_tools.config_translation.yml"]
+        web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8("base_route_name<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb("montreal2027 tools.config translation.yml<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_455963af("montreal2027_tools.settings<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_29619b50("names<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+        web_modules_custom_montreal2027_tools_montreal20_651ab53d("title<br/><small>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small>")
+    end
+    subgraph other_External_generated_9e8859fa["External / generated"]
+        drupal_core_form_configformbase_a753097b("Drupal\Core\Form\ConfigFormBase")
+        drupal_core_form_formstateinterface_4b20b46e("Drupal\Core\Form\FormStateInterface")
+        symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
+    end
     subgraph other_githooks_pre_commit_58d4070e[".githooks/pre-commit"]
         githooks_pre_commit_52616355("pre-commit")
         githooks_pre_commit_entry_af729878("pre-commit script<br/><small>.githooks/pre-commit</small>")
     end
-    subgraph other_custom_montreal2027_tools_drush_services_y_ee3b2a49["custom/montreal2027_tools/drush.services.yml"]
-        web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-        web_modules_custom_montreal2027_tools_drush_serv_13df128a("arguments<br/><small>custom/montreal2027_tools/drush.services.yml</small>")
-    end
-    web_modules_custom_montreal2027_tools_montreal20_f292689b("montreal2027_tools.module")
+    web_modules_custom_montreal2027_tools_montreal20_5df542b1("core_version_requirement<br/><small>custom/montreal2027_tools/montreal2027_tools.info.yml</small>")
     web_sites_default_settings_893897a6("settings.php")
     web_modules_custom_montreal2027_tools_src_form_m_89e22596 -->|method| web_modules_custom_montreal2027_tools_src_form_m_c73c706f
     web_modules_custom_montreal2027_tools_src_form_m_89e22596 -->|method| web_modules_custom_montreal2027_tools_src_form_m_73214705
     web_modules_custom_montreal2027_tools_src_form_m_89e22596 -->|method| web_modules_custom_montreal2027_tools_src_form_m_c3383992
     web_modules_custom_montreal2027_tools_src_form_m_89e22596 -->|method| web_modules_custom_montreal2027_tools_src_form_m_7f0d2951
-    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff
-    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| entityforminterface_88f2c2e4
-    web_modules_custom_montreal2027_tools_montreal20_f292689b -->|imports| translatablemarkup_35311f6b
     web_modules_custom_montreal2027_tools_src_form_m_13454c7e -->|imports| drupal_core_form_configformbase_a753097b
     web_modules_custom_montreal2027_tools_src_form_m_13454c7e -->|imports| drupal_core_form_formstateinterface_4b20b46e
     web_sites_default_settings_893897a6 -->|imports| symfony_component_dotenv_dotenv_20661c2d
-    %% Omitted for readability: 115 nodes, 0 edges
-    class web_modules_custom_montreal2027_tools_montreal20_0dc5a9ff klass;
-    class entityforminterface_88f2c2e4 function;
-    class translatablemarkup_35311f6b function;
-    class drupal_core_form_configformbase_a753097b klass;
-    class drupal_core_form_formstateinterface_4b20b46e klass;
-    class symfony_component_dotenv_dotenv_20661c2d ui;
+    %% Omitted for readability: 33 nodes, 0 edges
     class web_modules_custom_montreal2027_tools_src_form_m_89e22596 klass;
     class web_modules_custom_montreal2027_tools_src_form_m_13454c7e klass;
     class web_modules_custom_montreal2027_tools_src_form_m_c73c706f function;
     class web_modules_custom_montreal2027_tools_src_form_m_73214705 function;
     class web_modules_custom_montreal2027_tools_src_form_m_c3383992 function;
     class web_modules_custom_montreal2027_tools_src_form_m_7f0d2951 function;
+    class web_modules_custom_montreal2027_tools_montreal20_4ac5a7b8 api;
+    class web_modules_custom_montreal2027_tools_montreal20_9fb5d9fb function;
+    class web_modules_custom_montreal2027_tools_montreal20_455963af function;
+    class web_modules_custom_montreal2027_tools_montreal20_29619b50 function;
+    class web_modules_custom_montreal2027_tools_montreal20_651ab53d function;
+    class drupal_core_form_configformbase_a753097b klass;
+    class drupal_core_form_formstateinterface_4b20b46e klass;
+    class symfony_component_dotenv_dotenv_20661c2d ui;
     class githooks_pre_commit_52616355 function;
     class githooks_pre_commit_entry_af729878 function;
-    class web_modules_custom_montreal2027_tools_drush_serv_4b6bcea0 function;
-    class web_modules_custom_montreal2027_tools_drush_serv_13df128a function;
-    class web_modules_custom_montreal2027_tools_montreal20_f292689b function;
+    class web_modules_custom_montreal2027_tools_montreal20_5df542b1 function;
     class web_sites_default_settings_893897a6 module;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -3961,243 +3980,243 @@ flowchart LR
 </tr>
 <tr>
   <td>1</td>
-  <td><code>Content Entry</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>MontrealConfigurationForm</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Content Entry.</td>
+  <td><code>buildForm()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small><br><code>getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small><br><code>getFormId()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small><br>+1 more</td>
+  <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
   <td>2</td>
-  <td><code>Content Intake Flow</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.buildForm()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MontrealConfigurationForm</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Content Intake Flow.</td>
+  <td>.buildForm() node in src/Form/MontrealConfigurationForm.php.</td>
 </tr>
 <tr>
   <td>3</td>
-  <td><code>Contributing</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.getEditableConfigNames()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MontrealConfigurationForm</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Contributing.</td>
+  <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
   <td>4</td>
-  <td><code>Introduction</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.getFormId()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MontrealConfigurationForm</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Introduction.</td>
+  <td>.getFormId() node in src/Form/MontrealConfigurationForm.php.</td>
 </tr>
 <tr>
   <td>5</td>
-  <td><code>Managing Content Requests</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>.submitForm()</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>MontrealConfigurationForm</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Managing Content Requests.</td>
+  <td>.submitForm() node in src/Form/MontrealConfigurationForm.php.</td>
 </tr>
 <tr>
   <td>6</td>
-  <td><code>Montréal 2027 Content Entry and Translation Standard Operating Procedures &lt;!-- omit in toc --&gt;</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Form\ConfigFormBase</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>MontrealConfigurationForm.php</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Montréal 2027 Content Entry and Translation Standard Operating Procedures &lt;!-- omit in toc --&gt;.</td>
+  <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
   <td>7</td>
-  <td><code>Table of Contents &lt;!-- omit in toc --&gt;</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
-  <td>External entry / no inbound edge</td>
+  <td><code>Drupal\Core\Form\FormStateInterface</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>MontrealConfigurationForm.php</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Table of Contents &lt;!-- omit in toc --&gt;.</td>
+  <td>Drupal\Core\Form\FormStateInterface node in project.</td>
 </tr>
 <tr>
   <td>8</td>
-  <td><code>Team Structure</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>MontrealConfigurationForm.php</code><br><small style="color:var(--muted)">src/Form/MontrealConfigurationForm.php</small></td>
+  <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>Documentation node describing Team Structure.</td>
+  <td><code>Drupal\Core\Form\ConfigFormBase</code><br><code>Drupal\Core\Form\FormStateInterface</code></td>
+  <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 <tr>
   <td>9</td>
-  <td><code>Ticket Labels</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>montreal2027_tools.info.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Ticket Labels.</td>
+  <td>montreal2027_tools.info.yml node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>10</td>
-  <td><code>Ticket statuses</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>core_version_requirement</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Ticket statuses.</td>
+  <td>core_version_requirement node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>11</td>
-  <td><code>Tickets</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>dependencies</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Tickets.</td>
+  <td>dependencies node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>12</td>
-  <td><code>Workflow</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Workflow.</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>13</td>
-  <td><code>Workspaces</code><br><small style="color:var(--muted)">CONTENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Workspaces.</td>
+  <td>name node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>14</td>
-  <td><code>drush.services.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>package</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>drush.services.yml node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>package node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>15</td>
-  <td><code>arguments</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>type</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.info.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>arguments node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>type node in custom/montreal2027_tools/montreal2027_tools.info.yml.</td>
 </tr>
 <tr>
   <td>16</td>
-  <td><code>class</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>montreal2027_tools.links.menu.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>class node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>montreal2027_tools.links.menu.yml node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>17</td>
-  <td><code>tags</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>montreal2027_tools.settings</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>tags node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>montreal2027_tools.settings node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>18</td>
-  <td><code>arguments</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>arguments node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>19</td>
-  <td><code>class</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>parent</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>class node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>parent node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>20</td>
-  <td><code>tags</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
-  <td><span class="tag tag-func">Function</span></td>
+  <td><code>route_name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
+  <td><span class="tag tag-endpoint">API</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>tags node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>route_name node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>21</td>
-  <td><code>services</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>services node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>title node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
 </tr>
 <tr>
   <td>22</td>
-  <td><code>montreal2027_tools.commands</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.commands node in custom/montreal2027_tools/drush.services.yml.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>montreal2027_tools.in_memoriam_import_commands</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
-  <td><span class="tag tag-cmd">Entry</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>montreal2027_tools.in_memoriam_import_commands node in custom/montreal2027_tools/drush.services.yml.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>name</code><br><small style="color:var(--muted)">custom/montreal2027_tools/drush.services.yml</small></td>
+  <td><code>weight</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.links.menu.yml</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>name node in custom/montreal2027_tools/drush.services.yml.</td>
+  <td>weight node in custom/montreal2027_tools/montreal2027_tools.links.menu.yml.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>montreal2027_tools.permissions.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>montreal2027_tools.permissions.yml node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>publish in_memoriam content</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>publish in_memoriam content node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>25</td>
-  <td><code>Branching Strategy</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Branching Strategy.</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>26</td>
-  <td><code>Development &lt;!-- omit from toc --&gt;</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Development &lt;!-- omit from toc --&gt;.</td>
+  <td>title node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>27</td>
-  <td><code>Development workflow</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>view any unpublished in_memoriam content</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Development workflow.</td>
+  <td>view any unpublished in_memoriam content node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>28</td>
-  <td><code>Drupal Configuration and Local Data</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>description</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Drupal Configuration and Local Data.</td>
+  <td>description node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>29</td>
-  <td><code>Feature work</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>title</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.permissions.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Feature work.</td>
+  <td>title node in custom/montreal2027_tools/montreal2027_tools.permissions.yml.</td>
 </tr>
 <tr>
   <td>30</td>
-  <td><code>Hotfixes</code><br><small style="color:var(--muted)">DEVELOPMENT.md</small></td>
-  <td><span class="tag tag-func">Concept</span></td>
+  <td><code>montreal2027_tools.config_translation.yml</code><br><small style="color:var(--muted)">custom/montreal2027_tools/montreal2027_tools.config_translation.yml</small></td>
+  <td><span class="tag tag-func">Function</span></td>
   <td>External entry / no inbound edge</td>
   <td>No direct outbound edge</td>
-  <td>Documentation node describing Hotfixes.</td>
+  <td>Reads, resolves, or persists project configuration.</td>
 </tr>
 </table>
 
@@ -4206,19 +4225,19 @@ flowchart LR
     <h4>Key Files</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>CONTENT.md</code></td><td>13 nodes</td></tr>
-<tr><td><code>checklists/RELEASES.md</code></td><td>13 nodes</td></tr>
-<tr><td><code>custom/montreal2027_tools/drush.services.yml</code></td><td>11 nodes</td></tr>
-<tr><td><code>DEVELOPMENT.md</code></td><td>10 nodes</td></tr>
-<tr><td><code>ISSUES.md</code></td><td>10 nodes</td></tr>
-<tr><td><code>PROJECT_GUIDELINES.md</code></td><td>8 nodes</td></tr>
-<tr><td><code>SOPS.md</code></td><td>8 nodes</td></tr>
-<tr><td><code>custom/montreal2027_tools/montreal2027_tools.info.yml</code></td><td>7 nodes</td></tr>
+      <tr><td><code>custom/montreal2027_tools/montreal2027_tools.info.yml</code></td><td>7 nodes</td></tr>
+<tr><td><code>custom/montreal2027_tools/montreal2027_tools.links.menu.yml</code></td><td>7 nodes</td></tr>
+<tr><td><code>custom/montreal2027_tools/montreal2027_tools.permissions.yml</code></td><td>7 nodes</td></tr>
+<tr><td><code>src/Form/MontrealConfigurationForm.php</code></td><td>6 nodes</td></tr>
+<tr><td><code>custom/montreal2027_tools/montreal2027_tools.config_translation.yml</code></td><td>5 nodes</td></tr>
+<tr><td><code>.githooks/pre-commit</code></td><td>2 nodes</td></tr>
+<tr><td><code>docker/web/entrypoint.sh</code></td><td>2 nodes</td></tr>
+<tr><td><code>scripts/setup-graphify.sh</code></td><td>2 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x102, imports x6, references x5, method x4. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x30, method x4, imports x3, references x2. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -4229,17 +4248,17 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>885</td></tr>
-      <tr><td>Edges</td><td>1096</td></tr>
+      <tr><td>Nodes</td><td>807</td></tr>
+      <tr><td>Edges</td><td>1010</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
-      <tr><td>Communities</td><td>81</td></tr>
+      <tr><td>Communities</td><td>72</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>1096</td></tr>
+      <tr><td>EXTRACTED</td><td>1010</td></tr>
       <tr><td>INFERRED</td><td>0</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -4248,7 +4267,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>montreal2027.ca — Architecture Documentation</p>
-  <p>Generated: 2026-11-10 19:09 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-11-11 04:47 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->
