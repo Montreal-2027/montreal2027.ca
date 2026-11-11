@@ -554,4 +554,14 @@ function montreal2027_preprocess_node(&$variables)
             $variables['content']['field_carousel_items']['#access'] = false;
         }
     }
+
+    // Attach the umap feature switcher only on pages that embed a umap map.
+    if (
+        $node->bundle() === 'page'
+        && ($variables['view_mode'] ?? '') === 'full'
+        && $node->hasField('body')
+        && str_contains((string) $node->get('body')->value, 'umap.osm.ch')
+    ) {
+        $variables['#attached']['library'][] = 'montreal2027/umap-feature';
+    }
 }
