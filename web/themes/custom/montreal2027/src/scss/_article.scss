@@ -102,7 +102,6 @@ article {
       & .hotel {
         &-landing_page {
           display: grid;
-          grid-template-rows: 1fr 1fr;
 
           @container page-wrapper (min-width: 1200px) {
             grid-template-columns: 1fr 1fr;
