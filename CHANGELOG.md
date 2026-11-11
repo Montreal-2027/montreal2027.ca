@@ -8,6 +8,7 @@
 - Additional roles for team members ([#238](https://github.com/Montreal-2027/montreal2027.ca/issues/238))
 - Changed page background ([#252](https://github.com/Montreal-2027/montreal2027.ca/issues/252))
 - In Memoriam visibility changes made in prod
+- Interactive map for hotel landing page ([#131](https://github.com/Montreal-2027/montreal2027.ca/issues/131))
 
 ## 1.1.2 (2026-11-05 Hotfix)
 - Added access hook for In Memoriam role/content type to allow viewing and publishing of unpublished content regardless of owner

@@ -17,3 +17,11 @@ global:
   dependencies:
     # - core/once
     - clean_blog_theme/global-css
+
+# Updates the embedded umap iframe `feature` param when a details opens.
+umap-feature:
+  js:
+    js/umap-feature.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
