@@ -1,22 +1,22 @@
-# Graph Report - montreal2027.ca  (2026-11-11)
+# Graph Report - montreal2027.ca  (2026-11-12)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 807 nodes · 1010 edges · 72 communities (57 shown, 15 thin omitted)
+- 801 nodes · 1005 edges · 71 communities (57 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `93dd8ac6`
+- Built from commit: `321bed96`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - require
-- WorkspaceMenuTreeManipulatorTest.php
 - Drupal\migrate\Row
+- WorkspaceMenuTreeManipulatorTest.php
 - StaffContactController
 - composer.json
 - db
@@ -31,8 +31,8 @@
 - montreal2027.theme
 - montreal2027_tools.staff_contact_submit
 - twig.config
-- global
 - mapping
+- global
 - montreal2027_tools.guest_settings
 - format
 - montreal2027_tools.commands
@@ -97,22 +97,22 @@
 ## Import Cycles
 - None detected.
 
-## Communities (72 total, 15 thin omitted)
+## Communities (71 total, 14 thin omitted)
 
 ### Community 0 - "require"
 Cohesion: 0.03
 Nodes (68): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+60 more)
 
-### Community 1 - "WorkspaceMenuTreeManipulatorTest.php"
-Cohesion: 0.07
-Nodes (5): InMemoriamAccessHooks, SuperfishHooks, WorkspaceMenuTreeManipulator, InMemoriamAccessHooksTest, WorkspaceMenuTreeManipulatorTest
-
-### Community 2 - "Drupal\migrate\Row"
+### Community 1 - "Drupal\migrate\Row"
 Cohesion: 0.08
 Nodes (6): InMemoriamCategories, InMemoriamDate, InMemoriamNodeLookup, InMemoriamSortDate, InMemoriamTrim, InMemoriamSpreadsheet
 
-### Community 3 - "StaffContactController"
+### Community 2 - "WorkspaceMenuTreeManipulatorTest.php"
 Cohesion: 0.07
+Nodes (5): InMemoriamAccessHooks, SuperfishHooks, WorkspaceMenuTreeManipulator, InMemoriamAccessHooksTest, WorkspaceMenuTreeManipulatorTest
+
+### Community 3 - "StaffContactController"
+Cohesion: 0.08
 Nodes (3): StaffContactController, StaffPageController, LanguageToggleBlock
 
 ### Community 4 - "composer.json"
@@ -163,13 +163,13 @@ Nodes (17): _controller, _form, _title, montreal2027_tools.settings, defaults, p
 Cohesion: 0.11
 Nodes (17): class, arguments, class, tags, arguments, parent, parameters, http.response.debug_cacheability_headers (+9 more)
 
-### Community 17 - "global"
-Cohesion: 0.12
-Nodes (15): css/montreal2027.min.css, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css, base, global, css, dependencies, js, minified (+7 more)
-
-### Community 18 - "mapping"
+### Community 17 - "mapping"
 Cohesion: 0.15
 Nodes (13): slide_count, slide_title_1, slide_url_1, slide_url_6, mapping, label, type, label (+5 more)
+
+### Community 18 - "global"
+Cohesion: 0.17
+Nodes (11): css/montreal2027.min.css, https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css, base, global, css, dependencies, js, minified (+3 more)
 
 ### Community 19 - "montreal2027_tools.guest_settings"
 Cohesion: 0.18
@@ -329,8 +329,8 @@ Nodes (3): slideshow_display, label, type
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `graphify-mcp`, `npx`, `obscura`, `@edictum/captatum`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 445 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 442 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -343,9 +343,9 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected._
 - **Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `slide_image_4`, `slide_image_5`, `slide_image_7`, `slide_image_8`, `include_fontawesome`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?**
-  _Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected._
+- **Should `Drupal\migrate\Row` be split into smaller, more focused modules?**
+  _Cohesion score 0.0750151240169389 - nodes in this community are weakly interconnected._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Should `Drupal\migrate\Row` be split into smaller, more focused modules?**
-  _Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected._
+- **Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?**
+  _Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected._
