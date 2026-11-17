@@ -4,23 +4,23 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 802 nodes · 1006 edges · 71 communities (57 shown, 14 thin omitted)
+- 801 nodes · 1005 edges · 71 communities (57 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3d0e165a`
+- Built from commit: `8985a1e1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - require
+- Drupal\migrate\Row
 - WorkspaceMenuTreeManipulatorTest.php
 - StaffContactController
-- Drupal\migrate\Row
 - composer.json
-- InMemoriamImportCommands.php
 - db
+- InMemoriamImportCommands.php
 - steps
 - regions
 - installer-paths
@@ -84,8 +84,8 @@
 3. `StaffContactController` - 16 edges
 4. `regions` - 16 edges
 5. `InMemoriamImportCommands` - 15 edges
-6. `allow-plugins` - 14 edges
-7. `WorkspaceMenuTreeManipulatorTest` - 13 edges
+6. `WorkspaceMenuTreeManipulatorTest` - 13 edges
+7. `allow-plugins` - 13 edges
 8. `InMemoriamNodeLookup` - 12 edges
 9. `InMemoriamAccessHooksTest` - 11 edges
 10. `installer-paths` - 11 edges
@@ -103,23 +103,23 @@
 Cohesion: 0.03
 Nodes (68): require, composer/installers, cweagans/composer-patches, drupal/admin_theme, drupal/admin_toolbar, drupal/block_field, drupal/chosen, drupal/ckeditor5_open_new_tab (+60 more)
 
-### Community 1 - "WorkspaceMenuTreeManipulatorTest.php"
+### Community 1 - "Drupal\migrate\Row"
+Cohesion: 0.08
+Nodes (6): InMemoriamCategories, InMemoriamDate, InMemoriamNodeLookup, InMemoriamSortDate, InMemoriamTrim, InMemoriamSpreadsheet
+
+### Community 2 - "WorkspaceMenuTreeManipulatorTest.php"
 Cohesion: 0.07
 Nodes (5): InMemoriamAccessHooks, SuperfishHooks, WorkspaceMenuTreeManipulator, InMemoriamAccessHooksTest, WorkspaceMenuTreeManipulatorTest
 
-### Community 2 - "StaffContactController"
-Cohesion: 0.07
+### Community 3 - "StaffContactController"
+Cohesion: 0.08
 Nodes (3): StaffContactController, StaffPageController, LanguageToggleBlock
-
-### Community 3 - "Drupal\migrate\Row"
-Cohesion: 0.09
-Nodes (6): InMemoriamCategories, InMemoriamDate, InMemoriamNodeLookup, InMemoriamSortDate, InMemoriamTrim, InMemoriamSpreadsheet
 
 ### Community 4 - "composer.json"
 Cohesion: 0.05
-Nodes (37): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+29 more)
+Nodes (36): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+28 more)
 
-### Community 6 - "db"
+### Community 5 - "db"
 Cohesion: 0.07
 Nodes (29): internal, name, command, container_name, name, environment, healthcheck, image (+21 more)
 
@@ -329,7 +329,7 @@ Nodes (3): slideshow_display, label, type
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `graphify-mcp`, `npx`, `obscura`, `@edictum/captatum`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 443 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 442 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -343,9 +343,9 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.029411764705882353 - nodes in this community are weakly interconnected._
 - **Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `slide_image_4`, `slide_image_5`, `slide_image_7`, `slide_image_8`, `include_fontawesome`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?**
-  _Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected._
+- **Should `Drupal\migrate\Row` be split into smaller, more focused modules?**
+  _Cohesion score 0.0750151240169389 - nodes in this community are weakly interconnected._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Should `StaffContactController` be split into smaller, more focused modules?**
-  _Cohesion score 0.06862745098039216 - nodes in this community are weakly interconnected._
+- **Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?**
+  _Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected._
