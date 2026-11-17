@@ -12,6 +12,7 @@ dependencies:
     - help
     - media
     - media_gallery
+    - montreal2027_tools
     - node
     - system
     - taxonomy
@@ -36,9 +37,11 @@ permissions:
   - 'delete terms in in_memoriam'
   - 'edit any in_memoriam content'
   - 'edit terms in in_memoriam'
+  - 'publish in_memoriam content'
   - 'revert in_memoriam revisions'
   - 'use text format basic_html'
   - 'use text format full_html'
+  - 'view any unpublished in_memoriam content'
   - 'view media'
   - 'view own unpublished content'
   - 'view published media gallery entities'

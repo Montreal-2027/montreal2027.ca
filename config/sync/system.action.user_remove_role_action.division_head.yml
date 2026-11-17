@@ -1,0 +1,14 @@
+uuid: 00dc5213-8da1-43e2-8352-646c0f8ce42a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.division_head
+  module:
+    - user
+id: user_remove_role_action.division_head
+label: 'Remove the Division Head role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: division_head

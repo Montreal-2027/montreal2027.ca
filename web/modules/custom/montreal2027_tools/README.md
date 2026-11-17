@@ -2,6 +2,39 @@
 
 Custom utility module for Montreal 2027 operations.
 
+## In Memoriam Access
+
+The `in_memoriam` role can view unpublished In Memoriam entries from any author,
+including in access-checked content listings, and edit and publish those entries.
+The module supplies `view any unpublished in_memoriam content` and
+`publish in_memoriam content`; editing uses the existing
+`edit any in_memoriam content` permission.
+
+These permissions do not grant access to unpublished content or publication
+controls for other content types. Existing workspace and private-content editing
+restrictions remain in force. Published content retains its existing access rules.
+
+Deploy with database updates, configuration import, and cache rebuild:
+
+```bash
+docker compose exec web vendor/bin/drush updatedb -y
+docker compose exec web vendor/bin/drush config:import -y
+docker compose exec web vendor/bin/drush cr
+```
+
+The post-update rebuilds node access grants for existing entries; new or updated
+entries receive grants automatically.
+
+With PHPUnit and Drupal's development test dependencies installed, run:
+
+```bash
+docker compose exec web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
+  web/modules/custom/montreal2027_tools/tests/src/Unit/InMemoriamAccessHooksTest.php
+```
+
+Tests cover authenticated grants, owner-independent access records, publication
+permissions, cacheability, and boundaries for other bundles and fields.
+
 ## Workspace Menu Preview
 
 Superfish requires a parent's `hasChildren` flag to render its submenu. Drupal

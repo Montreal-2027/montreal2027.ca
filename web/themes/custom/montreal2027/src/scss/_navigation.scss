@@ -112,8 +112,9 @@
     top: 3.5rem;
     box-sizing: border-box;
     overflow-wrap: anywhere;
-    width: 25vw;
-    width: 25dvw;
+    max-width: 100vw;
+    max-width: 100dvw;
+    width: max-content;
     z-index: 650;
 
     &.collapsing {

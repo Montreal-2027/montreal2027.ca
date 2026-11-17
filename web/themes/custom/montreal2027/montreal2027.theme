@@ -2,6 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_entity_type_alter().
@@ -20,6 +21,10 @@ function montreal2027_entity_type_alter(array &$entity_types)
  */
 function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
+    if ($form_id === 'user_logout_confirm') {
+        $form['actions']['submit']['#theme_wrappers'] = ['input__submit__logout_confirm'];
+    }
+
     if ($form_id === 'search_block_form') {
         $form['keys']['#attributes']['placeholder'] = \Drupal::translation()->translate('I am looking for');
     }
@@ -34,6 +39,34 @@ function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_i
             // Add the Font Awesome icon markup via #prefix
             $form['actions']['submit']['#prefix'] = '<button type="submit" value="Search"><i class="fa-solid fa-magiifying-glass"></i>'; // Replace fa-search with your desired icon
             $form['actions']['submit']['#suffix'] = '</button>';
+        }
+    }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for links__toolbar_user.
+ */
+function montreal2027_preprocess_links__toolbar_user(array &$variables): void
+{
+    $logout_url = $variables['links']['logout']['link']['#url'] ?? NULL;
+    if ($logout_url instanceof Url && $logout_url->getRouteName() === 'user.logout') {
+        $variables['links']['logout']['link']['#url'] = Url::fromRoute('user.logout.confirm');
+    }
+}
+
+/**
+ * Implements hook_preprocess_superfish_menu_items().
+ */
+function montreal2027_preprocess_superfish_menu_items(array &$variables): void
+{
+    foreach ($variables['menu_items'] as &$item) {
+        foreach (['link', 'link_menuparent'] as $key) {
+            $url = $item[$key]['#url'];
+            if ($url instanceof Url && $url->isRouted() && $url->getRouteName() === 'user.logout') {
+                $options = $url->getOptions();
+                unset($options['query']['token'], $item[$key]['#options']['query']['token']);
+                $item[$key]['#url'] = Url::fromRoute('user.logout.confirm', [], $options);
+            }
         }
     }
 }

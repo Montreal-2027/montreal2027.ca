@@ -23,6 +23,7 @@
     & .form--inline {
         display: flex;
         flex-direction: row;
+        gap: 1rem;
 
         & .form-actions {
             & .button {
@@ -32,11 +33,6 @@
                 box-sizing: border-box;
                 color: var(--color-bright-red);
                 transition: transform 0.1s ease, box-shadow 0.1s ease;
-
-                // &:hover {
-                //     transform: translateY(5px);
-                //     @include drop-shadow-slight(0 0 0);
-                // }
             }
         }
 

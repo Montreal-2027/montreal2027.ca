@@ -1,4 +1,7 @@
 services:
+  Drupal\montreal2027_tools\Hook\InMemoriamAccessHooks:
+    class: Drupal\montreal2027_tools\Hook\InMemoriamAccessHooks
+
   montreal2027_tools.workspace_menu_tree_manipulator:
     class: Drupal\montreal2027_tools\Menu\WorkspaceMenuTreeManipulator
     arguments: ['@?workspaces.manager']
@@ -6,4 +9,3 @@ services:
   Drupal\montreal2027_tools\Hook\SuperfishHooks:
     class: Drupal\montreal2027_tools\Hook\SuperfishHooks
     arguments: ['@montreal2027_tools.workspace_menu_tree_manipulator']
-

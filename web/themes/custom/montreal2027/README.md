@@ -59,7 +59,7 @@ Header and navigation
 - Compact mode keeps the language switcher at the header's lower-right and hides the navigation-bar social icons; footer social icons remain available.
 - `_region.scss` overrides the language-toggle module's 992px desktop positioning until the theme's 1200px breakpoint.
 - The Bootstrap main-menu template uses `navbar-expand-xl`.
-- Expanded hamburger menus use `25dvw` (25% of dynamic viewport width), with a `25vw` fallback.
+- Expanded hamburger menus size to their widest visible item, including existing link/panel padding, and are capped at the viewport width.
 - The active menu is the Superfish block `montreal2027_mainnavigation_2`, not the Bootstrap template.
 - Its `smallbp` and `touchbp` settings must both be 1200 to match the theme.
 

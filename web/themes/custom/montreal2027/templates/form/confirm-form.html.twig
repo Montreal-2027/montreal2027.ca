@@ -1,0 +1,9 @@
+{% if form['#form_id'] == 'user_logout_confirm' %}
+  <div class="logout-confirmation">
+    <h1 class="logout-confirmation__title">{{ 'Are you sure you want to log out?'|t }}</h1>
+    <p class="logout-confirmation__message">{{ 'You can sign back in at any time.'|t }}</p>
+    {{ form }}
+  </div>
+{% else %}
+  {{ form }}
+{% endif %}

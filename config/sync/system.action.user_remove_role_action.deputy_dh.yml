@@ -1,0 +1,14 @@
+uuid: 7d7588cb-850c-4e63-90a7-115d5e73aa49
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.deputy_dh
+  module:
+    - user
+id: user_remove_role_action.deputy_dh
+label: 'Remove the Deputy Division Head role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: deputy_dh
