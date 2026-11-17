@@ -1,0 +1,21 @@
+uuid: 63ef84e3-f8d3-41c1-849d-2bf3ab0dd569
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+    - node.type.carousel_slide
+  module:
+    - datetime
+id: node.carousel_slide.field_end_date
+field_name: field_end_date
+entity_type: node
+bundle: carousel_slide
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

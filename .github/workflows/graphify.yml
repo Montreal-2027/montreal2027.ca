@@ -19,8 +19,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v7
         with:
-          # CRITICAL ADDITION: Persists the GitHub token credentials so the 
-          # git-auto-commit-action step below can successfully push the map files back.
+          # Persist credentials for the graph publishing step.
           persist-credentials: true
           fetch-depth: 0
 
@@ -118,14 +117,14 @@ jobs:
 
       - name: Safely Inject Copilot Instructions
         run: |
-          TARGET_FILE="AGENTS.md"
-          INSTRUCTION_LINE="Always reference graphify-out/GRAPH_REPORT.md to understand code architecture context before answering queries."
+          TARGET_FILE=".github/copilot-instructions.md"
+          INSTRUCTION_LINE="Consult graphify-out/GRAPH_REPORT.md for broad context."
           
           # Create the file if it doesn't exist
           if [ ! -f "$TARGET_FILE" ]; then
-            echo "# Montreal 2027 WorldCon Website - AI Assistant Guide" > "$TARGET_FILE"
+            echo "# Montreal 2027 WorldCon Website" > "$TARGET_FILE"
             echo "" >> "$TARGET_FILE"
-            echo "This guide serves as the single source of truth for AI assistants working with this Drupal 11 codebase." >> "$TARGET_FILE"
+            echo "This file serves as the single source of truth for AI agents working with this Drupal 11 codebase." >> "$TARGET_FILE"
             echo "" >> "$TARGET_FILE"
           fi
           
@@ -145,8 +144,8 @@ jobs:
       - name: Commit Graphify Instructions
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore(graphify): update graphify context in AGENTS.md [skip ci]"
-          file_pattern: "AGENTS.md"
+          commit_message: "chore(graphify): update graphify context in copilot-instructions.md [skip ci]"
+          file_pattern: ".github/copilot-instructions.md"
 
       # PART B: Push the heavy graph data to the separate 'graph-data' branch
       - name: Push Graph to Shadow Branch

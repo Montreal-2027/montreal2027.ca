@@ -1,0 +1,29 @@
+uuid: 941b36ef-1df9-4c1e-9cdf-a18136a8fcf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_image
+    - media.type.nc_hero_image
+    - node.type.carousel_slide
+id: node.carousel_slide.field_hero_image
+field_name: field_hero_image
+entity_type: node
+bundle: carousel_slide
+label: 'Slide Background'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      nc_hero_image: nc_hero_image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: hero_image
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: cc219178-1c20-471a-9712-09df5e1ac156
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+    - node.type.carousel_slide
+  module:
+    - datetime
+id: node.carousel_slide.field_start_date
+field_name: field_start_date
+entity_type: node
+bundle: carousel_slide
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

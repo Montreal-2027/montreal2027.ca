@@ -1,0 +1,53 @@
+uuid: 30ba5ec7-c065-4491-8f8b-76442b91b30f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.carousel_slide.body
+    - field.field.node.carousel_slide.field_carousel_type
+    - field.field.node.carousel_slide.field_end_date
+    - field.field.node.carousel_slide.field_hero_image
+    - field.field.node.carousel_slide.field_slide_title
+    - field.field.node.carousel_slide.field_start_date
+    - field.field.node.carousel_slide.field_submitted_email
+    - node.type.carousel_slide
+  module:
+    - private_content
+    - text
+    - user
+id: node.carousel_slide.teaser
+targetEntityType: node
+bundle: carousel_slide
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  private:
+    type: private
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_workspace_status: true
+  field_carousel_type: true
+  field_end_date: true
+  field_hero_image: true
+  field_slide_title: true
+  field_start_date: true
+  field_submitted_email: true
+  langcode: true
+  search_api_excerpt: true

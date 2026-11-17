@@ -59,6 +59,7 @@
 atlassian-ide-plugin.xml
 out/
 phpcs.xml
+!/phpcs.xml
 /.editorconfig
 /.gitattributes
 /web/libraries

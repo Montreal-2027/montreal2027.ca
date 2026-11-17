@@ -1,0 +1,21 @@
+uuid: 814f2c4c-d1ae-4afb-a355-119600f1dfeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - private_content
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  private_content:
+    private: 1
+name: 'Carousel Slide'
+type: carousel_slide
+description: 'Carousel Slides'
+help: 'Use this to add or change a news carousel slide'
+new_revision: true
+preview_mode: 0
+display_submitted: true

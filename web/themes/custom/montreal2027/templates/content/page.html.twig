@@ -95,14 +95,16 @@
       <div id="top-of-page"></div>
 
   {# Carousel for home page #}
-  {% set current_node = current_node ?? (node ?? null) %}
-  {% set items = carousel_items ?? [] %}
-  {% set has_carousel = items|length > 0 %}
+  {% set slides = carousel_slides ?? [] %}
+  {% set has_carousel = slides|length > 0 %}
   {% if has_carousel %}
-    <div id="news-carousel" class="news-carousel carousel slide" data-bs-ride="carousel">
-      {% if items|length > 1 %}
+<div id="news-carousel" class="news-carousel carousel slide" data-bs-ride="carousel" data-bs-interval="3000" role="region"
+
+      aria-roledescription="{{ 'carousel'|t }}" aria-label="{{ 'Featured content'|t }}"
+      aria-live="polite">
+      {% if slides|length > 1 %}
         <div class="carousel-indicators">
-          {% for item in items %}
+          {% for item in slides %}
             <button type="button" data-bs-target="#news-carousel" data-bs-slide-to="{{ loop.index0 }}"
               class="{{ loop.first ? 'active' }}" {{ loop.first ? 'aria-current="true"' }}
               aria-label="{{ 'Slide @n'|t({'@n': loop.index}) }}"></button>
@@ -110,26 +112,23 @@
         </div>
       {% endif %}
       <div class="carousel-inner">
-        {% for item in items %}
-          <div class="carousel-item {{ loop.first ? 'active' }}">
-            {% if item and item.field_hero_image is defined and not item.field_hero_image.isEmpty() and item.field_hero_image.entity and item.field_hero_image.entity.field_media_image is defined and not item.field_hero_image.entity.field_media_image.isEmpty() %}
-              {% set image_target_id = item.field_hero_image.entity.field_media_image.target_id %}
-              {% if image_target_id %}
-                <div class="news-carousel__image">
-                  {{ drupal_image(image_target_id, 'nc_hero_image', {alt: item.field_hero_image.entity.field_media_image.alt, class: 'd-block w-100'}) }}
-                </div>
-              {% endif %}
+        {% for item in slides %}
+          <div class="carousel-item {{ loop.first ? 'active' }}" role="group"
+            aria-roledescription="{{ 'slide'|t }}"
+            aria-label="{{ 'Slide @n of @count'|t({'@n': loop.index, '@count': loop.length}) }}">
+            {% if item.bground_image_id %}
+              <div class="news-carousel__image">
+                {{ drupal_image(item.bground_image_id, 'nc_hero_image', {alt: item.bground_image_alt ?? '', class: 'd-block w-100'}) }}
+              </div>
             {% endif %}
-            {% set has_title = item.field_title is defined and not item.field_title.isEmpty() %}
-            {% set has_content = item.field_news_content is defined and not item.field_news_content.isEmpty() %}
-            {% if has_title or has_content %}
+            {% if item.title or item.body %}
               <div class="carousel-caption news-carousel__caption">
                 <div class="news-carousel__panel">
-                  {% if has_title %}
-                    <h2 class="news-carousel__title">{{ item.field_title.value }}</h2>
+                  {% if item.title %}
+                    <h2 class="news-carousel__title">{{ item.title }}</h2>
                   {% endif %}
-                  {% if has_content %}
-                    <div class="news-carousel__content">{{ item.field_news_content.value|raw }}</div>
+                  {% if item.body %}
+                    <div class="news-carousel__content">{{ item.body }}</div>
                   {% endif %}
                 </div>
               </div>
@@ -137,7 +136,7 @@
           </div>
         {% endfor %}
       </div>
-      {% if items|length > 1 %}
+      {% if slides|length > 1 %}
         <button class="carousel-control-prev" type="button" data-bs-target="#news-carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">{{ 'Previous'|t }}</span>

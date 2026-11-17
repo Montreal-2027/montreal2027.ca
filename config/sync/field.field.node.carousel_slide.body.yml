@@ -1,0 +1,26 @@
+uuid: ff7e4b97-12ec-432f-a6aa-41bb8a879b11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.carousel_slide
+  module:
+    - text
+id: node.carousel_slide.body
+field_name: body
+entity_type: node
+bundle: carousel_slide
+label: 'Slide Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

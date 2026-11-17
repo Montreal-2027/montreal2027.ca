@@ -3,17 +3,38 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.carousel_item.field_carousel_type
+    - field.field.paragraph.carousel_item.field_end_date
     - field.field.paragraph.carousel_item.field_hero_image
     - field.field.paragraph.carousel_item.field_news_content
+    - field.field.paragraph.carousel_item.field_start_date
     - field.field.paragraph.carousel_item.field_title
     - paragraphs.paragraphs_type.carousel_item
   module:
+    - datetime
     - text
 id: paragraph.carousel_item.default
 targetEntityType: paragraph
 bundle: carousel_item
 mode: default
 content:
+  field_carousel_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_hero_image:
     type: entity_reference_entity_view
     label: above
@@ -29,6 +50,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_title:
     type: string

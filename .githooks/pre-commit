@@ -29,7 +29,7 @@ DRUSH=""
 
 # Check if Docker containers are running
 if docker compose ps web 2>/dev/null | grep -q "Up"; then
-    DRUSH="docker compose exec -T web drush"
+    DRUSH="docker exec -i montreal2027-web drush"
     echo -e "${YELLOW}Using Docker environment${NC}"
 elif command -v drush &> /dev/null; then
     DRUSH="drush"
@@ -57,8 +57,8 @@ if $DRUSH config:status --state=Different 2>/dev/null | grep -q "Different"; the
     $DRUSH config:status --state=Different
     echo ""
     echo -e "${YELLOW}Please export configuration before committing:${NC}"
-    if [[ "$DRUSH" == *"docker compose" ]]; then
-        echo "  docker compose exec web drush cex"
+    if [[ "$DRUSH" == *"docker exec"* ]]; then
+        echo "  docker exec montreal2027-web drush cex"
     else
         echo "  drush cex"
     fi

@@ -3,18 +3,56 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.carousel_item.field_carousel_type
+    - field.field.paragraph.carousel_item.field_end_date
     - field.field.paragraph.carousel_item.field_hero_image
     - field.field.paragraph.carousel_item.field_news_content
+    - field.field.paragraph.carousel_item.field_start_date
     - field.field.paragraph.carousel_item.field_title
     - paragraphs.paragraphs_type.carousel_item
   module:
+    - datetime
+    - field_group
+    - maxlength
     - media_library
     - text
+third_party_settings:
+  field_group:
+    group_advanced_options:
+      children:
+        - field_carousel_type
+        - field_start_date
+        - field_end_date
+      label: 'Advanced Options'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
 id: paragraph.carousel_item.default
 targetEntityType: paragraph
 bundle: carousel_item
 mode: default
 content:
+  field_carousel_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_end_date:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_hero_image:
     type: media_library_widget
     weight: 1
@@ -29,6 +67,16 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 250
+        maxlength_js_label: ''
+        maxlength_js_enforce: true
+  field_start_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_title:
     type: string_textfield
@@ -37,7 +85,11 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 90
+        maxlength_js_label: ''
+        maxlength_js_enforce: true
   translation:
     weight: 10
     region: content

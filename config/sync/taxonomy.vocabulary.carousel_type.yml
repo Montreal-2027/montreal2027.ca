@@ -1,0 +1,9 @@
+uuid: 097e1629-88b9-436d-9181-dbdee0206e6e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Carousel Type'
+vid: carousel_type
+description: 'Types of carousels'
+weight: 0
+new_revision: false

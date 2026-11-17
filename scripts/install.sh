@@ -21,7 +21,7 @@ echo "Running sync.sh..."
 sh ./scripts/sync.sh
 
 echo "Building theme assets in the container..."
-docker-compose exec -T web bash -c "cd web/themes/custom/montreal2027 && npm install && npm run build:css"
+docker exec -i montreal2027-web bash -c "cd web/themes/custom/montreal2027 && npm install && npm run build:css"
 
 touch "$INSTALL_FLAG"
 

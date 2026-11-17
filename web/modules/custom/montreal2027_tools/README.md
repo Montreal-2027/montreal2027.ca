@@ -17,9 +17,9 @@ restrictions remain in force. Published content retains its existing access rule
 Deploy with database updates, configuration import, and cache rebuild:
 
 ```bash
-docker compose exec web vendor/bin/drush updatedb -y
-docker compose exec web vendor/bin/drush config:import -y
-docker compose exec web vendor/bin/drush cr
+docker exec montreal2027-web vendor/bin/drush updatedb -y
+docker exec montreal2027-web vendor/bin/drush config:import -y
+docker exec montreal2027-web vendor/bin/drush cr
 ```
 
 The post-update rebuilds node access grants for existing entries; new or updated
@@ -28,7 +28,7 @@ entries receive grants automatically.
 With PHPUnit and Drupal's development test dependencies installed, run:
 
 ```bash
-docker compose exec web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
+docker exec montreal2027-web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
   web/modules/custom/montreal2027_tools/tests/src/Unit/InMemoriamAccessHooksTest.php
 ```
 
@@ -54,7 +54,7 @@ Workspaces remains optional; the processor does nothing when it is not installed
 After deployment, rebuild Drupal's cache to discover the new hook and services:
 
 ```bash
-docker compose exec web vendor/bin/drush cr
+docker exec montreal2027-web vendor/bin/drush cr
 ```
 
 Verify that a workspace-only child appears under its parent in Staging, remains
@@ -63,7 +63,7 @@ hidden in Live, and that disabled or inaccessible children remain hidden.
 With PHPUnit and Drupal's development test dependencies installed, run:
 
 ```bash
-docker compose exec web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
+docker exec montreal2027-web vendor/bin/phpunit -c web/core/phpunit.xml.dist \
   web/modules/custom/montreal2027_tools/tests/src/Unit/WorkspaceMenuTreeManipulatorTest.php
 ```
 
@@ -185,5 +185,5 @@ The YAML file in `config/sync` is not discovered until it is imported into activ
 Example:
 
 ```bash
-docker compose exec web vendor/bin/drush montreal2027:import-in-memoriam /tmp/in-memoriam.xlsx
+docker exec montreal2027-web vendor/bin/drush montreal2027:import-in-memoriam /tmp/in-memoriam.xlsx
 ```

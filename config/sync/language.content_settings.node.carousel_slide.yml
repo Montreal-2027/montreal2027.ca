@@ -1,0 +1,11 @@
+uuid: 6761cff8-9b6d-45a6-93d6-8b1fd4c8b3d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carousel_slide
+id: node.carousel_slide
+target_entity_type_id: node
+target_bundle: carousel_slide
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: c04cf29f-cc70-48bd-8902-256560d0d408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carousel_type
+    - node.type.carousel_page
+    - taxonomy.vocabulary.carousel_type
+id: node.carousel_page.field_carousel_type
+field_name: field_carousel_type
+entity_type: node
+bundle: carousel_page
+label: 'Carousel Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      carousel_type: carousel_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

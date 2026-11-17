@@ -1,0 +1,16 @@
+uuid: 99b052e2-5f11-43fc-9e93-dc3eae13778d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.carousel_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.carousel_type
+target_entity_type_id: taxonomy_term
+target_bundle: carousel_type
+default_langcode: site_default
+language_alterable: false

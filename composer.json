@@ -29,6 +29,7 @@
     "require": {
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
+        "php": "^8.4",
         "drupal/admin_theme": "^1.1",
         "drupal/admin_toolbar": "^3.6",
         "drupal/block_field": "^1.0@RC",
@@ -41,7 +42,6 @@
         "drupal/conditional_fields": "^4.0@alpha",
         "drupal/config_ignore": "^3.3",
         "drupal/core-composer-scaffold": "11.4.8",
-        "drupal/core-dev": "^8.0@beta",
         "drupal/core-project-message": "11.4.8",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "11.4.8",
@@ -49,6 +49,7 @@
         "drupal/draggableviews": "^2.1",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/entity_embed": "^1.7",
+        "drupal/entity_usage": "^5.0",
         "drupal/entity_workflow": "^2.0@beta",
         "drupal/facets": "^3.0",
         "drupal/field_group": "^4.0",
@@ -58,6 +59,7 @@
         "drupal/image_field_caption": "^4.0@RC",
         "drupal/logo_image_enhanced": "^1.0",
         "drupal/mailsystem": "^4.5",
+        "drupal/maxlength": "^3.2",
         "drupal/media_gallery": "^3.2",
         "drupal/media_library_form_element": "^2.1",
         "drupal/menu_block": "^1.14",
@@ -102,7 +104,7 @@
     "prefer-stable": true,
     "config": {
         "platform": {
-            "php": "8.3"
+            "php": "8.4"
         },
         "allow-plugins": {
             "composer/installers": true,
@@ -213,5 +215,9 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "11.4.8",
+        "vincentlanglet/twig-cs-fixer": "^4"
     }
 }

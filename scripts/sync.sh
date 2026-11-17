@@ -77,8 +77,8 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
         fi
     fi
 
-    DRUSH="docker compose exec -T web ./vendor/bin/drush"
-    COMPOSER="docker compose exec -T web composer"
+    DRUSH="docker exec -i montreal2027-web ./vendor/bin/drush"
+    COMPOSER="docker exec -i montreal2027-web composer"
 else
     echo "Using native environment for local commands..."
     DRUSH="./vendor/bin/drush"
@@ -91,7 +91,7 @@ if [ ! -f "$INSTALL_FLAG" ]; then
     
     if [ "$APP_ENV_TYPE" = "docker" ]; then
         echo "Creating drush symlink in container..."
-        docker compose exec -T web ln -sf /var/www/html/vendor/bin/drush /usr/local/sbin/drush
+        docker exec -i montreal2027-web ln -sf /var/www/html/vendor/bin/drush /usr/local/sbin/drush
     fi
 fi
 
@@ -139,7 +139,7 @@ fi
 
 echo "Importing production database into local database..."
 if [ "$APP_ENV_TYPE" = "docker" ]; then
-    docker compose exec -T web bash -c "$(${DRUSH} sql:connect) < /var/www/html/dump.sql"
+    docker exec -i montreal2027-web bash -c "$(${DRUSH} sql:connect) < /var/www/html/dump.sql"
 elif [ "$SYNC_LOCAL" = "true" ]; then
     DEST_CONNECT=$(${DRUSH} sql:connect)
     (unset DB_NAME DB_USER DB_PASSWORD DB_HOST DATABASE_URL && \

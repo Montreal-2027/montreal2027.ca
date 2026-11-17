@@ -1,0 +1,18 @@
+uuid: b2d05c14-6a8d-471b-83eb-3fd9af006c03
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carousel_slide
+id: node.carousel_slide.title
+field_name: title
+entity_type: node
+bundle: carousel_slide
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

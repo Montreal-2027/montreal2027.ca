@@ -1,0 +1,19 @@
+uuid: 71eac793-cb52-455d-9f9a-998cc3497134
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submitted_email
+    - node.type.carousel_slide
+id: node.carousel_slide.field_submitted_email
+field_name: field_submitted_email
+entity_type: node
+bundle: carousel_slide
+label: 'Email address of submitter'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

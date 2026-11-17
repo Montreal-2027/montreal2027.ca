@@ -15,8 +15,8 @@ The site is built on Drupal 11 with a custom theme and includes specialized modu
 
 ## Technology Stack
 
-- **CMS**: Drupal 11.2+
-- **PHP**: 8.3+
+- **CMS**: Drupal 11.4+
+- **PHP**: 8.4+
 - **Database**: MariaDB 11.4
 - **Web Server**: Nginx with PHP-FPM
 - **Frontend**: Custom Sass/CSS, vanilla JavaScript
@@ -188,7 +188,7 @@ While Docker Desktop is a convenient option, there are several open source alter
    - Web accessible at: `http://localhost:8080`
    - Database name/user/password: `drupal` / `drupal` / `drupal`
    - Container names: `montreal2027-web`, `montreal2027-db`
-   - PHP version: 8.3
+   - PHP version: configured by `PHP_VERSION`; see `composer.json` for the minimum
    - MariaDB version: 11.4
    
    **To customize**, create a `.env` file with any of these variables:
@@ -220,7 +220,7 @@ While Docker Desktop is a convenient option, there are several open source alter
    BACKEND_NETWORK_NAME=montreal2027_backend
    
    # PHP/MariaDB versions
-   PHP_VERSION=8.3
+   PHP_VERSION=8.4
    MARIADB_VERSION=11.4
 
    # Hash Salt (change for production!)
@@ -247,14 +247,14 @@ While Docker Desktop is a convenient option, there are several open source alter
    ```
 
    This will:
-   - Build the web container with PHP 8.3, Nginx, and all required extensions
+   - Build the web container with the configured PHP version, Nginx, and required extensions
    - Start a MariaDB 11.4 database container
    - Create persistent volumes for the database
    - Set up isolated networks for frontend and backend communication
 
 4. **Install Drupal dependencies**
    ```bash
-   docker-compose exec web composer install
+   docker exec montreal2027-web composer install
    ```
 
 5. **Setup database**
@@ -279,16 +279,16 @@ While Docker Desktop is a convenient option, there are several open source alter
    
    If you have a database dump file:
    ```bash
-   docker-compose exec -T web bash -c "$(drush sql:connect)" < your-database-dump.sql
-   docker-compose exec web drush cr
+   docker exec -i montreal2027-web bash -c "$(drush sql:connect)" < your-database-dump.sql
+   docker exec montreal2027-web drush cr
    ```
 
    **Option C: Fresh install**
    
    For a clean installation from configuration:
    ```bash
-   docker-compose exec web drush site:install --existing-config
-   docker-compose exec web drush cr
+   docker exec montreal2027-web drush site:install --existing-config
+   docker exec montreal2027-web drush cr
    ```
 
 6. **Access the site**
@@ -411,7 +411,7 @@ docker exec -it montreal2027-web drush cr
 
 ### Prerequisites
 
-- PHP 8.3+
+- PHP version compatible with `composer.json`
 - MariaDB 11.4 or MySQL 8.0+
 - Composer
 - Drush (installed via Composer)
@@ -701,7 +701,7 @@ AddType image/webp .webp
 
 ### Common Native Development Commands
 
-All commands run without the `docker-compose exec web` prefix:
+All commands run without the `docker exec montreal2027-web` prefix:
 
 ```bash
 # Drush commands
@@ -719,6 +719,35 @@ cd web/themes/custom/montreal2027
 npm run watch:css  # Watch for changes
 npm run build:css  # One-time build
 ```
+
+### Development checks
+
+Install development dependencies with `docker exec montreal2027-web composer install`
+and `docker exec -w /var/www/html/web/themes/custom/montreal2027 montreal2027-web npm ci`.
+Do not use Composer's `--no-dev` when setting up verification; it excludes the
+PHP verification tools.
+
+Run PHP checks from the project root inside the web container:
+
+```bash
+docker exec montreal2027-web vendor/bin/phpstan analyse <php-path> --level=6
+docker exec montreal2027-web vendor/bin/phpcs --standard=phpcs.xml <php-path>
+docker exec montreal2027-web vendor/bin/phpunit -c web/core/phpunit.xml.dist <test-path>
+docker exec montreal2027-web vendor/bin/twig-cs-fixer lint <twig-path>
+```
+
+Run theme checks from the theme directory inside the container:
+
+```bash
+npm run lint:css -- <stylesheet-path>
+npm run lint:js -- <javascript-path>
+npm run format:check -- <javascript-path>
+```
+
+Stylelint reports BEM violations in legacy selectors too; review existing selectors
+against the grandfathering policy. Accessibility, design-token and responsive
+checks still require manual review; linters cannot establish accessibility or
+prove that a color comes from a design token.
 
 ## VS Code Development
 

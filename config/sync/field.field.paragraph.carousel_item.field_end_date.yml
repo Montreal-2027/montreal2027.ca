@@ -1,0 +1,21 @@
+uuid: abb9b5ca-f92f-40dd-8018-7d65a8fae19b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_end_date
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - datetime
+id: paragraph.carousel_item.field_end_date
+field_name: field_end_date
+entity_type: paragraph
+bundle: carousel_item
+label: 'End Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
