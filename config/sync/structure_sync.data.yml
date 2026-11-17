@@ -15,13 +15,13 @@ menus:
   -
     menu_name: main
     title: Policies
-    parent: null
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
     uri: 'route:<nolink>'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: -46
+    weight: -48
     langcode: en
     uuid: 83039fa9-1e1c-48a6-87c7-6062e380e0eb
     options: {  }
@@ -73,59 +73,46 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -46
     langcode: en
     uuid: a0cd243b-1364-48c5-b8c2-166163fb4a76
     options: {  }
   -
     menu_name: main
-    title: Facilities
-    parent: null
-    uri: 'route:<nolink>'
-    link_title: ''
-    description: null
-    enabled: true
-    expanded: false
-    weight: -49
-    langcode: en
-    uuid: 1ac71e33-7787-432f-87d8-b6a5e2143e9f
-    options: {  }
-  -
-    menu_name: main
     title: 'Montréal Convention Centre'
-    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    parent: 'menu_link_content:2b56d8b8-0a1a-4e24-8dec-89e51368b268'
     uri: 'entity:node/19'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: -47
+    weight: -46
     langcode: en
     uuid: bc131aba-fb34-477e-854a-bb2193f11796
     options: {  }
   -
     menu_name: main
     title: Montréal
-    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    parent: 'menu_link_content:2b56d8b8-0a1a-4e24-8dec-89e51368b268'
     uri: 'entity:node/10'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: -50
+    weight: -47
     langcode: en
     uuid: cc90509c-37d7-49d1-b15e-ba172d23e741
     options: {  }
   -
     menu_name: main
     title: 'Getting To Montréal'
-    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    parent: 'menu_link_content:2b56d8b8-0a1a-4e24-8dec-89e51368b268'
     uri: 'entity:node/8'
     link_title: ''
     description: null
     enabled: false
     expanded: false
-    weight: -49
+    weight: -50
     langcode: en
     uuid: 170f858f-bee4-4a33-82c9-4cc783828b05
     options: {  }
@@ -145,13 +132,13 @@ menus:
   -
     menu_name: main
     title: Hotels
-    parent: 'menu_link_content:1ac71e33-7787-432f-87d8-b6a5e2143e9f'
+    parent: 'menu_link_content:2b56d8b8-0a1a-4e24-8dec-89e51368b268'
     uri: 'entity:node/21'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: -48
+    weight: -49
     langcode: en
     uuid: e32e1ca2-64cf-4afa-bffc-91326f6df577
     options: {  }
@@ -164,7 +151,7 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -49
     langcode: en
     uuid: 9d39147e-9760-4361-9758-c9f8b6249e43
     options: {  }
@@ -203,7 +190,7 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: -42
+    weight: -44
     langcode: en
     uuid: 97762b64-3290-4848-9f1f-d7c2f0a6e13e
     options: {  }
@@ -229,26 +216,26 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -47
     langcode: en
     uuid: 280f2bf5-d38a-46cd-9028-ea5368bb82f9
     options: {  }
   -
     menu_name: main
     title: Membership
-    parent: null
+    parent: 'menu_link_content:2b56d8b8-0a1a-4e24-8dec-89e51368b268'
     uri: 'route:<nolink>'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: -43
+    weight: -48
     langcode: en
     uuid: 6a7a8397-874e-4acc-9bea-20c9cb0bd0b1
     options: {  }
   -
     menu_name: main
-    title: Information
+    title: 'Rates & FAQ'
     parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
     uri: 'entity:node/18'
     link_title: ''
@@ -261,7 +248,7 @@ menus:
     options: {  }
   -
     menu_name: main
-    title: Registration
+    title: Register
     parent: 'menu_link_content:6a7a8397-874e-4acc-9bea-20c9cb0bd0b1'
     uri: 'https://reg.montreal2027.ca'
     link_title: ''
@@ -271,7 +258,9 @@ menus:
     weight: 0
     langcode: en
     uuid: d9cf5820-c0bd-4821-b1d8-1a6c7c575316
-    options: {  }
+    options:
+      attributes:
+        target: _blank
   -
     menu_name: main
     title: WSFS
@@ -281,7 +270,7 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: -41
+    weight: -42
     langcode: en
     uuid: b9cdad1e-428f-4ef6-989f-c6d3fbe43e15
     options: {  }
@@ -313,14 +302,14 @@ menus:
     options: {  }
   -
     menu_name: main
-    title: 'Ad Rates'
-    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    title: 'Souvenir Book'
+    parent: 'menu_link_content:74f5d9c3-c00d-418a-a302-f17b87034d9f'
     uri: 'entity:node/30'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -50
     langcode: en
     uuid: f919f043-df87-4ee7-a00a-a677b1e8eabb
     options: {  }
@@ -333,7 +322,7 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: -44
+    weight: -45
     langcode: en
     uuid: b8e6d90d-c25b-484a-8f27-27737af7804c
     options: {  }
@@ -359,7 +348,7 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: -45
+    weight: -46
     langcode: en
     uuid: 9a86b23a-b1ee-49b4-8e05-bb4d89e255fc
     options: {  }
@@ -385,14 +374,14 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: -40
+    weight: -41
     langcode: en
-    uuid: 50757cf7-73ad-4794-9edd-a971db3bbfba
+    uuid: c507b977-221f-49d4-b96b-732035224f6a
     options: {  }
   -
     menu_name: main
-    title: Resources
-    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
+    title: 'Team Resources'
+    parent: 'menu_link_content:c507b977-221f-49d4-b96b-732035224f6a'
     uri: 'entity:node/33'
     link_title: ''
     description: null
@@ -400,7 +389,20 @@ menus:
     expanded: false
     weight: 0
     langcode: en
-    uuid: c5223633-e8be-4597-b8ad-0ce1b85c2f6d
+    uuid: 7a3ad01b-5e5f-40ae-a0c2-48f6e07abe41
+    options: {  }
+  -
+    menu_name: main
+    title: Logout
+    parent: 'menu_link_content:c507b977-221f-49d4-b96b-732035224f6a'
+    uri: 'internal:/user/logout'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: 0
+    langcode: en
+    uuid: 5bd24c91-deec-44b2-b940-59fe33ca26fd
     options: {  }
   -
     menu_name: main
@@ -411,22 +413,48 @@ menus:
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -40
     langcode: en
-    uuid: 16d364c5-0e23-4986-ae44-690b497b40b9
+    uuid: fb755237-2d6a-452e-9d72-36d202e0b32b
     options:
       attributes:
         target: _blank
   -
     menu_name: main
-    title: Logout
-    parent: 'menu_link_content:50757cf7-73ad-4794-9edd-a971db3bbfba'
-    uri: 'internal:/user/logout'
+    title: 'Team Only Login'
+    parent: 'menu_link_content:2898ad03-37cd-4a74-bffe-f7d76342d896'
+    uri: 'internal:/user/login/google'
     link_title: ''
     description: null
     enabled: true
     expanded: false
-    weight: 0
+    weight: -45
     langcode: en
-    uuid: f738f4e3-c315-4fb3-9691-7bea772e3ef9
+    uuid: 6de2c018-c557-455e-8dfb-2e26f9ed790e
+    options: {  }
+  -
+    menu_name: main
+    title: Attending
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -49
+    langcode: en
+    uuid: 2b56d8b8-0a1a-4e24-8dec-89e51368b268
+    options: {  }
+  -
+    menu_name: main
+    title: Publications
+    parent: null
+    uri: 'route:<nolink>'
+    link_title: ''
+    description: null
+    enabled: true
+    expanded: false
+    weight: -43
+    langcode: en
+    uuid: 74f5d9c3-c00d-418a-a302-f17b87034d9f
     options: {  }
