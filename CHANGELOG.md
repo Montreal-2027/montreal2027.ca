@@ -8,6 +8,7 @@
 - Additional roles for team members ([#238](https://github.com/Montreal-2027/montreal2027.ca/issues/238))
 - Changed page background ([#252](https://github.com/Montreal-2027/montreal2027.ca/issues/252))
 - In Memoriam visibility changes made in prod
+- Registration page money cell alignment and padding ([#266](https://github.com/Montreal-2027/montreal2027.ca/issues/266))
 - Updates to the In Memoriam page template ([#276](https://github.com/Montreal-2027/montreal2027.ca/issues/276))
 
 ## 1.1.2 (2026-11-05 Hotfix)
