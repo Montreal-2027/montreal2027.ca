@@ -1,11 +1,11 @@
 {
   "0": "require",
   "1": "WorkspaceMenuTreeManipulatorTest.php",
-  "2": "Drupal\\migrate\\Row",
-  "3": "StaffContactController",
+  "2": "StaffContactController",
+  "3": "Drupal\\migrate\\Row",
   "4": "composer.json",
-  "5": "db",
-  "6": "InMemoriamImportCommands.php",
+  "5": "InMemoriamImportCommands.php",
+  "6": "db",
   "7": "steps",
   "8": "regions",
   "9": "installer-paths",
@@ -16,8 +16,8 @@
   "14": "montreal2027.theme",
   "15": "montreal2027_tools.staff_contact_submit",
   "16": "twig.config",
-  "17": "global",
-  "18": "mapping",
+  "17": "mapping",
+  "18": "global",
   "19": "montreal2027_tools.guest_settings",
   "20": "format",
   "21": "montreal2027_tools.commands",
@@ -69,6 +69,5 @@
   "67": "language-toggle.js",
   "68": "staff-contact-modal.js",
   "69": "staff-jump-menu.js",
-  "70": "umap-feature.js",
-  "71": "new-content.md"
+  "70": "new-content.md"
 }
