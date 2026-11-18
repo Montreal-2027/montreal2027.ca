@@ -99,6 +99,28 @@ article {
         }
       }
 
+      & .hotel {
+        &-landing_page {
+          display: grid;
+
+          @container page-wrapper (min-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+          }
+        }
+        
+        &-map {
+          border: 1px solid var(--color-black);
+          height: 500px;
+          width: 100%;
+
+          @container page-wrapper (min-width: 1200px) {
+            height: 800px;
+          }
+        }
+
+      }
+
       & details {
         border: 0;
 
@@ -137,6 +159,11 @@ article {
           }
 
           & h5 {
+            margin: 0;
+          }
+
+          & img {
+            box-shadow: none;
             margin: 0;
           }
         }
