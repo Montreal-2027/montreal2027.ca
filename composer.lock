@@ -6374,7 +6374,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dweinerATL/ckeditor_details.git",
-                "reference": "08fe45e8ede6ae2220bfd4b29dd499c4dd5f5d36"
+                "reference": "07f30e3aef4b4c2bb0ca6731625cb4b088479c99"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11"
@@ -6388,7 +6388,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Adds an accordion toolbar button using the detail plugin.",
-            "time": "2026-11-01T22:03:24+00:00"
+            "time": "2026-11-11T02:43:08+00:00"
         },
         {
             "name": "egulias/email-validator",

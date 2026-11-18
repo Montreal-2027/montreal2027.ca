@@ -46,14 +46,13 @@
     // overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
-    margin: 0;
+    margin: 2rem 0 0 0;
     min-height: 0;
     padding: 0;
     top: var(--site-main-content-top);
     transition: padding-bottom 220ms ease, padding-top 220ms ease;
 
     @container page-wrapper (min-width: 992px) {
-      // margin: 12rem 0 0 0;
       margin: 3rem 0 0 0;
       z-index: 1;
     }
