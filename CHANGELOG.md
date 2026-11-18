@@ -10,6 +10,7 @@
 - In Memoriam visibility changes made in prod
 - Interactive map for hotel landing page ([#131](https://github.com/Montreal-2027/montreal2027.ca/issues/131))
 - Registration page money cell alignment and padding ([#266](https://github.com/Montreal-2027/montreal2027.ca/issues/266))
+- Updates to the In Memoriam page template ([#276](https://github.com/Montreal-2027/montreal2027.ca/issues/276))
 
 ## 1.1.2 (2026-11-05 Hotfix)
 - Added access hook for In Memoriam role/content type to allow viewing and publishing of unpublished content regardless of owner
