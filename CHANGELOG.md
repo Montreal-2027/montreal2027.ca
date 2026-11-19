@@ -1,8 +1,21 @@
-# Montreal 2027 WorldCon Website
+# Montreal 2027 WorldCon Website Changelog
 
-## Changelog
----
 ## 1.1.3 (2026-11-18)
+- Mark AGENTS.md as out of date for revision
+- Introduce CONTENT.md for content entry and translation SOPs
+- Revise CONTRIBUTING.md for clarity on contributor onboarding
+- Enhance DEVELOPMENT.md with a detailed table of contents
+- Add intake flow diagram in INTAKE.md
+- Create ISSUES.md for GitHub issue tracking overview
+- Update PROJECT_GUIDELINES.md with a new table of contents
+- Revise SOPS.md to include new sections and improve structure
+- Add STRUCTURE.md for team structure visualization
+- Update TECHNICAL.md with a comprehensive table of contents
+- Introduce CHECKLISTS.MD for available checklists
+- Add PRE-COMMIT.md checklist for pre-commit procedures
+- Revise PULL_REQUESTS.md checklist for clarity and completeness
+- Update RELEASES.md with detailed release procedures
+- Add content-sop.pdf for additional resources
 - Fixed line spacing for `<summary>` tags ([#275](https://github.com/Montreal-2027/montreal2027.ca/issues/275))
 - Updated Carousel Page content type configuration to better support adding a node with a news carousel ([#235](https://github.com/Montreal-2027/montreal2027.ca/issues/235))
 - Additional roles for team members ([#238](https://github.com/Montreal-2027/montreal2027.ca/issues/238))

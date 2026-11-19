@@ -1,4 +1,5 @@
 # Montreal 2027 WorldCon Website - AI Assistant Guide
+# _**THIS DOCUMENT IS OUT OF DATE AND WILL BE REVISED**_
 
 This guide serves as the single source of truth for AI assistants (GitHub Copilot, Claude Code, etc.) working with this Drupal 11 codebase. It provides comprehensive instructions for AI agents, persona modes, architectural guidelines, and project-specific information.
 

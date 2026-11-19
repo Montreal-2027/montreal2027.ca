@@ -1,16 +1,12 @@
-title: Contact
+title: 'French Contact Form'
 settings:
-  confirmation_message: 'Votre message a été envoyé.'
+  confirmation_message: '<p>Votre message a été envoyé.</p>'
 handlers:
   email_confirmation:
     label: 'Courriel de confirmation'
-    settings:
-      from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+    settings: {  }
   email_notification:
     label: 'Notification par courriel'
-    settings:
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+    settings: {  }
+description: '<p>Basic email contact webform.</p>'
+elements: ''
