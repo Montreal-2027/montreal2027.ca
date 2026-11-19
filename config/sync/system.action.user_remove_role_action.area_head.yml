@@ -1,0 +1,14 @@
+uuid: f16a6854-30db-4262-8d76-edd23dcebed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.area_head
+  module:
+    - user
+id: user_remove_role_action.area_head
+label: 'Remove the Area Head role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: area_head
