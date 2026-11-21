@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 821 nodes · 1024 edges · 74 communities (58 shown, 16 thin omitted)
+- 828 nodes · 1030 edges · 75 communities (59 shown, 16 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `57cf80b6`
+- Built from commit: `5f911920`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,8 +19,8 @@
 - Drupal\migrate\Row
 - StaffContactController
 - composer.json
-- db
 - InMemoriamImportCommands.php
+- db
 - steps
 - regions
 - installer-paths
@@ -43,6 +43,7 @@
 - MontrealConfigurationForm
 - .mcp.json
 - UserNameSyncSubscriber.php
+- montreal2027_auth.info.yml
 - montreal2027_tools.info.yml
 - montreal2027_tools.settings
 - publish in_memoriam content
@@ -99,7 +100,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (74 total, 16 thin omitted)
+## Communities (75 total, 16 thin omitted)
 
 ### Community 0 - "require"
 Cohesion: 0.03
@@ -121,7 +122,7 @@ Nodes (3): StaffContactController, StaffPageController, LanguageToggleBlock
 Cohesion: 0.05
 Nodes (37): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+29 more)
 
-### Community 5 - "db"
+### Community 6 - "db"
 Cohesion: 0.07
 Nodes (29): internal, name, command, container_name, name, environment, healthcheck, image (+21 more)
 
@@ -205,137 +206,141 @@ Nodes (3): montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027
 Cohesion: 0.25
 Nodes (7): graphify-mcp, npx, obscura, fetch, graphify, obscura, @edictum/captatum
 
-### Community 29 - "montreal2027_tools.info.yml"
+### Community 29 - "montreal2027_auth.info.yml"
 Cohesion: 0.29
 Nodes (6): core_version_requirement, dependencies, description, name, package, type
 
-### Community 30 - "montreal2027_tools.settings"
+### Community 30 - "montreal2027_tools.info.yml"
+Cohesion: 0.29
+Nodes (6): core_version_requirement, dependencies, description, name, package, type
+
+### Community 31 - "montreal2027_tools.settings"
 Cohesion: 0.29
 Nodes (6): montreal2027_tools.settings, description, parent, route_name, title, weight
 
-### Community 31 - "publish in_memoriam content"
+### Community 32 - "publish in_memoriam content"
 Cohesion: 0.29
 Nodes (6): publish in_memoriam content, description, title, view any unpublished in_memoriam content, description, title
 
-### Community 32 - "montreal2027_auth.user_name_sync"
+### Community 33 - "montreal2027_auth.user_name_sync"
 Cohesion: 0.33
 Nodes (5): class, tags, services, montreal2027_auth.user_name_sync, name
 
-### Community 33 - "montreal2027_tools.settings"
+### Community 34 - "montreal2027_tools.settings"
 Cohesion: 0.40
 Nodes (4): montreal2027_tools.settings, base_route_name, names, title
 
-### Community 34 - "montreal2027.settings"
+### Community 35 - "montreal2027.settings"
 Cohesion: 0.50
 Nodes (3): montreal2027.settings, label, type
 
-### Community 35 - "slide_image_4"
+### Community 36 - "slide_image_4"
 Cohesion: 0.50
 Nodes (4): slide_image_4, label, sequence, type
 
-### Community 36 - "slide_image_5"
+### Community 37 - "slide_image_5"
 Cohesion: 0.50
 Nodes (4): slide_image_5, label, sequence, type
 
-### Community 37 - "slide_image_7"
+### Community 38 - "slide_image_7"
 Cohesion: 0.50
 Nodes (4): slide_image_7, label, sequence, type
 
-### Community 38 - "slide_image_8"
+### Community 39 - "slide_image_8"
 Cohesion: 0.50
 Nodes (4): slide_image_8, label, sequence, type
 
-### Community 40 - "heading_prefix"
+### Community 41 - "heading_prefix"
 Cohesion: 0.67
 Nodes (3): label, type, heading_prefix
 
-### Community 41 - "page_title"
+### Community 42 - "page_title"
 Cohesion: 0.67
 Nodes (3): page_title, label, type
 
-### Community 42 - "success_message"
+### Community 43 - "success_message"
 Cohesion: 0.67
 Nodes (3): success_message, label, type
 
-### Community 43 - "include_fontawesome"
+### Community 44 - "include_fontawesome"
 Cohesion: 0.67
 Nodes (3): label, type, include_fontawesome
 
-### Community 44 - "slide_title_10"
+### Community 45 - "slide_title_10"
 Cohesion: 0.67
 Nodes (3): slide_title_10, label, type
 
-### Community 45 - "slide_title_2"
+### Community 46 - "slide_title_2"
 Cohesion: 0.67
 Nodes (3): slide_title_2, label, type
 
-### Community 46 - "slide_title_3"
+### Community 47 - "slide_title_3"
 Cohesion: 0.67
 Nodes (3): slide_title_3, label, type
 
-### Community 47 - "slide_title_4"
+### Community 48 - "slide_title_4"
 Cohesion: 0.67
 Nodes (3): slide_title_4, label, type
 
-### Community 48 - "slide_title_5"
+### Community 49 - "slide_title_5"
 Cohesion: 0.67
 Nodes (3): slide_title_5, label, type
 
-### Community 49 - "slide_title_6"
+### Community 50 - "slide_title_6"
 Cohesion: 0.67
 Nodes (3): slide_title_6, label, type
 
-### Community 50 - "slide_title_7"
+### Community 51 - "slide_title_7"
 Cohesion: 0.67
 Nodes (3): slide_title_7, label, type
 
-### Community 51 - "slide_title_8"
+### Community 52 - "slide_title_8"
 Cohesion: 0.67
 Nodes (3): slide_title_8, label, type
 
-### Community 52 - "slide_title_9"
+### Community 53 - "slide_title_9"
 Cohesion: 0.67
 Nodes (3): slide_title_9, label, type
 
-### Community 53 - "slide_url_10"
+### Community 54 - "slide_url_10"
 Cohesion: 0.67
 Nodes (3): slide_url_10, label, type
 
-### Community 54 - "slide_url_2"
+### Community 55 - "slide_url_2"
 Cohesion: 0.67
 Nodes (3): slide_url_2, label, type
 
-### Community 55 - "slide_url_3"
+### Community 56 - "slide_url_3"
 Cohesion: 0.67
 Nodes (3): slide_url_3, label, type
 
-### Community 56 - "slide_url_4"
+### Community 57 - "slide_url_4"
 Cohesion: 0.67
 Nodes (3): slide_url_4, label, type
 
-### Community 57 - "slide_url_5"
+### Community 58 - "slide_url_5"
 Cohesion: 0.67
 Nodes (3): slide_url_5, label, type
 
-### Community 58 - "slide_url_7"
+### Community 59 - "slide_url_7"
 Cohesion: 0.67
 Nodes (3): slide_url_7, label, type
 
-### Community 59 - "slide_url_8"
+### Community 60 - "slide_url_8"
 Cohesion: 0.67
 Nodes (3): slide_url_8, label, type
 
-### Community 60 - "slide_url_9"
+### Community 61 - "slide_url_9"
 Cohesion: 0.67
 Nodes (3): slide_url_9, label, type
 
-### Community 61 - "slideshow_display"
+### Community 62 - "slideshow_display"
 Cohesion: 0.67
 Nodes (3): slideshow_display, label, type
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `graphify-mcp`, `npx`, `obscura`, `@edictum/captatum`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 451 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 457 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -352,6 +357,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `WorkspaceMenuTreeManipulatorTest.php` be split into smaller, more focused modules?**
   _Cohesion score 0.06623376623376623 - nodes in this community are weakly interconnected._
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Should `Drupal\migrate\Row` be split into smaller, more focused modules?**
-  _Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08148148148148149 - nodes in this community are weakly interconnected._
