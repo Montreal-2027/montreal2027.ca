@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>montreal2027.ca — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 828 nodes, 1030 edges, 75 communities. Commit: 5f91192</p>
+<p class="subtitle">Generated from graphify knowledge graph: 828 nodes, 1030 edges, 75 communities. Commit: 29abd1f</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -3911,8 +3911,8 @@ flowchart LR
     subgraph other_External_generated_9e8859fa["External / generated"]
         drupal_core_form_configformbase_a753097b("Drupal\Core\Form\ConfigFormBase")
         drupal_core_form_formstateinterface_4b20b46e("Drupal\Core\Form\FormStateInterface")
+        drupal_social_auth_event_loginevent_fddc5ec6("Drupal\social auth\Event\LoginEvent")
         drupal_social_auth_event_socialauthevents_b570ce00("Drupal\social auth\Event\SocialAuthEvents")
-        drupal_social_auth_event_userevent_3e57ce4e("Drupal\social auth\Event\UserEvent")
         symfony_component_eventdispatcher_eventsubscribe_f5b8b50e("Symfony\Component\EventDispatcher\Event...")
         symfony_component_dotenv_dotenv_20661c2d("Symfony\Component\Dotenv\Dotenv")
     end
@@ -3940,15 +3940,15 @@ flowchart LR
     web_modules_custom_montreal2027_auth_src_eventsu_12abe94a -->|method| web_modules_custom_montreal2027_auth_src_eventsu_7710c1cb
     web_modules_custom_montreal2027_tools_src_form_m_13454c7e -->|imports| drupal_core_form_configformbase_a753097b
     web_modules_custom_montreal2027_tools_src_form_m_13454c7e -->|imports| drupal_core_form_formstateinterface_4b20b46e
+    web_modules_custom_montreal2027_auth_src_eventsu_2ec0956a -->|imports| drupal_social_auth_event_loginevent_fddc5ec6
     web_modules_custom_montreal2027_auth_src_eventsu_2ec0956a -->|imports| drupal_social_auth_event_socialauthevents_b570ce00
-    web_modules_custom_montreal2027_auth_src_eventsu_2ec0956a -->|imports| drupal_social_auth_event_userevent_3e57ce4e
     web_modules_custom_montreal2027_auth_src_eventsu_2ec0956a -->|imports| symfony_component_eventdispatcher_eventsubscribe_f5b8b50e
     web_sites_default_settings_893897a6 -->|imports| symfony_component_dotenv_dotenv_20661c2d
     %% Omitted for readability: 53 nodes, 0 edges
     class drupal_core_form_configformbase_a753097b klass;
     class drupal_core_form_formstateinterface_4b20b46e klass;
+    class drupal_social_auth_event_loginevent_fddc5ec6 klass;
     class drupal_social_auth_event_socialauthevents_b570ce00 klass;
-    class drupal_social_auth_event_userevent_3e57ce4e klass;
     class symfony_component_eventdispatcher_eventsubscribe_f5b8b50e ui;
     class symfony_component_dotenv_dotenv_20661c2d ui;
     class web_modules_custom_montreal2027_tools_src_form_m_89e22596 klass;
@@ -4074,19 +4074,19 @@ flowchart LR
 </tr>
 <tr>
   <td>12</td>
+  <td><code>Drupal\social_auth\Event\LoginEvent</code><br><small style="color:var(--muted)"></small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>UserNameSyncSubscriber.php</code><br><small style="color:var(--muted)">src/EventSubscriber/UserNameSyncSubscriber.php</small></td>
+  <td>No direct outbound edge</td>
+  <td>Drupal\social_auth\Event\LoginEvent node in project.</td>
+</tr>
+<tr>
+  <td>13</td>
   <td><code>Drupal\social_auth\Event\SocialAuthEvents</code><br><small style="color:var(--muted)"></small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td><code>UserNameSyncSubscriber.php</code><br><small style="color:var(--muted)">src/EventSubscriber/UserNameSyncSubscriber.php</small></td>
   <td>No direct outbound edge</td>
   <td>Drupal\social_auth\Event\SocialAuthEvents node in project.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>Drupal\social_auth\Event\UserEvent</code><br><small style="color:var(--muted)"></small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>UserNameSyncSubscriber.php</code><br><small style="color:var(--muted)">src/EventSubscriber/UserNameSyncSubscriber.php</small></td>
-  <td>No direct outbound edge</td>
-  <td>Drupal\social_auth\Event\UserEvent node in project.</td>
 </tr>
 <tr>
   <td>14</td>
@@ -4101,7 +4101,7 @@ flowchart LR
   <td><code>UserNameSyncSubscriber.php</code><br><small style="color:var(--muted)">src/EventSubscriber/UserNameSyncSubscriber.php</small></td>
   <td><span class="tag tag-class">Class</span></td>
   <td>External entry / no inbound edge</td>
-  <td><code>Drupal\social auth\Event\SocialAuthEvents</code><br><code>Drupal\social auth\Event\UserEvent</code><br><code>Symfony\Component\EventDispatcher\Event...</code></td>
+  <td><code>Drupal\social auth\Event\LoginEvent</code><br><code>Drupal\social auth\Event\SocialAuthEvents</code><br><code>Symfony\Component\EventDispatcher\Event...</code></td>
   <td>UserNameSyncSubscriber.php node in src/EventSubscriber/UserNameSyncSubscriber.php.</td>
 </tr>
 <tr>
@@ -4273,7 +4273,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>montreal2027.ca — Architecture Documentation</p>
-  <p>Generated: 2026-11-21 06:33 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-11-21 06:45 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

@@ -727,8 +727,8 @@
       "mcp_package_edictum_captatum"
     ],
     "28": [
+      "drupal_social_auth_event_loginevent",
       "drupal_social_auth_event_socialauthevents",
-      "drupal_social_auth_event_userevent",
       "symfony_component_eventdispatcher_eventsubscriberinterface",
       "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber",
       "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber",
