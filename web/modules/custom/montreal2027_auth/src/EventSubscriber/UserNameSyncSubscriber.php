@@ -2,9 +2,8 @@
 
 namespace Drupal\montreal2027_auth\EventSubscriber;
 
-// use Drupal\social_auth\Event\LoginEvent;
+use Drupal\social_auth\Event\LoginEvent;
 use Drupal\social_auth\Event\SocialAuthEvents;
-// use Drupal\social_auth\Event\UserEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -24,7 +23,7 @@ class UserNameSyncSubscriber implements EventSubscriberInterface {
   /**
    * Updates field_name when a user logs in via Google.
    */
-  public function onUserLogin($event): void {
+  public function onUserLogin(LoginEvent $event): void {
     if ($event->getPluginId() !== 'social_auth_google') {
       return;
     }
@@ -36,11 +35,12 @@ class UserNameSyncSubscriber implements EventSubscriberInterface {
       return;
     }
 
-    $user = $event->getUser();
+    $user = $event->getSocialAuthEntity()->getUser();
 
-    if ($user->hasField('field_name') && $user->get('field_name')->value !== $google_name) {
+    if ($user && $user->hasField('field_name') && $user->get('field_name')->value !== $google_name) {
       $user->set('field_name', $google_name);
       $user->save();
     }
   }
+
 }
