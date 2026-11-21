@@ -4,12 +4,12 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 828 nodes · 1030 edges · 75 communities (59 shown, 16 thin omitted)
+- 827 nodes · 1028 edges · 75 communities (59 shown, 16 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `29abd1f3`
+- Built from commit: `29245eb4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,8 +19,8 @@
 - Drupal\migrate\Row
 - StaffContactController
 - composer.json
-- InMemoriamImportCommands.php
 - db
+- InMemoriamImportCommands.php
 - steps
 - regions
 - installer-paths
@@ -42,11 +42,11 @@
 - montreal2027_tools.module
 - MontrealConfigurationForm
 - .mcp.json
-- UserNameSyncSubscriber.php
 - montreal2027_auth.info.yml
 - montreal2027_tools.info.yml
 - montreal2027_tools.settings
 - publish in_memoriam content
+- UserNameSyncSubscriber
 - montreal2027_auth.user_name_sync
 - montreal2027_tools.settings
 - montreal2027.settings
@@ -122,7 +122,7 @@ Nodes (3): StaffContactController, StaffPageController, LanguageToggleBlock
 Cohesion: 0.05
 Nodes (37): ignore, composer/installers, cweagans/composer-patches, dealerdirect/phpcodesniffer-composer-installer, drupal/core-composer-scaffold, drupal/core-project-message, drupal/core-recipe-unpack, oomphinc/composer-installers-extender (+29 more)
 
-### Community 6 - "db"
+### Community 5 - "db"
 Cohesion: 0.07
 Nodes (29): internal, name, command, container_name, name, environment, healthcheck, image (+21 more)
 
@@ -206,19 +206,19 @@ Nodes (3): montreal2027_tools_form_taxonomy_overview_terms_alter(), montreal2027
 Cohesion: 0.25
 Nodes (7): graphify-mcp, npx, obscura, fetch, graphify, obscura, @edictum/captatum
 
-### Community 29 - "montreal2027_auth.info.yml"
+### Community 28 - "montreal2027_auth.info.yml"
 Cohesion: 0.29
 Nodes (6): core_version_requirement, dependencies, description, name, package, type
 
-### Community 30 - "montreal2027_tools.info.yml"
+### Community 29 - "montreal2027_tools.info.yml"
 Cohesion: 0.29
 Nodes (6): core_version_requirement, dependencies, description, name, package, type
 
-### Community 31 - "montreal2027_tools.settings"
+### Community 30 - "montreal2027_tools.settings"
 Cohesion: 0.29
 Nodes (6): montreal2027_tools.settings, description, parent, route_name, title, weight
 
-### Community 32 - "publish in_memoriam content"
+### Community 31 - "publish in_memoriam content"
 Cohesion: 0.29
 Nodes (6): publish in_memoriam content, description, title, view any unpublished in_memoriam content, description, title
 
@@ -340,7 +340,7 @@ Nodes (3): slideshow_display, label, type
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `graphify-mcp`, `npx`, `obscura`, `@edictum/captatum`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 457 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 458 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -359,4 +359,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `extra` connect `installer-paths` to `composer.json`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Should `Drupal\migrate\Row` be split into smaller, more focused modules?**
-  _Cohesion score 0.08148148148148149 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected._
