@@ -129,7 +129,6 @@
       "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testworkspaceonlychild"
     ],
     "2": [
-      "drupal_core_entity_entitytypemanagerinterface",
       "drupal_core_plugin_containerfactoryplugininterface",
       "drupal_migrate_attribute_migrateprocess",
       "drupal_migrate_attribute_migratesource",
@@ -277,6 +276,39 @@
       "composer_type"
     ],
     "5": [
+      "drupal_component_datetime_timeinterface",
+      "drupal_core_entity_entityfieldmanagerinterface",
+      "drupal_core_entity_entitytypemanagerinterface",
+      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
+      "drupal_core_session_accountswitcherinterface",
+      "drupal_core_stringtranslation_translationinterface",
+      "drupal_migrate_plugin_migrationpluginmanagerinterface",
+      "drupal_migrate_tools_drushlogmigratemessage",
+      "drupal_migrate_tools_migrateexecutable",
+      "drupal_user_userinterface",
+      "drush_attributes_argument",
+      "drush_attributes_command",
+      "drush_attributes_validatemodulesenabled",
+      "drush_commands_drushcommands",
+      "phpoffice_phpspreadsheet_cell_coordinate",
+      "symfony_component_console_helper_progressbar",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface"
+    ],
+    "6": [
       "docker_compose",
       "docker_compose_backend_internal",
       "docker_compose_backend_name",
@@ -307,38 +339,6 @@
       "docker_compose_services_db",
       "docker_compose_volumes",
       "docker_compose_volumes_db_data"
-    ],
-    "6": [
-      "drupal_component_datetime_timeinterface",
-      "drupal_core_entity_entityfieldmanagerinterface",
-      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
-      "drupal_core_session_accountswitcherinterface",
-      "drupal_core_stringtranslation_translationinterface",
-      "drupal_migrate_plugin_migrationpluginmanagerinterface",
-      "drupal_migrate_tools_drushlogmigratemessage",
-      "drupal_migrate_tools_migrateexecutable",
-      "drupal_user_userinterface",
-      "drush_attributes_argument",
-      "drush_attributes_command",
-      "drush_attributes_validatemodulesenabled",
-      "drush_commands_drushcommands",
-      "phpoffice_phpspreadsheet_cell_coordinate",
-      "symfony_component_console_helper_progressbar",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface"
     ],
     "7": [
       "github_workflows_graphify",
@@ -727,6 +727,15 @@
       "mcp_package_edictum_captatum"
     ],
     "28": [
+      "drupal_social_auth_event_loginevent",
+      "drupal_social_auth_event_socialauthevents",
+      "symfony_component_eventdispatcher_eventsubscriberinterface",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_getsubscribedevents",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_onuserlogin"
+    ],
+    "29": [
       "web_modules_custom_montreal2027_auth_montreal2027_auth_info",
       "web_modules_custom_montreal2027_auth_montreal2027_auth_info_core_version_requirement",
       "web_modules_custom_montreal2027_auth_montreal2027_auth_info_dependencies",
@@ -735,7 +744,7 @@
       "web_modules_custom_montreal2027_auth_montreal2027_auth_info_package",
       "web_modules_custom_montreal2027_auth_montreal2027_auth_info_type"
     ],
-    "29": [
+    "30": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_core_version_requirement",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_dependencies",
@@ -744,7 +753,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_package",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_type"
     ],
-    "30": [
+    "31": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_description",
@@ -753,7 +762,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_title",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_weight"
     ],
-    "31": [
+    "32": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content_description",
@@ -761,14 +770,6 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_description",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_title"
-    ],
-    "32": [
-      "drupal_social_auth_event_socialauthevents",
-      "symfony_component_eventdispatcher_eventsubscriberinterface",
-      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber",
-      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber",
-      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_getsubscribedevents",
-      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_onuserlogin"
     ],
     "33": [
       "web_modules_custom_montreal2027_auth_montreal2027_auth_services",
@@ -981,11 +982,11 @@
   "cohesion": {
     "0": 0.029411764705882353,
     "1": 0.06623376623376623,
-    "2": 0.08246753246753247,
+    "2": 0.08148148148148149,
     "3": 0.07358156028368794,
     "4": 0.05263157894736842,
-    "5": 0.06666666666666667,
-    "6": 0.11724137931034483,
+    "5": 0.12043010752688173,
+    "6": 0.06666666666666667,
     "7": 0.06896551724137931,
     "8": 0.06896551724137931,
     "9": 0.07692307692307693,
@@ -1007,11 +1008,11 @@
     "25": 0.3055555555555556,
     "26": 0.35714285714285715,
     "27": 0.25,
-    "28": 0.2857142857142857,
+    "28": 0.38095238095238093,
     "29": 0.2857142857142857,
     "30": 0.2857142857142857,
     "31": 0.2857142857142857,
-    "32": 0.4,
+    "32": 0.2857142857142857,
     "33": 0.3333333333333333,
     "34": 0.4,
     "35": 0.5,
@@ -1154,7 +1155,7 @@
     {
       "type": "low_cohesion",
       "question": "Should `Drupal\\migrate\\Row` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.08148148148148149 - nodes in this community are weakly interconnected."
     }
   ]
 }
