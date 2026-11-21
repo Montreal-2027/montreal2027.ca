@@ -129,6 +129,7 @@
       "web_modules_custom_montreal2027_tools_tests_src_unit_workspacemenutreemanipulatortest_workspacemenutreemanipulatortest_testworkspaceonlychild"
     ],
     "2": [
+      "drupal_core_entity_entitytypemanagerinterface",
       "drupal_core_plugin_containerfactoryplugininterface",
       "drupal_migrate_attribute_migrateprocess",
       "drupal_migrate_attribute_migratesource",
@@ -137,6 +138,7 @@
       "drupal_migrate_migrateskiprowexception",
       "drupal_migrate_plugin_migrateidmapinterface",
       "drupal_migrate_plugin_migrateprocessinterface",
+      "drupal_migrate_plugin_migrationinterface",
       "drupal_migrate_processpluginbase",
       "drupal_migrate_row",
       "drupal_migrate_spreadsheet_plugin_migrate_source_spreadsheet",
@@ -149,6 +151,7 @@
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_1",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_closure_2",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_construct",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_create",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_transform",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_php_static",
@@ -160,6 +163,7 @@
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_closure_1",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup",
+      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_construct",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_create",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_handlepreviousdestination",
       "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_normalize",
@@ -273,42 +277,6 @@
       "composer_type"
     ],
     "5": [
-      "drupal_component_datetime_timeinterface",
-      "drupal_core_entity_entityfieldmanagerinterface",
-      "drupal_core_entity_entitytypemanagerinterface",
-      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
-      "drupal_core_session_accountswitcherinterface",
-      "drupal_core_stringtranslation_translationinterface",
-      "drupal_migrate_plugin_migrationinterface",
-      "drupal_migrate_plugin_migrationpluginmanagerinterface",
-      "drupal_migrate_tools_drushlogmigratemessage",
-      "drupal_migrate_tools_migrateexecutable",
-      "drupal_user_userinterface",
-      "drush_attributes_argument",
-      "drush_attributes_command",
-      "drush_attributes_validatemodulesenabled",
-      "drush_commands_drushcommands",
-      "phpoffice_phpspreadsheet_cell_coordinate",
-      "symfony_component_console_helper_progressbar",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
-      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
-      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamcategories_inmemoriamcategories_construct",
-      "web_modules_custom_montreal2027_tools_src_plugin_migrate_process_inmemoriamnodelookup_inmemoriamnodelookup_construct"
-    ],
-    "6": [
       "docker_compose",
       "docker_compose_backend_internal",
       "docker_compose_backend_name",
@@ -339,6 +307,38 @@
       "docker_compose_services_db",
       "docker_compose_volumes",
       "docker_compose_volumes_db_data"
+    ],
+    "6": [
+      "drupal_component_datetime_timeinterface",
+      "drupal_core_entity_entityfieldmanagerinterface",
+      "drupal_core_keyvaluestore_keyvaluefactoryinterface",
+      "drupal_core_session_accountswitcherinterface",
+      "drupal_core_stringtranslation_translationinterface",
+      "drupal_migrate_plugin_migrationpluginmanagerinterface",
+      "drupal_migrate_tools_drushlogmigratemessage",
+      "drupal_migrate_tools_migrateexecutable",
+      "drupal_user_userinterface",
+      "drush_attributes_argument",
+      "drush_attributes_command",
+      "drush_attributes_validatemodulesenabled",
+      "drush_commands_drushcommands",
+      "phpoffice_phpspreadsheet_cell_coordinate",
+      "symfony_component_console_helper_progressbar",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_combineheaderandrow",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_importcontacts",
+      "web_modules_custom_montreal2027_tools_src_commands_contactimportcommands_contactimportcommands_resolvepath",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_construct",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_createmigration",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_import",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_reportwarnings",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validatedestinationfields",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_inmemoriamimportcommands_validateworkbook",
+      "web_modules_custom_montreal2027_tools_src_commands_inmemoriamimportcommands_php_migrationinterface"
     ],
     "7": [
       "github_workflows_graphify",
@@ -727,6 +727,15 @@
       "mcp_package_edictum_captatum"
     ],
     "28": [
+      "drupal_social_auth_event_socialauthevents",
+      "drupal_social_auth_event_userevent",
+      "symfony_component_eventdispatcher_eventsubscriberinterface",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_getsubscribedevents",
+      "web_modules_custom_montreal2027_auth_src_eventsubscriber_usernamesyncsubscriber_usernamesyncsubscriber_onuserlogin"
+    ],
+    "29": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_core_version_requirement",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_dependencies",
@@ -735,7 +744,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_package",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_info_type"
     ],
-    "29": [
+    "30": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_description",
@@ -744,7 +753,7 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_title",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_links_menu_montreal2027_tools_settings_weight"
     ],
-    "30": [
+    "31": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_publish_in_memoriam_content_description",
@@ -753,214 +762,222 @@
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_description",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_permissions_view_any_unpublished_in_memoriam_content_title"
     ],
-    "31": [
+    "32": [
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services",
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services_montreal2027_auth_user_name_sync_class",
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services_montreal2027_auth_user_name_sync_tags",
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services_services",
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services_services_montreal2027_auth_user_name_sync",
+      "web_modules_custom_montreal2027_auth_montreal2027_auth_services_tags_name"
+    ],
+    "33": [
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_base_route_name",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_names",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_config_translation_montreal2027_tools_settings_title"
     ],
-    "32": [
+    "34": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_montreal2027_settings_type"
     ],
-    "33": [
+    "35": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_4_type"
     ],
-    "34": [
+    "36": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_5_type"
     ],
-    "35": [
+    "37": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_7_type"
     ],
-    "36": [
+    "38": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_image_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_sequence",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_image_8_type"
     ],
-    "37": [
+    "39": [
       "drupal_node_nodeaccessrebuild",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update",
       "web_modules_custom_montreal2027_tools_montreal2027_tools_post_update_montreal2027_tools_post_update_in_memoriam_access"
     ],
-    "38": [
+    "40": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_heading_prefix_type",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_heading_prefix"
     ],
-    "39": [
+    "41": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_page_title",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_page_title_type"
     ],
-    "40": [
+    "42": [
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_mapping_success_message",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_label",
       "web_modules_custom_montreal2027_tools_config_schema_montreal2027_tools_schema_success_message_type"
     ],
-    "41": [
+    "43": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_include_fontawesome_type",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_include_fontawesome"
     ],
-    "42": [
+    "44": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_10_type"
     ],
-    "43": [
+    "45": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_2_type"
     ],
-    "44": [
+    "46": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_3_type"
     ],
-    "45": [
+    "47": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_4_type"
     ],
-    "46": [
+    "48": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_5_type"
     ],
-    "47": [
+    "49": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_6",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_6_type"
     ],
-    "48": [
+    "50": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_7_type"
     ],
-    "49": [
+    "51": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_8_type"
     ],
-    "50": [
+    "52": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_title_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_title_9_type"
     ],
-    "51": [
+    "53": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_10",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_10_type"
     ],
-    "52": [
+    "54": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_2",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_2_type"
     ],
-    "53": [
+    "55": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_3",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_3_type"
     ],
-    "54": [
+    "56": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_4",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_4_type"
     ],
-    "55": [
+    "57": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_5",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_5_type"
     ],
-    "56": [
+    "58": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_7",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_7_type"
     ],
-    "57": [
+    "59": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_8",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_8_type"
     ],
-    "58": [
+    "60": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slide_url_9",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slide_url_9_type"
     ],
-    "59": [
+    "61": [
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_mapping_slideshow_display",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_label",
       "web_themes_custom_montreal2027_config_schema_montreal2027_schema_slideshow_display_type"
     ],
-    "60": [
+    "62": [
       "docker_web_entrypoint",
       "docker_web_entrypoint_sh__entry"
     ],
-    "61": [
+    "63": [
       "githooks_post_merge",
       "githooks_post_merge__entry"
     ],
-    "62": [
+    "64": [
       "githooks_pre_commit",
       "githooks_pre_commit__entry"
     ],
-    "63": [
+    "65": [
       "scripts_install",
       "scripts_install_sh__entry"
     ],
-    "64": [
+    "66": [
       "scripts_setup_graphify",
       "scripts_setup_graphify_sh__entry"
     ],
-    "65": [
+    "67": [
       "scripts_sync",
       "scripts_sync_sh__entry"
     ],
-    "66": [
+    "68": [
       "symfony_component_dotenv_dotenv",
       "web_sites_default_settings"
     ],
-    "67": [
+    "69": [
       "web_modules_custom_montreal2027_tools_js_language_toggle",
       "web_modules_custom_montreal2027_tools_js_language_toggle_attach"
     ],
-    "68": [
+    "70": [
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal",
       "web_modules_custom_montreal2027_tools_js_staff_contact_modal_attach"
     ],
-    "69": [
+    "71": [
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu",
       "web_modules_custom_montreal2027_tools_js_staff_jump_menu_attach"
     ],
-    "70": [
+    "72": [
       "web_themes_custom_montreal2027_js_umap_feature",
       "web_themes_custom_montreal2027_js_umap_feature_attach"
     ],
-    "71": [
+    "73": [
       "github_issue_template_new_content"
     ]
   },
   "cohesion": {
     "0": 0.029411764705882353,
     "1": 0.06623376623376623,
-    "2": 0.08597285067873303,
+    "2": 0.08246753246753247,
     "3": 0.07358156028368794,
     "4": 0.05263157894736842,
-    "5": 0.11051693404634581,
-    "6": 0.06666666666666667,
+    "5": 0.06666666666666667,
+    "6": 0.11724137931034483,
     "7": 0.06896551724137931,
     "8": 0.06896551724137931,
     "9": 0.07692307692307693,
@@ -982,17 +999,17 @@
     "25": 0.3055555555555556,
     "26": 0.35714285714285715,
     "27": 0.25,
-    "28": 0.2857142857142857,
+    "28": 0.38095238095238093,
     "29": 0.2857142857142857,
     "30": 0.2857142857142857,
-    "31": 0.4,
-    "32": 0.5,
-    "33": 0.5,
+    "31": 0.2857142857142857,
+    "32": 0.3333333333333333,
+    "33": 0.4,
     "34": 0.5,
     "35": 0.5,
     "36": 0.5,
-    "37": 0.6666666666666666,
-    "38": 0.6666666666666666,
+    "37": 0.5,
+    "38": 0.5,
     "39": 0.6666666666666666,
     "40": 0.6666666666666666,
     "41": 0.6666666666666666,
@@ -1014,8 +1031,8 @@
     "57": 0.6666666666666666,
     "58": 0.6666666666666666,
     "59": 0.6666666666666666,
-    "60": 1.0,
-    "61": 1.0,
+    "60": 0.6666666666666666,
+    "61": 0.6666666666666666,
     "62": 1.0,
     "63": 1.0,
     "64": 1.0,
@@ -1025,7 +1042,9 @@
     "68": 1.0,
     "69": 1.0,
     "70": 1.0,
-    "71": 1.0
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0
   },
   "gods": [
     {
@@ -1096,7 +1115,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `require` connect `require` to `composer.json`?",
-      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -1111,7 +1130,7 @@
     {
       "type": "bridge_node",
       "question": "Why does `mapping` connect `mapping` to `label`, `montreal2027.settings`, `slide_image_4`, `slide_image_5`, `slide_image_7`, `slide_image_8`, `include_fontawesome`, `slide_title_10`, `slide_title_2`, `slide_title_3`, `slide_title_4`, `slide_title_5`, `slide_title_6`, `slide_title_7`, `slide_title_8`, `slide_title_9`, `slide_url_10`, `slide_url_2`, `slide_url_3`, `slide_url_4`, `slide_url_5`, `slide_url_7`, `slide_url_8`, `slide_url_9`, `slideshow_display`?",
-      "why": "High betweenness centrality (0.019) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
     },
     {
       "type": "low_cohesion",
@@ -1126,7 +1145,7 @@
     {
       "type": "low_cohesion",
       "question": "Should `Drupal\\migrate\\Row` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08597285067873303 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.08246753246753247 - nodes in this community are weakly interconnected."
     }
   ]
 }
