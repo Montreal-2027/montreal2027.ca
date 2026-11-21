@@ -2,6 +2,10 @@
 
 ## Changelog
 ---
+## 1.1.4 (2026-12-02)
+- Added a Name field to the user entity
+- Added `montreal2027_auth` custom module to keep the name field in the user entity synced with Google 
+
 ## 1.1.3 (2026-11-18)
 - Fixed line spacing for `<summary>` tags ([#275](https://github.com/Montreal-2027/montreal2027.ca/issues/275))
 - Updated Carousel Page content type configuration to better support adding a node with a news carousel ([#235](https://github.com/Montreal-2027/montreal2027.ca/issues/235))

@@ -11,7 +11,7 @@ _core:
 id: montreal2027_content
 theme: montreal2027
 region: content
-weight: 0
+weight: -15
 provider: null
 plugin: system_main_block
 settings:

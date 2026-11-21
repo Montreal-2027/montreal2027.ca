@@ -1,0 +1,5 @@
+services:
+  montreal2027_auth.user_name_sync:
+    class: Drupal\montreal2027_auth\EventSubscriber\UserNameSyncSubscriber
+    tags:
+      - { name: event_subscriber }

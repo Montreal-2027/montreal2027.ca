@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_name
     - field.field.user.user.user_picture
   module:
     - path
@@ -22,6 +23,14 @@ content:
   contact:
     weight: 5
     region: content
+  field_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   language:
     weight: 2
     region: content
@@ -30,6 +39,11 @@ content:
   path:
     type: path
     weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  social_auth:
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
