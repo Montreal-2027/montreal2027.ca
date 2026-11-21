@@ -1,5 +1,6 @@
 services:
   montreal2027_auth.user_name_sync:
     class: Drupal\montreal2027_auth\EventSubscriber\UserNameSyncSubscriber
+    arguments: ['@current_user', '@entity_type.manager']
     tags:
       - { name: event_subscriber }
