@@ -6,6 +6,7 @@
 - AH, DAH, DH, DDH, and DAdmin role request form
 - Added a Name field to the user entity
 - Added `montreal2027_auth` custom module to keep the name field in the user entity synced with Google 
+- Added a "You are leaving" pop-up for external websites ([#323](https://github.com/Montreal-2027/montreal2027.ca/issues/323))
 
 ## 1.1.3 (2026-11-18)
 - Fixed line spacing for `<summary>` tags ([#275](https://github.com/Montreal-2027/montreal2027.ca/issues/275))
