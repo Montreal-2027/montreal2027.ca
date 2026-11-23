@@ -13,20 +13,20 @@ selection_criteria:
   4c16be39-7f0d-4de7-873e-3816818a586e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 4c16be39-7f0d-4de7-873e-3816818a586e
     context_mapping:
       node: node
     bundles:
       article: article
       page: page
+    uuid: 4c16be39-7f0d-4de7-873e-3816818a586e
   43beef07-f99b-4671-a12f-58a958e0734d:
     id: language
     negate: false
-    uuid: 43beef07-f99b-4671-a12f-58a958e0734d
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
       en: en
+    uuid: 43beef07-f99b-4671-a12f-58a958e0734d
 selection_logic: and
 weight: -5
 relationships:

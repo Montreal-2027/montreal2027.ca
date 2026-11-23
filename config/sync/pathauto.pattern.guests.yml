@@ -13,19 +13,19 @@ selection_criteria:
   6152ea9b-f709-45e0-9441-617a253186d0:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6152ea9b-f709-45e0-9441-617a253186d0
     context_mapping:
       node: node
     bundles:
       guest: guest
+    uuid: 6152ea9b-f709-45e0-9441-617a253186d0
   53b99599-aeba-4b06-8189-78ce413eb74c:
     id: language
     negate: false
-    uuid: 53b99599-aeba-4b06-8189-78ce413eb74c
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
       en: en
+    uuid: 53b99599-aeba-4b06-8189-78ce413eb74c
 selection_logic: and
 weight: -5
 relationships:

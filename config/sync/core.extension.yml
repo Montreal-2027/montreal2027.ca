@@ -132,6 +132,7 @@ module:
   wse: 0
   wse_preview: 0
   wse_task_monitor: 0
+  extlink: 1
   pathauto: 1
   content_translation: 10
   views: 10
