@@ -2,6 +2,9 @@
 
 ## Changelog
 ---
+## 1.1.4 (2026-12-02)
+- Added a "You are leaving" pop-up for external websites ([#323](https://github.com/Montreal-2027/montreal2027.ca/issues/323))
+
 ## 1.1.3 (2026-11-18)
 - Fixed line spacing for `<summary>` tags ([#275](https://github.com/Montreal-2027/montreal2027.ca/issues/275))
 - Updated Carousel Page content type configuration to better support adding a node with a news carousel ([#235](https://github.com/Montreal-2027/montreal2027.ca/issues/235))
