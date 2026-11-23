@@ -1,0 +1,41 @@
+.admin-inline-box {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: var(--gin-border-m);
+  border: 1px solid var(--gin-border-color);
+  display: inline-grid;
+  gap: var(--gin-spacing-m);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: var(--gin-spacing-m);
+  padding: .5rem;
+  row-gap: 0;
+  width: fit-content;
+}
+
+/* Force the Field Group heading/label onto its own full-width row at the top */
+.admin-inline-box > :first-child:not(.js-form-wrapper) {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Keep the actual fields side-by-side below the group label */
+.admin-inline-box > .js-form-wrapper {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.admin-inline-box > .js-form-wrapper > .form-item {
+  margin-block-start: 0;
+}
+
+:is(#extra-specificity-hack, [data-drupal-admin-styles]) .admin-inline-box {
+  max-width: 100%;
+  width: fit-content;
+}
+
+@media (max-width: 42rem) {
+  .admin-inline-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

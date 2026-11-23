@@ -63,7 +63,7 @@ phpcs.xml
 /.gitattributes
 /web/libraries
 /web/themes/custom/montreal2027/node_modules
-/web/assets
+/web/assets/*
 !web/assets/gin-custom.css
 !/web/assets/m2027-logo.svg
 !web/assets/2025-11/mapleleaf_g.svg

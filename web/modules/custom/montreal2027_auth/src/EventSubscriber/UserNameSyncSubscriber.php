@@ -10,7 +10,7 @@ use Drupal\user\UserInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
- * Syncs the Google profile name to field_name on every Google login.
+ * Syncs Google given_name and family_name to Drupal user fields on login.
  */
 class UserNameSyncSubscriber implements EventSubscriberInterface {
 
@@ -29,15 +29,10 @@ class UserNameSyncSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * Updates field_name when a user logs in via Google.
+   * Updates first and last name fields when a user logs in via Google.
    */
   public function onUserLogin(LoginEvent $event): void {
     if ($event->getPluginId() !== 'social_auth_google') {
-      return;
-    }
-
-    $google_name = $event->getSocialAuthUser()->getName();
-    if (empty($google_name)) {
       return;
     }
 
@@ -48,11 +43,27 @@ class UserNameSyncSubscriber implements EventSubscriberInterface {
 
     /** @var \Drupal\user\UserInterface|null $user */
     $user = $this->entityTypeManager->getStorage('user')->load($uid);
+    if (!$user instanceof UserInterface) {
+      return;
+    }
 
-    if ($user instanceof UserInterface && $user->hasField('field_name') && $user->get('field_name')->value !== $google_name) {
-      $user->set('field_name', $google_name);
+    $social_user = $event->getSocialAuthUser();
+    $first_name = $social_user->getFirstName();
+    $last_name = $social_user->getLastName();
+    $needs_save = FALSE;
+
+    if (!empty($first_name) && $user->hasField('field_first_name') && $user->get('field_first_name')->value !== $first_name) {
+      $user->set('field_first_name', $first_name);
+      $needs_save = TRUE;
+    }
+
+    if (!empty($last_name) && $user->hasField('field_last_name') && $user->get('field_last_name')->value !== $last_name) {
+      $user->set('field_last_name', $last_name);
+      $needs_save = TRUE;
+    }
+
+    if ($needs_save) {
       $user->save();
     }
   }
-
 }

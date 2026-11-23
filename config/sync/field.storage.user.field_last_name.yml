@@ -1,11 +1,11 @@
-uuid: 0f0dad76-bb41-4110-9804-a65d72911503
+uuid: bdeefccb-aef3-4748-930a-446453a14a54
 langcode: en
 status: true
 dependencies:
   module:
     - user
-id: user.field_name
-field_name: field_name
+id: user.field_last_name
+field_name: field_last_name
 entity_type: user
 type: string
 settings:
