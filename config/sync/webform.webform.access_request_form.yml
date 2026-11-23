@@ -251,7 +251,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Access Request'
-      body: '<p>On [webform_submission:created], [webform_submission:user:field_first_name:value] [webform_submission:user:field_last_name:value] ([webform_submission:user:mail]) requested that they be given the [webform_submission:values:role] role.</p>'
+      body: '<p>On [webform_submission:created], [webform_submission:user:field_first_name] [webform_submission:user:field_last_name] ([webform_submission:user:mail]) requested that they be given the [webform_submission:values:role] role.</p>'
       excluded_elements:
         intro: intro
         horizontal_rule: horizontal_rule
