@@ -77,7 +77,8 @@ if [ "$APP_ENV_TYPE" = "docker" ]; then
         fi
     fi
 
-    DRUSH="docker compose exec -T web ./vendor/bin/drush"
+# Sometimes, you may want to run drush interactively inside the container, hence the -it flag.
+    DRUSH="docker compose exec -it web ./vendor/bin/drush"
     COMPOSER="docker compose exec -T web composer"
 else
     echo "Using native environment for local commands..."
