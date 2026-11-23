@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: deputy_dh
 label: 'Deputy Division Head'
-weight: 1
+weight: 2
 is_admin: false
 permissions: {  }

@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 id: area_head
 label: 'Area Head'
-weight: 2
+weight: 4
 is_admin: false
 permissions: {  }

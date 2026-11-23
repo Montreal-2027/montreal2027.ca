@@ -1,0 +1,14 @@
+uuid: 64c9533a-3970-4a93-8202-eae23385b721
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.division_admin
+  module:
+    - user
+id: user_remove_role_action.division_admin
+label: 'Remove the Division Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: division_admin

@@ -1,0 +1,14 @@
+uuid: 6c8bf6e2-a172-46ae-9a3a-96a30ef2a9b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.deputy_area_head
+  module:
+    - user
+id: user_remove_role_action.deputy_area_head
+label: 'Remove the Deputy Area Head role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: deputy_area_head
