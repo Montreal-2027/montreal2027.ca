@@ -2,6 +2,8 @@ uuid: 1f53ef21-2bcb-4765-bd61-7da55736fcad
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.guest
   module:
     - language
     - node
@@ -25,7 +27,7 @@ selection_criteria:
       language: 'node:langcode:language'
     langcodes:
       en: en
-    uuid: 53b99599-aeba-4b06-8189-78ce413eb74c
+      fr: fr
 selection_logic: and
 weight: -5
 relationships:

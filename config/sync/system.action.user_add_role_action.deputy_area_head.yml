@@ -1,0 +1,14 @@
+uuid: 5f06e8ce-f0df-4628-a86e-d43e3f6e48f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.deputy_area_head
+  module:
+    - user
+id: user_add_role_action.deputy_area_head
+label: 'Add the Deputy Area Head role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: deputy_area_head

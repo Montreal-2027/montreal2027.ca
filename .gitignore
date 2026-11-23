@@ -63,7 +63,8 @@ phpcs.xml
 /.gitattributes
 /web/libraries
 /web/themes/custom/montreal2027/node_modules
-/web/assets
+/web/assets/*
+!web/assets/gin-custom.css
 !/web/assets/m2027-logo.svg
 !web/assets/2025-11/mapleleaf_g.svg
 !/web/assets/2025-11/53876623114_a7f20e1dbb_o.jpg
@@ -82,3 +83,4 @@ web/themes/custom/montreal2027/css/montreal2027.min.css
 !.vscode/mcp.json
 .notes/
 /*.xlsx
+

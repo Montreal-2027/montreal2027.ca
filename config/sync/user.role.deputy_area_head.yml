@@ -1,0 +1,9 @@
+uuid: ccc3d6a3-69e7-45dc-817b-b729579a64fe
+langcode: en
+status: true
+dependencies: {  }
+id: deputy_area_head
+label: 'Deputy Area Head'
+weight: 5
+is_admin: false
+permissions: {  }

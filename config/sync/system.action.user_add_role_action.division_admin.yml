@@ -1,0 +1,14 @@
+uuid: d4781956-f7da-4879-8821-46ae3e73dda1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.division_admin
+  module:
+    - user
+id: user_add_role_action.division_admin
+label: 'Add the Division Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: division_admin
