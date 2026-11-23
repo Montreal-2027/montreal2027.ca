@@ -186,7 +186,7 @@ settings:
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<a hreflang target>'
-        - '<$text-container data-*>'
+        - '<details name>'
     ckeditor_media_resize_mediaResize:
       apply_image_styles: true
       image_styles:

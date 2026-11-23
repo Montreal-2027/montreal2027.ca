@@ -1,0 +1,8 @@
+name: 'Montreal 2027 Authentication'
+type: module
+description: 'Syncs Google profile data to Drupal user fields on login.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - social_auth:social_auth
+  - social_auth_google:social_auth_google

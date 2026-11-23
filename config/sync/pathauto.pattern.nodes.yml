@@ -2,6 +2,9 @@ uuid: f2d235c5-f9d0-417b-aea2-0709524867a3
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.page
   module:
     - language
     - node
@@ -13,20 +16,19 @@ selection_criteria:
   4c16be39-7f0d-4de7-873e-3816818a586e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 4c16be39-7f0d-4de7-873e-3816818a586e
     context_mapping:
       node: node
     bundles:
       article: article
       page: page
-  43beef07-f99b-4671-a12f-58a958e0734d:
+  c0be88fc-8ce8-466d-ac77-9bb697d4f761:
     id: language
     negate: false
-    uuid: 43beef07-f99b-4671-a12f-58a958e0734d
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
       en: en
+      fr: fr
 selection_logic: and
 weight: -5
 relationships:

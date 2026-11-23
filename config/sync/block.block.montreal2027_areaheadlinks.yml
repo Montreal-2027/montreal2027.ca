@@ -1,0 +1,37 @@
+uuid: c55fd6ce-9e5e-4d6d-a007-4012bd449a17
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bd499251-c105-4831-b796-211e19a0816d'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - montreal2027
+id: montreal2027_areaheadlinks
+theme: montreal2027
+region: content
+weight: -14
+provider: null
+plugin: 'block_content:bd499251-c105-4831-b796-211e19a0816d'
+settings:
+  id: 'block_content:bd499251-c105-4831-b796-211e19a0816d'
+  label: 'Area Head Links'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      area_head: area_head
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/team-resources\r\n/ressources-de-lequipe"
