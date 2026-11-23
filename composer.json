@@ -50,6 +50,7 @@
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/entity_embed": "^1.7",
         "drupal/entity_workflow": "^2.0@beta",
+        "drupal/extlink": "^3.0",
         "drupal/facets": "^3.0",
         "drupal/field_group": "^4.0",
         "drupal/first_paragraph": "^2.0",
