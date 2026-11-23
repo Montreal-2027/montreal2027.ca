@@ -15,10 +15,33 @@ categories: {  }
 elements: |-
   intro:
     '#type': processed_text
-    '#text': '<h2 class="text-align-center">Access Request</h2><p>This form is to request the enhanced access for one of the following team positions:</p><ul type="disc"><li data-list-item-id="e10564b743ba9e163d2fc5f00388e1b31">Division Head</li><li data-list-item-id="e15077ec7f8eb63da2cd97e4f47a42322">Deputy Division Head</li><li data-list-item-id="e5434a948f55e48a706514ca523c853b7">Division Admin</li><li data-list-item-id="e7cac98d1caa8b1d7cd800cb01be0854a">Area Head</li><li data-list-item-id="efa20bfa269e2866518549823f14ac0c1">Deputy Area Head</li></ul><p>You will be notified within 48 business hours if you have been granted access.</p><p>We appreciate your cooperation and understanding.</p>'
+    '#text': '<h2 class="text-align-center">Access Request</h2><p>[current-user:field_first_name], this form is for you to request elevated access for one of the following team positions: <em>Division Head, Deputy Division Head, Division Admin, Area Head, or Deputy Area Head.</em></p><p>You will be notified of the results within 48 <strong>business hours.</strong></p><p class="text-align-center"><em>We appreciate your cooperation and understanding</em></p>'
     '#format': basic_html
   horizontal_rule:
     '#type': webform_horizontal_rule
+  name:
+    '#type': textfield
+    '#title': Name
+    '#disabled': true
+    '#readonly': true
+    '#default_value': '[current-user:field_first_name] [current-user:field_last_name]'
+  role:
+    '#type': select
+    '#title': 'I am a'
+    '#title_display': inline
+    '#options':
+      DH: 'Division Head'
+      DDH: 'Deputy Division Head'
+      DAdmin: 'Division Admin'
+      AH: 'Area Head'
+      DAH: 'Deputy Area Head'
+    '#empty_option': 'Select one...'
+    '#required': true
+    '#required_error': 'You must select your team position'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit Access Request'
 css: ''
 javascript: ''
 settings:
@@ -28,7 +51,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /access-request
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -127,7 +150,7 @@ settings:
   confirmation_type: page
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: '<h2>Thank You, [current-user:field_first_name]</h2><p>You will be notified of the results within 48 <strong>business hours. </strong>If you have not received a notification within that time frame, please email <a href="mailto:website@montreal2027.ca">website@montreal2027.ca</a> and we will look into the issue.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -159,7 +182,6 @@ settings:
 access:
   create:
     roles:
-      - anonymous
       - authenticated
     users: {  }
     permissions: {  }
@@ -203,5 +225,46 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Access Request'
+      body: '<p>On [webform_submission:created], [webform_submission:user:field_first_name:value] [webform_submission:user:field_last_name:value] ([webform_submission:user:mail]) requested that they be given the [webform_submission:values:role] role.</p>'
+      excluded_elements:
+        intro: intro
+        horizontal_rule: horizontal_rule
+        name: name
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: gin
+      langcode: ''
+      parameters: {  }
+      debug: false
 variants: {  }

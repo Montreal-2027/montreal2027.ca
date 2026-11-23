@@ -4,8 +4,6 @@
 ---
 ## 1.1.4 (2026-12-02)
 - AH, DAH, DH, DDH, and DAdmin role request form
-
-## 1.1.4 (2026-12-02)
 - Added a Name field to the user entity
 - Added `montreal2027_auth` custom module to keep the name field in the user entity synced with Google 
 
