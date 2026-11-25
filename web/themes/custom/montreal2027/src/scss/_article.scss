@@ -168,6 +168,16 @@ article {
           }
         }
 
+        & details > summary {
+          font-size: var(--font-size-h5);
+          line-height: calc(var(--font-size-h5) + .25rem);
+        }
+
+        & details details > summary {
+          font-size: var(--font-size-h6);
+          line-height: calc(var(--font-size-h6) + .25rem);
+        }
+
         &[open] > summary::before {
           transform: rotate(90deg);
         }
